@@ -1,0 +1,30 @@
+\section*{SIMBIOCHEM Submission Checklist}
+
+\begin{enumerate}
+
+\item {\bf Claims}
+    \item[] Question: Do the main claims in the abstract and introduction accurately reflect the paper's contributions and scope?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The abstract and introduction state a validation-stage, single-lag adaptation study whose central result is a sampling-size measurement, and report only comparisons present in frozen receipts. They explicitly exclude test-partition, physical-time, field-baseline, broad-generalization, and completed-model interpretations.
+
+\item {\bf Limitations}
+    \item[] Question: Does the paper discuss the limitations of the work?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:limits} states the reused validation boundary, the single 50-frame lag at one temperature, the restricted length and coordinate regime, the eight-protein sampling panel and single released training seed, the absence of multiplicity correction, and the named learned baselines that were not run. The boxed statement in Section~\ref{sec:setup} fixes the evidence boundary once for the whole paper.
+
+\item {\bf AI / LLM disclosure} \emph{(important)}
+    \item[] Question: Does the paper disclose any use of AI/LLMs in the research or writing (e.g., ideation, code generation, data processing, drafting), in line with the NeurIPS LLM policy?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:repro} discloses AI assistance in planning the study, in writing the analysis and data-processing code and helping interpret its output, and in refining the writing of a manuscript the authors drafted themselves. The manuscript text was written by the authors and AI was used only to polish and refine it. The research questions, experimental design, and scientific claims are the authors' own. Experimental observations were produced by executing pinned checkpoints on recorded inputs, no checkpoint was trained during this evaluation, and every number was recomputed by deterministic scripts and checked against the frozen records. The authors take full responsibility for all content.
+
+\item {\bf Research integrity \& originality}
+    \item[] Question: Do you confirm that this is an original submission, not a duplicate or lightly tweaked resubmission, nor one of multiple versions of the same work submitted to this workshop, and that you comply with research-integrity guidelines?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: This is a single original submission to SIMBIOCHEM II. No other version of this work has been submitted to this workshop, and the paper reports its negative results and the off-grid selection of its anchoring coefficient.
+
+\item {\bf Reproducibility} \emph{(optional)}
+    \item[] Question: Where applicable, does the paper provide enough information (data, code, settings) to reproduce the main results?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The paper gives data roles, transition construction, the optimization budget, the interpolation equation, inference settings, metric definitions, the prefix-preserving sampling extension with its seed rule, bootstrap unit and budget, and the retention gate rules. Section~\ref{sec:repro} states what the audit recomputes and verifies.
+
+\end{enumerate}

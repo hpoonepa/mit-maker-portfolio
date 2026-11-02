@@ -1,0 +1,120 @@
+{
+  "schema_version": "dynaview-mars-fm-epoch-sweep-selection-v2",
+  "selected_name": "Senba",
+  "selected_run_id": "mars-fm-e010-a07350-exactlag-128x32-20260825-s1-v1",
+  "selected_checkpoint_sha256": "sha256:f02dcf6a97848c834e3c0be7d848c1068d1d0eb7976d8d6bcfbc98d4114e9c7c",
+  "selection_reason": "The 10-epoch parent with 7.35% source-weight interpolation retained all seven equilibrium observables, improved the endpoint ensemble mean on 27 of 28 validation proteins, and reproduced a positive gain over MarS-FM on every protein in two additional eight-protein panels.",
+  "training": {
+    "parent_run_id": "mars-fm-epoch-sweep-e010-exactlag-128x32-20260825-s1-v1",
+    "parent_checkpoint_sha256": "sha256:1bd5c20b5f3aa8587dce6440af6580f0c2def98d0b868a39969ef854bd729a25",
+    "epochs": 10,
+    "optimizer_updates": 160,
+    "sampled_transitions": 30720,
+    "batch_size_domains": 8,
+    "learning_rate": 0.000003,
+    "trainable_scope": "all",
+    "parameter_count": 34152521,
+    "trainable_parameter_count": 34152521,
+    "train_domains": 128,
+    "validation_domains": 32,
+    "transition_sampling": "exact_lag",
+    "transition_lag_frames": 50,
+    "accelerator": "one NVIDIA H100",
+    "training_elapsed_seconds": 121.79760014299998,
+    "max_cuda_memory_bytes": 64684237824,
+    "source_validation_loss": 1.724479079246521,
+    "best_validation_loss": 1.6931358575820923,
+    "best_validation_improvement": 0.03134322166442871
+  },
+  "source_weight_interpolation": {
+    "alpha": 0.0735,
+    "interpretation": "The final checkpoint keeps 7.35% of the full fine-tuning displacement from the MarS-FM source weights.",
+    "checkpoint_size_bytes": 136711098
+  },
+  "full_transition_validation": {
+    "proteins": 28,
+    "proteins_better_than_source": 27,
+    "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0325922111581212,
+    "ensemble_mean_rmsd_improvement_vs_source_95ci_angstrom": [
+      0.02525014950148637,
+      0.040114625364512255
+    ],
+    "proteins_better_than_persistence": 22,
+    "ensemble_mean_rmsd_improvement_vs_persistence_angstrom": 0.4364052826817221,
+    "ensemble_mean_rmsd_improvement_vs_persistence_95ci_angstrom": [
+      0.20302960346670967,
+      0.6806461308413764
+    ],
+    "bootstrap_unit": "protein",
+    "bootstrap_resamples": 100000,
+    "bootstrap_seed": 20260825
+  },
+  "full_head_to_head_vs_previous_senba": {
+    "proteins": 28,
+    "proteins_better_than_previous_senba": 22,
+    "ensemble_mean_rmsd_improvement_angstrom": 0.00216273137725704,
+    "ensemble_mean_rmsd_improvement_95ci_angstrom": [
+      0.0008567748166488626,
+      0.0034470447723082133
+    ]
+  },
+  "equilibrium_retention": {
+    "proteins": 8,
+    "observables_passed": 7,
+    "observables_total": 7,
+    "passed": true,
+    "bootstrap_unit": "protein",
+    "bootstrap_resamples": 100000,
+    "bootstrap_seed": 20260825
+  },
+  "replication": {
+    "training_seeds": [
+      20260825,
+      20260826,
+      20260827
+    ],
+    "training_elapsed_seconds": [
+      121.79760014299998,
+      125.98805148599999,
+      130.42531005700002
+    ],
+    "training_elapsed_seconds_total": 378.210961686,
+    "training_elapsed_seconds_mean": 126.070320562,
+    "compact_panel_proteins_per_seed": 8,
+    "ensemble_mean_rmsd_improvement_vs_source_angstrom": [
+      0.030089207430793796,
+      0.022905611767840894,
+      0.029012580049456393
+    ],
+    "ensemble_mean_rmsd_improvement_vs_source_angstrom_mean": 0.027335799749363696,
+    "proteins_better_than_source_per_seed": [
+      8,
+      8,
+      8
+    ],
+    "matched_improvement_vs_previous_senba_angstrom": [
+      0.0030823953657768133,
+      -0.0011042861471590726,
+      0.005569173818678608
+    ],
+    "matched_improvement_vs_previous_senba_angstrom_mean": 0.0025157610124321165
+  },
+  "campaign_compute": {
+    "workspace": "daddyjj43",
+    "billing_date": "2026-08-25",
+    "observed_modal_cost_usd": 19.451563639999996,
+    "adaptation_cost_usd": 10.601034570000001,
+    "validation_cost_usd": 8.85052907,
+    "note": "This includes the epoch sweep, interrupted and rejected runs, anchor search, equilibrium validation, full-panel validation, and seed replications. It is larger than the cost of the selected training run alone."
+  },
+  "artifacts": {
+    "checkpoint": "frozen-candidate/seed1/mars-fm-e010-a07350-exactlag-128x32-20260825-s1-v1/checkpoints/best.ckpt",
+    "full_transition_comparison": "full-transition/e010-a07350-comparison.json",
+    "full_head_to_head_comparison": "head-to-head/e010-vs-old-full.json",
+    "equilibrium_comparison": "equilibrium-suite/e010-a07350/comparison.json",
+    "seed_2_replication": "e010-seed-replication/s2/comparison.json",
+    "seed_3_replication": "e010-seed-replication/s3/comparison.json"
+  },
+  "test_records_opened": 0,
+  "claim_boundary": "validation_only_not_test_or_sota_evidence"
+}

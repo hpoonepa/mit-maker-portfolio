@@ -1,0 +1,310 @@
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   SENBA
+   New Results & Paper Changes
+   Evidence handoff | 4 September 2026 | All scheduled model runs completed
+
+   Purpose. Preserve the new experimental evidence and the exact manuscript changes for the supplied
+   main.pdf. This is a handoff document, not the rewritten submission PDF. The original PDF has not been
+   overwritten.
+
+   Bottom line
+   The released checkpoint retains a small endpoint-prediction advantage when sampling increases from
+   four to sixteen draws. At K=16, all eight proteins improve on centroid endpoint RMSD, and the
+   statistical energy score improves on seven of eight. The endpoint gain is 42.4% smaller than at K=4.
+   This supports a sampling-aware, limited validation contribution, not a broad claim of improved
+   physical dynamics.
+
+    New endpoint result                      K=4                    K=8                         K=16
+
+    Mean RMSD gain (Å)                       0.02401                0.01887                     0.01383
+
+    Conditional 95% interval                 [0.01870, 0.02882]     [0.01545, 0.02257]          [0.00733, 0.02194]
+
+    Proteins improved                        8/8                    8/8                         8/8
+
+    Energy-score gain (Å)                    0.00328                0.00604                     0.00642
+
+    Conditional 95% interval                 [-0.00115, 0.00767]    [0.00359, 0.00841]          [0.00160, 0.01166]
+
+    Proteins improved, energy                5/8                    8/8                         7/8
+
+
+   Here gains are source minus adapted score; positive favors the adapted checkpoint. Intervals resample the eight
+   reused proteins, not training seeds or independent biological replicates. K=4 remains primary; K=8/16 are dependent
+   sensitivity checks.
+
+   What was completed
+   8 proteins × 5 replicas × 4 starts = 160 paired transitions. Four K=4 blocks per model
+   produced 5,120 generated endpoint structures in total. Sixteen H100 jobs completed; the second
+   batch used eight concurrent workers. No new checkpoint was trained. The frozen new-evaluator panel
+   and prefix-preserving K=4/8/16 check are complete.
+
+   Cost: provider-reported charges total $4.56762390. All apps were confirmed stopped with zero tasks.
+   A $2 late-billing allowance and the $10 planning reserve remain separate; these charges are not a
+   final invoice or verified credit balance.
+
+
+
+
+Internal handoff - not an anonymous submission PDF                                                                       1
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   02 / Figures ready for the manuscript
+
+
+
+
+   Figure 1. Ensemble-size sensitivity. Colored points are equal-protein means; error bars are conditional 95%
+   protein-resampling intervals (2,000 resamples). Gray points are individual proteins. Positive gains favor adaptation.
+   Nested ensembles use the same 160 transitions and retain the original K=4 draws, so the three estimates are not
+   independent replications.
+
+
+
+
+   Figure 2. Per-protein effects. Open circles show K=4 and filled circles K=16, linked within each protein. All eight
+   proteins retain lower centroid RMSD at K=16; 2k4qA00 has worse energy score and remains in the aggregate. All
+   coordinates are individually start-aligned C-alpha coordinates.
+
+   Vector originals are retained in senba-sprint/paper-revision/figures/ as sampling_sensitivity.pdf and
+   protein_sensitivity.pdf. These are data-driven plots; no data point was removed to improve appearance.
+
+
+
+
+Internal handoff - not an anonymous submission PDF                                                                         2
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   03 / Complete numerical results
+   Sign convention on this page: candidate minus source; negative favors the candidate for error scores. Spread has
+   no inherently favorable sign. Every entry is an equal-protein mean with a conditional 95% interval. Å² indicates squared
+   angstroms.
+
+    Metric                           K=4: delta [95% interval]   K=8: delta [95% interval]      K=16: delta [95% interval]
+
+    Centroid RMSD (Å)                -0.02401                    -0.01887                       -0.01383
+                                     [-0.02882, -0.01870]        [-0.02257, -0.01545]           [-0.02194, -0.00733]
+
+    Mean-sample RMSD (Å)             -0.06026                    -0.06517                       -0.06293
+                                     [-0.07275, -0.04774]        [-0.07889, -0.05213]           [-0.07702, -0.04954]
+
+    Statistical energy score (Å)     -0.00328                    -0.00604                       -0.00642
+                                     [-0.00767, 0.00115]         [-0.00841, -0.00359]           [-0.01166, -0.00160]
+
+    Sample MSE (Å²)                  -2.01509                    -2.27977                       -2.22078
+                                     [-2.48973, -1.49989]        [-2.83403, -1.75330]           [-2.81296, -1.65906]
+
+    Centroid MSE (Å²)                -0.57499                    -0.45867                       -0.35058
+                                     [-0.75074, -0.40379]        [-0.58160, -0.34616]           [-0.57699, -0.15564]
+
+    Corrected mean MSE (Å²)          -0.09496                    -0.19851                       -0.22590
+                                     [-0.29867, 0.12011]         [-0.32777, -0.07963]           [-0.46080, -0.03177]
+
+    Ensemble variance (Å²)           -1.44010                    -1.82110                       -1.87020
+                                     [-1.88751, -1.01852]        [-2.34943, -1.36058]           [-2.45631, -1.37132]
+
+    Pairwise RMSD (Å)                -0.11396                    -0.11826                       -0.11302
+                                     [-0.14455, -0.08593]        [-0.14765, -0.09128]           [-0.14382, -0.08554]
+
+
+
+   Absolute source / candidate values
+
+    Metric                                   K=4                      K=8                         K=16
+
+    Centroid RMSD (Å)                        11.05817 /               10.39264 /                  10.04244 /
+                                             11.03417                 10.37378                    10.02861
+
+    Mean-sample RMSD (Å)                     14.17187 /               14.32013 /                  14.28690 /
+                                             14.11161                 14.25496                    14.22396
+
+    Statistical energy score (Å)             6.91371 /                6.84358 /                   6.84525 /
+                                             6.91043                  6.83754                     6.83883
+
+
+   At K=16, the centroid RMSD reduction is 0.138% of source error; the K=4 reduction is 0.217%. The K=16 minus K=4
+   difference in candidate-source endpoint deltas is +0.01018 Å, with post-hoc paired resampling interval [+0.00272,
+   +0.01763]. This describes sensitivity, not its causal mechanism.
+   Persistence is identical across K (about 11.63 Å). Candidate/source endpoint gains versus persistence are
+   0.6002/0.5762 Å at K=4, 1.261/1.242 Å at K=8, and 1.606/1.592 Å at K=16. Exact underlying values are retained in
+   each analysis.json.
+
+
+
+
+Internal handoff - not an anonymous submission PDF                                                                            3
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   04 / Paste-ready abstract and results
+   Suggested revised abstract
+   Specializing a molecular simulation model to an observed endpoint can improve prediction while
+   changing its ensemble behavior. We study source-anchored exact-lag adaptation: fine-tune MarS-FM
+   on same-replica mdCATH frame pairs separated by 50 saved frames, then retain 7.35% of the learned
+   weight displacement. Original validation artifacts report a 0.03259 Å reduction in ensemble-mean
+   endpoint RMSD across 28 eligible proteins, positive compact-panel effects from three trained parents,
+   and passage of seven source-relative retention screens. We complement these artifacts with a new
+   frozen-checkpoint evaluation that separates endpoint accuracy, predictive spread, and
+   distribution-sensitive scoring. On eight previously used validation proteins, a prefix-preserving
+   extension from K=4 to K=16 retains lower endpoint RMSD on every protein, while the mean gain
+   decreases from 0.02401 to 0.01383 Å. At K=16, the statistical energy-score gain is 0.00642 Å
+   (conditional protein-resampling interval 0.00160-0.01166 Å). Both aligned-C-alpha spread summaries
+   decrease. These results show that small adaptation gains can survive increased sampling, but their
+   magnitude and interpretation depend on ensemble size and metric choice. The contribution is a
+   sampling-aware evaluation of conservative adaptation, not a new architecture or evidence of
+   calibrated physical kinetics. All evidence remains validation-only at 450 K and one lag.
+
+   New Results subsection: Sampling-aware frozen-checkpoint evaluation
+   We evaluated the fixed selected checkpoint with a newly implemented evaluator on eight preselected,
+   previously used validation proteins (160 transitions). This evaluation is distinct from the original
+   28-protein result and does not reproduce its unavailable evaluator. At K=4, protein-macro centroid
+   RMSD decreased from 11.05817 to 11.03417 Å. Extending the same ensembles to K=16 preserved
+   lower endpoint error on all eight proteins, with source and candidate errors of 10.04244 and 10.02861
+   Å (gain 0.01383 Å; conditional interval 0.00733-0.02194 Å). The gain was 42.4% smaller than at K=4.
+   The K=16 statistical energy score decreased from 6.84525 to 6.83883 Å; seven of eight proteins
+   improved. Ensemble variance and pairwise RMSD decreased by 1.87020 Å² and 0.11302 Å. Thus the
+   endpoint advantage survives larger ensembles and is accompanied by a favorable aggregate
+   distribution-sensitive score, but smaller spread is not itself proof of improved diversity or calibration.
+   Figures 1-2 show the nested sampling comparison and every protein, including the energy-score
+   regression.
+
+   Contribution statement for the introduction
+   We contribute (i) a transparent source-anchored adaptation study with explicit failure cases; (ii) an
+   evaluation that distinguishes endpoint error, finite-ensemble variance, and statistical energy score;
+   and (iii) a prefix-preserving sampling analysis showing that endpoint gains persist but diminish as
+   ensemble size increases. The contribution is empirical and evaluative; linear interpolation and the
+   scoring rules are established methods.
+
+
+
+
+Internal handoff - not an anonymous submission PDF                                                              4
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   05 / Methods and exact edits to main.pdf
+   New methods subsection - use with the new Results text
+   The fixed eight-domain panel contains 1e7uA04, 1rquA01, 1q16B03, 1d1rA00, 2k4qA00, 2f2cA02,
+   5k2mA01 and 2dp9A01. For a replica with N frames, starts are floor(i × (N - 51) / 3), i = 0, 1, 2, 3;
+   targets are 50 saved frames later. All five 450 K replicas are used. Hash-verified HDF5 inputs are
+   mapped to complete atom14 heavy-atom structures in float32 angstroms. Source and candidate use
+   ten ODE steps and identical paired random streams. Targets and each sample are independently
+   Kabsch-aligned to the starting C-alpha coordinates, never to the future target.
+
+   For transition index j = 0,...,19, the original K=4 seed is 20260904 + j. Three extra K=4 blocks use
+   that seed plus b × 1,000,000, b = 1, 2, 3. K=8 joins blocks 0 and 1; K=16 joins all four blocks. Original
+   samples are preserved exactly. The extension was specified before its outputs, after the initial K=4
+   results; the panel was never changed. Means first average 20 transitions within protein, then weight
+   eight proteins equally. Intervals use 2,000 protein bootstrap resamples with seed 20260904. These
+   nested estimates do not add proteins or training seeds.
+
+   The statistical energy score is mean sample-to-target RMS Euclidean distance minus one half of the
+   mean off-diagonal sample-pair RMS Euclidean distance. Use unsquared distances. Sample MSE =
+   centroid MSE + ensemble variance, where ensemble variance has denominator K. The finite-K
+   mean-error diagnostic is centroid MSE - ensemble variance/(K-1), under iid forecast draws. It corrects
+   model Monte Carlo variance against one observed target, not target uncertainty or biological bias.
+
+    Location in original PDF            Required change
+
+    Abstract and Introduction (pp.      Use the revised contribution and sampling result. Retain small effect sizes. Do not claim new
+    1-2)                                interpolation theory or a novel foundation architecture.
+
+    Sections 2 and 4 (pp. 2-4)          Separate original artifact-based evidence from this new evaluator. Add the methods above.
+                                        Original intervals use 100,000 resamples; new intervals use 2,000.
+
+    Section 5 (pp. 4-5)                 Keep original 28-protein and retention tables labeled as original evidence. Add new sampling
+                                        table and both figures as separate results.
+
+    Sections 6-7 (pp. 5-6)              Discuss 42.4% gain shrinkage, reduced spread, small absolute gains, one newly evaluated
+                                        training seed, reused validation and the new-evaluator boundary.
+
+    Section 8 and checklist (pp. 6,     Replace claims of complete raw replication or a prepared anonymous supplement unless
+    9)                                  actually verified/prepared. Expand AI disclosure to experiment coding and orchestration.
+
+    Conclusion and future work (pp.     State persistent but sampling-sensitive gains. Keep pocket prediction, experimental
+    7-8)                                validation and other model adaptations explicitly future work.
+
+
+
+
+Internal handoff - not an anonymous submission PDF                                                                                      5
+SENBA / EXPERIMENTAL RESULTS AND MANUSCRIPT HANDOFF
+
+
+
+
+   06 / Protein results, boundaries and handoff
+   All K=16 protein-level deltas (candidate minus source)
+
+    Protein                          Endpoint (Å)               Energy score (Å)               Variance (Å²)
+
+    1d1rA00                          -0.01851                   -0.01070                       -1.27385
+
+    1e7uA04                          -0.01048                   -0.00285                       -3.51000
+
+    1q16B03                          -0.04083                   -0.02269                       -1.90821
+
+    1rquA01                          -0.00661                   -0.00443                       -0.97318
+
+    2dp9A01                          -0.01280                   -0.00706                       -1.05813
+
+    2f2cA02                          -0.00924                   -0.00316                       -2.52199
+
+    2k4qA00                          -0.00078                   +0.00505                       -1.83315
+
+    5k2mA01                          -0.01138                   -0.00554                       -1.88311
+
+
+
+   What is supported, and what is still missing
+   Completed: limited eight-protein endpoint/decomposition/spread/energy evaluation and the K=4/8/16
+   sampling component. Not newly run: other training seeds, a conservative-training comparator, or an
+   alpha/retention sweep. The original paper already reports earlier seed and retention artifacts; those
+   can remain labeled as earlier evidence, but were not independently rerun here. All new results
+   concern one released seed, one lag and temperature, and transformed C-alpha coordinates. No
+   untouched test-set or experimental-data validation was performed.
+
+   Future potential - present as hypotheses
+   The next research question is whether inexpensive adaptation can improve application-relevant
+   observables on a fresh evaluation boundary. Priorities are matched conservative-training controls,
+   independent trained seeds, untouched sequence-family validation, and temperature/lag transfer. A
+   future motion-aware pocket model could test whether generated motion adds value beyond an
+   apo-structure-only baseline. No pocket predictor, binding gain, physiological relevance or
+   experimental improvement is established by these results.
+
+   Updated AI-assistance disclosure - authors must verify before submission
+   AI/LLM tools assisted with study planning, inference and analysis code, data-processing scripts, execution
+   orchestration, figure generation and manuscript drafting. Experimental observations were produced by executing the
+   pinned checkpoints on recorded molecular-simulation inputs. AI assistance does not replace author verification; the
+   authors remain responsible for all claims, code, data handling, citations and submission decisions. No checkpoint was
+   newly trained during this evaluation.
+
+   Audit and recovery locations
+   All 480 extension runtime receipts passed paired-RNG and checkpoint checks; all 160 original sample prefixes were
+   preserved exactly. The maximum new K=16 MSE decomposition residual is 1.14 × 10^-13. The local suite passed 74
+   tests and 12 subtests. These checks establish implementation consistency, not biological validity.
+   Workspace: /Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint
+   Key files: RESULTS_SUMMARY.md; FROZEN_EVALUATION_PROTOCOL.md; K4_AUDIT.md; SAMPLING_AUDIT.md.
+   Exact statistics: artifacts/reports/sampling-k4-v1, sampling-k8-v1, sampling-k16-v1 / analysis.json.
+   Raw records: artifacts/runs/. Nested arrays: artifacts/derived/. Figures and builder: paper-revision/.
+   Submission caution: internal handoff only. Remove identifying paths before submission; verify every claim and any
+   promised supplement. Acceptance is not guaranteed.
+
+
+
+Internal handoff - not an anonymous submission PDF                                                                         6
+

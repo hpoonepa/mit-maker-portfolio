@@ -1,0 +1,47 @@
+// Check the local inference viewer, model output, input validation and mobile layout.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
+
+(async () => {
+  fs.mkdirSync(path.join(__dirname, 'runtime/verification'), { recursive: true });
+  const browser = await chromium.launch({ headless: true, channel: 'chrome', args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+  const page = await browser.newPage({ baseURL: 'http://127.0.0.1:8941', viewport: { width: 1440, height: 1120 }, deviceScaleFactor: 1 });
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('http://127.0.0.1:8941', { waitUntil: 'networkidle' });
+  console.log('Viewer:', await page.locator('#viewport-error').textContent());
+  await page.screenshot({ path: path.join(__dirname, 'runtime/verification/desktop.png'), fullPage: true });
+  await page.waitForFunction(() => document.querySelector('#local-status').textContent.includes('READY'), null, { timeout: 60000 });
+  await page.waitForFunction(() => document.querySelector('[data-view="trajectory"]').classList.contains('selected'));
+  await page.locator('#play').click();
+  assert.match(await page.locator('#motion-note').textContent(), /Recorded MD/);
+  await page.screenshot({ path: path.join(__dirname, 'runtime/verification/desktop.png'), fullPage: true });
+  await page.locator('[data-view="candidate"]').click();
+  const first = await page.locator('#rmsd').textContent();
+  await page.locator('#sample').fill('5');
+  await page.locator('#sample').dispatchEvent('input');
+  assert.notEqual(await page.locator('#rmsd').textContent(), first);
+  await page.locator('[data-view="source"]').click();
+  assert.match(await page.locator('#legend-label').textContent(), /MarS-FM/);
+  await page.locator('[data-view="candidate"]').click();
+  await page.locator('#samples').selectOption('2');
+  await page.locator('#run').click();
+  await page.waitForFunction(() => document.querySelector('#run-message').textContent.includes('Fresh run complete') || document.querySelector('#run-message').classList.contains('error'), null, { timeout: 180000 });
+  const resultMessage = await page.locator('#run-message').textContent();
+  assert.match(resultMessage, /Fresh run complete/);
+  assert.match(await page.locator('#data-badge').textContent(), /FRESH CHECKPOINT OUTPUT/);
+  await page.locator('#atoms').click();
+  await page.screenshot({ path: path.join(__dirname, 'runtime/verification/atoms.png'), fullPage: true });
+  const response = await page.request.post('/api/run', { data: { structure_id: 'example-0', samples: 99, seed: 0 } });
+  assert.equal(response.status(), 400);
+  const wrongOrigin = await page.request.post('/api/run', { headers: { Origin: 'http://untrusted.example' }, data: { structure_id: 'example-0' } });
+  assert.equal(wrongOrigin.status(), 403);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: path.join(__dirname, 'runtime/verification/mobile.png'), fullPage: true });
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth), false);
+  assert.deepEqual(errors, []);
+  console.log(JSON.stringify({ passed: true, inference: resultMessage, browserErrors: errors, checks: ['actual MD playback', 'saved sample selection', 'source comparison', 'fresh checkpoint inference', 'heavy-atom view', 'invalid sample count', 'cross-origin rejection', 'mobile overflow'] }, null, 2));
+  await browser.close();
+})().catch(error => { console.error(error); process.exit(1); });

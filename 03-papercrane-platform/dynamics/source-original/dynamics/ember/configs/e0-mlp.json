@@ -1,0 +1,1 @@
+{"device":"cpu","dropout":0.1,"effective_batch_proteins":8,"ensemble_variant":"all","gradient_clip":1.0,"kind":"ensemble_mlp","learning_rate":0.001,"maximum_epochs":50,"maximum_seconds":3600.0,"nonmatch_overlap":0.1,"pair_cap":256,"patience":5,"positive_overlap":0.25,"positive_weight":1.0,"seed":1729,"weight_decay":0.0001}

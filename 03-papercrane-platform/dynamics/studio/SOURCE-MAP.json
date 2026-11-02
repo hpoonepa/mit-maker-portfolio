@@ -1,0 +1,107 @@
+[
+  {
+    "file": "server.py",
+    "source": "original-workspace/lambert-ga/senba-demo/server.py",
+    "sha256": "03a62d8907410fe7f221ebbe4118213c158d2e42f33ecdcbf34b780a323b0fb0",
+    "retained_source_sha256": "2246624f4811a2033bb21bda4ce7d1737f81aeda6263ec5016e9524ba832ce84",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "requirements.txt",
+    "source": "original-workspace/lambert-ga/senba-demo/requirements.txt",
+    "sha256": "38df9b3224057e390e3a17614887532a61541c6e914499be412e454cf1c04cdd",
+    "retained_source_sha256": "38df9b3224057e390e3a17614887532a61541c6e914499be412e454cf1c04cdd",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "prepare_data.py",
+    "source": "original-workspace/lambert-ga/senba-demo/prepare_data.py",
+    "sha256": "b6ca56b921aa9249f3b7e81dc7eece45457b63174c941e674d2f6bd2a35b1378",
+    "retained_source_sha256": "10c709ab36c2846262e567170acf6c25beef9be05f3632fc3cd0cd620a08e6b9",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "prepare_trajectory.py",
+    "source": "original-workspace/lambert-ga/senba-demo/prepare_trajectory.py",
+    "sha256": "7fa8d0a757a9e28af98db140891909554f31a86339fcd093d1d89b5846c44dee",
+    "retained_source_sha256": "7fa8d0a757a9e28af98db140891909554f31a86339fcd093d1d89b5846c44dee",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/index.html",
+    "source": "original-workspace/lambert-ga/senba-demo/static/index.html",
+    "sha256": "8cef91a2548b5216855d0877cc77b1fe76ef1569ed29a79a1550e8db34325755",
+    "retained_source_sha256": "e478f6dcff0ec761852541fb014e7fe01389fb648b9414b57c44af18ac104c8f",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/style.css",
+    "source": "original-workspace/lambert-ga/senba-demo/static/style.css",
+    "sha256": "91bf8c03e116a6c67ce863cffd8d221069a7c2b03b0509930bd355c695cba3b1",
+    "retained_source_sha256": "91bf8c03e116a6c67ce863cffd8d221069a7c2b03b0509930bd355c695cba3b1",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/app.js",
+    "source": "original-workspace/lambert-ga/senba-demo/static/app.js",
+    "sha256": "27287e5d3d02557608df4d452276862a7872cbb14a7c1ef32f01065bdce53f05",
+    "retained_source_sha256": "46a2b0d186bfda6409c6974ee6d38701f53d6a72093cb52db01eaf2f170de687",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/data/examples.json",
+    "source": "original-workspace/lambert-ga/senba-demo/static/data/examples.json",
+    "sha256": "6046133a0e51970f5d4af804714f8c58c24ec1efe1ced09cc139d1f41e67c655",
+    "retained_source_sha256": "6046133a0e51970f5d4af804714f8c58c24ec1efe1ced09cc139d1f41e67c655",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/vendor/three.module.js",
+    "source": "original-workspace/lambert-ga/senba-demo/static/vendor/three.module.js",
+    "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "retained_source_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/vendor/three.core.js",
+    "source": "original-workspace/lambert-ga/senba-demo/static/vendor/three.core.js",
+    "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "retained_source_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/vendor/THREE-LICENSE",
+    "source": "original-workspace/lambert-ga/senba-demo/static/vendor/THREE-LICENSE",
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "retained_source_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "static/vendor/OrbitControls.js",
+    "source": "original-workspace/lambert-ga/senba-demo/static/vendor/OrbitControls.js",
+    "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "retained_source_sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "runtime/results/415eb4e301ae4148bb3bac1f34bea554.json",
+    "source": "original-workspace/lambert-ga/senba-demo/runtime/results/415eb4e301ae4148bb3bac1f34bea554.json",
+    "sha256": "7bd222aae099f2586246c0f34c33e2e3b1ed1cb8730cec9d36c28a6640f573ca",
+    "retained_source_sha256": "7bd222aae099f2586246c0f34c33e2e3b1ed1cb8730cec9d36c28a6640f573ca",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "runtime/results/0c092b5ab313496b949b38d73c6cddad.json",
+    "source": "original-workspace/lambert-ga/senba-demo/runtime/results/0c092b5ab313496b949b38d73c6cddad.json",
+    "sha256": "a85214d4f3cfff50253dc1536a54fbd7daedbcda1ed56da56499c9f2a4b3aa63",
+    "retained_source_sha256": "a85214d4f3cfff50253dc1536a54fbd7daedbcda1ed56da56499c9f2a4b3aa63",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  },
+  {
+    "file": "runtime/results/08e1f9a791684a00bf906e25edabdd0d.json",
+    "source": "original-workspace/lambert-ga/senba-demo/runtime/results/08e1f9a791684a00bf906e25edabdd0d.json",
+    "sha256": "abe22a510997ded83223004bf462a4ff8a352369dce75a86de8c5340fc8ad2f9",
+    "retained_source_sha256": "abe22a510997ded83223004bf462a4ff8a352369dce75a86de8c5340fc8ad2f9",
+    "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
+  }
+]

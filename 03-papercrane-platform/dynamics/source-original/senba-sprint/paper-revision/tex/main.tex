@@ -1,0 +1,432 @@
+\documentclass{article}
+
+% natbib is loaded by neurips_2026; ask for square-bracket author-year keys.
+\PassOptionsToPackage{square}{natbib}
+
+% === SIMBIOCHEM II (NeurIPS 2026 workshop) ===
+% Double-blind, non-archival workshop submission.
+\usepackage[dblblindworkshop]{neurips_2026}
+\workshoptitle{2nd SIMBIOCHEM Workshop at NeurIPS 2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\newcommand{\marsfm}{\textsc{MarS-FM}}
+\providecommand{\doi}[1]{doi: {\urlstyle{rm}\url{#1}}}
+\newcommand{\CA}{C$_\alpha$}
+
+% Let floats share pages with text more willingly (defaults strand whole pages).
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.80}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+
+\title{Small Gains Have Coordinates: Anchoring Strength,\\Ensemble Size, and Metric Choice in Adapting a\\Molecular Simulation Foundation Model}
+
+\author{%
+  Anonymous Author(s) \\
+  Affiliation \\
+  Address \\
+  \texttt{email} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The improvement reported for an adapted molecular simulation model depends on two choices that papers rarely sweep and often leave unstated: how far the weights moved from the source checkpoint, and how many stochastic samples were averaged before scoring. We vary both for one small adaptation of \marsfm{}, and the second dominates: \textbf{at $K=4$, the count such evaluations commonly use, roughly 83\% of our gain is a $1/K$ Monte Carlo artifact of averaging few samples rather than a prediction that lands closer.} The adaptation fine-tunes on mdCATH frame pairs separated by exactly 50 saved frames and keeps only 7.35\% of what fine-tuning learned, which lowers endpoint error by $0.03259$~\AA{} across all 28 eligible validation proteins, improves 27 of them, and passes a seven-observable ensemble-retention screen that every more aggressive adaptation we tried failed. But raising the samples per prediction from $K=4$ to $K=16$ leaves every protein improved while cutting the average gain by 42.4\%, from $0.02401$ to $0.01383$~\AA{}. Decomposing the error separates the artifact from the effect: what remains is $K$-independent, sitting at $0.2259$~\AA$^2$ under a $1/K$ fit and corroborated by a strictly proper scoring rule. The effect is genuine and about half what the $K=4$ number advertises. Nothing in the decomposition is specific to molecular dynamics, and recovering it needs no new training. All of this rests on validation data at a single lag and temperature, with the test partition left closed.
+\end{abstract}
+
+\section{Introduction}
+
+Improvements reported for machine-learned molecular dynamics tend to be small in absolute terms, often a few hundredths of an angstrom against errors of ten or more, and readers compare them across papers as though each were a fixed property of the model. A reported gain is better understood as a coordinate in an evaluation space. It moves with how far the adapted weights travelled from the source, with how many stochastic samples were averaged before scoring, and with which of several defensible error measures the authors chose. The first two are seldom swept and frequently unstated; the third is usually settled once. This paper takes one deliberately small adaptation and measures its own result along all three axes, on a fixed set of proteins, from hash-pinned records, without opening the standard test partition. The sampling axis carries the main result: roughly 83\% of our own measured gain at $K=4$ is a finite-sample artifact rather than a better prediction, and what survives is about half the headline number.
+
+The source model, \marsfm{} \citep{kapusniak2026}, generates conformations by learning transitions between coarse states identified by a Markov state model, which discretizes a long simulation into a handful of metastable basins. Learning transitions between basins rather than motion over a fixed interval suits broad conformational sampling, but does not train the model to say where a molecule will be after a given elapsed time. Supervising it on frame pairs at a single separation can teach that task, at the risk of pulling it away from the sampling behavior that made the source useful. Can a small weight update, anchored to the source, improve prediction at a fixed lag while staying inside retention limits set in advance?
+
+Averaging a pretrained model's weights with those of its fine-tuned copy is a familiar way to keep the robustness of the original while gaining some specialization \citep{wortsman2022robust,wortsman2022soups,ilharco2023task}, and has been benchmarked on molecular graph foundation models \citep{liu2025roftmol}. The question for a generative simulator is different: a coefficient chosen to protect accuracy on one task may or may not protect the ensemble properties the source was valued for. We use interpolation as a legible dial on how far the parameters moved.
+
+Our data is mdCATH, a public collection of all-atom molecular dynamics trajectories for protein domains, each simulated several times at several temperatures \citep{mirarchi2024mdcath}. Each independent simulation is a replica; each stored snapshot along one is a saved frame. We work at 450~K, high enough that domains change shape appreciably over the intervals we study, with a frozen split of 128 training and 32 validation domains.
+
+\paragraph{Contributions.}
+\begin{enumerate}\itemsep2pt \parskip0pt
+\item \textbf{Main result: most of the gain is a sampling artifact, and a decomposition says how much.} Separating the error into a location term and a $1/K$ Monte Carlo term shows the shrinking part is finite-sample bias: at $K=4$ roughly 83\% of our gain is that term, while the location term underneath is $K$-independent and survives at $0.2259$~\AA$^2$. A strictly proper scoring rule \citep{gneiting2007proper} and four full-panel measures we report here for the first time, among them the direction of predicted motion, agree with it in sign. Nothing in the decomposition is specific to molecular dynamics: any generative model scored by averaging stochastic samples against one observed outcome carries the same term, and recovering it is a second pass over samples that already exist.
+\item \textbf{A sample-count sweep in place of a single number.} We score one frozen checkpoint at $K=4$, $8$ and $16$ draws on the same 160 transitions, building the larger ensembles by adding draws to the original ones. The gain falls 42.4\%, from $0.02401$ to $0.01383$~\AA{}, while all eight proteins stay improved throughout.
+\item \textbf{A ladder of adaptation strengths, and the failures along it.} Full fine-tuning, output-head-only adaptation, 25\% and 50\% objective mixtures, and $\alpha$ of $0.10$ and $0.20$ each improved prediction at the target lag and each failed a seven-observable retention screen fixed in advance; only $\alpha = 0.0735$ passed. We also report that our chosen $\alpha$ fell outside its own preregistered grid.
+\end{enumerate}
+
+\section{Setup and evidence boundary}
+\label{sec:setup}
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\small
+\textbf{Evidence boundary.} Every result below is validation-stage. We never opened the standard test partition, and each record we cite carries \texttt{test\_records\_opened=0}. We had already looked at these proteins during earlier development, so this is retrospective evidence about a development process, not a prospective validation of a finished method. Our bootstrap intervals resample proteins inside a fixed panel: they describe how much the estimate wobbles across these particular proteins, and cannot undo the fact that hyperparameters were chosen on the same data. Scope throughout is one lag of 50 saved frames, 450~K, \CA{} coordinates, two matched baselines.}}
+\end{center}
+
+\paragraph{Data roles.} Only training domains ever update weights. All supervision and scoring use the 450~K trajectories, which provide five replicas per protein. Pairs always come from within one replica: given a start at saved frame $t$, the target is frame $t+50$. We report the lag in saved frames rather than nanoseconds because we never calibrated a physical clock, and nothing here measures rates or long-timescale kinetics.
+
+\paragraph{Panels.} The full panel is every validation domain of at most 256 residues, which is 28 proteins; no protein was removed after we saw its result. The replication and retention panels use the first eight in the same frozen manifest order.
+
+\paragraph{Baselines.} We pinned the source implementation and checkpoint by file hash locally, so the pinning can be checked rather than trusted. The adapted model keeps the source architecture, inference procedure, and parameter count, and we compare on identical transitions against it and against coordinate persistence, which predicts no motion. Section~\ref{sec:limits} lists the published methods we did not run, and why.
+
+\section{Source-anchored exact-lag adaptation}
+
+\subsection{Exact-lag parent training}
+
+For each training domain the loader reads all five 450~K replicas. Cluster labels on the starting state balance sampling only: clusters are drawn uniformly and equal numbers of starts taken from each, with replacement where needed, so common conformations do not swamp rare ones. Every pair comes from one replica and spans exactly 50 frames, so supervision never crosses replicas or substitutes a Markov-state draw for the observed future.
+
+The fine-tuned parent starts from the source checkpoint and updates all $34{,}152{,}521$ parameters over 10 epochs and 160 optimizer updates, covering $30{,}720$ sampled transitions with 8 domains per batch and 24 transitions per domain (192 pairs per update) at a learning rate of $3\times10^{-6}$. We build the validation set once and replay the same random draws in the flow-matching objective at every epoch, so losses compare on equal footing across epochs, and keep the checkpoint with the lowest validation loss. That run took 121.80~s on one NVIDIA H100, a figure covering only the selected run and not the search behind it.
+
+\subsection{Source anchoring}
+
+Let $\theta_0$ denote the source weights and $\theta_p$ the fine-tuned parent. The evaluated candidate is
+\begin{equation}
+\theta_\alpha = \theta_0 + \alpha(\theta_p - \theta_0), \qquad \alpha = 0.0735.
+\end{equation}
+Floating-point tensors are interpolated in their stored precision, and non-floating state must match exactly between checkpoints. We apply no gradient step afterwards, so the evaluated model keeps 7.35\% of what fine-tuning learned and remains a single model at inference with no added cost. Equation~(1) is a scaled task vector \citep{ilharco2023task}, the simplest member of a family that includes merging sensitive to the sign and magnitude of individual parameters \citep{yadav2023ties}. We did not try those; a single scalar $\alpha$ moves every parameter by the same fraction, which is almost certainly not optimal.
+
+This coefficient is an operating point we arrived at during development and it carries no physical meaning. It also sits outside our own preregistered grid: the frozen epoch-sweep protocol specified $\{0.02, 0.03, 0.04, 0.06\}$ for a ten-epoch parent, and $0.0735$ came from a later refinement on validation data we had already examined. That is a selection step beyond the grid we committed to, and a further reason to read the coefficient as a development choice rather than a validated setting. Section~\ref{sec:negative} reports what happened on either side of it.
+
+\section{Evaluation}
+
+\subsection{Exact-lag endpoint protocol (original artifacts)}
+
+For each of the 28 proteins we use all five replicas and four evenly spaced, deterministically chosen starts per replica, giving 560 transitions. Source and adapted model each draw four samples per start, using ten integration steps of the model's ODE solver and a shared inference seed. Every prediction and the observed target are superimposed onto the \emph{starting} structure by Kabsch alignment, which removes overall translation and rotation. Aligning to the start rather than the target keeps information about the answer from leaking in.
+
+For transition $i$ with starting coordinates $x_i$, observed target $y_i$, and $K$ predicted endpoints $\{\hat{y}_{ik}\}_{k=1}^{K}$, define the ensemble endpoint $\bar{y}_i = K^{-1}\sum_k \hat{y}_{ik}$. The primary per-transition error is
+\begin{equation}
+e_i = \left[\frac{1}{N_i}\sum_{n=1}^{N_i}\left\|\bar{y}_{in}-y_{in}\right\|_2^2\right]^{1/2},
+\end{equation}
+where $N_i$ is the residue count after alignment. In words, $\bar{y}_i$ is the centroid of the $K$ predicted structures and $e_i$ is the root-mean-square distance from that centroid to the observed structure. We average first over the 20 transitions of each protein, then across proteins with equal weight, so a long protein cannot dominate. Intervals come from resampling proteins with replacement 100{,}000 times, making the protein rather than the transition the unit of uncertainty.
+
+\subsection{Sampling-aware frozen-checkpoint evaluator}
+\label{sec:evaluator}
+
+The second evaluator was written from scratch. The original is no longer runnable, so this is an independent implementation rather than a reproduction, which limits what agreement between them can show. It scores the released checkpoint on the eight-protein panel using all five replicas, with starts at frame $\lfloor i(N-51)/3 \rfloor$ for $i = 0,\dots,3$ and targets 50 frames later, giving 160 paired transitions. Inputs come from hash-verified HDF5 files expanded to heavy-atom structures in single precision. Both models use ten ODE steps and matched random streams, so no difference between them comes from the noise draws.
+
+We grew the ensembles rather than regenerating them. For transition $j$ the original block of four samples uses seed $20260904+j$, and three further blocks use that seed offset by $b\times10^{6}$ for $b=1,2,3$. The $K=8$ ensemble is blocks 0 and 1 together, and $K=16$ is all four, so the original four draws sit unchanged inside every larger ensemble. We specified this extension before computing any of its outputs, and the panel never changed. Intervals use 2{,}000 protein resamples. \textbf{The three ensembles share the same 160 transitions and nest inside one another, so the three $K$ estimates are not independent repetitions of the experiment.} We therefore describe their intervals as conditional on this panel and these draws.
+
+Alongside endpoint RMSD we report the energy score \citep{gneiting2007proper,gneiting2008assessing}, a multivariate extension of CRPS that scores a whole set of samples against one observed outcome: the mean sample-to-target distance minus half the mean distance between distinct sample pairs, unsquared. It is strictly proper, meaning it is optimized only by reporting one's true predictive distribution and cannot be improved by making samples more alike, which is precisely the property we need here. We also use two relations among squared errors: $\mathrm{sample\ MSE} = \mathrm{centroid\ MSE} + \mathrm{ensemble\ variance}$, where ensemble variance measures how far samples sit from their own centroid; and $\mathrm{centroid\ MSE} - \mathrm{ensemble\ variance}/(K-1)$, which estimates the centroid error at unlimited samples under independent draws. The second removes Monte Carlo noise. It removes neither uncertainty in the target nor systematic bias in the model.
+
+\subsection{Ensemble-retention protocol}
+
+The retention suite compares the adapted model against the source on the eight-protein panel. For each protein and checkpoint we generate with a breadth-first tree of breadth 200, keep 500 samples in chunks of 100, use 50 ODE steps, and start from the same frame and seed; the reference is every frame from all five replicas. The samples form an unordered ensemble, not a trajectory.
+
+Seven quantities are compared after aligning all structures to a common frame. Four describe the shape of the distribution: the fraction of the reference structure's residue contacts that are still formed; the spread of RMSD between pairs of sampled structures; the radius of gyration, a single number for how compact a structure is; and the root-mean-square fluctuation (RMSF), how far each residue moves about its own mean position. Two describe correlated motion: the dynamic cross-correlation matrix (DCCM), whose entries say how strongly each pair of residues moves together, and the principal-subspace overlap (RMSIP), which asks whether the dominant directions of motion still span the same subspace. The seventh is the fraction of generated structures containing an atomic clash. Distributions are compared with the Wasserstein-1 distance, the average cost of shifting one onto the other. We fixed the gate before computing any aggregate: for each quantity the upper end of its protein-bootstrap interval must stay under a preset limit, at least six of eight proteins must fall within it, and no protein may exceed twice it. All seven must pass. This is a non-inferiority screen with tolerances chosen during development, not a test of equivalence and not evidence that the ensemble is physically correct.
+
+\section{Results}
+
+\subsection{Complete eligible endpoint panel and seed replication}
+
+Averaged with equal weight over proteins, the endpoint error of the averaged prediction is $11.2602$~\AA{} for the source and $11.2276$~\AA{} for the adapted model, a gain of $0.03259$~\AA{} with interval $[0.02525, 0.04011]$, improving 27 of 28 proteins (Table~\ref{tab:endpoint}). Coordinate persistence sits at $11.6640$~\AA{}, so the adapted model beats it by $0.43641$~\AA{} on 22 of 28. Only the source comparison is informative, since the two share an architecture and inference procedure and differ solely in their weights; beating persistence shows only that generating samples beats predicting no motion.
+
+The same frozen record contains four further measurements that we report here for the first time. The adapted model improves single-sample error by $0.06890$~\AA{} on all 28 proteins ($p=7.4\times10^{-9}$) and best-of-four by $0.03724$~\AA{} on 27 ($p=2.2\times10^{-7}$). It also improves both halves of the predicted displacement, the vector from the starting structure to the predicted one: how far it says the protein moves, by $0.02919$~\AA{} on 24 proteins ($p=1.8\times10^{-4}$), and which way, by $0.00136$ in cosine on 25 proteins ($p=2.7\times10^{-5}$).
+
+The obvious objection to a small gain in averaged-prediction error is that a model can manufacture one by making its samples more alike, since averaging tighter samples pulls the centroid inward. A cosine is invariant to rescaling, so the direction result looks immune. It is not: this cosine is computed on a $K$-sample mean carrying Monte Carlo noise of its own, so shrinking the ensemble raises its expected value at fixed $K$ by the same mechanism Section~\ref{sec:sampling} identifies for RMSD, and we measured it only at $K=4$. We read it as corroborative rather than decisive; the argument against pure contraction is carried by the energy score, whose estimator is $K$-independent. Across proteins the direction and magnitude gains track only loosely ($r=0.30$), while direction correlates more strongly with the primary endpoint gain ($r=0.77$).
+
+We repeated the whole procedure under two further training seeds (Table~\ref{tab:endpoint}): the three gains average $0.02734$~\AA{} and all eight proteins improve for all three parents. The second seed returns about three quarters of what the first did, a spread wide enough relative to the effect that we read this as evidence the effect repeats, not that it is insensitive to training randomness.
+
+\begin{table}[tb]
+\centering
+\caption{\textsc{Original evidence.} Protein-macro improvement, original evaluator. Positive favors the candidate. Intervals use 100{,}000 protein bootstrap resamples; sign tests are exact two-sided over proteins. A bootstrap interval excludes zero deterministically whenever every protein shares a sign, so we report the sign test as the independent evidence; at eight proteins $7.8\times10^{-3}$ is the smallest attainable value.}
+\label{tab:endpoint}
+\scriptsize
+\begin{tabular}{lrrrr}
+\toprule
+Panel and comparison & Gain & 95\% interval & Improved & Sign test \\
+\midrule
+Full, candidate vs.\ source        & 0.03259 & $[0.02525, 0.04011]$ & 27/28 & $2.2\times10^{-7}$ \\
+Full, candidate vs.\ persistence   & 0.43641 & $[0.20303, 0.68065]$ & 22/28 & $3.7\times10^{-3}$ \\
+Compact, parent seed 1 vs.\ source & 0.03009 & $[0.01839, 0.04307]$ & 8/8 & $7.8\times10^{-3}$ \\
+Compact, parent seed 2 vs.\ source & 0.02291 & $[0.01327, 0.03429]$ & 8/8 & $7.8\times10^{-3}$ \\
+Compact, parent seed 3 vs.\ source & 0.02901 & $[0.01835, 0.03858]$ & 8/8 & $7.8\times10^{-3}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Ensemble retention}
+
+All seven quantities pass, each within limit on all eight proteins rather than the six required (Appendix~\ref{app:retention}). The largest degradation is the principal-component overlap, $+0.004161$ against a limit of $0.030$. Passing means the thresholds we declared in advance were met; the two ensembles may still differ in ways these quantities cannot see.
+
+
+\subsection{Endpoint gains shrink with ensemble size; distribution-sensitive scores do not}
+\label{sec:sampling}
+
+One discrepancy needs stating first. On the same eight proteins, checkpoints and $K=4$, the new evaluator reports a gain of $0.02401$~\AA{} where the original reported $0.03009$~\AA{}, a difference of 20.2\% with overlapping intervals. They differ in start selection, floating-point precision and bootstrap budget, and the original cannot be re-run to settle it. We report the gap as a realistic floor on how closely two implementations of one measurement agree in practice.
+
+At $K=4$ the centroid endpoint error falls from $11.05817$ to $11.03417$~\AA{} (gain $0.02401$~\AA{}, $[0.01870, 0.02882]$, 8/8 improved); at $K=16$ from $10.04244$ to $10.02861$~\AA{} (gain $0.01383$~\AA{}, $[0.00733, 0.02194]$, 8/8). The gain is 42.4\% smaller, $0.217\%$ of source error at $K=4$ against $0.138\%$ at $K=16$. The paired difference across $K$ is $+0.01018$~\AA{}: seven of eight domains shrink, with paired resampling interval $[+0.00272, +0.01763]$ and paired $t$ interval $[+0.0003, +0.0200]$. We treat this as post hoc, computed after the sweep was seen, and note the exact sign test reaches only $p=0.07$ at eight units.
+
+The energy score behaves differently. Its estimated gain is $0.00328$, $0.00604$ and $0.00642$~\AA{} at $K=4$, $8$ and $16$, but this is not improvement with more samples: the estimator targets a population quantity independent of $K$, so these are three estimates of one number differing in precision, and even the precision is not monotone ($K=16$ widest at $0.01006$~\AA{}, $K=8$ narrowest at $0.00482$~\AA{}). What can be said is that a strictly proper score favors the adapted model at all three counts while the raw endpoint gain does not hold still.
+
+\paragraph{Why the two metrics disagree.} Averaging $K$ independent draws leaves Monte Carlo noise in the centroid, contributing to the squared error a term that shrinks like $1/K$. Two models whose samples are spread differently therefore differ in centroid error partly for a reason unrelated to which is closer to the truth, and that part melts away as $K$ grows. Our adapted model is the less dispersed, so it benefits from exactly this at small $K$.
+
+Table~\ref{tab:sampling} splits the difference into its two additive pieces. The raw centroid-error gain decays from $0.57499$ to $0.35058$~\AA$^2$, while the Monte Carlo piece decays faster, $0.48003$ to $0.12468$~\AA$^2$. What remains is the part attributable to the centroid sitting genuinely closer to the observed structure, with values $0.09496$, $0.19851$ and $0.22590$~\AA$^2$. We read these as we read the energy score: three estimates of one $K$-independent quantity differing in precision, the $K=4$ estimate the noisiest, its interval $[-0.29867, +0.12011]$ containing both others. The paired $K=16$ to $K=4$ contrast is $0.131$~\AA$^2$ on 6 of 8 proteins, sign test $p=0.29$, interval crossing zero, so we claim no trend in it. The point is the negative one: unlike the raw centroid gain, this term does not decay in $K$. Fitting $\mathrm{MSE}(K) = B + V/K$ to the stored per-transition arrays recovers the $1/K$ law and places the asymptotic gain at $0.2259$~\AA$^2$; we quote it in squared-error units only, since converting to RMSD depends on whether the square root is taken before or after averaging ($0.0103$ or $0.0082$~\AA{}). \textbf{So at $K=4$ roughly 83\% of the apparent gain was Monte Carlo noise in the source model's centroid, and only what survives at any $K$ is a real improvement in where the prediction sits.} This is the measurement the paper exists to report, and it is why quoting the $K=4$ number alone would have misled.
+
+\begin{figure}[tb]
+\centering
+\begin{minipage}{0.44\linewidth}\centering
+\includegraphics[width=\linewidth]{sampling_sensitivity.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.44\linewidth}\centering
+\includegraphics[width=\linewidth]{protein_sensitivity.pdf}
+\end{minipage}
+\caption{\textsc{New evaluator.} \textbf{A, B:} ensemble-size sensitivity; colored points are equal-protein means, bars are conditional 95\% protein-resampling intervals, gray points individual proteins. The nested ensembles reuse the same 160 transitions, so the three estimates are not independent replications. \textbf{C, D:} per-protein effects, open circles $K=4$, filled $K=16$, linked within protein. Positive gains favor adaptation.}
+\label{fig:sampling}
+\end{figure}
+
+\begin{table}[tb]
+\centering
+\caption{\textsc{New evaluator.} Sampling-aware evaluation on eight proteins, 160 transitions. Deltas are candidate $-$ source, so \emph{negative favors the candidate}; intervals are conditional protein-bootstrap (2{,}000 resamples) and the three columns are nested, not independent. The raw centroid gain shrinks with $K$; the two $K$-independent summaries do not.}
+\label{tab:sampling}
+\scriptsize
+\begin{tabular}{lrrr}
+\toprule
+Metric & $K=4$ & $K=8$ & $K=16$ \\
+\midrule
+Centroid RMSD (\AA)          & $-0.02401$ & $-0.01887$ & $-0.01383$ \\
+                             & \tiny$[-0.02882, -0.01870]$ & \tiny$[-0.02257, -0.01545]$ & \tiny$[-0.02194, -0.00733]$ \\
+Energy score (\AA)           & $-0.00328$ & $-0.00604$ & $-0.00642$ \\
+                             & \tiny$[-0.00767, 0.00115]$ & \tiny$[-0.00841, -0.00359]$ & \tiny$[-0.01166, -0.00160]$ \\
+\midrule
+Centroid MSE (\AA$^2$)       & $-0.57499$ & $-0.45867$ & $-0.35058$ \\
+\quad Monte Carlo, $\Delta\sigma^2/(K{-}1)$ & $-0.48003$ & $-0.26016$ & $-0.12468$ \\
+\quad spread-corrected location & $-0.09496$ & $-0.19851$ & $-0.22590$ \\
+                             & \tiny$[-0.29867, 0.12011]$ & \tiny$[-0.32777, -0.07963]$ & \tiny$[-0.46080, -0.03177]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Per-protein consistency and spread}
+
+All eight proteins still show lower centroid error at $K=16$, from $-0.00078$~\AA{} for 2k4qA00 to $-0.04083$~\AA{} for 1q16B03 (Figure~\ref{fig:sampling}C), and seven also improve on the energy score. The exception, 2k4qA00, gets worse by $+0.00505$~\AA{} and stays in every aggregate we report. The adapted model's samples are also less spread out on all eight, by $-1.87020$~\AA$^2$ in ensemble variance and $-0.11302$~\AA{} in pairwise RMSD at $K=16$. Tighter is not automatically better: a model can narrow its output and lower distance-based errors while getting the distribution no more right. We report the spread because the energy score cannot be read without it: being strictly proper, that score cannot be improved by narrowing alone.
+
+\subsection{Negative and contrary results}
+\label{sec:negative}
+
+Several stronger interventions worked better on the target task and failed the screen. A parent trained purely on the fixed-lag objective, adaptations touching only the output head, and objective mixtures of 25\% and 50\% all beat the conservative anchors on transition prediction and all broke at least one retention limit; among earlier anchors, $\alpha=0.10$ missed one limit and $\alpha=0.20$ several. A control trained only on the original Markov-state objective kept its ensemble behavior but produced no supported endpoint gain. Maximizing improvement at the target lag and hoping the ensemble survives does not work here.
+
+An interpolation at 7.5\% failed the single-protein pilot that 7.35\% passed. That is not a located threshold: it sets a one-protein pilot against an eight-protein pass, and a gap of 0.15 percentage points sits well inside single-protein Monte Carlo variation. It shows how sensitive the choice is to the process behind it, which argues for evaluating anchor coefficients on larger untouched cohorts.
+
+
+The released checkpoint does not beat our own earlier anchored checkpoint under every seed: two of three favor it, while the second differs by $-0.00110$~\AA{} with an interval crossing zero. Beating the public source consistently is a different claim from beating every nearby checkpoint we produced, and only the first is supported.
+
+\section{Discussion}
+
+\textbf{The sampling result is the one to carry away.} Probabilistic forecasting has long known that scores from finite ensembles are biased by ensemble size \citep{ferro2008effect,ferro2014fair}; what we add is a worked case in molecular simulation where that bias is most of a reported effect, some 83\% at $K=4$, with the decomposition that recovers the $K$-independent part. The practical suggestion is small: report a curve over sample counts using nested draws, a distribution-sensitive score beside the mean-based one, and the spread, so a gain can be attributed rather than assumed, all of it a second pass over existing samples. We show it for one checkpoint on one panel and do not claim other published gains are artifacts.
+
+The anchoring result is the narrower one: holding the adapted weights close to the source preserved a gain at the target lag that survived screens set in advance, and that is the whole methodological claim. Linear interpolation may be a poor way to control the distance, $0.0735$ has no reason to carry to another dataset, and a screen defined against the source protects selected properties \emph{of the source}, so a systematic error there is inherited rather than detected. The standard for a physically correct ensemble is agreement with Boltzmann statistics \citep{noe2019boltzmann}, which we neither attempt nor meet.
+
+\paragraph{Outlook.} Four directions follow. Measure the same surface prospectively, on proteins nobody has looked at and with the anchor grid registered in advance, which would turn the boundary we describe into an operating curve. Replace the single scalar $\alpha$ with anchoring that respects curvature or the sign of individual updates \citep{kirkpatrick2017overcoming,li2018explicit,yadav2023ties}, testing whether the usable window really is narrower than 8\% of the displacement. Check a failure mode our screen cannot see: training at one fixed lag may erode consistency between lags, so apply the model once at lag 100 and twice at lag 50 and test the Chapman-Kolmogorov relation. That test is cheap and we did not run it. Last and most consequential, apply the decomposition outside molecular dynamics, to conformational ensembles, docking poses, and trajectory prediction, where the same $1/K$ term arises and testing whether reported gains survive it needs no new training.
+
+\section{Limitations}
+\label{sec:limits}
+
+\textbf{Reused validation data.} We selected and evaluated on proteins we had already examined. The 28-protein panel covers the whole length-eligible population, so nothing was cherry-picked within it, but the population is not untouched, and our intervals describe variation across these proteins rather than coverage for a fresh sample. \textbf{One lag, one temperature.} Every scored transition spans 50 saved frames at 450~K. We ran no consistency check across lags \citep{schreiner2023ito}, estimated no rates, and calibrated no physical clock; what we predict is a structure at the end of a fixed window, not a trajectory. \textbf{Restricted proteins and coordinates.} Scoring uses \CA{} positions only on 28 domains under 256 residues, so the clash statistic and the seven retention quantities say nothing about all-atom stereochemistry, packing, or energetics. \textbf{Small panels.} The sampling analysis rests on eight proteins and one released seed; a bootstrap over eight units is coarse, and we apply no correction for testing seven quantities at once. \textbf{Two baselines.} Only the pinned source and coordinate persistence are matched to our protocol. Fixed-lag conditional transition models \citep{klein2023timewarp,schreiner2023ito,hsu2024score} are the right comparison class but are released for peptides and small molecules rather than 256-residue domains, so matching them means retraining. Trajectory models trained on mdCATH \citep{shen2025confrover} report ensemble-level metrics rather than fixed-lag endpoint error, so matching them means reimplementing their evaluation inside our contract. Equilibrium emulators \citep{lewis2025bioemu,jing2024alphaflow} generate ensembles without a conditioning start and do not apply. Until those runs exist we can say nothing about how this compares to the field.
+
+\section{Reproducibility and AI disclosure}
+\label{sec:repro}
+
+Every number here comes from hash-pinned frozen JSON records; the checks our audit runs are listed under Data availability. We used AI assistance in three places: planning the study, writing the analysis and data-processing code and helping interpret its output, and refining the writing of a manuscript the authors drafted themselves, where its use was confined to polishing text we had written rather than generating it. The research questions, the experimental design, and the scientific claims are ours. Every experimental observation came from executing pinned checkpoints on recorded inputs, no checkpoint was trained during this evaluation, and every number was recomputed by deterministic scripts and checked by us against the frozen records. The authors take full responsibility for all claims, code, data handling, citations, and the decision to submit.
+
+\section{Conclusion}
+
+\textbf{Most of what looked like an improvement at $K=4$ was not one.} Roughly 83\% of it is a Monte Carlo term decaying as $1/K$, and only the $K$-independent remainder reflects a prediction sitting genuinely closer to the observed structure. That remainder is real, and lands between 0.014 and 0.033~\AA{} depending on how it is measured, about half what the single-$K$ number advertises. The adaptation behind it, keeping 7.35\% of what fine-tuning learned, does improve endpoint prediction over source \marsfm{} and passes a retention screen that every more aggressive adaptation failed. But what transfers is the measurement, not the checkpoint: the next such study should state its anchoring strength and sample count before its improvement.
+
+\section*{Data availability}
+
+The underlying mdCATH resource is described by \citet{mirarchi2024mdcath}. For double-blind review this paper includes no identifying external link. Frozen claim-level validation records and deterministic recomputation code are prepared in an anonymous supplementary package. The standard test partition is absent from that package and remained unopened.
+
+The audit recomputes the 28-protein aggregate and all seven retention aggregates from paired per-protein records, and checks the checkpoint digest, transition indices, the exact 50-frame separation, shared inference settings, and the zero test-record field across every record cited. For the sampling evaluation, 480 records passed paired-RNG and checkpoint checks, and all 160 original $K=4$ prefixes survived intact inside the larger ensembles. These checks establish implementation consistency, not biological validity.
+
+\bibliographystyle{plainnat}
+\begin{thebibliography}{99}
+
+\bibitem[Ferro et al.(2008)]{ferro2008effect}
+Christopher A.~T. Ferro, David S. Richardson, and Andreas P. Weigel.
+On the effect of ensemble size on the discrete and continuous ranked probability scores.
+\emph{Meteorological Applications}, 15(1):19--24, 2008.
+
+\bibitem[Ferro(2014)]{ferro2014fair}
+Christopher A.~T. Ferro.
+Fair scores for ensemble forecasts.
+\emph{Quarterly Journal of the Royal Meteorological Society}, 140(683):1917--1923, 2014.
+
+\bibitem[Gneiting and Raftery(2007)]{gneiting2007proper}
+Tilmann Gneiting and Adrian E. Raftery.
+Strictly proper scoring rules, prediction, and estimation.
+\emph{Journal of the American Statistical Association}, 102(477):359--378, 2007.
+
+\bibitem[Gneiting et al.(2008)]{gneiting2008assessing}
+Tilmann Gneiting, Larissa I. Stanberry, Eric P. Grimit, Leonhard Held, and Nicholas A. Johnson.
+Assessing probabilistic forecasts of multivariate quantities, with an application to ensemble predictions of surface winds.
+\emph{TEST}, 17(2):211--235, 2008.
+
+\bibitem[Hsu et al.(2024)]{hsu2024score}
+Tim Hsu, Babak Sadigh, Vasily Bulatov, and Fei Zhou.
+Score dynamics: scaling molecular dynamics with picoseconds time steps via conditional diffusion model.
+\emph{Journal of Chemical Theory and Computation}, 20(6):2335--2348, 2024.
+
+\bibitem[Ilharco et al.(2023)]{ilharco2023task}
+Gabriel Ilharco, Marco Tulio Ribeiro, Mitchell Wortsman, Suchin Gururangan, Ludwig Schmidt, Hannaneh Hajishirzi, and Ali Farhadi.
+Editing models with task arithmetic.
+In \emph{International Conference on Learning Representations (ICLR)}, 2023.
+
+\bibitem[Jing et al.(2024)]{jing2024alphaflow}
+Bowen Jing, Bonnie Berger, and Tommi Jaakkola.
+AlphaFold meets flow matching for generating protein ensembles.
+In \emph{International Conference on Machine Learning (ICML)}, 2024.
+
+\bibitem[Kapu\'{s}niak et al.(2026)]{kapusniak2026}
+Kacper Kapu\'{s}niak, Cristian Gabellini, Michael Bronstein, Prudencio Tossou, and Francesco Di Giovanni.
+\marsfm{}: Generative modeling of molecular dynamics via Markov state models.
+In \emph{International Conference on Learning Representations (ICLR)}, 2026.
+arXiv:2509.24779.
+
+\bibitem[Kirkpatrick et al.(2017)]{kirkpatrick2017overcoming}
+James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei A. Rusu, Kieran Milan, John Quan, Tiago Ramalho, Agnieszka Grabska-Barwinska, et al.
+Overcoming catastrophic forgetting in neural networks.
+\emph{Proceedings of the National Academy of Sciences}, 114(13):3521--3526, 2017.
+
+\bibitem[Klein et al.(2023)]{klein2023timewarp}
+Leon Klein, Andrew Y.~K. Foong, Tor Erlend Fjelde, Bruno Mlodozeniec, Marc Brockschmidt, Sebastian Nowozin, Frank No\'{e}, and Ryota Tomioka.
+Timewarp: transferable acceleration of molecular dynamics by learning time-coarsened dynamics.
+In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2023.
+
+\bibitem[Lewis et al.(2025)]{lewis2025bioemu}
+Sarah Lewis, Tim Hempel, Jos\'{e} Jim\'{e}nez-Luna, Michael Gastegger, Yu Xie, Andrew Y.~K. Foong, Victor Garc\'{i}a Satorras, Osama Abdin, Bastiaan S. Veeling, Iryna Zaporozhets, et al.
+Scalable emulation of protein equilibrium ensembles with generative deep learning.
+\emph{Science}, 389(6718), 2025.
+
+\bibitem[Li et al.(2018)]{li2018explicit}
+Xuhong Li, Yves Grandvalet, and Franck Davoine.
+Explicit inductive bias for transfer learning with convolutional networks.
+In \emph{International Conference on Machine Learning (ICML)}, volume~80, pages 2825--2834, 2018.
+
+\bibitem[Liu et al.(2025)]{liu2025roftmol}
+Shikun Liu, Deyu Zou, Nima Shoghi, Victor Fung, Kai Liu, and Pan Li.
+RoFt-Mol: Benchmarking robust fine-tuning with molecular graph foundation models.
+arXiv:2509.00614, 2025.
+
+\bibitem[Mirarchi et al.(2024)]{mirarchi2024mdcath}
+Antonio Mirarchi, Toni Giorgino, and Gianni De Fabritiis.
+mdCATH: A large-scale MD dataset for data-driven computational biophysics.
+\emph{Scientific Data}, 11:1299, 2024.
+\doi{10.1038/s41597-024-04140-z}.
+
+\bibitem[No\'{e} et al.(2019)]{noe2019boltzmann}
+Frank No\'{e}, Simon Olsson, Jonas K\"{o}hler, and Hao Wu.
+Boltzmann generators: sampling equilibrium states of many-body systems with deep learning.
+\emph{Science}, 365(6457):eaaw1147, 2019.
+
+\bibitem[Schreiner et al.(2023)]{schreiner2023ito}
+Mathias Schreiner, Ole Winther, and Simon Olsson.
+Implicit transfer operator learning: multiple time-resolution models for molecular dynamics.
+In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2023.
+
+\bibitem[Shen et al.(2025)]{shen2025confrover}
+Yuning Shen, Lihao Wang, Huizhuo Yuan, Yan Wang, Bangji Yang, and Quanquan Gu.
+Simultaneous modeling of protein conformation and dynamics via autoregression.
+In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2025.
+
+\bibitem[Wortsman et al.(2022a)]{wortsman2022robust}
+Mitchell Wortsman, Gabriel Ilharco, Jong Wook Kim, Mike Li, Simon Kornblith, Rebecca Roelofs, Raphael Gontijo Lopes, Hannaneh Hajishirzi, Ali Farhadi, Hongseok Namkoong, and Ludwig Schmidt.
+Robust fine-tuning of zero-shot models.
+In \emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 7959--7971, 2022.
+
+\bibitem[Wortsman et al.(2022b)]{wortsman2022soups}
+Mitchell Wortsman, Gabriel Ilharco, Samir Ya Gadre, Rebecca Roelofs, Raphael Gontijo-Lopes, Ari S. Morcos, Hongseok Namkoong, Ali Farhadi, Yair Carmon, Simon Kornblith, and Ludwig Schmidt.
+Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time.
+In \emph{International Conference on Machine Learning (ICML)}, volume 162, pages 23965--23998, 2022.
+
+\bibitem[Yadav et al.(2023)]{yadav2023ties}
+Prateek Yadav, Derek Tam, Leshem Choshen, Colin Raffel, and Mohit Bansal.
+TIES-Merging: Resolving interference when merging models.
+In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2023.
+
+\end{thebibliography}
+
+\appendix
+
+\section{Ensemble-retention results}
+\label{app:retention}
+
+\begin{table}[h]
+\centering
+\caption{Eight-protein ensemble-retention results. Degradation is oriented so positive is unfavorable. All seven rows passed, and every row also met the at-least-75\%-within-limit and no-protein-above-twice-limit rules.}
+\label{tab:retention}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Observable & Mean degradation & 95\% interval & Mean limit \\
+\midrule
+DCCM MAE                     & $-0.000660$   & $[-0.001625, 0.000285]$   & 0.005000 \\
+Native-contact $W_1$         & $0.000271$    & $[-0.001594, 0.001946]$   & 0.015000 \\
+Pairwise-RMSD $W_1$ (\AA)    & $-0.043699$   & $[-0.126021, 0.049296]$   & 0.250000 \\
+PCA-subspace RMSIP           & $0.004161$    & $[-0.000227, 0.010755]$   & 0.030000 \\
+Prediction clash fraction    & $-1.195$e-06  & $[-2.464$e-05$, 2.248$e-05$]$ & 5.000e-04 \\
+Radius-of-gyration $W_1$ (\AA) & $-0.042152$ & $[-0.077537, -0.008042]$  & 0.150000 \\
+RMSF RMSE (\AA)              & $-0.022244$   & $[-0.077596, 0.039556]$   & 0.150000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Additional interpretation of retention metrics}
+
+The retention suite spans correlated motion (DCCM), fluctuation magnitude (RMSF), global size (radius of gyration), distributional spread (pairwise RMSD), low-dimensional covariance geometry (RMSIP), contact preservation, and a coarse \CA{} clash statistic. These are complementary but incomplete. Similar RMSF can coexist with different cross-correlations, and similar radius-of-gyration distributions can coexist with different local contacts. Requiring every observable to pass avoids averaging a large regression in one property against an improvement in another. The gaps listed in Section~\ref{sec:limits} are not filled by adding these observables together.
+
+\section{Glossary}
+\label{app:glossary}
+
+\textbf{Replica.} One independent molecular dynamics simulation of a domain. mdCATH provides five per protein per temperature, differing only in their random initial velocities.
+
+\textbf{Saved frame.} One stored snapshot along a replica. Frames are written at a fixed stride, so a lag of 50 frames is a fixed amount of simulated time, but we never convert it to nanoseconds and make no claim about physical timescales.
+
+\textbf{450~K.} The simulation temperature we use. It is far above physiological temperature and is chosen because domains explore conformational space faster there, which makes a 50-frame lag correspond to visible motion.
+
+\textbf{Markov state model.} A discretization of a long trajectory into a small number of metastable conformational basins, together with the transition probabilities between them. \marsfm{} generates by learning transitions over such a construction.
+
+\textbf{Flow matching and ODE steps.} The source model generates a structure by integrating a learned velocity field from noise to sample. The number of integration steps, ten in our endpoint evaluation and fifty in the retention suite, trades compute against sample fidelity.
+
+\textbf{Kabsch alignment.} The least-squares rigid-body superposition of one structure onto another. It removes global translation and rotation so that only internal conformational change is scored.
+
+\textbf{\CA{} coordinates.} The positions of the alpha carbons, one per residue. Scoring on these captures backbone motion and ignores side chains entirely.
+
+\textbf{Centroid, or ensemble mean.} The average of the $K$ predicted structures for one transition, computed coordinate by coordinate after alignment.
+
+\textbf{Ensemble variance.} The mean squared distance from the individual samples to their own centroid. It measures how spread out a model's predictions are, not how accurate they are.
+
+\textbf{Protein-macro averaging.} Averaging first within each protein, then across proteins with equal weight, so that proteins contributing more residues or more transitions do not dominate.
+
+\textbf{Protein bootstrap.} Resampling the list of proteins with replacement and recomputing the statistic each time, which makes the protein the unit of uncertainty rather than the individual transition.
+
+\textbf{Coordinate persistence.} The baseline that predicts no motion, returning the starting \CA{} coordinates as the prediction.
+
+\textbf{Energy score.} A scoring rule for a set of samples against one observed outcome, equal to the mean sample-to-target distance minus half the mean distance between distinct sample pairs. Being strictly proper, it is optimized only by predicting the true distribution, so it cannot be improved by narrowing the samples alone.
+
+\textbf{Wasserstein-1 distance.} The average cost of transporting one distribution onto another, used here to compare distributions of a scalar observable between generated and reference ensembles.
+
+\textbf{DCCM.} The dynamic cross-correlation matrix, whose entries record how strongly each pair of residues moves together across an ensemble.
+
+\textbf{RMSIP.} The root-mean-square inner product between the leading principal components of two ensembles. It measures whether the dominant directions of motion span the same subspace, with 1 meaning identical subspaces.
+
+\textbf{RMSF.} The root-mean-square fluctuation of each residue about its mean position, a per-residue measure of local flexibility.
+
+\textbf{Native contact fraction.} The proportion of residue pairs in contact in the reference structure that remain in contact in a generated one.
+
+\textbf{Radius of gyration.} The root-mean-square distance of atoms from their centre of mass, a single number summarising how compact a structure is.
+
+\input{checklist_filled}
+
+\end{document}

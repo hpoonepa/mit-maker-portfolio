@@ -1,0 +1,113 @@
+{
+  "4": {
+    "training_seed": "20260825",
+    "n_proteins": 8,
+    "candidate_minus_source": {
+      "sample_mse": -2.0150870207675333,
+      "centroid_mse": -0.5749901875959859,
+      "ensemble_variance": -1.4400968331715454,
+      "pairwise_rmsd": -0.1139636979669538,
+      "population_mean_mse_estimate": -0.09495790987213801,
+      "mean_sample_rmsd": -0.06025974550576625,
+      "centroid_rmsd": -0.024005576090438706,
+      "energy_score": -0.0032778965222893387
+    },
+    "ci_percentile": {
+      "centroid_rmsd": {
+        "low": -0.028824990454686405,
+        "high": -0.018700357777613696
+      },
+      "mean_sample_rmsd": {
+        "low": -0.07274790862782196,
+        "high": -0.047736456682863214
+      },
+      "energy_score": {
+        "low": -0.0076740337322585865,
+        "high": 0.0011525378189878453
+      }
+    },
+    "spread_changes_no_desired_sign": {
+      "ensemble_variance": -1.4400968331715454,
+      "pairwise_rmsd": -0.1139636979669538
+    },
+    "persistence": {
+      "persistence_ca_rmsd": 11.634363337799412,
+      "source_centroid_rmsd_gain": 0.5761927561449921,
+      "candidate_centroid_rmsd_gain": 0.600198332235431
+    }
+  },
+  "8": {
+    "training_seed": "20260825",
+    "n_proteins": 8,
+    "candidate_minus_source": {
+      "sample_mse": -2.279767480243143,
+      "centroid_mse": -0.4586669853730906,
+      "ensemble_variance": -1.8211004948700502,
+      "pairwise_rmsd": -0.11825884638863744,
+      "population_mean_mse_estimate": -0.1985097718202262,
+      "mean_sample_rmsd": -0.06516682359187138,
+      "centroid_rmsd": -0.018865275295046564,
+      "energy_score": -0.006037400397552651
+    },
+    "ci_percentile": {
+      "centroid_rmsd": {
+        "low": -0.022569096675674256,
+        "high": -0.015445264542465838
+      },
+      "mean_sample_rmsd": {
+        "low": -0.0788907699113748,
+        "high": -0.052127481345232145
+      },
+      "energy_score": {
+        "low": -0.008405710933787829,
+        "high": -0.003589826830520348
+      }
+    },
+    "spread_changes_no_desired_sign": {
+      "ensemble_variance": -1.8211004948700502,
+      "pairwise_rmsd": -0.11825884638863744
+    },
+    "persistence": {
+      "persistence_ca_rmsd": 11.634363337799412,
+      "source_centroid_rmsd_gain": 1.2417225562274452,
+      "candidate_centroid_rmsd_gain": 1.2605878315224919
+    }
+  },
+  "16": {
+    "training_seed": "20260825",
+    "n_proteins": 8,
+    "candidate_minus_source": {
+      "sample_mse": -2.2207844955156433,
+      "centroid_mse": -0.350581390880512,
+      "ensemble_variance": -1.8702031046351357,
+      "pairwise_rmsd": -0.1130233115206213,
+      "population_mean_mse_estimate": -0.22590118390483688,
+      "mean_sample_rmsd": -0.06293396806351591,
+      "centroid_rmsd": -0.013827722137154195,
+      "energy_score": -0.006422312303205261
+    },
+    "ci_percentile": {
+      "centroid_rmsd": {
+        "low": -0.021940433615138536,
+        "high": -0.007333702059370508
+      },
+      "mean_sample_rmsd": {
+        "low": -0.07702319512077543,
+        "high": -0.049536148241995794
+      },
+      "energy_score": {
+        "low": -0.011662274513209635,
+        "high": -0.0015985901798598317
+      }
+    },
+    "spread_changes_no_desired_sign": {
+      "ensemble_variance": -1.8702031046351357,
+      "pairwise_rmsd": -0.1130233115206213
+    },
+    "persistence": {
+      "persistence_ca_rmsd": 11.634363337799412,
+      "source_centroid_rmsd_gain": 1.5919245468028906,
+      "candidate_centroid_rmsd_gain": 1.6057522689400447
+    }
+  }
+}

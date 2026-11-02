@@ -1,0 +1,453 @@
+{
+  "all_published_arithmetic_matched": false,
+  "bootstrap": {
+    "algorithm": "numpy.default_rng integers; shared resample indices; numpy linear quantiles",
+    "algorithm_match_is_not_assumed_when_quantiles_differ": true,
+    "ci_checks": {
+      "ensemble_mean_improvement_vs_persistence_95ci_angstrom": {
+        "absolute_error": [
+          0.0019774339320518808,
+          0.0005341273634913435
+        ],
+        "matched": false,
+        "published": [
+          0.20302960346670967,
+          0.6806461308413764
+        ],
+        "recomputed": [
+          0.20500703739876155,
+          0.680112003477885
+        ],
+        "tolerance": 1e-06
+      },
+      "ensemble_mean_improvement_vs_source_95ci_angstrom": {
+        "absolute_error": [
+          0.0,
+          0.0
+        ],
+        "matched": true,
+        "published": [
+          0.02525014950148637,
+          0.040114625364512255
+        ],
+        "recomputed": [
+          0.02525014950148637,
+          0.040114625364512255
+        ],
+        "tolerance": 1e-06
+      }
+    },
+    "resamples": 100000,
+    "seed": 20260825,
+    "unit": "protein"
+  },
+  "fraction_checks": {
+    "fraction_proteins_better_than_persistence": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.7857142857142857,
+      "recomputed": 0.7857142857142857,
+      "tolerance": 1e-12
+    },
+    "fraction_proteins_better_than_source": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.9642857142857143,
+      "recomputed": 0.9642857142857143,
+      "tolerance": 1e-12
+    }
+  },
+  "input_receipt": {
+    "path": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/full-transition-comparison.json",
+    "sha256": "9a6ea0073fd7a3af50c987ecbb1b5abec365689ccdd1acd1089eb0ff270e9c54"
+  },
+  "leave_one_protein_out": [
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.038010894516280085,
+        "direction_cosine_improvement_vs_source": 0.0013248725672371437,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029664340084627705,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4172453283526755,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03299467612446705,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06998540303024602
+      },
+      "omitted_domain_id": "1d1rA00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03641972983686103,
+        "direction_cosine_improvement_vs_source": 0.0013120323559311323,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029838872681474424,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4334952224024847,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0313415903912241,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06709541857080738
+      },
+      "omitted_domain_id": "1e7uA04"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03707511152660633,
+        "direction_cosine_improvement_vs_source": 0.0013049235480017787,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02873920764198435,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4444077961242292,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03224929468510502,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06870450469095477
+      },
+      "omitted_domain_id": "1h4yA00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03602273907715536,
+        "direction_cosine_improvement_vs_source": 0.001293081857926212,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02834893365229461,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4079582756910086,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.030778547791481852,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06679344430934424
+      },
+      "omitted_domain_id": "1jeyB03"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.0369696918716982,
+        "direction_cosine_improvement_vs_source": 0.0013294492332287893,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.030429224152514516,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4359957518879885,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.032042827411722125,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06810498020114528
+      },
+      "omitted_domain_id": "1nktA02"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.037264120026260186,
+        "direction_cosine_improvement_vs_source": 0.0013629148841453485,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.028984343957514657,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4256877723875856,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0324436450929073,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06928815403367974
+      },
+      "omitted_domain_id": "1q16B03"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03810818736084505,
+        "direction_cosine_improvement_vs_source": 0.0014013509598160793,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.03035008834765334,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.3827206111338506,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03349104888960365,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.0704655713000987
+      },
+      "omitted_domain_id": "1rquA01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.038193694315781554,
+        "direction_cosine_improvement_vs_source": 0.0014122059618199218,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02953485762353455,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.47580086790674503,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.033474942082559425,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.0701078831336151
+      },
+      "omitted_domain_id": "2dp9A01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03727552041005398,
+        "direction_cosine_improvement_vs_source": 0.0013731497052967031,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029151126859972166,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.42425036273206085,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03264453969275532,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06848412507990867
+      },
+      "omitted_domain_id": "2f2cA02"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03760255334325301,
+        "direction_cosine_improvement_vs_source": 0.0013270554665395795,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029893621434266996,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.43549394402261554,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.032672718434768606,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06915291918955145
+      },
+      "omitted_domain_id": "2incC00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03599440626632649,
+        "direction_cosine_improvement_vs_source": 0.0013733578531512235,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02792753727647211,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.45774669106316745,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03226509006091694,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06693510180351048
+      },
+      "omitted_domain_id": "2izwC00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03656614173881425,
+        "direction_cosine_improvement_vs_source": 0.001390019549449617,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.027635285300687668,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.45064330547527437,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03254826663459231,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06780420151115481
+      },
+      "omitted_domain_id": "2ji7A03"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03739773395227007,
+        "direction_cosine_improvement_vs_source": 0.0014067716898170267,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029856152889626817,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.44038944941102964,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03289805852697568,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06887974384213956
+      },
+      "omitted_domain_id": "2k4qA00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03641810157347446,
+        "direction_cosine_improvement_vs_source": 0.0013475822338122263,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02846952518308337,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4696130009139328,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.032316594262558625,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06839867580573288
+      },
+      "omitted_domain_id": "2k54A00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.0375498806856464,
+        "direction_cosine_improvement_vs_source": 0.0013667332820158906,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029600996197442254,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.39847904412828744,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.033199141978024614,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06989488699500558
+      },
+      "omitted_domain_id": "2kjrA01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03674320067242368,
+        "direction_cosine_improvement_vs_source": 0.0013272535608324623,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02944982466583603,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.43113829606243415,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03242511586437119,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06898827761355962
+      },
+      "omitted_domain_id": "3aekA03"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.036954760891329735,
+        "direction_cosine_improvement_vs_source": 0.0013230558139682251,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.028953152705503468,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.44486906300682055,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0322628915267307,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06826006274809299
+      },
+      "omitted_domain_id": "3atsA01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03811334016337033,
+        "direction_cosine_improvement_vs_source": 0.0014154394700342254,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.030471755037746042,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.3782604519925656,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03364386714834678,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.07005936201328967
+      },
+      "omitted_domain_id": "3d8lA00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03658722387203912,
+        "direction_cosine_improvement_vs_source": 0.0013270031254835552,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02649880906084177,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4765451245580022,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0321304632381805,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06769986783473998
+      },
+      "omitted_domain_id": "3i01A03"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.036462838782559445,
+        "direction_cosine_improvement_vs_source": 0.001399359827752298,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.028097177907895038,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4637844149241175,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.033184992478863466,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.067929286052084
+      },
+      "omitted_domain_id": "3mg3A01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.037145322718514916,
+        "direction_cosine_improvement_vs_source": 0.0013832923499715794,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029030901780635734,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4267476529386882,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03197220406086828,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.0680992644397101
+      },
+      "omitted_domain_id": "3pt1A02"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03827084054276698,
+        "direction_cosine_improvement_vs_source": 0.0013765903766908992,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029627050360869364,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4346284118030393,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03337920188522128,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.07045667554456297
+      },
+      "omitted_domain_id": "3tdgA01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03806169872240583,
+        "direction_cosine_improvement_vs_source": 0.001345547327906184,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029769425085793545,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4425310971294261,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03314647613954272,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06997382533835006
+      },
+      "omitted_domain_id": "4b96A00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.038424443539241564,
+        "direction_cosine_improvement_vs_source": 0.0014527089770453767,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.03024954766053231,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4285914904421349,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0339790180695553,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.07121640281453016
+      },
+      "omitted_domain_id": "4deqA02"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03873166882669509,
+        "direction_cosine_improvement_vs_source": 0.0013975802850183167,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.030541891989568696,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.4407323943987932,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03353256751160981,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.07060470799970887
+      },
+      "omitted_domain_id": "4nreA01"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03600302930496603,
+        "direction_cosine_improvement_vs_source": 0.0013575218929488954,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.028514414988201255,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.44845473510111844,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03189504277587468,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06704381192917426
+      },
+      "omitted_domain_id": "4pkiG02"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03769616233638654,
+        "direction_cosine_improvement_vs_source": 0.0013251589896674932,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.02856560128979479,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.45803715988843385,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03147827047006619,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06976682365327978
+      },
+      "omitted_domain_id": "4qncB00"
+    },
+    {
+      "means": {
+        "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03669455363193567,
+        "direction_cosine_improvement_vs_source": 0.0013232266952872376,
+        "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029066387696551278,
+        "ensemble_mean_improvement_vs_persistence_angstrom": 0.44510019920970784,
+        "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.03219081919849999,
+        "single_sample_rmsd_improvement_vs_source_angstrom": 0.06892411737273628
+      },
+      "omitted_domain_id": "5k2mA01"
+    }
+  ],
+  "limitations": [
+    "The receipt contains summaries, not raw coordinates; energy score cannot be recomputed.",
+    "Whether single_sample means an expected draw over K or a designated first sample is ambiguous and requires protocol verification."
+  ],
+  "protein_count": 28,
+  "recomputed_protein_macro_means": {
+    "best_of_k_rmsd_improvement_vs_source_angstrom": 0.03724134251807005,
+    "direction_cosine_improvement_vs_source": 0.0013599728514569792,
+    "displacement_magnitude_mae_improvement_vs_source_angstrom": 0.029187859054032816,
+    "ensemble_mean_improvement_vs_persistence_angstrom": 0.4364052826817221,
+    "ensemble_mean_rmsd_improvement_vs_source_angstrom": 0.0325922111581212,
+    "single_sample_rmsd_improvement_vs_source_angstrom": 0.06889705353038263
+  },
+  "scalar_checks": {
+    "best_of_k_rmsd_improvement_vs_source_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.03724134251807005,
+      "recomputed": 0.03724134251807005,
+      "tolerance": 1e-12
+    },
+    "direction_cosine_improvement_vs_source": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.0013599728514569792,
+      "recomputed": 0.0013599728514569792,
+      "tolerance": 1e-12
+    },
+    "displacement_magnitude_mae_improvement_vs_source_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.029187859054032816,
+      "recomputed": 0.029187859054032816,
+      "tolerance": 1e-12
+    },
+    "ensemble_mean_improvement_vs_persistence_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.4364052826817221,
+      "recomputed": 0.4364052826817221,
+      "tolerance": 1e-12
+    },
+    "ensemble_mean_improvement_vs_source_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.0325922111581212,
+      "recomputed": 0.0325922111581212,
+      "tolerance": 1e-12
+    },
+    "ensemble_mean_rmsd_improvement_vs_source_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.0325922111581212,
+      "recomputed": 0.0325922111581212,
+      "tolerance": 1e-12
+    },
+    "single_sample_rmsd_improvement_vs_source_angstrom": {
+      "absolute_error": 0.0,
+      "matched": true,
+      "published": 0.06889705353038263,
+      "recomputed": 0.06889705353038263,
+      "tolerance": 1e-12
+    }
+  },
+  "scope": "published-summary arithmetic checks, not raw-coordinate replication",
+  "wins": {
+    "centroid_vs_persistence": {
+      "proteins": 28,
+      "wins": 22
+    },
+    "centroid_vs_source": {
+      "proteins": 28,
+      "wins": 27
+    },
+    "single_sample_vs_source": {
+      "proteins": 28,
+      "wins": 28
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "blocked": [
+    "provenance.dataset.revision",
+    "provenance.adaptation_code.source",
+    "provenance.adaptation_code.revision",
+    "provenance.adaptation_code.lockfile_sha256",
+    "provenance.physical_interval_unverified",
+    "artifact-input:raw paired endpoint coordinates",
+    "artifact-input:adaptation code repository, revision, and lockfile",
+    "artifact-input:parent seed-1 checkpoint artifact",
+    "rate:g2-seed-replication-2-3",
+    "rate:g3-small-lr-early-checkpoint-k-sensitivity",
+    "rate:g4-compact-frontier",
+    "complete explicit rate card or measured pilot before paid launch",
+    "paid_enabled is false"
+  ],
+  "checks": [
+    {
+      "ok": true,
+      "path": "configs/../artifacts/hf-release/senba.ckpt",
+      "sha256": "f02dcf6a97848c834e3c0be7d848c1068d1d0eb7976d8d6bcfbc98d4114e9c7c"
+    },
+    {
+      "ok": true,
+      "path": "configs/../artifacts/hf-release/receipts/full-transition-comparison.json",
+      "sha256": "9a6ea0073fd7a3af50c987ecbb1b5abec365689ccdd1acd1089eb0ff270e9c54"
+    },
+    {
+      "ok": true,
+      "path": "configs/../artifacts/hf-release/receipts/equilibrium-suite-comparison.json",
+      "sha256": "74b59827a85e2f868f8cc5d8301981aadeadf8a4a8c6777d7f50818975b1559f"
+    }
+  ],
+  "errors": [],
+  "estimates": {
+    "g0-provenance-known-row-reproduce": 0.0,
+    "g1-offline-metrics": 0.0,
+    "g2-seed-replication-2-3": null,
+    "g3-small-lr-early-checkpoint-k-sensitivity": null,
+    "g4-compact-frontier": null
+  },
+  "ok": false
+}

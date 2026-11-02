@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ember-pocket"
+version = "0.1.0"
+description = "Dynamics-aware cryptic-site ranking: designed system, data pipeline, splits and training harness"
+requires-python = ">=3.10"
+
+# Runtime dependencies of the code that is actually runnable today: the data
+# contracts, residue mapping, candidate grouping, parsers, splits and evaluator.
+dependencies = [
+    "numpy>=1.26,<3",
+    "biopython>=1.83,<2",
+]
+
+[project.optional-dependencies]
+# Needed by the legacy proof-of-concept only (PocketMiner xlsx parsing, PDB fetch).
+legacy-poc = [
+    "openpyxl>=3.1,<4",
+    "pandas>=2.0,<3",
+    "scipy>=1.11,<2",
+    "requests>=2.31,<3",
+]
+# Needed to execute the R0/S0/E0 models. Never resolved or validated on a worker;
+# see src/ember/requirements-model.in for the unresolved input list.
+model = [
+    "torch>=2.6,<3",
+    "transformers>=4.45,<5",
+    "safetensors>=0.4,<1",
+]
+dev = [
+    "pytest>=8,<9",
+    "pytest-mock>=3.14,<4",
+    "ruff>=0.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ember*", "legacy_poc*"]
+
+[tool.pytest.ini_options]
+# Both suites run from this directory. `src` on the path makes `ember` and
+# `legacy_poc` importable without installation; `.` makes `tests.conftest`
+# importable by the legacy-POC tests.
+pythonpath = [".", "src"]
+testpaths = ["tests", "src/ember/tests"]

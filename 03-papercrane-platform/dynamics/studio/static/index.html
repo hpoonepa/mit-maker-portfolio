@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Senba Studio · Papercrane</title>
+  <meta name="description" content="Explore real Senba protein conformations, inspect molecular structure, and run the released checkpoint locally.">
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Papercrane Senba Studio"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M3 8 17 13 31 3 23 20 32 29 17 23 8 32 10 18Z" stroke="currentColor" stroke-width="1.5"/><path d="m3 8 14 15 6-3-6-7-7 5" stroke="currentColor" stroke-width="1.2"/></svg>papercrane<span class="brand-divider"></span><span class="studio-name">Senba Studio</span></a>
+    <div class="header-right"><span class="edition">RESEARCH DEMO / 01</span><button class="quiet" id="present">Present ↗</button></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><div class="eyebrow"><span class="tiny-line"></span> PAPERCRANE / RESEARCH</div><h1>Senba.<br><em>Protein dynamics.</em></h1></div>
+      <div class="intro-aside"><a href="https://huggingface.co/vkali08/senba" target="_blank" rel="noreferrer">Model & weights <span>↗</span></a></div>
+    </section>
+    <section class="workspace" aria-label="Protein exploration workspace">
+      <div class="visual-panel">
+        <div class="viewer-toolbar"><div class="segmented" aria-label="View"><button data-view="candidate" class="selected">Senba</button><button data-view="source">Source model</button><button data-view="target">MD endpoint</button><button data-view="trajectory">MD movie</button></div><button class="icon-button" id="reset-camera" title="Reset camera" aria-label="Reset camera">⌖</button></div>
+        <div class="viewport" id="viewport" aria-label="Interactive 3D protein. Drag to rotate, scroll to zoom." role="img">
+          <div class="viewport-caption"><span class="eyebrow" id="protein-label">1rquA01</span><div id="protein-subtitle">Ribosomal L7/L12 domain · 52 residues</div></div>
+          <div class="data-badge" id="data-badge"><i></i> SAVED MODEL OUTPUT</div>
+          <div class="view-legend"><span><i class="legend-dot purple"></i><span id="legend-label">Senba endpoint</span></span><span><i class="legend-dot gray"></i>Input reference</span></div>
+          <div class="orbit-hint">DRAG TO ROTATE <span>·</span> SCROLL TO ZOOM</div>
+          <div class="viewport-error" id="viewport-error" hidden></div>
+        </div>
+        <div class="viewer-options"><div class="segmented small"><button id="backbone" class="selected">Backbone</button><button id="atoms">Atoms</button></div><label class="toggle"><input type="checkbox" id="ghost" checked><span>Input ghost</span></label><label class="toggle"><input type="checkbox" id="rotate"><span>Orbit</span></label><button class="quiet" id="snapshot">Save image ↓</button></div>
+        <div class="transport"><button class="play" id="play" aria-label="Play illustrative morph">▶</button><div class="timeline"><div class="timeline-label"><span id="timeline-start">Input structure</span><span id="timeline-end">Predicted endpoint</span></div><input id="morph" type="range" min="0" max="100" value="100" aria-label="Illustrative interpolation from input to endpoint"></div><span class="frame-count" id="morph-value">100%</span></div>
+        <div class="motion-note"><span class="note-dot"></span><span id="motion-note">Visual interpolation · not a simulated path</span></div>
+      </div>
+      <aside class="control-panel">
+        <div class="panel-heading"><span class="eyebrow">CONTROLS</span><span class="local-status" id="local-status">Connecting…</span></div>
+        <section class="control-section"><h2><span>01</span> Input structure</h2><label for="example">Saved validation example</label><select id="example"><option value="0">L7/L12 domain · start frame 0</option></select><div class="or-line"><span>PDB input</span></div><div class="input-row"><div><label for="pdb-id">PDB ID</label><input id="pdb-id" placeholder="e.g. 1UBQ" maxlength="4" autocomplete="off"></div><div class="chain-input"><label for="chain">Chain</label><input id="chain" value="A" maxlength="1"></div><button class="load-button" id="load-pdb">Load ↗</button></div><div class="upload-row"><label for="pdb-file" class="upload-label">↑ Upload a PDB file</label><input type="file" id="pdb-file" accept=".pdb,.ent" hidden><span>3–256 residues</span></div><p class="microcopy" id="input-note">Single chain with complete heavy atoms.</p></section>
+        <section class="control-section"><h2><span>02</span> Run Senba</h2><div class="input-row settings"><div><label for="samples">Endpoint samples</label><select id="samples"><option value="1">1 sample</option><option value="2" selected>2 samples</option><option value="4">4 samples</option></select></div><div><label for="seed">Random seed</label><input id="seed" type="number" value="20261024" min="0" max="2147483647"></div></div><div class="model-spec"><span>Fixed trained horizon <b>50 saved frames</b></span><span>Training temperature <b>450 K</b></span></div><button class="run-button" id="run" disabled><span>Run Senba</span><span>↗</span></button><div class="run-message" id="run-message" role="status" aria-live="polite">Loading Senba…</div></section>
+        <section class="control-section output-section"><h2><span>03</span> Results</h2><div class="sample-heading"><label for="sample">Independent sample</label><span id="sample-count">1 / 16</span></div><input id="sample" type="range" min="0" max="15" value="0" aria-label="Independent endpoint sample"><div class="metrics"><div><span id="rmsd">—</span><small>Displacement RMSD · Å</small></div><div><span id="rg">—</span><small>Radius of gyration · Å</small></div></div><div class="metric-note">Endpoint coordinates aligned to input.</div><button class="download-button" id="download">Download coordinates + receipt <span>↓</span></button></section>
+      </aside>
+    </section>
+    <section class="analysis-grid">
+      <article class="analysis-card"><div class="chart-heading"><div class="eyebrow">RESIDUE DISPLACEMENT</div><span>Å / Cα</span></div><h3>Displacement from input</h3><canvas id="displacement" aria-label="C-alpha displacement by residue"></canvas><div class="chart-footer"><span>Residue 1</span><span id="residue-end">Residue 52</span></div></article>
+      <article class="analysis-card contact-card"><div><div class="chart-heading"><div class="eyebrow">RESIDUE CONTACTS</div><span>8 Å cutoff</span></div><h3>Contact map</h3><p>Cα pairs within 8 Å.<br>Sequence neighbors excluded.</p><div class="contact-key"><i></i> Spatial contact</div></div><canvas id="contacts" aria-label="Residue contact map at the selected endpoint"></canvas></article>
+    </section>
+    <details class="science-notes"><summary>Model & data notes <span>+</span></summary><div class="notes-grid"><p><b>The model.</b> Senba adapts MarS-FM to fixed-lag transitions from mdCATH at 450 K. Every sample is a possible endpoint. Sample order is not time, and animation playback speed is not a physical clock.</p><p><b>The evidence.</b> The included examples are saved predictions on a previously used validation domain. Fresh runs execute the released checkpoint on your local CPU. Custom inputs are outside that specific validation panel.</p><p><b>The view.</b> Backbone curves follow real Cα coordinates. The atom view shows heavy atoms when available. Input-to-endpoint morphs are linear visual interpolations, not simulated paths or validated atomistic dynamics.</p></div></details>
+  </main>
+  <footer><span>papercrane <span class="footer-dot">/</span> SENBA STUDIO</span><span>Built on <a href="https://github.com/valence-labs/mars-fm" target="_blank" rel="noreferrer">MarS-FM</a> · Data: <a href="https://huggingface.co/datasets/compsciencelab/mdCATH" target="_blank" rel="noreferrer">mdCATH, CC BY 4.0</a></span></footer>
+  <div style="position:fixed;right:24px;bottom:20px;z-index:50"><button class="quiet" id="export-clean-clip" style="background:#101812;border:1px solid #506154;padding:12px 18px">Export protein-only clip ↓</button></div>
+  <script type="module" src="/app.js?v=clean-export-4"></script>
+</body>
+</html>

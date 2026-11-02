@@ -1,0 +1,474 @@
+{
+  "accessed": "2026-09-28",
+  "items": [
+    {
+      "name": "cryptobench",
+      "kind": "folder",
+      "path": "/cryptobench/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c32857e4bc7d8bbbc5ca5e"
+    },
+    {
+      "name": "README.md",
+      "kind": "file",
+      "path": "/cryptobench/README.md",
+      "size": 462,
+      "hashes": {
+        "md5": "cd624db5ad676d274042f507d3b7e663",
+        "sha256": "88dd4b0a523333668d779a2c6f87d63afb99f5b09ea95617508d6d2dcc29a051"
+      },
+      "download": "https://osf.io/download/zkcva/",
+      "id": "66c328597352852f68dbea76"
+    },
+    {
+      "name": "cryptobench-dataset",
+      "kind": "folder",
+      "path": "/cryptobench/cryptobench-dataset/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c328c438497880962d3034"
+    },
+    {
+      "name": "scripts",
+      "kind": "folder",
+      "path": "/cryptobench/scripts/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c39e8c4eaa3f40595dae47"
+    },
+    {
+      "name": "benchmark",
+      "kind": "folder",
+      "path": "/cryptobench/benchmark/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c3285de4bc7d8bbbc5ca61"
+    },
+    {
+      "name": "folds.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds.json",
+      "size": 17826,
+      "hashes": {
+        "md5": "536fe2cc06d9cb0713791b756ebcf5f9",
+        "sha256": "ced97a50b55504007216165167a1b3995312434ee50f7f93f8728fca3c6ac67d"
+      },
+      "download": "https://osf.io/download/5s93p/",
+      "id": "66c328d97352852f68dbead5"
+    },
+    {
+      "name": "folds",
+      "kind": "folder",
+      "path": "/cryptobench/cryptobench-dataset/folds/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c328dee4bc7d8bbbc5cabb"
+    },
+    {
+      "name": "README.md",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/README.md",
+      "size": 2971,
+      "hashes": {
+        "md5": "e4410532a5f4f358987f71d8368b3b1e",
+        "sha256": "a6448854a33bdcfea9326c6ed092951f4c579e2b161638f845189d824e7476de"
+      },
+      "download": "https://osf.io/download/x9dce/",
+      "id": "66c328d07352852f68dbeacc"
+    },
+    {
+      "name": "auxiliary-data",
+      "kind": "folder",
+      "path": "/cryptobench/cryptobench-dataset/auxiliary-data/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c3290ecb9874ed0d2d33ca"
+    },
+    {
+      "name": "dataset.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/dataset.json",
+      "size": 8386019,
+      "hashes": {
+        "md5": "753201b8b2e54301d67943c845567970",
+        "sha256": "79519369a1d32b63efd86b907013cacb5e02a68e4d711cdde20a23cdfe16ba7c"
+      },
+      "download": "https://osf.io/download/ta2ju/",
+      "id": "66c328c87352852f68dbeac4"
+    },
+    {
+      "name": "Protein.py",
+      "kind": "file",
+      "path": "/cryptobench/scripts/Protein.py",
+      "size": 2212,
+      "hashes": {
+        "md5": "0f550d01c576063921a98b1620b0de98",
+        "sha256": "0e21212f2918cb5a0cc912f0f61d800285138a30db779f79d991b39e56f81b2e"
+      },
+      "download": "https://osf.io/download/2cx7h/",
+      "id": "66c39e973dcfbb2d66dbe7b7"
+    },
+    {
+      "name": "benchmark-example.py",
+      "kind": "file",
+      "path": "/cryptobench/scripts/benchmark-example.py",
+      "size": 2695,
+      "hashes": {
+        "md5": "bfef758259802c6df451c084adb9ab67",
+        "sha256": "655aec6dc0c4bb15c3c4750b4e87f0184cdbbf5ee0dedc853dfd99ed070e0dc2"
+      },
+      "download": "https://osf.io/download/cktd7/",
+      "id": "672a22887f455a2e4002748c"
+    },
+    {
+      "name": "data",
+      "kind": "folder",
+      "path": "/cryptobench/scripts/data/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c39e9d7f76e94ea65d9a80"
+    },
+    {
+      "name": "README.md",
+      "kind": "file",
+      "path": "/cryptobench/scripts/README.md",
+      "size": 714,
+      "hashes": {
+        "md5": "e393a039cedf7e8def0516690a0f3885",
+        "sha256": "bae2024812c31a24702cb768bf7865248625ce4832856479e663dd85207d05f9"
+      },
+      "download": "https://osf.io/download/mjqxr/",
+      "id": "672a2286e3bc8f3ae6ba9f3f"
+    },
+    {
+      "name": "best_trained",
+      "kind": "folder",
+      "path": "/cryptobench/benchmark/best_trained/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c3289268e4552e0b0b52fd"
+    },
+    {
+      "name": "not_fitted",
+      "kind": "folder",
+      "path": "/cryptobench/benchmark/not_fitted/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c3285e8a9ce32aa0dbea75"
+    },
+    {
+      "name": "train-fold-0.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds/train-fold-0.json",
+      "size": 1721723,
+      "hashes": {
+        "md5": "1874e12598331775e38a41b98079acfa",
+        "sha256": "ba41942b3893d420fa7fedaa32a079d7a2528514f971a524a423ce108f0b3f96"
+      },
+      "download": "https://osf.io/download/7bvs4/",
+      "id": "66c328eba3530855975d9d19"
+    },
+    {
+      "name": "train-fold-2.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds/train-fold-2.json",
+      "size": 1738396,
+      "hashes": {
+        "md5": "825ba36863194c0566e8a0449b085c97",
+        "sha256": "15d5f32917629dc4727a03acf7997c2e48d590b35be572d41885497486602503"
+      },
+      "download": "https://osf.io/download/nmj39/",
+      "id": "66c328fe653be15e240b528b"
+    },
+    {
+      "name": "test.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds/test.json",
+      "size": 1705224,
+      "hashes": {
+        "md5": "1bb2b39bad761996b481ad525c1a6e15",
+        "sha256": "28f5630ec0ece51a5bc1c466473bba78d6edb8e3851c25f0e52c2709a7560838"
+      },
+      "download": "https://osf.io/download/q2n43/",
+      "id": "66c328e138497880962d3054"
+    },
+    {
+      "name": "train-fold-3.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds/train-fold-3.json",
+      "size": 1090093,
+      "hashes": {
+        "md5": "d58bc99cfbf783481b4478e7c9f4ffd4",
+        "sha256": "b4358e50984372ff539766b9161750342a86d2f082e5a36af9259db56cfefa1e"
+      },
+      "download": "https://osf.io/download/btdqy/",
+      "id": "66c329087352852f68dbeaf4"
+    },
+    {
+      "name": "train-fold-1.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/folds/train-fold-1.json",
+      "size": 2130591,
+      "hashes": {
+        "md5": "4eb4fd0d79c1c1f53eead64b855e9b90",
+        "sha256": "5047a0dbf0de52e316a8b09c0a90c28474f5e702acab14325b803a1340643f34"
+      },
+      "download": "https://osf.io/download/akfgn/",
+      "id": "66c328f5cb9874ed0d2d33b3"
+    },
+    {
+      "name": "cif-files.zip",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/auxiliary-data/cif-files.zip",
+      "size": 1145203712,
+      "hashes": {
+        "md5": "65992e3f1f13da0bafbd50a602bc8657",
+        "sha256": "8d15f897bfdfdf61c7d97a29f5f6ca2c5e03d73d8fb89be7da5bbc245cf56ae4"
+      },
+      "download": "https://osf.io/download/c5vp8/",
+      "id": "672a0171eae0bff252ba9ea3"
+    },
+    {
+      "name": "pymol-scripts.zip",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/auxiliary-data/pymol-scripts.zip",
+      "size": 2372160,
+      "hashes": {
+        "md5": "b9723d5bebc148ea2597595a070a9c1a",
+        "sha256": "9fff4bc6d01c542dce220516a475e48249b82998792d18d7d19efd149c5eeca2"
+      },
+      "download": "https://osf.io/download/dwbf6/",
+      "id": "66c39e77df639c0239dbe70d"
+    },
+    {
+      "name": "non-cryptic-pockets",
+      "kind": "folder",
+      "path": "/cryptobench/cryptobench-dataset/auxiliary-data/non-cryptic-pockets/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c32910a846a7ca28c5d648"
+    },
+    {
+      "name": "annotation.txt",
+      "kind": "file",
+      "path": "/cryptobench/scripts/data/annotation.txt",
+      "size": 158,
+      "hashes": {
+        "md5": "052c5683b02d3cf47ec9a882c02d6e41",
+        "sha256": "b48f0899bb958cad72c0d0af46c00b6553b074a3a2bcbb02ad0219aa9fb225a6"
+      },
+      "download": "https://osf.io/download/uskcj/",
+      "id": "66c39ea059b5945c54c5d027"
+    },
+    {
+      "name": "7w19A.npy",
+      "kind": "file",
+      "path": "/cryptobench/scripts/data/7w19A.npy",
+      "size": 3000448,
+      "hashes": {
+        "md5": "f4694b5f9ea2b31297a59535b24f04df",
+        "sha256": "84aafda73c4c382bd1851a767d9957867136ab0412483b0bc777a58ed398bbc6"
+      },
+      "download": "https://osf.io/download/wsr7g/",
+      "id": "66c39eaa7f76e94ea65d9a85"
+    },
+    {
+      "name": "saved_model.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/best_trained/saved_model.pb",
+      "size": 135608,
+      "hashes": {
+        "md5": "25169aab1559aef23fdc431ba1a1eb5c",
+        "sha256": "7e21232169b9a66fd17f7fafdf533dc1d7c5d05a022cacba842e91ae2fb15a6e"
+      },
+      "download": "https://osf.io/download/nya4f/",
+      "id": "66c32894e4bc7d8bbbc5ca78"
+    },
+    {
+      "name": "keras_metadata.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/best_trained/keras_metadata.pb",
+      "size": 13060,
+      "hashes": {
+        "md5": "7a59d4db681f982eab8ef1e538c65914",
+        "sha256": "a360f60963dd849308c13335faafc75e39cf1e4ce453a22ad27fe359835cee31"
+      },
+      "download": "https://osf.io/download/8xqbf/",
+      "id": "66c328a8a3530855975d9cf7"
+    },
+    {
+      "name": "variables",
+      "kind": "folder",
+      "path": "/cryptobench/benchmark/best_trained/variables/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c328b0653be15e240b526a"
+    },
+    {
+      "name": "fingerprint.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/best_trained/fingerprint.pb",
+      "size": 56,
+      "hashes": {
+        "md5": "14f055700ab7b1c01979c625fed2d316",
+        "sha256": "41d4d727160c848d6b57a48b8ddb8433ab36dab26ed3e6b935787adaca05b269"
+      },
+      "download": "https://osf.io/download/7dwgh/",
+      "id": "66c3289e38497880962d3018"
+    },
+    {
+      "name": "variables",
+      "kind": "folder",
+      "path": "/cryptobench/benchmark/not_fitted/variables/",
+      "size": null,
+      "hashes": {
+        "md5": null,
+        "sha256": null
+      },
+      "download": null,
+      "id": "66c3287ce4bc7d8bbbc5ca6d"
+    },
+    {
+      "name": "saved_model.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/not_fitted/saved_model.pb",
+      "size": 97125,
+      "hashes": {
+        "md5": "395ecc957d4f0a7a5f93cd8006d2ff35",
+        "sha256": "4b81a96c684c1cb61f5ba629b2ca709d3b2f55681a8078d07db64b3eb7182cd5"
+      },
+      "download": "https://osf.io/download/66c32860a846a7ca28c5d615/",
+      "id": "66c32860a846a7ca28c5d615"
+    },
+    {
+      "name": "fingerprint.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/not_fitted/fingerprint.pb",
+      "size": 56,
+      "hashes": {
+        "md5": "de511c3c05dd6b21c30b790b9740c4eb",
+        "sha256": "3e67d397dc1f51606685cdfbfca3cf9f6f8ffbc8abd3e07a07027436f5ded7d3"
+      },
+      "download": "https://osf.io/download/ty895/",
+      "id": "66c32869653be15e240b5233"
+    },
+    {
+      "name": "keras_metadata.pb",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/not_fitted/keras_metadata.pb",
+      "size": 13018,
+      "hashes": {
+        "md5": "b48b4936ea7c0556b3758af66aee08fc",
+        "sha256": "6ed13a817d1a4cc07225fa038c9a7782d6fae3933d1766e7929bb51091d2cc80"
+      },
+      "download": "https://osf.io/download/66c328732e5f5203685d9b3b/",
+      "id": "66c328732e5f5203685d9b3b"
+    },
+    {
+      "name": "noncryptic-pockets.json",
+      "kind": "file",
+      "path": "/cryptobench/cryptobench-dataset/auxiliary-data/non-cryptic-pockets/noncryptic-pockets.json",
+      "size": 18879987,
+      "hashes": {
+        "md5": "04f8ca369a5d599a445d25ee4b22d32f",
+        "sha256": "680f9d2d62917f60b753a4b96b4e384ddf9bb1c5d8268e5ac90cbdb8da9e9c72"
+      },
+      "download": "https://osf.io/download/37ztm/",
+      "id": "66c32918467db4bc475da14e"
+    },
+    {
+      "name": "variables.data-00000-of-00001",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/best_trained/variables/variables.data-00000-of-00001",
+      "size": 8670706,
+      "hashes": {
+        "md5": "4e49bf89aa25af63d644b75b28b656d6",
+        "sha256": "a004b4f7fd928caaf0efbadd7f0197a077fd51119115d5dd238481713f47ff02"
+      },
+      "download": "https://osf.io/download/ebr98/",
+      "id": "66c328b4cb9874ed0d2d3395"
+    },
+    {
+      "name": "variables.index",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/best_trained/variables/variables.index",
+      "size": 1905,
+      "hashes": {
+        "md5": "117a5d981e84df06dc3877082a5f1dfb",
+        "sha256": "f37c8b7d24ff47ad74a37a9cbf0cee218ace5d03ad66450583017624a4f897cb"
+      },
+      "download": "https://osf.io/download/66c328c168e4552e0b0b5315/",
+      "id": "66c328c168e4552e0b0b5315"
+    },
+    {
+      "name": "variables.index",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/not_fitted/variables/variables.index",
+      "size": 944,
+      "hashes": {
+        "md5": "91ab23b89bccff0fd3ff0888ec89e149",
+        "sha256": "cf8268facd72fdba1de95ccc5026ed7ceaf0628c22d5b159b51587861866b638"
+      },
+      "download": "https://osf.io/download/66c3288cbf6e3bc8e40b5572/",
+      "id": "66c3288cbf6e3bc8e40b5572"
+    },
+    {
+      "name": "variables.data-00000-of-00001",
+      "kind": "file",
+      "path": "/cryptobench/benchmark/not_fitted/variables/variables.data-00000-of-00001",
+      "size": 2893161,
+      "hashes": {
+        "md5": "6b3bc5cd29853059da57d27ad356e6e5",
+        "sha256": "c97bef65e8774313c508c71607e083b014ffbff5aede66d20fe733a255732796"
+      },
+      "download": "https://osf.io/download/66c3287ee4bc7d8bbbc5ca6e/",
+      "id": "66c3287ee4bc7d8bbbc5ca6e"
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,36 @@
+{
+  "downloaded_utc": "2026-09-28",
+  "test_annotations_downloaded": false,
+  "files": [
+    {
+      "name": "folds.json",
+      "url": "https://osf.io/download/5s93p/",
+      "size": 17826,
+      "sha256": "ced97a50b55504007216165167a1b3995312434ee50f7f93f8728fca3c6ac67d"
+    },
+    {
+      "name": "train-fold-0.json",
+      "url": "https://osf.io/download/7bvs4/",
+      "size": 1721723,
+      "sha256": "ba41942b3893d420fa7fedaa32a079d7a2528514f971a524a423ce108f0b3f96"
+    },
+    {
+      "name": "train-fold-2.json",
+      "url": "https://osf.io/download/nmj39/",
+      "size": 1738396,
+      "sha256": "15d5f32917629dc4727a03acf7997c2e48d590b35be572d41885497486602503"
+    },
+    {
+      "name": "train-fold-3.json",
+      "url": "https://osf.io/download/btdqy/",
+      "size": 1090093,
+      "sha256": "b4358e50984372ff539766b9161750342a86d2f082e5a36af9259db56cfefa1e"
+    },
+    {
+      "name": "train-fold-1.json",
+      "url": "https://osf.io/download/akfgn/",
+      "size": 2130591,
+      "sha256": "5047a0dbf0de52e316a8b09c0a90c28474f5e702acab14325b803a1340643f34"
+    }
+  ]
+}

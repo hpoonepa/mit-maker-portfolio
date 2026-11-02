@@ -1,0 +1,2357 @@
+{
+  "analysis": {
+    "run": {
+      "n_records": 20,
+      "n_training_seeds": 1,
+      "n_proteins": 1,
+      "n_transition_units": 20,
+      "n_bootstrap": 2000,
+      "random_seed": 20260904,
+      "primary_metric": "centroid_rmsd"
+    },
+    "per_transition": [
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "0",
+          "start_id": "0",
+          "training_seed": "20260825",
+          "inference_seed": "20260904"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 149.61761138648782,
+          "centroid_mse": 97.63808576781351,
+          "ensemble_variance": 51.9795256186743,
+          "population_mean_mse_estimate": 80.3115772282554,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 12.03542393005611,
+          "centroid_rmsd": 9.881198599755674,
+          "energy_score": 6.215567166316709,
+          "pairwise_rmsd": 11.639713527478802,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 149.61761138648782,
+              "sd_centroid_mse": 53.743244207568864,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 114.96459430737161,
+              "sd_centroid_mse": 23.937399342217734,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 103.41358861433288,
+              "sd_centroid_mse": 12.635198029154598,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 97.63808576781351,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 147.82361076672964,
+          "centroid_mse": 97.59335375603277,
+          "ensemble_variance": 50.230257010696874,
+          "population_mean_mse_estimate": 80.84993475246715,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 11.966820033416202,
+          "centroid_rmsd": 9.878934849265521,
+          "energy_score": 6.24491467051618,
+          "pairwise_rmsd": 11.443810725800043,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 147.82361076672964,
+              "sd_centroid_mse": 52.48643444376662,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 114.33677275959842,
+              "sd_centroid_mse": 23.47811014164379,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 103.174493423888,
+              "sd_centroid_mse": 12.400730360170558,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 97.59335375603277,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.7940006197581795,
+          "centroid_mse": -0.044732011780737935,
+          "ensemble_variance": -1.7492686079774273,
+          "pairwise_rmsd": -0.19590280167875918,
+          "population_mean_mse_estimate": 0.5383575242117473,
+          "mean_sample_rmsd": -0.06860389663990851,
+          "centroid_rmsd": -0.002263750490152816,
+          "energy_score": 0.029347504199471075
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 10.78486067802249,
+          "source_centroid_rmsd_gain": 0.9036620782668159,
+          "candidate_centroid_rmsd_gain": 0.9059258287569687
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "0",
+          "start_id": "119",
+          "training_seed": "20260825",
+          "inference_seed": "20260905"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 283.52044315003127,
+          "centroid_mse": 163.35804346855434,
+          "ensemble_variance": 120.16239968147687,
+          "population_mean_mse_estimate": 123.30391024139539,
+          "mse_identity_residual": 5.684341886080802e-14,
+          "mean_sample_rmsd": 16.774600355415956,
+          "centroid_rmsd": 12.781159707497373,
+          "energy_score": 7.861379372636577,
+          "pairwise_rmsd": 17.826441965558757,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 283.52044315003127,
+              "sd_centroid_mse": 50.04987742793731,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 203.41217669571333,
+              "sd_centroid_mse": 19.2482128574634,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 176.7094212109407,
+              "sd_centroid_mse": 9.965763869488928,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 163.35804346855434,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 279.26245869570363,
+          "centroid_mse": 162.36425376502734,
+          "ensemble_variance": 116.89820493067627,
+          "population_mean_mse_estimate": 123.39818545480192,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 16.654851872967726,
+          "centroid_rmsd": 12.742223266174053,
+          "energy_score": 7.862203434146064,
+          "pairwise_rmsd": 17.585296877643323,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 279.26245869570363,
+              "sd_centroid_mse": 46.63431918683525,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 201.33032207525278,
+              "sd_centroid_mse": 18.19101419016558,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 175.35294320176916,
+              "sd_centroid_mse": 9.588662152604218,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 162.36425376502734,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -4.257984454327641,
+          "centroid_mse": -0.9937897035269998,
+          "ensemble_variance": -3.2641947508005984,
+          "pairwise_rmsd": -0.24114508791543443,
+          "population_mean_mse_estimate": 0.094275213406533,
+          "mean_sample_rmsd": -0.11974848244823022,
+          "centroid_rmsd": -0.038936441323320636,
+          "energy_score": 0.0008240615094869952
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 15.30186128321971,
+          "source_centroid_rmsd_gain": 2.5207015757223363,
+          "candidate_centroid_rmsd_gain": 2.559638017045657
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "0",
+          "start_id": "239",
+          "training_seed": "20260825",
+          "inference_seed": "20260906"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 261.7582131173988,
+          "centroid_mse": 139.36245555945294,
+          "ensemble_variance": 122.39575755794583,
+          "population_mean_mse_estimate": 98.56386970680433,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 15.826877282698002,
+          "centroid_rmsd": 11.805187654563266,
+          "energy_score": 6.937395781631654,
+          "pairwise_rmsd": 17.778963002132695,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 261.7582131173988,
+              "sd_centroid_mse": 116.94962890386367,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 180.16104141210153,
+              "sd_centroid_mse": 48.38640045565003,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 152.96198417700245,
+              "sd_centroid_mse": 24.5058057212499,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 139.36245555945294,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 259.722198373058,
+          "centroid_mse": 138.88328349900854,
+          "ensemble_variance": 120.83891487404948,
+          "population_mean_mse_estimate": 98.60364520765872,
+          "mse_identity_residual": -1.4210854715202004e-14,
+          "mean_sample_rmsd": 15.767892723355285,
+          "centroid_rmsd": 11.78487520082451,
+          "energy_score": 6.933362494939926,
+          "pairwise_rmsd": 17.669060456830717,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 259.722198373058,
+              "sd_centroid_mse": 115.62306954281259,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 179.16292179035835,
+              "sd_centroid_mse": 48.05241523043266,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 152.30982959612513,
+              "sd_centroid_mse": 24.41898304924604,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 138.88328349900854,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -2.0360147443407755,
+          "centroid_mse": -0.4791720604443981,
+          "ensemble_variance": -1.556842683896349,
+          "pairwise_rmsd": -0.10990254530197774,
+          "population_mean_mse_estimate": 0.039775500854389634,
+          "mean_sample_rmsd": -0.058984559342716736,
+          "centroid_rmsd": -0.020312453738755565,
+          "energy_score": -0.0040332866917278665
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 12.663352095528582,
+          "source_centroid_rmsd_gain": 0.8581644409653162,
+          "candidate_centroid_rmsd_gain": 0.8784768947040718
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "0",
+          "start_id": "359",
+          "training_seed": "20260825",
+          "inference_seed": "20260907"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 566.7389591701256,
+          "centroid_mse": 372.14920226256436,
+          "ensemble_variance": 194.5897569075612,
+          "population_mean_mse_estimate": 307.285949960044,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 23.631380798435426,
+          "centroid_rmsd": 19.291169022704775,
+          "energy_score": 12.286742074706192,
+          "pairwise_rmsd": 22.68927744745847,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 566.7389591701256,
+              "sd_centroid_mse": 142.0626622293811,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 437.01245456508485,
+              "sd_centroid_mse": 82.11551009362705,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 393.7702863634045,
+              "sd_centroid_mse": 47.44164144670337,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 372.14920226256436,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 561.594018640832,
+          "centroid_mse": 371.9629855718474,
+          "ensemble_variance": 189.63103306898452,
+          "population_mean_mse_estimate": 308.75264121551925,
+          "mse_identity_residual": 8.526512829121202e-14,
+          "mean_sample_rmsd": 23.524873745100756,
+          "centroid_rmsd": 19.286341943765475,
+          "energy_score": 12.327203642410744,
+          "pairwise_rmsd": 22.395340205380023,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 561.594018640832,
+              "sd_centroid_mse": 140.11505633929556,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 435.17332992817563,
+              "sd_centroid_mse": 81.16917812725437,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 393.03310035729015,
+              "sd_centroid_mse": 46.88802693126029,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 371.9629855718474,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -5.144940529293535,
+          "centroid_mse": -0.1862166907169467,
+          "ensemble_variance": -4.958723838576674,
+          "pairwise_rmsd": -0.29393724207844585,
+          "population_mean_mse_estimate": 1.4666912554752685,
+          "mean_sample_rmsd": -0.10650705333467059,
+          "centroid_rmsd": -0.004827078939300122,
+          "energy_score": 0.04046156770455234
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 19.754600439434647,
+          "source_centroid_rmsd_gain": 0.46343141672987187,
+          "candidate_centroid_rmsd_gain": 0.468258495669172
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "1",
+          "start_id": "0",
+          "training_seed": "20260825",
+          "inference_seed": "20260908"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 156.8605392193378,
+          "centroid_mse": 99.85056997178982,
+          "ensemble_variance": 57.00996924754798,
+          "population_mean_mse_estimate": 80.84724688927383,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 12.438702172637049,
+          "centroid_rmsd": 9.992525705335455,
+          "energy_score": 6.314380647750854,
+          "pairwise_rmsd": 12.24864304977239,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 156.8605392193378,
+              "sd_centroid_mse": 34.29993578987734,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 118.85389305430583,
+              "sd_centroid_mse": 18.742019578564268,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 106.18501099929514,
+              "sd_centroid_mse": 10.498563306074978,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 99.85056997178982,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 155.17281489417803,
+          "centroid_mse": 99.31393566735683,
+          "ensemble_variance": 55.85887922682121,
+          "population_mean_mse_estimate": 80.69430925841642,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 12.371813622055551,
+          "centroid_rmsd": 9.965637745139889,
+          "energy_score": 6.31029497018971,
+          "pairwise_rmsd": 12.123037303731683,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 155.17281489417803,
+              "sd_centroid_mse": 33.95037897361918,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 117.93356207629724,
+              "sd_centroid_mse": 18.421198046922566,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 105.5204778036703,
+              "sd_centroid_mse": 10.296273334293184,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 99.31393566735683,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.6877243251597633,
+          "centroid_mse": -0.5366343044329938,
+          "ensemble_variance": -1.1510900207267696,
+          "pairwise_rmsd": -0.12560574604070673,
+          "population_mean_mse_estimate": -0.15293763085740864,
+          "mean_sample_rmsd": -0.06688855058149734,
+          "centroid_rmsd": -0.026887960195566052,
+          "energy_score": -0.004085677561143974
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 9.971875420908216,
+          "source_centroid_rmsd_gain": -0.02065028442723893,
+          "candidate_centroid_rmsd_gain": 0.006237675768327122
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "1",
+          "start_id": "133",
+          "training_seed": "20260825",
+          "inference_seed": "20260909"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 309.2380491847532,
+          "centroid_mse": 133.2294520256047,
+          "ensemble_variance": 176.00859715914854,
+          "population_mean_mse_estimate": 74.55991963922185,
+          "mse_identity_residual": -2.842170943040401e-14,
+          "mean_sample_rmsd": 17.448794070752136,
+          "centroid_rmsd": 11.542506314730987,
+          "energy_score": 6.709347130754496,
+          "pairwise_rmsd": 21.47889387999528,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 309.2380491847532,
+              "sd_centroid_mse": 73.1069786220121,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 191.8989844119875,
+              "sd_centroid_mse": 23.65363399025597,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 152.78596282106562,
+              "sd_centroid_mse": 10.52994976527064,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 133.2294520256047,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 303.71613891305685,
+          "centroid_mse": 131.29987941109266,
+          "ensemble_variance": 172.41625950196425,
+          "population_mean_mse_estimate": 73.82779291043792,
+          "mse_identity_residual": -5.684341886080802e-14,
+          "mean_sample_rmsd": 17.294642028414906,
+          "centroid_rmsd": 11.458615946574554,
+          "energy_score": 6.667511079770669,
+          "pairwise_rmsd": 21.254261897288472,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 303.71613891305685,
+              "sd_centroid_mse": 71.56463683311355,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 188.7719659117474,
+              "sd_centroid_mse": 23.224560816454556,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 150.45724157797756,
+              "sd_centroid_mse": 10.971350096387733,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 131.29987941109266,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -5.521910271696356,
+          "centroid_mse": -1.9295726145120398,
+          "ensemble_variance": -3.592337657184288,
+          "pairwise_rmsd": -0.22463198270680707,
+          "population_mean_mse_estimate": -0.7321267287839248,
+          "mean_sample_rmsd": -0.15415204233723045,
+          "centroid_rmsd": -0.08389036815643358,
+          "energy_score": -0.04183605098382692
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 13.399625335089922,
+          "source_centroid_rmsd_gain": 1.857119020358935,
+          "candidate_centroid_rmsd_gain": 1.9410093885153685
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "1",
+          "start_id": "266",
+          "training_seed": "20260825",
+          "inference_seed": "20260910"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 437.1311455939073,
+          "centroid_mse": 244.78327373051985,
+          "ensemble_variance": 192.34787186338744,
+          "population_mean_mse_estimate": 180.66731644272403,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 20.807201530663978,
+          "centroid_rmsd": 15.645551244060398,
+          "energy_score": 9.61600215875899,
+          "pairwise_rmsd": 22.382398743809976,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 437.1311455939073,
+              "sd_centroid_mse": 86.26478987974842,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 308.8992310183157,
+              "sd_centroid_mse": 40.38037849362515,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 266.1552594931185,
+              "sd_centroid_mse": 19.489684257224802,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 244.78327373051985,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 430.8558668857256,
+          "centroid_mse": 242.83882423829485,
+          "ensemble_variance": 188.01704264743086,
+          "population_mean_mse_estimate": 180.16647668915124,
+          "mse_identity_residual": -8.526512829121202e-14,
+          "mean_sample_rmsd": 20.65814927264882,
+          "centroid_rmsd": 15.583286695633076,
+          "energy_score": 9.587853346867908,
+          "pairwise_rmsd": 22.140591851561826,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 430.8558668857256,
+              "sd_centroid_mse": 85.03442212440146,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 305.5111717874384,
+              "sd_centroid_mse": 40.63044595166189,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 263.729606754676,
+              "sd_centroid_mse": 19.918453628562553,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 242.83882423829485,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -6.275278708181702,
+          "centroid_mse": -1.9444494922250044,
+          "ensemble_variance": -4.330829215956584,
+          "pairwise_rmsd": -0.24180689224814955,
+          "population_mean_mse_estimate": -0.5008397535727909,
+          "mean_sample_rmsd": -0.14905225801515698,
+          "centroid_rmsd": -0.0622645484273221,
+          "energy_score": -0.028148811891082204
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 15.31838360441806,
+          "source_centroid_rmsd_gain": -0.3271676396423384,
+          "candidate_centroid_rmsd_gain": -0.2649030912150163
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "1",
+          "start_id": "399",
+          "training_seed": "20260825",
+          "inference_seed": "20260911"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 358.3372227744844,
+          "centroid_mse": 224.82542822764708,
+          "ensemble_variance": 133.5117945468373,
+          "population_mean_mse_estimate": 180.32149671203464,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 18.76563640452653,
+          "centroid_rmsd": 14.994179811768534,
+          "energy_score": 9.411743223075101,
+          "pairwise_rmsd": 18.707786362902855,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 358.3372227744844,
+              "sd_centroid_mse": 95.08077687367378,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 269.3293597432595,
+              "sd_centroid_mse": 46.879812255077425,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 239.6600720661845,
+              "sd_centroid_mse": 26.55656315201315,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 224.82542822764708,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 353.6905928348663,
+          "centroid_mse": 222.24427719059113,
+          "ensemble_variance": 131.44631564427516,
+          "population_mean_mse_estimate": 178.42883864249941,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 18.64527870890224,
+          "centroid_rmsd": 14.907859577772763,
+          "energy_score": 9.361864458586039,
+          "pairwise_rmsd": 18.5668285006324,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 353.6905928348663,
+              "sd_centroid_mse": 93.50171802661693,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 266.0597157386828,
+              "sd_centroid_mse": 46.25438344506672,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 236.84942337328837,
+              "sd_centroid_mse": 26.209234267271217,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 222.24427719059113,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -4.646629939618094,
+          "centroid_mse": -2.581151037055946,
+          "ensemble_variance": -2.0654789025621483,
+          "pairwise_rmsd": -0.14095786227045437,
+          "population_mean_mse_estimate": -1.89265806953523,
+          "mean_sample_rmsd": -0.12035769562428911,
+          "centroid_rmsd": -0.08632023399577093,
+          "energy_score": -0.04987876448906192
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 15.9984561639461,
+          "source_centroid_rmsd_gain": 1.0042763521775662,
+          "candidate_centroid_rmsd_gain": 1.090596586173337
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "2",
+          "start_id": "0",
+          "training_seed": "20260825",
+          "inference_seed": "20260912"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 188.92567909795693,
+          "centroid_mse": 108.49347697904265,
+          "ensemble_variance": 80.43220211891429,
+          "population_mean_mse_estimate": 81.68274293940456,
+          "mse_identity_residual": -1.4210854715202004e-14,
+          "mean_sample_rmsd": 13.739647476882107,
+          "centroid_rmsd": 10.416020208267774,
+          "energy_score": 6.506728489542923,
+          "pairwise_rmsd": 14.465837974678367,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 188.92567909795693,
+              "sd_centroid_mse": 10.416445848540263,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 135.30421101868075,
+              "sd_centroid_mse": 18.916863070800172,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 117.4303883255887,
+              "sd_centroid_mse": 13.097265015852239,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 108.49347697904265,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 186.1341077559157,
+          "centroid_mse": 108.31745818725024,
+          "ensemble_variance": 77.81664956866545,
+          "population_mean_mse_estimate": 82.37857499769508,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 13.636184050787119,
+          "centroid_rmsd": 10.407567352040065,
+          "energy_score": 6.522740471552235,
+          "pairwise_rmsd": 14.226887158469767,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 186.1341077559157,
+              "sd_centroid_mse": 11.659936870370025,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 134.25634137680538,
+              "sd_centroid_mse": 18.677146436548416,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 116.9637525837686,
+              "sd_centroid_mse": 12.889036772260207,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 108.31745818725024,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -2.7915713420412374,
+          "centroid_mse": -0.17601879179241564,
+          "ensemble_variance": -2.615552550248836,
+          "pairwise_rmsd": -0.23895081620860026,
+          "population_mean_mse_estimate": 0.6958320582905202,
+          "mean_sample_rmsd": -0.10346342609498826,
+          "centroid_rmsd": -0.008452856227709304,
+          "energy_score": 0.016011982009311865
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 11.64168024925534,
+          "source_centroid_rmsd_gain": 1.2256600409875666,
+          "candidate_centroid_rmsd_gain": 1.234112897215276
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "2",
+          "start_id": "129",
+          "training_seed": "20260825",
+          "inference_seed": "20260913"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 129.69967096081814,
+          "centroid_mse": 69.65258521620835,
+          "ensemble_variance": 60.04708574460981,
+          "population_mean_mse_estimate": 49.63688996800508,
+          "mse_identity_residual": -2.1316282072803006e-14,
+          "mean_sample_rmsd": 11.256667351840571,
+          "centroid_rmsd": 8.345812435959028,
+          "energy_score": 4.988360008726867,
+          "pairwise_rmsd": 12.536614686227407,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 129.69967096081814,
+              "sd_centroid_mse": 36.27466834228137,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 89.66828046441162,
+              "sd_centroid_mse": 17.1051698737364,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 76.3244836322761,
+              "sd_centroid_mse": 7.407740147729478,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 69.65258521620835,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 127.75573478905729,
+          "centroid_mse": 68.74137662409076,
+          "ensemble_variance": 59.01435816496653,
+          "population_mean_mse_estimate": 49.06992390243525,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 11.171778011837358,
+          "centroid_rmsd": 8.291041950448133,
+          "energy_score": 4.95812256474586,
+          "pairwise_rmsd": 12.427310894182995,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 127.75573478905729,
+              "sd_centroid_mse": 35.753756441125546,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 88.41282934574627,
+              "sd_centroid_mse": 16.8670512896716,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 75.29852753130926,
+              "sd_centroid_mse": 7.310460018974036,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 68.74137662409076,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.9439361717608534,
+          "centroid_mse": -0.911208592117589,
+          "ensemble_variance": -1.0327275796432787,
+          "pairwise_rmsd": -0.10930379204441287,
+          "population_mean_mse_estimate": -0.5669660655698294,
+          "mean_sample_rmsd": -0.08488934000321358,
+          "centroid_rmsd": -0.05477048551089503,
+          "energy_score": -0.03023744398100714
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 6.458935469148304,
+          "source_centroid_rmsd_gain": -1.886876966810724,
+          "candidate_centroid_rmsd_gain": -1.832106481299829
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "2",
+          "start_id": "259",
+          "training_seed": "20260825",
+          "inference_seed": "20260914"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 109.5734002535764,
+          "centroid_mse": 65.43487509338964,
+          "ensemble_variance": 44.13852516018678,
+          "population_mean_mse_estimate": 50.72203337332738,
+          "mse_identity_residual": -2.1316282072803006e-14,
+          "mean_sample_rmsd": 10.451017694046616,
+          "centroid_rmsd": 8.08918259735739,
+          "energy_score": 5.031301927139783,
+          "pairwise_rmsd": 10.839431533813666,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 109.5734002535764,
+              "sd_centroid_mse": 12.405448304831564,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 80.14771681345188,
+              "sd_centroid_mse": 7.092382747088562,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 70.33915566674371,
+              "sd_centroid_mse": 4.002178937796909,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 65.43487509338964,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 109.24603051999753,
+          "centroid_mse": 65.75864822368338,
+          "ensemble_variance": 43.48738229631416,
+          "population_mean_mse_estimate": 51.262854124911996,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 10.436063451088039,
+          "centroid_rmsd": 8.109170624896445,
+          "energy_score": 5.0559737160638925,
+          "pairwise_rmsd": 10.760179470048293,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 109.24603051999753,
+              "sd_centroid_mse": 12.109990156615066,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 80.25444232245475,
+              "sd_centroid_mse": 6.873528000710099,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 70.59057958994049,
+              "sd_centroid_mse": 3.8716875425690658,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 65.75864822368338,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -0.32736973357886257,
+          "centroid_mse": 0.32377313029374477,
+          "ensemble_variance": -0.6511428638726215,
+          "pairwise_rmsd": -0.07925206376537375,
+          "population_mean_mse_estimate": 0.5408207515846186,
+          "mean_sample_rmsd": -0.014954242958577169,
+          "centroid_rmsd": 0.019988027539055153,
+          "energy_score": 0.024671788924109705
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 10.666937075931084,
+          "source_centroid_rmsd_gain": 2.577754478573695,
+          "candidate_centroid_rmsd_gain": 2.55776645103464
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "2",
+          "start_id": "389",
+          "training_seed": "20260825",
+          "inference_seed": "20260915"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 574.3801204798145,
+          "centroid_mse": 393.1877385938493,
+          "ensemble_variance": 181.19238188596532,
+          "population_mean_mse_estimate": 332.7902779651942,
+          "mse_identity_residual": -8.526512829121202e-14,
+          "mean_sample_rmsd": 23.366435973919693,
+          "centroid_rmsd": 19.82896211590131,
+          "energy_score": 12.638604916538483,
+          "pairwise_rmsd": 21.45566211476242,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 574.3801204798145,
+              "sd_centroid_mse": 278.3638020484948,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 453.5851992225044,
+              "sd_centroid_mse": 116.64927160986207,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 413.3202254700676,
+              "sd_centroid_mse": 57.91205896764646,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 393.1877385938493,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 567.6776208521292,
+          "centroid_mse": 393.30329636211815,
+          "ensemble_variance": 174.37432449001108,
+          "population_mean_mse_estimate": 335.1785215321145,
+          "mse_identity_residual": -5.684341886080802e-14,
+          "mean_sample_rmsd": 23.25044106320773,
+          "centroid_rmsd": 19.831875765093884,
+          "energy_score": 12.716769375535359,
+          "pairwise_rmsd": 21.067343375344745,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 567.6776208521292,
+              "sd_centroid_mse": 269.59321213547435,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 451.42807119212176,
+              "sd_centroid_mse": 114.54165013600172,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 412.6782213054527,
+              "sd_centroid_mse": 57.29353057367675,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 393.30329636211815,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -6.70249962768537,
+          "centroid_mse": 0.11555776826884312,
+          "ensemble_variance": -6.818057395954241,
+          "pairwise_rmsd": -0.3883187394176737,
+          "population_mean_mse_estimate": 2.3882435669202664,
+          "mean_sample_rmsd": -0.11599491071196155,
+          "centroid_rmsd": 0.002913649192574752,
+          "energy_score": 0.0781644589968753
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 22.914689270102652,
+          "source_centroid_rmsd_gain": 3.0857271542013436,
+          "candidate_centroid_rmsd_gain": 3.082813505008769
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "3",
+          "start_id": "0",
+          "training_seed": "20260825",
+          "inference_seed": "20260916"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 165.28643350907296,
+          "centroid_mse": 116.61334234698126,
+          "ensemble_variance": 48.673091162091694,
+          "population_mean_mse_estimate": 100.38897862628403,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 12.79191381531754,
+          "centroid_rmsd": 10.79876577887405,
+          "energy_score": 7.194302269776964,
+          "pairwise_rmsd": 11.195223091081154,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 165.28643350907296,
+              "sd_centroid_mse": 32.377512302729684,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 132.8377060676785,
+              "sd_centroid_mse": 14.960922461583863,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 122.02146358721367,
+              "sd_centroid_mse": 7.395220276784128,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 116.61334234698126,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 163.45720829185964,
+          "centroid_mse": 115.66517921443983,
+          "ensemble_variance": 47.792029077419805,
+          "population_mean_mse_estimate": 99.7345028552999,
+          "mse_identity_residual": 7.105427357601002e-15,
+          "mean_sample_rmsd": 12.723899100541102,
+          "centroid_rmsd": 10.7547747170473,
+          "energy_score": 7.17449630390644,
+          "pairwise_rmsd": 11.098805593269324,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 163.45720829185964,
+              "sd_centroid_mse": 31.21493960431275,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 131.59585557357977,
+              "sd_centroid_mse": 14.462072777563169,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 120.97540466748647,
+              "sd_centroid_mse": 7.139666594710118,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 115.66517921443983,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.8292252172133203,
+          "centroid_mse": -0.9481631325414241,
+          "ensemble_variance": -0.8810620846718891,
+          "pairwise_rmsd": -0.09641749781182973,
+          "population_mean_mse_estimate": -0.6544757709841349,
+          "mean_sample_rmsd": -0.06801471477643872,
+          "centroid_rmsd": -0.043991061826750055,
+          "energy_score": -0.019805965870523856
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 9.270326964175394,
+          "source_centroid_rmsd_gain": -1.5284388146986547,
+          "candidate_centroid_rmsd_gain": -1.4844477528719047
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "3",
+          "start_id": "129",
+          "training_seed": "20260825",
+          "inference_seed": "20260917"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 149.45650798222928,
+          "centroid_mse": 97.93719002821024,
+          "ensemble_variance": 51.519317954019044,
+          "population_mean_mse_estimate": 80.76408404353722,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 12.192706703611023,
+          "centroid_rmsd": 9.896322045498026,
+          "energy_score": 6.383089666297312,
+          "pairwise_rmsd": 11.619234074627423,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 149.45650798222928,
+              "sd_centroid_mse": 21.314318291759122,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 115.11029601288324,
+              "sd_centroid_mse": 12.684274319125596,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 103.6615586897679,
+              "sd_centroid_mse": 6.671129409294925,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 97.93719002821024,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 148.05661346978798,
+          "centroid_mse": 97.43716892284766,
+          "ensemble_variance": 50.619444546940315,
+          "population_mean_mse_estimate": 80.56402074053422,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 12.135599415524535,
+          "centroid_rmsd": 9.871026741066386,
+          "energy_score": 6.374886128811077,
+          "pairwise_rmsd": 11.521426573426915,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 148.05661346978798,
+              "sd_centroid_mse": 21.04987174638918,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 114.3103171051611,
+              "sd_centroid_mse": 12.546031007522524,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 103.0615516502855,
+              "sd_centroid_mse": 6.675130500642175,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 97.43716892284766,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.399894512441307,
+          "centroid_mse": -0.5000211053625776,
+          "ensemble_variance": -0.8998734070787293,
+          "pairwise_rmsd": -0.09780750120050818,
+          "population_mean_mse_estimate": -0.2000633030030059,
+          "mean_sample_rmsd": -0.05710728808648824,
+          "centroid_rmsd": -0.02529530443164063,
+          "energy_score": -0.008203537486234147
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 10.50346080398117,
+          "source_centroid_rmsd_gain": 0.6071387584831438,
+          "candidate_centroid_rmsd_gain": 0.6324340629147844
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "3",
+          "start_id": "259",
+          "training_seed": "20260825",
+          "inference_seed": "20260918"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 142.86501108914027,
+          "centroid_mse": 83.82607750433115,
+          "ensemble_variance": 59.0389335848091,
+          "population_mean_mse_estimate": 64.14643297606145,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 11.812352569298556,
+          "centroid_rmsd": 9.15565822343381,
+          "energy_score": 5.568289002365495,
+          "pairwise_rmsd": 12.48812713386612,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 142.86501108914027,
+              "sd_centroid_mse": 43.439111951897026,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 103.50572203260083,
+              "sd_centroid_mse": 22.443627589967083,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 90.38595901375437,
+              "sd_centroid_mse": 12.248318195142932,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 83.82607750433115,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 139.23972137982042,
+          "centroid_mse": 82.72897897568143,
+          "ensemble_variance": 56.510742404139,
+          "population_mean_mse_estimate": 63.89206484096843,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 11.672376459257066,
+          "centroid_rmsd": 9.095547205950911,
+          "energy_score": 5.562463742339545,
+          "pairwise_rmsd": 12.219825433835043,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 139.23972137982042,
+              "sd_centroid_mse": 40.748886155729146,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 101.56589311039443,
+              "sd_centroid_mse": 21.135733665552937,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 89.0079503539191,
+              "sd_centroid_mse": 11.582836639260826,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 82.72897897568143,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -3.625289709319844,
+          "centroid_mse": -1.097098528649724,
+          "ensemble_variance": -2.528191180670099,
+          "pairwise_rmsd": -0.2683017000310777,
+          "population_mean_mse_estimate": -0.25436813509301714,
+          "mean_sample_rmsd": -0.13997611004148958,
+          "centroid_rmsd": -0.0601110174828996,
+          "energy_score": -0.00582526002595074
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 8.619249898565505,
+          "source_centroid_rmsd_gain": -0.5364083248683063,
+          "candidate_centroid_rmsd_gain": -0.47629730738540665
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "3",
+          "start_id": "389",
+          "training_seed": "20260825",
+          "inference_seed": "20260919"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 205.83446114517156,
+          "centroid_mse": 87.99312800166265,
+          "ensemble_variance": 117.84133314350889,
+          "population_mean_mse_estimate": 48.712683620493024,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 14.052596281885469,
+          "centroid_rmsd": 9.380465233753743,
+          "energy_score": 5.253092128193018,
+          "pairwise_rmsd": 17.599008307384903,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 205.83446114517156,
+              "sd_centroid_mse": 75.26162606919952,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 127.27357238283228,
+              "sd_centroid_mse": 30.029857053608538,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 101.08660946205254,
+              "sd_centroid_mse": 15.382566313870484,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 87.99312800166265,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 198.97232820537852,
+          "centroid_mse": 84.64617318734338,
+          "ensemble_variance": 114.32615501803512,
+          "population_mean_mse_estimate": 46.53745484799834,
+          "mse_identity_residual": 1.4210854715202004e-14,
+          "mean_sample_rmsd": 13.817803401641047,
+          "centroid_rmsd": 9.200335493194983,
+          "energy_score": 5.152335824156669,
+          "pairwise_rmsd": 17.330935154968756,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 198.97232820537852,
+              "sd_centroid_mse": 72.9217904363076,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 122.75489152668844,
+              "sd_centroid_mse": 29.102865333538034,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 97.34907930045841,
+              "sd_centroid_mse": 14.935246252569963,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 84.64617318734338,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -6.862132939793042,
+          "centroid_mse": -3.3469548143192753,
+          "ensemble_variance": -3.515178125473767,
+          "pairwise_rmsd": -0.2680731524161466,
+          "population_mean_mse_estimate": -2.175228772494684,
+          "mean_sample_rmsd": -0.2347928802444219,
+          "centroid_rmsd": -0.18012974055876008,
+          "energy_score": -0.10075630403634861
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 8.523000189789943,
+          "source_centroid_rmsd_gain": -0.8574650439637992,
+          "candidate_centroid_rmsd_gain": -0.6773353034050391
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "4",
+          "start_id": "0",
+          "training_seed": "20260825",
+          "inference_seed": "20260920"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 173.9678258198079,
+          "centroid_mse": 110.66009007384565,
+          "ensemble_variance": 63.307735745962255,
+          "population_mean_mse_estimate": 89.55751149185824,
+          "mse_identity_residual": -7.105427357601002e-15,
+          "mean_sample_rmsd": 13.156748179508774,
+          "centroid_rmsd": 10.519509973085517,
+          "energy_score": 6.772742621405496,
+          "pairwise_rmsd": 12.768011116206557,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 173.9678258198079,
+              "sd_centroid_mse": 24.90288911716661,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 131.76266865583307,
+              "sd_centroid_mse": 15.339855524695743,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 117.69428293450811,
+              "sd_centroid_mse": 8.266916665595133,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 110.66009007384565,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 171.6041269348181,
+          "centroid_mse": 109.84730814451522,
+          "ensemble_variance": 61.75681879030289,
+          "population_mean_mse_estimate": 89.26170188108092,
+          "mse_identity_residual": 0.0,
+          "mean_sample_rmsd": 13.066976818697439,
+          "centroid_rmsd": 10.480806655239626,
+          "energy_score": 6.759056336046709,
+          "pairwise_rmsd": 12.61584096530146,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 171.6041269348181,
+              "sd_centroid_mse": 24.55703522015797,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 130.4329144079495,
+              "sd_centroid_mse": 14.935644149827278,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 116.70917689899332,
+              "sd_centroid_mse": 8.149081014328596,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 109.84730814451522,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -2.3636988849897875,
+          "centroid_mse": -0.812781929330427,
+          "ensemble_variance": -1.5509169556593676,
+          "pairwise_rmsd": -0.15217015090509634,
+          "population_mean_mse_estimate": -0.2958096107773116,
+          "mean_sample_rmsd": -0.0897713608113353,
+          "centroid_rmsd": -0.03870331784589176,
+          "energy_score": -0.013686285358787131
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 10.948910139576052,
+          "source_centroid_rmsd_gain": 0.4294001664905345,
+          "candidate_centroid_rmsd_gain": 0.46810348433642623
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "4",
+          "start_id": "123",
+          "training_seed": "20260825",
+          "inference_seed": "20260921"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 202.33179217918655,
+          "centroid_mse": 134.58038059592965,
+          "ensemble_variance": 67.75141158325687,
+          "population_mean_mse_estimate": 111.99657673484403,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 14.12219794395169,
+          "centroid_rmsd": 11.600878440701361,
+          "energy_score": 7.462813142177146,
+          "pairwise_rmsd": 13.318769603549088,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 202.33179217918655,
+              "sd_centroid_mse": 48.72942654436549,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 157.16418445701527,
+              "sd_centroid_mse": 35.629036473502524,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 142.10831521629154,
+              "sd_centroid_mse": 22.267281066846124,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 134.58038059592965,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 201.0868502030288,
+          "centroid_mse": 134.43932010739516,
+          "ensemble_variance": 66.64753009563367,
+          "population_mean_mse_estimate": 112.22347674218393,
+          "mse_identity_residual": -2.842170943040401e-14,
+          "mean_sample_rmsd": 14.072734076256026,
+          "centroid_rmsd": 11.594797113679702,
+          "energy_score": 7.465910623469583,
+          "pairwise_rmsd": 13.213646905572887,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 201.0868502030288,
+              "sd_centroid_mse": 49.674298717619806,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 156.6551634726064,
+              "sd_centroid_mse": 35.666280369669124,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 141.84460122913222,
+              "sd_centroid_mse": 22.183604657251323,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 134.43932010739516,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -1.2449419761577474,
+          "centroid_mse": -0.14106048853449238,
+          "ensemble_variance": -1.1038814876231982,
+          "pairwise_rmsd": -0.105122697976201,
+          "population_mean_mse_estimate": 0.226900007339907,
+          "mean_sample_rmsd": -0.04946386769566402,
+          "centroid_rmsd": -0.006081327021659533,
+          "energy_score": 0.003097481292436477
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 11.801396228402192,
+          "source_centroid_rmsd_gain": 0.2005177877008304,
+          "candidate_centroid_rmsd_gain": 0.20659911472248993
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "4",
+          "start_id": "246",
+          "training_seed": "20260825",
+          "inference_seed": "20260922"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 565.1186181758782,
+          "centroid_mse": 399.8704041703168,
+          "ensemble_variance": 165.24821400556132,
+          "population_mean_mse_estimate": 344.78766616846303,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 23.6237978671515,
+          "centroid_rmsd": 19.99675984179229,
+          "energy_score": 13.163049427050082,
+          "pairwise_rmsd": 20.921496880202834,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 565.1186181758782,
+              "sd_centroid_mse": 122.79329216922972,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 454.95314217217054,
+              "sd_centroid_mse": 70.88818886095683,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 418.2313168376014,
+              "sd_centroid_mse": 41.35354775426875,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 399.8704041703168,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 564.2720058765798,
+          "centroid_mse": 402.39551925604377,
+          "ensemble_variance": 161.87648662053596,
+          "population_mean_mse_estimate": 348.43669038253176,
+          "mse_identity_residual": 5.684341886080802e-14,
+          "mean_sample_rmsd": 23.602715036433374,
+          "centroid_rmsd": 20.05979858463299,
+          "energy_score": 13.249211078575017,
+          "pairwise_rmsd": 20.707007915716712,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 564.2720058765798,
+              "sd_centroid_mse": 124.18058443632961,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 456.35434812955583,
+              "sd_centroid_mse": 71.52563060498431,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 420.3817955472145,
+              "sd_centroid_mse": 41.65322241864702,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 402.39551925604377,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": -0.8466122992983856,
+          "centroid_mse": 2.525115085726952,
+          "ensemble_variance": -3.371727385025366,
+          "pairwise_rmsd": -0.2144889644861223,
+          "population_mean_mse_estimate": 3.6490242140687315,
+          "mean_sample_rmsd": -0.021082830718125223,
+          "centroid_rmsd": 0.06303874284069977,
+          "energy_score": 0.08616165152493593
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 22.417548554298282,
+          "source_centroid_rmsd_gain": 2.420788712505992,
+          "candidate_centroid_rmsd_gain": 2.357749969665292
+        }
+      },
+      {
+        "ids": {
+          "protein_id": "1e7uA04",
+          "replica_id": "4",
+          "start_id": "369",
+          "training_seed": "20260825",
+          "inference_seed": "20260923"
+        },
+        "n_atoms": 158,
+        "ensemble_size": 4,
+        "source": {
+          "sample_mse": 883.0842442254204,
+          "centroid_mse": 638.1967483681982,
+          "ensemble_variance": 244.8874958572222,
+          "population_mean_mse_estimate": 556.5675830824574,
+          "mse_identity_residual": 2.842170943040401e-14,
+          "mean_sample_rmsd": 29.682905585198384,
+          "centroid_rmsd": 25.262556251658268,
+          "energy_score": 16.96416275027741,
+          "pairwise_rmsd": 25.43748566984195,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 883.0842442254204,
+              "sd_centroid_mse": 82.82040036926126,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 719.825913653939,
+              "sd_centroid_mse": 50.12179663632203,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 665.4064701301119,
+              "sd_centroid_mse": 24.124286046091612,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 638.1967483681982,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "candidate": {
+          "sample_mse": 883.1718279851113,
+          "centroid_mse": 644.135394404989,
+          "ensemble_variance": 239.03643358012238,
+          "population_mean_mse_estimate": 564.4565832116149,
+          "mse_identity_residual": -5.684341886080802e-14,
+          "mean_sample_rmsd": 29.688383349864804,
+          "centroid_rmsd": 25.379822584190556,
+          "energy_score": 17.123057331410536,
+          "pairwise_rmsd": 25.130652036908533,
+          "centroid_sensitivity": [
+            {
+              "k": 1,
+              "mean_centroid_mse": 883.1718279851113,
+              "sd_centroid_mse": 77.46979895670403,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 2,
+              "mean_centroid_mse": 723.8142055983632,
+              "sd_centroid_mse": 48.60448266105214,
+              "n_subsets": 6,
+              "exhaustive": true
+            },
+            {
+              "k": 3,
+              "mean_centroid_mse": 670.6949981361138,
+              "sd_centroid_mse": 23.486974419599203,
+              "n_subsets": 4,
+              "exhaustive": true
+            },
+            {
+              "k": 4,
+              "mean_centroid_mse": 644.135394404989,
+              "sd_centroid_mse": 0.0,
+              "n_subsets": 1,
+              "exhaustive": true
+            }
+          ]
+        },
+        "delta": {
+          "sample_mse": 0.08758375969091503,
+          "centroid_mse": 5.9386460367908285,
+          "ensemble_variance": -5.851062277099828,
+          "pairwise_rmsd": -0.3068336329334187,
+          "population_mean_mse_estimate": 7.889000129157466,
+          "mean_sample_rmsd": 0.005477764666419915,
+          "centroid_rmsd": 0.11726633253228869,
+          "energy_score": 0.1588945811331257
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 20.11314256796223,
+          "source_centroid_rmsd_gain": -5.149413683696036,
+          "candidate_centroid_rmsd_gain": -5.2666800162283245
+        }
+      }
+    ],
+    "per_protein": [
+      {
+        "training_seed": "20260825",
+        "protein_id": "1e7uA04",
+        "n_transition_units": 20,
+        "n_records": 20,
+        "source": {
+          "sample_mse": 300.68629742573,
+          "centroid_mse": 189.08212739929562,
+          "ensemble_variance": 111.60417002643435,
+          "pairwise_rmsd": 16.469851008267554,
+          "population_mean_mse_estimate": 151.88073739048417,
+          "mean_sample_rmsd": 16.398880199389858,
+          "centroid_rmsd": 12.96121856033495,
+          "energy_score": 8.163954695256077
+        },
+        "candidate": {
+          "sample_mse": 297.62559381338167,
+          "centroid_mse": 188.6958307354825,
+          "ensemble_variance": 108.92976307789925,
+          "pairwise_rmsd": 16.274904464795696,
+          "population_mean_mse_estimate": 152.38590970951606,
+          "mean_sample_rmsd": 16.307963812099857,
+          "centroid_rmsd": 12.934217000631543,
+          "energy_score": 8.170511579702008
+        },
+        "delta": {
+          "sample_mse": -3.0607036123482443,
+          "centroid_mse": -0.38629666381313116,
+          "ensemble_variance": -2.674406948535103,
+          "pairwise_rmsd": -0.1949465434718598,
+          "population_mean_mse_estimate": 0.5051723190319055,
+          "mean_sample_rmsd": -0.09091638728999918,
+          "centroid_rmsd": -0.02700155970341047,
+          "energy_score": 0.006556884445930544
+        }
+      }
+    ],
+    "per_seed": [
+      {
+        "training_seed": "20260825",
+        "n_proteins": 1,
+        "protein_macro_delta": {
+          "sample_mse": -3.0607036123482443,
+          "centroid_mse": -0.38629666381313116,
+          "ensemble_variance": -2.674406948535103,
+          "pairwise_rmsd": -0.1949465434718598,
+          "population_mean_mse_estimate": 0.5051723190319055,
+          "mean_sample_rmsd": -0.09091638728999918,
+          "centroid_rmsd": -0.02700155970341047,
+          "energy_score": 0.006556884445930544
+        }
+      }
+    ],
+    "bootstrap": [
+      {
+        "training_seed": "20260825",
+        "resampling_unit": "protein",
+        "n_bootstrap": 2000,
+        "ci_percentile": {
+          "sample_mse": {
+            "low": -3.0607036123482443,
+            "high": -3.0607036123482443
+          },
+          "centroid_mse": {
+            "low": -0.38629666381313116,
+            "high": -0.38629666381313116
+          },
+          "ensemble_variance": {
+            "low": -2.674406948535103,
+            "high": -2.674406948535103
+          },
+          "pairwise_rmsd": {
+            "low": -0.1949465434718598,
+            "high": -0.1949465434718598
+          },
+          "population_mean_mse_estimate": {
+            "low": 0.5051723190319055,
+            "high": 0.5051723190319055
+          },
+          "mean_sample_rmsd": {
+            "low": -0.09091638728999918,
+            "high": -0.09091638728999918
+          },
+          "centroid_rmsd": {
+            "low": -0.02700155970341047,
+            "high": -0.02700155970341047
+          },
+          "energy_score": {
+            "low": 0.006556884445930544,
+            "high": 0.006556884445930544
+          }
+        }
+      }
+    ],
+    "notes": [
+      "Coordinates are analyzed in the supplied start-aligned gauge; no automatic or independent alignment is performed.",
+      "All reported deltas are candidate minus source; negative is better for errors and energy score. Spread changes (ensemble_variance, pairwise_rmsd) have no inherently favorable sign.",
+      "centroid_rmsd is the preserved primary metric; mean_sample_rmsd and population_mean_mse_estimate are finite-ensemble diagnostics.",
+      "MSE is not a proper distribution score, and four samples cannot establish diversity retention.",
+      "energy_score is exploratory and its unbiased interpretation assumes independent ensemble draws.",
+      "Centroid sensitivity describes finite-K sampling sensitivity and does not identify an optimal K.",
+      "Protein-bootstrap intervals are per training seed, exploratory with small protein counts, and conditional on supplied transitions and any upstream validation-based selection.",
+      "Three evaluated training seeds do not establish precise population-level training-run uncertainty.",
+      "Rescoring a supplied transition lag does not establish transfer to other lags.",
+      "No hierarchical training-seed bootstrap or population-level claim is made."
+    ]
+  },
+  "report": {
+    "counts": {
+      "n_records": 20,
+      "n_training_seeds": 1,
+      "n_proteins": 1,
+      "n_transition_units": 20,
+      "n_bootstrap": 2000,
+      "random_seed": 20260904,
+      "primary_metric": "centroid_rmsd",
+      "ensemble_sizes": [
+        4
+      ]
+    },
+    "raw_coordinate_provenance": {
+      "records_with_raw_ca_coordinates": 20,
+      "n_records": 20,
+      "status": "RAW_CA_COORDINATES_PRESENT"
+    },
+    "per_protein_persistence": [
+      {
+        "training_seed": "20260825",
+        "protein_id": "1e7uA04",
+        "n_transition_units": 20,
+        "persistence_ca_rmsd": 13.353614621587791,
+        "source_centroid_rmsd_gain": 0.39239606125284243,
+        "candidate_centroid_rmsd_gain": 0.419397620956253
+      }
+    ],
+    "per_seed_summary": [
+      {
+        "training_seed": "20260825",
+        "n_proteins": 1,
+        "candidate_minus_source": {
+          "sample_mse": -3.0607036123482443,
+          "centroid_mse": -0.38629666381313116,
+          "ensemble_variance": -2.674406948535103,
+          "pairwise_rmsd": -0.1949465434718598,
+          "population_mean_mse_estimate": 0.5051723190319055,
+          "mean_sample_rmsd": -0.09091638728999918,
+          "centroid_rmsd": -0.02700155970341047,
+          "energy_score": 0.006556884445930544
+        },
+        "ci_percentile": {
+          "centroid_rmsd": {
+            "low": -0.02700155970341047,
+            "high": -0.02700155970341047
+          },
+          "mean_sample_rmsd": {
+            "low": -0.09091638728999918,
+            "high": -0.09091638728999918
+          },
+          "energy_score": {
+            "low": 0.006556884445930544,
+            "high": 0.006556884445930544
+          }
+        },
+        "spread_changes_no_desired_sign": {
+          "ensemble_variance": -2.674406948535103,
+          "pairwise_rmsd": -0.1949465434718598
+        },
+        "persistence": {
+          "persistence_ca_rmsd": 13.353614621587791,
+          "source_centroid_rmsd_gain": 0.39239606125284243,
+          "candidate_centroid_rmsd_gain": 0.419397620956253
+        }
+      }
+    ],
+    "max_absolute_mse_decomposition_identity_residual": 8.526512829121202e-14,
+    "warnings": [
+      "Validation-panel results use a new evaluator and are not an exact reproduction of earlier results.",
+      "All candidate-minus-source deltas are descriptive; no independent test-set claim is made.",
+      "Spread changes have no desired sign and different K values are reported separately, never concatenated.",
+      "TECHNICAL_PILOT_ONLY: one protein gives a degenerate protein bootstrap; no scientific significance or inference is reported."
+    ]
+  }
+}

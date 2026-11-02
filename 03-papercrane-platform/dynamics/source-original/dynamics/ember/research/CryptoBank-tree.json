@@ -1,0 +1,149 @@
+{
+  "sha": "9d973e6b5787016ecddc86c253aa89334588e999",
+  "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/trees/9d973e6b5787016ecddc86c253aa89334588e999",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18ea5cd97fc4188e7e618b2d3e8982d1dc417bf1",
+      "size": 423,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/18ea5cd97fc4188e7e618b2d3e8982d1dc417bf1"
+    },
+    {
+      "path": "3seg_distmodel_parameters.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e7cf98b892ecccc186366d42ead4b2cbf3776c7",
+      "size": 320,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/4e7cf98b892ecccc186366d42ead4b2cbf3776c7"
+    },
+    {
+      "path": "AUTHOR_CONTRIBUTIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb71b9a3787fd99dbd90fdd23c49c92ecdc7ac54",
+      "size": 8188,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/bb71b9a3787fd99dbd90fdd23c49c92ecdc7ac54"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f5712e5fef8edabac665d19bd44c467f43b4498",
+      "size": 6490,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/4f5712e5fef8edabac665d19bd44c467f43b4498"
+    },
+    {
+      "path": "data_query.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1de8066bf7745bb1d1070411c0ae15f7baa3d4ba",
+      "size": 2124,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/1de8066bf7745bb1d1070411c0ae15f7baa3d4ba"
+    },
+    {
+      "path": "environment.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "399ff0b20101c817bc6bafb209bc131000b7af1b",
+      "size": 11995,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/399ff0b20101c817bc6bafb209bc131000b7af1b"
+    },
+    {
+      "path": "exclusion_lists",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5d5c34e1ae373143709bf073701d6f0cb3aa78d",
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/trees/a5d5c34e1ae373143709bf073701d6f0cb3aa78d"
+    },
+    {
+      "path": "exclusion_lists/.ipynb_checkpoints",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26e81c94d642675146745dc4d3d8b71826aa3255",
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/trees/26e81c94d642675146745dc4d3d8b71826aa3255"
+    },
+    {
+      "path": "exclusion_lists/.ipynb_checkpoints/Untitled-checkpoint.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fd64429bf421126b7000c94ce0f6fd186fbd01f",
+      "size": 72,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/2fd64429bf421126b7000c94ce0f6fd186fbd01f"
+    },
+    {
+      "path": "exclusion_lists/elements.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72372ab304b23ac35db3a94c81e38e083a11c6f6",
+      "size": 1892,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/72372ab304b23ac35db3a94c81e38e083a11c6f6"
+    },
+    {
+      "path": "exclusion_lists/ions_curated.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "282f57fc935311605c6599bda46368333b1540a8",
+      "size": 2559,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/282f57fc935311605c6599bda46368333b1540a8"
+    },
+    {
+      "path": "exclusion_lists/low_mass_ligands_curated.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c89ae3a57ca1b8749f2680c3665104dcb4a1f77",
+      "size": 3683,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/1c89ae3a57ca1b8749f2680c3665104dcb4a1f77"
+    },
+    {
+      "path": "exclusion_lists/solvents.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd4256683dc410e4cbb5d234d6bb100395992ed5",
+      "size": 272,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/cd4256683dc410e4cbb5d234d6bb100395992ed5"
+    },
+    {
+      "path": "get_sites.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d711bf956bc6cb08bca0ae377b52b552c3164db1",
+      "size": 9364,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/d711bf956bc6cb08bca0ae377b52b552c3164db1"
+    },
+    {
+      "path": "monomer_calcs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "335283318d5c6cf137c5c1928dc2835d87f4a7ae",
+      "size": 72484,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/335283318d5c6cf137c5c1928dc2835d87f4a7ae"
+    },
+    {
+      "path": "refine_smiles.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52e74652957930e8bbbc3153adab7bc98f80e6b0",
+      "size": 9677,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/52e74652957930e8bbbc3153adab7bc98f80e6b0"
+    },
+    {
+      "path": "scoring_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c444df9d866e96a8c6308e4e3f01c7c898ff1822",
+      "size": 17574,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/c444df9d866e96a8c6308e4e3f01c7c898ff1822"
+    },
+    {
+      "path": "weights1seg.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "749cbba5116053c2c21cc55ab8a0b2a48500c161",
+      "size": 211,
+      "url": "https://api.github.com/repos/Gervasiolab/CryptoBank/git/blobs/749cbba5116053c2c21cc55ab8a0b2a48500c161"
+    }
+  ],
+  "truncated": false
+}

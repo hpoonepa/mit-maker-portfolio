@@ -1,0 +1,682 @@
+{
+  "sha": "9a3432f479325ca3c9fdc3b8612715ab5b6edecc",
+  "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/9a3432f479325ca3c9fdc3b8612715ab5b6edecc",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2d39b2a4c77f46d1ee531c16e78d7b412334ba2",
+      "size": 965,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/a2d39b2a4c77f46d1ee531c16e78d7b412334ba2"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c82a636423f26f7f013351838ac4ef3c6f3e18c",
+      "size": 1070,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/9c82a636423f26f7f013351838ac4ef3c6f3e18c"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccbf2e00872fe908f542ada5ef5afed0d637ca75",
+      "size": 6126,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/ccbf2e00872fe908f542ada5ef5afed0d637ca75"
+    },
+    {
+      "path": "img",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ca1eee69ed5ce578921955394e588c4d54937f3",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/9ca1eee69ed5ce578921955394e588c4d54937f3"
+    },
+    {
+      "path": "img/4pfs.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0271f602e4e0150f26b6cc0d2f44f06fffa25dd2",
+      "size": 607347,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/0271f602e4e0150f26b6cc0d2f44f06fffa25dd2"
+    },
+    {
+      "path": "img/5if9.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84aa58a80bdd70e09d931c494efbc521b25d4233",
+      "size": 740476,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/84aa58a80bdd70e09d931c494efbc521b25d4233"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63621ee4af9df57c5adb392ae4ae8f89516b2074",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/63621ee4af9df57c5adb392ae4ae8f89516b2074"
+    },
+    {
+      "path": "src/A-filter-ahojdb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a7cb00b71adbb9b5290c2d1e53792ed3bad7c14",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/4a7cb00b71adbb9b5290c2d1e53792ed3bad7c14"
+    },
+    {
+      "path": "src/A-filter-ahojdb/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73a73eb5c0cbca3e81c47b701c8f634cff4eb0ae",
+      "size": 3185,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/73a73eb5c0cbca3e81c47b701c8f634cff4eb0ae"
+    },
+    {
+      "path": "src/A-filter-ahojdb/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25b6bbb58a116da5cc9b46f7f97619f46e6fec60",
+      "size": 1340,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/25b6bbb58a116da5cc9b46f7f97619f46e6fec60"
+    },
+    {
+      "path": "src/B-create-dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ccc52bde1ca7cb381ca2556019c2ca0e71b4d6e",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/9ccc52bde1ca7cb381ca2556019c2ca0e71b4d6e"
+    },
+    {
+      "path": "src/B-create-dataset/download-sequences.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7f3732056f5f97a2b4fd95fcb7220d50aaf082b",
+      "size": 221,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/a7f3732056f5f97a2b4fd95fcb7220d50aaf082b"
+    },
+    {
+      "path": "src/B-create-dataset/filter_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d61632636de5c4e26b3583d79ed047f48f7ab44",
+      "size": 9796,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/2d61632636de5c4e26b3583d79ed047f48f7ab44"
+    },
+    {
+      "path": "src/B-create-dataset/get-sequence-lengths.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b19c9e240158a0980fd41d07abad854dbfc48b5",
+      "size": 1957,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/1b19c9e240158a0980fd41d07abad854dbfc48b5"
+    },
+    {
+      "path": "src/B-create-dataset/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3607c4ead68bd99efc7b3667d73b80f7b47d8ba4",
+      "size": 1922,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/3607c4ead68bd99efc7b3667d73b80f7b47d8ba4"
+    },
+    {
+      "path": "src/B-create-dataset/pocket.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8adc582d3ccfff8e2a5e3f30299f40bd88d166ed",
+      "size": 1873,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/8adc582d3ccfff8e2a5e3f30299f40bd88d166ed"
+    },
+    {
+      "path": "src/B-create-dataset/pocket_selection_parser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0abc16392355d5e38108411e3a1ba3c3f9d8f45",
+      "size": 3206,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/f0abc16392355d5e38108411e3a1ba3c3f9d8f45"
+    },
+    {
+      "path": "src/B-create-dataset/run-mmseq.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9448d3b2a666e454e0129005b725223967e922a1",
+      "size": 363,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/9448d3b2a666e454e0129005b725223967e922a1"
+    },
+    {
+      "path": "src/C-remove-holo-homomers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20b69b435eb79e14f50c30b03a4dc588c70d88ad",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/20b69b435eb79e14f50c30b03a4dc588c70d88ad"
+    },
+    {
+      "path": "src/C-remove-holo-homomers/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "decc70aba8f51db7e8addc470ad7c83fdeb01a37",
+      "size": 5318,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/decc70aba8f51db7e8addc470ad7c83fdeb01a37"
+    },
+    {
+      "path": "src/D-create-folds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8efd05d14d13b96fddc6b496940d6861884450f9",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/8efd05d14d13b96fddc6b496940d6861884450f9"
+    },
+    {
+      "path": "src/D-create-folds/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c79d9311e51b36e6e9ad426e7f6ea8aea757704",
+      "size": 7770,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/1c79d9311e51b36e6e9ad426e7f6ea8aea757704"
+    },
+    {
+      "path": "src/E-add-noncryptic-pockets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cd090c12ac1244dde4fef947b5fc54762ba12a0",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/1cd090c12ac1244dde4fef947b5fc54762ba12a0"
+    },
+    {
+      "path": "src/E-add-noncryptic-pockets/add-pymol-scripts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e97381ec5f786648b5d5b6b7a5ad314e7a0230",
+      "size": 5774,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/97e97381ec5f786648b5d5b6b7a5ad314e7a0230"
+    },
+    {
+      "path": "src/E-add-noncryptic-pockets/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "448e19d50273cac9d1296caadf2c5a5cebfefdbf",
+      "size": 4381,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/448e19d50273cac9d1296caadf2c5a5cebfefdbf"
+    },
+    {
+      "path": "src/F-statistics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "928ef820bfe3faa3ddf410f3fd339fd143fa4624",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/928ef820bfe3faa3ddf410f3fd339fd143fa4624"
+    },
+    {
+      "path": "src/F-statistics/compare-metrics-figure.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25f8f44758c14a91a6bbaa4ef19280cfd0f0254d",
+      "size": 213508,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/25f8f44758c14a91a6bbaa4ef19280cfd0f0254d"
+    },
+    {
+      "path": "src/F-statistics/conservation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d8b699157866cdaf9a0fedbe05093b98e155f98",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/9d8b699157866cdaf9a0fedbe05093b98e155f98"
+    },
+    {
+      "path": "src/F-statistics/conservation/auth-to-label.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c6065ccc76813d327ab2640196688b48a522f0",
+      "size": 3472,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/92c6065ccc76813d327ab2640196688b48a522f0"
+    },
+    {
+      "path": "src/F-statistics/conservation/conservation-scores.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ca48d416531e17bdb46193c17219da41edcda3",
+      "size": 121012,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/33ca48d416531e17bdb46193c17219da41edcda3"
+    },
+    {
+      "path": "src/F-statistics/conservation/label_dataset.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "928ab2f9f947c51e67046cb8358c7b83e3c833e6",
+      "size": 358013,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/928ab2f9f947c51e67046cb8358c7b83e3c833e6"
+    },
+    {
+      "path": "src/F-statistics/conservation/label_noncryptic_dataset.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b78c5575a943bb60ceef61a4d414bede5351b706",
+      "size": 190058,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/b78c5575a943bb60ceef61a4d414bede5351b706"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6ea8b716838ef88f0cbaafa5c3f8dad26f284d9",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/c6ea8b716838ef88f0cbaafa5c3f8dad26f284d9"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78b03e6b910f71cb31c3098bb5f4d1f5f5ecdca7",
+      "size": 250,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/78b03e6b910f71cb31c3098bb5f4d1f5f5ecdca7"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2246eb2d0c8c63e9b30a337af3bc075adae5e4aa",
+      "size": 5454,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/2246eb2d0c8c63e9b30a337af3bc075adae5e4aa"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/concatenated-sequences.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc91bf00b2f8ccca3b33033ea7d3503b2e481429",
+      "size": 72573,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/cc91bf00b2f8ccca3b33033ea7d3503b2e481429"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/cryptobench-sequences.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae7ca6d51fe328d835c3c1bd17b104dd4e14ce9d",
+      "size": 60157,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/ae7ca6d51fe328d835c3c1bd17b104dd4e14ce9d"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/cryptobench.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7567adb1d2c3b1c065a1a3f0cfaa4452210b321",
+      "size": 1141,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/e7567adb1d2c3b1c065a1a3f0cfaa4452210b321"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/pocketminer-sequences.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dce1ffe3d6033355ac8fb09e004d9a740832f517",
+      "size": 12415,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/dce1ffe3d6033355ac8fb09e004d9a740832f517"
+    },
+    {
+      "path": "src/F-statistics/dataset-similarity/pocketminer-train-set.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03a70a99e8f64195c19927f29bf414466d62593c",
+      "size": 259,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/03a70a99e8f64195c19927f29bf414466d62593c"
+    },
+    {
+      "path": "src/F-statistics/overlapping-pockets.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a066eaf13a1f1a3d405b339ec93a8b19a0b607d0",
+      "size": 4791,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/a066eaf13a1f1a3d405b339ec93a8b19a0b607d0"
+    },
+    {
+      "path": "src/F-statistics/pRMSD-search.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "889f0ce05f4284737137826c3764f81825241800",
+      "size": 2664,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/889f0ce05f4284737137826c3764f81825241800"
+    },
+    {
+      "path": "src/F-statistics/pocket-type-estimator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ca23af3483308bd099db71e370dcde29fd341a8",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/8ca23af3483308bd099db71e370dcde29fd341a8"
+    },
+    {
+      "path": "src/F-statistics/pocket-type-estimator/estimator.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b6549d5390eb0b8df952b0368571cab827f2f5c",
+      "size": 94534,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/2b6549d5390eb0b8df952b0368571cab827f2f5c"
+    },
+    {
+      "path": "src/F-statistics/pocketminer-cryptosite-stats.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03dc12fe218858d9bdb99af3b281147945a1527e",
+      "size": 8397,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/03dc12fe218858d9bdb99af3b281147945a1527e"
+    },
+    {
+      "path": "src/F-statistics/stats.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7eafa2d83ce44452cee4673d0ec018227574033",
+      "size": 13939,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/d7eafa2d83ce44452cee4673d0ec018227574033"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3dd7282871f0e6de35c873b64b8558e27768752",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/c3dd7282871f0e6de35c873b64b8558e27768752"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/create-annotations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "057f1f13b23f89cdee7f738a8c08c01189f3170a",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/057f1f13b23f89cdee7f738a8c08c01189f3170a"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/create-annotations/create-annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a385632c6e96d7301f9b1115ac4b696db62df8",
+      "size": 1465,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/26a385632c6e96d7301f9b1115ac4b696db62df8"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/create-annotations/create-noncryptic-annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad36c818fa3ed5a37a59dfd68dd2847d63f335d4",
+      "size": 1755,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/ad36c818fa3ed5a37a59dfd68dd2847d63f335d4"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/download-uniprot-sequences",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0646ed7d93420e47bafe0e992f5f8bb63565c5e0",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/0646ed7d93420e47bafe0e992f5f8bb63565c5e0"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/download-uniprot-sequences/fasta-to-txt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90f7c66e110a8b600ab417ef9069c6c58efaff2c",
+      "size": 457,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/90f7c66e110a8b600ab417ef9069c6c58efaff2c"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/download-uniprot-sequences/get-uniprot-ids.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f5b403dba6e49c83d091e300e12fd1a30bb6d1",
+      "size": 370,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/f0f5b403dba6e49c83d091e300e12fd1a30bb6d1"
+    },
+    {
+      "path": "src/G-download-uniprot-sequences-and-create-annotations/download-uniprot-sequences/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c559fa60ce7d46145aa3c5419fd4815a567b3974",
+      "size": 802,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/c559fa60ce7d46145aa3c5419fd4815a567b3974"
+    },
+    {
+      "path": "src/H-prediction-evaluation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf1b3ae557dc54a49e2ac9cd37853739dffd3f63",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/bf1b3ae557dc54a49e2ac9cd37853739dffd3f63"
+    },
+    {
+      "path": "src/H-prediction-evaluation/p2rank-analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8e780e1e0e510fa1c2ae6bebf1293127c578d19",
+      "size": 14075,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/e8e780e1e0e510fa1c2ae6bebf1293127c578d19"
+    },
+    {
+      "path": "src/H-prediction-evaluation/pocketminer-stats-for-Rado.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f49532767eecfc1bfe66fd44bc0302b8d42b8cfa",
+      "size": 5950,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/f49532767eecfc1bfe66fd44bc0302b8d42b8cfa"
+    },
+    {
+      "path": "src/H-prediction-evaluation/pocketminer_stats.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0df72a81bc7fdc4bed028ad838a6c09c7fbbd58",
+      "size": 9385,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/d0df72a81bc7fdc4bed028ad838a6c09c7fbbd58"
+    },
+    {
+      "path": "src/H-prediction-evaluation/roc-curve.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d4a105a248ee1689e0e514f615f646453e75635",
+      "size": 907272,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/7d4a105a248ee1689e0e514f615f646453e75635"
+    },
+    {
+      "path": "src/H-prediction-evaluation/skipped-structures-analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ca4ae67600169cc4f0cf784000bb13299812703",
+      "size": 5561,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/4ca4ae67600169cc4f0cf784000bb13299812703"
+    },
+    {
+      "path": "src/I-final",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ce8c360c7b001a2e9d20e45495560b2f5d62b00",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/4ce8c360c7b001a2e9d20e45495560b2f5d62b00"
+    },
+    {
+      "path": "src/I-final/Protein.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddb5af35f08aebeffc7db0a00d6ace5a036404ec",
+      "size": 2212,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/ddb5af35f08aebeffc7db0a00d6ace5a036404ec"
+    },
+    {
+      "path": "src/I-final/add-pRMSD-to-cryptobench.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb1d54bcab35cec420ee4610acda3bf2abef1e3",
+      "size": 9100,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/0fb1d54bcab35cec420ee4610acda3bf2abef1e3"
+    },
+    {
+      "path": "src/I-final/benchmark-example.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be4294412228dc6218661ece506601f598a1a0e6",
+      "size": 2695,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/be4294412228dc6218661ece506601f598a1a0e6"
+    },
+    {
+      "path": "src/I-final/dataset-overview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4319d7885d3d1b1341575156cc507781b4e9516e",
+      "size": 2971,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/4319d7885d3d1b1341575156cc507781b4e9516e"
+    },
+    {
+      "path": "src/I-final/finalize-benchmark.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f715932309b92cc2b0ea8d9c054a39cfb1cc5097",
+      "size": 1175,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/f715932309b92cc2b0ea8d9c054a39cfb1cc5097"
+    },
+    {
+      "path": "src/I-final/structure.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e5081b006a1e5750fdbcaa9c0c6d92646551bb9",
+      "size": 462,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/1e5081b006a1e5750fdbcaa9c0c6d92646551bb9"
+    },
+    {
+      "path": "src/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d5f4ca1e71fb20a2256ecc5870ff2614adb4582",
+      "size": 7627,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/6d5f4ca1e71fb20a2256ecc5870ff2614adb4582"
+    },
+    {
+      "path": "src/other",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6b9483221c3d154561dc6d79764f5f7471b7c5b",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/a6b9483221c3d154561dc6d79764f5f7471b7c5b"
+    },
+    {
+      "path": "src/other/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d383e6b4f44d8ee40bbd7ec7ef76f4f8a821b6c",
+      "size": 102,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/5d383e6b4f44d8ee40bbd7ec7ef76f4f8a821b6c"
+    },
+    {
+      "path": "src/other/dataset-length.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c3fbd0a7ee243c1ae7a6917a80997b394f81dd9",
+      "size": 3981,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/0c3fbd0a7ee243c1ae7a6917a80997b394f81dd9"
+    },
+    {
+      "path": "src/other/get-main-structures.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5118234f11e6504675664fc99a68c0f7fcac78da",
+      "size": 7563,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/5118234f11e6504675664fc99a68c0f7fcac78da"
+    },
+    {
+      "path": "src/other/get-nonquery-ligands.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bcb80d5f339ee7a55066b8466ffd8ba8081879c",
+      "size": 2970,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/0bcb80d5f339ee7a55066b8466ffd8ba8081879c"
+    },
+    {
+      "path": "src/other/get-sugars.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afcdb33adb9b6a417d1d53b1a3f5c694e08a136d",
+      "size": 4488,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/afcdb33adb9b6a417d1d53b1a3f5c694e08a136d"
+    },
+    {
+      "path": "src/other/large-pRMSD-analysis.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a351e4bb8edbdf33f14971547be2cfad8bad3d4",
+      "size": 123888,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/4a351e4bb8edbdf33f14971547be2cfad8bad3d4"
+    },
+    {
+      "path": "src/other/ligand-length.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "360d5b1762729eca172891a977dbb38ee68b660e",
+      "size": 26082,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/360d5b1762729eca172891a977dbb38ee68b660e"
+    },
+    {
+      "path": "src/pymol_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e73ad1efdf88ca14055308e938593a9ae1945ca",
+      "size": 2086,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/7e73ad1efdf88ca14055308e938593a9ae1945ca"
+    },
+    {
+      "path": "src/visual-check",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b98a830868616fced8af6febf165918b81337054",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/b98a830868616fced8af6febf165918b81337054"
+    },
+    {
+      "path": "src/visual-check/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d75162cda3e24a7d32379a423accb06385192392",
+      "size": 1354,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/d75162cda3e24a7d32379a423accb06385192392"
+    },
+    {
+      "path": "tutorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f33cac0259645a34bf9eb03f1334375d0310e051",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/f33cac0259645a34bf9eb03f1334375d0310e051"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47ec9f17b3a42a97fa5d33f2d8d79ea2fedb8930",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/47ec9f17b3a42a97fa5d33f2d8d79ea2fedb8930"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df934c3301fc4e68991cb74efc521e9fa2a34a15",
+      "size": 139,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/df934c3301fc4e68991cb74efc521e9fa2a34a15"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad12d48cfba26beb5c4bc4c4d2b0b8ab809b66d9",
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/trees/ad12d48cfba26beb5c4bc4c4d2b0b8ab809b66d9"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial/data/7w19A.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76694cb0b022b522b71f9ad18ec334b555147475",
+      "size": 3000448,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/76694cb0b022b522b71f9ad18ec334b555147475"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92a7ac1bd1ec268984cd36d60192362f8bd4eceb",
+      "size": 80,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/92a7ac1bd1ec268984cd36d60192362f8bd4eceb"
+    },
+    {
+      "path": "tutorial/benchmark-tutorial/run-7w19A-prediction.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d00397ffb5c678a59265219a0ac8b3783f403f2f",
+      "size": 3859,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/d00397ffb5c678a59265219a0ac8b3783f403f2f"
+    },
+    {
+      "path": "tutorial/tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0a8fad2cd322781b3f73d6c7edc49addb442fd7",
+      "size": 32793,
+      "url": "https://api.github.com/repos/skrhakv/CryptoBench/git/blobs/f0a8fad2cd322781b3f73d6c7edc49addb442fd7"
+    }
+  ],
+  "truncated": false
+}

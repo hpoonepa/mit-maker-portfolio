@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "senba-pocket-v0-design-2026-09-23",
+  "status": "draft_not_executed",
+  "purpose": "Planning configuration; no pipeline runner or provider billing enforcement is implemented by this file.",
+  "spend_authorized": false,
+  "task": "apo_input_cryptic_site_localization_and_conformer_ranking",
+  "scope": {
+    "soluble_monomers_only": true,
+    "minimum_residues": 80,
+    "maximum_residues": 350,
+    "explicit_chain_required": true,
+    "eligibility_frozen_before_predictions": true
+  },
+  "sources": {
+    "cryptic_dataset": "https://github.com/skrhakv/CryptoBench/",
+    "general_pocket_dataset_optional": "https://github.com/plinder-org/plinder",
+    "generator": "https://github.com/microsoft/bioemu",
+    "versions_resolved": false,
+    "split_manifest": null,
+    "checkpoint_hashes": null
+  },
+  "model": {
+    "type": "shared_gvp_gnn_with_per_residue_set_pooling",
+    "frozen_sequence_encoder_proposed": "esm2_t30_150M_UR50D",
+    "frozen_ensemble_generator": "bioemu",
+    "graph_blocks": 4,
+    "scalar_width": 128,
+    "vector_width": 16,
+    "neighbors": 16,
+    "pooling_candidates": ["mean_max", "attention"],
+    "score_combination": "apo_sequence_base_plus_ensemble_residual",
+    "trainable_parameter_target": [2000000, 5000000],
+    "parameter_count_measured": false,
+    "heads": ["residue_annotation", "site_ranking"],
+    "geometry_head": "gated_followup",
+    "outputs_are_physical_probabilities": false
+  },
+  "sampling": {
+    "smoke_requested_conformers": 16,
+    "proposed_fixed_requested_conformers": 32,
+    "later_development_only_conformers": 64,
+    "unordered_samples": true,
+    "cache_required": true,
+    "valid_frame_accounting_required": true,
+    "sidechain_reconstruction_required_for_atom_pockets": true,
+    "coordinate_frame": "mapped_and_aligned_to_apo",
+    "rare_sites_automatically_removed": false
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "head_learning_rate": 0.001,
+    "pretrained_graph_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "dropout": 0.1,
+    "gradient_clip_norm": 1.0,
+    "maximum_epochs": 50,
+    "maximum_development_configurations": 3,
+    "selection_partition": "development",
+    "loss_weights": {"residue": 1.0, "site_rank": 0.5, "geometry_if_enabled": 0.2},
+    "weighting_unit": "protein",
+    "conformers_are_independent_biological_replicates": false,
+    "normalization_fit_partition": "train"
+  },
+  "evaluation": {
+    "primary": "macro_per_protein_annotated_site_recall_at_3",
+    "top_k": [1, 3, 5],
+    "primary_matching": {"type": "mapped_residue_jaccard", "threshold": 0.25},
+    "matching_assignment": "one_to_one",
+    "duplicate_sites_count_once": true,
+    "failed_eligible_predictions": "miss",
+    "post_prediction_exclusions": "prohibited_without_protocol_amendment",
+    "bootstrap_resamples": 10000,
+    "bootstrap_unit": "protein_family_group",
+    "reference_geometry_available_to_inference": false,
+    "same_candidate_ranking_ablation": true,
+    "full_end_to_end_comparison": true,
+    "test_manifest": null,
+    "protocol_frozen": false
+  },
+  "comparators": [
+    "fpocket",
+    "P2Rank",
+    "CryptoBench_pLM_NN",
+    "UniPocket_if_reproducible",
+    "PocketMiner",
+    "AE_PocketMiner",
+    "BioEmu_with_ordinary_pocket_scoring",
+    "Lacuna_relevant_available_configurations",
+    "matched_encoder_static_ablation",
+    "regularized_linear_site_ranker"
+  ],
+  "budget_usd": {
+    "total": 200,
+    "pipeline_and_baseline_pilot": 25,
+    "cached_features_and_ensembles": 65,
+    "training_and_development": 50,
+    "frozen_evaluation": 35,
+    "storage_failures_late_billing_reserve": 25,
+    "includes_all_cloud_resources": true,
+    "enforced_by_this_file": false
+  },
+  "preflight_requirements": [
+    "Resolve and hash dataset releases, software commits and checkpoints",
+    "Freeze source-aware family splits and eligibility before feature generation",
+    "Verify chain, ligand-instance and residue mapping",
+    "Verify real trajectory extraction and all coordinate transformations",
+    "Measure three-system end-to-end runtime and cost",
+    "Reserve final evaluation and late-billing budget",
+    "Implement provider-specific timeouts, reservations and shutdown checks",
+    "Resolve explicit authorization before paid execution"
+  ]
+}

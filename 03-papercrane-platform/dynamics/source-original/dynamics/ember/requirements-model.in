@@ -1,0 +1,8 @@
+# FUTURE COMPUTE ENVIRONMENT INPUT, not a resolved/validated lockfile.
+# Resolve on the chosen Python 3.11/3.12 Linux worker, run model checks, then freeze.
+# Keep BioEmu/HPacker in separate pinned environments to avoid dependency conflict.
+numpy>=1.26,<3
+biopython>=1.83,<2
+torch>=2.6,<3
+transformers>=4.45,<5
+safetensors>=0.4,<1

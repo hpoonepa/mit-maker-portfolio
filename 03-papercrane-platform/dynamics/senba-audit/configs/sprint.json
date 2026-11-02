@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "concurrency": 1,
+  "budget": {
+    "total_usd": 30.0,
+    "reserve_usd": 10.0,
+    "cpu_storage_overhead_usd": 0.0,
+    "paid_enabled": false
+  },
+  "provenance": {
+    "model": {
+      "source": "https://huggingface.co/vkali08/senba",
+      "revision": "90cce9e822d511459a206ae3a06cbd8dbb243b09",
+      "checkpoint": "senba.ckpt",
+      "checkpoint_sha256": "f02dcf6a97848c834e3c0be7d848c1068d1d0eb7976d8d6bcfbc98d4114e9c7c"
+    },
+    "upstream_model": {
+      "source": "https://huggingface.co/valencelabs/mars-fm",
+      "revision": "1e957cd4b9f1a054ceb0c2104f40ba6f3cc0d8d0",
+      "checkpoint": "mars_fm.ckpt",
+      "checkpoint_sha256": "f56794cc5d1a8e5263031944f932384dd785fe945553612fe76fe1e9191fa879"
+    },
+    "upstream_code": {
+      "source": "https://github.com/valence-labs/mars-fm",
+      "revision": "4fc17d86cd7e22dda6353f2f1f6bf4b40c9ce946"
+    },
+    "adaptation_code": { "source": null, "revision": null, "lockfile_sha256": null },
+    "dataset": {
+      "source": "mdCATH",
+      "revision": null,
+      "split": "subset128train32val",
+      "split_manifest_sha256": "163ab0043d86b5a2731e1b1a233af27fb069049897d657fd5c39bd54b1343b3f"
+    },
+    "source_seed": 20260825,
+    "parent_seed": 20260825,
+    "parent_checkpoint": {
+      "sha256": "1bd5c20b5f3aa8587dce6440af6580f0c2def98d0b868a39969ef854bd729a25",
+      "publicly_listed": false,
+      "local_path": null
+    },
+    "replication_seeds": [
+      { "ordinal_label": 2, "rng_seed": 20260826, "status": "receipt_only" },
+      { "ordinal_label": 3, "rng_seed": 20260827, "status": "receipt_only" }
+    ],
+    "lag": { "value": 50, "units": "saved_frames", "physical_interval_verified": false },
+    "reported_time_step_units": null,
+    "temperature_kelvin": 450,
+    "physical_ns_per_frame": null,
+    "excludes_495_test": true
+  },
+  "artifacts": [
+    {
+      "path": "../artifacts/hf-release/senba.ckpt",
+      "sha256": "f02dcf6a97848c834e3c0be7d848c1068d1d0eb7976d8d6bcfbc98d4114e9c7c"
+    },
+    {
+      "path": "../artifacts/hf-release/receipts/full-transition-comparison.json",
+      "sha256": "9a6ea0073fd7a3af50c987ecbb1b5abec365689ccdd1acd1089eb0ff270e9c54"
+    },
+    {
+      "path": "../artifacts/hf-release/receipts/equilibrium-suite-comparison.json",
+      "sha256": "74b59827a85e2f868f8cc5d8301981aadeadf8a4a8c6777d7f50818975b1559f"
+    }
+  ],
+  "required_artifact_inputs": [
+    "raw paired endpoint coordinates",
+    "adaptation code repository, revision, and lockfile",
+    "parent seed-1 checkpoint artifact"
+  ],
+  "jobs": [
+    {
+      "id": "g0-provenance-known-row-reproduce",
+      "stage": "G0",
+      "kind": "known_row_reproduce",
+      "seed": 20260825,
+      "gpu_timeout_seconds": 3600,
+      "gpu_hourly_rate_usd": null,
+      "startup_retry_overhead_usd": 0.0,
+      "parameters": { "scope": "reproduce entire saved published summary and row" }
+    },
+    {
+      "id": "g1-offline-metrics",
+      "stage": "G1",
+      "kind": "offline_analysis",
+      "seed": 20260825,
+      "gpu_timeout_seconds": 1800,
+      "gpu_hourly_rate_usd": null,
+      "startup_retry_overhead_usd": 0.0
+    },
+    {
+      "id": "g2-seed-replication-2-3",
+      "stage": "G2",
+      "kind": "seed_replication",
+      "seed": 20260826,
+      "gpu_timeout_seconds": 3600,
+      "gpu_hourly_rate_usd": null,
+      "startup_retry_overhead_usd": 0.0,
+      "parameters": {
+        "seed_labels": [
+          { "ordinal_label": 2, "rng_seed": 20260826 },
+          { "ordinal_label": 3, "rng_seed": 20260827 }
+        ],
+        "additional_seeds": [20260826, 20260827]
+      }
+    },
+    {
+      "id": "g3-small-lr-early-checkpoint-k-sensitivity",
+      "stage": "G3",
+      "kind": "deferred_comparator",
+      "seed": 20260825,
+      "gpu_timeout_seconds": 3600,
+      "gpu_hourly_rate_usd": null,
+      "startup_retry_overhead_usd": 0.0,
+      "parameters": { "options": ["small_lr", "early_checkpoint"], "include_k_sensitivity": true }
+    },
+    {
+      "id": "g4-compact-frontier",
+      "stage": "G4",
+      "kind": "compact_frontier",
+      "seed": 20260825,
+      "gpu_timeout_seconds": 3600,
+      "gpu_hourly_rate_usd": null,
+      "startup_retry_overhead_usd": 0.0,
+      "parameters": { "small_alpha_grid": null, "defer": ["lag", "random"] }
+    }
+  ]
+}

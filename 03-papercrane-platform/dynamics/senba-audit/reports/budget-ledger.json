@@ -1,0 +1,99 @@
+{
+  "freeze_reason": null,
+  "frozen": false,
+  "jobs": {
+    "augment-1d1rA00-k16-v1": {
+      "actual_usd": 0.4682819,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-1e7uA04-k16-v1": {
+      "actual_usd": 0.46827002,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-1q16B03-k16-v1": {
+      "actual_usd": 0.38017068,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-1rquA01-k16-v1": {
+      "actual_usd": 0.36626129,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-2dp9A01-k16-v1": {
+      "actual_usd": 0.35003465,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-2f2cA02-k16-v1": {
+      "actual_usd": 0.36722845,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-2k4qA00-k16-v1": {
+      "actual_usd": 0.4682585,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "augment-5k2mA01-k16-v1": {
+      "actual_usd": 0.46825817,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "late-billing-overhead-allowance": {
+      "actual_usd": null,
+      "reserved_usd": 2.0,
+      "status": "reserved"
+    },
+    "panel-1d1rA00-k4-v1": {
+      "actual_usd": 0.17849493,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-1q16B03-k4-v1": {
+      "actual_usd": 0.12981403,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-1rquA01-k4-v1": {
+      "actual_usd": 0.12984824,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-2dp9A01-k4-v1": {
+      "actual_usd": 0.12517894,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-2f2cA02-k4-v1": {
+      "actual_usd": 0.18081232,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-2k4qA00-k4-v1": {
+      "actual_usd": 0.14140477,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "panel-5k2mA01-k4-v1": {
+      "actual_usd": 0.14140483,
+      "reserved_usd": 2.0,
+      "status": "settled"
+    },
+    "pilot-1e7uA04-k4-v1": {
+      "actual_usd": 0.0,
+      "reserved_usd": 3.0,
+      "status": "settled"
+    },
+    "pilot-1e7uA04-k4-v2": {
+      "actual_usd": 0.20390218,
+      "reserved_usd": 3.0,
+      "status": "settled"
+    }
+  },
+  "reserve_usd": 10.0,
+  "total_usd": 30.0,
+  "version": 1
+}

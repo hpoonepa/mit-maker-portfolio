@@ -1,0 +1,450 @@
+              Source-Anchored Exact-Lag Adaptation of a
+                Molecular Simulation Foundation Model
+
+
+                                               Anonymous Author(s)
+                                                   Afﬁliation
+                                                    Address
+                                                     email
+
+
+
+                                                      Abstract
+
+1             Exact-lag adaptation targets observed endpoints, but it may erode ensemble behav-
+2             ior inherited from the source model. We study a deliberately small intervention:
+3             ﬁne-tune all parameters of M AR S-FM on same-replica mdCATH frame pairs sep-
+4             arated by exactly 50 frames, then interpolate the resulting weights back toward
+5             the pinned source checkpoint. The selected validation-stage checkpoint retains
+6             only 7.35% of the learned displacement. On the complete eligible panel of 28
+7             previously inspected mdCATH validation proteins, it lowers the primary error—
+8             protein-macro RMSD of the ensemble-mean Cα endpoint—by 0.03259 Å relative
+9             to source M AR S-FM (protein-bootstrap 95% interval [0.02525, 0.04011]; 27/28
+10            proteins improve) and by 0.43641 Å relative to coordinate persistence ([0.20303,
+11            0.68065]; 22/28 improve). On an eight-protein compact panel, every protein im-
+12            proves over source for each of three independently trained parents. A separately
+13            frozen eight-protein suite meets prespeciﬁed gates for all seven ensemble observ-
+14            ables, but these thresholds are development criteria rather than equivalence tests.
+15            We also report contrary evidence: more aggressive adaptation failed retention
+16            screens, a nearby 7.5% anchor failed its one-protein pilot, and one seed did not
+17            improve on an earlier anchor. All evidence is validation-only at this single 50-
+18            frame lag. No standard-test record was opened (test_records_opened=0). No
+19            physical-clock, ﬁeld-baseline, broad-generalization, or completed-model conclu-
+20            sion is supported.
+
+
+
+21   1 Introduction
+
+22   Molecular simulation foundation models offer a route to amortizing expensive sampling across pro-
+23   teins. The source model considered here, M AR S-FM, generates molecular conformations by learn-
+24   ing transitions across states supplied by a Markov-state construction rather than directly ﬁtting one
+25   ﬁxed temporal offset [Kapuśniak et al., 2025]. That objective is useful for broad conformational
+26   generation, but it need not optimize prediction of a particular observed displacement. Conversely,
+27   direct supervision on frame pairs at one lag can specialize the model to that endpoint task and move
+28   it away from source behavior that is valuable for broader ensemble sampling.
+29   This work asks a narrow development question: can a small, explicitly source-anchored weight
+30   update improve exact-lag endpoint prediction without breaching prespeciﬁed ensemble-retention
+31   limits? The setting is mdCATH, a collection of all-atom molecular dynamics trajectories for protein
+32   domains with multiple replicas and temperatures [Mirarchi et al., 2024]. We use only a frozen
+33   128-domain training subset and 32-domain validation subset at 450 K. The selected candidate is
+34   evaluated on every validation domain eligible under the source model’s 256-residue crop, not on the
+35   standard test partition.
+
+
+     Submitted to the 2nd SIMBIOCHEM Workshop at NeurIPS 2026. Do not distribute.
+36   The intervention separates learning from evaluation. First, a parent model is ﬁne-tuned on observed
+37   same-replica transitions. Second, the evaluated checkpoint is a point on the line segment from
+38   the source to the parent. Weight interpolation has been used in other transfer settings to balance
+39   adaptation and source robustness [Wortsman et al., 2022]; here it is not treated as a general guarantee.
+40   Its role is a transparent control on parameter displacement whose value must be justiﬁed by the
+41   molecular validation gates.
+42   The contribution is evidence rather than a new foundation architecture. Speciﬁcally, we provide: (i)
+43   an exact-lag adaptation and source-anchoring procedure with a ﬁxed data boundary; (ii) a complete
+44   eligible validation-panel comparison to the pinned source and coordinate persistence; (iii) compact
+45   replication across three independently trained parents; (iv) a seven-observable ensemble-retention
+46   screen; and (v) negative results and a machine-checkable claim ledger. The central result is small:
+47   the candidate improves the primary endpoint metric by roughly 0.03 Å relative to the source on this
+48   panel. The design intentionally makes that modest effect, and the substantial evidence still missing,
+49   visible.
+
+
+50   2 Evidence boundary and study design
+
+51   2.1   Frozen roles
+
+52   The adaptation subset contains 128 train domains and 32 validation domains. Only training domains
+53   update weights. Validation domains determine checkpoint and interpolation choices and support
+54   every result in this paper. Earlier source-anchoring work had already inspected the compact panel
+55   and the complete eligible validation population before the present ten-epoch reﬁnement. The study is
+56   therefore retrospective development evidence, not a pristine prospective validation. The standard test
+57   partition remained closed, and every cited experimental receipt records test_records_opened=0.
+58   All transition supervision and evaluation in this study use the 450 K mdCATH trajectories. The
+59   source dataset supplies ﬁve replicas per protein. Exact-lag pairs remain within a replica: for a start
+60   index t, the target is t + 50. We retain the lag in frame units. Although mdCATH records simulation
+61   metadata, this experiment neither calibrates a physical clock nor measures rates or long-timescale
+62   kinetics.
+63   The complete endpoint panel is deﬁned by manifest order and the source model’s crop: all 28 valida-
+64   tion domains of at most 256 residues are included. No protein is removed after outcome inspection.
+65   The compact replication and equilibrium-retention panels contain the ﬁrst eight eligible validation
+66   proteins. These nested panels serve different purposes: the complete panel measures the selected
+67   seed-1 endpoint effect, the compact panel tests training-seed repeatability at bounded cost, and the
+68   equilibrium panel screens whether source ensemble observables are retained.
+
+69   2.2   Source and baselines
+
+70   The source model is M AR S-FM, introduced by Kapuśniak et al. [2025]; its implementation and
+71   checkpoint are locally byte-pinned for this study. The candidate keeps the source architecture, infer-
+72   ence procedure, and parameter count. Two baselines are matched on exactly the same observed tran-
+73   sitions: source M AR S-FM and coordinate persistence, which predicts the starting Cα coordinates
+74   as the endpoint. No other ﬁeld method was run under this split and sampling contract. Best-of-four
+75   sampling error is computed as a diagnostic, but it is not a primary result because choosing a sample
+76   using the unknown future endpoint is unavailable at inference time.
+
+77   2.3   Development sequence and leakage control
+
+78   The development sequence matters for interpreting uncertainty. A coarse epoch and source-anchor
+79   search used previously inspected validation evidence. Retention pilots then rejected candidates that
+80   moved too far from the source. After choosing the seed-1 checkpoint, the complete endpoint panel,
+81   compact seed replications, and eight-protein retention aggregate were frozen as validation artifacts.
+82   The reported protein-bootstrap intervals quantify resampling variability within those panels; they do
+83   not undo hyperparameter selection on validation data and must not be read as independent conﬁrma-
+84   tory intervals.
+
+                                                        2
+85    The implementation fails closed on role, checkpoint, transition-index, shape, and hash mismatches.
+86    Candidate and source receipts must name identical protein sets and identical transition indices.
+87    Standard-test access is not a conﬁguration option in the paper audit; all cited receipts are recur-
+88    sively checked for the zero-access ﬁeld. These controls reduce accidental boundary violations, but
+89    they do not convert a reused validation population into an untouched evaluation.
+
+90    3 Source-anchored exact-lag adaptation
+91    3.1   Exact-lag parent training
+
+92    For each training domain, the data loader reads all ﬁve 450 K replicas. Starting-state cluster labels
+93    are used only to balance sampling: clusters are sampled uniformly, and an equal number of observed
+94    starts is drawn from each selected cluster with replacement when required. Each sampled pair is
+95    taken from one replica and separated by exactly 50 frames. Thus direct endpoint supervision cannot
+96    cross replica boundaries or substitute a Markov-state draw for the observed future.
+97    The seed-1 parent begins from the source checkpoint and updates all 34,152,521 parameters. It
+98    trains for 10 epochs, 160 optimizer updates, and 30,720 sampled transitions with batch size 8 and
+99    learning rate 3 × 10−6 . A ﬁxed validation transition population is materialized once, and ﬂow-
+100   matching randomness is replayed so validation losses are paired across epochs. The best validation
+101   checkpoint is selected by minimum validation loss. This optimization took 121.80 seconds on one
+102   NVIDIA H100 and peaked at 64,684,237,824 allocated CUDA bytes. These are measurements of
+103   the selected training run, not the total search campaign and not a hardware-independent efﬁciency
+104   claim.
+
+105   3.2   Source anchoring
+
+106   Let θ0 denote the source weights and θp the ﬁne-tuned parent. The evaluated candidate is
+                                    θα = θ0 + α(θp − θ0 ),        α = 0.0735.                              (1)
+107   Floating tensors are interpolated in their stored dtype; non-ﬂoating state must match exactly. No
+108   additional gradient update is performed after interpolation. The selected checkpoint therefore retains
+109   7.35% of the parent’s learned displacement and uses a single model at inference.
+110   The coefﬁcient is a development-selected operating point, not a physically meaningful parameter.
+111   A nearby 7.5% anchor failed the frozen one-protein retention pilot, whereas 7.35% passed. This
+112   narrow boundary argues against interpreting the coefﬁcient as generally reusable. It also illustrates
+113   why endpoint improvement alone is insufﬁcient: the source distance must be considered jointly with
+114   explicitly named retention observables.
+
+115   4 Evaluation
+116   4.1   Exact-lag endpoint protocol
+
+117   For each of the 28 eligible validation proteins, evaluation uses all ﬁve replicas and four deterministic,
+118   evenly spaced starts per replica. This yields 560 observed transitions. Source and candidate each
+119   generate four stochastic endpoints per start with ten ODE steps and a common inference seed, for
+120   2,240 candidate endpoints. The target and every prediction are independently Kabsch-aligned to the
+121   starting Cα coordinates before scoring.
+122   For transition i with starting coordinates xi , observed
+                                                           ∑ target yi , and K = 4 predicted endpoints
+                                                        −1
+123   {ŷik }K
+             k=1 , deﬁne the ensemble endpoint ȳ i = K      k ŷik . The primary per-transition error is
+                                              [                       ]1/2
+                                             1 ∑  i N
+                                        ei =        ∥ȳin − yin ∥22          ,                             (2)
+                                             Ni n=1
+
+124   where Ni is the number of residues after the stated alignment. Metrics are ﬁrst averaged over the
+125   20 transitions of each protein. Comparisons then give every protein equal weight, preventing long
+126   proteins or longer trajectories from dominating.
+
+                                                         3
+127   We report improvement as baseline error minus candidate error, so positive values favor the can-
+128   didate. Protein-level means and two-sided 95% percentile intervals use 100,000 bootstrap resam-
+129   ples with proteins as the resampling unit. The fraction improved is the fraction of protein-level
+130   differences strictly above zero. Source and candidate receipts are rejected if persistence values or
+131   transition indices differ.
+
+132   4.2   Compact training replication
+
+133   Two additional parents repeat the same ten-epoch training and 7.35% interpolation with independent
+134   training seeds. Each is evaluated on the same eight-protein compact panel with all ﬁve replicas, four
+135   starts per replica, four samples per start, exact lag 50, and ten ODE steps. Because the panel is
+136   the same previously inspected validation subset, the replication probes optimization-seed stability
+137   within this development regime; it does not establish population-level external generalization.
+
+138   4.3   Ensemble-retention protocol
+
+139   The retention suite compares seed-1 candidate and source on eight validation proteins. For each pro-
+140   tein and checkpoint, the ofﬁcial breadth-ﬁrst generation tree uses breadth 200, retains 500 samples,
+141   runs in chunks of 100, uses 50 ODE steps, and starts from the same frame and seed. References use
+142   all available frames from all ﬁve 450 K replicas. Generated samples are unordered ensemble draws;
+143   the tree is not interpreted as a temporal trajectory.
+144   Seven observables are evaluated after common-frame Cα alignment: dynamic cross-correlation
+145   matrix (DCCM) mean absolute error, native-contact-fraction Wasserstein-1 distance, pairwise-
+146   RMSD Wasserstein-1 distance, PCA-subspace RMSIP, prediction clash fraction, radius-of-gyration
+147   Wasserstein-1 distance, and RMSF RMSE. For lower-is-better metrics, degradation is candidate mi-
+148   nus source; for RMSIP, degradation is source minus candidate. Negative values therefore favor the
+149   candidate in every row.
+150   The gate was deﬁned before the aggregate. For each observable, the upper endpoint of the protein-
+151   bootstrap interval for mean degradation must not exceed its mean-degradation limit, at least six
+152   of eight proteins must be within that limit, and no protein may exceed twice the limit. All seven
+153   observables must pass. This is a non-inferiority-style development screen with ﬁxed tolerances, not
+154   a statistical equivalence test and not evidence that the generated ensemble is physically correct.
+
+155   5 Results
+156   5.1   Complete eligible endpoint panel
+
+157   Table 1 gives the primary comparisons. Protein-macro ensemble-mean RMSD is 11.2602 Å for
+158   source and 11.2276 Å for the candidate. Their difference is 0.03259 Å with interval [0.02525,
+159   0.04011], and 27/28 proteins improve. The candidate also improves over coordinate persistence,
+160   whose matched protein-macro error is 11.6640 Å, by 0.43641 Å with interval [0.20303, 0.68065];
+161   22/28 proteins improve.
+162   The source comparison is the informative measure of adaptation because both models share archi-
+163   tecture and inference. Its absolute gain is small relative to the roughly 11 Å endpoint errors in this
+164   high-temperature, 50-frame task. The persistence comparison conﬁrms that the selected sampling
+165   procedure is better than returning the start on average, but persistence is a weak baseline and does
+166   not establish competitiveness with other learned simulators.
+
+167   5.2   Training-seed replication
+
+168   On the compact panel, the three source gains are 0.03009, 0.02291, and 0.02901 Å, for a mean of
+169   0.02734 Å across parents. Every one of the eight proteins improves over source for each parent,
+170   and each protein-bootstrap interval excludes zero (Table 1). The spread is small on the scale of
+171   the primary errors, but it is non-negligible relative to the effect itself: seed 2 yields about three
+172   quarters of the seed-1 gain. Accordingly, the evidence supports repeatability of a small positive
+173   compact-panel effect, not invariance to training randomness.
+
+                                                        4
+      Table 1: Protein-macro improvement in ensemble-mean endpoint Cα RMSD. Positive values favor
+      the candidate. Intervals use 100,000 protein bootstrap resamples. Compact rows use the same eight
+      validation proteins and independently trained parents.
+
+               Panel and comparison                     Gain (Å)         95% interval (Å)           Proteins improved
+               Full, candidate vs. source               0.03259          [0.02525, 0.04011]         27/28
+               Full, candidate vs. persistence          0.43641          [0.20303, 0.68065]         22/28
+               Compact, parent seed 1 vs. source        0.03009          [0.01839, 0.04307]         8/8
+               Compact, parent seed 2 vs. source        0.02291          [0.01327, 0.03429]         8/8
+               Compact, parent seed 3 vs. source        0.02901          [0.01835, 0.03858]         8/8
+
+      Table 2: Eight-protein ensemble-retention results. Degradation is oriented so positive is unfavorable.
+      Every row also met the at-least-75%-within-limit and no-protein-above-twice-limit rules.
+                    Observable                  Mean degradation                 95% interval    Mean limit   Gate
+                    DCCM MAE                           -0.000660         [-0.001625, 0.000285]    0.005000    pass
+                    Native-contact W1                   0.000271         [-0.001594, 0.001946]    0.015000    pass
+                    Pairwise-RMSD W1 (Å)               -0.043699         [-0.126021, 0.049296]    0.250000    pass
+                    PCA-subspace RMSIP                  0.004161         [-0.000227, 0.010755]    0.030000    pass
+                    Prediction clash fraction         -1.195e-06       [-2.464e-05, 2.248e-05]   5.000e-04    pass
+                    Radius-of-gyration W1 (Å)          -0.042152        [-0.077537, -0.008042]    0.150000    pass
+                    RMSF RMSE (Å)                      -0.022244         [-0.077596, 0.039556]    0.150000    pass
+
+
+
+
+174   5.3   Retention observables
+
+175   All seven retention observables pass their frozen rules (Table 2). Six mean degradations are negative
+176   or close to zero; PCA RMSIP and native-contact Wasserstein show small positive mean degradation
+177   but remain below their ﬁxed limits. The interval for radius-of-gyration Wasserstein lies below zero,
+178   while several other intervals straddle zero. These signs are descriptive. Passing means that each
+179   aggregate interval, within-limit fraction, and worst-protein value satisﬁed the predeclared thresholds;
+180   it does not prove equality of source and candidate ensembles.
+
+
+181   6 Negative evidence and interpretation
+
+182   The selected result emerged from a failure-sensitive sequence. A fully exact-lag parent, output-head-
+183   only adaptations, and 25% and 50% mixtures of exact-lag and source objectives improved transition
+184   prediction more than conservative source anchors in earlier screens, yet failed frozen equilibrium-
+185   retention limits. An MSM-only control retained ensemble behavior but did not show a protein-
+186   bootstrap-supported endpoint improvement. Among earlier anchors, 10% missed one retention limit
+187   and 20% missed multiple limits. These outcomes rule out the simple strategy of maximizing exact-
+188   lag validation improvement without a separate retention constraint.
+189   The present sweep also contains a close negative control: a 7.5% interpolation failed the one-protein
+190   equilibrium pilot, whereas 7.35% passed. This 0.15-percentage-point boundary is too ﬁne to sup-
+191   port a general prescription. It instead exposes sensitivity to development selection and motivates
+192   evaluating anchor coefﬁcients jointly on larger, untouched retention cohorts in future work.
+193   Finally, the present candidate is not uniformly superior to the earlier anchored checkpoint under
+194   every training seed. In seed-matched compact comparisons, two seeds favor the new candidate,
+195   while seed 2 differs by −0.00110 Å and its protein-bootstrap interval crosses zero. Averaged over
+196   the three seeds the new conﬁguration is modestly better, but the seed-2 result prevents a claim of
+197   uniform dominance. Reporting this comparison is important because the new candidate’s consistent
+198   advantage over the public source does not imply consistent advantage over every nearby develop-
+199   ment checkpoint.
+200   Taken together, the evidence supports a workﬂow-level lesson: controlling source distance can pre-
+201   serve a transition gain that survives predeﬁned ensemble screens. It does not show that linear inter-
+202   polation is optimal, that the chosen coefﬁcient transfers to another dataset, or that passing source-
+203   relative observables ensures physical validity. The retention suite protects selected properties of the
+204   source; any systematic source error can be inherited.
+
+                                                                   5
+205   7 Limitations and next evidence
+206   Validation reuse. The strongest limitation is selection and evaluation on previously inspected val-
+207   idation data. The complete 28-protein panel is exhaustive for the frozen length-eligible validation
+208   population, but it is not untouched. Bootstrap intervals describe variation among these proteins, not
+209   post-selection coverage for a new population. Standard-test access remains zero.
+
+210   One lag and one condition. All supervised and scored transitions use exactly one 50-frame sepa-
+211   ration at 450 K. There is no multi-lag consistency test, semigroup test, replica-level kinetic estimate,
+212   calibrated physical time, rate, rare-event evaluation, or path-conditioning experiment. Endpoints are
+213   ﬁnite-window Cα samples, not molecular trajectories.
+
+214   Restricted proteins and coordinates. The endpoint panel contains 28 mdCATH validation do-
+215   mains no longer than 256 residues. The experiment does not establish behavior for longer domains,
+216   other temperatures, other molecular classes, unseen experimental structures, ligands, environments,
+217   or sequence families outside this panel. Scoring is Cα based. The clash statistic and the seven reten-
+218   tion observables do not validate all-atom stereochemistry, side-chain packing, energy, or chemistry.
+
+219   Limited baselines. Only the pinned source and coordinate persistence are matched. Persistence is
+220   informative as a no-motion control but weak as a ﬁeld comparator. Without runnable learned base-
+221   lines under identical starts, stochastic sample count, alignment, and split, no ﬁeld-competitiveness
+222   conclusion is available.
+
+223   Retention is source-relative. The equilibrium screen asks whether the candidate stays within
+224   ﬁxed degradation limits relative to source on eight proteins. The limits are not equivalence mar-
+225   gins derived from biological utility, and the suite uses only the seed-1 checkpoint. Passing cannot
+226   establish molecular equilibrium, correct Boltzmann weights, or correct kinetics. It also cannot detect
+227   properties absent from the seven observables.
+
+228   Small effect and incomplete seed coverage. The source gain is 0.03259 Å against source error
+229   11.2602 Å. Three compact training replications are encouraging, but the full 28-protein endpoint
+230   panel and equilibrium suite were not repeated for every seed. The neighboring-anchor failures and
+231   the seed-2 comparison to an earlier anchor show that selection uncertainty remains material.
+232   The next defensible sequence is therefore: preregister multi-lag and replica-sensitive validation on a
+233   fresh boundary; add matched runnable ﬁeld baselines; expand ensemble and geometry checks; and
+234   open the standard test partition exactly once only after those gates pass. None of those experiments
+235   is reported here.
+
+236   8 Reproducibility and responsibility
+237   Every numeric macro used in the results tables and surrounding prose is generated directly from
+238   hash-pinned frozen JSON receipts. The local audit recomputes the complete transition aggregate
+239   from 28 paired source/candidate receipts, including the protein bootstrap, and recomputes all seven
+240   retention aggregates from eight paired receipt sets. It also veriﬁes the checkpoint digest, identical
+241   transition indices, exact 50-frame separation, shared inference settings, zero test-record access, ofﬁ-
+242   cial template hash, PDF page size, embedded fonts, and an identity-leak denylist. Appendix A maps
+243   manuscript claims to anonymous receipt identiﬁers; an internal ledger retains exact paths and JSON
+244   pointers.
+245   Identifying external links are intentionally absent from the review PDF and anonymous supplement.
+246   The supplement does not include the unopened standard test partition.
+
+247   AI/LLM disclosure. A large language model assisted with manuscript drafting and generation
+248   of local audit code for this paper package. Numerical claims were read from frozen receipts and
+249   recomputed by deterministic scripts; the language model did not generate experimental observations
+250   or alter checkpoints. Accountable authors retain responsibility for checking every claim, citation,
+251   disclosure, and submission decision.
+
+                                                         6
+252   9 Conclusion
+253   A 7.35% source-anchored interpolation of a ten-epoch exact-lag parent preserves a small, repeatable
+254   improvement over source M AR S-FM on previously inspected mdCATH validation proteins while
+255   passing a separate seven-observable retention screen. The result is useful as a bounded adaptation
+256   study because it includes nearby failures, seed variability, and explicit evidence controls. Its scope
+257   remains narrow: one 50-frame lag, 450 K, Cα endpoints, validation only, two matched baselines, and
+258   no opened standard-test records. The appropriate conclusion is that conservative weight anchoring
+259   merits further preregistered evaluation—not that molecular dynamics, kinetics, or general protein
+260   behavior has been solved.
+
+
+
+
+                                                        7
+261   Data availability
+262   The underlying mdCATH resource is described by Mirarchi et al. [2024]. For double-blind review,
+263   this paper includes no identifying external link. Frozen claim-level validation receipts and determin-
+264   istic recomputation code are prepared in an anonymous supplementary package. The standard test
+265   partition is absent from that package and remained unopened in the reported work.
+
+266   References
+267   Kacper Kapuśniak, Cristian Gabellini, Michael Bronstein, Prudencio Tossou, and Francesco Di Gio-
+268     vanni. MarS-FM: Generative modeling of molecular dynamics via markov state models. arXiv
+269     preprint arXiv:2509.24779, 2025.
+270   Antonio Mirarchi, Toni Giorgino, and Gianni De Fabritiis. mdCATH: A large-scale MD dataset
+271     for data-driven computational biophysics. Scientiﬁc Data, 11:1299, 2024. doi: 10.1038/
+272     s41597-024-04140-z.
+273   Mitchell Wortsman, Gabriel Ilharco, Jong Wook Kim, Mike Li, Simon Kornblith, Rebecca Roelofs,
+274    Raphael Gontijo Lopes, Hannaneh Hajishirzi, Ali Farhadi, Hongseok Namkoong, and Ludwig
+275    Schmidt. Robust ﬁne-tuning of zero-shot models. In Proceedings of the IEEE/CVF Conference
+276    on Computer Vision and Pattern Recognition, pages 7959–7971, 2022.
+
+
+277   A Source-to-claim traceability
+278   Table 3 records the anonymous evidence map used for drafting. Exact local paths, ﬁle digests, and
+279   JSON pointers are retained in the internal, non-submission ledger; public identifying locations are
+280   intentionally not printed here.
+
+      Table 3: Claim-to-receipt map. “Recomputed” means the audit regenerated the aggregate from
+      paired per-protein receipts rather than checking only copied summary values.
+
+        Claim                                   Evidence identiﬁer               Audit
+        Training population and budget          R-TRAIN, R-SELECT                hash and ﬁeld checks
+        Source-anchor equation and coefﬁcient   R-ANCHOR, R-SELECT               checkpoint hash and ﬁelds
+        Complete 28-protein endpoint result     R-FULL plus 56 paired receipts   recomputed
+        Three compact training replications     R-COMPACT-1/2/3                  ﬁeld and interval checks
+        Seven retention observables             R-EQ plus 16 paired receipts     recomputed
+        Nearby 7.5% pilot failure               R-PILOT-750                      hash and gate check
+        Seed-2 earlier-anchor comparison        R-H2H-2                          hash and interval check
+        Zero standard-test access               all cited receipts               recursive ﬁeld check
+
+
+
+281   B Additional interpretation of retention metrics
+282   The retention suite intentionally spans correlated motion (DCCM), ﬂuctuation magnitude (RMSF),
+283   global size (radius of gyration), distributional spread (pairwise RMSD), low-dimensional covariance
+284   geometry (RMSIP), contact preservation, and a coarse Cα clash statistic. These quantities are com-
+285   plementary but incomplete. For example, similar RMSF can coexist with different cross-correlations,
+286   and similar radius-of-gyration distributions can coexist with different local contacts. Requiring ev-
+287   ery observable to pass avoids averaging a large regression in one property against an improvement in
+288   another. The remaining gaps listed in Section 7 are not ﬁlled by adding these observables together.
+
+
+
+
+                                                        8
+289   SIMBIOCHEM Submission Checklist
+290      1. Claims
+291         Question: Do the main claims in the abstract and introduction accurately reﬂect the paper’s
+292         contributions and scope?
+293         Answer: [Yes]
+294         Justiﬁcation: The paper describes a validation-stage, single-lag source-anchored adaptation
+295         and reports only the comparisons present in frozen receipts. It explicitly excludes test,
+296         physical-time, ﬁeld-baseline, broad-generalization, and completed-model interpretations.
+297      2. Limitations
+298         Question: Does the paper discuss the limitations of the work?
+299         Answer: [Yes]
+300         Justiﬁcation: Section 7 states the reused validation boundary, single 50-frame lag, narrow
+301         temperature and length regime, limited baselines, Cα output, eight-protein retention suite,
+302         and absence of standard-test access.
+303      3. AI / LLM disclosure (important)
+304         Question: Does the paper disclose any use of AI/LLMs in the research or writing (e.g.,
+305         ideation, code generation, data processing, drafting), in line with the NeurIPS LLM policy?
+306         Answer: [Yes]
+307         Justiﬁcation: An LLM assisted with manuscript drafting and generation of local audit code
+308         for this paper package. Numerical claims were read from frozen receipts; the LLM did not
+309         generate experimental observations, and accountable authors retain responsibility for ﬁnal
+310         veriﬁcation.
+311      4. Reproducibility (optional)
+312         Question: Where applicable, does the paper provide enough information (data, code, set-
+313         tings) to reproduce the main results?
+314         Answer: [Yes]
+315         Justiﬁcation: The paper gives the data roles, transition construction, optimization budget,
+316         interpolation equation, inference settings, metric deﬁnitions, bootstrap unit and budget, and
+317         retention rules. A prepared anonymous supplement contains claim-level machine-readable
+318         summaries and deterministic recomputation code without public identifying links.
+
+
+
+
+                                                     9
+

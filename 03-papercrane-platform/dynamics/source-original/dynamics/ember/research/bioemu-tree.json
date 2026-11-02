@@ -1,0 +1,1452 @@
+{
+  "sha": "8babb71563e97dc1feb9e3e2fbc00a1224b6a3a7",
+  "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/8babb71563e97dc1feb9e3e2fbc00a1224b6a3a7",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d3ed876292ce8d883c5257aefd3917e15024946",
+      "size": 43,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/7d3ed876292ce8d883c5257aefd3917e15024946"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fb33dc88dd77133cc67837fc4839f5641f24a82",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/1fb33dc88dd77133cc67837fc4839f5641f24a82"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06e63715ce17944550468fd0d26b826d36db5a8e",
+      "size": 398,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/06e63715ce17944550468fd0d26b826d36db5a8e"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7db7f36e35e865a376804d5bd18f29f4a1f105b",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/b7db7f36e35e865a376804d5bd18f29f4a1f105b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a69550f4167bde77a8a5eac99e7693a4969d659c",
+      "size": 2621,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/a69550f4167bde77a8a5eac99e7693a4969d659c"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a158912f9100fe52ededc27e99602a9367658d01",
+      "size": 4469,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/a158912f9100fe52ededc27e99602a9367658d01"
+    },
+    {
+      "path": ".github/workflows/publish.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92e9704a467380608ae15de8d99f4a066a496b5a",
+      "size": 1668,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/92e9704a467380608ae15de8d99f4a066a496b5a"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54b7888ca42108a34068bd67e6a2701961729678",
+      "size": 1603,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/54b7888ca42108a34068bd67e6a2701961729678"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7c738ffd9210e1463569243a176dab9f38fc34d",
+      "size": 1621,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c7c738ffd9210e1463569243a176dab9f38fc34d"
+    },
+    {
+      "path": "AZURE_AI_FOUNDRY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0561cd39a7fc70863334d5c1027e0dc71b22036e",
+      "size": 3136,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/0561cd39a7fc70863334d5c1027e0dc71b22036e"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9ba8cf65f3e3104dd061c178066ec8247811f33",
+      "size": 444,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f9ba8cf65f3e3104dd061c178066ec8247811f33"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e841e7a26e4eb057b24511e7b92d42b257a80e5",
+      "size": 1141,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/9e841e7a26e4eb057b24511e7b92d42b257a80e5"
+    },
+    {
+      "path": "MANIFEST.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8cae70c92ed6f99e3a707a5749448e3b60f5fe2",
+      "size": 207,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b8cae70c92ed6f99e3a707a5749448e3b60f5fe2"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda32ed212622d53fdd3e9686f7bb6838c0b211c",
+      "size": 10709,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bda32ed212622d53fdd3e9686f7bb6838c0b211c"
+    },
+    {
+      "path": "NOTICE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55616f810e5f38ebe4c391fd724405bcc0b27124",
+      "size": 24225,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/55616f810e5f38ebe4c391fd724405bcc0b27124"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5ac5af0b6b88b34245d0f0cf58ba48a92a1c096",
+      "size": 12745,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f5ac5af0b6b88b34245d0f0cf58ba48a92a1c096"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3c89efc852e22f71eabf5dfbc6ac62493425eb6",
+      "size": 2656,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b3c89efc852e22f71eabf5dfbc6ac62493425eb6"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cec4ad6d41203fafda47fad214d0ad2dfe9de7c4",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/cec4ad6d41203fafda47fad214d0ad2dfe9de7c4"
+    },
+    {
+      "path": "assets/bioemu_paper.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e2e149e3e9ee95fb2981a91af79d0829b508368",
+      "size": 31204191,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/3e2e149e3e9ee95fb2981a91af79d0829b508368"
+    },
+    {
+      "path": "assets/emu.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6a62dcb7bd3103de16b78b7c1a21c83a4e7b8df",
+      "size": 457090,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f6a62dcb7bd3103de16b78b7c1a21c83a4e7b8df"
+    },
+    {
+      "path": "cgmanifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a329666e72441a918fb8f1d145abec2d989dcb8a",
+      "size": 976,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/a329666e72441a918fb8f1d145abec2d989dcb8a"
+    },
+    {
+      "path": "dev",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b642b425561e4bab09953d1571d08c3615c8fb6b",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/b642b425561e4bab09953d1571d08c3615c8fb6b"
+    },
+    {
+      "path": "dev/afdb_cluster_definitions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "189caf19f1b883038107101338b65c7cf1cc94b0",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/189caf19f1b883038107101338b65c7cf1cc94b0"
+    },
+    {
+      "path": "dev/afdb_cluster_definitions/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51fc749abe716f1e667b5590588aecf97b160863",
+      "size": 344,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/51fc749abe716f1e667b5590588aecf97b160863"
+    },
+    {
+      "path": "dev/afdb_cluster_definitions/afdb_cluster_definitions.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "252caa2091a9059b78fc5794ad1ff11c77512204",
+      "size": 4763950,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/252caa2091a9059b78fc5794ad1ff11c77512204"
+    },
+    {
+      "path": "notebooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31e449e364b1c782b655d117b9aa363ec2bb4ce5",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/31e449e364b1c782b655d117b9aa363ec2bb4ce5"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_GMM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d279292f21011baef727927802115bd7111834ac",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/d279292f21011baef727927802115bd7111834ac"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_GMM/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf1f7508b888914dc4d36a6fbc4bf2187739aeec",
+      "size": 1023,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bf1f7508b888914dc4d36a6fbc4bf2187739aeec"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_GMM/fkc_steering.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bfea5289c0a10a8d25379796aed9b34c49eeedc",
+      "size": 7293,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1bfea5289c0a10a8d25379796aed9b34c49eeedc"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_GMM/gmm_umbrella_mbar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1ac5a7c1633e48bf6a3bdf739cb5afb3cc0ba12",
+      "size": 9499,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d1ac5a7c1633e48bf6a3bdf739cb5afb3cc0ba12"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_GMM/toy_gmm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d486c8a58beb706d57563c16640498aacf1a863",
+      "size": 7510,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/4d486c8a58beb706d57563c16640498aacf1a863"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef199511b849d5479cea2b6dbfb2c647e65b4f00",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/ef199511b849d5479cea2b6dbfb2c647e65b4f00"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "079c09a426c9b56b63837a492cb1e3683e46a1ff",
+      "size": 2800,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/079c09a426c9b56b63837a492cb1e3683e46a1ff"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein/steered_denoiser.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c742842b63a45d2b1de2fd5bce68ebd578f31c63",
+      "size": 1314,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c742842b63a45d2b1de2fd5bce68ebd578f31c63"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein/steered_dg_2rn2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe3b4beaa08f57a4b3a421e902874de159d72c5",
+      "size": 7008,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/ffe3b4beaa08f57a4b3a421e902874de159d72c5"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein/steered_dg_lib.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04d6b0a590792cef2753647a18b9c3576741e844",
+      "size": 13301,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/04d6b0a590792cef2753647a18b9c3576741e844"
+    },
+    {
+      "path": "notebooks/Enhanced_Diffusion_Sampling_Protein/unsteered_denoiser.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a4f4f3cba4045ce2cae9d8a0a1f06202fd9fdb",
+      "size": 573,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d9a4f4f3cba4045ce2cae9d8a0a1f06202fd9fdb"
+    },
+    {
+      "path": "notebooks/PPFT",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "232640dcac331918afeb9d15db629bc26dcd303e",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/232640dcac331918afeb9d15db629bc26dcd303e"
+    },
+    {
+      "path": "notebooks/PPFT/HHH_rd1_0335.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6312cc9cd852863fc3d8d8d757f4d70c41ea9c5",
+      "size": 63081,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b6312cc9cd852863fc3d8d8d757f4d70c41ea9c5"
+    },
+    {
+      "path": "notebooks/PPFT/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9927625cfb030ae7057d4d4f767c8ceee93f6b2",
+      "size": 478,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c9927625cfb030ae7057d4d4f767c8ceee93f6b2"
+    },
+    {
+      "path": "notebooks/PPFT/ppft_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01bb71a2694fa6e1ed77d484e43af7dec2e41a80",
+      "size": 15920,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/01bb71a2694fa6e1ed77d484e43af7dec2e41a80"
+    },
+    {
+      "path": "notebooks/PPFT/rollout.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ccfe0dec06e1bbd26ec03fabe440f3552881abd",
+      "size": 250,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/3ccfe0dec06e1bbd26ec03fabe440f3552881abd"
+    },
+    {
+      "path": "notebooks/Physicality_Steering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0dcbef9aed1980d230c3f07d4d71e08281931e1",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/e0dcbef9aed1980d230c3f07d4d71e08281931e1"
+    },
+    {
+      "path": "notebooks/Physicality_Steering/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac56cf691891a343a6a0cfa7afd415357b062c7",
+      "size": 374,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6ac56cf691891a343a6a0cfa7afd415357b062c7"
+    },
+    {
+      "path": "notebooks/Physicality_Steering/physical_steering_example.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2924d14b4d0a1c76e8743307a047cfc1d1be3c",
+      "size": 1786,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/fa2924d14b4d0a1c76e8743307a047cfc1d1be3c"
+    },
+    {
+      "path": "notebooks/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "497c78dc9b4d9bfc212de34888a0eec4bf489900",
+      "size": 1671,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/497c78dc9b4d9bfc212de34888a0eec4bf489900"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f23c13d994b3ea4c82043d949f281332f3262c",
+      "size": 4113,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/74f23c13d994b3ea4c82043d949f281332f3262c"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b60f7903926a7ec2ba5ab9ed8b6d31ea47fae569",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/b60f7903926a7ec2ba5ab9ed8b6d31ea47fae569"
+    },
+    {
+      "path": "src/_vendor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c9c646a9bc91ef8394289a1f58b26beec4ef45e",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/7c9c646a9bc91ef8394289a1f58b26beec4ef45e"
+    },
+    {
+      "path": "src/_vendor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06c473745a5e872ec28788526089a6ad7f7cae95",
+      "size": 759,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/06c473745a5e872ec28788526089a6ad7f7cae95"
+    },
+    {
+      "path": "src/_vendor/alphafold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "460ab2c4caa3e5701dbbb19bad0e639d6c261a96",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/460ab2c4caa3e5701dbbb19bad0e639d6c261a96"
+    },
+    {
+      "path": "src/_vendor/alphafold/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7598821e66e48590afbc15a396359cfda158fd4",
+      "size": 11360,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/a7598821e66e48590afbc15a396359cfda158fd4"
+    },
+    {
+      "path": "src/_vendor/alphafold/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1af1b342c6c46bb482f787dc7bc945787eb9b21e",
+      "size": 1007,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1af1b342c6c46bb482f787dc7bc945787eb9b21e"
+    },
+    {
+      "path": "src/_vendor/alphafold/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0fd7f8294b9d7be770127c356f0b6564f1baa6c",
+      "size": 663,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/a0fd7f8294b9d7be770127c356f0b6564f1baa6c"
+    },
+    {
+      "path": "src/_vendor/alphafold/common",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b38542c1ec8871a4b2437a02b13f7c72551b946c",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/b38542c1ec8871a4b2437a02b13f7c72551b946c"
+    },
+    {
+      "path": "src/_vendor/alphafold/common/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3c65d69d5f61b7b9547153c47d84e7f545e2636",
+      "size": 655,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d3c65d69d5f61b7b9547153c47d84e7f545e2636"
+    },
+    {
+      "path": "src/_vendor/alphafold/common/residue_constants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46ff9a6bcf2c3943018a7da8bf88b4adb8177dc4",
+      "size": 34972,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/46ff9a6bcf2c3943018a7da8bf88b4adb8177dc4"
+    },
+    {
+      "path": "src/_vendor/alphafold/common/stereo_chemical_props.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25262efd7689fc76f4d6ea1a7c75e342e840ea1d",
+      "size": 9119,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/25262efd7689fc76f4d6ea1a7c75e342e840ea1d"
+    },
+    {
+      "path": "src/_vendor/alphafold/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de2b533858ab54a1a705f92cf0172ad8b99d496f",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/de2b533858ab54a1a705f92cf0172ad8b99d496f"
+    },
+    {
+      "path": "src/_vendor/alphafold/data/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9821d212c3c7781e601ea8d2137493942d0937d4",
+      "size": 634,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/9821d212c3c7781e601ea8d2137493942d0937d4"
+    },
+    {
+      "path": "src/_vendor/alphafold/data/msa_identifiers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "def169f67ba496f3ee13aff57915f0271a4f2a1f",
+      "size": 2966,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/def169f67ba496f3ee13aff57915f0271a4f2a1f"
+    },
+    {
+      "path": "src/_vendor/alphafold/data/parsers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d865fab8c91f575e2c45c986170a0b65197534c",
+      "size": 21397,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/0d865fab8c91f575e2c45c986170a0b65197534c"
+    },
+    {
+      "path": "src/_vendor/alphafold/data/pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fde1e22df2f083dd89eafd6ef9c0f0fb1e000fb",
+      "size": 3206,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/2fde1e22df2f083dd89eafd6ef9c0f0fb1e000fb"
+    },
+    {
+      "path": "src/_vendor/alphafold/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "180cd7bc7cc076b896253e2de911f9cd9cbe3a3e",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/180cd7bc7cc076b896253e2de911f9cd9cbe3a3e"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc2efc8d3e1439f8d264268adcde82231f784636",
+      "size": 617,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/fc2efc8d3e1439f8d264268adcde82231f784636"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/common_modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b5cd07d5b6d643fceb865591c80001f67387ef1",
+      "size": 5957,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/0b5cd07d5b6d643fceb865591c80001f67387ef1"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b35a86a62083bd3c77629281407c0c1f445c0a",
+      "size": 26715,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f2b35a86a62083bd3c77629281407c0c1f445c0a"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c261cef1970407881a0b3e3106e448006648d607",
+      "size": 3692,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c261cef1970407881a0b3e3106e448006648d607"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/layer_stack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c26036c4801eac9346186a7ba689793bf328556",
+      "size": 9124,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/7c26036c4801eac9346186a7ba689793bf328556"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/mapping.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66655785b5dd7000cb44e804ae592c50ce422a15",
+      "size": 7949,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/66655785b5dd7000cb44e804ae592c50ce422a15"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6287e247f3100bdf23c07cf7b30505cfbdf7e625",
+      "size": 6968,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6287e247f3100bdf23c07cf7b30505cfbdf7e625"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/modules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49670e258ab8254a94845240fdbdc24bdba668de",
+      "size": 78101,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/49670e258ab8254a94845240fdbdc24bdba668de"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/prng.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1229b9bf6f7f1b18cf067dd368c838bac46ab8b5",
+      "size": 1978,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1229b9bf6f7f1b18cf067dd368c838bac46ab8b5"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0bc66b80e71fb799e0ec4e912580fc05f23d111",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/b0bc66b80e71fb799e0ec4e912580fc05f23d111"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c520687f67754b0488690287f941854c8cf6133",
+      "size": 633,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6c520687f67754b0488690287f941854c8cf6133"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/data_transforms.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af966ef4b7cb469f2b817a16ad42eea50f31e18",
+      "size": 21428,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/7af966ef4b7cb469f2b817a16ad42eea50f31e18"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/input_pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9a9bc3a8aa15316aa88c3947120883be869331e",
+      "size": 5357,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e9a9bc3a8aa15316aa88c3947120883be869331e"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/protein_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c78cfa5ea50baa63f9fabcb3bc7c7b66d10a1fa0",
+      "size": 5051,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c78cfa5ea50baa63f9fabcb3bc7c7b66d10a1fa0"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/proteins_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0b1c038a41c6e276275a7904e748ea9e31e6083",
+      "size": 6344,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e0b1c038a41c6e276275a7904e748ea9e31e6083"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/shape_helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be2926a63bce7ca5db3effe63d5264620aa1dcf8",
+      "size": 1415,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/be2926a63bce7ca5db3effe63d5264620aa1dcf8"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/shape_placeholders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cffdeb5e1fa9691eb74680b8c9aeb8bab6123fa8",
+      "size": 812,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/cffdeb5e1fa9691eb74680b8c9aeb8bab6123fa8"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/tf/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc40a2ceb2de1c2d56c17697393713804d7da350",
+      "size": 1276,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/fc40a2ceb2de1c2d56c17697393713804d7da350"
+    },
+    {
+      "path": "src/_vendor/alphafold/model/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9aa61c69385ffbfbd11d2f80731f198fd053c4",
+      "size": 6085,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/0d9aa61c69385ffbfbd11d2f80731f198fd053c4"
+    },
+    {
+      "path": "src/_vendor/openfold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "899eb74b379fdf0deb783e452d01c09f01e317f7",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/899eb74b379fdf0deb783e452d01c09f01e317f7"
+    },
+    {
+      "path": "src/_vendor/openfold/np",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45830e38b9d731ed04c587a8c141ae96fda76f6a",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/45830e38b9d731ed04c587a8c141ae96fda76f6a"
+    },
+    {
+      "path": "src/_vendor/openfold/np/protein.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6eeef6ddd97c48fef5086d73a22fee16620ee775",
+      "size": 20490,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6eeef6ddd97c48fef5086d73a22fee16620ee775"
+    },
+    {
+      "path": "src/_vendor/openfold/np/residue_constants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70f342f9942ee2db46475dfdaa1da21b5525d6c7",
+      "size": 39335,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/70f342f9942ee2db46475dfdaa1da21b5525d6c7"
+    },
+    {
+      "path": "src/_vendor/openfold/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89fa2b0ca7baae312e628b1a46252aa0a27814a3",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/89fa2b0ca7baae312e628b1a46252aa0a27814a3"
+    },
+    {
+      "path": "src/_vendor/openfold/utils/rigid_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "576e464be9cb4a990c47fd1d42e1f7fdd6bd8b06",
+      "size": 41766,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/576e464be9cb4a990c47fd1d42e1f7fdd6bd8b06"
+    },
+    {
+      "path": "src/bioemu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "051361a06a59ea21c286bc0d0c7170c0c8cc7a2a",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/051361a06a59ea21c286bc0d0c7170c0c8cc7a2a"
+    },
+    {
+      "path": "src/bioemu/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bec71317399d5048efc8c09492df8b81f0cc33c",
+      "size": 283,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1bec71317399d5048efc8c09492df8b81f0cc33c"
+    },
+    {
+      "path": "src/bioemu/chemgraph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba49e71eec877d8191270e8afcf6d3a450e16887",
+      "size": 1346,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/ba49e71eec877d8191270e8afcf6d3a450e16887"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c101a76be18c01515ee49ae557afebce9136809",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/3c101a76be18c01515ee49ae557afebce9136809"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/LICENSES",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4aa857640ee7f80f1ac83b89b4c6705140fb8430",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/4aa857640ee7f80f1ac83b89b4c6705140fb8430"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/LICENSES/COLABFOLD-MIT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aab10a667a13d810b86f6df1b61fa1a1bfc87dd",
+      "size": 1075,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/4aab10a667a13d810b86f6df1b61fa1a1bfc87dd"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf7c8a6b5fbf0eb30914797ed1aef78f13f82eeb",
+      "size": 498,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bf7c8a6b5fbf0eb30914797ed1aef78f13f82eeb"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8d8feeadb653ac0639bc028d0f9bea344ec6ab2",
+      "size": 3775,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d8d8feeadb653ac0639bc028d0f9bea344ec6ab2"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/input_parsing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c482bf21edc422f927d8de4b9f440b886940d486",
+      "size": 1755,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c482bf21edc422f927d8de4b9f440b886940d486"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea1a698a318af87c9ed60bd11e4535e1bb71f7d3",
+      "size": 10355,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/ea1a698a318af87c9ed60bd11e4535e1bb71f7d3"
+    },
+    {
+      "path": "src/bioemu/colabfold_inline/msa_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "855ede86abc531d9c73fef5465a66b6cf80a6283",
+      "size": 9642,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/855ede86abc531d9c73fef5465a66b6cf80a6283"
+    },
+    {
+      "path": "src/bioemu/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "144ed019cfe2a9291bb094912813df5e2dac936d",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/144ed019cfe2a9291bb094912813df5e2dac936d"
+    },
+    {
+      "path": "src/bioemu/config/denoiser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37e044aea2ad19e2dafff633c94c132650b48619",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/37e044aea2ad19e2dafff633c94c132650b48619"
+    },
+    {
+      "path": "src/bioemu/config/denoiser/dpm.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52da8871615883cd0e83dc2e01324b7c21b28d6d",
+      "size": 96,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/52da8871615883cd0e83dc2e01324b7c21b28d6d"
+    },
+    {
+      "path": "src/bioemu/config/denoiser/heun.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a090b73130d0bc5b5a491b4fa45364ca005c389",
+      "size": 100,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/9a090b73130d0bc5b5a491b4fa45364ca005c389"
+    },
+    {
+      "path": "src/bioemu/config/steering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21c2dc880001e202a447f2476da38dd490eafa4f",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/21c2dc880001e202a447f2476da38dd490eafa4f"
+    },
+    {
+      "path": "src/bioemu/config/steering/cv_steer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de12e2fe399d73d72e32eb4eb341131339222358",
+      "size": 659,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/de12e2fe399d73d72e32eb4eb341131339222358"
+    },
+    {
+      "path": "src/bioemu/config/steering/physical_steering.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8aa89da2465df9163bd45dffc6d0f52b56371714",
+      "size": 747,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/8aa89da2465df9163bd45dffc6d0f52b56371714"
+    },
+    {
+      "path": "src/bioemu/convert_chemgraph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e35a141ffa679ceb6141c74aef8ca54d1c6f826",
+      "size": 20909,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6e35a141ffa679ceb6141c74aef8ca54d1c6f826"
+    },
+    {
+      "path": "src/bioemu/denoiser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71d540d6765e4079f40b3d5c414588bf86ab3a78",
+      "size": 21566,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/71d540d6765e4079f40b3d5c414588bf86ab3a78"
+    },
+    {
+      "path": "src/bioemu/get_embeds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a82d1dda60a6517629daf2ea342c3b4ad39365d",
+      "size": 5122,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/7a82d1dda60a6517629daf2ea342c3b4ad39365d"
+    },
+    {
+      "path": "src/bioemu/hpacker_setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "573040363c7c4c9c93b3f1d97b4ca76ac54a85f0",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/573040363c7c4c9c93b3f1d97b4ca76ac54a85f0"
+    },
+    {
+      "path": "src/bioemu/hpacker_setup/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/bioemu/hpacker_setup/setup_hpacker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3008c778f6dcb1bf634e00377f54958b7a74ffc7",
+      "size": 1050,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/3008c778f6dcb1bf634e00377f54958b7a74ffc7"
+    },
+    {
+      "path": "src/bioemu/hpacker_setup/setup_sidechain_relax.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b5453f8892d35287246084af35da70984f5988c5",
+      "size": 918,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b5453f8892d35287246084af35da70984f5988c5"
+    },
+    {
+      "path": "src/bioemu/md_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3323903e70adcdd5ce2bcbe7ca958b962bea75c8",
+      "size": 9010,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/3323903e70adcdd5ce2bcbe7ca958b962bea75c8"
+    },
+    {
+      "path": "src/bioemu/model_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d70d513da91d544b3b4479b2b702a7c3f1e5aff1",
+      "size": 3061,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d70d513da91d544b3b4479b2b702a7c3f1e5aff1"
+    },
+    {
+      "path": "src/bioemu/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85f3f129cb610002e52f042ac7a43b07ec2f92c3",
+      "size": 15742,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/85f3f129cb610002e52f042ac7a43b07ec2f92c3"
+    },
+    {
+      "path": "src/bioemu/run_hpacker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fdafb09e6567b3e56214944cb76979119a2d28b",
+      "size": 1322,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/2fdafb09e6567b3e56214944cb76979119a2d28b"
+    },
+    {
+      "path": "src/bioemu/sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d89b4bfcd251cd619639af437729f7fc653835f7",
+      "size": 13662,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d89b4bfcd251cd619639af437729f7fc653835f7"
+    },
+    {
+      "path": "src/bioemu/sde_lib.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64a401f88aba6e5ca8560c21114a6452db3dc47b",
+      "size": 5686,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/64a401f88aba6e5ca8560c21114a6452db3dc47b"
+    },
+    {
+      "path": "src/bioemu/seq_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "643114f2a8ad9626f5b7717e63da9e139ee6469f",
+      "size": 1901,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/643114f2a8ad9626f5b7717e63da9e139ee6469f"
+    },
+    {
+      "path": "src/bioemu/shortcuts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d960438c933905548e91fe28d54f5d9608a044ff",
+      "size": 322,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/d960438c933905548e91fe28d54f5d9608a044ff"
+    },
+    {
+      "path": "src/bioemu/sidechain_relax.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e52dbe8ca3548fbcd2fc2fd11dac1991dfba3cb",
+      "size": 11159,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/5e52dbe8ca3548fbcd2fc2fd11dac1991dfba3cb"
+    },
+    {
+      "path": "src/bioemu/so3_sde.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec0fe2381f4cfe197186a8c96abc5f73c8d70ca0",
+      "size": 78689,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/ec0fe2381f4cfe197186a8c96abc5f73c8d70ca0"
+    },
+    {
+      "path": "src/bioemu/steering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "303881a50d0c61120a12195dc432cbbbe34c029a",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/303881a50d0c61120a12195dc432cbbbe34c029a"
+    },
+    {
+      "path": "src/bioemu/steering/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc2cefa4429ab3d3c6dcfd25105b51230b411c02",
+      "size": 922,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bc2cefa4429ab3d3c6dcfd25105b51230b411c02"
+    },
+    {
+      "path": "src/bioemu/steering/collective_variables.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32bb5526a6a9b607470fea27174902186710954a",
+      "size": 11343,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/32bb5526a6a9b607470fea27174902186710954a"
+    },
+    {
+      "path": "src/bioemu/steering/dpm_fkc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17c726569527d826cbb5523140ee3be020e226dd",
+      "size": 12328,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/17c726569527d826cbb5523140ee3be020e226dd"
+    },
+    {
+      "path": "src/bioemu/steering/dpm_smc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93ac6c15f071ca1142e09354a6a14be8982f51ab",
+      "size": 9719,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/93ac6c15f071ca1142e09354a6a14be8982f51ab"
+    },
+    {
+      "path": "src/bioemu/steering/potentials.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaf44f3c56b11c07ba3d73239bcff27e58f192c3",
+      "size": 4839,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/eaf44f3c56b11c07ba3d73239bcff27e58f192c3"
+    },
+    {
+      "path": "src/bioemu/steering/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "369917571faa65dfe427f11b9d29d11d2a171e65",
+      "size": 17491,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/369917571faa65dfe427f11b9d29d11d2a171e65"
+    },
+    {
+      "path": "src/bioemu/structure_module.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "044c2a83716bfb342d8f6f0e6e4f54d0203968b8",
+      "size": 13635,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/044c2a83716bfb342d8f6f0e6e4f54d0203968b8"
+    },
+    {
+      "path": "src/bioemu/training",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa637fc575e36f88e5c368b68a6841fd985293fc",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/aa637fc575e36f88e5c368b68a6841fd985293fc"
+    },
+    {
+      "path": "src/bioemu/training/foldedness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e41268a784550a0e82ea04af4b525fe5832de9",
+      "size": 7517,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c8e41268a784550a0e82ea04af4b525fe5832de9"
+    },
+    {
+      "path": "src/bioemu/training/loss.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e972e3cd7a5aef60dfaf1f6d93437f306cf801f8",
+      "size": 5441,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e972e3cd7a5aef60dfaf1f6d93437f306cf801f8"
+    },
+    {
+      "path": "src/bioemu/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "179fb8a935091cf458e8134da79b30a51fcff1fe",
+      "size": 2107,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/179fb8a935091cf458e8134da79b30a51fcff1fe"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6181dcf6fe0f3f0c8191d6ee4583e596476c66ca",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/6181dcf6fe0f3f0c8191d6ee4583e596476c66ca"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd396012265e60f71e7539d5f6b191c81a12d8ee",
+      "size": 12118,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bd396012265e60f71e7539d5f6b191c81a12d8ee"
+    },
+    {
+      "path": "tests/expected.npz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f0648739319017092f568ad20aa1b7f29136920",
+      "size": 139506,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/5f0648739319017092f568ad20aa1b7f29136920"
+    },
+    {
+      "path": "tests/expected.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00a141a869a775eb55b374caadc4eca56ae17a38",
+      "size": 4011,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/00a141a869a775eb55b374caadc4eca56ae17a38"
+    },
+    {
+      "path": "tests/state_dict.ptkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "266510b44d0d2bf258f2799a9c364e410750368f",
+      "size": 27937,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/266510b44d0d2bf258f2799a9c364e410750368f"
+    },
+    {
+      "path": "tests/steering",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb13e99d5fbfb091a890363a6aca41dab0184d7b",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/eb13e99d5fbfb091a890363a6aca41dab0184d7b"
+    },
+    {
+      "path": "tests/steering/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/steering/test_chignolin_e2e.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b66757d39baa1e0c0b51974ce86dd0409e50d8ca",
+      "size": 3750,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b66757d39baa1e0c0b51974ce86dd0409e50d8ca"
+    },
+    {
+      "path": "tests/steering/test_collective_variables.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "827a4063034634bc37cae044a1641714b45b9ba2",
+      "size": 2902,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/827a4063034634bc37cae044a1641714b45b9ba2"
+    },
+    {
+      "path": "tests/steering/test_integration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83a09d229a386777bbe8ff2373015a667ad83ea1",
+      "size": 27802,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/83a09d229a386777bbe8ff2373015a667ad83ea1"
+    },
+    {
+      "path": "tests/steering/test_potentials.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bb8f133aaf96d434b9daff56ac6087b6cfd7771",
+      "size": 8734,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/2bb8f133aaf96d434b9daff56ac6087b6cfd7771"
+    },
+    {
+      "path": "tests/steering/test_steering_numerically.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa24a3251cd6656a213c9e32577faebf9023640b",
+      "size": 7209,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/fa24a3251cd6656a213c9e32577faebf9023640b"
+    },
+    {
+      "path": "tests/steering/test_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51f8266e8b576a54eae24bf6e0565e6cd31cae9a",
+      "size": 6604,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/51f8266e8b576a54eae24bf6e0565e6cd31cae9a"
+    },
+    {
+      "path": "tests/test_colabfold_inline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "022982c4372752a04c5ee863b44d5dbbf30bf2ed",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/022982c4372752a04c5ee863b44d5dbbf30bf2ed"
+    },
+    {
+      "path": "tests/test_colabfold_inline/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cd6151c5a250cf2a489636e49bb4bd2923be588",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/8cd6151c5a250cf2a489636e49bb4bd2923be588"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/chignolin.a3m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aa3fc201a5744ea15c4bf71cdc8b180ad7a0d2e",
+      "size": 32,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/0aa3fc201a5744ea15c4bf71cdc8b180ad7a0d2e"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/chignolin_ref_pair.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb23b3133b0e132b2597296cc912d3fd91f3f9a",
+      "size": 25728,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/dcb23b3133b0e132b2597296cc912d3fd91f3f9a"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/chignolin_ref_single.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28b48d8cda582b0ffecf4ccda9832f740c538159",
+      "size": 7808,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/28b48d8cda582b0ffecf4ccda9832f740c538159"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/trpcage.a3m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b51ba278a7507d5f3024fccc8afacd476ce3ce07",
+      "size": 192,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/b51ba278a7507d5f3024fccc8afacd476ce3ce07"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/trpcage_ref_pair.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c4040945a445f99faf67eb5aadab1b42b4a82d8",
+      "size": 102528,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/3c4040945a445f99faf67eb5aadab1b42b4a82d8"
+    },
+    {
+      "path": "tests/test_colabfold_inline/golden/trpcage_ref_single.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbf1fbdf5dbedc5939d3773488bbfc98e452958b",
+      "size": 15488,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/cbf1fbdf5dbedc5939d3773488bbfc98e452958b"
+    },
+    {
+      "path": "tests/test_colabfold_inline/test_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "861073b396a23f5f8366d9d156cb39f25400a0b8",
+      "size": 8420,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/861073b396a23f5f8366d9d156cb39f25400a0b8"
+    },
+    {
+      "path": "tests/test_colabfold_inline/test_model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b497bbe5bfe73a2a29bd601fcb2ca6c80dc3900",
+      "size": 6837,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6b497bbe5bfe73a2a29bd601fcb2ca6c80dc3900"
+    },
+    {
+      "path": "tests/test_colabfold_inline/test_msa_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4df75f243ed2abcd921ea71a0d5e37ed5622d098",
+      "size": 10965,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/4df75f243ed2abcd921ea71a0d5e37ed5622d098"
+    },
+    {
+      "path": "tests/test_colabfold_inline/test_regression.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9e27590b66c162ecd928d2fe72e847b1109fcb6",
+      "size": 3085,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f9e27590b66c162ecd928d2fe72e847b1109fcb6"
+    },
+    {
+      "path": "tests/test_convert_chemgraph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49c7f5143a6a28b126727a562092d3ae3fa3b96",
+      "size": 8847,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/e49c7f5143a6a28b126727a562092d3ae3fa3b96"
+    },
+    {
+      "path": "tests/test_data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cb395d63e47ca479ff77ec6dd310b474ff13a33",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/7cb395d63e47ca479ff77ec6dd310b474ff13a33"
+    },
+    {
+      "path": "tests/test_data/cln_bad_sample.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4895ee72410ed355aa1b15ec570c68868e80c01",
+      "size": 3897,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c4895ee72410ed355aa1b15ec570c68868e80c01"
+    },
+    {
+      "path": "tests/test_data/cln_bad_sample_hpacked.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c8665d9d7953221691453efc61c8619331afd80",
+      "size": 7505,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/4c8665d9d7953221691453efc61c8619331afd80"
+    },
+    {
+      "path": "tests/test_denoiser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "454fb3370663257bd3affec6b8100ce1d8ae0e9d",
+      "size": 3574,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/454fb3370663257bd3affec6b8100ce1d8ae0e9d"
+    },
+    {
+      "path": "tests/test_embeds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "971508e40c424e94f5327959f0d6d7fb0847b084",
+      "size": 2301,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/971508e40c424e94f5327959f0d6d7fb0847b084"
+    },
+    {
+      "path": "tests/test_integration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cafdaf0528f2ff2451efff078879dcc2612449e5",
+      "size": 9325,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/cafdaf0528f2ff2451efff078879dcc2612449e5"
+    },
+    {
+      "path": "tests/test_mdrelax.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35240e8af8d5f0d961587a16d6418172c5e4acdf",
+      "size": 3305,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/35240e8af8d5f0d961587a16d6418172c5e4acdf"
+    },
+    {
+      "path": "tests/test_models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f634ab8a6e46fd3d0d2e61fe2ae14e3041102e2",
+      "size": 976,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/6f634ab8a6e46fd3d0d2e61fe2ae14e3041102e2"
+    },
+    {
+      "path": "tests/test_sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ef33b1555e69bcabf194f7596f3960126e4cbe1",
+      "size": 2687,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1ef33b1555e69bcabf194f7596f3960126e4cbe1"
+    },
+    {
+      "path": "tests/test_sde_lib.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc66559e384ce29a7d26137dd08edc2bca474d01",
+      "size": 1133,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/cc66559e384ce29a7d26137dd08edc2bca474d01"
+    },
+    {
+      "path": "tests/test_seq_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002a61dac638e9272475d7ef8838fec1def3c256",
+      "size": 1487,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/002a61dac638e9272475d7ef8838fec1def3c256"
+    },
+    {
+      "path": "tests/test_so3_diffusion.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f28dc4678ee668960bb522608c311b803d07ac25",
+      "size": 4869,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/f28dc4678ee668960bb522608c311b803d07ac25"
+    },
+    {
+      "path": "tests/test_so3_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87755afeae0d3d6c63fecf1fa29e6348e596755c",
+      "size": 15690,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/87755afeae0d3d6c63fecf1fa29e6348e596755c"
+    },
+    {
+      "path": "tests/test_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c59dd1c2d51683e6b999ffaab6cc3924733e8e89",
+      "size": 615,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c59dd1c2d51683e6b999ffaab6cc3924733e8e89"
+    },
+    {
+      "path": "tests/tiny_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c093359c8afe00227bd24a3dea5dcad8b223e614",
+      "size": 224,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/c093359c8afe00227bd24a3dea5dcad8b223e614"
+    },
+    {
+      "path": "tests/training",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4953d2e49dc5f52c7869facc984e838dfa452b1",
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/trees/a4953d2e49dc5f52c7869facc984e838dfa452b1"
+    },
+    {
+      "path": "tests/training/chignolin.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98bdc583c9657537db26b244305f6feae02b0101",
+      "size": 3849,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/98bdc583c9657537db26b244305f6feae02b0101"
+    },
+    {
+      "path": "tests/training/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b32afa1a4b3568437849a455746837b7304fff5",
+      "size": 205,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/1b32afa1a4b3568437849a455746837b7304fff5"
+    },
+    {
+      "path": "tests/training/test_foldedness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc0279e20f7fb4c7c42b72eeae3b2b1b3f48ddd5",
+      "size": 1071,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/bc0279e20f7fb4c7c42b72eeae3b2b1b3f48ddd5"
+    },
+    {
+      "path": "tests/training/test_loss.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c9396f6277ca13079c1f4a32a3167c9a7d12420",
+      "size": 2629,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/7c9396f6277ca13079c1f4a32a3167c9a7d12420"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10143f45dd3fb516d3fcdd241aebe887f6fdcff1",
+      "size": 747997,
+      "url": "https://api.github.com/repos/microsoft/bioemu/git/blobs/10143f45dd3fb516d3fcdd241aebe887f6fdcff1"
+    }
+  ],
+  "truncated": false
+}

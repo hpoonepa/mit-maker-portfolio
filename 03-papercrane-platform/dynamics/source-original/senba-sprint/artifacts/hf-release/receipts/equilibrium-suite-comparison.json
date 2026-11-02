@@ -1,0 +1,616 @@
+{
+  "candidate_adaptation_run_id": "mars-fm-e010-a07350-exactlag-128x32-20260825-s1-v1",
+  "claim_boundary": "validation_comparison_not_test_or_sota_evidence",
+  "comparison": {
+    "bootstrap_resamples": 100000,
+    "bootstrap_seed": 20260825,
+    "bootstrap_unit": "protein",
+    "claim_boundary": "validation_equilibrium_suite_not_test_or_sota_evidence",
+    "metrics": {
+      "dccm_mae": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.005,
+        "maximum_allowed_protein_degradation": 0.01,
+        "maximum_protein_degradation": 0.001768082357,
+        "mean_degradation": -0.000659761524,
+        "mean_degradation_95ci": [
+          -0.001624722174,
+          0.000285435304
+        ],
+        "passed": true
+      },
+      "native_contact_fraction_w1": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.015,
+        "maximum_allowed_protein_degradation": 0.03,
+        "maximum_protein_degradation": 0.003055483871,
+        "mean_degradation": 0.000271095576,
+        "mean_degradation_95ci": [
+          -0.001593543408,
+          0.001945598306
+        ],
+        "passed": true
+      },
+      "pairwise_rmsd_w1_angstrom": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.25,
+        "maximum_allowed_protein_degradation": 0.5,
+        "maximum_protein_degradation": 0.207604998691,
+        "mean_degradation": -0.043699034661,
+        "mean_degradation_95ci": [
+          -0.12602109911,
+          0.049296262623
+        ],
+        "passed": true
+      },
+      "pca_subspace_rmsip": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.03,
+        "maximum_allowed_protein_degradation": 0.06,
+        "maximum_protein_degradation": 0.025361372291,
+        "mean_degradation": 0.004161025684,
+        "mean_degradation_95ci": [
+          -0.000227353353,
+          0.010754551963
+        ],
+        "passed": true
+      },
+      "prediction_clash_fraction": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.0005,
+        "maximum_allowed_protein_degradation": 0.001,
+        "maximum_protein_degradation": 5.754386e-05,
+        "mean_degradation": -1.19536e-06,
+        "mean_degradation_95ci": [
+          -2.4638117e-05,
+          2.2484179e-05
+        ],
+        "passed": true
+      },
+      "radius_gyration_w1_angstrom": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.15,
+        "maximum_allowed_protein_degradation": 0.3,
+        "maximum_protein_degradation": 0.031926049996,
+        "mean_degradation": -0.04215244792,
+        "mean_degradation_95ci": [
+          -0.077537352172,
+          -0.008042088849
+        ],
+        "passed": true
+      },
+      "rmsf_rmse_angstrom": {
+        "fraction_proteins_within_limit": 1.0,
+        "maximum_allowed_mean_degradation": 0.15,
+        "maximum_allowed_protein_degradation": 0.3,
+        "maximum_protein_degradation": 0.147062281582,
+        "mean_degradation": -0.022244200546,
+        "mean_degradation_95ci": [
+          -0.07759563382,
+          0.039555613954
+        ],
+        "passed": true
+      }
+    },
+    "passed": true,
+    "per_protein": [
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "1d1rA00",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.15482688202531125,
+            "degradation": -0.000343473113,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.1551703551379965
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.24524811017914466,
+            "degradation": 0.002894170032,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.2423539401470436
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 6.40159036459235,
+            "degradation": 0.085398879573,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 6.316191485019427
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.6821113516317411,
+            "degradation": 0.025361372291,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.7074727239227397
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0022818428184281842,
+            "degradation": -5.1791629e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.002333634447455586
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 2.288233543617155,
+            "degradation": 0.012698668973,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 2.275534874643861
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 5.077326957273818,
+            "degradation": 0.055022865248,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 5.022304092025405
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "1e7uA04",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.0738950699689714,
+            "degradation": 0.001768082357,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.07212698761166055
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.05295915207812313,
+            "degradation": 0.002907466952,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.050051685125640094
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 1.7234786502233603,
+            "degradation": 0.207604998691,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.5158736515321163
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.7409942065226867,
+            "degradation": -0.004018200837,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.736976005685482
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.002067777233382329,
+            "degradation": 1.8455006e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.002049322227666177
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.675267147009806,
+            "degradation": 0.031926049996,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.6433410970140768
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 1.6840770833212975,
+            "degradation": 0.147062281582,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.5370148017397278
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "1q16B03",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.053265546720762176,
+            "degradation": -0.003260047765,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.05652559448591472
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.007023326572008125,
+            "degradation": -0.00037275706,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.007396083632391957
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 1.3921825402100483,
+            "degradation": -0.123076031814,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.51525857202419
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.8643176226646919,
+            "degradation": 0.001992735188,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.8663103578523526
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0026449122807017545,
+            "degradation": 5.754386e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.0025873684210526316
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 1.2570520348810872,
+            "degradation": -0.126941573376,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.3839936082574305
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 1.0680318039610732,
+            "degradation": -0.096485409347,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.1645172133082644
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "1rquA01",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.030216005339397722,
+            "degradation": -0.001355403615,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.03157140895404707
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.004222943722943736,
+            "degradation": -9.0909091e-05,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.004313852813852831
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 0.6491749819309589,
+            "degradation": -0.017173560786,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.666348542716951
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.9599878497108804,
+            "degradation": 0.003566240917,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.9635540906276152
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0024329411764705882,
+            "degradation": -4.2352941e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.002475294117647059
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.7715122275935271,
+            "degradation": -0.064242733704,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.8357549612975174
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 0.5261811583355112,
+            "degradation": -0.028756594432,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.5549377527679228
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "2dp9A01",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.0969025883946428,
+            "degradation": 0.000567905859,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.09633468253613099
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.11129813240677547,
+            "degradation": -0.001910529255,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.11320866166159957
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 1.5752615766371485,
+            "degradation": -0.050518150252,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.625779726888966
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.7561045693885684,
+            "degradation": 0.003853423393,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.7599579927814428
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0019220779220779222,
+            "degradation": -2.4324881e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.0019464028035456606
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.26246381110195427,
+            "degradation": 0.003846185211,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.25861762589138254
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 1.1443145000062587,
+            "degradation": -0.011688106824,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.1560026068300373
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "2f2cA02",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.05804454311556474,
+            "degradation": -0.000519282801,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.05856382591643404
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.044334999999999986,
+            "degradation": 0.000525,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.04380999999999999
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 0.46429456601829555,
+            "degradation": -0.096452375141,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.5607469411588364
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.8402476658310097,
+            "degradation": 0.002448361066,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.8426960268968243
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.002286813186813187,
+            "degradation": 2.3443223e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.0022633699633699635
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.47719223951019296,
+            "degradation": -0.069887401157,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.5470796406671098
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 1.2610296796524307,
+            "degradation": -0.033795235512,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.2948249151639777
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "2k4qA00",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.08346559114199999,
+            "degradation": -0.000941171831,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.08440676297266357
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.07879300699300698,
+            "degradation": -0.004839160839,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.08363216783216781
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 1.3449775622982791,
+            "degradation": -0.223476841546,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.5684544038439028
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.8026720708814058,
+            "degradation": 0.000304196004,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.802976266885178
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0018865521575198994,
+            "degradation": -8.37872e-07,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.0018873900293255132
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.8941144484858697,
+            "degradation": -0.063311253212,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.9574257016976239
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 1.4991205013517446,
+            "degradation": -0.146117205874,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.645237707226197
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      },
+      {
+        "claim_boundary": "validation_retention_gate_not_test_or_sota_evidence",
+        "domain_id": "5k2mA01",
+        "metrics": {
+          "dccm_mae": {
+            "candidate": 0.07823249656049976,
+            "degradation": -0.001194701284,
+            "maximum_allowed_degradation": 0.005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.07942719784484631
+          },
+          "native_contact_fraction_w1": {
+            "candidate": 0.05564129032258064,
+            "degradation": 0.003055483871,
+            "maximum_allowed_degradation": 0.015,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.0525858064516129
+          },
+          "pairwise_rmsd_w1_angstrom": {
+            "candidate": 0.6455713530814601,
+            "degradation": -0.13189919601,
+            "maximum_allowed_degradation": 0.25,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.7774705490911311
+          },
+          "pca_subspace_rmsip": {
+            "candidate": 0.7562751919299002,
+            "degradation": -0.000219922551,
+            "maximum_allowed_degradation": 0.03,
+            "passed": true,
+            "preferred_direction": "higher",
+            "source": 0.7560552693785566
+          },
+          "prediction_clash_fraction": {
+            "candidate": 0.0023435610302351625,
+            "degradation": 1.0302352e-05,
+            "maximum_allowed_degradation": 0.0005,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.002333258678611422
+          },
+          "radius_gyration_w1_angstrom": {
+            "candidate": 0.915345146943571,
+            "degradation": -0.061307526094,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 0.9766526730372651
+          },
+          "rmsf_rmse_angstrom": {
+            "candidate": 0.943766604396447,
+            "degradation": -0.063196199208,
+            "maximum_allowed_degradation": 0.15,
+            "passed": true,
+            "preferred_direction": "lower",
+            "source": 1.0069628036043834
+          }
+        },
+        "passed": true,
+        "test_records_opened": 0
+      }
+    ],
+    "proteins": 8,
+    "test_records_opened": 0
+  },
+  "schema_version": "dynaview-mars-fm-equilibrium-suite-comparison-v1",
+  "source_checkpoint_identity": "1e957cd4b9f1a054ceb0c2104f40ba6f3cc0d8d0",
+  "test_records_opened": 0
+}

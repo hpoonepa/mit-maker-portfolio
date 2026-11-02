@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "senba-sprint"
+version = "0.1.0"
+description = "SENBA paired endpoint analysis and costed experiment planning"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23,<3"]
+
+[project.scripts]
+senba-sprint = "senba_sprint.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["senba_sprint*"]

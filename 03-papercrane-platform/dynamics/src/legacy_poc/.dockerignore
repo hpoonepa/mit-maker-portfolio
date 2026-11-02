@@ -1,0 +1,18 @@
+# Keep tests out of the image — they pull large fixtures and are not needed at runtime.
+dynamics/tests/__pycache__
+dynamics/tests/fixtures
+dynamics/**/__pycache__
+dynamics/**/*.pyc
+dynamics/**/*.pyo
+dynamics/**/.pytest_cache
+
+# Anything outside dynamics/ that might accidentally be in the build context
+**/.git
+**/.DS_Store
+**/.venv
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
