@@ -1,0 +1,32 @@
+TrackNetV3 inference architecture
+
+Upstream repository: OrcustD/RacketVision
+Upstream file: source/BallTrack/model/tracknet_v3.py
+Pinned commit: c44af2a08524d3cb54d818f19686f4cdea4d2793
+Source: https://github.com/OrcustD/RacketVision/blob/c44af2a08524d3cb54d818f19686f4cdea4d2793/source/BallTrack/model/tracknet_v3.py
+
+Copied/adapted inference blocks: Conv2DBlock, Double2DConv, Triple2DConv, and the TrackNet encoder, bottleneck, skip-connected decoder, predictor, sigmoid, and last-only inference behavior.
+
+Local changes: removed MMEngine registration/BaseModel, training loss, mixup, and CUDA data preprocessing; exposed a plain torch.nn.Module; fixed the approved production configuration to 15 input channels, four output heatmaps, last_only=True, and base width 64 at secure load; added pinned checkpoint identity and content-addressed ResolvedAsset validation, restricted torch weights-only loading, documented prefix normalization, exact state-dict key/shape validation, native MPS/CPU placement, and inference-only typing.
+
+MIT License
+
+Copyright (c) 2025 Linfeng Dong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

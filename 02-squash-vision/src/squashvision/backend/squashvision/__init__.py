@@ -1,0 +1,1 @@
+"""Mosaic Squash local API."""

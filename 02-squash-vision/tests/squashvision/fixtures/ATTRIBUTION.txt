@@ -1,0 +1,9 @@
+SquashVision deterministic real-model review fixture
+
+File: squash-review-real-model.mp4
+Source: “Teaser Mulhouse ffsquash” by ÉCRANOMADE
+Source URL: https://commons.wikimedia.org/wiki/File:Teaser_Mulhouse_ffsquash.webm
+License: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+
+Changes: a one-second real squash rally frame was repeated into a 20-second local test video. A small visual patch from the same source was animated along a deterministic bounded trajectory, and deterministic synthetic impact audio was added. The fixture exists only to exercise the checked-in real pose and ball model path, canonical review/correction flow, and evidence clipping without seeded or fabricated production observations.

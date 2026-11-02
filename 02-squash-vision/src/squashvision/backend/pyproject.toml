@@ -1,0 +1,41 @@
+[project]
+name = "mosaic-squash-backend"
+version = "1.0.0"
+description = "Local-only squash video analysis API"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.19.1",
+    "av>=18.1.0",
+    "fastapi",
+    "httpx",
+    "huggingface-hub",
+    "imageio-ffmpeg==0.6.0",
+    "numpy>=2.5.2",
+    "opencv-python-headless>=5.0.0.93",
+    "pyarrow>=21.0.0",
+    "platformdirs",
+    "pydantic-settings",
+    "python-multipart>=0.0.32",
+    "scipy>=1.18.1",
+    "sqlalchemy>=2.0.52",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "ultralytics>=8.4.129,<8.5",
+    "uvicorn[standard]",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["squashvision"]

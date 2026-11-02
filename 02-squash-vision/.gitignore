@@ -1,0 +1,21 @@
+node_modules/
+.dependencies.nosync/
+node_modules.icloud-backup-*/
+.venv/
+__pycache__/
+.pytest_cache/
+.cache/
+dist/
+runtime/
+.runtime/
+test-results/
+playwright-report/
+.playwright-data/
+.playwright-review-data/
+*.tsbuildinfo
+
+# Local library path used by docs/SETUP.md.
+local-data/
+.env
+.env.*
+!.env.example

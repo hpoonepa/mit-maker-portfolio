@@ -1,0 +1,12 @@
+.live-shot { --grade:#2b6d50; padding:1.15rem 1.25rem 0; border-bottom:1px solid var(--line); }
+.live-shot[data-tone="fair"] { --grade:#9a641e; }.live-shot[data-tone="weak"] { --grade:#b54a3d; }.live-shot[data-tone="empty"] { --grade:var(--text-muted); }
+.live-shot header { display:flex;justify-content:space-between;align-items:center;gap:.5rem; }
+.live-shot header h2 { font-size:.95rem;letter-spacing:-.015em;margin:0; }
+.live-shot-estimate { font-size:.65rem;color:var(--text-muted);border:1px solid var(--line);border-radius:4px;padding:.2rem .4rem; }
+.live-shot-main { display:flex;align-items:center;gap:1.1rem;margin:.9rem 0 .7rem;min-height:64px; }
+.live-shot-score { white-space:nowrap;display:flex;align-items:baseline;gap:.35rem;color:var(--grade);font-variant-numeric:tabular-nums; }
+.live-shot-score strong { font-size:3.15rem;line-height:1;font-weight:500;letter-spacing:-.065em; }.live-shot-score span{font-size:.85rem;color:var(--text-muted);}
+.live-shot-description h3 { font-size:1rem;letter-spacing:-.02em;margin:0 0 .25rem; }.live-shot-description p { margin:0;font-size:.7rem;color:var(--text-muted); }.live-shot-description>span{display:block;margin-top:.3rem;font-size:.7rem;color:var(--grade);}
+.live-shot-scale { display:flex;gap:4px;height:4px; }.live-shot-scale i { flex:1;background:var(--surface-3);border-radius:1px; }.live-shot-scale i[data-filled="true"]{background:var(--grade);}
+.live-shot-placement { display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:.5rem;margin:.9rem 0; }.live-shot-placement dt{font-size:.64rem;color:var(--text-muted);}.live-shot-placement dd{margin:.3rem 0 0;font-size:.93rem;color:var(--text-strong);font-variant-numeric:tabular-nums;}
+.live-shot-navigation { display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:.45rem 0; }.live-shot-navigation span{font-size:.7rem;color:var(--text-muted);}.live-shot-navigation button{min-height:30px;width:34px;padding:0;border:0;border-radius:4px;font-size:1.1rem;}.live-shot-retry{font-size:.7rem;margin:.4rem 0;}
