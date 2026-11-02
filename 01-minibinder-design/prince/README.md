@@ -6,10 +6,8 @@ repositories kept side by side:
 - [Python model and analysis package](prince-model/README.md)
 - [Web interface](prince-webapp/README.md)
 
-Each repository retains its license, attribution, tests, and documentation. The
-web repository includes a historical demonstration recording, labeled as an
-earlier interface. Neither repository establishes that PRINCE caused the later
-experimental result described in this portfolio.
+Each repository retains its license, attribution, tests, and documentation.
+Demonstration recordings are provided separately with the portfolio.
 
-See the [source inventory](../../docs/SOURCE-MANIFEST.json) for copied paths and
-the [portfolio review](../../docs/REVIEW-STATUS.md) for verification limits.
+See the [MiniBinder source guide](../docs/SOURCE-GUIDE.md) for the campaign and
+the [project citations](../CITATIONS.md) for tools, models and data sources.

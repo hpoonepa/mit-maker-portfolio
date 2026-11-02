@@ -8,7 +8,7 @@ The professional footage corresponds to SQUASHTV’s [“The quality is just SO 
 
 `personal-rally.png` is from Harsha's own match recording, `IMG_4285.mov`. It establishes the personal context for the project and is not the match used in the app demonstration.
 
-Exact source paths, extraction times, hashes, and captions are in the [media record](../../docs/MEDIA-SOURCES.json) and [gallery](../../docs/GRAPHICS.md).
+The recordings and figures are submitted separately with the portfolio. The [project citations](../CITATIONS.md) credit their sources and the tracking models.
 
 ## Earlier development fixtures
 

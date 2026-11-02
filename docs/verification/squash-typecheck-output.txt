@@ -1,1 +1,0 @@
-TypeScript --noEmit exited with status 0 and no diagnostics.

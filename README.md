@@ -2,7 +2,7 @@
 
 This is my codebase for the work I submitted in my MIT Maker Portfolio! 
 
-[Build notes](docs/BUILD-NOTES.md) · [Code map](docs/CODEBASE-MAP.md)
+[Build notes](docs/BUILD-NOTES.md) · [Build process](docs/BUILD-PROCESS.md) · [Collaborators and citations](docs/CITATIONS.md)
 
 My submission video, images, and PDFs of my engineering process are provided in my MIT Maker Portfolio attachments. 
 

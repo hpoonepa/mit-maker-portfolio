@@ -26,4 +26,4 @@ The Canary Wharf demo (submitted separately) shows saved tracking and reviewed s
 
 Inspect [report corrections](../02-squash-vision/src/squashvision/backend/squashvision/corrections.py), [job recovery](../02-squash-vision/src/squashvision/backend/squashvision/jobs.py), and the [frontend tests](../02-squash-vision/src/squashvision/web/src/). Earlier synthetic fixtures remain available as development evidence, with their provenance recorded.
 
-[Verification](REVIEW-STATUS.md) · [Media source notes](GRAPHICS.md)
+[Build notes](BUILD-NOTES.md) · [Collaborators and citations](CITATIONS.md)
