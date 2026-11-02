@@ -193,10 +193,10 @@ export function buildCandidateDecisionReport(input: {
     },
     candidates,
     caveats: [
-      'This report uses computational evidence only; it does not establish binding, specificity, expression, stability, or safety.',
-      'The LLM prior is cached and versioned. It does not call an external model at report time.',
-      'Recommendations are triage labels for human review, not autonomous experimental decisions.',
-      'Synthetic or stub provenance must not be presented as a real model result.',
+      'Computational evidence only. Wet-lab tests for binding, specificity, expression, stability and safety are pending.',
+      'The report uses a cached, versioned LLM prior with local scoring.',
+      'Recommendations support human review and experimental planning.',
+      'Synthetic and stub results retain their example-data labels.',
       ...(truncated
         ? [`Candidate output was truncated to ${candidates.length}/${candidatesAvailable} designs.`]
         : []),

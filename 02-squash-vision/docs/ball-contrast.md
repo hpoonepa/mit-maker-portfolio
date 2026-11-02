@@ -23,10 +23,9 @@ check only removes observations: it never substitutes a component center or
 creates a ball detection. Rejected candidates are also removed so later track
 repair cannot revive them.
 
-This conservative setting has substantial gaps, particularly around players,
-rackets, glass, and occlusions. It does not establish reliable shot attribution,
-complete landing counts, or full three-dimensional ball speed. Any downstream
-contact is still an inferred event requiring its own evidence.
+Tracking gaps remain around players, rackets, glass, and occlusions. This check
+filters ball observations. Shot attribution, landing counts, and three-dimensional
+ball speed need their own reconstruction and evaluation.
 
 The original input mode keeps its existing cache contract. Inverted ball stages
 depend on the player artifacts used for exclusion. Ball and derived artifact
@@ -40,7 +39,6 @@ Unmodified inputs missed the clearly visible ball at frame 255. Inversion placed
 that detection at (164.91, 515.71), near the visually reviewed center (166, 515).
 Across the wider window, inversion produced 266 visible raw predictions; the
 original-image guard retained 60 and rejected inspected false detections at
-frames 262 and 266. These are development checks on this recording, not a held-out
-accuracy evaluation. Detailed evidence is under
+frames 262 and 266. These development checks cover the selected window of this recording. Detailed evidence is under
 `runtime/personal-rally/photometry-wide` and
 `runtime/personal-rally/cv-experiment/production-guard-replay.json`.

@@ -4,7 +4,7 @@
 [`ember/`](ember/README.md). The pipeline below is the historical proof of concept;
 its documented mapping, pocket-parser and trajectory assumptions have not been
 used for the new benchmark. Use Ember's separate evaluator and execution plan for
-new work. No Ember model has been trained or benchmarked yet.
+new work. Ember training and predictive benchmarking remain pending.
 
 Greenfield pipeline: BioEmu (ensemble) → fpocket (pocket detection) → cluster →
 cryptic-pocket calls, benchmarked on the PocketMiner apo/holo dataset.
@@ -25,7 +25,7 @@ pytest dynamics/tests -v
 - **fpocket**: NOT INSTALLED LOCALLY on this macOS workstation.
   - `which fpocket` returns nothing; `brew info fpocket` returns `Error: No available
     formula with the name "fpocket"` (no Homebrew formula exists at this date).
-  - Did NOT install system-wide (per task constraints — no sudo, no admin).
+  - System-wide installation was outside the local setup scope (no sudo, no admin).
   - Plan: fpocket is Linux-native; it will run inside the Docker image / on the Vast.ai
     worker (Task 10 + Task 11). Local dev can mock fpocket output via fixtures, or
     install from source via `git clone https://github.com/Discngine/fpocket && make`
@@ -58,7 +58,7 @@ python -m bioemu.sample \
 - Path to a single-sequence FASTA file
 - Path to an `.a3m` MSA file (query sequence first row); skips ColabFold MMseqs2
 
-> Note: BioEmu takes **sequence input, not a PDB file**. To benchmark against a
+> Note: BioEmu takes **sequence input**. To benchmark against a
 > PocketMiner apo PDB, we must first extract the sequence from the PDB (Biopython
 > `SeqIO`) and feed that into `bioemu.sample`. The "topology" output PDB then carries
 > coordinates that can be aligned back to the experimental apo structure.
@@ -87,8 +87,7 @@ python -m bioemu.sample \
 | 600             | 150 min                            |
 
 `batch_size_100=20` for the table above. Default is 10. A100-80GB is the reference
-GPU; smaller VRAM (e.g. 40 GB) will require reducing `batch_size_100`. The README
-does not state a hard minimum VRAM.
+GPU; smaller VRAM (e.g. 40 GB) will require reducing `batch_size_100`. A hard minimum VRAM remains unspecified in the README.
 
 **Sampler / multimer caveats**:
 - Monomers only. Multimer "linker trick" is mentioned but not recommended.
@@ -173,9 +172,8 @@ to rows where holo is not `n/a` (i.e. excluding pure rigid-protein negatives).
 **Task 10 — Dockerfile authored, NOT built locally.**
 
 `docker` is **not installed** on the local macOS workstation (`which docker` returns
-nothing, `docker --version` exits with `docker not found`). Per task constraints we
-do NOT install Docker (a large system change requiring admin), so the image is not
-built or smoke-tested on the controller.
+nothing, `docker --version` exits with `docker not found`). Docker installation requires an admin-level system change outside this setup
+scope. The image awaits build and smoke testing on the worker.
 
 The Dockerfile (`dynamics/Dockerfile`) and `.dockerignore` are committed and ready
 to build on the Vast.ai worker (Task 12) or on any Linux host with Docker. To build:

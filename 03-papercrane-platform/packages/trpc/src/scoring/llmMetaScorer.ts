@@ -305,7 +305,7 @@ const METRICS: Record<
 
 const BASE_CAVEATS = [
   'Computed exclusively from stored in-silico metrics; no wet-lab measurement or validation is used.',
-  'Experimental ranking aid, not a probability of binding.',
+  'Experimental ranking score; binding-probability calibration is pending.',
   'The corrected benchmark is underpowered at 11 targets and shows no statistically resolved lift over existing baselines.',
   'Only metrics present on this design contribute; coverage reports the fraction of prior weight observed.',
 ];

@@ -90,7 +90,7 @@ The first PDB lookup needs internet access to PDBe. Uploaded coordinates are pro
 | `GO` | The implemented checks found no blocking issue |
 | `GO_WITH_WARNINGS` | Review the reported qualifications before using the site |
 | `STOP` | At least one check found a blocking structural issue |
-| Evidence draft | An extracted passage awaiting review; it is not experimental evidence until reviewed and attributed |
+| Evidence draft | An extracted passage awaiting source review and attribution |
 
 The current worker uses the **four-feature residue model** and connected surface patches. The larger XGBoost site ranker is distributed separately in `prince-model`; its benchmark results must not be presented as the accuracy of this live workspace. See [model scope](docs/model-scope.md).
 
@@ -161,4 +161,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Changes to labels, scoring, and scientif
 
 PRINCE code is licensed under [MIT](LICENSE). [NOTICE.md](NOTICE.md) records frontend dependencies and asset attribution. Evaluation and structural data retain the terms described in [DATA_LICENSES.md](DATA_LICENSES.md).
 
-Please cite **Lambert iGEM 2026, PRINCE Web App**, version 1.0.0, together with the release or commit you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff). No DOI or hosted service is claimed by this source release.
+Please cite **Lambert iGEM 2026, PRINCE Web App**, version 1.0.0, together with the release or commit you used. Machine-readable metadata is in [CITATION.cff](CITATION.cff). This source release includes local setup instructions and citation metadata; a hosted service and archival DOI remain pending.

@@ -72,7 +72,7 @@ const METRICS = [
     name: "ipSAE",
     role: "Primary ranker",
     auc: "pooled historical estimate",
-    def: "Interprotein Score from Aligned Errors. Reweights PAE so only across-chain residue pairs near the predicted interface contribute. It is a candidate primary ranker, but within-target performance varies and the historical pooled AUC is not evidence of transfer to a new target.",
+    def: "Interprotein Score from Aligned Errors. Reweights PAE so only across-chain residue pairs near the predicted interface contribute. Within-target performance varies. Transfer to a new target requires separate evaluation.",
   },
   {
     name: "ipTM",

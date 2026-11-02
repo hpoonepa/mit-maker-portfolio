@@ -17,7 +17,7 @@ Residue specifications use author chain and residue numbering. Checks cover unre
 preflight propose 1ubq --chain A --profile antibody_epitope --top 3
 ```
 
-Profiles are `antibody_epitope`, `exposure_only`, and exploratory `designability`. The latter is a hand-set profile, not a validated minibinder-success predictor. Proposals use the small residue scorer; they do not call the saved XGBoost classifier.
+Profiles are `antibody_epitope`, `exposure_only`, and exploratory `designability`. The latter uses hand-set weights awaiting minibinder-outcome validation. Proposals use the small residue scorer; they do not call the saved XGBoost classifier.
 
 ## Combined analysis
 

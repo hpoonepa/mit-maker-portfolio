@@ -150,11 +150,10 @@ def test_false_rejection_rate_is_one_when_everything_is_killed():
 
 
 def test_false_rejection_rate_counts_only_epitope_residues():
-    """Killing non-epitope surface is conservatism, not error.
+    """False-rejection counts use only observed epitope residues.
 
-    Absence of an observed antibody contact is not evidence a site is
-    unusable, so a kill outside the observed epitope must not be scored as a
-    false rejection.
+    The suitability of other surface residues is unknown; excluding them
+    leaves the observed false-rejection count unchanged.
     """
     rate = false_rejection_rate({"C999", "C325"}, {"C325", "C326"})
     assert rate == 0.5
@@ -302,7 +301,7 @@ def test_empty_deltas_give_nan_and_span_zero():
     r = paired_bca_ci([], n_boot=100, seed=0)
     assert r.n == 0
     assert math.isnan(r.point)
-    assert r.spans_zero  # no data is not evidence of an effect
+    assert r.spans_zero  # the effect remains unknown without observations
 
 
 def test_bootstrap_rejects_nonfinite_deltas():
@@ -1225,8 +1224,8 @@ def test_superiority_is_not_run_without_a_declared_external_arm():
 
     report = render_markdown(result)
     assert "NOT RUN" in report
-    # The internal deltas are still shown, but disclaimed.
-    assert "do not support a superiority claim" in report
+    # Internal deltas retain their within-backend scope.
+    assert "filter's effect within each backend" in report
     # And the primary result still carries the report.
     assert "Primary result" in report
 

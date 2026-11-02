@@ -1,8 +1,8 @@
 """Explicit structural screening, separate from sampling and ranking.
 
-These cheap checks catch gross defects. They do not certify force-field energy,
-stereochemistry, docking readiness or equilibrium sampling. Defaults are draft
-engineering thresholds; freeze on development systems before a scientific run.
+These cheap checks screen for gross defects. Force-field energy, stereochemistry,
+docking readiness and equilibrium sampling require separate assessment. Defaults
+are draft engineering thresholds; freeze on development systems before a scientific run.
 """
 
 from __future__ import annotations
@@ -78,7 +78,7 @@ def screen_structure(
     clash_count = 0
     examples = []
     # Blocks bound memory; adjacent residues are excluded to avoid flagging
-    # covalent bonds. This deliberately does not detect every possible clash.
+    # covalent bonds. This screen covers the selected nonadjacent atom pairs.
     for start in range(0, len(xyz), 128):
         stop = min(start + 128, len(xyz))
         distances = np.linalg.norm(xyz[start:stop, None, :] - xyz[None, :, :], axis=-1)

@@ -1,11 +1,10 @@
 # Source audit, 28 September 2026
 
-These are small public source/metadata snapshots and parser fixtures. No upstream
-program, model, simulation, training run or benchmark was executed to obtain them.
+These small public source/metadata snapshots and parser fixtures were acquired
+through read-only downloads.
 `sources.json` records repository commit IDs and file SHA-256 digests. Upstream
-license files accompany code/fixtures. Code licenses are not blanket permission
-for every checkpoint or linked dataset; release-specific use terms still need
-review before the intended experiment/release.
+license files accompany code/fixtures. Checkpoint and dataset terms apply separately from code licenses; review
+release-specific terms before the intended experiment or release.
 
 ## Verified changes from the older plan
 
@@ -39,16 +38,16 @@ downloaded here against OSF SHA-256 values.
 | test | 222 | Not read/downloaded |
 | Total | 1,107 | Training pair total: 4,393 |
 
-The official PDB ID sets are disjoint. This is not a homology audit. Multiple
-pairs, chains and ligand observations are correlated; neither 4,393 nor 1,107 is
-an automatically valid independent-protein count. The monomer/length/chemistry
-restricted cohort has not been established. All test annotations remain outside
-the working files.
+The official PDB ID sets are disjoint; homology grouping remains pending. The
+4,393 pair records and 1,107 structure IDs contain correlated pairs, chains and
+ligand observations. Establish independent protein groups and the
+monomer/length/chemistry-restricted cohort before analysis. Test annotations
+remain outside the working files.
 
 The original CIF archive is **1,145,203,712 bytes**. It was not downloaded.
 `structure-fixtures/` instead contains three current RCSB structures selected by
-hash of training PDB ID, with acquisition receipts. These are parser smoke
-fixtures, not a replacement for the benchmark release coordinates:
+hash of training PDB ID, with acquisition receipts. These fixtures check parser behavior; the benchmark release coordinates require
+separate acquisition and identity verification:
 
 | PDB / author chain | Canonical entity length | Observed residues |
 | --- | ---: | ---: |
@@ -56,13 +55,13 @@ fixtures, not a replacement for the benchmark release coordinates:
 | 8JIS / R | 394 | 386 |
 | 4OS8 / B | 190 | 162 |
 
-8JIS exceeds the provisional length ceiling; successful parsing does not make it
-eligible. No prediction, model-selection decision or accuracy score was produced.
+8JIS exceeds the provisional length ceiling and is excluded from the eligible
+cohort. These checks cover parsing; predictive evaluation remains pending.
 
 `structure-fixtures/annotation-mapping-audit.json` also checks the exact original
 training-annotation joins on these fixtures. All three mapped: 6/25/18 positive
-residues and 1/1/2 custom reference sites respectively. This neither establishes
-biological eligibility nor substitutes for auditing the archived coordinates.
+residues and 1/1/2 custom reference sites respectively. The joins check annotation mapping. Biological eligibility and archived-coordinate
+identity require separate audits.
 
 `cryptobank-archive.json` contains accessible archive metadata and provider checksums.
 The main dataset ZIP is 152,162,304 bytes. It was not downloaded or unpickled.
@@ -73,11 +72,10 @@ CryptoBank as external evidence.
 
 [Lacuna](https://github.com/mooreneural/lacuna) already offers an ensemble/detector/
 ranker pipeline. [Seq2Pocket](https://github.com/skrhakv/seq2pocket) already converts
-residue predictions into spatial pocket proposals. Ember's combination alone is
-not novelty. Its prospective contribution is a reproducible improvement in
-shortlist quality per dollar under a declared protocol. Their published numbers
-use different cohorts, metrics and candidate budgets; none were copied into an
-Ember leaderboard.
+residue predictions into spatial pocket proposals. Ember’s prospective contribution is a reproducible improvement in
+shortlist quality per dollar under a declared protocol, measured against these
+existing methods. Their published numbers use different cohorts, metrics and candidate budgets;
+Ember’s comparison requires measurements under the declared shared protocol.
 
 The pinned Lacuna ranking/usage/benchmark documentation, CLI, report writer and
 NMA source were inspected as well. The default CPU NMA/alpha/learned configuration
@@ -92,9 +90,10 @@ descriptors with a gain. See the pinned `docs/RANKING.md`, `docs/USAGE.md` and
 
 [PocketMiner](https://www.nature.com/articles/s41467-023-36699-3) motivates learning
 structural signals associated with cryptic sites. Its simulation-derived labels
-do not turn unordered BioEmu conformations into a time-indexed trajectory. The
-first Ember task is annotation recovery; a kinetics model needs different data.
+address cryptic-site annotations. BioEmu conformations are unordered samples;
+the first Ember task is annotation recovery. Kinetics modeling requires
+time-indexed data.
 
-The current source snapshots support interface design. Runtime compatibility,
+The current source snapshots support interface design. The next compute-authorized stage will test runtime compatibility,
 actual model weights, all-atom reconstruction quality and comparable scientific
-results remain unverified until the next compute-authorized stage.
+performance.

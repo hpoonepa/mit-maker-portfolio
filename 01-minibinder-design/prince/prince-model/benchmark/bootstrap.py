@@ -160,8 +160,8 @@ class BcaInterval:
     def spans_zero(self) -> bool:
         """True when the interval contains zero, i.e. the result is inconclusive.
 
-        NaN bounds (n = 0) count as spanning zero: no data is not evidence of
-        an effect.
+        NaN bounds (n = 0) count as spanning zero because the effect is
+        unknown without observations.
         """
         if not (math.isfinite(self.lo) and math.isfinite(self.hi)):
             return True
@@ -365,9 +365,8 @@ def compute_mde_at_n(
 def power_statement(observed_delta: float, n_clusters: int) -> str:
     """Human-readable power assessment, phrased so a null cannot be oversold.
 
-    The wording distinction is the whole point: a delta below the MDE is
-    UNTESTED, and saying "no effect" there would be a claim the data cannot
-    support in either direction.
+    A delta below the MDE is UNTESTED: the available sample cannot resolve
+    an effect of that size.
 
     Ported from ``scorer/power_analysis.py`` (binder-scorer).
     """

@@ -7,31 +7,31 @@
       "path": "binder-scorer/data/processed/.egfr_epitope.DONE",
       "sha256": "3ebadbf5381dcc6c6b0ea3b9f9282673598126ebaeeba7a1f5bb95c22213c321",
       "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
-      "status": "Operational marker; does not establish successful scientific validation."
+      "status": "Pipeline completion marker; scientific validation is tracked separately."
     },
     {
       "path": "binder-scorer/data/processed/.il7r_epitope.DONE",
       "sha256": "130a884c6f3a44d276fed0c32dcf60f5d2888976927f3c24782a54f45756d2bb",
       "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
-      "status": "Operational marker; does not establish successful scientific validation."
+      "status": "Pipeline completion marker; scientific validation is tracked separately."
     },
     {
       "path": "binder-scorer/data/processed/.insulinr_epitope.DONE",
       "sha256": "7ce9df79d66ffb721761b4a0a6bdd42eacb5637f394f2649e6d06694331a2669",
       "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
-      "status": "Operational marker; does not establish successful scientific validation."
+      "status": "Pipeline completion marker; scientific validation is tracked separately."
     },
     {
       "path": "binder-scorer/data/processed/.mdm2_epitope.DONE",
       "sha256": "6d1e05b2092f37e652385156f002c1b11f1c79f598148b749356fa0301a96b2d",
       "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
-      "status": "Operational marker; does not establish successful scientific validation."
+      "status": "Pipeline completion marker; scientific validation is tracked separately."
     },
     {
       "path": "binder-scorer/data/processed/.pdl1_epitope.DONE",
       "sha256": "4afa7c6a7e67932cf71cb25847105af3be577a709eada6bcdca443815217bfee",
       "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
-      "status": "Operational marker; does not establish successful scientific validation."
+      "status": "Pipeline completion marker; scientific validation is tracked separately."
     },
     {
       "path": "binder-scorer/data/processed/5g51_prior.json",

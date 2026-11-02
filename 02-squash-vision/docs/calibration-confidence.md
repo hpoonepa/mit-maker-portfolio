@@ -2,9 +2,9 @@
 
 # Calibration confidence and image framing
 
-Calibration confidence is a heuristic quality score, not a measured probability of metric accuracy. The measurement threshold remains 0.65. Manual landmark residuals describe consistency with a planar model; they do not establish ground-truth movement accuracy or eliminate glass/lens distortion.
+Calibration confidence is a heuristic quality score with a measurement threshold of 0.65. Manual landmark residuals measure the fit to a planar model. Glass and lens distortion remain sources of measurement error.
 
-The score combines RANSAC inlier ratio, reprojection residual, world-coordinate coverage, normalized homography conditioning, and image support. Image support now divides the inlier-hull area by the fitted court-floor footprint visible inside the image, rather than the entire sensor rectangle. Blank ceiling or wall area therefore does not reduce the score when that padding/crop leaves the visible floor unchanged. Arbitrary letterboxing that changes the apparent floor clipping would require a separately known content rectangle; this is not a claim of universal padding invariance.
+The score combines RANSAC inlier ratio, reprojection residual, world-coordinate coverage, normalized homography conditioning, and image support. Image support now divides the inlier-hull area by the fitted court-floor footprint visible inside the image, rather than the entire sensor rectangle. Blank ceiling or wall area therefore does not reduce the score when that padding/crop leaves the visible floor unchanged. Letterboxing that changes the visible floor clipping requires a separately known content rectangle.
 
 Before using the fitted footprint, the algorithm rejects non-finite/empty geometry and a projective horizon crossing the court (opposite homogeneous-denominator signs at court corners). The existing minimum correspondence coverage, duplicate/near-collinear checks, world bounds, RANSAC threshold, condition limit, covariance calculation, and 0.65 score threshold remain in place.
 

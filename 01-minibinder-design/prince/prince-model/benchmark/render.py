@@ -243,8 +243,8 @@ def render_markdown(result: EvaluationResult) -> str:
         "## Internal filter deltas",
         "",
         "Each filtered arm against the *same* predictor without the filter. "
-        "These isolate the filter's effect but are not a comparison against "
-        "the state of the art, so they do not support a superiority claim.",
+        "These measure the filter's effect within each backend. "
+        "State-of-the-art predictor comparisons require separate evaluation.",
         "",
     ]
     lines += [

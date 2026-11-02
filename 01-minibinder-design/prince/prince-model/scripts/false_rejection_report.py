@@ -75,7 +75,7 @@ def main() -> None:
     print(f"  macro-average by cluster   {macro:.4f}   95% CI [{lo:.4f}, {hi:.4f}]")
     print(f"                             ({args.n_boot} cluster bootstrap resamples)")
     print(f"  micro (per instance)       {micro:.4f}   "
-          f"— dominated by the most-deposited antigens, not a generalisation claim")
+          f"— weighted toward the most-deposited antigens")
     print(f"\n  epitopes untouched         {untouched}/{len(recs)} = {untouched/len(recs):.1%}")
     print(f"  epitopes >=50% killed      {half}/{len(recs)} = {half/len(recs):.2%}")
     print(f"  epitopes entirely killed   {wiped}/{len(recs)} = {wiped/len(recs):.2%}")

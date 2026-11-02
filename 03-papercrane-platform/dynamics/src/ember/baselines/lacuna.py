@@ -124,8 +124,8 @@ def native_prediction(
         runtime_seconds,
         cost_usd,
         warnings=(
-            "Rank score is negative native rank. Native reported frames are not an all-atom quality certification.",
-            "The JSON report does not prove the backend/input/checkpoint used; bind the independent run receipt.",
-            "n_pockets_found counts reported pockets; a truncated report cannot establish complete proposal coverage.",
+            "Rank score is negative native rank. All-atom quality requires separate checks of the reported frames.",
+            "Bind the independent run receipt to identify the backend, input and checkpoint alongside the JSON report.",
+            "n_pockets_found counts reported pockets; complete proposal coverage requires the full output before truncation.",
         ),
     )

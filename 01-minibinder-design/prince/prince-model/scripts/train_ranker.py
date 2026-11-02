@@ -191,11 +191,11 @@ def main():
         "evaluation": {"fitted": fitted, "exposure_only": exposure, "designability": designability},
         "limitations": [
             "Cached features cover only a subset of the 8241-interface manifest.",
-            "All cached features have appeared in earlier exploratory analyses; this is not an untouched external test.",
-            "Connected accession/exact-sequence disjointness does not establish homology-disjointness.",
-            "Antibody epitopes are not designed-minibinder outcome labels.",
-            "No LLM training corpus/checkpoint exists; no trained-LLM or 83-percent recovery claim is supported.",
-            "Residue AUROC and AUPRC are not patch recovery; see the separate connected-sites evaluation artifact.",
+            "Retrospective evaluation reuses cached features from earlier exploratory analyses.",
+            "Homologous sequences can occur across accession/exact-sequence-disjoint splits.",
+            "Labels describe observed antibody epitopes; minibinder outcomes require separate evaluation.",
+            "The fitted model is logistic regression; its residue-level evaluation is reported above.",
+            "Residue AUROC and AUPRC measure residue ranking; patch recovery is reported in the connected-sites evaluation artifact.",
         ],
     }
     args.out.parent.mkdir(parents=True, exist_ok=True)

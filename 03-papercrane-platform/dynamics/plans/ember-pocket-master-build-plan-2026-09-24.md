@@ -1,8 +1,8 @@
 # Ember Pocket: master build specification
 
-Date: 2026-09-24. Status: ready to guide implementation; not a frozen experiment, implemented training system, trained checkpoint, or compute-spending authorization.
+Date: 2026-09-24. Status: implementation design; experiment freeze, training-system implementation, trained checkpoint and compute authorization are subsequent stages.
 
-This is the controlling implementation plan for Ember Pocket v0. It supersedes the default architecture choice in `senba-pocket-build-plan-2026-09-23.md` and `dynamics/senba-pocket-experiment-v0.json`: the first implementation is a frozen-embedding residue model plus small site rankers. The geometric graph network is a gated extension. Historical documents and code remain unchanged for provenance. The companion `dynamics/ember-pocket-v0-plan.json` is a planning manifest, not executable infrastructure.
+This is the controlling implementation plan for Ember Pocket v0. It supersedes the default architecture choice in `senba-pocket-build-plan-2026-09-23.md` and `dynamics/senba-pocket-experiment-v0.json`: the first implementation is a frozen-embedding residue model plus small site rankers. The geometric graph network is a gated extension. Historical documents and code remain unchanged for provenance. The companion `dynamics/ember-pocket-v0-plan.json` records proposed settings for later execution.
 
 The [benchmark research memo](ember-pocket-benchmark-protocol-2026-09-24.md) contains source comparisons and the rationale for CryptoBench and CryptoBank. No Ember performance result exists yet.
 
@@ -16,9 +16,9 @@ First research question: does explicit conformational evidence improve recovery 
 
 First scope: soluble, primarily folded monomers, provisionally 80–350 residues with valid sequence/structure mapping. The length range is an engineering starting point and must be finalized from metadata and profiling before test evaluation. Exclude targets whose biological interpretation requires an unsupported assembly, membrane environment or missing chemistry; record the exclusion reason. Never choose supported targets from their prediction scores.
 
-This version does not predict trajectories, transition rates, binding affinity, physical state populations or intervention effects. It does not design protein binders. Pocket localization, open-pocket geometry, binding and functional modulation are separate validation steps.
+This version ranks pocket sites. Trajectories, transition rates, affinity, state populations, intervention effects and binder design require separate models and validation. Pocket localization, open-pocket geometry, binding and functional modulation are distinct evaluation steps.
 
-The intended claim is conditional: on the named cohort, under the fixed input and output budget, Ember changes site recovery by X percentage points at Y dollars per target compared with Z. Best-in-world and best-ever claims are unsupported. Even a successful pocket benchmark does not establish general leadership in dynamics.
+Report the measured result on the named cohort: under the fixed input and output budget, Ember changes site recovery by X percentage points at Y dollars per target compared with Z. The comparison evaluates pocket-site recovery and cost within that protocol.
 
 ## 2. End-to-end system
 
@@ -55,7 +55,7 @@ Use the original [CryptoBench repository](https://github.com/skrhakv/CryptoBench
 
 Preserve the official test assignment. Use provided development folds where appropriate or construct grouped validation from official training records only. Keep related proteins and all their apo/holo pairs, mutants and conformations together. Audit train/test similarity; if the official split has overlaps under our stricter rule, remove affected training relatives and report the amendment. Maintain official-protocol reproduction separately when preprocessing differs.
 
-For the cross-source audit, start with sequence identity >=40% and alignment coverage >=80% of the shorter sequence, then inspect shared domains/structural similarity where available. This is a documented relatedness heuristic, not proof of family independence. Save similarity edges and cluster assignments so the result can be audited.
+For the cross-source audit, start with sequence identity >=40% and alignment coverage >=80% of the shorter sequence, then inspect shared domains/structural similarity where available. This documented relatedness heuristic needs remote-homology sensitivity checks. Save similarity edges and cluster assignments so the result can be audited.
 
 ### External data
 
@@ -107,7 +107,7 @@ Read topology and trajectories explicitly. Verify actual reconstructed output fo
 
 ### Step 5: physical and mapping checks
 
-Check finite coordinates, atom/residue identity, chain continuity, gross clashes and missingness. Use the generator's documented filtering plus named all-atom checks; record exact versions and numerical thresholds before freeze. Thresholds are not established by this plan and must be validated on development examples. Filter outcomes are features and failure statistics, not a guarantee of realistic thermodynamics.
+Check finite coordinates, atom/residue identity, chain continuity, gross clashes and missingness. Use the generator's documented filtering plus named all-atom checks; record exact versions and numerical thresholds before freeze. Thresholds are not established by this plan and must be validated on development examples. Filter outcomes provide features and failure statistics; thermodynamic realism requires separate evaluation.
 
 Align each accepted conformation into the apo coordinate frame using explicitly mapped shared backbone atoms. Store transforms. Use local mapped alignment separately for conformer-geometry evaluation. Global alignment can be misleading for moving domains, so inspect its effect on grouping during development.
 
@@ -125,7 +125,7 @@ Start with at most 64 grouped candidates per target, capped by a deterministic n
 
 `LayerNorm(640) -> Linear(640,256) -> GELU -> Dropout(0.1) -> Linear(256,128) -> GELU -> Dropout(0.1) -> Linear(128,1)`.
 
-Output is an annotation-recovery logit for each residue. It is not a calibrated probability that the residue binds any molecule. Train a logistic linear probe on the same features as a control. Report the actual parameter count rather than advertising an arbitrary million-parameter target.
+Output is an annotation-recovery logit for each residue. Its calibration target is benchmark annotation membership; biological binding probability requires separate data. Train a logistic linear probe on the same features as a control. Report the actual parameter count rather than advertising an arbitrary million-parameter target.
 
 Use masked binary cross-entropy, average within protein and then across proteins, and derive any positive class weighting from training data. Start with AdamW, learning rate 1e-3, weight decay 1e-4, gradient norm cap 1, maximum 50 epochs and patience 5 on development macro residue average precision. Initial effective batch is eight proteins using accumulation if needed. Stop earlier at the stage budget cap. Exact seeds and settings are recorded.
 
@@ -139,7 +139,7 @@ For stacking R0 outputs into a downstream ranker, use three grouped cross-fittin
 
 ### E0: ensemble correction
 
-For each site, compute per-frame cavity volume, exposure, enclosure, local contact changes relative to apo, physical-quality indicators and mapped site support. Aggregate mean, maximum and dispersion over valid observations, with counts and masks. Detection support is not physical occupancy. Pooling uses unordered frames.
+For each site, compute per-frame cavity volume, exposure, enclosure, local contact changes relative to apo, physical-quality indicators and mapped site support. Aggregate mean, maximum and dispersion over valid observations, with counts and masks. Detection support summarizes sampled conformer evidence; physical occupancy requires separate measurements. Pooling uses unordered frames.
 
 Score: `s(site) = S0(static features) + delta(ensemble features)`.
 
@@ -161,15 +161,15 @@ The fixed R0/linear/static controls are planned baselines. Allow at most three d
 
 ## 6. Representative conformer and report
 
-For each returned site, select a physically accepted supporting observation using a fixed rule based on the model's feature contribution and geometry quality, with deterministic ties. Begin with detector score among valid site observations if no per-frame learned score exists. Do not describe a site-level ranker as a trained conformer selector.
+For each returned site, select a physically accepted supporting observation using a fixed rule based on the model's feature contribution and geometry quality, with deterministic ties. Begin with detector score among valid site observations if no per-frame learned score exists. Label this as fixed detector-based conformer selection, separate from the trained site ranker.
 
 Store ranked site residue IDs, uncalibrated score, whether evidence is apo/ensemble/fallback, representative structure path, frame counts, feature summaries, known input limitations, checkpoint hashes and runtime/cost. A user should be able to inspect the structure and original residue numbering.
 
-Best-of-N agreement with the bound reference is an evaluator-only sampling diagnostic. The model-selected conformer's agreement is the deployable selection metric. Always distinguish them. Neither a good cavity score nor a short relaxation certifies docking readiness or binding.
+Best-of-N agreement with the bound reference is an evaluator-only sampling diagnostic. The model-selected conformer's agreement is the deployable selection metric. Always distinguish them. Assess docking readiness and binding separately from cavity score and relaxation.
 
 ## 7. Evaluation and advancement rules
 
-Use two evaluations: each method's end-to-end native pipeline and matched-candidate ranking ablations. A static scorer applied to ensemble-generated candidates is a ranking diagnostic; it is not an apo-only end-to-end method because the proposals already contain ensemble information.
+Use two evaluations: each method's end-to-end native pipeline and matched-candidate ranking ablations. A static scorer applied to ensemble-generated candidates is a ranking diagnostic; label it as an ensemble-proposal method because its proposals contain ensemble information.
 
 Mandatory starting controls: fpocket, P2Rank, matched-encoder R0/static model, and BioEmu with ordinary pocket scoring. Attempt CryptoBench pLM-NN, Seq2Pocket, PocketMiner/AE-PocketMiner and relevant Lacuna configurations as reproducible strong comparisons. Verify code, weights, inputs and training overlap before claiming a head-to-head result. The full suite may exceed $200; publish omissions and never substitute an incomparable literature number for an unrun method.
 
@@ -181,7 +181,7 @@ Eligible job failures are misses for the primary site metric. Successful static 
 
 Compute paired differences and 95% intervals with family-cluster bootstrap, provisionally 10,000 CPU resamples. Conformers and training seeds are not independent protein replicates. Show individual seeds separately and disclose model-selection uncertainty. A favorable point estimate with a wide interval is inconclusive.
 
-An aspirational development target is +10 percentage points in recall@3 over the strongest reproduced comparator at a stated cost ceiling. It is neither a forecast nor a post-hoc definition of success. Freeze an actual cost ceiling after profiling. A useful accuracy/cost tradeoff may justify continued work even without that target, but the claim must reflect the results.
+An aspirational development target is +10 percentage points in recall@3 over the strongest reproduced comparator at a stated cost ceiling. Measure the observed effect against the prespecified comparison. Freeze an actual cost ceiling after profiling. A useful accuracy/cost tradeoff may justify continued work even without that target, but the claim must reflect the results.
 
 If E0 does not improve development performance, inspect candidate coverage, label alignment and physical validity. If they are correct, retain the stronger simpler method and revise the dynamics hypothesis. Do not make the model larger merely to spend the allocation.
 
@@ -226,13 +226,13 @@ Synthetic tests validate contracts, not biological accuracy. Real baseline repro
 
 Evaluation feature costs may be incurred in the cache stage; charge them once and label the partition. Before bulk work, estimate `sum(runtime_per_stage * billed_rate) + storage + transfer + startup`, using short/medium/long development proteins and a conservative allowance for failures. Do not extrapolate one fast target to the entire benchmark. Never infer complete runtime from sampler-only throughput.
 
-If the projected experiment does not fit, first reduce optional models and sweeps. Then reduce conformer count using development evidence. If a smaller cohort is necessary, choose it deterministically from eligible metadata/family IDs before predictions; name it as a subset and preserve all its failures. If neither a meaningful training set nor a defensible evaluation fits, end the stage with a feasibility report rather than claiming a full benchmark.
+If the projected experiment does not fit, first reduce optional models and sweeps. Then reduce conformer count using development evidence. If a smaller cohort is necessary, choose it deterministically from eligible metadata/family IDs before predictions; name it as a subset and preserve all its failures. If the budget cannot support a meaningful training set and evaluation, end the stage with a feasibility report documenting the measured costs and feasible scope.
 
-Each job reserves a conservative maximum cost before launch. New jobs cannot consume evaluation/contingency reserves. Use provider-specific timeouts and billing controls where available, and reconcile receipts; a local ledger is not a hard cloud billing cap. Do not assume exhausted credits automatically terminate compute safely.
+Each job reserves a conservative maximum cost before launch. New jobs cannot consume evaluation/contingency reserves. Use provider-specific timeouts and billing controls where available, and reconcile receipts; the local ledger tracks reservations while provider controls enforce spending limits. Do not assume exhausted credits automatically terminate compute safely.
 
 For portable sessions, save model, optimizer, scheduler, AMP scaler if used, epoch/step, random states, data-sampler position, config, split hash and code version. Upload atomically, verify checksum/loadability, then terminate compute. Save `latest` and `best-development` separately. Resume only with compatible state and verified manifests. Cached feature jobs are independently restartable by protein.
 
-Seven $30 balances nominally total $210; this plan retains a $200 cap and does not assume balances can be pooled or used interchangeably. Provider, credit terms, ownership, current balances and cross-session storage remain unresolved. No account creation, credit workaround or paid execution is part of this plan.
+Seven $30 balances nominally total $210; this plan retains a $200 cap, with each balance subject to its own terms and authorized use. Provider, credit terms, ownership, current balances and cross-session storage remain unresolved. No account creation, credit workaround or paid execution is part of this plan.
 
 ## 10. Thirty-day work sequence
 
@@ -248,7 +248,7 @@ Seven $30 balances nominally total $210; this plan retains a $200 cap and does n
 | Days 25–27 | Frozen test and conditional external test | No test-guided tuning; failures retained. |
 | Days 28–30 | Report, failure gallery and partner evaluation specification | Claim limited to actual evidence and supported scope. |
 
-Dates are sequencing targets, not guarantees. Data acquisition and reconstruction problems can consume the month. Preserve the gate order rather than skipping validation to meet a calendar date. One owner can implement this sequence; parallel agents are not assumed.
+Dates are sequencing targets subject to the validation gates. Data acquisition and reconstruction problems can consume the month. Preserve the gate order rather than skipping validation to meet a calendar date. One owner can implement this sequence; parallel agents are not assumed.
 
 ## 11. What could make this competitive
 
@@ -260,15 +260,15 @@ Dates are sequencing targets, not guarantees. Data acquisition and reconstructio
 | Learned ranking of fixed candidates | May improve shortlist quality without retraining a generator | Same-candidate comparison beats simple detector/linear scoring. |
 | Cached computation and small heads | May improve practical accuracy per dollar | Measured end-to-end cost curve, including preprocessing and failures. |
 
-These are falsifiable proposals, not established unique inventions. [Seq2Pocket](https://github.com/skrhakv/seq2pocket) already converts residue predictions to spatial sites; [Lacuna](https://github.com/mooreneural/lacuna) already combines ensembles, detection, grouping and fitted ranking. A defensible contribution must be established against these relevant alternatives.
+These proposals require comparison with existing methods. [Seq2Pocket](https://github.com/skrhakv/seq2pocket) already converts residue predictions to spatial sites; [Lacuna](https://github.com/mooreneural/lacuna) already combines ensembles, detection, grouping and fitted ranking. Measure the contribution against these relevant alternatives.
 
 ## 12. What happens after the first result
 
 A positive result leads to a narrowly scoped blinded partner evaluation with pre-agreed targets, comparator and experimental decision. Lab work needs a separate quote and budget. Obtain appropriate rights to use resulting measurements before treating them as training assets.
 
-A stronger long-term system would use paired measurements of ligand/mutation effects on states and function. Equilibrium populations require population-sensitive evidence; kinetics require time-dependent evidence. Pocket labels alone cannot supervise those claims. A protein-binder design business requires an additional design/production/assay workflow whose benefit from Ember must be demonstrated.
+A stronger long-term system would use paired measurements of ligand/mutation effects on states and function. Equilibrium populations require population-sensitive evidence; kinetics require time-dependent evidence. These tasks need labels beyond pocket-site annotations. A protein-binder design business requires an additional design/production/assay workflow whose benefit from Ember must be demonstrated.
 
-A negative or inconclusive result still yields a baseline, dataset audit and diagnosis. Fix a verified bottleneck before escalating compute. Do not convert development improvements, structural pictures, partner interest or earlier SENBA results into Ember validation.
+A negative or inconclusive result still yields a baseline, dataset audit and diagnosis. Fix a verified bottleneck before escalating compute. Ember validation uses the declared frozen evaluation; development results, structural inspection and prior SENBA work guide the next experiment.
 
 Final release package: immutable manifests, pinned environments, trained checkpoint if successful, raw predictions, per-target metrics and failures, paired uncertainty, cost receipts, ablations, representative structures, limitations and a reproducible report. Investors and partners should be able to trace every headline to these artifacts.
 

@@ -26,7 +26,7 @@ result = {
     "overviewEstimates": report["sections"]["overview"]["payload"],
     "limitations": manifest["limitations"] + [
         "Only two classified shot events survived the current inference thresholds; this is not a complete contact count.",
-        "The model-labelled serve within this mid-rally excerpt is an unverified prediction.",
+        "The model-labelled serve within this mid-rally excerpt awaits manual review.",
         "Court distances and ball speeds are unavailable without sufficient calibration evidence.",
         "Player A/B identities can switch through occlusion; labels are not verified person identities.",
     ],

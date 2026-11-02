@@ -1,6 +1,6 @@
 # Dynamics sources and credits
 
-SENBA fine-tunes MarS-FM. The saved Studio examples compare model endpoints with recorded mdCATH simulation frames. The scientific models and data are credited below; the application does not claim to have created them.
+SENBA fine-tunes MarS-FM. The saved Studio examples compare model endpoints with recorded mdCATH simulation frames. The scientific models and data used by the application are credited below.
 
 ## SENBA and Studio
 
@@ -41,4 +41,4 @@ MarS-FM identifies its multi-head attention implementation as derived from Meta 
 
 mdCATH-derived coordinates in Studio retain attribution to Mirarchi, Giorgino and De Fabritiis, *mdCATH: A Large-Scale MD Dataset for Data-Driven Computational Biophysics* (Scientific Data, 2024), [DOI:10.1038/s41597-024-04140-z](https://doi.org/10.1038/s41597-024-04140-z), under CC BY 4.0. Studio selects, aligns and reformats the simulation coordinates for display. Model predictions are separate derived outputs.
 
-Weights and bulk trajectories are downloaded separately using the pinned release receipts. A software license for a wrapper does not replace the terms of its model or dataset.
+Weights and bulk trajectories are downloaded separately using the pinned release receipts. Model and dataset terms apply separately from the wrapper’s software license.

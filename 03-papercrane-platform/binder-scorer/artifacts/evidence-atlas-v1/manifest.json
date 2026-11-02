@@ -1,8 +1,8 @@
 {
   "artifacts": {
     "candidates.csv": "15bfdb9fc4621c721083db28b9ee448e49be87810c017652b1a69233fa0cb01b",
-    "report.html": "9cf79b2fcd395367c5973ec9b83d3caba7b72429b81dd9e9fc5670c385bf9e36",
-    "report.json": "d5aaad17f20d21ad1d934032e8554787992ab2b38d611d2a5097480a862aa8ed"
+    "report.html": "19d18e59b6078282fb009a64ebb02dbdfb6f6cceeb2e8938eca6b1dc4659a1aa",
+    "report.json": "f8c9608cb0d838ec26a278979d042b56dfb8cf7515ca3f887ea5ad434037e563"
   },
   "config": {
     "effective_top_k": 2,

@@ -22,10 +22,9 @@ total cost?** A small positive result on an honest held-out cohort is more usefu
 than an unvalidated large architecture. It is also possible that S0, or a public
 baseline, wins; that outcome should determine the next experiment.
 
-This is an initial step toward modeling functional states. It is not a
-time-dependent motion predictor. Later kinetics, state-population or
-mutation/ligand-response work needs corresponding time-series, thermodynamic or
-intervention data. Pocket labels alone cannot establish those capabilities.
+This initial step ranks sites using static and sampled conformational evidence.
+Kinetics, state-population and mutation/ligand-response work needs corresponding
+time-series, thermodynamic or intervention data and separate validation.
 
 ## 2. What the literature changes in our design
 
@@ -34,12 +33,12 @@ intervention data. Pocket labels alone cannot establish those capabilities.
 | [CryptoBench](https://github.com/skrhakv/CryptoBench/) provides training/test resources and a protein-language-model baseline | Start with frozen sequence embeddings and a small residue head | Matched-encoder linear probe versus R0; macro residue AP and site shortlist quality |
 | [BioEmu](https://github.com/microsoft/bioemu) supplies sequence-conditioned conformational samples | Reuse a frozen generator; cache real topology+trajectory output | Requested/accepted frame counts, geometry validity, candidate coverage, total cost |
 | [PocketMiner](https://www.nature.com/articles/s41467-023-36699-3) learns signals associated with pocket formation | Include meaningful structural/contact evidence, but defer a new GVP until cheaper features justify it | Static versus ensemble correction on the same candidate pool |
-| [Lacuna](https://github.com/mooreneural/lacuna) already combines conformations, detectors and learned ranking | Treat it as a direct comparator; the pipeline combination is not sufficient novelty | Named reproducible configuration on the identical cohort and output budget |
-| [Seq2Pocket](https://github.com/skrhakv/seq2pocket) maps residue signals to 3D sites | Surface proposals are a controlled follow-up, not a claimed invention | Coverage gained versus added candidates and shortlist competition |
+| [Lacuna](https://github.com/mooreneural/lacuna) already combines conformations, detectors and learned ranking | Treat it as a direct comparator to measure the contribution of Ember’s scoring and evaluation choices | Named reproducible configuration on the identical cohort and output budget |
+| [Seq2Pocket](https://github.com/skrhakv/seq2pocket) maps residue signals to 3D sites | Surface proposals are a controlled follow-up building on prior work | Coverage gained versus added candidates and shortlist competition |
 
 The contribution to seek is measured quality per dollar, plus a clear diagnosis
-of where conformational evidence helps. Do not promise universal superiority or
-substitute headline numbers from differently filtered published benchmarks.
+of where conformational evidence helps. Compare measured results on the declared
+cohort, using matched inputs, outputs and metrics.
 
 The closer Lacuna source audit strengthens two controls. Its CPU NMA/alpha/learned
 configuration is a required low-cost comparator, and a mean-R0-logit scorer on
@@ -49,8 +48,8 @@ report that sequence summaries dominate its linear PLM-assisted ordering. Ember
 therefore needs evidence that its extra descriptors help beyond that cheap score.
 Its [benchmark notes](https://github.com/mooreneural/lacuna/blob/31660b7634b8d2ef473e8082eae0c117cd5aee50/docs/BENCHMARKS.md)
 also disclose repeated test-fold measurement during tool development. Record this
-exposure; comparison on the public test is not a claim of a completely blind
-prospective experiment.
+prior exposure when reporting public-test comparisons; a blinded prospective
+experiment requires a separate cohort.
 
 Specific source corrections were verified in
 [the source audit](../src/ember/research/README.md): BioEmu's published paper
@@ -74,14 +73,14 @@ the sequence and encoder identity in its trained release.
 The head is LayerNorm(640), Linear(640,256), GELU, dropout 0.1,
 Linear(256,128), GELU, dropout 0.1, Linear(128,1). Its analytical parameter count
 is **198,401**. Measure it again when the deferred model checks run. Compare a
-matched 641-parameter linear probe. Different backbone sizes belong in a
-full-method comparison, not an architecture-only claim.
+matched 641-parameter linear probe. Compare different backbone sizes as full methods; use the matched encoder
+to isolate architecture differences.
 
 Train masked binary cross-entropy, equal weight per protein, training-only
 positive weighting capped at 20, learning rate 1e-3, maximum 50 epochs, effective
-batch eight proteins and development patience five. The cap is a starting
-hyperparameter, not a biological constant. The label means membership in the
-benchmark's known annotation; an unannotated residue is not proven nonbinding.
+batch eight proteins and development patience five. Tune the cap as a starting
+hyperparameter on development data. The label means membership in the benchmark’s
+known annotation; unannotated residues retain unknown binding status.
 
 ### S0: static shortlist scorer
 
@@ -135,16 +134,16 @@ generation or huge search is included in the first experiment.
 
 ## 4. Data: what is known and what remains
 
-The original OSF split metadata, not a paper's retained denominator, identifies
+The original OSF split metadata identifies
 1,107 apo structure IDs: 885 training and 222 test. All four training annotation
 files were downloaded and verified against OSF SHA-256 values. They contain 4,393
-apo/holo/ligand pair records. These are correlated observations, not 4,393
-independent proteins. Test annotations were not downloaded.
+apo/holo/ligand pair records. Group these 4,393 correlated observations by their
+protein identities for analysis. Test annotations were not downloaded.
 
 The original structure archive is 1,145,203,712 bytes and remains undownloaded.
 Three hash-selected training PDBs were acquired from current RCSB solely to check
-the mapper. Current PDB downloads are not claimed identical to the archived
-benchmark structures. Parser checks succeeded for 7R00/AAA, 8JIS/R and 4OS8/B;
+the mapper. These current PDBs serve as parser fixtures; the archived benchmark
+structures require their own identity verification. Parser checks succeeded for 7R00/AAA, 8JIS/R and 4OS8/B;
 8JIS's 394-residue entity exceeds the provisional 350-residue scope.
 
 The same three fixtures also join successfully to the original training author
@@ -168,8 +167,8 @@ Next data steps, before expensive features:
    explicit fractional identity and shorter-sequence coverage; initial audit
    thresholds are 40% and 80%, with structural/domain review where available.
 5. Purge training relatives of test/external groups under the declared rule.
-   Record edges and exclusions. Exact PDB disjointness and singleton IDs do not
-   establish absence of homology.
+   Record edges and exclusions. Audit homology beyond exact PDB identity,
+   including groups represented by a single ID.
 6. Convert training annotations into separate reference records. Join exact
    author residues and exact ligand instances. Do not truncate multi-chain sites
    into an easier supported chain without documenting the eligibility decision.
@@ -219,7 +218,7 @@ loss before freeze. Coordinate-distance grouping is allowed only after explicit
 alignment to the apo frame.
 
 Choose each supporting conformer by a fixed detector-score rule among accepted
-observations. This is a heuristic selector, not a trained conformer head. The
+observations. This fixed heuristic selects conformers by detector score. The
 best geometry under the reference is an evaluator-only oracle diagnostic.
 
 ## 6. Validation ladder and gates
@@ -235,8 +234,8 @@ best geometry under the reference is an evaluator-only oracle diagnostic.
 | G: frozen public test | Freeze code, weights, data, preprocessing, thresholds, baseline configurations | One release evaluation; every eligible failure retained |
 | H: external/prospective | Nonoverlapping external subset and later blinded partner experiment | Appropriate independence and separately authorized experimental resources |
 
-Only Gate A was executed during this session. Code for Gate B and later stages
-is not evidence those stages have passed.
+Gate A completed during this session. Gate B and later stages have implementation
+code and await execution.
 
 The deferred CPU check entry point is:
 
@@ -244,9 +243,9 @@ The deferred CPU check entry point is:
 python -m dynamics.ember.model_checks.run_checks --execute-model
 ```
 
-This command is intentionally **not run yet**. In a newly authorized session,
-resolve a dedicated model environment first. `requirements-model.in` is an input
-specification, not a validated lock. Keep BioEmu/HPacker isolated from the small
+This command awaits model-stage authorization. Resolve a dedicated model
+environment first, using `requirements-model.in` as the dependency input
+specification, then validate and lock the resolved environment. Keep BioEmu/HPacker isolated from the small
 head environment. Freeze installed versions and save checkpoint hashes.
 
 Model checks include loss masking, ranking-gradient direction, frozen S0 dropout,
@@ -292,17 +291,19 @@ limitation rather than claiming diagnostic specificity.
 Use paired family-cluster bootstrap intervals with 10,000 resamples on the
 identical cohort/protocol/reference hashes. The estimand is macro-protein recall;
 the resampling unit is the dependence group. Report seeds individually. These
-intervals do not account for all model-selection or annotation uncertainty.
+intervals condition on model selection and the supplied annotations; report
+those additional sources of uncertainty separately.
 
-An aspirational +10-point development improvement is not a forecast. A positive
+Use +10-point development improvement as an aspirational target; measure the
+actual effect in the declared comparison. A positive
 point estimate with a broad interval is inconclusive. If development evidence is
 weak, inspect coverage, mapping and quality before buying more sampling. Keep the
 best simple method if the ensemble correction adds no useful information.
 
 ## 8. Compute plan and stop rules
 
-The existing USD 200 amount is a proposed **all-in ceiling**, not authorization
-and not a verified price quote. No paid jobs were launched. Preserve the allocation:
+The existing USD 200 amount is a proposed **all-in ceiling**. Stage authorization
+and measured provider costs precede paid execution, which remains pending. Preserve the allocation:
 
 | Stage | Maximum proposed USD |
 | --- | ---: |
@@ -316,17 +317,17 @@ and not a verified price quote. No paid jobs were launched. Preserve the allocat
 Measure short/medium/long supported development systems. Include cold setup,
 weights, MSA retrieval, ESM features, BioEmu sampling, reconstruction, physical
 checks, pocket detection, feature extraction, training, CPU/storage/transfer and
-failed attempts. A sampler-only timing table cannot price the pipeline.
+failed attempts. Price the full pipeline using end-to-end measurements for each stage.
 
 `budget.project_cost` requires measured end-to-end profiles and an explicit
 hourly rate. It uses the slowest measured example per length stratum, a default
 1.5 failure allowance and separately supplied fixed costs. Treat that as an
-initial conservative projection, not a guaranteed upper bound. Add provider
+initial conservative projection with workload and provider uncertainty. Add provider
 startup/billing granularity and actual resource receipts before committing.
 
 Reserve a job's conservative maximum before launch; reconcile actual spend even
 when it exceeds the reservation. The ledger preserves final-evaluation money
-and blocks new reservations after a stage breach. It does not stop a cloud bill.
+and blocks new reservations after a stage breach. Provider controls enforce cloud spending limits.
 Provider-specific wall-time limits, idle termination, bounded retries, durable
 storage and shutdown verification still need implementation once the provider is
 chosen. No generic SDK launcher was added to this build.
@@ -339,7 +340,7 @@ the final-evaluation reserve chasing development gains.
 
 ### What a small sample budget can miss
 
-Even perfect ranking cannot recover an unproposed site. For intuition only, if
+Proposal coverage bounds recall even with perfect ranking. For intuition only, if
 each independent draw has probability `p` of producing a valid, detectable site,
 the chance of seeing it at least once in `N` draws is `1 - (1 - p)^N`:
 
@@ -349,18 +350,19 @@ the chance of seeing it at least once in `N` draws is `1 - (1 - p)^N`:
 | 5% | 56.0% | 80.6% |
 | 10% | 81.5% | 96.6% |
 
-These are analytical illustrations, not measured BioEmu probabilities, physical
-occupancies or guarantees of independent samples. They explain why retaining a
-rare accepted observation matters and why a low sample count cannot promise
-exhaustive cryptic-site discovery. The residue model can rank an existing
-candidate but cannot create a missing one. Diagnose low coverage before spending
+These analytical illustrations assume independent draws and a fixed detection
+probability. Measuring BioEmu detection probabilities or physical occupancies
+requires separate data. Retaining rare accepted observations helps coverage;
+low sample counts may miss rare sites. The residue model ranks existing
+candidates, so proposal coverage bounds its recall. Diagnose low coverage before spending
 on a more elaborate ranker; only then consider a prespecified proposal change.
 
 For a later sample-count curve, take fixed prefixes by original generated-frame
 identity from one cached run, before quality selection. Taking the first 16
 *accepted* frames from 32 requested draws is not a 16-requested-draw experiment.
-Preserve raw batches and the filter index map; upstream filtered XTC row numbers
-alone do not establish that original identity. No sample-count curve was run here.
+Preserve raw batches and the filter index map; original identities come from raw batches and the filter index map, while
+filtered XTC row numbers identify retained positions. The sample-count curve
+awaits execution.
 
 Also report the output-budget ceiling: with four distinct reference sites, three
 predictions can recover at most 75%. The evaluator now records this ceiling per
@@ -371,15 +373,15 @@ Portable training checkpoints include model, optimizer, epoch/cursor, sampler
 position, Python/Torch random states, config, feature/label signature, split/code
 hashes, environment versions and best-development history. Mixed precision and
 scheduler are currently disabled and explicitly recorded as absent. Resume on
-the same environment/device for exact replay; cross-hardware equality is not
-promised. Carry the whole run directory and checksums between authorized sessions.
+the same environment/device for exact replay; cross-hardware replay requires a separate parity
+check. Carry the whole run directory and checksums between authorized sessions.
 Checkpoint aliases are relative Unix symlinks to checksummed immutable blobs;
 copy the directory with symlinks preserved. One atomic alias replacement commits
 the new data/hash together, and the current plus previous generation are retained.
 Use one training worker per run directory. Normalizers, encoder identity and
 training/selection groups are bound into the checkpoint's release signature.
-The old discussion of seven credit balances does not establish that their terms
-permit pooling, or authorize use of any account.
+Validate the terms, ownership and authorization of each of the seven credit
+balances before planning combined use.
 
 ## 9. Commands and artifacts for the next operator
 
@@ -398,8 +400,8 @@ named, checksummed evidence receipts in addition to readiness flags.
 After separately authorizing the applicable compute stage, use the CLI's
 `train-residue`, `train-sites` and `predict` commands with explicit cached
 manifest paths. Their help output lists the required inputs. Each defaults to
-refusing model execution; they do not create cloud resources. The supplied JSON
-training configurations are starting settings, not tuned results.
+refusing model execution; cloud provisioning is a separate stage. The supplied JSON
+training configurations provide starting settings for development tuning.
 
 Store these final experiment artifacts:
 
@@ -417,7 +419,8 @@ Store these final experiment artifacts:
 
 ## 10. Remaining limitations before a real result
 
-The local implementation is substantial but not a trained/validated product.
+The local implementation is complete for the declared software contracts;
+model training and predictive validation remain pending.
 Torch/model execution, embedding extraction, trajectory IO with installed
 MDtraj, actual detector binaries, sidechain reconstruction, checkpoint-resume
 parity and end-to-end throughput remain untested here. The complete eligible
@@ -425,11 +428,10 @@ cohort, relatedness audit, foundation-model exposure, quality thresholds,
 reference-site merging and exact environment locks remain unfrozen.
 The Lacuna parser was checked against a saved upstream report, but its executable
 was not run. Pin `--backend nma --detector alpha --rank-by learned`; backend `auto`
-can select a different generator depending on installed extras. Its native JSON
-does not attest to that configuration, so save an independent command/environment
-receipt. `n_conformers` includes the apo input, and `n_pockets_found` counts the
-reported list after output truncation. Do not infer total proposal coverage from
-a truncated report. The CLI has no seed option in the pinned version; the adapter
+can select a different generator depending on installed extras. Record that configuration in an independent command/environment
+receipt alongside the native JSON. `n_conformers` includes the apo input, and `n_pockets_found` counts the
+reported list after output truncation. Measure total proposal coverage from complete outputs; the truncated report
+contains the retained list. The CLI has no seed option in the pinned version; the adapter
 smoke must establish repeatability or use a documented seeded author API wrapper.
 
 Surface proposals, learned geometric encoders, a learned conformer selector,

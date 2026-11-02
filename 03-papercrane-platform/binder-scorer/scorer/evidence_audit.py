@@ -1,7 +1,7 @@
 """Audit supplied candidate rankings without fitting or inventing a scoring model.
 
 Ranks are compared only on the common observed cohort. Rank envelopes describe
-variation across supplied methods; they are not calibrated confidence intervals.
+variation across supplied methods. Confidence calibration requires separate evaluation.
 This module is standard-library-only and performs no I/O.
 """
 
@@ -158,7 +158,7 @@ def build_audit(payload: Any, *, top_k: int = 10) -> dict:
     if len(families) < 2:
         warnings.append("Fewer than two declared evidence families: cross-family agreement cannot be assessed.")
     if len(families) < len(methods):
-        warnings.append("Some methods share an evidence family; their agreement is not independent confirmation.")
+        warnings.append("Some methods share an evidence family and may share errors.")
     if len(cohort) <= top_k:
         warnings.append("The common cohort does not exceed top_k; this cutoff cannot distinguish a smaller shortlist.")
 
@@ -244,12 +244,12 @@ def build_audit(payload: Any, *, top_k: int = 10) -> dict:
         "coverage_by_origin": coverage_by_origin,
         "warnings": warnings,
         "interpretation": [
-            "This is an audit of supplied computational rankings, not an estimated probability of binding.",
-            "Rank envelopes are descriptive ranges across methods and exact ties, not confidence intervals.",
-            "Evidence completeness is the observed fraction of declared methods, not predictive confidence.",
-            "Agreement can reflect shared errors. Declared evidence families are metadata, not proof of independence.",
-            "Recorded provenance is a user-supplied attribution, not an independently verified result.",
+            "This report audits supplied computational rankings. Binding-probability calibration requires outcome data.",
+            "Rank envelopes describe best-to-worst positions across methods, including exact ties. Statistical confidence intervals require separate estimation.",
+            "Evidence completeness measures the observed fraction of declared methods.",
+            "Agreement can reflect shared errors. Evidence families are supplied metadata; method independence requires separate verification.",
+            "Provenance records the supplied attribution; execution verification remains separate.",
             "Rank positions apply only to the named common cohort and can change when that cohort changes.",
-            "No fitted model, literature prior, missing-value imputation, or new composite score is used.",
+            "The audit compares supplied scores directly, retaining explicit missingness and exact ties.",
         ],
     }

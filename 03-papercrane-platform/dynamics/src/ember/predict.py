@@ -162,8 +162,8 @@ def predict_prepared(
 ) -> Prediction:
     """Return three by default; explicitly request five for research recall@5.
 
-    No reference-file argument exists. OS-level isolation still requires a worker
-    with reference storage unmounted; an API boundary is not a security sandbox.
+    The API accepts input caches and checkpoints. OS-level isolation requires a
+    worker with reference storage unmounted.
     """
     policy.require_model_execution("Site ranking inference")
     if type(top_k) is not int or top_k < 1:

@@ -2,8 +2,7 @@
 
 The first working component of the research selector workbench. It compares
 candidate rankings supplied by researchers, audits attribution and missingness,
-and exports reproducible evidence. It does not train a new binder model or
-generate a composite score.
+and exports reproducible evidence from those supplied scores.
 
 ## Run the demonstration
 
@@ -69,9 +68,8 @@ Each method declares:
 - `units`: recorded scale; use `unitless` when appropriate.
 - `settings`: a JSON object recording relevant run settings.
 
-Family assignments come from the researcher. Different family names do not
-prove independence. Repeated runs or related scores from one producer should
-not masquerade as independent families.
+Family assignments come from the researcher; independence requires separate
+verification. Group repeated runs or related scores from one producer together.
 
 Each candidate declares `id`, `origin`, `provenance`, and `scores`.
 `provenance` is required and is one of:
@@ -80,8 +78,8 @@ Each candidate declares `id`, `origin`, `provenance`, and `scores`.
 - `unknown`: attribution is insufficient; always excluded from comparison.
 - `synthetic`: excluded in research mode; allowed only in explicitly labelled demonstrations.
 
-Recorded provenance is an assertion, not an independent verification. The audit
-never silently upgrades missing provenance to recorded.
+Recorded provenance is a supplied attribution. Execution verification remains
+separate, and missing provenance remains unknown.
 
 Every candidate must include an observation object for every declared method:
 
@@ -108,7 +106,8 @@ keys are errors, rather than implicit zeros or implicit missing observations.
 3. Preserve the whole occupied rank interval for exact ties. An ID does not
    decide whether a tied candidate crosses the top-k boundary.
 4. Report each candidate's best–worst occupied rank over methods. This is a
-   descriptive envelope, not a confidence interval or probability.
+   descriptive envelope. Confidence intervals and probabilities require
+   separate estimation.
 5. Classify agreement only when at least two evidence families are declared.
    No majority vote is used; duplicating a method cannot outvote another family.
 
@@ -149,10 +148,10 @@ scores against existing outcome labels. See the [development gates](plans/2026-0
 for the sequence from these diagnostics to an evaluated model.
 
 This release implements evidence contracts, descriptive ranking diagnostics,
-source coverage, local export, and a reproducible demonstration. It does not
-establish improved binder recovery, calibrated uncertainty, novelty, or compute
-savings. Existing scorer implementations and their historical results are
-unchanged and are not automatically imported into this report.
+source coverage, local export, and a reproducible demonstration. Binder recovery,
+uncertainty calibration, research novelty and compute savings remain evaluation
+goals. Existing scorers and historical results remain separate from the
+supplied-score input to this report.
 
 The next milestones remain separate, measurable research tasks:
 
@@ -167,5 +166,4 @@ The next milestones remain separate, measurable research tasks:
 5. Evaluate computational assessment allocation through offline replay with
    hidden metrics, recorded costs, strong scheduling controls, and frozen splits.
 
-No performance or statistical guarantee is implied by completing this software
-foundation. Published claims require the corresponding held-out evaluations.
+Performance and statistical conclusions require the corresponding held-out evaluations.

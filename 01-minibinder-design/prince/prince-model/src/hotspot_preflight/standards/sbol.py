@@ -50,7 +50,8 @@ that are owned but deliberately not resolvable, so neither can be mistaken for
 an ontology lookup. The relevant open standards work is **SEP 033**
 (non-canonical proteins); if a real term is ever minted, retire these.
 
-Nothing in this module claims anything about iGEM part-submission requirements.
+This module exports SBOL representations; current iGEM submission requirements
+are documented by the competition.
 """
 
 from __future__ import annotations

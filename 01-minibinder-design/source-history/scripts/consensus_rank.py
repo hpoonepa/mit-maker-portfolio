@@ -18,9 +18,9 @@ packages joined to 5G51_FINAL_20_DOCUMENTED.csv; see METHODS at the bottom)
     solublempnn raw       AUC 0.463  p 0.83   <- the raw score is noise
     protenix_ipTM         AUC 0.500  p 1.00   <- zero expression signal
 
-  These two axes are retrospective hypotheses for this panel. One positive
-  and nonsignificant expression comparisons do not establish general binding
-  or expression predictors.
+  These two axes are retrospective hypotheses derived from one positive
+  and statistically nonsignificant expression comparisons. Prospective
+  evaluation remains pending.
 
 USAGE
     python consensus_rank.py designs.csv -o ranked.csv
@@ -42,7 +42,7 @@ from dataclasses import dataclass, field
 # ----------------------------------------------------------------------------
 # Gates. Set just below the one design that bound so it is never excluded.
 # These are ONE observation. Re-derive with --calibrate as soon as you have
-# more ground truth; do not treat them as validated thresholds.
+# more ground truth; prospective threshold validation remains pending.
 # ----------------------------------------------------------------------------
 GATES = {
     "protenix_iptm":        (">=", 0.93,  "binder scored 0.9490 (rank 1/17)"),
@@ -370,6 +370,6 @@ if __name__ == "__main__":
 # CAVEAT: one design bound, out of 35. The binding axis rests on that single
 #   observation and its ranks were computed after the fact. The expression
 #   axis has 17-18 outcomes and NOTHING reaches p<0.05. This script encodes a
-#   working hypothesis, not a validated model. Run --calibrate on every new
+#   working hypothesis for further testing. Run --calibrate on every new
 #   batch of ground truth.
 # ----------------------------------------------------------------------------

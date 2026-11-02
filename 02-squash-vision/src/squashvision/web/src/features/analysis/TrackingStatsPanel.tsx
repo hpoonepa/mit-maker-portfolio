@@ -71,7 +71,7 @@ export function TrackingStatsView({ stats, matchId, onSeekVideo }: { stats: Trac
         })}
         <div className="tracking-stats__metric"><dt>Estimated ball speed</dt><dd>{speed.medianMps === null ? "Unavailable" : <>{speed.medianMps.toFixed(1)} <span>m/s</span></>}</dd><small>{speed.medianMps === null ? "No usable calibrated samples" : `Median · ${(speed.medianMps * 3.6).toFixed(0)} km/h · ${percent(speed.coverage)} coverage`}</small></div>
       </dl>
-      <p className="tracking-stats__note">{stats.players.some((player) => !player.identityVerified) ? "A/B identities unverified. " : ""}Movement estimates cover tracked portions. Ball speed assumes motion on the floor plane.</p>
+      <p className="tracking-stats__note">{stats.players.some((player) => !player.identityVerified) ? "Player identity review pending. " : ""}Movement estimates cover tracked portions. Ball speed assumes motion on the floor plane.</p>
       {!stats.calibrationAvailable ? <p className="tracking-stats__unavailable">Court calibration required for metres and speed. <Link to={`/matches/${matchId}/setup`}>Open court setup</Link></p> : null}
       <details className="tracking-stats__details" onToggle={(event) => setExpanded(event.currentTarget.open)}>
         <summary>Contact positions <span>{stats.contacts.filter((contact) => contact.position !== null).length}/{stats.contacts.length} mapped</span></summary>

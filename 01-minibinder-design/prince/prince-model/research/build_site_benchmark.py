@@ -308,7 +308,7 @@ def build_labels(ds: pd.DataFrame) -> pd.DataFrame:
     log(f"          (which designs: {tgt_na})")
     log("          = the 120 mature GDF-8 designs; the antigen aggregated and")
     log("            bound bare assay surfaces, so neither vendor produced an")
-    log("            interpretable result. Not evidence about the site.")
+    log("            interpretable result. Site outcomes remain unresolved.")
     d = d[~excl_na].copy()
     d["binder_final"] = d.binder_final.astype(bool)
     log(f"          remaining                                    n={len(d)}")

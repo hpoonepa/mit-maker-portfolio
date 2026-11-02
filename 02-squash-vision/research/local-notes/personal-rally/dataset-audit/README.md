@@ -13,7 +13,7 @@ The archive contains annotations from the ElShorbagy–Farag Canary Wharf 2020 b
 | test | 8 | 8 | 8 |
 | Total | 82 | 82 | 82 |
 
-Every image is 640 × 640. All labels contain one valid class-0 YOLO box within image bounds; no empty labels or byte-identical duplicate images were found. Three spot-checked labels (5280, 5310, 6540) cover visible ball/streak regions. This does not establish the accuracy of all annotations.
+Every image is 640 × 640. All labels contain one valid class-0 YOLO box within image bounds; no empty labels or byte-identical duplicate images were found. Three spot-checked labels (5280, 5310, 6540) cover visible ball/streak regions. The manual review covered those three frames; the remaining labels await review.
 
 Archive metadata describes one class, `ball`, export on 24 November 2024, automatic orientation, stretch to 640 × 640, and no augmentation. It lists CC BY 4.0 and Roboflow project `squashball-jsgth`, version 1. These are local archive statements, not independent verification of ownership or video rights.
 

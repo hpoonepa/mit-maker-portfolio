@@ -14,7 +14,7 @@ export function trackingStatsFixture(overrides: Partial<TrackingStats> = {}): Tr
       { id: "contact-unknown", timestampUs: 16_000_000, proxyTimestampUs: null, sourceFrameIndex: null, hitter: null, hitterConfidence: 0, confidence: .3, position: null, positionMethod: "hitter_feet_at_contact", reason: "unknown_hitter", reviewRequired: true },
     ],
     ballSpeed: { medianMps: 14, p90Mps: 18, sampleCount: 50, excludedSamples: 449, trackedSeconds: 2, coverage: .1, method: "floor_plane_projection", reason: null },
-    coordinateSystem: "front_left_x_right_y_back_metres", limitations: ["Ball height is unavailable.", "Player identities are unverified."],
+    coordinateSystem: "front_left_x_right_y_back_metres", limitations: ["Ball height is unavailable.", "Player identity review pending."],
     ...overrides,
   };
 }

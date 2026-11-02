@@ -64,11 +64,11 @@ Random-control standard deviations describe random patch selection, not uncertai
 
 The connected manifest retained 6,937 interfaces in 1,549 antigen clusters. The cached-feature evaluation used 340 training, 139 validation, and 110 test interfaces, corresponding to 116, 39, and 34 clusters. These counts describe the baseline study, not the later site-ranker training set.
 
-Test macro AUROC is 0.64790 (95% interval 0.62180–0.67218), compared with 0.64500 for exposure alone. Macro AUPRC is 0.13610. Metrics are computed per interface, averaged within cluster, then across clusters. This is a transparent runtime baseline; its modest difference from exposure is not evidence of a substantial advantage.
+Test macro AUROC is 0.64790 (95% interval 0.62180–0.67218), compared with 0.64500 for exposure alone. Macro AUPRC is 0.13610. Metrics are computed per interface, averaged within cluster, then across clusters. The fitted and exposure-only baselines have similar AUROC in this evaluation.
 
 ## Intended use and limitations
 
-Use PRINCE to inspect and prioritize target surfaces for further review. The antibody benchmark does not establish minibinder designability. Transferring site scores to measured minibinder outcomes did not produce a useful predictive result in the supplied study; a separately trained designability model was near chance. No affinity or experimental-success claim follows.
+Use PRINCE to inspect and prioritize target surfaces for further review. The benchmark measures antibody-epitope localization. Transferring site scores to measured minibinder outcomes did not produce a useful predictive result in the supplied study; a separately trained designability model was near chance. Minibinder affinity and success prediction require separate validation.
 
 The structural service uses bound coordinates, limited candidate patches, and the metadata available in each input file. Missing assemblies, incomplete structures, unresolved residues, glycosylation, and conformational changes can alter the practical meaning of a site.
 

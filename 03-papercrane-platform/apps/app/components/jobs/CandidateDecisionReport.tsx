@@ -382,11 +382,11 @@ export function CandidateDecisionReport({
           />
           <div>
             <p className="font-sans text-[9px] text-graphite-soft">
-              Evidence boundary
+              Report scope
             </p>
             <p className="mt-1 font-sans text-[12px] leading-relaxed text-graphite">
-              No wet-lab evidence. This report does not establish binding,
-              specificity, expression, stability, or safety.
+              Computational report. Wet-lab tests for binding, specificity,
+              expression, stability and safety are pending.
             </p>
           </div>
         </div>

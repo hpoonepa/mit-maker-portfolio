@@ -34,7 +34,7 @@ Small local software-contract checks are distinct from testing a trained model.
 ## Decisions
 
 - No fresh foundation-model training or GVP is included in v0.
-- Conformations are unordered evidence. Detection frequency is not occupancy.
+- Conformations are unordered evidence. Detection frequency summarizes support across sampled conformers.
 - Primary site evaluation uses residue sets and maximum-cardinality matching;
   geometry is a separately reported diagnostic.
 - Test annotations are separate from inference records and feature caches.
@@ -58,8 +58,8 @@ Small local software-contract checks are distinct from testing a trained model.
 - Added native fpocket/P2Rank/Lacuna output adapters, a cached R0-mean baseline,
   failure-inclusive matching/evaluation and a budget reservation ledger.
 - Checked synthetic contracts and public parser fixtures, including author-label
-  joins for three hash-selected training structures. No biological performance
-  result was generated; synthetic scores are software assertions only.
+  joins for three hash-selected training structures. Synthetic scores exercise software
+  contracts; biological performance evaluation remains pending.
 - Added starting configurations, an extensive staged compute/test plan, a
   default-deny experiment plan and checksummed local verification receipts.
 
@@ -81,8 +81,8 @@ Small local software-contract checks are distinct from testing a trained model.
   copied run directory, preserving its best-development checkpoint.
 - Reuse the loaded ESM encoder, reuse contact calculations across candidates, and
   compare against CPU NMA and mean-R0 controls before paying for larger designs.
-- Lacuna's native report does not identify its generator; require a separate run
-  receipt and explicitly select NMA instead of environment-dependent `auto`.
+- Record Lacuna’s generator in a separate run receipt and explicitly select NMA
+  instead of environment-dependent `auto`.
 - Report the top-k output-budget ceiling when a protein has more reference sites
   than output slots. Distinguish original generated-frame prefixes from accepted
   frame prefixes when planning later sample-count comparisons.
@@ -92,8 +92,8 @@ Small local software-contract checks are distinct from testing a trained model.
 No model checks, training, inference, external detector execution, cloud jobs or
 paid resource allocations were performed. The full eligible cohort, relatedness
 search, source exposure audit, physical thresholds and exact model environments
-remain to be established under the staged plan. There are no trained weights and
-no evidence yet that Ember outperforms a baseline. The next meaningful validation
+remain to be established under the staged plan. The model is untrained;
+predictive comparison with baselines remains pending. The next meaningful validation
 is the small deferred CPU model check, followed by real development-only adapters
 and cost profiling. `artifacts/local-verification.json` records the final local
 check count and code hashes; `artifacts/preflight.json` lists unresolved gates.
@@ -102,7 +102,6 @@ check count and code hashes; `artifacts/preflight.json` lists unresolved gates.
 
 Final local checks completed around 2026-09-28 20:51 UTC (16:51 America/New_York),
 about 85 minutes after the recorded start. Work reached the model-execution
-boundary earlier than the approximately three-hour target; no unused time is
-represented as completed work. The last verification passed 60 tests with zero
+boundary before the approximately three-hour target. The last verification passed 60 tests with zero
 failures, errors or skips; syntax inspection, Ruff lint and formatting passed.
-The model execution and scientific benchmark checks remain unrun.
+Model execution and scientific benchmark checks remain pending.

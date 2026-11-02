@@ -6,7 +6,7 @@ The installed runtime model remains frozen. This file preserves the dated resear
 
 ## Experiment 1: richer features and task-aligned learning
 
-Use the existing connected-component membership: 340 training, 139 validation, 110 historical test interfaces. Train only on training labels. Select on validation, using component-macro top-1 majority-patch hit, then top-3, then top-10. Write the selected configuration before test evaluation. Test is a retrospective comparison, not a newly untouched holdout; no tuning against its outcomes. The original split does not ensure homology independence.
+Use the existing connected-component membership: 340 training, 139 validation, 110 historical test interfaces. Train only on training labels. Select on validation, using component-macro top-1 majority-patch hit, then top-3, then top-10. Write the selected configuration before test evaluation. The test is a retrospective comparison; keep its outcomes out of tuning. The original split can contain homologous sequences across partitions.
 
 Keep the original surface patch generator and its 3–12 residue footprints for the controlled comparison. Measure the candidate-pool oracle: whether any enumerated patch could satisfy the existing success definitions. Do not shrink patches or redefine success to inflate results. Preserve Jaccard 0.5 suppression and exact label denominators.
 

@@ -440,10 +440,9 @@ export function MetricInterpretation({
       <HowToReadPanel />
 
       <p className="mt-4 border-t border-lattice pt-4 font-sans text-[11px] leading-relaxed text-amber-800">
-        This is a scoring heuristic over predicted structures, not a
-        prediction that the binder will work. It is not a probability of
-        binding and not an experimental success rate. Only a wet-lab assay can
-        tell you whether a design binds.
+        Heuristic score over predicted structures. Binding probability and
+        experimental success require outcome data; a wet-lab assay measures
+        whether the design binds.
       </p>
     </section>
   );

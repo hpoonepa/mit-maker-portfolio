@@ -92,8 +92,8 @@ export async function buildResearchArchive(options: {
     failedFiles: failed,
     notes: [
       "Records created after snapshotAt are excluded. Existing records may change while files are fetched.",
-      "Origin is not scientific validation. Unknown provenance remains unverified.",
-      "A complete archive accounts for the requested files; it does not certify model accuracy or full computational reproducibility.",
+      "Origin records execution provenance. Scientific validation is separate; unknown origins remain unverified.",
+      "Archive completeness tracks requested files. Model accuracy and computational reproducibility require separate verification.",
     ],
     files: entries,
   };

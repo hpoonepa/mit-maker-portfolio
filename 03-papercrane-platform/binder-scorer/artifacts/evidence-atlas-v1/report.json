@@ -429,13 +429,13 @@
   "data_kind": "synthetic_demo",
   "input_sha256": "c52608b1cc8d1113da2591bb73cd441cd89cf76d0d6f20493559beb2003ee3e6",
   "interpretation": [
-    "This is an audit of supplied computational rankings, not an estimated probability of binding.",
-    "Rank envelopes are descriptive ranges across methods and exact ties, not confidence intervals.",
-    "Evidence completeness is the observed fraction of declared methods, not predictive confidence.",
-    "Agreement can reflect shared errors. Declared evidence families are metadata, not proof of independence.",
-    "Recorded provenance is a user-supplied attribution, not an independently verified result.",
+    "This report audits supplied computational rankings. Binding-probability calibration requires outcome data.",
+    "Rank envelopes describe best-to-worst positions across methods, including exact ties. Statistical confidence intervals require separate estimation.",
+    "Evidence completeness measures the observed fraction of declared methods.",
+    "Agreement can reflect shared errors. Evidence families are supplied metadata; method independence requires separate verification.",
+    "Provenance records the supplied attribution; execution verification remains separate.",
     "Rank positions apply only to the named common cohort and can change when that cohort changes.",
-    "No fitted model, literature prior, missing-value imputation, or new composite score is used."
+    "The audit compares supplied scores directly, retaining explicit missingness and exact ties."
   ],
   "method_agreement": [
     {
@@ -512,6 +512,6 @@
   "warnings": [
     "Synthetic demonstration: all numerical results are illustrative.",
     "Rank comparisons cover only the common complete-evidence cohort; excluded candidates are not ranked lower.",
-    "Some methods share an evidence family; their agreement is not independent confirmation."
+    "Some methods share an evidence family and may share errors."
   ]
 }

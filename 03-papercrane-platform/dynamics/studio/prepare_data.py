@@ -46,7 +46,7 @@ with source.open() as handle:
                         "inference_seed": r["inference_seed"], "training_seed": r["training_seed"],
                         "samples": len(r["candidate"]), "units": r["units"], "alignment": r["alignment"],
                         "temperature_kelvin": 450, "trained_lag_saved_frames": 50,
-                        "interpretation": "Saved independent endpoint samples from the reused validation panel; not a physical trajectory"},
+                        "interpretation": "Saved independent endpoint samples from the reused validation panel; coordinate interpolation is for display"},
         })
 out = ROOT / "static/data/examples.json"
 out.write_text(json.dumps({"records": records, "attribution": "Senba / Papercrane; MarS-FM / Valence Labs (MIT); mdCATH (CC BY 4.0)"}, separators=(",", ":"), allow_nan=False))

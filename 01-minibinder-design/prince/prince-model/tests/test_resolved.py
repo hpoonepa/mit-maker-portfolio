@@ -200,7 +200,7 @@ def test_missing_category_emits_exactly_one_site_level_warning(
 def test_missing_category_evidence_distinguishes_absent_from_empty(
     cif_without_unobs_category,
 ):
-    """`None` means the entry does not say; it is not a claim that nothing is missing."""
+    """`None` records missing annotation; an empty set records an explicit empty category."""
     target = load_target(cif_without_unobs_category)
     f = only(check_resolved(target, []), "NO_UNOBS_CATEGORY")
 

@@ -1,6 +1,6 @@
 # SquashVision citations
 
-SquashVision integrates pretrained models and open-source tools. The application, review workflow, calibration, tracking integration and heuristic shot rubric are separate from the upstream model research. No model-training or measured-accuracy claim is made here. Versions below come from the checked-in lockfiles; source links were reviewed on 1 November 2026.
+SquashVision integrates pretrained models and open-source tools. My work covers the application, review workflow, calibration, tracking integration and heuristic shot rubric. The pretrained models are credited below. Versions below come from the checked-in lockfiles; source links were reviewed on 1 November 2026.
 
 ## Models and research
 
@@ -15,13 +15,13 @@ SquashVision integrates pretrained models and open-source tools. The application
 - **Real-image test fixture and derived overlay:** ÉCRANOMADE, [“Teaser Mulhouse ffsquash”](https://commons.wikimedia.org/wiki/File:Teaser_Mulhouse_ffsquash.webm), CC BY 3.0. [Full local attribution and modifications](tests/squashvision/fixtures/ATTRIBUTION.txt). The Commons page could not be retrieved during this review, so its source/license record is retained from the existing local attribution. The test video repeats a real frame, animates a small image patch and adds synthetic impact audio; it is not a natural moving-rally accuracy benchmark.
 - **Personal rally still:** Harsha's own recording, `IMG_4285.mov`; distinct from the professional match demonstration. [Media provenance](assets/PROVENANCE.md) separates recordings, screenshots, synthetic fixtures and derived figures.
 
-- **Historical annotation archive:** a local export names Roboflow project `squashball-jsgth`, version 1, exported 24 November 2024 and labeled CC BY 4.0. Its original download URL and ownership were not independently verified. The archive is not distributed, no training was run, and its labels were not used as validation for the personal footage. The [archived audit](research/local-notes/personal-rally/dataset-audit/README.md) records the distinction.
+- **Historical annotation archive:** a local export names Roboflow project `squashball-jsgth`, version 1, exported 24 November 2024 and labeled CC BY 4.0. The local receipt lacks the original download URL and confirmation of ownership. The archive is not distributed, no training was run, and its labels were not used as validation for the personal footage. The [archived audit](research/local-notes/personal-rally/dataset-audit/README.md) records the distinction.
 
 ## Court geometry and interface references
 
-Court dimensions and line placement used in calibration are documented against World Squash's [Singles Rules 2020, version 2020-02, Appendix 7](https://worldsquashofficiating.com/wp-content/uploads/2023/03/Rules-of-Singles-Squash-2020-V2.pdf). This identifies the implementation's geometry reference; it does not claim to quote the latest competition rules.
+Court dimensions and line placement used in calibration are documented against World Squash's [Singles Rules 2020, version 2020-02, Appendix 7](https://worldsquashofficiating.com/wp-content/uploads/2023/03/Rules-of-Singles-Squash-2020-V2.pdf). The implementation uses the court geometry in that edition.
 
-The [original design notes](docs/design-notes.md) credit the local Lambert wiki and Papercrane work for layout ideas, and [Core Insights](https://coresportsai.com/core-insights), [RallyVision](https://rallyvision.ai/) and [PlaySight's app](https://www.playsight.tv/playsight-app) for match-review workflow inspiration. These are design references, not measured performance comparisons or incorporated third-party code.
+The [original design notes](docs/design-notes.md) credit the local Lambert wiki and Papercrane work for layout ideas, and [Core Insights](https://coresportsai.com/core-insights), [RallyVision](https://rallyvision.ai/) and [PlaySight's app](https://www.playsight.tv/playsight-app) for match-review workflow inspiration. I used these as references for the match-review interface.
 
 ## Software and fonts
 

@@ -74,7 +74,7 @@ def inspect_cryptobench_schema(dataset_path: str | Path) -> dict:
         "pair_records": total,
         "multichain_site_records": multichain,
         "source_sha256": file_hash(dataset_path),
-        "note": "Inventory only; not an eligible cohort or independent sample count.",
+        "note": "Source inventory; eligibility and independent analysis groups require separate audits.",
     }
 
 

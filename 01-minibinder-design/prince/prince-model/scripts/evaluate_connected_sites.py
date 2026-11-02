@@ -3,7 +3,7 @@
 
 No sampling or patch cap. Reports majority-epitope hit and >=50%-epitope
 coverage separately; these answer different questions. No literature labels
-are available, so this is a structural-only evaluation, not an evidence ablation.
+are available, so the evaluation measures structural ranking only.
 """
 from __future__ import annotations
 import argparse

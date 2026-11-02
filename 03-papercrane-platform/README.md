@@ -14,7 +14,7 @@ I added regression checks for both boundaries, then tested the complete path. Th
 
 The demo shows tool search, target entry and a saved structure result. I'm still improving GPU setup and checking the remaining integrations with real runs. RFdiffusion, BindCraft, Boltz and the other scientific tools are credited to their original research teams.
 
-The separately submitted recorded demo shows catalog search and BoltzGen target entry, followed by a separately saved Boltz-2 result from an earlier run. The September verification above is a dated record, not a new live run for this portfolio. Source readiness labels are 12 GA, 39 beta and one catalog-only stub; they do not establish current availability of every tool.
+The separately submitted recorded demo shows catalog search and BoltzGen target entry, followed by a separately saved Boltz-2 result from an earlier run. The recorded tool runs above took place on September 30. The catalog labels 12 integrations GA, 39 beta and one as a stub. Deployment health and scientific performance require separate checks for each tool.
 
 This source-only archive excludes submission videos, images and PDFs.
 

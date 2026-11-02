@@ -20,7 +20,7 @@ hits, which lowered its null and its p-value (0.0071 to 0.0036 at k=5), while
 ``shipped``'s null fell too.
 
 **The leak stratum.** ``cluster_id`` in the manifest is a ``+``-joined *set* of
-accession tokens, so disjoint cluster ids do not imply disjoint antigens:
+accession tokens. Different cluster ids can share an antigen accession:
 ``up:P0DTC2`` (test) and ``up:M1E1E4+P0DTC2`` (train) are different clusters that
 share SARS-CoV-2 spike. 25.0% of test instances share an accession with train or
 val. Passing the manifest makes the test report a leak-free stratum alongside the

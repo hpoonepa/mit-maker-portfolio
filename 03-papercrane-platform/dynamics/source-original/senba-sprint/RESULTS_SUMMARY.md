@@ -8,13 +8,12 @@ The released SENBA checkpoint shows small, consistent endpoint-error gains on
 this eight-protein reused validation panel. The gain persists at K=16, and the
 exploratory statistical energy score also favors SENBA at K=8 and K=16. However,
 the endpoint gain is 42.4% smaller at K=16 than at K=4, and both aligned-C-alpha
-spread summaries decrease. The defensible conclusion is a limited, sampling-aware
-validation result, not a broad improvement in physical protein dynamics.
+spread summaries decrease. The result measures endpoint error, statistical forecast score and spread
+on this reused validation panel, with sensitivity to ensemble size.
 
-The missing training files are not needed to report these completed experiments.
-They are needed for additional trained seeds and training-control experiments.
-These results can strengthen the existing paper, but do not establish novelty by
-themselves or justify a prediction of conference acceptance.
+The completed experiments use the released checkpoint and saved evaluation
+records. Additional trained seeds and training-control experiments require the
+missing original training files.
 
 ## What actually ran
 
@@ -27,20 +26,20 @@ themselves or justify a prediction of conference acceptance.
 - Three additional K=4 blocks per transition on eight concurrent H100 jobs.
   The resulting nested K=4/8/16 ensembles preserve the original four draws.
 - 640 paired K=4 block records, containing 5,120 generated endpoint structures
-  across the two models. This is still only 160 physical transition pairs and
-  eight protein-level analysis units, not 640 independent biological replicates.
+  across the two models. The 640 records are grouped into 160 physical transition pairs and
+  eight protein-level analysis units.
 - Raw and aligned C-alpha arrays, checkpoint/input hashes, frame metadata,
   paired RNG receipts, completion receipts, and derived-prefix provenance saved.
 
-No checkpoint was trained or changed. No independent test-set evaluation was run.
+This evaluation uses frozen checkpoints and previously used validation data.
 
 ## Results
 
 Positive gains below mean source error minus SENBA error. Each protein is weighted
 equally after averaging its 20 transitions. Brackets are conditional 95% percentile
-protein-resampling intervals using 2,000 resamples, not general population or
-training-seed confidence statements. K=4 remains the prespecified primary workload;
-K=8 and K=16 are dependent sampling-sensitivity checks, not new replications.
+protein-resampling intervals using 2,000 resamples with the training seed and
+validation panel fixed. K=4 remains the prespecified primary workload;
+K=8 and K=16 are dependent sampling-sensitivity checks using nested draws.
 
 | Draws per model | Endpoint RMSD gain (angstrom) | Proteins with lower endpoint error | Statistical energy-score gain (angstrom) | Proteins with lower energy score |
 | --- | ---: | ---: | ---: | ---: |
@@ -57,13 +56,13 @@ The endpoint gain decreases from 0.02401 to 0.01383 angstrom as K increases from
 4 to 16. The post-hoc paired cross-K difference in candidate-minus-source deltas
 is +0.01018 angstrom, with conditional protein-resampling interval
 [+0.00272, +0.01763]. This quantifies sensitivity in this nested draw realization;
-it does not establish the mechanism causing that change.
+the mechanism causing that change remains unresolved.
 
 The finite-K-corrected population-mean MSE diagnostic at K=16 changes by -0.22590
 square angstrom, with conditional interval [-0.46080, -0.03177]. Under iid model
 draws, this removes model Monte Carlo variance when estimating squared error of
-the model mean against one observed target. It does not remove target uncertainty
-or measure biological bias or true conditional-mean calibration.
+the model mean against one observed target. Uncertainty in the single observed target remains in this diagnostic;
+biological bias and conditional-mean calibration require repeated-target analysis.
 
 ## Interpretation and paper framing
 
@@ -71,20 +70,20 @@ A suitable finding is: **small endpoint gains survive a larger-ensemble check,
 but endpoint improvements are ensemble-size-sensitive and should be evaluated
 alongside distribution-sensitive scores and spread.**
 
-This is stronger evidence than an endpoint-only table. The favorable larger-K
-energy-score differences mean the result should not simply be dismissed as an
-endpoint-MSE artifact. They still do not establish calibrated ensembles, retained
-biological diversity, source-distribution preservation, or realistic kinetics.
+The larger-K energy-score differences complement the endpoint-error result.
+Together with the spread measurements, they describe forecast behavior in the
+aligned coordinate representation. Ensemble calibration, biological diversity,
+source-distribution preservation and kinetics require separate assessments.
 
 Candidate ensemble variance and pairwise RMSD are lower on all eight domains.
 At K=16 their macro changes are -1.87020 square angstrom and -0.11302 angstrom.
-Neither direction is intrinsically favorable: narrower ensembles can improve
-some endpoint scores without recovering the correct underlying distribution.
+Narrower ensembles can improve some endpoint scores. Their agreement with the
+underlying biological distribution requires a separate distribution assessment.
 
 All metrics are in individually start-Kabsch-aligned C-alpha coordinate space.
-They omit global pose and do not measure all-atom structural accuracy. The energy
-score is a statistical forecast score, not molecular energy or free energy. Its
-distributional interpretation is limited to the transformed representation.
+Global pose is removed by alignment. The energy score is a statistical forecast
+score in this transformed representation. All-atom accuracy, molecular energy
+and free energy require separate measurements.
 
 Important limitations: eight previously used validation proteins, one training
 seed, fixed temperature and lag, one set of nested draws, a new evaluator rather
@@ -102,9 +101,9 @@ error on all domains but reduced the mean gain to 0.0138 angstrom (0.138%;
 conditional protein-resampling interval 0.0073–0.0219 angstrom). The exploratory
 statistical energy-score gain at K=16 was 0.0064 angstrom (interval
 0.0016–0.0117), while both aligned-C-alpha spread summaries decreased. These
-results support small conditional validation-panel gains that depend on ensemble
-size; they do not establish physical kinetics, calibration, independent-test
-generalization, or robustness across training seeds.
+results measure small conditional validation-panel gains that depend on ensemble
+size, for the available training seed at the fixed temperature and lag. Physical
+kinetics, calibration and generalization require additional evaluations.
 
 ## Original four-stage roadmap
 
@@ -117,15 +116,15 @@ generalization, or robustness across training seeds.
 
 The earlier G0 summary-receipt audit and technical pilot are complete in their
 limited scope; exact reconstruction of the original evaluator remains unresolved.
-The missing original assets are not being replaced by invented training results.
+Additional training experiments await the missing original assets.
 
 ## Compute and artifacts
 
 The provider-reported charges at the saved snapshots total **$4.56762390**:
 $1.23086024 for the initial panel and $3.33676366 for the extension. All sixteen
 apps were confirmed stopped with zero tasks. A $2 late-billing allowance remains
-held locally, and the $10 planning reserve remains untouched. These are reported
-charges, not a final invoice or a verified account credit balance.
+held locally, and the $10 planning reserve remains untouched. These are saved provider charge snapshots; final invoices and account credit
+balances are tracked separately.
 
 - [Frozen protocol and sampling amendment](FROZEN_EVALUATION_PROTOCOL.md)
 - [K=4 report](artifacts/reports/sampling-k4-v1/results.md)

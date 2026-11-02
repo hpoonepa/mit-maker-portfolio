@@ -18,6 +18,6 @@ export default function BenchmarkExplorer(){
       <p className="benchmark-definition">{metric==='majority_hit'?evaluation.majority_hit_definition:evaluation.half_epitope_recovery_definition}. Bars show the fraction of 110 interfaces with a qualifying top-{k} patch.</p>
       <div className="benchmark-detail"><div><strong>Component-macro rate · PRINCE</strong><p>{percent(fitted.cluster_macro)} · 95% CI {fitted.cluster_macro_ci95.map(percent).join('–')}<br/>Averaged across 34 identity components.</p></div><div><strong>Paired difference vs exposure</strong><p>{(difference.cluster_macro_difference*100).toFixed(2)} percentage points<br/>95% CI {difference.paired_cluster_bootstrap_ci95.map(n=>(n*100).toFixed(2)).join(' to ')} pp.</p></div></div>
     </div>
-    <p className="research-note" style={{marginTop:20,marginBottom:0}}>The paired interval includes zero. This does not establish a reliable improvement over exposure alone. Component bootstrap: 2,000 replicates, seed 0.</p>
+    <p className="research-note" style={{marginTop:20,marginBottom:0}}>The paired interval includes zero, so the difference from exposure alone remains uncertain. Component bootstrap: 2,000 replicates, seed 0.</p>
   </div>;
 }

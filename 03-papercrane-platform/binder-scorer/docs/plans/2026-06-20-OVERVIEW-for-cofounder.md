@@ -19,7 +19,7 @@ We don't compete on the design models — we own the layer above them: a system 
 ## The one experiment that decides everything
 > Does the LLM's per-target recipe rank real binders better than one fixed recipe, on held-out targets with real lab labels?
 
-**Yes → real company. No → we fall back to one global model.** It's built as the capstone test, honestly falsifiable. We're not claiming it already works — we're building the thing that proves it.
+**Yes → real company. No → we fall back to one global model.** This planned comparison will determine whether target-specific recipes improve ranking; the result remains open.
 
 ## The two plans
 

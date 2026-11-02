@@ -4,7 +4,7 @@ export interface ShotGrade { quality: number | null; difficulty: number | null; 
 const clamp = (v: number, low=0, high=10) => Math.max(low,Math.min(high,v));
 const round = (v:number) => Math.round(clamp(v)*2)/2;
 
-// Broad placement families only; a short landing does not establish drop vs boast.
+// Landing geometry gives placement families; distinguishing drops from boasts also needs wall-contact evidence.
 export function placementFamily(shot: ReviewShot): "length" | "short" | null {
   const depth = shot.landing?.position?.[1];
   return depth === undefined ? null : depth >= 5.49 ? "length" : depth <= 2.6 ? "short" : null;

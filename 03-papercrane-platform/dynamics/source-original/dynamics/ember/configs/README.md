@@ -1,7 +1,7 @@
 # Starting configurations
 
 These JSON files instantiate the authored `TrainingConfig`. They are starting
-settings, not tuned or executed experiments. All use CPU as a conservative
+settings for future tuning and execution. All use CPU as a conservative
 default; the compute stage must choose and record a compatible environment.
 
 - `linear-probe.json` and `r0.json`: matched frozen ESM-2 features, linear versus

@@ -59,7 +59,7 @@ for row in data['items']:
         'ambiguous':len(candidates)>1,'selected':candidates[0] if len(candidates)==1 else None,
         'supportedCandidates':candidates})
 result={'method':'five-or-more observed dark blobs linked by bounded velocity change; no interpolated centers',
-        'limitations':['Unvalidated experiment; temporal consistency alone does not establish ball identity.',
+        'limitations':['Contrast and temporal-linking experiment; ball identities require frame review.',
                        'Player/racket/glass masked pixels and multi-path frames are unavailable.',
                        'Impacts may split trajectories and remain unavailable.'],
         'paths':paths,'items':rows}

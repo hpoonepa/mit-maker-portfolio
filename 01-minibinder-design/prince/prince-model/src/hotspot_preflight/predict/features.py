@@ -228,15 +228,10 @@ def concavity_feature(
     interacts at and keeps it cheap enough to run over every surface residue of
     a trimmed capsid neighbourhood.
 
-    **Why the baseline weights concavity at all is a design hypothesis we have
-    not validated, not an established result.** The reasoning is that
-    minibinders are usually rigid helical bundles that need a pocket or groove
-    to grip, whereas antibody epitopes skew flat and protruding — so a ranker
-    meant for binder design should disagree with an epitope predictor here, and
-    concavity is where that disagreement would live. We have run no experiment
-    that confirms this, and the published epitope predictors this package can
-    host instead were trained on real labels. Treat the weight as a stated
-    prior, and if it is ever tested and found wrong, lower it.
+    The baseline's concavity weight is a hand-set design hypothesis: it
+    favors grooves that might accommodate a rigid helical binder. This
+    preference remains unvalidated for minibinder outcomes. The weight can
+    be adjusted or fitted when suitable outcome labels become available.
     """
     if key not in points:
         return 0.0

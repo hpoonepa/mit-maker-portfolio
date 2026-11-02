@@ -19,9 +19,9 @@ Local scaling maps heatmap coordinates independently by source width/512 and sou
 
 The `../runtime/evidence/ball-alignment-crops.png` (local artifact not bundled) uses saved observation timestamps and exact PyAV-decoded source frames at 0.12, 3.00, 6.00, 9.00, 12.40, 12.52, 12.60, 15.00, and 18.00 seconds. Each visible crop is 128×128 source pixels, enlarged threefold with nearest-neighbor sampling. The red crosshair marks the stored center; its gap leaves the image underneath visible.
 
-Eight sampled observations have visible predictions near the small bright ball or its motion streak. The 6.00-second observation is unavailable; its true visibility was not independently labeled. At **12.52 seconds**, the saved observation is **source frame 313**, centered at **(242.02899, 644.53384)** in 1280×720 source pixels. This is the reference point for comparing the browser overlay.
+Eight sampled observations have visible predictions near the small bright ball or its motion streak. The 6.00-second observation is unavailable and has no manual visibility label. At **12.52 seconds**, the saved observation is **source frame 313**, centered at **(242.02899, 644.53384)** in 1280×720 source pixels. This is the reference point for comparing the browser overlay.
 
-No gross scale, axis, or timing displacement appears in these samples. Small localization differences and motion blur remain. This is a visual spot check, **not an accuracy benchmark**: it has no independently annotated ground-truth centers and cannot establish precision, recall, or exact localization across the match. Do not apply a global coordinate offset based on it.
+No gross scale, axis, or timing displacement appears in these samples. Small localization differences and motion blur remain. This visual spot check supports the current coordinate alignment. Measuring precision, recall and localization error across the match requires independently annotated ball centers.
 
 The training heatmap uses a fixed Gaussian spread (`sigma=3.5` at network resolution). Its blob size and decoded covariance are not measurements of the physical ball's radius or a calibrated error bound. Keep the ball marker small, show only the observation associated with the displayed frame, and present optional trail/uncertainty information separately.
 

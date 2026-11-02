@@ -1,6 +1,6 @@
 # Paper Crane: researcher evaluation and improvement roadmap
 
-Reviewed 8 September 2026. Prepared by Codex with an independent **GPT-6 Astra** review using the perspective of a principal investigator, computational researcher, and first-time graduate student. These are evaluation lenses, not a claim of academic credentials or external peer review.
+Reviewed 8 September 2026. Prepared by Codex with an independent **GPT-6 Astra** review using the perspective of a principal investigator, computational researcher, and first-time graduate student. These are simulated review perspectives; this is an AI-assisted source review.
 
 ## Decision
 
@@ -21,7 +21,7 @@ The three largest investments should be:
 - A local `/login` header request timed out after 15 seconds. This is one local observation, not a production outage finding.
 - The browser runtime reported no available browser. Visual observations are limited to the user-provided catalog screenshot and source-level layout inspection. Current rendered desktop/mobile behavior, keyboard navigation, measured contrast, and authenticated interaction remain unverified.
 - Some local files timed out during reads. The main readiness configuration was corroborated through its tests and public catalog rather than directly read. No automated test suite, live authentication flow, GPU job, or production security audit was performed in this review.
-- September 4 history—successful R2 smoke, three deployed GPU apps, and a failed ProteinMPNN live invocation—is historical evidence only. It does not establish September 8 deployment health.
+- September 4 history—successful R2 smoke, three deployed GPU apps, and a failed ProteinMPNN live invocation—records September 4 execution outcomes. September 8 deployment health still required verification.
 - No product code, deployment, account configuration, or GPU infrastructure was changed for this review.
 
 Research criteria draw on the importance of reusable metadata and workflows in the [FAIR Guiding Principles](https://www.nature.com/articles/sdata201618), and on publishing data, model and code details in [Reproducibility standards for machine learning in the life sciences](https://www.nature.com/articles/s41592-021-01256-7). The specific product priorities and proposed targets below are our judgments, not requirements imposed by those papers.
@@ -49,7 +49,7 @@ These features merit consolidation and validation. Replacing the visual system o
 
 Evidence: `apps/app/components/designs/ProvenanceBadge.tsx:18`; `packages/trpc/src/reporting/candidateDecisionReport.ts:112`.
 
-**Required outcome:** unknown origin stays visibly unverified in every view and download. Record origin and execution verification separately: a real model invocation is not experimental validation. Historical rows require evidence before promotion. Comparison and export paths must preserve these labels.
+**Required outcome:** unknown origin stays visibly unverified in every view and download. Record origin, execution verification and experimental validation separately. Historical rows require evidence before promotion. Comparison and export paths must preserve these labels.
 
 ### 2. Bulk export can silently omit files — critical
 
@@ -91,7 +91,7 @@ The meta-score panel contains useful limitations, but the decision report promin
 
 Evidence: `apps/app/components/designs/MetaScorePanel.tsx:130`; `apps/app/components/jobs/CandidateDecisionReport.tsx:179`; `packages/trpc/src/reporting/candidateDecisionReport.ts:114`; `apps/app/components/designs/MetricInterpretation.tsx:127`.
 
-**Required outcome:** distinguish observed measurements, model confidence, heuristic ranking and evidence coverage. Give every metric a definition, unit/range, scope, missing/not-applicable behavior and source. Make the caveats survive exports and screenshots. Have a domain reviewer check the specific language and applicability; a generic disclaimer is insufficient.
+**Required outcome:** distinguish observed measurements, model confidence, heuristic ranking and evidence coverage. Give every metric a definition, unit/range, scope, missing/not-applicable behavior and source. Make the caveats survive exports and screenshots. Have a domain reviewer check the specific language and applicability.
 
 ### 7. Comparison and related-job views can remove necessary context — high
 
@@ -113,11 +113,11 @@ Evidence: `apps/app/components/auth/OAuthButtons.tsx:55`; `packages/trpc/src/rou
 
 ### 9. Operational and retention promises need evidence — high
 
-The status page has no live worker check. The inspected retention routine marks jobs purged and explicitly leaves artifact sweeping to future work. This does not prove that storage lifecycle rules are absent, but it does mean this code alone cannot substantiate deletion guarantees. Published retention periods also make timely export essential for researchers.
+The status page has no live worker check. The inspected retention routine marks jobs purged and explicitly leaves artifact sweeping to future work. Storage lifecycle rules and actual deletion behavior require infrastructure-level verification. Published retention periods also make timely export essential for researchers.
 
 Evidence: `apps/web/app/status/page.tsx:53`; `apps/worker/src/retention.ts:7`; `apps/web/app/privacy/page.tsx:58`.
 
-**Required outcome:** monitor the actual user path through queue, worker and artifact retrieval. Establish retry/cancellation behavior and cost accounting. Verify actual storage lifecycle and backup behavior against the policy, show expiry dates and archive reminders, and test restoration and deletion on dedicated test records. No claim of security certification follows from source inspection.
+**Required outcome:** monitor the actual user path through queue, worker and artifact retrieval. Establish retry/cancellation behavior and cost accounting. Verify actual storage lifecycle and backup behavior against the policy, show expiry dates and archive reminders, and test restoration and deletion on dedicated test records. Security certification requires a separate assessment.
 
 ## Researcher-centered product design
 
@@ -183,4 +183,4 @@ After pilot evidence supports expansion, add integrations requested repeatedly b
 
 Defer another large catalog expansion, a major visual rebrand, additional sign-in providers, a provider migration, enterprise promises, and more elaborate automated recommendations until the existing supported journey is reliable. Keep the current benchmark release gate; an independently reviewed, reproducible example will be more persuasive than a larger unqualified tool count.
 
-The desired next demonstration is simple: a new researcher enters successfully, runs a supported task, understands what the output does and does not establish, exports a complete record, and hands it to a colleague who can audit it. That is the adoption test for the next release.
+The desired next demonstration is simple: a new researcher enters successfully, runs a supported task, understands the output and its evidence scope, exports a complete record, and hands it to a colleague who can audit it. That is the adoption test for the next release.

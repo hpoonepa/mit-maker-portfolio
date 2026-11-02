@@ -1,6 +1,6 @@
 """Reconcile the eight completed K4 apps against provider-reported charges.
 
-This is a one-use sprint receipt, not a billing integration. A separate $2
+This one-use sprint receipt records saved provider charges. A separate $2
 commitment covers delayed charges; the account's $10 reserve is unchanged.
 """
 import json

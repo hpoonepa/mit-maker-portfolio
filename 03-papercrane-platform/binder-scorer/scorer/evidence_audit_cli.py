@@ -132,19 +132,19 @@ thead {{ background: #e5eeea; }} code {{ overflow-wrap: anywhere; }}
 <div class="card"><strong>{summary["comparable_candidates"]}</strong>Common evidence cohort</div>
 <div class="card"><strong>{summary["excluded_candidates"]}</strong>Outside comparison</div>
 <div class="card"><strong>{summary["declared_evidence_families"]}</strong>Declared evidence families</div></div>
-<div class="notice"><strong>Interpretation matters</strong><p>Agreement describes the supplied methods. It does not establish predictive correctness.</p><ul>{warnings}</ul></div>
+<div class="notice"><strong>Report scope</strong><p>Agreement describes consistency among the supplied methods. Predictive accuracy requires outcome evaluation.</p><ul>{warnings}</ul></div>
 <h2>Candidate evidence</h2><p class="muted">Requested top-k: {report["config"]["top_k"]}; effective cutoff: {report["config"]["effective_top_k"]}.
 Rows are ordered by candidate ID. Ranks apply only to the common cohort. An envelope is the best–worst occupied rank across methods, including exact ties.</p>
 <div class="scroll" role="region" aria-label="Candidate evidence table" tabindex="0"><table>
 <thead><tr><th scope="col">Candidate</th><th scope="col">Origin</th><th scope="col">Provenance</th><th scope="col">Assessment</th>
 <th scope="col">Observed</th><th scope="col">Rank envelope</th>{method_headings}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-<h2>Coverage by origin</h2><p class="muted">Check whether the common cohort disproportionately excludes any source. Completeness does not establish that exclusions are random.</p>
+<h2>Coverage by origin</h2><p class="muted">Compare source coverage to identify uneven exclusions from the common cohort.</p>
 <div class="scroll"><table><thead><tr><th scope="col">Origin</th><th scope="col">Supplied</th><th scope="col">Comparable</th>{method_headings}</tr></thead><tbody>{origin_rows}</tbody></table></div>
 <h2>Method agreement</h2><p class="muted">Jaccard overlap compares exact top-k sets on the common cohort. A tie at the cutoff makes this statistic unavailable.</p>
 <div class="scroll"><table><thead><tr><th scope="col">Methods</th><th scope="col">Shared family</th><th scope="col">Top-k overlap / unavailable reason</th></tr></thead><tbody>{agreement_rows}</tbody></table></div>
 <h2>Evidence provenance</h2><div class="scroll"><table><thead><tr><th scope="col">Method</th><th scope="col">Producer</th><th scope="col">Version</th>
 <th scope="col">Family</th><th scope="col">Better direction</th><th scope="col">Units</th><th scope="col">Settings</th></tr></thead><tbody>{method_rows}</tbody></table></div>
-<h2>What this report establishes</h2><ul>{interpretation}</ul>
+<h2>How to read the report</h2><ul>{interpretation}</ul>
 <footer>Schema: {e(report["schema_version"])}<br>Canonical input SHA-256: <code>{report["input_sha256"]}</code><br>
 This portable report loads no scripts, fonts, images, or external services. Machine-readable evidence is in report.json.</footer>
 </main></body></html>'''

@@ -24,6 +24,6 @@ The current [iGEM software award criteria](https://competition.igem.org/judging/
 
 The assigned Lambert-GA repositories are [prince-webapp](https://gitlab.igem.org/2026/software/lambert-ga/prince-webapp) and [prince-model](https://gitlab.igem.org/2026/software/lambert-ga/prince-model). The web app contains the frontend source; the model repository contains the analysis service, inference code, and frozen evaluation artifacts. Clone them beside one another for local development.
 
-Citation metadata and companion-repository links use those URLs. Archive a release with the model artifacts and exact commit identifiers if a citable DOI is wanted. Publishing the source does not deploy the website or analysis service; no hosted service or archival DOI is claimed here.
+Citation metadata and companion-repository links use those URLs. Archive a release with the model artifacts and exact commit identifiers if a citable DOI is wanted. Website/service deployment and archival DOI registration are separate release steps.
 
 Wiki asset hosting rules and standalone software hosting rules are different. Review the current [iGEM deliverables guidance](https://competition.igem.org/deliverables/) before moving the app into a wiki.

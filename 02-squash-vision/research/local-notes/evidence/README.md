@@ -10,7 +10,7 @@ The copied application ran its actual YOLO pose and TrackNet models at maximum p
 - Every player row satisfies the reviewed image playing area within a 7.2 px edge tolerance. Nine rendered timestamps, including the original 12.52-second spectator failure, show the corrected player locations. Player IDs can still switch through occlusion and are not verified person identities.
 - 622 ball observation rows; 581 marked visible.
 - Full observation pagination matched the underlying artifact rows without duplicates.
-- The report estimated one open-ended rally and two classified shot events. This does not represent a complete count of actual contacts. The predicted serve is unverified within this mid-rally excerpt.
+- The report estimated one open-ended rally and two classified shot events. A full contact count needs manual annotation. The predicted serve within this mid-rally excerpt awaits review.
 - Automatic calibration refused insufficient court topology. The manually reviewed floor polygon is only an image detection mask; its rear vertices meet the image edge and are not claimed to be metric court corners. No manual metric calibration was inserted. Distances and ball speed remain unavailable.
 - The HTML/JSON/CSV ZIP downloaded successfully and matched its recorded checksum.
 - In a disposable data copy, a correction created revision 2, a stale revision returned HTTP 409, and revision 1 remained unchanged. That test action is absent from the portfolio data. The live portfolio's revision 2 instead comes from the actual image-mask reanalysis; its original revision 1 remains unchanged.

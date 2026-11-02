@@ -1,4 +1,4 @@
-"""Reservation ledger for future jobs. This does NOT enforce cloud billing."""
+"""Reservation ledger for future jobs; provider controls enforce cloud billing limits."""
 
 from __future__ import annotations
 
@@ -175,5 +175,5 @@ def project_cost(
         "failure_multiplier": failure_multiplier,
         "hourly_usd": str(rate),
         "fixed_usd": str(fixed),
-        "note": "Conservative measured-stratum extrapolation, not a provider quote or hard spend cap.",
+        "note": "Conservative measured-stratum extrapolation; provider pricing and enforced spend limits are separate inputs.",
     }

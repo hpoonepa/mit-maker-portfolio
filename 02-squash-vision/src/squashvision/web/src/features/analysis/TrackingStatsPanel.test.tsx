@@ -45,7 +45,7 @@ describe("tracking statistics", () => {
     expect(screen.getByText("8.2")).toBeInTheDocument();
     expect(screen.getByText("14.0")).toBeInTheDocument();
     expect(screen.getByText("10.0 s tracked · 50% coverage")).toBeInTheDocument();
-    expect(screen.getByText(/A\/B identities unverified/)).toHaveTextContent("Ball speed assumes motion on the floor plane.");
+    expect(screen.getByText(/Player identity review pending/)).toHaveTextContent("Ball speed assumes motion on the floor plane.");
     expect(screen.queryByRole("table")).not.toBeInTheDocument();
   });
 

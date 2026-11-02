@@ -185,7 +185,7 @@ def test_sensitivity_cutoff_is_a_subset_of_the_primary(tmp_path: Path):
 
 
 def test_heavy_atoms_excludes_hydrogens_and_zero_occupancy(tmp_path: Path):
-    """Hydrogens and zero-occupancy atoms are not evidence of contact."""
+    """Contact labels use occupied heavy atoms."""
     st = gemmi.Structure()
     st.name = "OCC"
     model = gemmi.Model("1")

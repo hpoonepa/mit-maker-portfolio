@@ -19,7 +19,7 @@ Priors generated **once per target, offline, cached** (deterministic eval, no AP
 
 **Prerequisites (confirmed):** `ANTHROPIC_API_KEY` ✓, Boltz API ✓. PubMed E-utilities need no key (optional `NCBI_API_KEY` for higher rate).
 
-**Honest caveats baked in:** (1) Even with literature, the LLM knows these famous targets → still the *identity-revealed* arm; the K5 anonymized/novel-target control is the honest follow-up (separate plan). (2) n=11 → result is **directional, not proof** (below MDE 0.035). (3) Literature retrieval quality varies per target (obscure targets = thin abstracts).
+**Evaluation scope:** (1) Even with literature, the LLM knows these famous targets → still the *identity-revealed* arm; the K5 anonymized/novel-target control is the planned follow-up (separate plan). (2) n=11 → result is **exploratory** (below MDE 0.035). (3) Literature retrieval quality varies per target (obscure targets = thin abstracts).
 
 ---
 

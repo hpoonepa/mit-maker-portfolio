@@ -14,7 +14,7 @@ python -m scorer.evidence_benchmark examples/evidence-benchmark.demo.json --top-
 
 The example contains invented scores and outcomes for three independent demo
 groups. It establishes software behavior only. The JSON report is explicitly
-labelled `synthetic_demo` and is not evidence of model performance.
+labelled `synthetic_demo`; its numerical results are illustrative.
 
 The destination parent directory must exist. An existing output file is never
 overwritten. `--seed` defaults to 0 and `--bootstrap-samples` to 5000. Repeating
@@ -92,18 +92,17 @@ individual candidates as if they were independent targets.
 
 With fewer than two eligible groups, no sampling interval is reported. A
 constant empirical difference distribution is labelled degenerate, even when
-its empirical interval has zero width. Neither that interval nor a small-group
-bootstrap establishes certainty about new campaigns. Group independence and
-representativeness remain assumptions.
+its empirical interval has zero width. Small-group bootstrap intervals have limited generalizability. Group
+independence and representativeness remain assumptions.
 
-No automatic winner, equivalence verdict, power estimate, or multiple-comparison
-claim is emitted. Freeze a primary comparison and analysis protocol before
+Winner selection, equivalence, power and multiple-comparison conclusions require
+separate analyses. Freeze a primary comparison and analysis protocol before
 examining final evaluation outcomes.
 
 The agreement diagnostic separately measures observed outcomes among candidates
 that all methods place inside top-k. It exposes the possibility that methods
-agree and are wrong together. This selected-subset fraction is not calibrated
-confidence and is not a replacement for comparisons at the same shortlist size.
+agree and are wrong together. This fraction describes the selected subset. Compare methods at the same
+shortlist size; probability calibration requires separate analysis.
 
 ## Verification
 

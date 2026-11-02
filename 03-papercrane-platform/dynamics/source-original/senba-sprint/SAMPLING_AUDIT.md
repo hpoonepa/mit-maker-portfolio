@@ -1,7 +1,7 @@
 # Sampling-extension receipt audit
 
 This is a read-only audit of the completed K=4 augmentation and derived prefix
-artifacts. It did not launch a model or rewrite any record.
+artifacts, using saved records for all recomputations.
 
 ## Result
 
@@ -27,7 +27,7 @@ for 160 records per prefix panel.
 
 For each of the 160 physical transition IDs, this audit reconstructed expected
 prefix arrays from the stored original block 0 and extra blocks 1–3. It checked
-byte-numeric JSON equality, not an approximate tolerance:
+exact byte-numeric JSON equality:
 
 - Derived K=4 `start`, `target`, aligned source/candidate, and raw coordinate
   payload exactly equal the original stored K=4 record.

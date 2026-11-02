@@ -113,14 +113,14 @@ def build_report(records: list[dict[str, Any]], n_bootstrap: int = 2000) -> dict
         })
     n_proteins = analysis["run"]["n_proteins"]
     warnings = [
-        "Validation-panel results use a new evaluator and are not an exact reproduction of earlier results.",
-        "All candidate-minus-source deltas are descriptive; no independent test-set claim is made.",
+        "Validation-panel results use a new evaluator; equivalence to the unavailable earlier evaluator remains unresolved.",
+        "Candidate-minus-source deltas describe the supplied validation panel.",
         "Spread changes have no desired sign and different K values are reported separately, never concatenated.",
     ]
     if n_proteins == 1:
         warnings.append("TECHNICAL_PILOT_ONLY: one protein gives a degenerate protein bootstrap; no scientific significance or inference is reported.")
     if n_proteins == 8:
-        warnings.append("The prespecified eight-protein validation panel is reused; it is not an independent test set and cannot support selection claims.")
+        warnings.append("The prespecified eight-protein validation panel was used previously; estimates condition on that selection history.")
     return {
         "analysis": analysis,
         "report": {
@@ -139,7 +139,7 @@ def _markdown(result: dict[str, Any]) -> str:
     counts = report["counts"]
     lines = [
         "# SENBA frozen paired-evaluator report", "",
-        "Validation-panel descriptive results from a new evaluator; not an independent test result.", "",
+        "Descriptive results on reused validation data from a new evaluator.", "",
         "## Counts", "",
         f"- Records: {counts['n_records']}; transition units: {counts['n_transition_units']}; proteins: {counts['n_proteins']}; training seeds: {counts['n_training_seeds']}; K: {counts['ensemble_sizes']}",
         f"- Raw C-alpha coordinates: {report['raw_coordinate_provenance']['status']} ({report['raw_coordinate_provenance']['records_with_raw_ca_coordinates']}/{counts['n_records']})",

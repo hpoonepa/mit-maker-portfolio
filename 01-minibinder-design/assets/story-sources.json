@@ -28,12 +28,12 @@
     "source": "Original SVG authored for this portfolio from the modeling report and assay summaries.",
     "svg": "design-process.svg",
     "png": "design-process.png",
-    "status": "Retrospective overview; does not establish which individual change caused the later positive result.",
+    "status": "Retrospective overview of campaign iterations and assay outcomes.",
     "png_renderer": "sharp 160 dpi from the included SVG"
   },
   "evidence_limits": [
-    "Neutralization and bee protection are goals, not measured results.",
-    "Published 95 C thermostability does not establish heat or pH stability of this binder.",
-    "Post-assay consensus ranking is retrospective, not evidence of prospective selection."
+    "Neutralization and bee-protection testing remain pending.",
+    "Heat and pH stability remain unmeasured for this binder; the published 95 C results concern other designs.",
+    "Consensus ranking was developed after the assays for follow-up evaluation."
   ]
 }

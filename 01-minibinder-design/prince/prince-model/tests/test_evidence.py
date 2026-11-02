@@ -390,8 +390,8 @@ def test_no_evidence_is_site_level_and_emitted_once() -> None:
     assert no_ev[0].key is None
     assert no_ev[0].severity is Severity.WARN
     assert no_ev[0].evidence["n_requested"] == 3
-    # Absence of evidence is not evidence of absence, and the message says so.
-    assert "not evidence of absence" in no_ev[0].message
+    # Missing reviewed coverage remains unknown, rather than refuted.
+    assert "Functional evidence for this site remains unknown" in no_ev[0].message
 
 
 def test_no_evidence_suppressed_when_any_residue_is_covered() -> None:
@@ -493,7 +493,7 @@ def test_shipped_dwv_table_refutes_the_triad() -> None:
 
 
 def _grounded_example():
-    # Synthetic fixture, not a claim about the real cited publication.
+    # Synthetic fixture uses an example citation identifier.
     text = "Synthetic test: mutation of D294 had no effect."
     sources = [{"source": "PMID:28270616", "text": text}]
     row = {"residues": ["C294"], "claim": text, "quote": text,

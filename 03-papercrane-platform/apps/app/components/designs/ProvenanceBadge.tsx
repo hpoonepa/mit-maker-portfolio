@@ -28,17 +28,17 @@ const COPY: Record<Exclude<ProvenanceLevel, "real">, { tag: string; detail: stri
   synthetic: {
     tag: "Example data",
     detail:
-      "Example data: not a real GPU run. These numbers are a fabricated dev fixture.",
+      "Example data from a synthetic development fixture.",
   },
   stub: {
     tag: "Example data",
     detail:
-      "Example data: not a real GPU run. Placeholder metrics from the Modal stub path (no GPU credentials).",
+      "Example data: placeholder metrics from the Modal stub path, generated without a GPU run.",
   },
   unknown: {
     tag: "Unverified origin",
     detail:
-      "This design's provenance is not recognised: treat it as unverified, not a real GPU run.",
+      "Origin unverified. GPU execution has not been confirmed for this design.",
   },
 };
 
@@ -98,7 +98,7 @@ export function ProvenanceBanner({
       </span>
       <div className="font-sans text-[13px] leading-relaxed text-amber-900">
         <span className="font-semibold uppercase tracking-[0.08em]">
-          Example data: not a real GPU run.
+          Execution provenance
         </span>{" "}
         {detail}
       </div>

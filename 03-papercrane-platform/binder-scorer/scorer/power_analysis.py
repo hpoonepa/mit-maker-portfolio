@@ -5,10 +5,8 @@ import statistics
 from collections.abc import Sequence
 
 
-# The sensitivity we WANT to be able to detect in Precision@k. This is an
-# aspirational target, NOT a claim about what n=11 folds achieve. The *achieved*
-# MDE is computed from the empirical spread of the paired per-target deltas
-# (``mde_from_deltas``) — there is no reverse-engineered sigma.
+# Desired Precision@k sensitivity. Achieved MDE is computed separately from
+# the empirical spread of paired per-target deltas (``mde_from_deltas``).
 DESIRED_MDE: float = 0.035
 
 # Back-compat alias for older imports; same meaning (the desired sensitivity).

@@ -24,7 +24,7 @@ def extract_documents(documents: list[dict[str, Any]], residues: Sequence[Residu
 
 A document declares the author-chain mapping (``chain``); otherwise extraction
 is allowed only when the candidate residues occupy a single chain. Sequence
-number offsets are never guessed. A match is a draft, not experimental truth.
+number offsets are never guessed. Each match is an unreviewed draft requiring source verification.
 """
     if not isinstance(documents, list) or len(documents) > 20:
         raise ValueError("source_documents must be a list of at most 20 documents")

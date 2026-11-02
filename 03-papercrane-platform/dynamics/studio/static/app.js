@@ -154,7 +154,7 @@ function updateViews() {
   $('morph').value = md ? state.sample : Math.round(state.blend * 100);
   $('morph-value').textContent = md ? String(state.sample).padStart(2, '0') : `${Math.round(state.blend * 100)}%`;
   $('morph').setAttribute('aria-label', md ? 'Recorded molecular dynamics frame' : 'Illustrative interpolation from input to endpoint');
-  $('motion-note').textContent = md ? 'Recorded MD · 450 K · playback speed ≠ physical time' : 'Visual interpolation · not a simulated path';
+  $('motion-note').textContent = md ? 'Recorded MD · 450 K · playback speed ≠ physical time' : 'Visual interpolation between endpoint coordinates';
   $('data-badge').lastChild.textContent = md || state.view === 'target' ? 'RECORDED MOLECULAR DYNAMICS' : state.record.kind === 'fresh_inference' ? 'FRESH CHECKPOINT OUTPUT' : state.record.candidate?.length ? 'SAVED MODEL OUTPUT' : 'INPUT STRUCTURE';
   $('data-badge').classList.toggle('live', !md && state.view !== 'target' && state.record.kind === 'fresh_inference');
   document.querySelector('.metric-note').textContent = md ? 'MD frame aligned to input.' : 'Endpoint coordinates aligned to input.';
@@ -254,7 +254,7 @@ $('snapshot').addEventListener('click', () => {
   ctx.drawImage(renderer.domElement, (1600 - w) / 2, 100, w, h);
   ctx.fillStyle = '#c4d6b5'; ctx.font = '32px sans-serif'; ctx.fillText(`Papercrane / Senba · ${state.record.label}`, 60, 65);
   ctx.font = '20px sans-serif'; ctx.fillText(`${state.record.kind || 'Input'} · ${$('legend-label').textContent} · sample ${state.sample + 1}`, 60, 1110);
-  ctx.fillText(state.view === 'trajectory' ? `Recorded MD frame ${state.sample} · 450 K · aligned to input` : `Illustrative morph ${Math.round(state.blend * 100)}% · not a physical trajectory`, 60, 1145);
+  ctx.fillText(state.view === 'trajectory' ? `Recorded MD frame ${state.sample} · 450 K · aligned to input` : `Coordinate interpolation ${Math.round(state.blend * 100)}% between endpoints`, 60, 1145);
   canvas.toBlob(blob => download(blob, 'senba-structure.png'));
 });
 
@@ -316,7 +316,7 @@ $('export-clean-clip').addEventListener('click', async () => {
       
       button.textContent=`Exporting V3 native frames ${i+1}/${count}`;
     }
-    files.push({name:'capture.json',data:new TextEncoder().encode(JSON.stringify({mode:md?'recorded_mdcath_trajectory':'illustrative_input_to_senba_endpoint_morph',source_record:state.record.id,endpoint_sample:8,frames:count,fps:30,width:1920,height:1080,ui_included:'native widget tabs, title and legend redrawn from live DOM state',ghost:true,orbit:false,camera_direction:direction.toArray(),camera_target:sphere.center.toArray(),camera_distance:distance,coordinates_unchanged:true,geometry:'Native Studio trace radius 0.38, ghost radius 0.12 opacity0.32',note:md?'First24 recorded MD frames at native Studio8fps;3seconds of display playback, not physical time.':'Saved SENBA endpoint sample8 (ninth of16): hold input1s, visual interpolation6s, hold endpoint1s. Not a simulated trajectory.'},null,2))});
+    files.push({name:'capture.json',data:new TextEncoder().encode(JSON.stringify({mode:md?'recorded_mdcath_trajectory':'illustrative_input_to_senba_endpoint_morph',source_record:state.record.id,endpoint_sample:8,frames:count,fps:30,width:1920,height:1080,ui_included:'native widget tabs, title and legend redrawn from live DOM state',ghost:true,orbit:false,camera_direction:direction.toArray(),camera_target:sphere.center.toArray(),camera_distance:distance,coordinates_unchanged:true,geometry:'Native Studio trace radius 0.38, ghost radius 0.12 opacity0.32',note:md?'First24 recorded MD frames at native Studio8fps;3seconds of display playback. Physical time follows recorded frame metadata.':'Saved SENBA endpoint sample8 (ninth of16): hold input1s, coordinate interpolation6s, hold endpoint1s. Display interpolation between saved endpoints.'},null,2))});
     download(storedZip(files),md?'senba-v3-tight-recorded-md-frames.zip':'senba-v3-tight-model-morph-frames.zip');button.textContent='V3 native frames downloaded ✓';
   }catch(error){button.textContent=`Export failed: ${error.message}`;}
   finally{Object.assign(state,previous);$('ghost').checked=previousGhost;$('rotate').checked=previousOrbit;renderer.setPixelRatio(previousPixelRatio);renderer.setSize(previousSize.x,previousSize.y,false);camera.aspect=previousAspect;camera.updateProjectionMatrix();camera.position.copy(previousCamera);controls.target.copy(previousTarget);controls.update();updateViews();button.disabled=false;}

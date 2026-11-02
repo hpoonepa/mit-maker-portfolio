@@ -1,8 +1,8 @@
 """Convert reviewed structural metadata into typed input/reference manifests.
 
-Eligibility attestations come from a human/source metadata review, not from the
-number of predicted hits. This adapter does not infer biological monomer status
-from the number of chains in an asymmetric unit.
+Eligibility attestations come from human/source metadata review. Biological
+monomer status requires assembly metadata; asymmetric-unit chain counts and
+predicted hit counts are separate fields.
 """
 
 from __future__ import annotations

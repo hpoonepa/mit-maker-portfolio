@@ -1,16 +1,14 @@
 # SPDX-License-Identifier: MIT
 """The predictor interface, and patch-level aggregation of residue scores.
 
-Scope, stated plainly because it is easy to overread: **this package proposes
-candidate sites and nothing here is a novel predictor.** Ranking surface
-patches by how binder-like or epitope-like they look is published prior art —
-Site4Drug (arXiv:2606.01816), SurfDiff, DiscoTope-3.0, SEMA, ScanNet, PeSTo and
-MaSIF-site all do it, most of them with trained models and all of them with
-more validation than we have. We make no claim to improve on any of them.
+This module defines geometric candidate-site ranking and a plugin interface.
+Published site predictors include Site4Drug (arXiv:2606.01816), SurfDiff,
+DiscoTope-3.0, SEMA, ScanNet, PeSTo and MaSIF-site. Their models and evaluation
+results are described in their own publications.
 
 What this stage is for:
 
-1. An honest, interpretable **baseline** so the package is usable without
+1. An interpretable **baseline** so the package is usable without
    installing anything else — four named geometric features, hand-set weights,
    no learned parameters anywhere.
 2. A **plugin host**, so one of those published predictors can be the backend
@@ -18,15 +16,10 @@ What this stage is for:
    score files, :mod:`~hotspot_preflight.predict.registry` for installed
    packages).
 
-The project's actual contribution is downstream: the assembly-aware filter that
-catches sites which are only exposed because of a crop or an isolated chain. The
-measurable claim is therefore *how much that filter improves whichever predictor
-you plug in here* — a delta, measured per backend. It is not "our ranker is
-good". Keeping the predictor swappable is what makes that delta measurable at
-all.
-
-No trained model, no learned embedding and no neural network lives in this
-package. Weights are configuration.
+The downstream assembly-aware filter checks sites exposed by a crop or an
+isolated chain. Its effect is measured as a within-backend delta against the
+same predictor without filtering. Weight provenance, including the fitted
+antibody-epitope profile, is recorded in the profiles module.
 """
 
 from __future__ import annotations

@@ -53,8 +53,8 @@ hosted API, worker, and Redis need an agreed deployment. Fresh-account admission
 invitation and completion-email delivery, OAuth return URLs, and hosted payments
 have not been validated. The current local review account is not admitted by
 the production beta gate. Do not enable that gate without setting up admission.
-Browser completion alerts work only while the app is open. This review does not
-certify every tool or scientific output.
+Browser completion alerts work only while the app is open. Tool execution and scientific
+output quality still require checks for each integration.
 
 Original UI restore tag:
 `backup/papercrane-ui-before-brand-refresh-2026-09-30`.

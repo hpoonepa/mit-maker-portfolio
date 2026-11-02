@@ -129,7 +129,7 @@ def run_job(job_id, structure, samples, seed):
                         "alignment": "each sample aligned to input CA; proper Kabsch rotation",
                         "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                         "input_sha256": hashlib.sha256(atom14.tobytes() + sequence.encode()).hexdigest(),
-                        "interpretation": "Independent endpoint samples; any morph is an illustration, not a physical trajectory"},
+                        "interpretation": "Independent endpoint samples; morphs interpolate displayed coordinates"},
         }
         (ROOT / "runtime/results").mkdir(parents=True, exist_ok=True)
         (ROOT / f"runtime/results/{job_id}.json").write_text(json.dumps(result, allow_nan=False))

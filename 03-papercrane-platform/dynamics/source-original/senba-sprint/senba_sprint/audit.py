@@ -99,7 +99,7 @@ def _ci_check(stored: Any, recomputed: np.ndarray) -> dict[str, Any]:
 
 
 def audit_receipt(receipt: dict[str, Any]) -> dict[str, Any]:
-    """Recompute published summary arithmetic without claiming raw-data replication."""
+    """Recompute published summary arithmetic from retained per-protein receipts."""
     comparison, rows, metric_fields = _comparison(receipt)
     values = {
         field: np.asarray([float(row[field]) for row in rows]) for field in metric_fields
@@ -164,7 +164,7 @@ def audit_receipt(receipt: dict[str, Any]) -> dict[str, Any]:
         })
     all_checks = [*scalar_checks.values(), *fraction_checks.values(), *ci_checks.values()]
     return {
-        "scope": "published-summary arithmetic checks, not raw-coordinate replication",
+        "scope": "published-summary arithmetic checks using retained per-protein receipts",
         "protein_count": count,
         "recomputed_protein_macro_means": means,
         "wins": wins,
@@ -181,7 +181,7 @@ def audit_receipt(receipt: dict[str, Any]) -> dict[str, Any]:
         "leave_one_protein_out": leave_one_out,
         "all_published_arithmetic_matched": all(check["matched"] for check in all_checks),
         "limitations": [
-            "The receipt contains summaries, not raw coordinates; energy score cannot be recomputed.",
+            "The receipt contains summary metrics; recomputing energy score requires raw coordinate arrays.",
             "Whether single_sample means an expected draw over K or a designated first sample is ambiguous and requires protocol verification.",
         ],
     }

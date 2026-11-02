@@ -71,7 +71,7 @@ def prepare(state):
         'probe': probe_video(CLIP).model_dump(mode='json', by_alias=True)}
     state.update(title='Practice rallies · IMG_1314', profile='maximum',
                  provenance='Actual local personal squash recording, extracted without generated motion or observations.',
-                 identities='Unverified A/B track labels; navy/yellow player-name mapping not assigned.')
+                 identities='A/B track labels await review; navy/yellow player-name mapping not assigned.')
     with av.open(str(CLIP)) as container:
         frame = next(container.decode(video=0))
         frame.to_image().save(OUT / 'calibration-frame.jpg', quality=95)

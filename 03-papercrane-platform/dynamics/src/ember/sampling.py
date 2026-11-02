@@ -40,7 +40,7 @@ def plan_bioemu(
     if model_name not in {"bioemu-v1.0", "bioemu-v1.1", "bioemu-v1.2"}:
         raise ValueError("Pin a reviewed checkpoint name")
     output = Path(output_dir).resolve()
-    # Plan only: do not create directories or cause model/AF2/MSA downloads.
+    # Emit argument arrays while leaving filesystem, model and MSA state untouched.
     sample = (
         python,
         "-m",

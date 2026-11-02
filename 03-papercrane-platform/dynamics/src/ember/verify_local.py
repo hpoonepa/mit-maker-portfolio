@@ -1,7 +1,7 @@
 """Run only non-model software contracts and write a reproducible receipt.
 
-This excludes model_checks entirely. It does not install packages, download
-weights/data, execute external detectors or provision infrastructure.
+This runs the local contract suite using installed dependencies and fixtures.
+Model checks, external detectors and infrastructure execution are separate stages.
 """
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ def main(argv=None) -> int:
         "test_log": stream.getvalue(),
     }
     atomic_write_json(args.output, receipt)
-    print(f"Local contracts: {receipt['status']}; {result.testsRun} checks; model checks unrun.")
+    print(f"Local contracts: {receipt['status']}; {result.testsRun} checks; model checks pending.")
     print(f"Receipt: {args.output}")
     return 0 if passed else 1
 

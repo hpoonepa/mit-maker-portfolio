@@ -4,9 +4,9 @@ A small cryptic-site ranker built on frozen protein features and explicit
 conformational evidence. This is the September 28 implementation of the
 [September 24 master specification](../../../plans/ember-pocket-master-build-plan-2026-09-24.md).
 
-**Current state:** model/training/inference code authored; local software contracts
-checked; no models trained or evaluated, no embeddings generated, no GPU/cloud
-jobs launched. A trained checkpoint and a performance claim do not exist yet.
+**Current state:** model, training and inference code implemented; local software
+contracts checked. The model is untrained. Embedding generation, GPU/cloud
+execution and predictive evaluation remain pending.
 
 The complete next-stage protocol is in
 [the implementation and compute plan](../../../plans/ember-pocket-implementation-and-compute-plan-2026-09-28.md).
@@ -25,14 +25,14 @@ sequence → frozen BioEmu → accepted all-atom conformers ───┘       +
 ```
 
 R0 is a 640→256→128→1 MLP with input LayerNorm. Its analytical parameter count is
-198,401; this is not a measurement from an executed model. S0 starts linear. E0
+198,401, computed from the architecture; runtime parameter verification is pending. S0 starts linear. E0
 starts as a zero-initialized linear correction with S0 frozen. Small MLP rankers
 and an explicit-support-count ablation are implemented as alternatives. GVP and
 generator fine-tuning are deferred.
 
-Output scores measure annotation-recovery evidence. They are not binding
-probabilities, affinities, kinetic rates, populations or experimentally confirmed
-sites. BioEmu conformations are unordered, sequence-conditioned samples.
+Output scores rank annotation-recovery evidence. Binding probabilities, affinities,
+kinetic rates, populations and experimental site validation require separate
+measurements. BioEmu conformations are unordered, sequence-conditioned samples.
 
 ## What is implemented
 
@@ -46,7 +46,7 @@ sites. BioEmu conformations are unordered, sequence-conditioned samples.
 | Quality/alignment | Proper rotations; CA/sidechain/gross-clash screens | Local contract checks; thresholds provisional |
 | R0/S0/E0, training/resume/inference | Cached features, development selection, gated execution | Authored and syntax checked; **model tests deferred** |
 | Evaluator/reports | One-to-one top-k, failure denominator, family bootstrap | Local contract checks |
-| Cost ledger/command plans | Reservations and no-launch plans | Local contract checks; no cloud billing enforcement |
+| Cost ledger/command plans | Reservations and no-launch plans | Local contract checks; provider billing controls separate |
 | Data ingestion/splits | Author annotations, official split guard, OOF lineage, similarity-edge audit | Schema/fixture checks; full cohort not frozen |
 
 ## Run local checks
@@ -61,11 +61,10 @@ python3 -m dynamics.ember research-inventory
 python3 -m dynamics.ember sampling-plan --sequence ACDEFGHIK --output-dir /tmp/ember-example
 ```
 
-The last command emits argument arrays. It does not execute them or create the
-output directory. The example sequence is for inspecting the command plan, not
-an eligible scientific target. Local checks require NumPy and Biopython; their
-tested versions are recorded in `requirements-local.txt`. Nothing was installed
-into your existing environments during this work.
+The last command emits an inert argument plan with a synthetic example sequence,
+leaving execution and output-directory creation to the later run stage. Local checks require NumPy and Biopython; their
+tested versions are recorded in `requirements-local.txt`. The checks used the existing
+environments without package changes.
 
 `python3` alone can inspect plans and the CLI. This machine's default Python lacks
 NumPy/Biopython; use `run/.venv/bin/python` for scientific-data contract checks.
@@ -86,10 +85,10 @@ later user-authorized session. No command provisions a provider instance.
   Reference labels are separate. Training rejects test/external examples.
 - Three-fold cross-fitting keeps scored training groups out of R0 fitting **and
   early-stopping selection**. Final development results still drive selection;
-  only frozen public/external test evaluation can establish held-out performance.
-- A strict API boundary is not an OS sandbox. The future inference worker must
-  mount only inputs/checkpoints and write predictions; reference storage stays
-  on the evaluation worker.
+  held-out performance is measured by frozen public/external test evaluation.
+- OS-level isolation requires the future inference worker to mount only inputs
+  and checkpoints and write predictions; reference storage stays on the
+  evaluation worker.
 
 ## Primary comparison
 
@@ -101,14 +100,14 @@ than artificial perfect recall. Candidate coverage, ranking conversion, residue
 AP and selected-conformer geometry are separate diagnostics.
 
 Use native end-to-end baselines and matched-candidate ranking comparisons as two
-different tables. A static scorer given ensemble-generated proposals is not an
-apo-only method. Author PR-AUC definitions and this implementation's average
+different tables. Label a static scorer given ensemble-generated proposals as an
+ensemble-proposal method. Author PR-AUC definitions and this implementation's average
 precision are also separate metrics.
 
 The inexpensive Lacuna NMA/alpha/learned baseline and mean cached R0-logit ranker
 are required controls. Pin Lacuna's backend explicitly, preserve its run receipt,
-and keep its prior public-test exposure visible. The saved report alone cannot
-prove which generator or input was used.
+and keep its prior public-test exposure visible. The independent run receipt supplies the generator, input and
+configuration identity alongside the saved report.
 
 ## Next execution boundary
 
@@ -116,8 +115,8 @@ Before model work: review the plan, select a provider/environment if needed,
 authorize the stage, run deferred CPU model checks, verify local checkpoint
 hashes, audit original data and run a few development-only external-tool smoke
 targets. Freeze quality thresholds, relatedness rules and measured costs before
-bulk sampling. The prior USD 200 amount remains a proposed cap, not authorization
-or a quote that every comparator fits.
+bulk sampling. The prior USD 200 amount remains a proposed cap; stage authorization and
+measured comparator costs precede spending.
 
 See `WORK_LOG.md` for decisions and `artifacts/` for the generated plan/readiness
 and verification receipts. Historical `dynamics/*.py` code is not imported by this

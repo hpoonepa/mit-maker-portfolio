@@ -1217,7 +1217,7 @@ def test_midrank_percentiles_keep_nan_out_of_the_ranking():
 
 
 def test_midrank_percentiles_of_one_value_is_a_half_not_one():
-    """A lone value has no distribution; 1.0 would claim it is the best."""
+    """A lone value receives the neutral midpoint percentile."""
     assert midrank_percentiles({K("A", 1): 7.0}) == {K("A", 1): pytest.approx(0.5)}
 
 

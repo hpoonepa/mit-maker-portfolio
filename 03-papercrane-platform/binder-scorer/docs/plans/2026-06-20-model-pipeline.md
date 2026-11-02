@@ -3173,7 +3173,7 @@ metrics:
   - metric: computational__boltz2_plddt
     measures: Per-residue predicted local distance difference test, averaged.
     reliable_when: Assessing per-residue fold confidence of the binder.
-    fails_when: High pLDDT does not imply correct binding pose.
+    fails_when: High pLDDT can accompany an incorrect binding pose.
     default_direction: 1
     prior_relevance: {helical: 0.25, sheet_flat: 0.25, mixed: 0.25, ligand_present: 0.25}
   - metric: computational__boltz2_complex_plddt

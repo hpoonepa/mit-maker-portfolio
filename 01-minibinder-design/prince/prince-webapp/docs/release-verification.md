@@ -16,7 +16,7 @@ The historical recording remains in the source repository; the deployment guide
 explains how to restore it when using the build artifact.
 
 The fresh visual browser check could not complete because the available browser
-automation timed out. No new screenshots or viewport-coverage claim are included.
+automation timed out. Fresh screenshots and viewport checks remain pending.
 The TypeScript, build, link, and live HTTP checks above did complete.
 
 See `verification.json` for the compact receipt. Run `npm run verify` to repeat

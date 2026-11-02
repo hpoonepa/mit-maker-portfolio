@@ -154,9 +154,8 @@ def false_rejection_rate(
     averaged away, which is why this returns a rate per instance and the
     caller aggregates by cluster.
 
-    Residues killed that are *not* in the observed epitope are not counted
-    here: being conservative about unobserved surface is not an error, because
-    absence of an observed contact is not evidence the site is unusable.
+    Only killed residues in the observed epitope count toward this error.
+    The suitability of other surface residues remains unknown.
 
     Args:
         predicted_kills: residue keys the filter returned a KILL verdict for.

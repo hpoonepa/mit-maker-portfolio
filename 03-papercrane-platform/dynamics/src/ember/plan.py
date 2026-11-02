@@ -1,4 +1,4 @@
-"""Inspectable experiment plan and readiness checks; cannot launch compute."""
+"""Inspectable experiment plan and readiness checks that emit configuration for later execution."""
 
 from __future__ import annotations
 
@@ -121,7 +121,7 @@ def experiment_plan() -> dict:
                 "deliverable": "Once-per-release predictions, failure-inclusive results, paired uncertainty and cost.",
             },
         ],
-        "guard_note": "A plan/ledger is not a provider spend cap. No launcher or billing authorization is embedded.",
+        "guard_note": "The plan and ledger track proposed work and reservations; provider controls and billing authorization are separate requirements.",
     }
 
 
@@ -154,7 +154,7 @@ def preflight(plan: dict) -> dict:
     return {
         "ready_for_full_paid_experiment": not missing,
         "unresolved": missing,
-        "note": "Readiness flags require evidence artifacts. Setting flags alone does not verify their claims.",
+        "note": "Readiness flags summarize evidence artifacts; verify those artifacts before execution.",
     }
 
 

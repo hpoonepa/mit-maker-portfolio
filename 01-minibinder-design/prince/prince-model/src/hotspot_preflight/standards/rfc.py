@@ -22,11 +22,9 @@ reverse strand, SapI ``GCTCTTC`` and ``GAAGAGC``. A forward-only scan silently
 passes a CDS that an enzyme will happily cut. That is the obvious bug in any
 implementation of this, and ``both_strands=True`` is mandatory for RFC 1000.
 
-**What this module does not claim.** ``parts.igem.org`` is archive-only, its
-replacement is a JavaScript application that could not be read, and physical
-DNA submission ended in 2019. RFC 10 and RFC 1000 are cited here as the
-published standards they are. Nothing here asserts anything about 2026
-part-submission requirements.
+**Scope.** This module implements the published RFC 10 and RFC 1000
+sequence constraints. Current iGEM submission requirements should be checked
+against the competition's own guidance.
 
 **The seam, and the trap inside it.** The RFC 10 prefix and suffix themselves
 contain EcoRI, NotI and XbaI, and SpeI, NotI and PstI respectively — by

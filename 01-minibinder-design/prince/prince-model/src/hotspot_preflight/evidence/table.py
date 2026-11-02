@@ -466,10 +466,9 @@ def check_evidence(
             _site_finding(
                 "NO_EVIDENCE",
                 f"No reviewed literature evidence covers any of the "
-                f"{len(keys)} requested residue(s). Absence of evidence is not "
-                f"evidence of absence: the site may be fine and simply "
-                f"unstudied, or the table may need a row. This finding says "
-                f"only that we do not know.",
+                f"{len(keys)} requested residue(s). Functional evidence for "
+                f"this site remains unknown; review the literature and add "
+                f"attributed rows when available.",
                 {
                     "n_requested": len(keys),
                     "n_reviewed_rows": len(reviewed),

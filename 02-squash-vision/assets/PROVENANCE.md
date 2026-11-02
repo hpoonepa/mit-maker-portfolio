@@ -2,7 +2,7 @@
 
 ## Current portfolio demo, 31 October 2026
 
-`squashvision-demo.mp4` is the edited recording of the current application reviewing an ElShorbagy vs Farag Canary Wharf rally. `review-demo.png` and `shot-review.png` are frames from that recording. It combines saved model tracking with separately reviewed shot annotations; the placement ratings are estimates from a rubric. It is not a tracking-accuracy or live-inference benchmark.
+`squashvision-demo.mp4` is the edited recording of the current application reviewing an ElShorbagy vs Farag Canary Wharf rally. `review-demo.png` and `shot-review.png` are frames from that recording. It combines saved model tracking with separately reviewed shot annotations; the placement ratings are estimates from a rubric. The demo shows replay and review of a saved analysis.
 
 The professional footage corresponds to SQUASHTV’s [“The quality is just SO HIGH!” — ElShorbagy v Farag — Free Game Friday](https://www.youtube.com/watch?v=y0Y0j_sih1A), from the 2020 SJP Canary Wharf Classic final. Local preparation records identify source seconds **250–275**. The original download URL was not retained; the linked official upload matches the players, event and Free Game title. Broadcast copyright remains with SQUASHTV/its rights holders, separate from the application code. See [citations](../CITATIONS.md).
 
@@ -37,22 +37,20 @@ four-frame input window.
 
 Every overlay element is read from the model output — bounding boxes, COCO-17
 keypoints, the `A`/`B` slot assignment, `association_confidence`, the ball point,
-its probability and its candidate count. Nothing in the image is drawn from a
-fixture or a hand-written value.
+its probability and its candidate count. The overlay is generated from those recorded outputs.
 
-### What this does and does not show
+### Fixture contents
 
 The fixture is **one real squash rally frame repeated into a 20-second clip**,
 with a small patch from the same source animated along a scripted path and
 synthetic impact audio added. So:
 
 - The pose detections are real inference on real squash footage.
-- The players do not move, because the frame is looped. This demonstrates the
-  detector and the identity assignment, **not** tracking through motion or
-  through occlusion.
-- The ball track follows a scripted synthetic patch, not a real ball.
-- **None of this measures accuracy.** There is no ground truth here. See the
-  README's Results section.
+- A looped frame keeps the players stationary while exercising detection and
+  identity assignment.
+- The ball track follows a scripted synthetic patch.
+- The fixture exercises the inference and overlay pipeline. Accuracy testing
+  requires annotated moving-rally footage.
 
 ### Fixture source
 
@@ -86,11 +84,10 @@ differing pixels spread evenly over the whole court bounding box — that is h26
 noise on a static image, not a 600-pixel sinusoidal sweep and two boxes
 translating across the frame.
 
-**Consequence:** these clips could never have exercised pose detection or ball
-tracking, whatever the generator's filter chain implies. With no motion at all,
-TrackNetV3's four-frame differencing input is degenerate.
+The saved clips contain static court geometry and a stationary ball patch.
+TrackNetV3 therefore receives identical content across its four-frame window.
 
-**What is not affected:** the backend test suite does not read these files. The
+**Backend tests:** the
 `squash_fixtures` fixture in `tests/squashvision/backend/test_media_ingest.py` shells out to
 `scripts/make_squash_fixture.py` and generates fresh clips into a temp directory
 on every run, so the tests exercise the generator's real current output. The
@@ -112,9 +109,8 @@ of `assets/squash_fixture.mp4`, 625 frames in total.
 Every number in the two tables and both plots is a literal per-frame return
 value of those two functions: line-segment count, intersection count, proposal
 confidence, corner-correspondence count, the warning string, and wall-clock
-runtime. Nothing is fitted, smoothed or illustrative, and no frame is selected
-for being flattering — the displayed frames are representative of the whole run,
-which declined on all 625.
+runtime. The displayed frames represent the full run, which declined calibration on all
+625 frames.
 
 The calibrator returned `calibrated=False` on every frame of both clips:
 `insufficient_orientation_evidence` on the real footage (median ~3 line

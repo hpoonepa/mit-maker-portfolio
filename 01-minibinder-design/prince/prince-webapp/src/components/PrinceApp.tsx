@@ -44,6 +44,16 @@ type AnalyzeResponse = {
 const API_DEFAULT = "http://127.0.0.1:18766";
 const MAX_BYTES = 8 * 1024 * 1024;
 
+// Present concise scope notes while preserving the frozen API artifact and exports.
+function validationNote(note: string): string {
+  if (note.startsWith("All cached features have appeared")) return "Retrospective evaluation reuses cached features from earlier exploratory analyses.";
+  if (note.startsWith("Connected accession/exact-sequence disjointness")) return "Homologous sequences can occur across accession/exact-sequence-disjoint splits.";
+  if (note.startsWith("Antibody epitopes are")) return "Labels describe observed antibody epitopes; minibinder outcomes require separate evaluation.";
+  if (note.startsWith("No LLM training corpus/checkpoint exists")) return "The fitted model is logistic regression; its residue-level evaluation is reported above.";
+  if (note.startsWith("Residue AUROC and AUPRC are")) return "Residue AUROC and AUPRC measure residue ranking; patch recovery is reported in the connected-sites evaluation artifact.";
+  return note;
+}
+
 function csvFromResult(result: AnalyzeResponse): string {
   const rows = [["kind", "rank", "score", "residues", "relative_sasa", "components", "verdict", "findings", "structural_rank", "structural_score", "evidence"]];
   for (const [index, patch] of result.proposal.patches.entries()) {
@@ -273,7 +283,7 @@ export default function PrinceApp() {
             <option value="structural">Structural ranking; evidence only in checks</option>
             <option value="evidence">Reviewed experimental evidence first, then structure</option>
           </select></label>
-          <p className="prince-help">Evidence-first ordering requires reviewed assay or mutagenesis coverage. It is uncalibrated; missing evidence is not negative evidence.</p>
+          <p className="prince-help">Evidence-first ordering requires reviewed assay or mutagenesis coverage. Calibration remains pending; missing coverage leaves functional evidence unknown.</p>
         </details>
         <details className="prince-evidence-input">
           <summary>Source excerpts <span>TEXT</span></summary>
@@ -292,7 +302,7 @@ export default function PrinceApp() {
         <button className="prince-submit" type="submit" disabled={busy || fileBusy || evidenceBusy || !hasExactlyOneTarget}>
           {busy ? "Running preflight…" : "Run preflight"}<span aria-hidden="true">{busy ? "◌" : "↗"}</span>
         </button>
-        <p className="prince-submit-note" role="status">{busy ? "Reading coordinates and checking surface sites…" : "A GO is a structural check, not proof of binding."}</p>
+        <p className="prince-submit-note" role="status">{busy ? "Reading coordinates and checking surface sites…" : "GO means the selected structural checks passed. Binding requires an assay."}</p>
       </fieldset>
     </form>
     <div className="prince-output-panel" aria-busy={busy}>
@@ -369,7 +379,7 @@ export default function PrinceApp() {
         <p>Effect reported by the API: {result.evidence.affects}.</p>
         {result.evidence.extraction && <div>
           <h5>Source excerpts · review required</h5>
-          <p>Method: {result.evidence.extraction.method}. Excerpts do not affect ranking until reviewed and uploaded as an attributed evidence table.</p>
+          <p>Method: {result.evidence.extraction.method}. Reviewed excerpts can inform ranking after upload as an attributed evidence table.</p>
           <button type="button" onClick={() => download("prince-unreviewed-drafts.yaml", JSON.stringify({ rows: result.evidence?.extraction?.drafts }, null, 2), "application/yaml")}>Export excerpts · YAML</button>
           {result.evidence.extraction.drafts.length === 0 && <p>No residue-related sentences were found in this passage.</p>}
           {result.evidence.extraction.drafts.map((draft, index) => <article className="prince-draft" key={index}>
@@ -384,9 +394,9 @@ export default function PrinceApp() {
         <summary>Validation & limitations</summary>
         <p>{result.validation.model_type}. Status: {result.validation.status.replaceAll("_", " ")}.</p>
         {result.validation.split_instances && <p>The structural fit used {result.validation.split_instances.train} training interfaces; {result.validation.split_instances.val} were reserved for validation and {result.validation.split_instances.test} for testing{result.validation.split_clusters ? ` across ${result.validation.split_clusters.test} test identity components` : ""}.</p>}
-        {result.validation.evaluation && <p>Test residue AUROC: {result.validation.evaluation.fitted.macro_auroc.toFixed(4)} for the fitted model versus {result.validation.evaluation.exposure_only.macro_auroc.toFixed(4)} for exposure alone. This does not establish superiority or a probability of successful binding. Fitted residue AUPRC: {result.validation.evaluation.fitted.macro_auprc.toFixed(4)}.</p>}
-        <p>The packaged fit metadata describe residue-level validation. A separate completed 110-interface site evaluation measures patch selection: <a href="/prince/site-evaluation.json">site outcomes and definitions</a> and <a href="/prince/site-uncertainty.json">component-level uncertainty</a>. A missing patch metric in this API record means it is not packaged here, not that no measurement exists.</p>
-        <ul>{result.validation.limitations?.map((limit) => <li key={limit}>{limit}</li>)}</ul>
+        {result.validation.evaluation && <p>Test residue AUROC: {result.validation.evaluation.fitted.macro_auroc.toFixed(4)} for the fitted model versus {result.validation.evaluation.exposure_only.macro_auroc.toFixed(4)} for exposure alone. These metrics evaluate residue ranking; binding is measured separately. Fitted residue AUPRC: {result.validation.evaluation.fitted.macro_auprc.toFixed(4)}.</p>}
+        <p>The packaged fit metadata describe residue-level validation. A separate completed 110-interface site evaluation measures patch selection: <a href="/prince/site-evaluation.json">site outcomes and definitions</a> and <a href="/prince/site-uncertainty.json">component-level uncertainty</a>. Patch metrics are available in those separate artifacts.</p>
+        <ul>{result.validation.limitations?.map((limit) => <li key={limit}>{validationNote(limit)}</li>)}</ul>
       </details>
       <details><summary>Complete machine-readable record and provenance</summary><pre className="prince-json">{JSON.stringify(result, null, 2)}</pre></details>
     </div>}

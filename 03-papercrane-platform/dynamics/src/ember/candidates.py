@@ -98,7 +98,7 @@ def best_per_frame(site: Site, *, source: str = "ensemble") -> list[Observation]
 
 
 def representative(site: Site, *, ensemble_available: bool) -> Observation:
-    """Fixed detector-based selector, NOT a trained conformation selector."""
+    """Fixed detector-score heuristic for selecting a representative conformation."""
     observations = [o for o in site.observations if o.source == "ensemble"] if ensemble_available else []
     if not observations:
         observations = [o for o in site.observations if o.source in {"apo", "surface"}]

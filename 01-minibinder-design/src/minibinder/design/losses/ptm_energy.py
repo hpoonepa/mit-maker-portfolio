@@ -7,7 +7,7 @@ https://arxiv.org/abs/2505.21241.
 The published method derives an energy objective from predicted alignment-error
 outputs. This module imports the upstream implementation; it does not reproduce
 the full BindEnergyCraft study. V4 used weight 0.075; V5 uses 1.5. These campaign
-choices are not a new experimental validation of that weight or objective.
+choices are historical settings; experimental validation remains pending.
 """
 
 from mosaic.losses.structure_prediction import pTMEnergy

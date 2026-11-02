@@ -15,7 +15,7 @@ The final result interpretation is in [RESULTS_SUMMARY.md](RESULTS_SUMMARY.md).
 - Analyze existing paired coordinate ensembles, with source/candidate matching,
   per-protein summaries, individual training-seed results and paired bootstraps.
 - Compute original centroid RMSD, sample error, spread, finite-K diagnostics and
-  exploratory energy score. MSE improvement alone does not prove distribution quality.
+  exploratory energy score. Endpoint MSE and distributional quality use separate diagnostics.
 - Validate experiment metadata, produce an inert job plan, and account for reserved
   versus billed costs using an atomic local ledger.
 - Extract hash-pinned public mdCATH frames and run paired source/SENBA inference on
@@ -39,9 +39,9 @@ by -0.00642231 angstrom, with conditional protein-bootstrap interval
 
 The endpoint gain magnitude falls 42.4% from K=4 (0.02400558 angstrom) to K=16,
 so finite-K choice materially affects the estimate. This is a conditional endpoint
-diagnostic from one training seed on a reused validation panel, not an independent
-test, exact reproduction or claim of broad-dynamics improvement. See
-[RESULTS_SUMMARY.md](RESULTS_SUMMARY.md) for the restrained interpretation and
+diagnostic from one training seed on a reused validation panel, using a new
+evaluator at the fixed temperature and lag. See
+[RESULTS_SUMMARY.md](RESULTS_SUMMARY.md) for the evaluation scope and sampling interpretation and
 [the K=16 report](artifacts/reports/sampling-k16-v1/results.md) for the final merged
 analysis.
 
@@ -57,7 +57,7 @@ python -m senba_sprint preflight configs/sprint.json
 python -m senba_sprint plan configs/sprint.json --output artifacts/job-plan.json
 ```
 
-`demo` generates clearly labeled synthetic test results. It is not SENBA evidence.
+`demo` generates synthetic fixtures for software-contract checks.
 `preflight` currently exits 2 and identifies missing inputs. Existing result files
 are never silently overwritten; choose a new output filename for a rerun.
 
@@ -94,7 +94,7 @@ The atom order and mask must be identical, and coordinates must be finite. All
 training seeds must cover the same proteins and physical transitions. Reusing an
 inference ID across training seeds requires identical source draws. Distinct draws
 need distinct IDs. The analysis averages repeated draws within a transition before
-protein averaging, so extra inference batches do not create extra independent data.
+protein averaging, preserving the original transition and protein analysis units.
 
 Negative candidate-minus-source differences favor the candidate for error metrics
 and energy score. Ensemble spread has no intrinsically favorable direction.
@@ -122,11 +122,10 @@ that these missing assets are not available. The absent items are:
 The public training receipt records train CSV SHA-256
 `ce2c0f3408e4934161535b519552d72f27c7e4d8973cb9fa55a4cebce014bba4` and val CSV SHA-256
 `311704d26216300bc6606546e6699a3a3efce676497ed5177a639fde1175f799`.
-The combined subset manifest hash is a separate identity; it is not a hash of a
-trajectory file. Preserve that distinction when completing the config.
+The combined subset manifest hash identifies the subset manifest. Supply the
+individual trajectory-file hashes separately when completing the config.
 
-The public-data seed-1 panel does not remove these boundaries. G1 is complete only
-as the limited eight-protein evaluation, and the G3 sampling-size sensitivity
+G1 is complete as the eight-protein public-data seed-1 evaluation, and the G3 sampling-size sensitivity
 component is complete. Original G2 additional-training-seed experiments, the G3
 training comparator and G4 frontier experiments are **not done** because their
 required assets are unavailable. None of the completed sampling jobs should be
@@ -143,5 +142,5 @@ This only constrains callers that use the ledger; provider charges can arrive la
 Provider-reported charges total $4.56762390: $1.23086024 for K=4 and $3.33676366
 for augmentation. The ledger retains a $2 late-billing allowance and preserves the
 untouched $10 reserve. All 16 applications are stopped with zero active tasks, and
-no further jobs are queued. This work did not open the sealed test split, publish a
-release or submit a manuscript.
+no further jobs are queued. The sealed test split remains reserved; release publication and manuscript
+submission are separate stages.

@@ -29,9 +29,9 @@ What predicts **expression** (loaded vs. zero curves):
 Two conclusions drive the design:
 
 1. **The axes are retrospective hypotheses.** The panel motivates examining
-   interface confidence and expression-oriented features separately. One
-   positive and nonsignificant expression comparisons do not establish
-   general predictors or independent biological mechanisms.
+   interface confidence and expression-oriented features separately. The panel has one
+   positive and statistically nonsignificant expression comparisons;
+   prospective evaluation of these hypotheses remains pending.
 2. **ipSAE is demoted.** It would have ranked the only real binder 10th of 20.
    Still computed and reported, no longer the gate. The old
    `consensus_gate(metric_key="min_ipsae")` is preserved behind

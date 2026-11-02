@@ -18,9 +18,9 @@ Three profiles ship, and they disagree with each other on purpose:
 * :data:`EXPOSURE_ONLY` — relative solvent accessibility without fitted weights.
 
 The current fit and test use connected accession/exact-sequence components.
-This remains retrospective analysis of cached features, not a clean external
-holdout or proof of designed-minibinder efficacy. Coefficient signs describe
-this dataset; they do not establish a causal biological difference.
+This is a retrospective analysis of cached features. Coefficient signs describe
+associations within the antibody-epitope dataset; prospective minibinder
+evaluation remains pending.
 
 Reproduce the current fit with ``scripts/train_ranker.py --out
 data/eval/prince_connected.json``. Historical analyses in the documentation use
@@ -162,20 +162,20 @@ work, not a previously untouched external test. 60 cached records were excluded
 by the new per-component cap. The 8,241-interface source manifest contains
 6,937 retained interfaces after connected-component capping, but only the cached
 subset was used to train or evaluate this model. Component overlap is zero.
-Exact-identity disjointness does not imply homology-disjointness.
+Homologous sequences can occur across the identity-disjoint splits.
 Before fitting, all cached feature identities were uniquely recovered as
 explicit chain:seq:icode keys. 27,074 symmetry-copy rows were removed and 28
 incorrect declared-antigen labels repaired against explicit manifest keys.
 Features themselves were not recomputed. See feature_identity_repair.json.
 
 Held-out cluster-macro AUROC 0.6479 (bootstrap 95% CI 0.6218–0.6722);
-AUPRC 0.1361. Exposure-only AUROC is 0.6450; superiority is not established.
+AUPRC 0.1361. Exposure-only AUROC is 0.6450, close to the fitted result.
 Metrics are computed per instance, averaged within and then across components,
 so they are not directly comparable to historical pooled-residue metrics.
 Intercept -3.0953482864844784 is omitted from ranking because it is constant.
 
-No patch-recovery or designed-minibinder performance claim follows from this
-residue evaluation. No trained LLM or 83-percent recovery result exists.
+This evaluation measures residue ranking. Patch recovery is evaluated in a
+separate artifact; minibinder-outcome validation remains pending.
 Full counts, input hashes, split membership and limitations are recorded in
 data/eval/prince_connected.json.""",
 )

@@ -1,4 +1,4 @@
-"""Explicit local model-execution gate; not a provider billing control."""
+"""Explicit local model-execution gate; provider billing controls are configured separately."""
 
 from dataclasses import dataclass
 

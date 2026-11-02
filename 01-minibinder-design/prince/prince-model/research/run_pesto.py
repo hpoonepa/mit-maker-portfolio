@@ -82,7 +82,7 @@ PESTO_TRAINING_OVERLAP = {
     ),
     "derived_date_bound": "2021-03-03",
     "derived_date_bound_note": (
-        "DERIVED BY US, not an authors' claim: RCSB initial_release_date resolved for all "
+        "Derived in this analysis: RCSB initial_release_date resolved for all "
         "30,629 resolvable entries in the shipped split lists whose id begins 6-9 gives a "
         "maximum release date of 2021-03-03, with releases falling to zero after it "
         "(2021-01: 418, 2021-02: 405, 2021-03: 96, then none). The checkpoint is dated "

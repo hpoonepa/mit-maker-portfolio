@@ -68,8 +68,8 @@ For each available metric:
 Missing metrics do not become zeros. They reduce `coverage`. If no supported
 metric exists, the API returns `insufficient_metrics` and `score: null`.
 
-This platform transform is intentionally not claimed to reproduce the Python
-LOTO `B_LLM` benchmark, which uses training-fold z-score normalization. The
+This platform transform uses bounded metric scaling. The Python LOTO `B_LLM`
+benchmark instead uses training-fold z-score normalization. The
 research artifact does not currently ship deployable population means and
 standard deviations for production inference.
 

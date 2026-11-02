@@ -1,8 +1,8 @@
 """Bounded cached-feature training with resumable optimizer-boundary checkpoints.
 
-This implementation is authored but not model-tested in the no-compute build.
-Every public training entry requires an explicit ExecutionPolicy. It does not
-provision infrastructure. Torch is imported only after the execution gate.
+This implementation awaits model execution checks. Every public training entry
+requires an explicit ExecutionPolicy; infrastructure provisioning is a separate
+step. Torch is imported only after the execution gate.
 """
 
 from __future__ import annotations

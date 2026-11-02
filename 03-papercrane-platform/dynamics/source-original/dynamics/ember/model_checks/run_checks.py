@@ -4,7 +4,7 @@ Run only after model-execution authorization:
     python -m dynamics.ember.model_checks.run_checks --execute-model
 
 No foundation checkpoints, network calls or GPUs are used by these CPU checks.
-They are intentionally unrun during the 2026-09-28 no-compute build.
+They await execution after the 2026-09-28 implementation stage.
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ def main():
     assert torch.allclose(ensemble(x[order], z[order], True), ensemble(x, z, True)[order])
     passed.append("frozen static dropout, zero correction, exact fallback, site permutation")
 
-    # Tiny artificial overfit sanity check; no biological accuracy claim.
+    # Tiny synthetic overfit check for optimizer and loss behavior.
     model = ResidueMLP(width=2, dropout=0.0)
     features = torch.tensor([[-2.0, 1.0], [-1.0, 1.0], [1.0, -1.0], [2.0, -1.0]])
     labels = torch.tensor([0.0, 0.0, 1.0, 1.0])

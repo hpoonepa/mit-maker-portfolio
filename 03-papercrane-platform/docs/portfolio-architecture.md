@@ -4,7 +4,7 @@ A dashboard submission reaches the jobs router, which validates inputs, checks o
 
 The worker handles cancellation, retryable infrastructure failures, expired attempts and log redaction. `WORKER_DEV_MODE=true` replaces provider execution with synthetic output; those records must keep their simulated provenance.
 
-The registry contains 52 entries. Source readiness configuration labels 12 GA and enables 39 beta integrations. Germinal remains catalog-only because its source image is a stub. These states do not establish current deployment availability or scientific accuracy.
+The registry contains 52 entries. Source readiness configuration labels 12 GA and enables 39 beta integrations. Germinal remains catalog-only because its source image is a stub. These are source-readiness labels. Deployment health and scientific performance require separate checks for each tool.
 
 ## Checks run for this refresh
 

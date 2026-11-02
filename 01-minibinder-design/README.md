@@ -12,4 +12,4 @@ The two BLI replicates measured 546 nM and 666 nM. Original plots are submitted 
 
 [Build notes](docs/BUILD-NOTES.md) · [First-batch scores](results/bli/first-batch-scores.csv) · [Assay records](results/bli/round2-adaptyv-summary.csv) · [Pipeline decisions](docs/PIPELINE-NOTES.md)
 
-[Source and setup](docs/SOURCE-GUIDE.md) maps the campaign scripts, compute backends and retained earlier experiments. [PRINCE](prince/) is the later target-site review and ranking tool; its records do not establish that it selected the positive binder. The [citations and credits](CITATIONS.md) distinguish our campaign/software contributions from the scientific tools, models and datasets we used.
+[Source and setup](docs/SOURCE-GUIDE.md) maps the campaign scripts, compute backends and retained earlier experiments. [PRINCE](prince/) is the later tool for reviewing and ranking target sites. The [citations and credits](CITATIONS.md) distinguish our campaign/software contributions from the scientific tools, models and datasets we used.

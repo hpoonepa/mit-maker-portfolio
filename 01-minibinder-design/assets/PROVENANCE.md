@@ -5,16 +5,15 @@
 `binder-complex.png` is an unmodified copy of the project's
 `homepage-overview-minibinder.png` from the original iGEM upload package. Its
 SHA-256 matches the package's asset-map entry. Teal shows the minibinder and
-gold the DWV target fragment. It is a campaign illustration of a predicted
-complex, not an experimental atomic structure.
+gold the DWV target fragment. It illustrates a predicted complex from the campaign.
 
 The package also contains the explicitly named
 [`l79_s469532_mpnn9` coordinates](l79_s469532_mpnn9.pdb). Their hash matches the
 original structure metadata, which identifies the source as the team's
 BindCraft prediction. A later predicted complex is retained in
 [design provenance](../results/5g51/design-provenance/r10_l79_s469532_mpnn9_complex.cif).
-No render sidecar links the PNG to a specific coordinate export, so the image
-alone is not used to authenticate the positive design or its binding pose.
+The PNG's specific coordinate export is unknown; the named coordinate files
+and their source metadata identify the predicted designs.
 
 ## Experimental plots
 

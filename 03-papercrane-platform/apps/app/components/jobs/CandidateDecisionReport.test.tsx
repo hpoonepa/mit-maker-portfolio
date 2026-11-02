@@ -91,7 +91,7 @@ describe("CandidateDecisionReport", () => {
     expect(screen.getByText("Binder selection report")).toBeTruthy();
     expect(screen.getByText("Lead candidate")).toBeTruthy();
     expect(screen.getAllByText("Seed 1").length).toBeGreaterThan(0);
-    expect(screen.getByText(/No wet-lab evidence/i)).toBeTruthy();
+    expect(screen.getByText(/Computational report\. Wet-lab tests/i)).toBeTruthy();
     expect(screen.getByRole("button", { name: /show all 10 candidates/i })).toBeTruthy();
   });
 

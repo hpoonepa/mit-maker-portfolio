@@ -10,12 +10,12 @@
   ceiling. Provider-reported charges are $4.56762390: $1.23086024 for K=4 and
   $3.33676366 for the sampling augmentation. All 16 applications are stopped
   with zero active tasks. The ledger retains a $2 late-billing allowance and the
-  untouched $10 reserve. It is an accounting guard, not a provider billing cap
-  or final invoice.
+  untouched $10 reserve. It provides local accounting; provider billing controls and
+  final invoices are separate records.
 - Modal browser authentication succeeded for workspace `hpoonepa-42439`, saved
   under the separate `senba-sprint` profile. Commands must select that profile
   explicitly; the user's default profile was not changed. The $30 planning ceiling
-  follows the user's expected credits, not a verified remaining-balance figure.
+  uses the user's expected credits; the remaining account balance awaits verification.
 - Downloaded `vkali08/senba` at `90cce9e822d511459a206ae3a06cbd8dbb243b09`.
 - Verified the 136,711,098-byte checkpoint's SHA-256 against its published identity.
 - Verified 21 of the release manifest's 22 listed files, including all receipts,
@@ -39,10 +39,9 @@ The frozen workload is eight previously used validation proteins, with five 450 
 replicas and four starts per replica: `8 * 20` physical transitions. Source and
 candidate each have prefix-preserving K=4, K=8 and K=16 summaries with ten ODE
 steps. Only the released seed-1 candidate (training seed `20260825`) is evaluated.
-This is a new, independently implemented evaluator on reused validation data; its
-frame rule, float32 extraction and alignment path have not been shown equivalent
-to the unavailable original evaluator. It is therefore not an exact reproduction
-or independent test result.
+This independently implemented evaluator uses reused validation data. The
+original evaluator is unavailable, so equivalence of its frame rule, float32
+extraction and alignment path remains unresolved.
 
 | Samples per model | Endpoint centroid RMSD, candidate − source (angstrom) | Protein-bootstrap 95% interval | Energy score, candidate − source (angstrom) | Protein-bootstrap 95% interval |
 | ---: | ---: | ---: | ---: | ---: |
@@ -56,11 +55,11 @@ candidate-minus-source difference, about 0.138%, with endpoint improvement on
 8/8 proteins. Energy score improves on 7/8 proteins, with equal-protein difference
 -0.00642231 angstrom and conditional interval [-0.01166227, -0.00159859]. The
 endpoint gain magnitude shrinks 42.4% from the K=4 value of 0.02400558 angstrom,
-showing material finite-K sensitivity. Lower ensemble spread has no intrinsically
-favorable interpretation and does not establish preserved biological diversity.
+showing material finite-K sensitivity. Ensemble spread is lower; assessing biological diversity requires a reference
+distribution and a separate distributional analysis.
 
-These are conditional endpoint results for one released training seed on the same
-reused eight-protein validation panel, not evidence of broad-dynamics improvement.
+These conditional endpoint results cover one released training seed on the
+reused eight-protein validation panel at the fixed temperature and lag.
 See [RESULTS_SUMMARY.md](RESULTS_SUMMARY.md) and the complete
 [K=4](artifacts/reports/sampling-k4-v1/results.md),
 [K=8](artifacts/reports/sampling-k8-v1/results.md) and
@@ -76,19 +75,18 @@ See [RESULTS_SUMMARY.md](RESULTS_SUMMARY.md) and the complete
 | Centroid gain vs persistence | 0.4364052826817221 angstrom; 22/28 positive |
 | Source-comparison 95% bootstrap interval | Exactly matches [0.02525014950148637, 0.040114625364512255] |
 | Leave-one-protein-out centroid mean gain | All positive; range [0.030778547791481852, 0.0339790180695553] angstrom |
-| Persistence interval | Does not exactly reproduce with the tested bootstrap implementation |
+| Persistence interval | Differs from the tested bootstrap implementation |
 
 The published persistence interval is [0.20302960346670967, 0.6806461308413764].
 Using NumPy default_rng, seed 20260825, 100,000 shared protein-index resamples and
-linear quantiles gives [0.20500703739876155, 0.680112003477885]. This does not alter
-the positive sign, but the original evaluator is needed to resolve RNG ordering
-or another implementation difference. A second sequential RNG block also did not
-reproduce it. We did not search seeds to force agreement.
+linear quantiles gives [0.20500703739876155, 0.680112003477885]. Both intervals remain positive; the original evaluator is needed to resolve RNG
+ordering or another implementation difference. A second sequential RNG block also
+differed. The checks used the stated seed.
 
-These are arithmetic checks of released summaries, **not raw-coordinate replication**.
-The `single_sample` field's precise definition (first draw or mean over K) needs the
-original evaluator. The receipt alone cannot yield an energy score or prove that
-diversity is preserved. Leave-one-out robustness does not remove validation reuse.
+These checks recompute released summary arithmetic. The `single_sample` field’s
+precise definition (first draw or mean over K) needs the original evaluator.
+Energy scores and diversity analysis require paired coordinate arrays.
+Leave-one-out results use the same validation panel.
 
 ## Release/documentation discrepancies
 
@@ -101,10 +99,9 @@ diversity is preserved. Leave-one-out robustness does not remove validation reus
    `12c7c1f8e7088a4c28d99a76e5fb1d68880cc9206f56976880a3725d402f073b`, 11,374 bytes.
    The mismatch is isolated to this listed file; weights and receipts match.
 3. The initial epoch-sweep protocol lists 10-epoch alpha values 0.02, 0.03, 0.04
-   and 0.06; the selected alpha is 0.0735. Document the subsequent refinement or
-   amendment and its timing before claiming that the exact selected coefficient
-   was in the original frozen grid. The release reports an anchor search, but this
-   protocol alone does not pre-register 0.0735.
+   and 0.06; the selected alpha is 0.0735. The release reports a subsequent anchor search. Document its refinement or
+   amendment and timing: 0.0735 belongs to that later search rather than the
+   original frozen grid.
 
 No remote release files have been modified. Both upstream expectations and observed
 hashes are preserved in `artifacts/hf-release/release-snapshot.json`.
@@ -123,7 +120,7 @@ confirmed these missing assets are not available. Consequently, original G2
 additional-training-seed experiments, the original G3 training comparator and G4
 frontier experiments are **not done**. The receipt's references to
 `baselines/mars_fm/adaptation_data/128x32/train.csv` and `val.csv` identify files
-that would have been required; checksums alone cannot reconstruct them.
+that would have been required; reconstruction requires their original contents as well as checksums.
 
 No further jobs are queued. All applications are stopped, the reported billing is
 $4.56762390, the $2 late-billing allowance remains held, and the $10 reserve remains

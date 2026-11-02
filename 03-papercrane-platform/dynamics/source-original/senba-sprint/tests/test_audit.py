@@ -117,9 +117,9 @@ class AuditTests(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 audit.main(["--release-dir", str(root), "--output", str(output)])
 
-    def test_limitations_do_not_claim_raw_replication(self):
-        self.assertIn("not raw-coordinate replication", self.report["scope"])
-        self.assertTrue(any("energy score cannot" in note for note in self.report["limitations"]))
+    def test_audit_scope_and_required_inputs(self):
+        self.assertIn("published-summary arithmetic checks", self.report["scope"])
+        self.assertTrue(any("energy score requires raw coordinate arrays" in note for note in self.report["limitations"]))
         self.assertTrue(any("ambiguous" in note for note in self.report["limitations"]))
 
 

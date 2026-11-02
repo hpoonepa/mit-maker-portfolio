@@ -50,5 +50,5 @@ def prediction_document(target: Target, mapping: ChainMapping, prediction: Predi
         "author_mapping_sha256": content_hash(mapping),
         "prediction": {key: value for key, value in asdict(prediction).items() if key != "sites"},
         "sites": sites,
-        "interpretation": "Ranked site hypotheses; scores are not calibrated binding probabilities.",
+        "interpretation": "Ranked site hypotheses; scores measure annotation-recovery evidence. Binding probability requires separate calibration data.",
     }

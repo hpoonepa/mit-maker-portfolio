@@ -4,9 +4,7 @@
 This cheap check reports hotspots that lack deposited coordinates before
 downstream modelling. A campaign against PDB 6F5J chain C specified Ile405 and
 Phe408. Chain C declares 416 residues, 393 of them are modelled, and residues
-399-416 have no coordinates. Both hotspots sat in that gap. This structural
-observation does not establish that preflight would have improved binding
-outcomes or saved campaign costs.
+399-416 have no coordinates. Both hotspots sat in that gap. This observation concerns coordinate coverage at the nominated hotspots.
 
 The check asks three separate questions, in order, because a wrong answer to an
 earlier one makes the later ones meaningless:

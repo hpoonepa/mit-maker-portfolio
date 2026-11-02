@@ -21,7 +21,7 @@ this panel it ranked the one true binder 2nd, but Protenix ranked it 1st and
 the two are measuring different things.
 
 CAVEAT: nothing above reaches p<0.05. n=17-18 with a 10/10 split has roughly
-30% power for AUC 0.70. This is the best available signal, not a validated one.
+30% power for AUC 0.70. This exploratory signal needs a larger validation panel.
 
 CONTRACT
 --------

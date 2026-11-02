@@ -153,7 +153,7 @@ def build_tracking_timeline(data, impacts, start_us: int, end_us: int) -> Tracki
         landing_reason=None if landing_count else "No supported floor-bounce locations in this time window.",
         limitations=[
             "Playback statistics reveal saved observations as their source frames are displayed; this is not live model inference.",
-            "Cumulative movement includes accepted observed intervals only. A/B identities remain unverified; gaps and ambiguous samples add no distance.",
+            "Cumulative movement sums accepted observed intervals. Review A/B player labels; gaps and ambiguous samples add no distance.",
             "Current ball speed scales 2D image displacement by the projected court width at the interval's midpoint image Y, clamped to the visible floor extent. It is not actual airborne 3D speed; hide it outside the supplied exact proxy interval.",
             "Impact candidates are inferred from trajectory changes and available pose/calibration evidence; they are not verified contacts or a complete shot count.",
             "Ball floor/wall coordinates are surface-specific estimates. Player feet at contact are separate and must not be presented as ball impact locations.",

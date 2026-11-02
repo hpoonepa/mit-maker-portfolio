@@ -58,7 +58,7 @@ def classify(result, seeds):
 
 
 def sequence_clusters(sequences, threshold=.7):
-    """Greedy identity clusters, not claimed to be structural families."""
+    """Greedy clusters based on sequence identity."""
     from Bio.Align import PairwiseAligner
     aligner = PairwiseAligner(mode="global", match_score=1, mismatch_score=0,
                              open_gap_score=-1, extend_gap_score=-.1)

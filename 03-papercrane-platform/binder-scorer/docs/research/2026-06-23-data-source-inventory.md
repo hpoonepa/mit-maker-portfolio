@@ -1,6 +1,6 @@
 # Paper Crane — Data Source Inventory & Totals
 
-> Historical acquisition notes, 23 June 2026. The permission labels below are unverified planning assessments, not a grant or publication clearance. In particular, code licenses do not determine dataset rights; ODbL/ODC-BY attribution and share-alike terms must be checked for the exact data version; and “validation-only” does not itself authorize redistribution. The current [file-level source and terms map](../../../THIRD_PARTY/DATA-PROVENANCE.md) supersedes these broad permission summaries.
+> Historical acquisition notes, 23 June 2026. The permission labels below are historical planning assessments; exact-version license terms await confirmation. In particular, code licenses do not determine dataset rights; ODbL/ODC-BY attribution and share-alike terms must be checked for the exact data version; and “validation-only” does not itself authorize redistribution. The current [file-level source and terms map](../../../THIRD_PARTY/DATA-PROVENANCE.md) supersedes these broad permission summaries.
 
 ## 1. Headline totals (bottom line up front)
 

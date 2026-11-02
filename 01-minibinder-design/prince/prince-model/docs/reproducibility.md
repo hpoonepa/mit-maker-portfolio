@@ -61,7 +61,7 @@ python research/sweep.py --phase test --blocks geom atom esm
 
 This sequence runs a new experiment. A new PCA fit is paired with newly fitted trees; it must not replace the projection for the distributed frozen classifier. Rebuilding inputs from live upstream sources can change availability or coordinates. Compare input hashes, context counts, feature order, and label-identity assertions before comparing performance.
 
-The `cv` command above restricts the study to classifier candidates on the selected feature blocks. It is a practical reproduction route, not a claim to rerun every exploratory model family or optional ProteinMPNN arm. The original search history is in the frozen receipts and `research/PROTOCOL.md`.
+The `cv` command above restricts the study to classifier candidates on the selected feature blocks. Exploratory model families and the optional ProteinMPNN arm have separate workflows. The original search history is in the frozen receipts and `research/PROTOCOL.md`.
 
 ## Audit and comparator scripts
 
@@ -71,6 +71,6 @@ Several historical audit commands also use complete cached context features and 
 
 ## What was verified for this repository split
 
-See [release-verification.md](release-verification.md). Source reorganization, package behavior, artifact identity, inference parity, and web integration are separate checks from retraining. No fresh full training or prospective biological validation is claimed.
+See [release-verification.md](release-verification.md). Source reorganization, package behavior, artifact identity, inference parity, and web integration are separate checks from retraining. Full retraining and prospective biological validation were outside the release checks.
 
 Two small regression fixtures omitted from the organized package were recovered from the original analysis source: the 26-row DWV design table and the reviewed DWV evidence table. Their contents are preserved for the existing regression tests.

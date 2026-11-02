@@ -5,7 +5,7 @@ weights 0.7 / 0.4 / 2.5 for BinderTargetIPSAE / TargetBinderIPSAE / IPSAE_min)
 and adds the NEW v5 LIS loss class.
 
 ipSAE is imported from Mosaic; credit the DunbrackLab/IPSAE implementation.
-This campaign does not establish a general binder-success threshold.
+Campaign thresholds are retrospective; prospective validation remains pending.
 
 LIS (Local Interaction Score; Kim et al., AFM-LIS):
     For binder->target residue pairs, weight each by contact_probability

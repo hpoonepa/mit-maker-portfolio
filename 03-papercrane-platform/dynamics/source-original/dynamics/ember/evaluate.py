@@ -204,7 +204,7 @@ def evaluate_method(
         "per_target": rows,
         "negative_controls": negatives,
         "excluded": excluded,
-        "metric_note": "Custom residue-set recall; not an official-author protocol reproduction.",
+        "metric_note": "Custom residue-set recall using the declared Ember matching protocol.",
     }
 
 

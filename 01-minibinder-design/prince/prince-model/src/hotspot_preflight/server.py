@@ -36,7 +36,7 @@ def validation_status() -> dict[str, Any]:
         data.pop("split_ids", None)
         return data
     return {"status": "evaluation_artifact_unavailable", "model_type": "logistic regression; not an LLM",
-            "limitations": ["No evaluation artifact installed. No 83% recovery claim is supported."]}
+            "limitations": ["Evaluation artifact unavailable; install the packaged artifact to view measured results."]}
 
 
 def analyze(payload: dict[str, Any]) -> dict[str, Any]:

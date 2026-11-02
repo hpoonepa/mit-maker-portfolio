@@ -169,9 +169,9 @@ export default async function PublicProjectPage({
               <div className="flex items-start gap-3">
                 <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-crane-deep" aria-hidden />
                 <div>
-                  <h2 className="font-display text-[20px] text-ink">Evidence boundary</h2>
+                  <h2 className="font-display text-[20px] text-ink">Report scope</h2>
                   <p className="mt-2 font-sans text-[13px] leading-5 text-graphite">
-                    These rankings use stored in-silico metrics only. They are a transparent triage aid—not a probability of binding, clinical claim, or substitute for orthogonal and wet-lab validation.
+                    These rankings use stored computational metrics to support candidate review. Binding, clinical suitability and experimental performance require orthogonal checks and wet-lab validation.
                   </p>
                 </div>
               </div>

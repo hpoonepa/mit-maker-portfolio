@@ -4,7 +4,7 @@
     {
       "agreement_diagnostic": {
         "consistently_in_top_k": 0,
-        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "note": "Descriptive outcome rate for the selected subset. Compare methods using the fixed-k endpoint; probability calibration requires separate analysis.",
         "observed_positive_fraction": null,
         "positive_outcomes": 0,
         "with_known_outcomes": 0
@@ -48,7 +48,7 @@
     {
       "agreement_diagnostic": {
         "consistently_in_top_k": 0,
-        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "note": "Descriptive outcome rate for the selected subset. Compare methods using the fixed-k endpoint; probability calibration requires separate analysis.",
         "observed_positive_fraction": null,
         "positive_outcomes": 0,
         "with_known_outcomes": 0
@@ -92,7 +92,7 @@
     {
       "agreement_diagnostic": {
         "consistently_in_top_k": 0,
-        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "note": "Descriptive outcome rate for the selected subset. Compare methods using the fixed-k endpoint; probability calibration requires separate analysis.",
         "observed_positive_fraction": null,
         "positive_outcomes": 0,
         "with_known_outcomes": 0
@@ -189,14 +189,14 @@
   "interpretation": [
     "Synthetic demonstration results are illustrative only.",
     "Primary endpoint: fixed-k precision on the same complete-evidence cohort for every method.",
-    "Cutoff ties are averaged uniformly; tie bounds describe possible ordering effects, not sampling confidence.",
+    "Cutoff ties are averaged uniformly; tie bounds describe possible ordering effects. Sampling intervals are reported separately.",
     "Campaigns with fewer than k comparable candidates or unknown cohort outcomes are retained in the report but excluded from primary comparisons.",
     "Targets with zero positives remain eligible for precision; their recall and NDCG are undefined.",
     "Campaigns are averaged within declared evaluation groups, then groups receive equal weight.",
     "Bootstrap intervals resample paired group-level differences; small or nonrepresentative group sets limit inference.",
-    "Group/development declarations are checked for overlap, but their truth, upstream training exclusion, and sequence homology are not independently verified.",
+    "Declared group/development overlaps are checked. Declaration accuracy, upstream training exclusion and sequence homology require independent verification.",
     "Complete-case evaluation remains conditional on evidence availability and label ascertainment.",
-    "No automatic superiority, equivalence, power, calibrated confidence, or multiple-comparison claim is made."
+    "Superiority, equivalence, power, calibration and multiple-comparison conclusions require separate prespecified analyses."
   ],
   "methods": [
     {

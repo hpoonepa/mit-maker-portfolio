@@ -61,8 +61,8 @@ class Context:
 # Shared qualification for both presentations of the structural readouts.
 ARM1_STRUCTURAL_SCOPE_SENTENCE = (
     "Arm 1 measures structural properties without using design scores or binding "
-    "labels. The queried sites were selected retrospectively, so these readouts "
-    "are not a prospective test of site selection or experimental binding."
+    "labels. The queried sites were selected retrospectively; these readouts "
+    "describe their coordinate coverage and structural context."
 )
 ARM2_CONFOUNDED_SENTENCE = "Arm 2 is confounded and is not the headline result."
 
@@ -83,12 +83,10 @@ binder is `{binder}`, 79 aa, KD_app ~604 nM by BLI (replicates 546 and 666 nM).
 
 Both nominated hotspots are unmodelled in the deposited entry, and the one \
 design observed to bind has model-predicted contacts at a different site. Those \
-contacts are not an experimentally mapped epitope. This document regenerates \
-the structural preflight readouts; it does not establish that using them would \
-have improved the campaign.
+contacts await experimental epitope mapping. This document regenerates \
+the structural preflight readouts for the recorded hotspots.
 
-Naming: "triad" is a site label used by the campaign. No functional claim is \
-made or implied about it here.
+Naming: "triad" is a historical site label used by the campaign.
 
 ## Provenance and how to regenerate
 
@@ -135,9 +133,8 @@ a single design was ordered.
 
 2. **Model-predicted contacts for the observed binder pass.** {pass_summary}. \
 These residues are predicted contacts of `{binder}`, the one binder in the \
-30 available assay records, not an experimentally mapped epitope. Passing the \
-structural checks does not validate that contact prediction or establish a \
-prospective success rate.
+30 available assay records. Experimental epitope mapping and prospective \
+site-selection evaluation remain pending.
 
 3. **The crop face is flagged independently.** {artifact_summary}. Each is \
 materially more exposed on the truncated crop than on the biological assembly, \
@@ -211,11 +208,10 @@ crop-built designs span {crop_lo}-{crop_hi} and the full-domain designs \
 {full_lo}-{full_hi}; the separation is clean, but it is a separation between \
 two predictions. Available assay exports contain one binder among 30 designs; \
 five additional ordered designs lack available outcomes. This small, unjoined \
-retrospective does not establish prediction of experimental success.
+retrospective requires a joined outcome analysis and prospective follow-up.
 
-One further limit: **Arm 2 is not a prospective test.** The crop ranges, the \
-contacts and the thresholds were all known before this script was written. It \
-measures internal consistency, not predictive power.
+**Arm 2 is a retrospective consistency check.** The crop ranges, contacts \
+and thresholds were all known before this script was written.
 
 ## Where the measurement differs from the hand probe
 

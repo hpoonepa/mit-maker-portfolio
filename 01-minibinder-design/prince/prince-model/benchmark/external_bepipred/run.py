@@ -169,7 +169,7 @@ def predict(out, upstream, deps, threads):
         "weight_sha256": {p.name: sha(p) for p in [checkpoint, checkpoint.with_name(checkpoint.stem + "-contact-regression.pt"), *ensemble.model_states]},
         "input_sha256": sha(out / "antigens.fasta"), "runner_sha256": sha(__file__),
         "license": "Upstream academic noncommercial only; code and weights not bundled or relicensed",
-        "training_overlap": "Not established clean: BepiPred trained on antibody-antigen PDB structures; this is retrospective comparison, not pristine external generalization",
+        "training_overlap": "BepiPred trained on antibody-antigen PDB structures; upstream training overlap is unknown in this retrospective comparison",
         "input_context": "Observed structure-resolved amino acids per antigen chain; unresolved residues not supplied"})
 
 def evaluate(out: Path) -> None:

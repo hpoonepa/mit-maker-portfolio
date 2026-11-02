@@ -2,7 +2,7 @@
   {
     "file": "server.py",
     "source": "original-workspace/lambert-ga/senba-demo/server.py",
-    "sha256": "03a62d8907410fe7f221ebbe4118213c158d2e42f33ecdcbf34b780a323b0fb0",
+    "sha256": "1db8d6b695623f1fe1a676866ebf39c111256378f6015d487e5356538ff83faf",
     "retained_source_sha256": "2246624f4811a2033bb21bda4ce7d1737f81aeda6263ec5016e9524ba832ce84",
     "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
   },
@@ -16,7 +16,7 @@
   {
     "file": "prepare_data.py",
     "source": "original-workspace/lambert-ga/senba-demo/prepare_data.py",
-    "sha256": "b6ca56b921aa9249f3b7e81dc7eece45457b63174c941e674d2f6bd2a35b1378",
+    "sha256": "c7a1817bbf3eae25795792ef402192725994cae343f13e324db575eacf56d9f8",
     "retained_source_sha256": "10c709ab36c2846262e567170acf6c25beef9be05f3632fc3cd0cd620a08e6b9",
     "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
   },
@@ -30,7 +30,7 @@
   {
     "file": "static/index.html",
     "source": "original-workspace/lambert-ga/senba-demo/static/index.html",
-    "sha256": "8cef91a2548b5216855d0877cc77b1fe76ef1569ed29a79a1550e8db34325755",
+    "sha256": "84491bcd61c83752f707da0522cac529c9145ba9ca5b869de0fd3d63e07d3d99",
     "retained_source_sha256": "e478f6dcff0ec761852541fb014e7fe01389fb648b9414b57c44af18ac104c8f",
     "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
   },
@@ -44,7 +44,7 @@
   {
     "file": "static/app.js",
     "source": "original-workspace/lambert-ga/senba-demo/static/app.js",
-    "sha256": "27287e5d3d02557608df4d452276862a7872cbb14a7c1ef32f01065bdce53f05",
+    "sha256": "f484c0da40506e38f81021f048c4c9c2e766c8eb7cd2d762fa7c114a032ccb94",
     "retained_source_sha256": "46a2b0d186bfda6409c6974ee6d38701f53d6a72093cb52db01eaf2f170de687",
     "snapshot_note": "Current portfolio bytes; retained_source_sha256 records the earlier exported copy. Portfolio header/documentation changes may differ."
   },

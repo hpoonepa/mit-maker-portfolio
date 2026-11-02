@@ -1,6 +1,6 @@
 # Original campaign source
 
-These are snapshots of the original development files, with source comments and research credits retained. The directory name does not imply a Git history for the unversioned campaign folders.
+These are snapshots of the original development files, with source comments and research credits retained. The unversioned campaign folders are preserved as snapshots.
 
 | Directory | Role |
 |---|---|
@@ -13,6 +13,6 @@ These are snapshots of the original development files, with source comments and 
 | `vast/` | GPU instance orchestration, monitoring, resume and earlier campaign entry points |
 | `Proteinbase Analysis.ipynb` | Exploratory binder-metric analysis |
 
-The DWV story and what was actually measured are in the [pipeline notes](../docs/PIPELINE-NOTES.md). Earlier RBX1 and EGFR work is reference source, not evidence for the positive DWV binder. Historical comments record what was believed at the time; unsupported score claims are not experimental findings. [Citations](../CITATIONS.md) clarify adapted metrics and external dependencies.
+The DWV story and what was actually measured are in the [pipeline notes](../docs/PIPELINE-NOTES.md). Earlier RBX1 and EGFR work is retained as separate learning experiments. Historical comments record the hypotheses used in those iterations; the assay records contain the measured outcomes. [Citations](../CITATIONS.md) clarify adapted metrics and external dependencies.
 
 Some scripts need workspace-specific files, scientific packages, GPU assets or separately configured cloud accounts. No model weights or credentials are supplied. Original files and Git histories remain preserved outside this public copy.

@@ -16,8 +16,8 @@ architecture or LLM receives a privileged role without evidence.
 - Fixed-budget outcome evaluation, strict unknown labels, paired group summaries,
   and seeded bootstrap intervals without automatic superiority claims.
 
-These components are software infrastructure. They do not establish a new
-predictive model, calibrated uncertainty, binding improvement, or novelty.
+These components provide software infrastructure. Predictive performance,
+uncertainty calibration, binding improvement and research novelty remain evaluation goals.
 
 ## Gate 1: A dataset and experiment ledger worth trusting
 
@@ -34,8 +34,8 @@ must agree on golden fixtures before attributing research results to the app.
 Treat all previously inspected campaigns as development data. Define separate
 training, model-selection, calibration, and final evaluation roles. Every
 label-derived prior, feature summary, normalization fit, and prompt feedback
-must respect the entire exclusion boundary. File hashes record identity; they
-do not prove that the experiment was frozen before labels were inspected.
+must respect the entire exclusion boundary. File hashes record identity. A dated experiment ledger must also record
+when the protocol was frozen relative to label inspection.
 
 Exit: an independently reproducible benchmark export and reviewed split ledger.
 
@@ -78,7 +78,7 @@ Explanations must distinguish evidence from interpretation. An LLM can remain
 a useful interface even if it adds no ranking accuracy.
 
 Exit: evidence for a distinct LLM contribution, or a simpler model with an
-optional explanation layer. No novelty claim rests on the presence of an LLM.
+optional explanation layer. Research novelty requires evidence for a specific contribution.
 
 ## Gate 5: Test computational efficiency
 
@@ -103,4 +103,4 @@ used in the final evaluation. Publish negative ablations alongside positive ones
 
 Primary impact is reproducible researcher utility. A paper-level novelty claim
 requires a current comparison with prior work and evidence for the specific new
-contribution; implementation scale alone cannot establish it.
+contribution.
