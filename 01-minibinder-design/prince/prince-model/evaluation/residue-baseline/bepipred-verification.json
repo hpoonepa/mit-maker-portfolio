@@ -1,0 +1,37 @@
+{
+  "shared_prince_exposure_aggregates_bitwise_equal": true,
+  "test_ids_exact_order_match": true,
+  "corrected_structured_labels_equal_raw_manifest": true,
+  "all_input_hashes_current": true,
+  "evaluated_interfaces": 110,
+  "components": 34,
+  "residues": 28845,
+  "missing_predictions": 0,
+  "excluded_interfaces": 0,
+  "official_csv_json_exact_match": true,
+  "inference_elapsed_seconds": 135.45206379890442,
+  "commands": [
+    "python hotspot-preflight/benchmark/external_bepipred/run.py prepare",
+    "python hotspot-preflight/benchmark/external_bepipred/run.py predict --upstream /tmp/prince-bepipred3-official/BepiPred-3.0-98bedf2471e04766c981585180c20da7961c6804 --deps /tmp/prince-bepipred-deps --threads 6",
+    "python hotspot-preflight/benchmark/external_bepipred/run.py evaluate"
+  ],
+  "environment": "Python3.10.9; torch2.2.2; isolated fair-esm2.0.0; official pinned archive outside repository. Machine-specific paths redacted for public distribution.",
+  "mapping_negative_smoke": "Intentionally nonexistent coordinate token rejected with zero identity paths; A210 collision uniquely recovers A:210 and A2:10 by wholechain ordering",
+  "upstream_weights_bundled": false,
+  "comparison_sha256": "87504171f430b71380d29583f158a3ea4b136ff9a8cd685b23e7ba98c7d1f922",
+  "current_sources_sha256": {
+    "data/eval/prince_connected.json": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+    "data/eval/features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "data/eval/bepipred_connected/mapping.json": "aedac02a2f3aad62d6ec858fb18730bac03af273e352a0f173fecddaf8665b2f",
+    "data/eval/bepipred_connected/sequence_predictions.json": "0dbf26694a160c9a5b8dcd39bba76f675154ab8c8092db5eb1483e9639366546",
+    "benchmark/external_bepipred/run.py": "8a27d0234ce4594cc302ae186a281ab30d578d61c85ea9b7d06bcb61e85315df"
+  },
+  "verification_refresh": {
+    "reason": "Model provenance metadata finalized; evaluator rerun against unchanged official predictions, followed by independent exact-label/hash/metric verification",
+    "evaluation_command": ".venv/bin/python benchmark/external_bepipred/run.py evaluate",
+    "evaluation_exit_code": 0,
+    "verification_python": "hotspot-preflight/.venv/bin/python (machine path redacted)",
+    "verification_exit_code": 0,
+    "inference_repeated": false
+  }
+}

@@ -1,0 +1,37 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: '/', name: 'Home' },
+  { href: '/method/', name: 'The method' },
+  { href: '/validation/', name: 'Validation' },
+  { href: '/resources/', name: 'Resources' },
+  { href: '/guide/', name: 'Quickstart' },
+];
+---
+<button class="menu-pill" id="open-site-menu" aria-haspopup="dialog" aria-controls="site-navigation">menu <span class="menu-dot" aria-hidden="true"></span></button>
+<dialog id="site-navigation" class="nav-dialog" aria-labelledby="site-nav-title">
+  <div class="dialog-top"><span id="site-nav-title">Explore Prince</span><button class="close-dialog" aria-label="Close menu">Close <span aria-hidden="true">×</span></button></div>
+  <nav aria-label="Main navigation">{links.map((link, i) => <a href={link.href} aria-current={path === link.href ? 'page' : undefined}><span>{String(i + 1).padStart(2, '0')}</span>{link.name}<i aria-hidden="true">↗</i></a>)}</nav>
+  <a class="button" href="/workspace/">Enter the workspace <span aria-hidden="true">↗</span></a>
+  <p class="nav-footnote">A little more evidence.<br />A better place to begin.</p>
+</dialog>
+<script>
+  const opener = document.querySelector<HTMLButtonElement>('#open-site-menu');
+  const dialog = document.querySelector<HTMLDialogElement>('#site-navigation');
+  let previousOverflow = '';
+  opener?.addEventListener('click', () => {
+    if (!dialog) return;
+    previousOverflow = document.body.style.overflow;
+    dialog.showModal();
+    document.body.style.overflow = 'hidden';
+  });
+  dialog?.querySelector('.close-dialog')?.addEventListener('click', () => dialog.close());
+  dialog?.addEventListener('click', (event) => {
+    const rect = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+  });
+  dialog?.addEventListener('close', () => {
+    document.body.style.overflow = previousOverflow;
+    opener?.focus();
+  });
+</script>

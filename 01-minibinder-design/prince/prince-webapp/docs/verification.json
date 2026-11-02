@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15",
+  "typecheck": {
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "static_pages": 7,
+  "local_link_references": 162,
+  "http_integration": {
+    "routes": 6,
+    "downloads": 10,
+    "structures": [
+      "1ubq",
+      "6f5j"
+    ],
+    "selected_missing_residues": "STOP",
+    "invalid_input_status": 400,
+    "untrusted_origin_status": 403
+  },
+  "browser_visual_check": "not completed: browser automation timed out",
+  "build_advisory": "The lazily loaded Three.js scene exceeds the Vite 500 kB chunk advisory."
+}

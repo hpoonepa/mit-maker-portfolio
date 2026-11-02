@@ -1,0 +1,552 @@
+{
+ "pdb_000011or-K": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012id-D-E": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012id-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012id-M-N": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012ie-D-E": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012ie-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012ie-M-N": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000012qj-B-C": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001ahw-B-A": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001ahw-E-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001bgx-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001bj1-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001bj1-K-J": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001bzq-K": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001bzq-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001bzq-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001bzq-N": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001cz8-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001cz8-Y-X": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001eo8-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001fe8-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001fe8-I-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001fe8-J-N": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001fj1-B-A": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001fj1-D-C": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001fns-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001jps-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001mhp-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001mhp-X-Y": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001oak-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001osp-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001tzh-B-A": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001tzh-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001uj3-B-A": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001v7m-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00001v7m-I-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001v7n-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001v7n-I-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001v7n-J-N": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00001v7n-K-O": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021ao-A-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021aq-A-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021au-A-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021au-C-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021av-A-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000021av-C-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000023iu-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002adf-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002arj-B-A": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00002arj-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00002b2x-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002b2x-I-M": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002bse-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002bse-E": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002bse-F": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002nxy-D-C": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002ny1-D-C": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002ny3-D-C": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002p42-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p42-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p43-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p44-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p45-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p46-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p46-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p47-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p48-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p49-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p4a-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002p4a-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002qqk-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00002qql-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002r0l-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002vwe-E-C": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002vwe-L-J": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002w9e-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002wub-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002wub-R-Q": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002wuc-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-E": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-F": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-J": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-K": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002wzp-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002x7l-A-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002x7l-C-D": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002x7l-E-F": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002x7l-G-I": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002x7l-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002x7l-J-K": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": true
+ },
+ "pdb_00002zuq-C-B": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00002zuq-F-E": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000031mr-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_000032nz-A1-A2": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00003d85-B-A": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00003fmg-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00003grw-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00003hmx-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00003k2u-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00003opz-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00003opz-I-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00003opz-J-N": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ },
+ "pdb_00004ag4-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00004h88-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00004liq-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": true
+ },
+ "pdb_00004ma7-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00004ma8-H-L": {
+  "bp_leak": false,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00004u6v-H-L": {
+  "bp_leak": true,
+  "bp_leak_pre": true,
+  "pesto_leak": false
+ },
+ "pdb_00004u6v-K-M": {
+  "bp_leak": false,
+  "bp_leak_pre": false,
+  "pesto_leak": false
+ }
+}

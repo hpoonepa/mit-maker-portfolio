@@ -1,0 +1,270 @@
+{
+  "title": "First batch: predictions and assay results",
+  "description": "This is the complete first batch I sent for testing. Several designs scored well computationally, but the assay returned nine negative calls and six no-loading results. Seeing both kinds of failure changed how I chose the next batch: I paid more attention to the target site and whether each binder could be made and stay soluble.",
+  "columns": [
+    {
+      "key": "design_id",
+      "label": "Design"
+    },
+    {
+      "key": "iptm",
+      "label": "ipTM",
+      "units": "0\u20131",
+      "decimals": 3
+    },
+    {
+      "key": "ipsae",
+      "label": "ipSAE",
+      "units": "0\u20131; directional maximum",
+      "decimals": 3
+    },
+    {
+      "key": "complex_plddt",
+      "label": "Complex pLDDT",
+      "units": "0\u20131",
+      "decimals": 3
+    },
+    {
+      "key": "interface_pde_angstrom",
+      "label": "Interface PDE",
+      "units": "\u00c5",
+      "decimals": 3
+    },
+    {
+      "key": "assay_outcome",
+      "label": "BLI outcome"
+    }
+  ],
+  "rows": [
+    {
+      "design_id": "5G51_V4_seed05_cysfree",
+      "iptm": 0.944690465927124,
+      "ipsae": 0.8555342,
+      "complex_plddt": 0.9639849662780762,
+      "interface_pde_angstrom": 1.330554723739624,
+      "assay_outcome": "Negative",
+      "assay_loading": "high",
+      "assayed_length_aa": 85,
+      "scored_length_aa": 85,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_V4_seed01",
+      "iptm": null,
+      "ipsae": null,
+      "complex_plddt": null,
+      "interface_pde_angstrom": null,
+      "assay_outcome": "Negative",
+      "assay_loading": "medium",
+      "assayed_length_aa": 84,
+      "scored_length_aa": 85,
+      "sequence_match": false,
+      "note": "Scored sequence includes an extra N-terminal methionine."
+    },
+    {
+      "design_id": "latent_01",
+      "iptm": 0.745323896408081,
+      "ipsae": 0.32618874,
+      "complex_plddt": 0.9060282111167908,
+      "interface_pde_angstrom": 4.545462131500244,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 100,
+      "scored_length_aa": 100,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "latent_02",
+      "iptm": 0.6698424816131592,
+      "ipsae": 0.2951498,
+      "complex_plddt": 0.9232110381126404,
+      "interface_pde_angstrom": 5.746576309204102,
+      "assay_outcome": "Negative",
+      "assay_loading": "medium",
+      "assayed_length_aa": 150,
+      "scored_length_aa": 150,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "latent_03",
+      "iptm": 0.571472704410553,
+      "ipsae": 0.20491861,
+      "complex_plddt": 0.8758372664451599,
+      "interface_pde_angstrom": 4.738491535186768,
+      "assay_outcome": "Negative",
+      "assay_loading": "medium",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "latent_04",
+      "iptm": 0.3151884377002716,
+      "ipsae": 0.0,
+      "complex_plddt": 0.9051091074943542,
+      "interface_pde_angstrom": 8.320097923278809,
+      "assay_outcome": "Negative",
+      "assay_loading": "medium",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_orig_F_s8",
+      "iptm": 0.9302905201911926,
+      "ipsae": 0.87045616,
+      "complex_plddt": 0.9683216214179993,
+      "interface_pde_angstrom": 1.1182805299758911,
+      "assay_outcome": "Negative",
+      "assay_loading": "medium",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_orig_E_s8",
+      "iptm": 0.8967323303222656,
+      "ipsae": 0.83111954,
+      "complex_plddt": 0.9414290189743042,
+      "interface_pde_angstrom": 2.0356667041778564,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s17",
+      "iptm": 0.9503172636032104,
+      "ipsae": 0.87573785,
+      "complex_plddt": 0.9598965644836426,
+      "interface_pde_angstrom": 1.645751953125,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s29",
+      "iptm": 0.9326338171958923,
+      "ipsae": 0.86676353,
+      "complex_plddt": 0.9678953289985657,
+      "interface_pde_angstrom": 1.061815619468689,
+      "assay_outcome": "Negative",
+      "assay_loading": "high",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s55",
+      "iptm": 0.9256802797317505,
+      "ipsae": 0.8900444,
+      "complex_plddt": 0.969485878944397,
+      "interface_pde_angstrom": 0.8681367635726929,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s95",
+      "iptm": 0.9444032907485962,
+      "ipsae": 0.8997833,
+      "complex_plddt": 0.9632500410079956,
+      "interface_pde_angstrom": 0.9015008211135864,
+      "assay_outcome": "Negative",
+      "assay_loading": "high",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s183",
+      "iptm": 0.9210419654846191,
+      "ipsae": 0.8737739,
+      "complex_plddt": 0.970306932926178,
+      "interface_pde_angstrom": 0.877685546875,
+      "assay_outcome": "Negative",
+      "assay_loading": "high",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s187",
+      "iptm": 0.9337350726127625,
+      "ipsae": 0.8994668,
+      "complex_plddt": 0.965967059135437,
+      "interface_pde_angstrom": 0.9019739627838135,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    },
+    {
+      "design_id": "5G51_condF_s205",
+      "iptm": 0.9172921180725098,
+      "ipsae": 0.8656551,
+      "complex_plddt": 0.9639400839805603,
+      "interface_pde_angstrom": 1.362282633781433,
+      "assay_outcome": "Unknown / no loading",
+      "assay_loading": "none",
+      "assayed_length_aa": 80,
+      "scored_length_aa": 80,
+      "sequence_match": true,
+      "note": ""
+    }
+  ],
+  "footnotes": [
+    "Scores come from one retained Boltz-2 evaluation dated 6 July 2026. Its relationship to the original selection date is not established.",
+    "ipTM, ipSAE and complex pLDDT use a 0\u20131 scale. Higher means greater predicted confidence. Interface PDE is in angstroms; lower means less predicted error.",
+    "The local ipSAE implementation uses a 10 \u00c5 PAE cutoff and reports the larger of the two chain-direction scores.",
+    "A dash for 5G51_V4_seed01 means the retained scored sequence has an extra starting methionine compared with the assay record.",
+    "Unknown / no loading means there was no usable binding call; these six designs are not counted as negative."
+  ],
+  "glossary": {
+    "ipTM": "Model confidence in the relative arrangement of the interacting chains.",
+    "ipSAE": "An interface confidence score calculated from predicted aligned errors; this run reports the larger directional score.",
+    "complex pLDDT": "Average local structural confidence across the predicted complex, including both target and binder.",
+    "interface PDE": "Average predicted distance error at the interface, in \u00c5. This is a different quantity from predicted aligned error (PAE).",
+    "pTM": "Predicted TM score for the whole complex; retained in sources.json but omitted from the compact display."
+  },
+  "summary": {
+    "designs": 15,
+    "negative": 9,
+    "unknown_no_loading": 6,
+    "exact_sequence_metric_coverage": 14,
+    "variant_only": 1,
+    "missing_interface_pae": 15
+  },
+  "variant_records": [
+    {
+      "design_id": "5G51_V4_seed01",
+      "difference": "Scored input has an additional N-terminal M (85 aa); assay sequence is 84 aa.",
+      "scores_of_85_aa_variant_only": {
+        "iptm": 0.9582482576370239,
+        "ipsae": 0.92699075,
+        "complex_plddt": 0.9714397192001343,
+        "interface_pde_angstrom": 0.7520848512649536
+      },
+      "display_policy": "Do not present these as scores for the exact assayed sequence."
+    }
+  ]
+}

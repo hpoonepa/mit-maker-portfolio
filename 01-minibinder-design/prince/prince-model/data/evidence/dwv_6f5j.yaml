@@ -1,0 +1,94 @@
+# Curated literature evidence — Deformed wing virus (DWV) capsid, PDB 6F5J chain C.
+#
+# This is the table that would have stopped us. The three rows below describe the
+# DWV protruding-domain "catalytic triad" (Asp294-His277-Ser278). Read together
+# they say: one paper asserts it from side-chain geometry, the constellation is
+# conserved, and the only functional assay ever run on it came back negative.
+# We targeted it anyway. Designs reached 0.854 min_ipSAE and none of them bound.
+#
+# NUMBERING. Author (PDB-deposited) numbering of the VP3 capsid chain, the scheme
+# used by the Plevka-group structures (5G51 P-domain crystal structure, 6F5J
+# virion chain C). Residue 294 sits inside the modelled range of 6F5J chain C;
+# note separately that chain C residues 399-416 are declared but unmodelled,
+# which is the resolved check's problem, not this file's.
+#
+# WHY 6F5J ITSELF IS NOT CITED HERE. RCSB lists 6F5J ("Structure of deformed wing
+# virus carrying the GFP gene", Škubník & Plevka) with its primary citation as
+# "To Be Published": it has no DOI and no PMID. Rather than attach a
+# plausible-looking identifier to it, there is no row for the entry itself.
+#
+# WHAT IS DELIBERATELY ABSENT. We searched for published functional or
+# mutagenesis data on residues 322-360 and 389-400 (Val322, Gln325, Ile302,
+# Tyr346, Tyr359, Arg395 — the epitope-2 and epitope-1 candidates) and found
+# none. There are no rows for them. An empty table for a residue produces
+# NO_EVIDENCE, which says "we do not know"; a fabricated row would say something
+# false. See data/evidence/README.md.
+
+target: 6F5J
+chain_hint: C
+description: >-
+  Deformed wing virus virion, VP3 protruding (P) domain. Author numbering,
+  matching PDB 5G51 and 6F5J chain C.
+
+rows:
+  - residues: [C277, C278, C294]
+    claim: >-
+      The side-chain arrangement of Asp294, His277 and Ser278 in the DWV P domain
+      indicates that they constitute a catalytic triad of the kind identified in
+      proteases, lipases and esterases; the authors call it a putative catalytic
+      triad and say DWV "may" use the activity in cell entry.
+    source: "10.1073/pnas.1615695114"
+    evidence_class: ASSERTION
+    direction: SUPPORTS
+    reviewed: true
+    reviewer: lambert-igem-2026
+    notes: >-
+      Škubník et al., PNAS 2017 (PMID 28270616). Classified ASSERTION, not
+      STRUCTURAL_OBSERVATION: the paper reports no experiment on the site, and in
+      the same discussion concedes that "the distances between the side chains of
+      the residues are larger than ideal for catalyzing a hydrolytic reaction".
+      Our own measurement on 5G51 (all altlocs, 2026-08-16) found no
+      donor-acceptor pair in the hydrogen-bond window — best Ser278 OG-His277 ND1
+      is 3.43 A and best His277 NE2-Asp294 OD1 is 3.65 A, against 2.5-3.1 A for
+      characterised triads. His277 and Ser278 are also sequence-adjacent (i,
+      i+1), which no characterised triad is. Do not restate this row as a
+      demonstrated active site.
+
+  - residues: [C277, C278, C294]
+    claim: >-
+      The putative catalytic triad, together with five further residues forming a
+      compact patch on the P-domain surface, is conserved among iflaviruses.
+    source: "10.1073/pnas.1615695114"
+    evidence_class: CONSERVATION
+    direction: SUPPORTS
+    reviewed: true
+    reviewer: lambert-igem-2026
+    notes: >-
+      Same paper (PMID 28270616). Conservation across homologues is a real
+      finding and a legitimate reason to prefer a site for cross-strain breadth —
+      it is not evidence of catalytic function, and it is not an assay. The five
+      additional residues are not individually named in the text we verified, so
+      they are not listed here.
+
+  - residues: [C277, C278, C294]
+    claim: >-
+      Membrane-lytic activity of the homologous iflavirus P-domain site could not
+      be detected at neutral or low pH on liposomes, and the authors state they
+      "can now exclude the possibility that the putative active site in the P
+      domain cleaves" the lipids tested.
+    source: "10.1073/pnas.1616562114"
+    evidence_class: FUNCTIONAL_ASSAY
+    direction: REFUTES
+    reviewed: true
+    reviewer: lambert-igem-2026
+    notes: >-
+      Kalynych et al., PNAS 2017 (PMID 28053231), slow bee paralysis virus
+      (SBPV). HOMOLOGUE, NOT DWV — the assayed site is the equivalent SBPV triad
+      Asp300-His283-Ser284, and no DWV-specific protease, lipase or esterase
+      assay has ever been published, nor any mutagenesis of the DWV triad. So
+      this row is the strongest functional evidence that exists for this site and
+      it is negative, but it is an inference across a homologue. Kept as REFUTES
+      deliberately: the asymmetric cost is that claiming function where an assay
+      found none is what we already paid for. Not to be confused with the DWV 3C
+      protease triad (Yuan & Kadowaki 2022), which is a different, nonstructural
+      enzyme and IS mutagenically validated.

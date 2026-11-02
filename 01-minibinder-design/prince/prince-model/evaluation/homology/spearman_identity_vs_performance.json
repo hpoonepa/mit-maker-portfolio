@@ -1,0 +1,60 @@
+{
+  "n_clusters": 251,
+  "identity_is_zero_for_n_clusters": 72,
+  "majority_hit@1": {
+    "spearman_rho": 0.18305088483521184,
+    "p": 0.003611684542294215,
+    "spearman_rho_nonzero_identity_only": 0.2409480540809667,
+    "p_nonzero_identity_only": 0.0011577686964157625,
+    "n_nonzero": 179
+  },
+  "majority_hit@3": {
+    "spearman_rho": 0.1752191565958047,
+    "p": 0.00537418965346267,
+    "spearman_rho_nonzero_identity_only": 0.16000930867251179,
+    "p_nonzero_identity_only": 0.03238824552365398,
+    "n_nonzero": 179
+  },
+  "majority_hit@5": {
+    "spearman_rho": 0.17299274074870405,
+    "p": 0.005999892269135634,
+    "spearman_rho_nonzero_identity_only": 0.1653420659794586,
+    "p_nonzero_identity_only": 0.02697530732899082,
+    "n_nonzero": 179
+  },
+  "majority_hit@10": {
+    "spearman_rho": 0.0002482668645320248,
+    "p": 0.9968773640523207,
+    "spearman_rho_nonzero_identity_only": 0.11051309035394159,
+    "p_nonzero_identity_only": 0.1408263521577401,
+    "n_nonzero": 179
+  },
+  "best_f1@1": {
+    "spearman_rho": 0.20535893600660185,
+    "p": 0.0010671313641864868,
+    "spearman_rho_nonzero_identity_only": 0.23513528125574246,
+    "p_nonzero_identity_only": 0.0015328093598244827,
+    "n_nonzero": 179
+  },
+  "best_f1@3": {
+    "spearman_rho": 0.1946281532862091,
+    "p": 0.0019497919443934445,
+    "spearman_rho_nonzero_identity_only": 0.19194222460073215,
+    "p_nonzero_identity_only": 0.010053031071799058,
+    "n_nonzero": 179
+  },
+  "best_f1@5": {
+    "spearman_rho": 0.20865525443723534,
+    "p": 0.0008813250975408479,
+    "spearman_rho_nonzero_identity_only": 0.20607909457222354,
+    "p_nonzero_identity_only": 0.0056469867640970214,
+    "n_nonzero": 179
+  },
+  "best_f1@10": {
+    "spearman_rho": 0.16123863631599447,
+    "p": 0.010512118908180854,
+    "spearman_rho_nonzero_identity_only": 0.2321475378162204,
+    "p_nonzero_identity_only": 0.0017660262935574684,
+    "n_nonzero": 179
+  }
+}

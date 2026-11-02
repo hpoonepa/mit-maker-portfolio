@@ -1,0 +1,2976 @@
+{
+  "status": "completed_retrospective_comparison",
+  "model": "BepiPred-3.0",
+  "requested_instances": 110,
+  "evaluated_instances": 110,
+  "n_components": 34,
+  "n_residues": 28845,
+  "missing_predictions": 0,
+  "mapping_errors": [],
+  "excluded_interfaces": [],
+  "residue_universe": "All cached observed residues on declared original antigen chains; symmetry-copy rows removed by shared corrected feature artifact",
+  "summary": {
+    "macro_auroc": 0.6524413923392663,
+    "macro_auprc": 0.19636044870335423,
+    "auroc_ci95": [
+      0.6021196758562375,
+      0.7018644140020323
+    ],
+    "auprc_ci95": [
+      0.14925442415895074,
+      0.24551026578519486
+    ],
+    "n_instances": 110,
+    "n_clusters": 34,
+    "aggregation": "within-instance metric, mean within cluster, mean across clusters"
+  },
+  "paired_differences": {
+    "prince": {
+      "auroc": {
+        "bepipred_minus_comparator": 0.004536583651331742,
+        "paired_component_bootstrap_ci95": [
+          -0.0491406825125787,
+          0.057468973033164686
+        ]
+      },
+      "auprc": {
+        "bepipred_minus_comparator": 0.060261978519217774,
+        "paired_component_bootstrap_ci95": [
+          0.018417041569904966,
+          0.10415217947524176
+        ]
+      }
+    },
+    "exposure": {
+      "auroc": {
+        "bepipred_minus_comparator": 0.0074401347047564235,
+        "paired_component_bootstrap_ci95": [
+          -0.04064489941829365,
+          0.05529959740963393
+        ]
+      },
+      "auprc": {
+        "bepipred_minus_comparator": 0.06342241235646798,
+        "paired_component_bootstrap_ci95": [
+          0.024007291315292802,
+          0.10392936603909833
+        ]
+      }
+    }
+  },
+  "instances": [
+    {
+      "id": "pdb_000011or-K",
+      "canonical_id": "11or:K",
+      "cluster": "component:seq:3cf4dac57883",
+      "n_residues": 211,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5733778047301394,
+          "auprc": 0.09596536282266668
+        },
+        "prince": {
+          "auroc": 0.5500303214069133,
+          "auprc": 0.09670372267407046
+        },
+        "exposure": {
+          "auroc": 0.5873256519102487,
+          "auprc": 0.13619817675535492
+        }
+      }
+    },
+    {
+      "id": "pdb_000012id-D-E",
+      "canonical_id": "12id:D+E",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 417,
+      "n_positive": 25,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6075510204081632,
+          "auprc": 0.08304683160309338
+        },
+        "prince": {
+          "auroc": 0.6273469387755102,
+          "auprc": 0.10855116992000648
+        },
+        "exposure": {
+          "auroc": 0.623265306122449,
+          "auprc": 0.09803158730275013
+        }
+      }
+    },
+    {
+      "id": "pdb_000012id-H-L",
+      "canonical_id": "12id:H+L",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 417,
+      "n_positive": 26,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6198111351564037,
+          "auprc": 0.08960318320135191
+        },
+        "prince": {
+          "auroc": 0.630336415502656,
+          "auprc": 0.1149989952514161
+        },
+        "exposure": {
+          "auroc": 0.6267951996852252,
+          "auprc": 0.09941942995245992
+        }
+      }
+    },
+    {
+      "id": "pdb_000012id-M-N",
+      "canonical_id": "12id:M+N",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 417,
+      "n_positive": 26,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6198111351564037,
+          "auprc": 0.08960318320135191
+        },
+        "prince": {
+          "auroc": 0.6321070234113713,
+          "auprc": 0.11440211449508773
+        },
+        "exposure": {
+          "auroc": 0.6267951996852252,
+          "auprc": 0.0984310446465208
+        }
+      }
+    },
+    {
+      "id": "pdb_000012ie-D-E",
+      "canonical_id": "12ie:D+E",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 395,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8011314186248912,
+          "auprc": 0.115272803688798
+        },
+        "prince": {
+          "auroc": 0.6823324630113142,
+          "auprc": 0.053151521177776835
+        },
+        "exposure": {
+          "auroc": 0.7417319408181027,
+          "auprc": 0.06420830846175926
+        }
+      }
+    },
+    {
+      "id": "pdb_000012ie-H-L",
+      "canonical_id": "12ie:H+L",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 395,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8011314186248912,
+          "auprc": 0.115272803688798
+        },
+        "prince": {
+          "auroc": 0.6823324630113142,
+          "auprc": 0.053151521177776835
+        },
+        "exposure": {
+          "auroc": 0.7419495213228895,
+          "auprc": 0.0642894772929281
+        }
+      }
+    },
+    {
+      "id": "pdb_000012ie-M-N",
+      "canonical_id": "12ie:M+N",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_residues": 395,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8011314186248912,
+          "auprc": 0.115272803688798
+        },
+        "prince": {
+          "auroc": 0.6823324630113142,
+          "auprc": 0.053151521177776835
+        },
+        "exposure": {
+          "auroc": 0.7420583115752829,
+          "auprc": 0.0642894772929281
+        }
+      }
+    },
+    {
+      "id": "pdb_000012qj-B-C",
+      "canonical_id": "12qj:B+C",
+      "cluster": "component:seq:0e0e4dbdb75e",
+      "n_residues": 394,
+      "n_positive": 11,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.47472110135295514,
+          "auprc": 0.02739293976013575
+        },
+        "prince": {
+          "auroc": 0.6919060052219321,
+          "auprc": 0.05123223978672653
+        },
+        "exposure": {
+          "auroc": 0.6900071208165203,
+          "auprc": 0.04743000700057765
+        }
+      }
+    },
+    {
+      "id": "pdb_00001ahw-B-A",
+      "canonical_id": "1ahw:B+A",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_residues": 200,
+      "n_positive": 22,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7921348314606742,
+          "auprc": 0.3049250081597179
+        },
+        "prince": {
+          "auroc": 0.6087844739530133,
+          "auprc": 0.17014144515225385
+        },
+        "exposure": {
+          "auroc": 0.5906537282941777,
+          "auprc": 0.13970853438948944
+        }
+      }
+    },
+    {
+      "id": "pdb_00001ahw-E-D",
+      "canonical_id": "1ahw:E+D",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_residues": 200,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8217611066773078,
+          "auprc": 0.313134288525327
+        },
+        "prince": {
+          "auroc": 0.6049481245011972,
+          "auprc": 0.14625948715666334
+        },
+        "exposure": {
+          "auroc": 0.6057462090981645,
+          "auprc": 0.1436834085895501
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bgx-H-L",
+      "canonical_id": "1bgx:H+L",
+      "cluster": "component:seq:8ab10a3aad69",
+      "n_residues": 828,
+      "n_positive": 65,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6812581913499345,
+          "auprc": 0.11780229969982765
+        },
+        "prince": {
+          "auroc": 0.7068051214840205,
+          "auprc": 0.16189838267950002
+        },
+        "exposure": {
+          "auroc": 0.7241859058372819,
+          "auprc": 0.1491876152268173
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bj1-H-L",
+      "canonical_id": "1bj1:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8260666459047026,
+          "auprc": 0.3493346860005477
+        },
+        "prince": {
+          "auroc": 0.5487387106820305,
+          "auprc": 0.1627592677443721
+        },
+        "exposure": {
+          "auroc": 0.553410152600436,
+          "auprc": 0.15307369427882306
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bj1-K-J",
+      "canonical_id": "1bj1:K+J",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8260666459047026,
+          "auprc": 0.40268000791217196
+        },
+        "prince": {
+          "auroc": 0.5506072874493927,
+          "auprc": 0.165817350385168
+        },
+        "exposure": {
+          "auroc": 0.5562130177514792,
+          "auprc": 0.1806206364863494
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bzq-K",
+      "canonical_id": "1bzq:K",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6579861111111112,
+          "auprc": 0.18790228611497678
+        },
+        "exposure": {
+          "auroc": 0.6481481481481481,
+          "auprc": 0.18270891533910077
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bzq-L",
+      "canonical_id": "1bzq:L",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6620370370370371,
+          "auprc": 0.1921178731091368
+        },
+        "exposure": {
+          "auroc": 0.6446759259259259,
+          "auprc": 0.18225838591871357
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bzq-M",
+      "canonical_id": "1bzq:M",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6637731481481481,
+          "auprc": 0.1966395897233847
+        },
+        "exposure": {
+          "auroc": 0.6527777777777778,
+          "auprc": 0.1897207636210474
+        }
+      }
+    },
+    {
+      "id": "pdb_00001bzq-N",
+      "canonical_id": "1bzq:N",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6834490740740741,
+          "auprc": 0.2545019376261817
+        },
+        "exposure": {
+          "auroc": 0.6493055555555556,
+          "auprc": 0.18447956253389736
+        }
+      }
+    },
+    {
+      "id": "pdb_00001cz8-H-L",
+      "canonical_id": "1cz8:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8260666459047026,
+          "auprc": 0.3493346860005477
+        },
+        "prince": {
+          "auroc": 0.5842416692619121,
+          "auprc": 0.15567382164287316
+        },
+        "exposure": {
+          "auroc": 0.5552787293677982,
+          "auprc": 0.15448043921303298
+        }
+      }
+    },
+    {
+      "id": "pdb_00001cz8-Y-X",
+      "canonical_id": "1cz8:Y+X",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8260666459047026,
+          "auprc": 0.40268000791217196
+        },
+        "prince": {
+          "auroc": 0.5870445344129555,
+          "auprc": 0.17611710614466713
+        },
+        "exposure": {
+          "auroc": 0.5499844285269386,
+          "auprc": 0.17522528856426556
+        }
+      }
+    },
+    {
+      "id": "pdb_00001eo8-H-L",
+      "canonical_id": "1eo8:H+L",
+      "cluster": "component:seq:222a37a9751c",
+      "n_residues": 319,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5466602748481943,
+          "auprc": 0.0698383064687633
+        },
+        "prince": {
+          "auroc": 0.5768616171300736,
+          "auprc": 0.0778049662605533
+        },
+        "exposure": {
+          "auroc": 0.5947587088526686,
+          "auprc": 0.08590091253297202
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fe8-H-L",
+      "canonical_id": "1fe8:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 381,
+      "n_positive": 36,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7375201288244766,
+          "auprc": 0.17747963723159588
+        },
+        "prince": {
+          "auroc": 0.7397745571658615,
+          "auprc": 0.18372291773221494
+        },
+        "exposure": {
+          "auroc": 0.7280193236714976,
+          "auprc": 0.19046240984535145
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fe8-I-M",
+      "canonical_id": "1fe8:I+M",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 190,
+      "n_positive": 23,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7214267117938037,
+          "auprc": 0.20011137513624633
+        },
+        "prince": {
+          "auroc": 0.7172611299140849,
+          "auprc": 0.22180698573796587
+        },
+        "exposure": {
+          "auroc": 0.7162197344441552,
+          "auprc": 0.23664820425962943
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fe8-J-N",
+      "canonical_id": "1fe8:J+N",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 191,
+      "n_positive": 22,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7323830016137708,
+          "auprc": 0.1980309324183459
+        },
+        "prince": {
+          "auroc": 0.6963421194190424,
+          "auprc": 0.18630525713426052
+        },
+        "exposure": {
+          "auroc": 0.7294244217321141,
+          "auprc": 0.24395184358205785
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fj1-B-A",
+      "canonical_id": "1fj1:B+A",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_residues": 251,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7000907441016334,
+          "auprc": 0.2609614918111984
+        },
+        "prince": {
+          "auroc": 0.6878402903811253,
+          "auprc": 0.18291201507720745
+        },
+        "exposure": {
+          "auroc": 0.661978221415608,
+          "auprc": 0.12970799780900957
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fj1-D-C",
+      "canonical_id": "1fj1:D+C",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_residues": 251,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7017316017316018,
+          "auprc": 0.2589289954995886
+        },
+        "prince": {
+          "auroc": 0.6852813852813853,
+          "auprc": 0.18115675393463362
+        },
+        "exposure": {
+          "auroc": 0.6601731601731602,
+          "auprc": 0.13204271328103862
+        }
+      }
+    },
+    {
+      "id": "pdb_00001fns-H-L",
+      "canonical_id": "1fns:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 196,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8532997057587222,
+          "auprc": 0.4860732480189493
+        },
+        "prince": {
+          "auroc": 0.6565783942833123,
+          "auprc": 0.1454381873472455
+        },
+        "exposure": {
+          "auroc": 0.692728036990332,
+          "auprc": 0.18063017973271103
+        }
+      }
+    },
+    {
+      "id": "pdb_00001jps-H-L",
+      "canonical_id": "1jps:H+L",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_residues": 200,
+      "n_positive": 22,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8156281920326864,
+          "auprc": 0.30714805776220955
+        },
+        "prince": {
+          "auroc": 0.6128702757916241,
+          "auprc": 0.15163240541473436
+        },
+        "exposure": {
+          "auroc": 0.6384065372829418,
+          "auprc": 0.15505681987509398
+        }
+      }
+    },
+    {
+      "id": "pdb_00001mhp-H-L",
+      "canonical_id": "1mhp:H+L",
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_residues": 184,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8890454385346953,
+          "auprc": 0.5815798611138092
+        },
+        "prince": {
+          "auroc": 0.68404367735118,
+          "auprc": 0.14064496510903557
+        },
+        "exposure": {
+          "auroc": 0.6752377597745685,
+          "auprc": 0.16328999681817027
+        }
+      }
+    },
+    {
+      "id": "pdb_00001mhp-X-Y",
+      "canonical_id": "1mhp:X+Y",
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_residues": 192,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8939014202172096,
+          "auprc": 0.5450889563960445
+        },
+        "prince": {
+          "auroc": 0.6549707602339181,
+          "auprc": 0.1482166446653633
+        },
+        "exposure": {
+          "auroc": 0.6747424115845169,
+          "auprc": 0.17550607218027267
+        }
+      }
+    },
+    {
+      "id": "pdb_00001oak-H-L",
+      "canonical_id": "1oak:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 196,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8524590163934426,
+          "auprc": 0.48479451410264424
+        },
+        "prince": {
+          "auroc": 0.6759142496847415,
+          "auprc": 0.2253331452115767
+        },
+        "exposure": {
+          "auroc": 0.6746532156368222,
+          "auprc": 0.15849174845047406
+        }
+      }
+    },
+    {
+      "id": "pdb_00001osp-H-L",
+      "canonical_id": "1osp:H+L",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_residues": 251,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6086956521739131,
+          "auprc": 0.14277067426907836
+        },
+        "prince": {
+          "auroc": 0.5674948240165631,
+          "auprc": 0.0976075975334965
+        },
+        "exposure": {
+          "auroc": 0.5697722567287785,
+          "auprc": 0.10899326456199258
+        }
+      }
+    },
+    {
+      "id": "pdb_00001tzh-B-A",
+      "canonical_id": "1tzh:B+A",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8482142857142857,
+          "auprc": 0.3680864470792075
+        },
+        "prince": {
+          "auroc": 0.6491071428571429,
+          "auprc": 0.1803301580142152
+        },
+        "exposure": {
+          "auroc": 0.6294642857142857,
+          "auprc": 0.19447250803232494
+        }
+      }
+    },
+    {
+      "id": "pdb_00001tzh-H-L",
+      "canonical_id": "1tzh:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "n_residues": 188,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8686274509803922,
+          "auprc": 0.43739709699717283
+        },
+        "prince": {
+          "auroc": 0.6643790849673202,
+          "auprc": 0.19311244572528852
+        },
+        "exposure": {
+          "auroc": 0.6545751633986928,
+          "auprc": 0.1641072945204249
+        }
+      }
+    },
+    {
+      "id": "pdb_00001uj3-B-A",
+      "canonical_id": "1uj3:B+A",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_residues": 205,
+      "n_positive": 25,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8126666666666666,
+          "auprc": 0.34908413558483836
+        },
+        "prince": {
+          "auroc": 0.6062222222222222,
+          "auprc": 0.1474617819130335
+        },
+        "exposure": {
+          "auroc": 0.5862222222222222,
+          "auprc": 0.15342695939905973
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7m-H-L",
+      "canonical_id": "1v7m:H+L",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 145,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7690288713910761,
+          "auprc": 0.3998152356023593
+        },
+        "prince": {
+          "auroc": 0.6535433070866141,
+          "auprc": 0.18578180684604653
+        },
+        "exposure": {
+          "auroc": 0.657917760279965,
+          "auprc": 0.18368895919738001
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7m-I-M",
+      "canonical_id": "1v7m:I+M",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 145,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8042279411764706,
+          "auprc": 0.4145890921872232
+        },
+        "prince": {
+          "auroc": 0.6691176470588235,
+          "auprc": 0.1925504791246786
+        },
+        "exposure": {
+          "auroc": 0.6732536764705882,
+          "auprc": 0.1880469489967803
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7n-H-L",
+      "canonical_id": "1v7n:H+L",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 145,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8120404411764706,
+          "auprc": 0.42810140751851344
+        },
+        "prince": {
+          "auroc": 0.6603860294117647,
+          "auprc": 0.1700657172271341
+        },
+        "exposure": {
+          "auroc": 0.6521139705882353,
+          "auprc": 0.16831036101401448
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7n-I-M",
+      "canonical_id": "1v7n:I+M",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 138,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8263319672131147,
+          "auprc": 0.43060026220339687
+        },
+        "prince": {
+          "auroc": 0.7300204918032787,
+          "auprc": 0.2761458827510764
+        },
+        "exposure": {
+          "auroc": 0.7054303278688525,
+          "auprc": 0.22045553255631556
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7n-J-N",
+      "canonical_id": "1v7n:J+N",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 139,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8165650406504065,
+          "auprc": 0.4214569499475843
+        },
+        "prince": {
+          "auroc": 0.6941056910569106,
+          "auprc": 0.2492026318954265
+        },
+        "exposure": {
+          "auroc": 0.6676829268292683,
+          "auprc": 0.17704469915824209
+        }
+      }
+    },
+    {
+      "id": "pdb_00001v7n-K-O",
+      "canonical_id": "1v7n:K+O",
+      "cluster": "component:seq:708f25e8078b",
+      "n_residues": 138,
+      "n_positive": 14,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8392857142857143,
+          "auprc": 0.42510748765015116
+        },
+        "prince": {
+          "auroc": 0.7137096774193549,
+          "auprc": 0.1847442250838877
+        },
+        "exposure": {
+          "auroc": 0.7033410138248848,
+          "auprc": 0.17915811797098505
+        }
+      }
+    },
+    {
+      "id": "pdb_000021ao-A-B",
+      "canonical_id": "21ao:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 314,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7221850613154961,
+          "auprc": 0.1356777511965979
+        },
+        "prince": {
+          "auroc": 0.7545150501672241,
+          "auprc": 0.15723217315142932
+        },
+        "exposure": {
+          "auroc": 0.6943143812709031,
+          "auprc": 0.1000432877652586
+        }
+      }
+    },
+    {
+      "id": "pdb_000021aq-A-B",
+      "canonical_id": "21aq:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 315,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5244574020084224,
+          "auprc": 0.12377586447952023
+        },
+        "prince": {
+          "auroc": 0.6462585034013606,
+          "auprc": 0.12081626355397479
+        },
+        "exposure": {
+          "auroc": 0.6402656300615485,
+          "auprc": 0.11837763074963158
+        }
+      }
+    },
+    {
+      "id": "pdb_000021au-A-B",
+      "canonical_id": "21au:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 315,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7453333333333333,
+          "auprc": 0.17490464327765742
+        },
+        "prince": {
+          "auroc": 0.7504444444444445,
+          "auprc": 0.1386593948139863
+        },
+        "exposure": {
+          "auroc": 0.6884444444444444,
+          "auprc": 0.09253187556447977
+        }
+      }
+    },
+    {
+      "id": "pdb_000021au-C-D",
+      "canonical_id": "21au:C+D",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 315,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4486556527372854,
+          "auprc": 0.06198270202125381
+        },
+        "prince": {
+          "auroc": 0.7329122125040493,
+          "auprc": 0.14682203174418684
+        },
+        "exposure": {
+          "auroc": 0.6415613864593457,
+          "auprc": 0.13137270220870767
+        }
+      }
+    },
+    {
+      "id": "pdb_000021av-A-B",
+      "canonical_id": "21av:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 321,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5068106312292359,
+          "auprc": 0.11826421718202715
+        },
+        "prince": {
+          "auroc": 0.6471760797342193,
+          "auprc": 0.12601979537568853
+        },
+        "exposure": {
+          "auroc": 0.6800664451827243,
+          "auprc": 0.16416182541206492
+        }
+      }
+    },
+    {
+      "id": "pdb_000021av-C-D",
+      "canonical_id": "21av:C+D",
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_residues": 321,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4926910299003322,
+          "auprc": 0.06343769990768242
+        },
+        "prince": {
+          "auroc": 0.7596345514950166,
+          "auprc": 0.16026742400286936
+        },
+        "exposure": {
+          "auroc": 0.7122923588039867,
+          "auprc": 0.1793524987882344
+        }
+      }
+    },
+    {
+      "id": "pdb_000023iu-H-L",
+      "canonical_id": "23iu:H+L",
+      "cluster": "component:seq:387c84fe6478",
+      "n_residues": 403,
+      "n_positive": 26,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6326259946949602,
+          "auprc": 0.09325718882768469
+        },
+        "prince": {
+          "auroc": 0.617731075290757,
+          "auprc": 0.1065416819399755
+        },
+        "exposure": {
+          "auroc": 0.6456845541726178,
+          "auprc": 0.10015085646882295
+        }
+      }
+    },
+    {
+      "id": "pdb_00002adf-H-L",
+      "canonical_id": "2adf:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "n_residues": 189,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.678328173374613,
+          "auprc": 0.1574220024946147
+        },
+        "prince": {
+          "auroc": 0.628482972136223,
+          "auprc": 0.13553853242584507
+        },
+        "exposure": {
+          "auroc": 0.634984520123839,
+          "auprc": 0.1525999050316502
+        }
+      }
+    },
+    {
+      "id": "pdb_00002arj-B-A",
+      "canonical_id": "2arj:B+A",
+      "cluster": "component:seq:249bad6cb408",
+      "n_residues": 116,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5208333333333334,
+          "auprc": 0.17123028163427398
+        },
+        "prince": {
+          "auroc": 0.5776041666666667,
+          "auprc": 0.19724405508748502
+        },
+        "exposure": {
+          "auroc": 0.615625,
+          "auprc": 0.21266723123331369
+        }
+      }
+    },
+    {
+      "id": "pdb_00002arj-H-L",
+      "canonical_id": "2arj:H+L",
+      "cluster": "component:seq:249bad6cb408",
+      "n_residues": 115,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.49890350877192985,
+          "auprc": 0.15776174973641868
+        },
+        "prince": {
+          "auroc": 0.5712719298245614,
+          "auprc": 0.1872496930265739
+        },
+        "exposure": {
+          "auroc": 0.6047149122807017,
+          "auprc": 0.1977089442637936
+        }
+      }
+    },
+    {
+      "id": "pdb_00002b2x-H-L",
+      "canonical_id": "2b2x:H+L",
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_residues": 188,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8999144568006844,
+          "auprc": 0.5543927275327886
+        },
+        "prince": {
+          "auroc": 0.7262617621899059,
+          "auprc": 0.19034186210132203
+        },
+        "exposure": {
+          "auroc": 0.6860564585115483,
+          "auprc": 0.20284802041927938
+        }
+      }
+    },
+    {
+      "id": "pdb_00002b2x-I-M",
+      "canonical_id": "2b2x:I+M",
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_residues": 176,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.902782433791485,
+          "auprc": 0.6407956295897164
+        },
+        "prince": {
+          "auroc": 0.7006369426751592,
+          "auprc": 0.22288377453359978
+        },
+        "exposure": {
+          "auroc": 0.6748240026818639,
+          "auprc": 0.24664166768474904
+        }
+      }
+    },
+    {
+      "id": "pdb_00002bse-D",
+      "canonical_id": "2bse:D",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 214,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8368421052631579,
+          "auprc": 0.2312788609363091
+        },
+        "prince": {
+          "auroc": 0.517948717948718,
+          "auprc": 0.09565746723336951
+        },
+        "exposure": {
+          "auroc": 0.5427800269905533,
+          "auprc": 0.09326760877742464
+        }
+      }
+    },
+    {
+      "id": "pdb_00002bse-E",
+      "canonical_id": "2bse:E",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 214,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8368421052631579,
+          "auprc": 0.2312788609363091
+        },
+        "prince": {
+          "auroc": 0.5292847503373819,
+          "auprc": 0.09634686256318005
+        },
+        "exposure": {
+          "auroc": 0.540080971659919,
+          "auprc": 0.0921846291114392
+        }
+      }
+    },
+    {
+      "id": "pdb_00002bse-F",
+      "canonical_id": "2bse:F",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 214,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8368421052631579,
+          "auprc": 0.22552083370245302
+        },
+        "prince": {
+          "auroc": 0.49635627530364373,
+          "auprc": 0.08971299901953791
+        },
+        "exposure": {
+          "auroc": 0.5473684210526316,
+          "auprc": 0.09391530750755948
+        }
+      }
+    },
+    {
+      "id": "pdb_00002nxy-D-C",
+      "canonical_id": "2nxy:D+C",
+      "cluster": "component:seq:ba87b5233633",
+      "n_residues": 304,
+      "n_positive": 14,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5004926108374385,
+          "auprc": 0.05064627937835132
+        },
+        "prince": {
+          "auroc": 0.7073891625615764,
+          "auprc": 0.0803645113727055
+        },
+        "exposure": {
+          "auroc": 0.6672413793103448,
+          "auprc": 0.07429356112458631
+        }
+      }
+    },
+    {
+      "id": "pdb_00002ny1-D-C",
+      "canonical_id": "2ny1:D+C",
+      "cluster": "component:seq:41cdcdcf62be",
+      "n_residues": 305,
+      "n_positive": 14,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5586647029945999,
+          "auprc": 0.06897868520565555
+        },
+        "prince": {
+          "auroc": 0.6990672557682867,
+          "auprc": 0.07689301220334112
+        },
+        "exposure": {
+          "auroc": 0.6607756504663721,
+          "auprc": 0.0712670220941066
+        }
+      }
+    },
+    {
+      "id": "pdb_00002ny3-D-C",
+      "canonical_id": "2ny3:D+C",
+      "cluster": "component:seq:41cdcdcf62be",
+      "n_residues": 305,
+      "n_positive": 14,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.47471772214040253,
+          "auprc": 0.048125868094271156
+        },
+        "prince": {
+          "auroc": 0.676485027000491,
+          "auprc": 0.07323713118651179
+        },
+        "exposure": {
+          "auroc": 0.6647029945999018,
+          "auprc": 0.07245561134077753
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p42-B",
+      "canonical_id": "2p42:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6672453703703703,
+          "auprc": 0.189048585950844
+        },
+        "exposure": {
+          "auroc": 0.6574074074074074,
+          "auprc": 0.19862701649836054
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p42-D",
+      "canonical_id": "2p42:D",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6834490740740741,
+          "auprc": 0.2016983402123637
+        },
+        "exposure": {
+          "auroc": 0.6539351851851852,
+          "auprc": 0.19086012023364943
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p43-B",
+      "canonical_id": "2p43:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5602446483180428,
+          "auprc": 0.13814879515509162
+        },
+        "prince": {
+          "auroc": 0.6929663608562691,
+          "auprc": 0.23151125231611744
+        },
+        "exposure": {
+          "auroc": 0.6122324159021407,
+          "auprc": 0.15379278888338557
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p44-B",
+      "canonical_id": "2p44:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 119,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5558252427184466,
+          "auprc": 0.15137851689448353
+        },
+        "prince": {
+          "auroc": 0.7245145631067961,
+          "auprc": 0.2574848335315322
+        },
+        "exposure": {
+          "auroc": 0.6389563106796117,
+          "auprc": 0.18406152694589323
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p45-B",
+      "canonical_id": "2p45:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6961805555555556,
+          "auprc": 0.2254308240825516
+        },
+        "exposure": {
+          "auroc": 0.6412037037037037,
+          "auprc": 0.17896717720947186
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p46-B",
+      "canonical_id": "2p46:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 120,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5625356938892062,
+          "auprc": 0.16066740271655422
+        },
+        "prince": {
+          "auroc": 0.7081667618503712,
+          "auprc": 0.28721367131462905
+        },
+        "exposure": {
+          "auroc": 0.6767561393489434,
+          "auprc": 0.24027915466492686
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p46-D",
+      "canonical_id": "2p46:D",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 120,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5769230769230769,
+          "auprc": 0.15745738785585534
+        },
+        "prince": {
+          "auroc": 0.7019230769230769,
+          "auprc": 0.2330588261868976
+        },
+        "exposure": {
+          "auroc": 0.6541466346153846,
+          "auprc": 0.19385403444904692
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p47-B",
+      "canonical_id": "2p47:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 123,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5531542056074766,
+          "auprc": 0.14252482451587808
+        },
+        "prince": {
+          "auroc": 0.7102803738317757,
+          "auprc": 0.2331274214355516
+        },
+        "exposure": {
+          "auroc": 0.657126168224299,
+          "auprc": 0.20682332813461837
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p48-B",
+      "canonical_id": "2p48:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6707175925925926,
+          "auprc": 0.19455267313029023
+        },
+        "exposure": {
+          "auroc": 0.6655092592592593,
+          "auprc": 0.19603607106645096
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p49-B",
+      "canonical_id": "2p49:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 119,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5673076923076923,
+          "auprc": 0.14338159310587317
+        },
+        "prince": {
+          "auroc": 0.7185897435897436,
+          "auprc": 0.2641294140009023
+        },
+        "exposure": {
+          "auroc": 0.6096153846153847,
+          "auprc": 0.1583684788923307
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p4a-B",
+      "canonical_id": "2p4a:B",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6915509259259259,
+          "auprc": 0.21187092204703292
+        },
+        "exposure": {
+          "auroc": 0.6684027777777778,
+          "auprc": 0.20777808821364907
+        }
+      }
+    },
+    {
+      "id": "pdb_00002p4a-D",
+      "canonical_id": "2p4a:D",
+      "cluster": "component:seq:088a72a47810",
+      "n_residues": 124,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5480324074074074,
+          "auprc": 0.1420442573626603
+        },
+        "prince": {
+          "auroc": 0.6932870370370371,
+          "auprc": 0.20969167648091253
+        },
+        "exposure": {
+          "auroc": 0.6666666666666666,
+          "auprc": 0.2007195668688293
+        }
+      }
+    },
+    {
+      "id": "pdb_00002qqk-H-L",
+      "canonical_id": "2qqk:H+L",
+      "cluster": "component:seq:b985e28088ae",
+      "n_residues": 541,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5835234474017744,
+          "auprc": 0.03516437099132648
+        },
+        "prince": {
+          "auroc": 0.6865652724968314,
+          "auprc": 0.06103051697711947
+        },
+        "exposure": {
+          "auroc": 0.6839036755386565,
+          "auprc": 0.056774866952999846
+        }
+      }
+    },
+    {
+      "id": "pdb_00002qql-H-L",
+      "canonical_id": "2qql:H+L",
+      "cluster": "component:seq:b985e28088ae",
+      "n_residues": 554,
+      "n_positive": 14,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5457671957671958,
+          "auprc": 0.029155147572468704
+        },
+        "prince": {
+          "auroc": 0.6338624338624339,
+          "auprc": 0.036599848102665915
+        },
+        "exposure": {
+          "auroc": 0.667989417989418,
+          "auprc": 0.050549093342212935
+        }
+      }
+    },
+    {
+      "id": "pdb_00002r0l-H-L",
+      "canonical_id": "2r0l:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "n_residues": 239,
+      "n_positive": 25,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7177570093457943,
+          "auprc": 0.20552382176895054
+        },
+        "prince": {
+          "auroc": 0.6586915887850467,
+          "auprc": 0.15404799744732522
+        },
+        "exposure": {
+          "auroc": 0.6579439252336449,
+          "auprc": 0.16033892645495343
+        }
+      }
+    },
+    {
+      "id": "pdb_00002vwe-E-C",
+      "canonical_id": "2vwe:E+C",
+      "cluster": "component:seq:e6f8edcc8d97",
+      "n_residues": 196,
+      "n_positive": 23,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5952500628298567,
+          "auprc": 0.1825169897192469
+        },
+        "prince": {
+          "auroc": 0.5833123900477507,
+          "auprc": 0.16621085117850945
+        },
+        "exposure": {
+          "auroc": 0.536818296054285,
+          "auprc": 0.12460452588700237
+        }
+      }
+    },
+    {
+      "id": "pdb_00002vwe-L-J",
+      "canonical_id": "2vwe:L+J",
+      "cluster": "component:seq:e6f8edcc8d97",
+      "n_residues": 196,
+      "n_positive": 25,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6228070175438597,
+          "auprc": 0.2360005600847243
+        },
+        "prince": {
+          "auroc": 0.5960233918128655,
+          "auprc": 0.22437778526617058
+        },
+        "exposure": {
+          "auroc": 0.5454970760233918,
+          "auprc": 0.14405023485836727
+        }
+      }
+    },
+    {
+      "id": "pdb_00002w9e-H-L",
+      "canonical_id": "2w9e:H+L",
+      "cluster": "component:seq:379d1046d08b",
+      "n_residues": 99,
+      "n_positive": 17,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6449067431850789,
+          "auprc": 0.28533111252059945
+        },
+        "prince": {
+          "auroc": 0.6068866571018652,
+          "auprc": 0.23091652971350657
+        },
+        "exposure": {
+          "auroc": 0.6520803443328551,
+          "auprc": 0.24914097556019332
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wub-H-L",
+      "canonical_id": "2wub:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "n_residues": 232,
+      "n_positive": 23,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7149989598502184,
+          "auprc": 0.19482770290818446
+        },
+        "prince": {
+          "auroc": 0.6205533596837944,
+          "auprc": 0.13461402059617686
+        },
+        "exposure": {
+          "auroc": 0.6592469315581444,
+          "auprc": 0.148749028403578
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wub-R-Q",
+      "canonical_id": "2wub:R+Q",
+      "cluster": "component:seq:b8d51e7becae",
+      "n_residues": 229,
+      "n_positive": 24,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7595528455284553,
+          "auprc": 0.2902555010998474
+        },
+        "prince": {
+          "auroc": 0.6365853658536585,
+          "auprc": 0.1632158565791207
+        },
+        "exposure": {
+          "auroc": 0.6764227642276422,
+          "auprc": 0.17809859471595205
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wuc-H-L",
+      "canonical_id": "2wuc:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "n_residues": 240,
+      "n_positive": 22,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7016263552960801,
+          "auprc": 0.17848755066270813
+        },
+        "prince": {
+          "auroc": 0.6447039199332777,
+          "auprc": 0.13240831752037516
+        },
+        "exposure": {
+          "auroc": 0.685884070058382,
+          "auprc": 0.15789639993207036
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-D",
+      "canonical_id": "2wzp:D",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 798,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8505506384703736,
+          "auprc": 0.08761153946987421
+        },
+        "prince": {
+          "auroc": 0.48145395581379635,
+          "auprc": 0.024422940287909714
+        },
+        "exposure": {
+          "auroc": 0.4978042024187555,
+          "auprc": 0.022979336798780024
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-E",
+      "canonical_id": "2wzp:E",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 532,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8566796368352788,
+          "auprc": 0.12833834594045512
+        },
+        "prince": {
+          "auroc": 0.4712494595763078,
+          "auprc": 0.03359759452733325
+        },
+        "exposure": {
+          "auroc": 0.5008646779074795,
+          "auprc": 0.032878265302664585
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-F",
+      "canonical_id": "2wzp:F",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 532,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8566796368352788,
+          "auprc": 0.12537654402906456
+        },
+        "prince": {
+          "auroc": 0.4695201037613489,
+          "auprc": 0.033404713356227016
+        },
+        "exposure": {
+          "auroc": 0.5045936013834846,
+          "auprc": 0.03313669557155148
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-J",
+      "canonical_id": "2wzp:J",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 532,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8566796368352788,
+          "auprc": 0.12833834594045512
+        },
+        "prince": {
+          "auroc": 0.4862732382187635,
+          "auprc": 0.03598239474502663
+        },
+        "exposure": {
+          "auroc": 0.5029182879377432,
+          "auprc": 0.033079745867320015
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-K",
+      "canonical_id": "2wzp:K",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 532,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8572265625,
+          "auprc": 0.13540754616099732
+        },
+        "prince": {
+          "auroc": 0.45947265625,
+          "auprc": 0.03555956431517506
+        },
+        "exposure": {
+          "auroc": 0.485302734375,
+          "auprc": 0.035146363693568536
+        }
+      }
+    },
+    {
+      "id": "pdb_00002wzp-L",
+      "canonical_id": "2wzp:L",
+      "cluster": "component:seq:1faabd122add",
+      "n_residues": 532,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8566796368352788,
+          "auprc": 0.12537654402906456
+        },
+        "prince": {
+          "auroc": 0.4829226113272806,
+          "auprc": 0.0350386320847512
+        },
+        "exposure": {
+          "auroc": 0.5092412451361867,
+          "auprc": 0.03344047167796524
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-A-B",
+      "canonical_id": "2x7l:A+B",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.43356643356643354,
+          "auprc": 0.33289784211768897
+        },
+        "exposure": {
+          "auroc": 0.38636363636363635,
+          "auprc": 0.1976883265236122
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-C-D",
+      "canonical_id": "2x7l:C+D",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.46503496503496505,
+          "auprc": 0.24935138155905984
+        },
+        "exposure": {
+          "auroc": 0.3881118881118881,
+          "auprc": 0.19649877533406104
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-E-F",
+      "canonical_id": "2x7l:E+F",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.42482517482517484,
+          "auprc": 0.2717743961902071
+        },
+        "exposure": {
+          "auroc": 0.38461538461538464,
+          "auprc": 0.19872751391072588
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-G-I",
+      "canonical_id": "2x7l:G+I",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.4527972027972028,
+          "auprc": 0.343079119403015
+        },
+        "exposure": {
+          "auroc": 0.38461538461538464,
+          "auprc": 0.1965715721295469
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-H-L",
+      "canonical_id": "2x7l:H+L",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.4230769230769231,
+          "auprc": 0.27296939718089497
+        },
+        "exposure": {
+          "auroc": 0.38461538461538464,
+          "auprc": 0.1965586130716123
+        }
+      }
+    },
+    {
+      "id": "pdb_00002x7l-J-K",
+      "canonical_id": "2x7l:J+K",
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_residues": 57,
+      "n_positive": 13,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4405594405594406,
+          "auprc": 0.2144931682773372
+        },
+        "prince": {
+          "auroc": 0.4458041958041958,
+          "auprc": 0.2739289698644913
+        },
+        "exposure": {
+          "auroc": 0.38461538461538464,
+          "auprc": 0.1963918227819313
+        }
+      }
+    },
+    {
+      "id": "pdb_00002zuq-C-B",
+      "canonical_id": "2zuq:C+B",
+      "cluster": "component:seq:1234b5f1084b",
+      "n_residues": 148,
+      "n_positive": 11,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.8911745189117452,
+          "auprc": 0.4591677940835842
+        },
+        "prince": {
+          "auroc": 0.635036496350365,
+          "auprc": 0.16585895786077717
+        },
+        "exposure": {
+          "auroc": 0.7803583278035833,
+          "auprc": 0.2800920933315513
+        }
+      }
+    },
+    {
+      "id": "pdb_00002zuq-F-E",
+      "canonical_id": "2zuq:F+E",
+      "cluster": "component:seq:1234b5f1084b",
+      "n_residues": 148,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.9221813725490197,
+          "auprc": 0.5413015962256967
+        },
+        "prince": {
+          "auroc": 0.5998774509803921,
+          "auprc": 0.11125523548683151
+        },
+        "exposure": {
+          "auroc": 0.7659313725490197,
+          "auprc": 0.21048998580005254
+        }
+      }
+    },
+    {
+      "id": "pdb_000031mr-H-L",
+      "canonical_id": "31mr:H+L",
+      "cluster": "component:seq:7307fc69de1c",
+      "n_residues": 1304,
+      "n_positive": 20,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5035046728971962,
+          "auprc": 0.015109566903534832
+        },
+        "prince": {
+          "auroc": 0.7058411214953271,
+          "auprc": 0.030321644872789
+        },
+        "exposure": {
+          "auroc": 0.6515186915887851,
+          "auprc": 0.0231271199081995
+        }
+      }
+    },
+    {
+      "id": "pdb_000032nz-A1-A2",
+      "canonical_id": "32nz:A1+A2",
+      "cluster": "component:seq:d8cc4d129d7e",
+      "n_residues": 133,
+      "n_positive": 15,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4847457627118644,
+          "auprc": 0.11805073331381997
+        },
+        "prince": {
+          "auroc": 0.711864406779661,
+          "auprc": 0.18630542868863909
+        },
+        "exposure": {
+          "auroc": 0.6864406779661016,
+          "auprc": 0.17474390262748563
+        }
+      }
+    },
+    {
+      "id": "pdb_00003d85-B-A",
+      "canonical_id": "3d85:B+A",
+      "cluster": "component:seq:2b725678b616",
+      "n_residues": 133,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7555555555555555,
+          "auprc": 0.3603752416372421
+        },
+        "prince": {
+          "auroc": 0.6347826086956522,
+          "auprc": 0.1894208502194557
+        },
+        "exposure": {
+          "auroc": 0.6169082125603865,
+          "auprc": 0.18650892557725812
+        }
+      }
+    },
+    {
+      "id": "pdb_00003fmg-H-L",
+      "canonical_id": "3fmg:H+L",
+      "cluster": "component:seq:54edc1e08865",
+      "n_residues": 235,
+      "n_positive": 7,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6716791979949874,
+          "auprc": 0.04773298649756659
+        },
+        "prince": {
+          "auroc": 0.7299498746867168,
+          "auprc": 0.07286609470882467
+        },
+        "exposure": {
+          "auroc": 0.7205513784461153,
+          "auprc": 0.0607187155225884
+        }
+      }
+    },
+    {
+      "id": "pdb_00003grw-H-L",
+      "canonical_id": "3grw:H+L",
+      "cluster": "component:seq:64db5a0a9a9b",
+      "n_residues": 206,
+      "n_positive": 37,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6971053894130818,
+          "auprc": 0.30806857149518785
+        },
+        "prince": {
+          "auroc": 0.5680473372781065,
+          "auprc": 0.20484366516526484
+        },
+        "exposure": {
+          "auroc": 0.5664481049096434,
+          "auprc": 0.20469238940586293
+        }
+      }
+    },
+    {
+      "id": "pdb_00003hmx-H-L",
+      "canonical_id": "3hmx:H+L",
+      "cluster": "component:seq:2b725678b616",
+      "n_residues": 295,
+      "n_positive": 22,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.6988011988011988,
+          "auprc": 0.15396836116824472
+        },
+        "prince": {
+          "auroc": 0.639027639027639,
+          "auprc": 0.1174834494930403
+        },
+        "exposure": {
+          "auroc": 0.6373626373626373,
+          "auprc": 0.135051115070358
+        }
+      }
+    },
+    {
+      "id": "pdb_00003k2u-H-L",
+      "canonical_id": "3k2u:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "n_residues": 233,
+      "n_positive": 26,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.7032701597918989,
+          "auprc": 0.20325032325430634
+        },
+        "prince": {
+          "auroc": 0.6544035674470458,
+          "auprc": 0.17306515155902774
+        },
+        "exposure": {
+          "auroc": 0.6714975845410628,
+          "auprc": 0.1822767833587162
+        }
+      }
+    },
+    {
+      "id": "pdb_00003opz-H-L",
+      "canonical_id": "3opz:H+L",
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_residues": 625,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.9578070657148087,
+          "auprc": 0.45734494589545516
+        },
+        "prince": {
+          "auroc": 0.8272011715174813,
+          "auprc": 0.08995506595779815
+        },
+        "exposure": {
+          "auroc": 0.799286106534871,
+          "auprc": 0.09289832177418017
+        }
+      }
+    },
+    {
+      "id": "pdb_00003opz-I-M",
+      "canonical_id": "3opz:I+M",
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_residues": 625,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.9578070657148087,
+          "auprc": 0.45734494589545516
+        },
+        "prince": {
+          "auroc": 0.8252791506498262,
+          "auprc": 0.09070670411087438
+        },
+        "exposure": {
+          "auroc": 0.7965403624382208,
+          "auprc": 0.08744759700728102
+        }
+      }
+    },
+    {
+      "id": "pdb_00003opz-J-N",
+      "canonical_id": "3opz:J+N",
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_residues": 625,
+      "n_positive": 18,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.9578070657148087,
+          "auprc": 0.45734494589545516
+        },
+        "prince": {
+          "auroc": 0.8184147904082006,
+          "auprc": 0.08487466542950121
+        },
+        "exposure": {
+          "auroc": 0.7981878088962109,
+          "auprc": 0.0913961237179972
+        }
+      }
+    },
+    {
+      "id": "pdb_00004ag4-H-L",
+      "canonical_id": "4ag4:H+L",
+      "cluster": "component:seq:500626aa376e",
+      "n_residues": 341,
+      "n_positive": 19,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.4727034978751226,
+          "auprc": 0.05067929926451064
+        },
+        "prince": {
+          "auroc": 0.7567832625040863,
+          "auprc": 0.13145604282494397
+        },
+        "exposure": {
+          "auroc": 0.6842105263157895,
+          "auprc": 0.08629651650862406
+        }
+      }
+    },
+    {
+      "id": "pdb_00004h88-H-L",
+      "canonical_id": "4h88:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "n_residues": 102,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5537037037037037,
+          "auprc": 0.14819292759399838
+        },
+        "prince": {
+          "auroc": 0.6518518518518519,
+          "auprc": 0.17271264785262516
+        },
+        "exposure": {
+          "auroc": 0.6462962962962963,
+          "auprc": 0.2030941080746852
+        }
+      }
+    },
+    {
+      "id": "pdb_00004liq-H-L",
+      "canonical_id": "4liq:H+L",
+      "cluster": "component:seq:1bdb33ca5583",
+      "n_residues": 469,
+      "n_positive": 21,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.3788265306122449,
+          "auprc": 0.03478476375503995
+        },
+        "prince": {
+          "auroc": 0.6126700680272109,
+          "auprc": 0.0748827329528072
+        },
+        "exposure": {
+          "auroc": 0.6045918367346939,
+          "auprc": 0.06610313774569218
+        }
+      }
+    },
+    {
+      "id": "pdb_00004ma7-H-L",
+      "canonical_id": "4ma7:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "n_residues": 110,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.5756802721088435,
+          "auprc": 0.14797555575989788
+        },
+        "prince": {
+          "auroc": 0.6147959183673469,
+          "auprc": 0.14313099698624215
+        },
+        "exposure": {
+          "auroc": 0.6232993197278912,
+          "auprc": 0.1748035562874467
+        }
+      }
+    },
+    {
+      "id": "pdb_00004ma8-H-L",
+      "canonical_id": "4ma8:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "n_residues": 108,
+      "n_positive": 12,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.578125,
+          "auprc": 0.1444606365585898
+        },
+        "prince": {
+          "auroc": 0.6362847222222222,
+          "auprc": 0.16527775383778345
+        },
+        "exposure": {
+          "auroc": 0.6397569444444444,
+          "auprc": 0.18267760007807785
+        }
+      }
+    },
+    {
+      "id": "pdb_00004u6v-H-L",
+      "canonical_id": "4u6v:H+L",
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "n_residues": 544,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.920217803030303,
+          "auprc": 0.2816595752164866
+        },
+        "prince": {
+          "auroc": 0.7091619318181818,
+          "auprc": 0.051604860978908235
+        },
+        "exposure": {
+          "auroc": 0.6772017045454546,
+          "auprc": 0.05132903245594148
+        }
+      }
+    },
+    {
+      "id": "pdb_00004u6v-K-M",
+      "canonical_id": "4u6v:K+M",
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "n_residues": 272,
+      "n_positive": 16,
+      "metrics": {
+        "bepipred3": {
+          "auroc": 0.933349609375,
+          "auprc": 0.48068845376551605
+        },
+        "prince": {
+          "auroc": 0.716064453125,
+          "auprc": 0.10325693603046093
+        },
+        "exposure": {
+          "auroc": 0.6845703125,
+          "auprc": 0.10211538196832502
+        }
+      }
+    }
+  ],
+  "components": {
+    "component:seq:3cf4dac57883": {
+      "bepipred3": {
+        "auroc": 0.5733778047301394,
+        "auprc": 0.09596536282266668
+      },
+      "prince": {
+        "auroc": 0.5500303214069133,
+        "auprc": 0.09670372267407046
+      },
+      "exposure": {
+        "auroc": 0.5873256519102487,
+        "auprc": 0.13619817675535492
+      }
+    },
+    "component:seq:b57c0ab7aa72": {
+      "bepipred3": {
+        "auroc": 0.7084279244326073,
+        "auprc": 0.10134526817869853
+      },
+      "prince": {
+        "auroc": 0.6561312944539134,
+        "auprc": 0.0829011405333068
+      },
+      "exposure": {
+        "auroc": 0.6837659132015291,
+        "auprc": 0.08144488749155772
+      }
+    },
+    "component:seq:0e0e4dbdb75e": {
+      "bepipred3": {
+        "auroc": 0.47472110135295514,
+        "auprc": 0.02739293976013575
+      },
+      "prince": {
+        "auroc": 0.6919060052219321,
+        "auprc": 0.05123223978672653
+      },
+      "exposure": {
+        "auroc": 0.6900071208165203,
+        "auprc": 0.04743000700057765
+      }
+    },
+    "component:seq:4f40c10c3b5d": {
+      "bepipred3": {
+        "auroc": 0.8105476992093339,
+        "auprc": 0.3185728725080232
+      },
+      "prince": {
+        "auroc": 0.6082062741170142,
+        "auprc": 0.15387377990917125
+      },
+      "exposure": {
+        "auroc": 0.6052571742243765,
+        "auprc": 0.1479689305632983
+      }
+    },
+    "component:seq:8ab10a3aad69": {
+      "bepipred3": {
+        "auroc": 0.6812581913499345,
+        "auprc": 0.11780229969982765
+      },
+      "prince": {
+        "auroc": 0.7068051214840205,
+        "auprc": 0.16189838267950002
+      },
+      "exposure": {
+        "auroc": 0.7241859058372819,
+        "auprc": 0.1491876152268173
+      }
+    },
+    "component:seq:557be0f03606": {
+      "bepipred3": {
+        "auroc": 0.8368513867189146,
+        "auprc": 0.38491882198363664
+      },
+      "prince": {
+        "auroc": 0.5973530716051256,
+        "auprc": 0.17230169160943065
+      },
+      "exposure": {
+        "auroc": 0.5831542962266051,
+        "auprc": 0.17032997684920348
+      }
+    },
+    "component:seq:088a72a47810": {
+      "bepipred3": {
+        "auroc": 0.553519664614876,
+        "auprc": 0.1446250683668962
+      },
+      "prince": {
+        "auroc": 0.6891323003802474,
+        "auprc": 0.22312375795395656
+      },
+      "exposure": {
+        "auroc": 0.6498040912995733,
+        "auprc": 0.19058343621708576
+      }
+    },
+    "component:seq:222a37a9751c": {
+      "bepipred3": {
+        "auroc": 0.5466602748481943,
+        "auprc": 0.0698383064687633
+      },
+      "prince": {
+        "auroc": 0.5768616171300736,
+        "auprc": 0.0778049662605533
+      },
+      "exposure": {
+        "auroc": 0.5947587088526686,
+        "auprc": 0.08590091253297202
+      }
+    },
+    "component:seq:51352530f5ee": {
+      "bepipred3": {
+        "auroc": 0.7625694562931381,
+        "auprc": 0.28398528490039937
+      },
+      "prince": {
+        "auroc": 0.6857255704338776,
+        "auprc": 0.18302417093151813
+      },
+      "exposure": {
+        "auroc": 0.6960048754331267,
+        "auprc": 0.193797381816979
+      }
+    },
+    "component:seq:2ce74c23c7b8": {
+      "bepipred3": {
+        "auroc": 0.6701726660023827,
+        "auprc": 0.22088705385995513
+      },
+      "prince": {
+        "auroc": 0.6468721665596913,
+        "auprc": 0.1538921221817792
+      },
+      "exposure": {
+        "auroc": 0.6306412127725155,
+        "auprc": 0.12358132521734694
+      }
+    },
+    "component:seq:3d67e0a923ec": {
+      "bepipred3": {
+        "auroc": 0.8964109373360186,
+        "auprc": 0.5804642936580897
+      },
+      "prince": {
+        "auroc": 0.6914782856125408,
+        "auprc": 0.17552181160233019
+      },
+      "exposure": {
+        "auroc": 0.6777151581381244,
+        "auprc": 0.19707143927561785
+      }
+    },
+    "component:seq:708f25e8078b": {
+      "bepipred3": {
+        "auroc": 0.8112466626488755,
+        "auprc": 0.41994507251820473
+      },
+      "prince": {
+        "auroc": 0.6868138073061245,
+        "auprc": 0.20974845715470833
+      },
+      "exposure": {
+        "auroc": 0.676623279310299,
+        "auprc": 0.18611743648228626
+      }
+    },
+    "component:seq:0e0429eb3d73": {
+      "bepipred3": {
+        "auroc": 0.5733555184206842,
+        "auprc": 0.11300714634412316
+      },
+      "prince": {
+        "auroc": 0.7151568069577191,
+        "auprc": 0.14163618044035586
+      },
+      "exposure": {
+        "auroc": 0.6761574410371587,
+        "auprc": 0.13097330341472949
+      }
+    },
+    "component:seq:387c84fe6478": {
+      "bepipred3": {
+        "auroc": 0.6326259946949602,
+        "auprc": 0.09325718882768469
+      },
+      "prince": {
+        "auroc": 0.617731075290757,
+        "auprc": 0.1065416819399755
+      },
+      "exposure": {
+        "auroc": 0.6456845541726178,
+        "auprc": 0.10015085646882295
+      }
+    },
+    "component:seq:249bad6cb408": {
+      "bepipred3": {
+        "auroc": 0.5098684210526316,
+        "auprc": 0.16449601568534633
+      },
+      "prince": {
+        "auroc": 0.5744380482456141,
+        "auprc": 0.19224687405702945
+      },
+      "exposure": {
+        "auroc": 0.6101699561403509,
+        "auprc": 0.20518808774855363
+      }
+    },
+    "component:seq:1faabd122add": {
+      "bepipred3": {
+        "auroc": 0.849446896011218,
+        "auprc": 0.157614157904998
+      },
+      "prince": {
+        "auroc": 0.4882757520596934,
+        "auprc": 0.053302574236945593
+      },
+      "exposure": {
+        "auroc": 0.5145504632068616,
+        "auprc": 0.05222538047869702
+      }
+    },
+    "component:seq:ba87b5233633": {
+      "bepipred3": {
+        "auroc": 0.5004926108374385,
+        "auprc": 0.05064627937835132
+      },
+      "prince": {
+        "auroc": 0.7073891625615764,
+        "auprc": 0.0803645113727055
+      },
+      "exposure": {
+        "auroc": 0.6672413793103448,
+        "auprc": 0.07429356112458631
+      }
+    },
+    "component:seq:41cdcdcf62be": {
+      "bepipred3": {
+        "auroc": 0.5166912125675012,
+        "auprc": 0.05855227664996335
+      },
+      "prince": {
+        "auroc": 0.6877761413843888,
+        "auprc": 0.07506507169492646
+      },
+      "exposure": {
+        "auroc": 0.6627393225331369,
+        "auprc": 0.07186131671744206
+      }
+    },
+    "component:seq:b985e28088ae": {
+      "bepipred3": {
+        "auroc": 0.5646453215844851,
+        "auprc": 0.03215975928189759
+      },
+      "prince": {
+        "auroc": 0.6602138531796327,
+        "auprc": 0.04881518253989269
+      },
+      "exposure": {
+        "auroc": 0.6759465467640373,
+        "auprc": 0.05366198014760639
+      }
+    },
+    "component:seq:b8d51e7becae": {
+      "bepipred3": {
+        "auroc": 0.7194410659624895,
+        "auprc": 0.21446897993879938
+      },
+      "prince": {
+        "auroc": 0.6429875603405646,
+        "auprc": 0.15147026874040512
+      },
+      "exposure": {
+        "auroc": 0.6701990551237752,
+        "auprc": 0.16547194657305403
+      }
+    },
+    "component:seq:e6f8edcc8d97": {
+      "bepipred3": {
+        "auroc": 0.6090285401868583,
+        "auprc": 0.2092587749019856
+      },
+      "prince": {
+        "auroc": 0.5896678909303081,
+        "auprc": 0.19529431822234
+      },
+      "exposure": {
+        "auroc": 0.5411576860388384,
+        "auprc": 0.13432738037268482
+      }
+    },
+    "component:seq:379d1046d08b": {
+      "bepipred3": {
+        "auroc": 0.6449067431850789,
+        "auprc": 0.28533111252059945
+      },
+      "prince": {
+        "auroc": 0.6068866571018652,
+        "auprc": 0.23091652971350657
+      },
+      "exposure": {
+        "auroc": 0.6520803443328551,
+        "auprc": 0.24914097556019332
+      }
+    },
+    "component:seq:5450e9bffc6a": {
+      "bepipred3": {
+        "auroc": 0.4405594405594406,
+        "auprc": 0.2144931682773372
+      },
+      "prince": {
+        "auroc": 0.4408508158508158,
+        "auprc": 0.2906668510525595
+      },
+      "exposure": {
+        "auroc": 0.38548951048951047,
+        "auprc": 0.19707277062524828
+      }
+    },
+    "component:seq:1234b5f1084b": {
+      "bepipred3": {
+        "auroc": 0.9066779457303824,
+        "auprc": 0.5002346951546405
+      },
+      "prince": {
+        "auroc": 0.6174569736653786,
+        "auprc": 0.13855709667380434
+      },
+      "exposure": {
+        "auroc": 0.7731448501763014,
+        "auprc": 0.2452910395658019
+      }
+    },
+    "component:seq:7307fc69de1c": {
+      "bepipred3": {
+        "auroc": 0.5035046728971962,
+        "auprc": 0.015109566903534832
+      },
+      "prince": {
+        "auroc": 0.7058411214953271,
+        "auprc": 0.030321644872789
+      },
+      "exposure": {
+        "auroc": 0.6515186915887851,
+        "auprc": 0.0231271199081995
+      }
+    },
+    "component:seq:d8cc4d129d7e": {
+      "bepipred3": {
+        "auroc": 0.4847457627118644,
+        "auprc": 0.11805073331381997
+      },
+      "prince": {
+        "auroc": 0.711864406779661,
+        "auprc": 0.18630542868863909
+      },
+      "exposure": {
+        "auroc": 0.6864406779661016,
+        "auprc": 0.17474390262748563
+      }
+    },
+    "component:seq:2b725678b616": {
+      "bepipred3": {
+        "auroc": 0.7271783771783772,
+        "auprc": 0.2571718014027434
+      },
+      "prince": {
+        "auroc": 0.6369051238616457,
+        "auprc": 0.153452149856248
+      },
+      "exposure": {
+        "auroc": 0.627135424961512,
+        "auprc": 0.16078002032380806
+      }
+    },
+    "component:seq:54edc1e08865": {
+      "bepipred3": {
+        "auroc": 0.6716791979949874,
+        "auprc": 0.04773298649756659
+      },
+      "prince": {
+        "auroc": 0.7299498746867168,
+        "auprc": 0.07286609470882467
+      },
+      "exposure": {
+        "auroc": 0.7205513784461153,
+        "auprc": 0.0607187155225884
+      }
+    },
+    "component:seq:64db5a0a9a9b": {
+      "bepipred3": {
+        "auroc": 0.6971053894130818,
+        "auprc": 0.30806857149518785
+      },
+      "prince": {
+        "auroc": 0.5680473372781065,
+        "auprc": 0.20484366516526484
+      },
+      "exposure": {
+        "auroc": 0.5664481049096434,
+        "auprc": 0.20469238940586293
+      }
+    },
+    "component:seq:c2fbf27a999e": {
+      "bepipred3": {
+        "auroc": 0.9578070657148087,
+        "auprc": 0.4573449458954551
+      },
+      "prince": {
+        "auroc": 0.8236317041918361,
+        "auprc": 0.08851214516605792
+      },
+      "exposure": {
+        "auroc": 0.7980047592897676,
+        "auprc": 0.0905806808331528
+      }
+    },
+    "component:seq:500626aa376e": {
+      "bepipred3": {
+        "auroc": 0.4727034978751226,
+        "auprc": 0.05067929926451064
+      },
+      "prince": {
+        "auroc": 0.7567832625040863,
+        "auprc": 0.13145604282494397
+      },
+      "exposure": {
+        "auroc": 0.6842105263157895,
+        "auprc": 0.08629651650862406
+      }
+    },
+    "component:seq:069032ac1c7a": {
+      "bepipred3": {
+        "auroc": 0.5691696586041824,
+        "auprc": 0.146876373304162
+      },
+      "prince": {
+        "auroc": 0.6343108308138071,
+        "auprc": 0.16037379955888356
+      },
+      "exposure": {
+        "auroc": 0.636450853489544,
+        "auprc": 0.18685842148006993
+      }
+    },
+    "component:seq:1bdb33ca5583": {
+      "bepipred3": {
+        "auroc": 0.3788265306122449,
+        "auprc": 0.03478476375503995
+      },
+      "prince": {
+        "auroc": 0.6126700680272109,
+        "auprc": 0.0748827329528072
+      },
+      "exposure": {
+        "auroc": 0.6045918367346939,
+        "auprc": 0.06610313774569218
+      }
+    },
+    "component:seq:fbe6fcfe7b67": {
+      "bepipred3": {
+        "auroc": 0.9267837062026515,
+        "auprc": 0.3811740144910013
+      },
+      "prince": {
+        "auroc": 0.7126131924715908,
+        "auprc": 0.07743089850468458
+      },
+      "exposure": {
+        "auroc": 0.6808860085227273,
+        "auprc": 0.07672220721213326
+      }
+    }
+  },
+  "test_ids": [
+    "pdb_000011or-K",
+    "pdb_000012id-D-E",
+    "pdb_000012id-H-L",
+    "pdb_000012id-M-N",
+    "pdb_000012ie-D-E",
+    "pdb_000012ie-H-L",
+    "pdb_000012ie-M-N",
+    "pdb_000012qj-B-C",
+    "pdb_00001ahw-B-A",
+    "pdb_00001ahw-E-D",
+    "pdb_00001bgx-H-L",
+    "pdb_00001bj1-H-L",
+    "pdb_00001bj1-K-J",
+    "pdb_00001bzq-K",
+    "pdb_00001bzq-L",
+    "pdb_00001bzq-M",
+    "pdb_00001bzq-N",
+    "pdb_00001cz8-H-L",
+    "pdb_00001cz8-Y-X",
+    "pdb_00001eo8-H-L",
+    "pdb_00001fe8-H-L",
+    "pdb_00001fe8-I-M",
+    "pdb_00001fe8-J-N",
+    "pdb_00001fj1-B-A",
+    "pdb_00001fj1-D-C",
+    "pdb_00001fns-H-L",
+    "pdb_00001jps-H-L",
+    "pdb_00001mhp-H-L",
+    "pdb_00001mhp-X-Y",
+    "pdb_00001oak-H-L",
+    "pdb_00001osp-H-L",
+    "pdb_00001tzh-B-A",
+    "pdb_00001tzh-H-L",
+    "pdb_00001uj3-B-A",
+    "pdb_00001v7m-H-L",
+    "pdb_00001v7m-I-M",
+    "pdb_00001v7n-H-L",
+    "pdb_00001v7n-I-M",
+    "pdb_00001v7n-J-N",
+    "pdb_00001v7n-K-O",
+    "pdb_000021ao-A-B",
+    "pdb_000021aq-A-B",
+    "pdb_000021au-A-B",
+    "pdb_000021au-C-D",
+    "pdb_000021av-A-B",
+    "pdb_000021av-C-D",
+    "pdb_000023iu-H-L",
+    "pdb_00002adf-H-L",
+    "pdb_00002arj-B-A",
+    "pdb_00002arj-H-L",
+    "pdb_00002b2x-H-L",
+    "pdb_00002b2x-I-M",
+    "pdb_00002bse-D",
+    "pdb_00002bse-E",
+    "pdb_00002bse-F",
+    "pdb_00002nxy-D-C",
+    "pdb_00002ny1-D-C",
+    "pdb_00002ny3-D-C",
+    "pdb_00002p42-B",
+    "pdb_00002p42-D",
+    "pdb_00002p43-B",
+    "pdb_00002p44-B",
+    "pdb_00002p45-B",
+    "pdb_00002p46-B",
+    "pdb_00002p46-D",
+    "pdb_00002p47-B",
+    "pdb_00002p48-B",
+    "pdb_00002p49-B",
+    "pdb_00002p4a-B",
+    "pdb_00002p4a-D",
+    "pdb_00002qqk-H-L",
+    "pdb_00002qql-H-L",
+    "pdb_00002r0l-H-L",
+    "pdb_00002vwe-E-C",
+    "pdb_00002vwe-L-J",
+    "pdb_00002w9e-H-L",
+    "pdb_00002wub-H-L",
+    "pdb_00002wub-R-Q",
+    "pdb_00002wuc-H-L",
+    "pdb_00002wzp-D",
+    "pdb_00002wzp-E",
+    "pdb_00002wzp-F",
+    "pdb_00002wzp-J",
+    "pdb_00002wzp-K",
+    "pdb_00002wzp-L",
+    "pdb_00002x7l-A-B",
+    "pdb_00002x7l-C-D",
+    "pdb_00002x7l-E-F",
+    "pdb_00002x7l-G-I",
+    "pdb_00002x7l-H-L",
+    "pdb_00002x7l-J-K",
+    "pdb_00002zuq-C-B",
+    "pdb_00002zuq-F-E",
+    "pdb_000031mr-H-L",
+    "pdb_000032nz-A1-A2",
+    "pdb_00003d85-B-A",
+    "pdb_00003fmg-H-L",
+    "pdb_00003grw-H-L",
+    "pdb_00003hmx-H-L",
+    "pdb_00003k2u-H-L",
+    "pdb_00003opz-H-L",
+    "pdb_00003opz-I-M",
+    "pdb_00003opz-J-N",
+    "pdb_00004ag4-H-L",
+    "pdb_00004h88-H-L",
+    "pdb_00004liq-H-L",
+    "pdb_00004ma7-H-L",
+    "pdb_00004ma8-H-L",
+    "pdb_00004u6v-H-L",
+    "pdb_00004u6v-K-M"
+  ],
+  "sources_sha256": {
+    "data/eval/prince_connected.json": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+    "data/eval/features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "data/eval/bepipred_connected/mapping.json": "aedac02a2f3aad62d6ec858fb18730bac03af273e352a0f173fecddaf8665b2f",
+    "data/eval/bepipred_connected/sequence_predictions.json": "0dbf26694a160c9a5b8dcd39bba76f675154ab8c8092db5eb1483e9639366546",
+    "benchmark/external_bepipred/run.py": "8a27d0234ce4594cc302ae186a281ab30d578d61c85ea9b7d06bcb61e85315df"
+  },
+  "limitations": [
+    "BepiPred training-set overlap with these PDB antigens not established; not pristine external generalization.",
+    "Both predictors evaluated retrospectively using identical corrected labels; no comparator tuning or PRINCE fitting used test labels in this run, but upstream BepiPred training overlap is unknown.",
+    "Sequence input contains observed structure-resolved amino acids, not complete unresolved polymer sequence.",
+    "Metrics characterize residue ranking, not patch proposals or binder design success."
+  ]
+}

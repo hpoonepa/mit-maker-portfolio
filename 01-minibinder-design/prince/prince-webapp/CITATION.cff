@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the release or commit used in your work."
+title: PRINCE Web App
+type: software
+version: 1.0.0
+repository-code: https://gitlab.igem.org/2026/software/lambert-ga/prince-webapp
+license: MIT
+authors:
+  - name: Lambert iGEM 2026
+abstract: >-
+  Browser workspace for protein surface-site inspection, structural hotspot
+  checks, evidence review, and retrospective evaluation of PRINCE.
+keywords:
+  - structural-biology
+  - epitope
+  - synthetic-biology
+  - igem

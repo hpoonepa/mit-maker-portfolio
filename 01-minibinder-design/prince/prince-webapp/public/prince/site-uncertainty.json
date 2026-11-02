@@ -1,0 +1,597 @@
+{
+  "status": "complete_saved_outcomes_verified",
+  "requested_instances": 110,
+  "evaluated_instances": 110,
+  "n_clusters": 34,
+  "errors": [],
+  "bootstrap": {
+    "resampling_unit": "connected component",
+    "replicates": 2000,
+    "seed": 0,
+    "ci": "percentile 95%; may be degenerate when all components agree"
+  },
+  "majority_hit_definition": "Any top-k patch has >50% of its own residues in observed epitope",
+  "half_epitope_recovery_definition": "Any top-k patch covers >=50% of observed epitope residues",
+  "interpretation": "Each interface contributes a binary success at each k; neither metric is any-positive overlap or mean fraction of epitope residues recovered.",
+  "filter_policy": "drop entire patch if any constituent residue is killed",
+  "candidate_universe": "Declared original antigen chains; assembly copies supply context only",
+  "summary": {
+    "fitted": {
+      "majority_hit": {
+        "1": {
+          "hits": 11,
+          "n": 110,
+          "cluster_macro": 0.08272058823529412,
+          "instance_fraction": 0.1,
+          "cluster_macro_ci95": [
+            0.0196078431372549,
+            0.1611519607843137
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 34,
+          "n": 110,
+          "cluster_macro": 0.23366013071895425,
+          "instance_fraction": 0.3090909090909091,
+          "cluster_macro_ci95": [
+            0.12254901960784312,
+            0.36115196078431355
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 44,
+          "n": 110,
+          "cluster_macro": 0.31781045751633985,
+          "instance_fraction": 0.4,
+          "cluster_macro_ci95": [
+            0.1846200980392157,
+            0.4575367647058822
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 69,
+          "n": 110,
+          "cluster_macro": 0.5519607843137254,
+          "instance_fraction": 0.6272727272727273,
+          "cluster_macro_ci95": [
+            0.40196078431372545,
+            0.7009803921568627
+          ],
+          "n_clusters": 34
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.03125,
+          "instance_fraction": 0.01818181818181818,
+          "cluster_macro_ci95": [
+            0.0,
+            0.09191176470588236
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.034926470588235295,
+          "instance_fraction": 0.03636363636363636,
+          "cluster_macro_ci95": [
+            0.0,
+            0.09926470588235294
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 6,
+          "n": 110,
+          "cluster_macro": 0.04166666666666667,
+          "instance_fraction": 0.05454545454545454,
+          "cluster_macro_ci95": [
+            0.0,
+            0.10784313725490197
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 8,
+          "n": 110,
+          "cluster_macro": 0.08578431372549021,
+          "instance_fraction": 0.07272727272727272,
+          "cluster_macro_ci95": [
+            0.012254901960784312,
+            0.18137254901960786
+          ],
+          "n_clusters": 34
+        }
+      }
+    },
+    "fitted+filter": {
+      "majority_hit": {
+        "1": {
+          "hits": 11,
+          "n": 110,
+          "cluster_macro": 0.08272058823529412,
+          "instance_fraction": 0.1,
+          "cluster_macro_ci95": [
+            0.0196078431372549,
+            0.1611519607843137
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 34,
+          "n": 110,
+          "cluster_macro": 0.23366013071895425,
+          "instance_fraction": 0.3090909090909091,
+          "cluster_macro_ci95": [
+            0.12254901960784312,
+            0.36115196078431355
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 44,
+          "n": 110,
+          "cluster_macro": 0.31781045751633985,
+          "instance_fraction": 0.4,
+          "cluster_macro_ci95": [
+            0.1846200980392157,
+            0.4575367647058822
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 69,
+          "n": 110,
+          "cluster_macro": 0.5519607843137254,
+          "instance_fraction": 0.6272727272727273,
+          "cluster_macro_ci95": [
+            0.40196078431372545,
+            0.7009803921568627
+          ],
+          "n_clusters": 34
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.03125,
+          "instance_fraction": 0.01818181818181818,
+          "cluster_macro_ci95": [
+            0.0,
+            0.09191176470588236
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.034926470588235295,
+          "instance_fraction": 0.03636363636363636,
+          "cluster_macro_ci95": [
+            0.0,
+            0.09926470588235294
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 6,
+          "n": 110,
+          "cluster_macro": 0.04166666666666667,
+          "instance_fraction": 0.05454545454545454,
+          "cluster_macro_ci95": [
+            0.0,
+            0.10784313725490197
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 8,
+          "n": 110,
+          "cluster_macro": 0.08578431372549021,
+          "instance_fraction": 0.07272727272727272,
+          "cluster_macro_ci95": [
+            0.012254901960784312,
+            0.18137254901960786
+          ],
+          "n_clusters": 34
+        }
+      }
+    },
+    "exposure_only": {
+      "majority_hit": {
+        "1": {
+          "hits": 9,
+          "n": 110,
+          "cluster_macro": 0.06433823529411764,
+          "instance_fraction": 0.08181818181818182,
+          "cluster_macro_ci95": [
+            0.009696691176470594,
+            0.14276960784313725
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 32,
+          "n": 110,
+          "cluster_macro": 0.19914215686274508,
+          "instance_fraction": 0.2909090909090909,
+          "cluster_macro_ci95": [
+            0.09125306372549018,
+            0.31985294117647056
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 38,
+          "n": 110,
+          "cluster_macro": 0.23202614379084968,
+          "instance_fraction": 0.34545454545454546,
+          "cluster_macro_ci95": [
+            0.12254901960784315,
+            0.3562091503267974
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 54,
+          "n": 110,
+          "cluster_macro": 0.40882352941176464,
+          "instance_fraction": 0.4909090909090909,
+          "cluster_macro_ci95": [
+            0.27205882352941174,
+            0.5509926470588234
+          ],
+          "n_clusters": 34
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0,
+          "instance_fraction": 0.0,
+          "cluster_macro_ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0,
+          "instance_fraction": 0.0,
+          "cluster_macro_ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.029411764705882353,
+          "instance_fraction": 0.01818181818181818,
+          "cluster_macro_ci95": [
+            0.0,
+            0.08823529411764706
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.03615196078431373,
+          "instance_fraction": 0.03636363636363636,
+          "cluster_macro_ci95": [
+            0.0,
+            0.1017156862745098
+          ],
+          "n_clusters": 34
+        }
+      }
+    },
+    "exposure_only+filter": {
+      "majority_hit": {
+        "1": {
+          "hits": 9,
+          "n": 110,
+          "cluster_macro": 0.06433823529411764,
+          "instance_fraction": 0.08181818181818182,
+          "cluster_macro_ci95": [
+            0.009696691176470594,
+            0.14276960784313725
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 32,
+          "n": 110,
+          "cluster_macro": 0.19914215686274508,
+          "instance_fraction": 0.2909090909090909,
+          "cluster_macro_ci95": [
+            0.09125306372549018,
+            0.31985294117647056
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 38,
+          "n": 110,
+          "cluster_macro": 0.23202614379084968,
+          "instance_fraction": 0.34545454545454546,
+          "cluster_macro_ci95": [
+            0.12254901960784315,
+            0.3562091503267974
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 54,
+          "n": 110,
+          "cluster_macro": 0.40882352941176464,
+          "instance_fraction": 0.4909090909090909,
+          "cluster_macro_ci95": [
+            0.27205882352941174,
+            0.5509926470588234
+          ],
+          "n_clusters": 34
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0,
+          "instance_fraction": 0.0,
+          "cluster_macro_ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clusters": 34
+        },
+        "3": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0,
+          "instance_fraction": 0.0,
+          "cluster_macro_ci95": [
+            0.0,
+            0.0
+          ],
+          "n_clusters": 34
+        },
+        "5": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.029411764705882353,
+          "instance_fraction": 0.01818181818181818,
+          "cluster_macro_ci95": [
+            0.0,
+            0.08823529411764706
+          ],
+          "n_clusters": 34
+        },
+        "10": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.03615196078431373,
+          "instance_fraction": 0.03636363636363636,
+          "cluster_macro_ci95": [
+            0.0,
+            0.1017156862745098
+          ],
+          "n_clusters": 34
+        }
+      }
+    }
+  },
+  "paired_differences": {
+    "fitted_minus_exposure_only": {
+      "majority_hit": {
+        "1": {
+          "cluster_macro_difference": 0.01838235294117647,
+          "paired_cluster_bootstrap_ci95": [
+            -0.08823529411764706,
+            0.12254901960784312
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.03451797385620915,
+          "paired_cluster_bootstrap_ci95": [
+            -0.08316993464052287,
+            0.15403390522875798
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.0857843137254902,
+          "paired_cluster_bootstrap_ci95": [
+            -0.03431372549019608,
+            0.21329656862745064
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.14313725490196078,
+          "paired_cluster_bootstrap_ci95": [
+            -0.03825980392156863,
+            0.3221200980392153
+          ]
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "cluster_macro_difference": 0.03125,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.09191176470588236
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.034926470588235295,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.09926470588235294
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.012254901960784312,
+          "paired_cluster_bootstrap_ci95": [
+            -0.07598039215686275,
+            0.09558823529411764
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.04963235294117647,
+          "paired_cluster_bootstrap_ci95": [
+            -0.028799019607843132,
+            0.1519761029411764
+          ]
+        }
+      }
+    },
+    "fitted+filter_minus_fitted": {
+      "majority_hit": {
+        "1": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "exposure_only+filter_minus_exposure_only": {
+      "majority_hit": {
+        "1": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "3": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "5": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "10": {
+          "cluster_macro_difference": 0.0,
+          "paired_cluster_bootstrap_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "data/eval/prince_connected_sites.json": "34d28c292d6e0fb3fe0bdeb23a52be8d9037fa653e89ce34a1521df2f0bb39db",
+    "scripts/summarize_connected_sites.py": "d28484df9f325b3cea3698cb726611a6308035babac6c41ebde9209501c9dd44"
+  },
+  "generator_source_sha256": {
+    "data/eval/prince_connected.json": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+    "data/eval/prince_connected.manifest.csv": "8ca86371055ad56320981e7b7d689dcf0de6157a1e83d5c5998b194f4288b485",
+    "data/eval/features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "benchmark/geometric_predictor.py": "45d3053596c02a7d38b2c9a0dc8de1da16fe0d607e354900ce3890ce6911335f",
+    "benchmark/preflight_filter.py": "853a27948d5bd967f5094c59d0c59b497af733859684ef822fc371dd2feabc5a",
+    "src/hotspot_preflight/predict/profiles.py": "7d2c7f4d40d789bf289273041e52df1a39d606195288430f5ed49a5634d39719",
+    "scripts/evaluate_connected_sites.py": "4afaead6ea184d3a229f3c5315600ea9ab86789d9377cefc0546c8fc94b47e0f"
+  }
+}

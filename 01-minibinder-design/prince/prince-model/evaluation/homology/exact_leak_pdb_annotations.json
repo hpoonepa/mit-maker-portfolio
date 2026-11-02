@@ -1,0 +1,690 @@
+{
+ "7WVG": {
+  "title": "Crystal structure of H18 complexed with SIA28",
+  "entities": [
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "A"
+    ]
+   },
+   {
+    "desc": "Light chain of SIA28",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "Heavy chain of SIA28",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "B"
+    ]
+   }
+  ]
+ },
+ "8GV7": {
+  "title": "Crystal structure of PN-SIA28 in complex with influenza hemagglutinin H18 A/flat-faced bat/Peru/033/2010",
+  "entities": [
+   {
+    "desc": "Hemagglutinin H18-HA1",
+    "org": [
+     "Influenza A virus (A/flat-faced bat/Peru/033/2010(H18N11))"
+    ],
+    "chains": [
+     "A"
+    ]
+   },
+   {
+    "desc": "PN-SIA28 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "PN-SIA28 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin H18-HA2",
+    "org": [
+     "Influenza A virus (A/flat-faced bat/Peru/033/2010(H18N11))"
+    ],
+    "chains": [
+     "B"
+    ]
+   }
+  ]
+ },
+ "8TX3": {
+  "title": "Fab 3864-6 in complex with influenza HA H3-VIC11",
+  "entities": [
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus (A/Victoria/361/2011(H3N2))"
+    ],
+    "chains": [
+     "A",
+     "C",
+     "G"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus (A/Victoria/361/2011(H3N2))"
+    ],
+    "chains": [
+     "B",
+     "D",
+     "I"
+    ]
+   },
+   {
+    "desc": "Fab 3864-6 Heavy Chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E",
+     "F",
+     "H"
+    ]
+   },
+   {
+    "desc": "Fab 3864-6 Light Chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "J",
+     "K",
+     "L"
+    ]
+   }
+  ]
+ },
+ "4R8W": {
+  "title": "Crystal structure of H7 hemagglutinin from A/Anhui/1/2013 in complex with a neutralizing antibody CT149",
+  "entities": [
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus (A/Anhui/1-BALF_RG45/2013(H7N9))"
+    ],
+    "chains": [
+     "A"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus (A/Anhui/1-BALF_RG45/2013(H7N9))"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Light chain of neutralizing antibody CT149",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain of neutralizing antibody CT149",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ },
+ "6II8": {
+  "title": "Crystal structure of H7 hemagglutinin from A/Anhui/1/2013 in complex with a human neutralizing antibody L4B-18",
+  "entities": [
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "A",
+     "C",
+     "E"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "B",
+     "D",
+     "F"
+    ]
+   },
+   {
+    "desc": "Light chain of L4B-18 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "I",
+     "K",
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain of L4B-18 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "G",
+     "H",
+     "J"
+    ]
+   }
+  ]
+ },
+ "9Z3J": {
+  "title": "HCoV-NL63 S2' peptide bound to TMPRSS2 S441A (complexed with the H1H7 Fab and an anti-kappa-nanobody)",
+  "entities": [
+   {
+    "desc": "anti-kappa nanobody",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "N"
+    ]
+   },
+   {
+    "desc": "H1H7 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "H1H7 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Inactive TMPRSS2 construct",
+    "org": [
+     "Homo sapiens",
+     "Homo sapiens",
+     "Homo sapiens",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "HCoV-NL63 S2' peptide",
+    "org": [
+     "Human coronavirus NL63"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9YFU": {
+  "title": "Structure of GPR61 bound to inverse agonist compound 15",
+  "entities": [
+   {
+    "desc": "Fab24 BAK5 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "Hinge-binding nanobody",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "N"
+    ]
+   },
+   {
+    "desc": "Fab24 BAK5 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "G-protein coupled receptor 61,Soluble cytochrome b562",
+    "org": [
+     "Homo sapiens",
+     "Homo sapiens",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "R"
+    ]
+   }
+  ]
+ },
+ "9OPR": {
+  "title": "TMPRSS2 S441A in complex with the H1H7 Fab and anti-kappa light chain nanobody",
+  "entities": [
+   {
+    "desc": "anti-kappa light chain nanobody",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "N"
+    ]
+   },
+   {
+    "desc": "H1H7 antibody light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "H1H7 antibody heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Transmembrane protease serine 2",
+    "org": [
+     "Homo sapiens",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9OM5": {
+  "title": "Composite map of six VRC35 Fabs and three MEDI8852 Fabs bound to influenza H3N2 Victoria 2011 hemagglutinin",
+  "entities": [
+   {
+    "desc": "VRC35 Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "b",
+     "d",
+     "f",
+     "h",
+     "j",
+     "l"
+    ]
+   },
+   {
+    "desc": "VRC35 Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "a",
+     "c",
+     "e",
+     "g",
+     "i",
+     "k"
+    ]
+   },
+   {
+    "desc": "MEDI8852 Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H",
+     "J",
+     "L"
+    ]
+   },
+   {
+    "desc": "MEDI8852 Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "G",
+     "I",
+     "K"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "B",
+     "D",
+     "F"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza A virus"
+    ],
+    "chains": [
+     "A",
+     "C",
+     "E"
+    ]
+   }
+  ]
+ },
+ "9L2K": {
+  "title": "The crystal structure of SFTSV Gn and SD22 antibody complex",
+  "entities": [
+   {
+    "desc": "SD22 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "SD22 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Envelopment polyprotein",
+    "org": [
+     "Severe fever with thrombocytopenia syndrome virus"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9JQV": {
+  "title": "The crystal structure of SFTSV Gn and SD12 antibody complex",
+  "entities": [
+   {
+    "desc": "SD12 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "L"
+    ]
+   },
+   {
+    "desc": "SD12 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "H"
+    ]
+   },
+   {
+    "desc": "Envelopment polyprotein",
+    "org": [
+     "SFTS virus HB29"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "9E89": {
+  "title": "CPV2a capsid complexed with scFv2",
+  "entities": [
+   {
+    "desc": "Heavy-chain of scFv clone 2",
+    "org": [
+     "Canis lupus familiaris"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Light-chain of scFv clone 2",
+    "org": [
+     "Canis lupus familiaris"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Capsid protein",
+    "org": [
+     "Canine parvovirus 2b"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9E60": {
+  "title": "Canine parvovirus subtype 2a empty capsid in complex with Fab fragments of Mab 7C8",
+  "entities": [
+   {
+    "desc": "Light chain antibody fragment",
+    "org": [
+     "Canis lupus familiaris"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain antibody fragment",
+    "org": [
+     "Canis lupus familiaris"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Capsid protein 2",
+    "org": [
+     "Canine parvovirus 2a"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "8WSP": {
+  "title": "Crystal structure of SFTSV Gn and antibody SF5",
+  "entities": [
+   {
+    "desc": "Ab5-L",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "F"
+    ]
+   },
+   {
+    "desc": "Ab5-H",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "E"
+    ]
+   },
+   {
+    "desc": "Gn",
+    "org": [
+     "SFTS virus SD4"
+    ],
+    "chains": [
+     "A",
+     "D"
+    ]
+   }
+  ]
+ },
+ "8WQW": {
+  "title": "Cryo-EM structure of bsAb3 Fab-Gn-Gc complex",
+  "entities": [
+   {
+    "desc": "Glycoprotein N",
+    "org": [
+     "Dabie bandavirus"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "bsAb3 Fab-light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "E"
+    ]
+   },
+   {
+    "desc": "bsAb3 Fab-heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "F"
+    ]
+   },
+   {
+    "desc": "Glycoprotein C",
+    "org": [
+     "Dabie bandavirus"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "7TUY": {
+  "title": "Cryo-EM structure of GSK682753A-bound EBI2/GPR183",
+  "entities": [
+   {
+    "desc": "G-protein coupled receptor 183,Soluble cytochrome b562 fusion",
+    "org": [
+     "Homo sapiens",
+     "Escherichia coli",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "R"
+    ]
+   },
+   {
+    "desc": "anti-BRIL Fab Light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "anti-Fab Nanobody",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "K"
+    ]
+   },
+   {
+    "desc": "anti-BRIL Fab Heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ }
+}

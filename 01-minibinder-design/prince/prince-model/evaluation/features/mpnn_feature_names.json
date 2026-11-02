@@ -1,0 +1,104 @@
+{
+  "feature_names": [
+    "mpnn_uncond_entropy",
+    "mpnn_uncond_logp_native",
+    "mpnn_uncond_p_native",
+    "mpnn_uncond_p_argmax",
+    "mpnn_uncond_argmax_is_native",
+    "mpnn_uncond_native_rank",
+    "mpnn_uncond_top2_gap",
+    "mpnn_uncond_kl_to_background",
+    "mpnn_uncond_mass_hydrophobic",
+    "mpnn_uncond_mass_charged",
+    "mpnn_uncond_mass_polar_uncharged",
+    "mpnn_uncond_mass_small",
+    "mpnn_uncond_mass_aromatic",
+    "mpnn_uncond_mass_gly",
+    "mpnn_uncond_mass_pro",
+    "mpnn_uncond_mass_unknown_token",
+    "mpnn_autoreg_entropy",
+    "mpnn_autoreg_logp_native",
+    "mpnn_autoreg_p_native",
+    "mpnn_autoreg_p_argmax",
+    "mpnn_autoreg_argmax_is_native",
+    "mpnn_autoreg_native_rank",
+    "mpnn_autoreg_top2_gap",
+    "mpnn_autoreg_kl_to_background",
+    "mpnn_autoreg_mass_hydrophobic",
+    "mpnn_autoreg_mass_charged",
+    "mpnn_autoreg_mass_polar_uncharged",
+    "mpnn_autoreg_mass_small",
+    "mpnn_autoreg_mass_aromatic",
+    "mpnn_autoreg_mass_gly",
+    "mpnn_autoreg_mass_pro",
+    "mpnn_autoreg_mass_unknown_token",
+    "mpnn_scored"
+  ],
+  "modes": {
+    "uncond": "p(aa_i | backbone), one deterministic forward pass (model.unconditional_probs)",
+    "autoreg": "p(aa_i | native identities of the residues preceding i in a random autoregressive decoding order, backbone), averaged in probability space over 20 orders at seed 37 (ProteinMPNN.forward, the --save_probs / --score_only path)"
+  },
+  "sets": {
+    "hydrophobic": [
+      "A",
+      "C",
+      "F",
+      "I",
+      "L",
+      "M",
+      "V",
+      "W"
+    ],
+    "charged": [
+      "D",
+      "E",
+      "H",
+      "K",
+      "R"
+    ],
+    "polar_uncharged": [
+      "N",
+      "Q",
+      "S",
+      "T",
+      "Y"
+    ],
+    "small": [
+      "A",
+      "C",
+      "G",
+      "P",
+      "S",
+      "T"
+    ],
+    "aromatic": [
+      "F",
+      "H",
+      "W",
+      "Y"
+    ]
+  },
+  "background": {
+    "A": 0.0825,
+    "C": 0.0137,
+    "D": 0.0545,
+    "E": 0.0675,
+    "F": 0.0386,
+    "G": 0.0707,
+    "H": 0.0227,
+    "I": 0.0596,
+    "K": 0.0584,
+    "L": 0.0966,
+    "M": 0.0242,
+    "N": 0.0406,
+    "P": 0.047,
+    "Q": 0.0393,
+    "R": 0.0553,
+    "S": 0.0656,
+    "T": 0.0534,
+    "V": 0.0687,
+    "W": 0.0108,
+    "Y": 0.0292
+  },
+  "notes": "Probabilities renormalised over the 20 standard amino acids; the dropped p(X) mass is kept as mass_unknown_token. NaN means the residue carried no usable backbone and was masked out, or (for the native-* columns) its identity is nonstandard."
+}

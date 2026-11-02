@@ -1,0 +1,16 @@
+image: node:22-bookworm-slim
+
+stages: [verify]
+
+verify:
+  stage: verify
+  variables:
+    ASTRO_TELEMETRY_DISABLED: "1"
+  script:
+    - npm ci --no-audit --no-fund
+    - npm run verify
+    # The historical recording is already versioned under public/media/.
+    - tar --exclude=dist/media/prince-live-demo.webm -czf prince-webapp-dist.tar.gz dist
+  artifacts:
+    paths: [prince-webapp-dist.tar.gz]
+    expire_in: 1 week

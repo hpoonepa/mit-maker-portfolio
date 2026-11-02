@@ -1,0 +1,1874 @@
+{
+  "generated": "2026-10-12T13:07:43",
+  "lift_over_matched_random_control": {
+    "all_test": {
+      "label": "all test clusters",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit_minus_random": {
+        "1": 0.238,
+        "3": 0.2738,
+        "5": 0.2775,
+        "10": 0.2197
+      },
+      "majority_hit_sd_above_random": {
+        "1": 20.5,
+        "3": 16.1,
+        "5": 15.2,
+        "10": 11.7
+      },
+      "best_f1_minus_random": {
+        "1": 0.1046,
+        "3": 0.0997,
+        "5": 0.0958,
+        "10": 0.0728
+      }
+    },
+    "well_sampled_ge3_antibodies": {
+      "label": "test clusters with >=3 distinct antibodies",
+      "n_interfaces": 528,
+      "n_clusters": 49,
+      "majority_hit_minus_random": {
+        "1": 0.1227,
+        "3": 0.2171,
+        "5": 0.2361,
+        "10": 0.1972
+      },
+      "majority_hit_sd_above_random": {
+        "1": 8.8,
+        "3": 10.6,
+        "5": 10.8,
+        "10": 8.8
+      },
+      "best_f1_minus_random": {
+        "1": 0.0526,
+        "3": 0.0805,
+        "5": 0.082,
+        "10": 0.0653
+      }
+    },
+    "well_sampled_ge5_antibodies": {
+      "label": "test clusters with >=5 distinct antibodies",
+      "n_interfaces": 276,
+      "n_clusters": 19,
+      "majority_hit_minus_random": {
+        "1": 0.0916,
+        "3": 0.1372,
+        "5": 0.1569,
+        "10": 0.1845
+      },
+      "majority_hit_sd_above_random": {
+        "1": 5.5,
+        "3": 5.7,
+        "5": 5.4,
+        "10": 6.8
+      },
+      "best_f1_minus_random": {
+        "1": 0.0477,
+        "3": 0.0534,
+        "5": 0.068,
+        "10": 0.0672
+      }
+    },
+    "singly_sampled": {
+      "label": "test clusters sampled by exactly 1 antibody",
+      "n_interfaces": 396,
+      "n_clusters": 162,
+      "majority_hit_minus_random": {
+        "1": 0.2873,
+        "3": 0.2882,
+        "5": 0.2976,
+        "10": 0.2323
+      },
+      "majority_hit_sd_above_random": {
+        "1": 18.2,
+        "3": 11.5,
+        "5": 10.7,
+        "10": 8.6
+      },
+      "best_f1_minus_random": {
+        "1": 0.1292,
+        "3": 0.1108,
+        "5": 0.1068,
+        "10": 0.08
+      }
+    },
+    "union_epitope": {
+      "label": "all test clusters, scored against the cluster-union epitope",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit_minus_random": {
+        "1": 0.285,
+        "3": 0.2896,
+        "5": 0.2595,
+        "10": 0.1761
+      },
+      "majority_hit_sd_above_random": {
+        "1": 22.6,
+        "3": 16.2,
+        "5": 14.1,
+        "10": 10.4
+      },
+      "best_f1_minus_random": {
+        "1": 0.0999,
+        "3": 0.0886,
+        "5": 0.0803,
+        "10": 0.0574
+      }
+    },
+    "union_epitope_ge3": {
+      "label": "union epitope, test clusters with >=3 distinct antibodies",
+      "n_interfaces": 528,
+      "n_clusters": 49,
+      "majority_hit_minus_random": {
+        "1": 0.222,
+        "3": 0.2304,
+        "5": 0.1742,
+        "10": 0.0883
+      },
+      "majority_hit_sd_above_random": {
+        "1": 10.0,
+        "3": 9.8,
+        "5": 9.2,
+        "10": 6.4
+      },
+      "best_f1_minus_random": {
+        "1": 0.039,
+        "3": 0.045,
+        "5": 0.0404,
+        "10": 0.0251
+      }
+    },
+    "excl_antibodies_vs_ge2_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=2 unrelated antigens",
+      "n_interfaces": 1098,
+      "n_clusters": 247,
+      "majority_hit_minus_random": {
+        "1": 0.2334,
+        "3": 0.2663,
+        "5": 0.2745,
+        "10": 0.2172
+      },
+      "majority_hit_sd_above_random": {
+        "1": 19.1,
+        "3": 13.7,
+        "5": 15.3,
+        "10": 11.6
+      },
+      "best_f1_minus_random": {
+        "1": 0.1008,
+        "3": 0.0962,
+        "5": 0.0942,
+        "10": 0.072
+      }
+    },
+    "excl_antibodies_vs_ge3_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=3 unrelated antigens",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit_minus_random": {
+        "1": 0.238,
+        "3": 0.2738,
+        "5": 0.2775,
+        "10": 0.2197
+      },
+      "majority_hit_sd_above_random": {
+        "1": 20.5,
+        "3": 16.1,
+        "5": 15.2,
+        "10": 11.7
+      },
+      "best_f1_minus_random": {
+        "1": 0.1046,
+        "3": 0.0997,
+        "5": 0.0958,
+        "10": 0.0728
+      }
+    },
+    "excl_antibodies_vs_ge5_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=5 unrelated antigens",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit_minus_random": {
+        "1": 0.238,
+        "3": 0.2738,
+        "5": 0.2775,
+        "10": 0.2197
+      },
+      "majority_hit_sd_above_random": {
+        "1": 20.5,
+        "3": 16.1,
+        "5": 15.2,
+        "10": 11.7
+      },
+      "best_f1_minus_random": {
+        "1": 0.1046,
+        "3": 0.0997,
+        "5": 0.0958,
+        "10": 0.0728
+      }
+    }
+  },
+  "test_difficulty_by_sampling_depth": {
+    "1_antibody": {
+      "n_test_interfaces": 396,
+      "mean_candidate_patches": 196.5,
+      "mean_exposed_residues": 200.3,
+      "mean_modelled_residues": 367.5
+    },
+    "2to4_antibodies": {
+      "n_test_interfaces": 448,
+      "mean_candidate_patches": 185.6,
+      "mean_exposed_residues": 189.1,
+      "mean_modelled_residues": 353.2
+    },
+    "5plus_antibodies": {
+      "n_test_interfaces": 276,
+      "mean_candidate_patches": 206.4,
+      "mean_exposed_residues": 210.1,
+      "mean_modelled_residues": 383.1
+    },
+    "all": {
+      "n_test_interfaces": 1120,
+      "mean_candidate_patches": 194.6,
+      "mean_exposed_residues": 198.2,
+      "mean_modelled_residues": 365.6
+    }
+  },
+  "most_reused_antibodies": [
+    {
+      "antibody": "hc1158|lNONE",
+      "n_instances": 58,
+      "n_test_instances": 12,
+      "n_pdb_entries": 48,
+      "n_antigen_clusters": 31,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "11zw",
+        "7o31",
+        "7php",
+        "7sk7",
+        "7tuy",
+        "7wpd",
+        "7wpe",
+        "7wpf",
+        "7xod",
+        "7yud",
+        "7yuf",
+        "7zlg",
+        "7zlh",
+        "7zli",
+        "7zyi",
+        "8j9o",
+        "8jhc",
+        "8kae",
+        "8rqf",
+        "8tii",
+        "8u4v",
+        "8wnp",
+        "8wo4",
+        "8xvj",
+        "8xvk",
+        "8xvl",
+        "8zbb",
+        "9b2c",
+        "9cmi",
+        "9ee5",
+        "9ehs",
+        "9ei5",
+        "9ekh",
+        "9iya",
+        "9j9z",
+        "9jfu",
+        "9jqt",
+        "9l9o",
+        "9lmo",
+        "9ncd",
+        "9opr",
+        "9pkv",
+        "9pxu",
+        "9qt3",
+        "9rsj",
+        "9shd",
+        "9t9m",
+        "9z3j"
+      ]
+    },
+    {
+      "antibody": "hc2656|lc712",
+      "n_instances": 28,
+      "n_test_instances": 0,
+      "n_pdb_entries": 28,
+      "n_antigen_clusters": 4,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "4m48",
+        "4xnu",
+        "4xnx",
+        "4xp1",
+        "4xp4",
+        "4xp6",
+        "4xp9",
+        "4xpa",
+        "4xpg",
+        "4xph",
+        "6m0z",
+        "6m2r",
+        "6m38",
+        "6m3z",
+        "6m47",
+        "7wgd",
+        "7wgt",
+        "7wlw",
+        "8gnk",
+        "9cp4",
+        "9euo",
+        "9eup",
+        "9kmi",
+        "9kmj",
+        "9kmk",
+        "9kml",
+        "9kmm",
+        "9kyo"
+      ]
+    },
+    {
+      "antibody": "hc1234|lc915",
+      "n_instances": 28,
+      "n_test_instances": 0,
+      "n_pdb_entries": 14,
+      "n_antigen_clusters": 4,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "6dzt",
+        "6e0c",
+        "6e0p",
+        "7k78",
+        "7u0g",
+        "7u0i",
+        "7u0j",
+        "8dk5",
+        "8evg",
+        "8evh",
+        "8evi",
+        "8sps",
+        "8spu",
+        "8syp"
+      ]
+    },
+    {
+      "antibody": "hc1233|lc914",
+      "n_instances": 26,
+      "n_test_instances": 0,
+      "n_pdb_entries": 13,
+      "n_antigen_clusters": 3,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "7k5y",
+        "7k61",
+        "8u9s",
+        "8ubi",
+        "8ubj",
+        "8ubk",
+        "8ubl",
+        "8vfx",
+        "9pm0",
+        "9zq9",
+        "9zqa",
+        "9zqb",
+        "9zqc"
+      ]
+    },
+    {
+      "antibody": "hc2657|lNONE",
+      "n_instances": 25,
+      "n_test_instances": 15,
+      "n_pdb_entries": 14,
+      "n_antigen_clusters": 8,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "6o24",
+        "6o25",
+        "6o28",
+        "6o29",
+        "6o2a",
+        "6o2b",
+        "6o2c",
+        "6wjl",
+        "7joo",
+        "7o4y",
+        "7uyl",
+        "7uym",
+        "9fxt",
+        "9fy8"
+      ]
+    },
+    {
+      "antibody": "hc1564|lNONE",
+      "n_instances": 24,
+      "n_test_instances": 0,
+      "n_pdb_entries": 6,
+      "n_antigen_clusters": 2,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "8rrs",
+        "8rrv",
+        "8rrx",
+        "8rs0",
+        "9r8o",
+        "9rcw"
+      ]
+    },
+    {
+      "antibody": "hc1535|lc886",
+      "n_instances": 21,
+      "n_test_instances": 6,
+      "n_pdb_entries": 16,
+      "n_antigen_clusters": 7,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "1g9m",
+        "1gc1",
+        "1rzj",
+        "1yym",
+        "2i5y",
+        "2i60",
+        "2nxy",
+        "2nxz",
+        "2ny0",
+        "2ny1",
+        "2ny2",
+        "2ny3",
+        "2ny4",
+        "2ny5",
+        "2ny6",
+        "6opo"
+      ]
+    },
+    {
+      "antibody": "hc1861|lc75",
+      "n_instances": 20,
+      "n_test_instances": 0,
+      "n_pdb_entries": 20,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "1k4c",
+        "1k4d",
+        "1r3j",
+        "1s5h",
+        "2h8p",
+        "2hfe",
+        "2hvk",
+        "2ih3",
+        "3or7",
+        "5ebl",
+        "5ebw",
+        "5ec2",
+        "5vk6",
+        "5vke",
+        "5vkh",
+        "6by2",
+        "6nfu",
+        "6nfv",
+        "6pa0",
+        "6w0i"
+      ]
+    },
+    {
+      "antibody": "hc2653|lc1075",
+      "n_instances": 20,
+      "n_test_instances": 0,
+      "n_pdb_entries": 10,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "1ots",
+        "1ott",
+        "3det",
+        "3ejz",
+        "4ene",
+        "4fg6",
+        "6ad7",
+        "6adb",
+        "7cvs",
+        "7cvt"
+      ]
+    },
+    {
+      "antibody": "hc484|lc1338",
+      "n_instances": 20,
+      "n_test_instances": 20,
+      "n_pdb_entries": 3,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "3rhw",
+        "3rif",
+        "4tnw"
+      ]
+    },
+    {
+      "antibody": "hc2228|lNONE",
+      "n_instances": 20,
+      "n_test_instances": 0,
+      "n_pdb_entries": 1,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "5uk4"
+      ]
+    },
+    {
+      "antibody": "hc604|lc339",
+      "n_instances": 20,
+      "n_test_instances": 1,
+      "n_pdb_entries": 18,
+      "n_antigen_clusters": 7,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "7php",
+        "7rth",
+        "7ul3",
+        "7yub",
+        "7yud",
+        "7yuf",
+        "8kae",
+        "8t58",
+        "8t60",
+        "8t6i",
+        "8t8i",
+        "8t9y",
+        "9mqi",
+        "9mqk",
+        "9my8",
+        "9pxu",
+        "9qzq",
+        "9rsj"
+      ]
+    },
+    {
+      "antibody": "hc158|lc1453",
+      "n_instances": 20,
+      "n_test_instances": 0,
+      "n_pdb_entries": 13,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "8foi",
+        "8g4n",
+        "8g4x",
+        "8g5f",
+        "8g5g",
+        "8g5h",
+        "9oum",
+        "9oun",
+        "9ouo",
+        "9oup",
+        "9ouq",
+        "9our",
+        "9ov4"
+      ]
+    },
+    {
+      "antibody": "hc1085|lc941",
+      "n_instances": 19,
+      "n_test_instances": 0,
+      "n_pdb_entries": 1,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "12ut"
+      ]
+    },
+    {
+      "antibody": "hc788|lc200",
+      "n_instances": 19,
+      "n_test_instances": 0,
+      "n_pdb_entries": 5,
+      "n_antigen_clusters": 1,
+      "n_unrelated_antigens": 1,
+      "pdb_ids": [
+        "6vvu",
+        "8vgh",
+        "8vgi",
+        "8vgj",
+        "8vgk"
+      ]
+    }
+  ],
+  "thresholds": {
+    "rsa_exposed": 0.2,
+    "rsa_sensitivity": [
+      0.05,
+      0.25
+    ],
+    "antibody_identity_pct": 95.0,
+    "antibody_coverage": 0.8,
+    "antigen_chain_group_ratio": 0.9,
+    "random_control_reps": 200
+  },
+  "alignment": {
+    "residues": 2467314,
+    "residues_mapped": 2460412,
+    "epitope_residues_unmapped": 493
+  },
+  "sampling_depth_distribution": {
+    "1_antibody": {
+      "n_clusters": 972,
+      "n_instances": 2374
+    },
+    "2to4_antibodies": {
+      "n_clusters": 456,
+      "n_instances": 2767
+    },
+    "5plus_antibodies": {
+      "n_clusters": 121,
+      "n_instances": 1796
+    },
+    "all": {
+      "n_clusters": 1549,
+      "n_instances": 6937
+    }
+  },
+  "completeness_by_stratum_all_clusters": {
+    "1_antibody": {
+      "n_clusters": 972,
+      "n_instances": 2374,
+      "median_frac_exposed_labelled": 0.1108,
+      "mean_frac_exposed_labelled": 0.1307,
+      "p90_frac_exposed_labelled": 0.2308,
+      "mean_n_union_epitope_residues": 20.8
+    },
+    "2to4_antibodies": {
+      "n_clusters": 456,
+      "n_instances": 2767,
+      "median_frac_exposed_labelled": 0.1971,
+      "mean_frac_exposed_labelled": 0.227,
+      "p90_frac_exposed_labelled": 0.4187,
+      "mean_n_union_epitope_residues": 45.4
+    },
+    "5plus_antibodies": {
+      "n_clusters": 121,
+      "n_instances": 1796,
+      "median_frac_exposed_labelled": 0.3459,
+      "mean_frac_exposed_labelled": 0.372,
+      "p90_frac_exposed_labelled": 0.5895,
+      "mean_n_union_epitope_residues": 107.4
+    },
+    "all": {
+      "n_clusters": 1549,
+      "n_instances": 6937,
+      "median_frac_exposed_labelled": 0.1405,
+      "mean_frac_exposed_labelled": 0.1779,
+      "p90_frac_exposed_labelled": 0.3461,
+      "mean_n_union_epitope_residues": 34.8
+    }
+  },
+  "completeness_by_stratum_test_clusters": {
+    "1_antibody": {
+      "n_clusters": 162,
+      "n_instances": 396,
+      "median_frac_exposed_labelled": 0.1022,
+      "mean_frac_exposed_labelled": 0.1208,
+      "p90_frac_exposed_labelled": 0.2232,
+      "mean_n_union_epitope_residues": 20.4
+    },
+    "2to4_antibodies": {
+      "n_clusters": 70,
+      "n_instances": 448,
+      "median_frac_exposed_labelled": 0.2133,
+      "mean_frac_exposed_labelled": 0.2407,
+      "p90_frac_exposed_labelled": 0.4589,
+      "mean_n_union_epitope_residues": 47.8
+    },
+    "5plus_antibodies": {
+      "n_clusters": 19,
+      "n_instances": 276,
+      "median_frac_exposed_labelled": 0.3333,
+      "mean_frac_exposed_labelled": 0.3609,
+      "p90_frac_exposed_labelled": 0.5769,
+      "mean_n_union_epitope_residues": 113.9
+    },
+    "all": {
+      "n_clusters": 251,
+      "n_instances": 1120,
+      "median_frac_exposed_labelled": 0.1357,
+      "mean_frac_exposed_labelled": 0.1724,
+      "p90_frac_exposed_labelled": 0.3333,
+      "mean_n_union_epitope_residues": 35.1
+    }
+  },
+  "metrics": {
+    "locked_model": "patch_classifier_d6_geom+atom+esm",
+    "model_file": "work/recovery/patch_classifier_d6_geom+atom+esm__refit_train.json",
+    "refit": false,
+    "recurring_antibodies": {
+      "definition": "antibody = (heavy cluster, light cluster) at 95.0% identity / 80% coverage. \"n_unrelated_antigens\" counts antigen HOMOLOGY COMPONENTS, so strains of one variable antigen (a bnAb target) count once; \"n_distinct_antigen_clusters\" is the raw benchmark-cluster count.",
+      "n_antibodies": 2710,
+      "by_unrelated_antigens": {
+        "ge2": 26,
+        "ge3": 2,
+        "ge5": 0,
+        "ge10": 0
+      },
+      "by_raw_clusters": {
+        "ge2": 186,
+        "ge3": 50,
+        "ge5": 14,
+        "ge10": 3
+      },
+      "top": [
+        {
+          "antibody": "hc2503|lc384",
+          "n_unrelated_antigens": 3,
+          "n_distinct_antigen_clusters": 4,
+          "n_instances": 7,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "3qwo",
+            "4jlr",
+            "6ywd",
+            "9f90"
+          ],
+          "antigen_components": [
+            "ag_comp27",
+            "ag_comp278",
+            "ag_comp372"
+          ]
+        },
+        {
+          "antibody": "hc1157|lNONE",
+          "n_unrelated_antigens": 3,
+          "n_distinct_antigen_clusters": 3,
+          "n_instances": 13,
+          "n_test_instances": 0,
+          "has_light_chain": false,
+          "pdb_ids": [
+            "8uy6",
+            "8yns",
+            "8ynt",
+            "9fkn",
+            "9fot",
+            "9gf8"
+          ],
+          "antigen_components": [
+            "ag_comp2",
+            "ag_comp450",
+            "ag_comp562"
+          ]
+        },
+        {
+          "antibody": "hc968|lc803",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 6,
+          "n_test_instances": 4,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "3lh2",
+            "3lhp"
+          ],
+          "antigen_components": [
+            "ag_comp278",
+            "ag_comp527"
+          ]
+        },
+        {
+          "antibody": "hc693|lc312",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 3,
+          "n_test_instances": 1,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "2r0l",
+            "5bo1"
+          ],
+          "antigen_components": [
+            "ag_comp20",
+            "ag_comp491"
+          ]
+        },
+        {
+          "antibody": "hc618|lc336",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 8,
+          "n_instances": 15,
+          "n_test_instances": 4,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "6cbv",
+            "7tuy",
+            "8zbb",
+            "8zwf",
+            "9d3e",
+            "9d3g",
+            "9ee5",
+            "9ehs",
+            "9ei5",
+            "9ekh",
+            "9j9z",
+            "9jfu",
+            "9lmo",
+            "9lmp",
+            "9pee"
+          ],
+          "antigen_components": [
+            "ag_comp0",
+            "ag_comp2"
+          ]
+        },
+        {
+          "antibody": "hc617|lc336",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 2,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "9l9o",
+            "9zr7"
+          ],
+          "antigen_components": [
+            "ag_comp117",
+            "ag_comp2"
+          ]
+        },
+        {
+          "antibody": "hc613|lc286",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 3,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "5bjz",
+            "9cph"
+          ],
+          "antigen_components": [
+            "ag_comp27",
+            "ag_comp45"
+          ]
+        },
+        {
+          "antibody": "hc54|lc431",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 4,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "7s8h",
+            "8dmh"
+          ],
+          "antigen_components": [
+            "ag_comp5",
+            "ag_comp70"
+          ]
+        },
+        {
+          "antibody": "hc2652|lc1293",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 5,
+          "n_instances": 6,
+          "n_test_instances": 2,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "8e8l",
+            "8e8r",
+            "8e8s",
+            "8e8x",
+            "8e8y",
+            "8e8z"
+          ],
+          "antigen_components": [
+            "ag_comp3",
+            "ag_comp81"
+          ]
+        },
+        {
+          "antibody": "hc259|lc609",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 3,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "7bsc",
+            "7bsd"
+          ],
+          "antigen_components": [
+            "ag_comp51",
+            "ag_comp57"
+          ]
+        },
+        {
+          "antibody": "hc2394|lc1298",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 4,
+          "n_instances": 7,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "4fqi",
+            "8uzp",
+            "9dwe",
+            "9j5l"
+          ],
+          "antigen_components": [
+            "ag_comp181",
+            "ag_comp49"
+          ]
+        },
+        {
+          "antibody": "hc2329|lc648",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 2,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "2ny7",
+            "3ru8"
+          ],
+          "antigen_components": [
+            "ag_comp136",
+            "ag_comp40"
+          ]
+        },
+        {
+          "antibody": "hc2296|lc1009",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 3,
+          "n_instances": 4,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "5igx",
+            "6mft",
+            "6xoc"
+          ],
+          "antigen_components": [
+            "ag_comp2",
+            "ag_comp40"
+          ]
+        },
+        {
+          "antibody": "hc2202|lc485",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 3,
+          "n_instances": 4,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "3ztn",
+            "9hi4",
+            "9hi6"
+          ],
+          "antigen_components": [
+            "ag_comp394",
+            "ag_comp49"
+          ]
+        },
+        {
+          "antibody": "hc2025|lNONE",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 2,
+          "n_test_instances": 0,
+          "has_light_chain": false,
+          "pdb_ids": [
+            "7pqq",
+            "7q1u"
+          ],
+          "antigen_components": [
+            "ag_comp15",
+            "ag_comp555"
+          ]
+        },
+        {
+          "antibody": "hc1978|lc1008",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 3,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "9td2",
+            "9ybg"
+          ],
+          "antigen_components": [
+            "ag_comp559",
+            "ag_comp83"
+          ]
+        },
+        {
+          "antibody": "hc1956|lc876",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 6,
+          "n_test_instances": 4,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "5tl5",
+            "5tlj",
+            "5tlk",
+            "9ibf"
+          ],
+          "antigen_components": [
+            "ag_comp110",
+            "ag_comp254"
+          ]
+        },
+        {
+          "antibody": "hc175|lc336",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 4,
+          "n_test_instances": 2,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "6o3b",
+            "7uih",
+            "7ujd"
+          ],
+          "antigen_components": [
+            "ag_comp175",
+            "ag_comp646"
+          ]
+        },
+        {
+          "antibody": "hc1743|lc418",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 3,
+          "n_instances": 6,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "1a2y",
+            "1cic",
+            "1dvf",
+            "1g7i",
+            "1g7j",
+            "1vfb"
+          ],
+          "antigen_components": [
+            "ag_comp157",
+            "ag_comp2"
+          ]
+        },
+        {
+          "antibody": "hc173|lc286",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 4,
+          "n_test_instances": 2,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "6pi7",
+            "8smk"
+          ],
+          "antigen_components": [
+            "ag_comp330",
+            "ag_comp649"
+          ]
+        },
+        {
+          "antibody": "hc166|lc286",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 4,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "7zlg",
+            "7zlh",
+            "7zli",
+            "9s6t"
+          ],
+          "antigen_components": [
+            "ag_comp121",
+            "ag_comp583"
+          ]
+        },
+        {
+          "antibody": "hc163|lc336",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 3,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "10gh",
+            "7uih",
+            "7ujd"
+          ],
+          "antigen_components": [
+            "ag_comp230",
+            "ag_comp646"
+          ]
+        },
+        {
+          "antibody": "hc1480|lc348",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 5,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "9ck4",
+            "9d3j"
+          ],
+          "antigen_components": [
+            "ag_comp271",
+            "ag_comp82"
+          ]
+        },
+        {
+          "antibody": "hc131|lc1246",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 2,
+          "n_test_instances": 1,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "23it",
+            "23iu"
+          ],
+          "antigen_components": [
+            "ag_comp154",
+            "ag_comp209"
+          ]
+        },
+        {
+          "antibody": "hc1114|lNONE",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 2,
+          "n_test_instances": 2,
+          "has_light_chain": false,
+          "pdb_ids": [
+            "7a6o",
+            "7eow"
+          ],
+          "antigen_components": [
+            "ag_comp514",
+            "ag_comp83"
+          ]
+        },
+        {
+          "antibody": "hNONE|lc859",
+          "n_unrelated_antigens": 2,
+          "n_distinct_antigen_clusters": 2,
+          "n_instances": 7,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "6k3m",
+            "6k64",
+            "6k67",
+            "6k6a"
+          ],
+          "antigen_components": [
+            "ag_comp264",
+            "ag_comp27"
+          ]
+        },
+        {
+          "antibody": "hc9|lNONE",
+          "n_unrelated_antigens": 1,
+          "n_distinct_antigen_clusters": 1,
+          "n_instances": 12,
+          "n_test_instances": 0,
+          "has_light_chain": false,
+          "pdb_ids": [
+            "8pnu",
+            "8pnv"
+          ],
+          "antigen_components": [
+            "ag_comp288"
+          ]
+        },
+        {
+          "antibody": "hc99|lc755",
+          "n_unrelated_antigens": 1,
+          "n_distinct_antigen_clusters": 3,
+          "n_instances": 11,
+          "n_test_instances": 0,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "1j1o",
+            "1j1p",
+            "1j1x",
+            "1uac",
+            "3d9a",
+            "5vjo",
+            "5vjq"
+          ],
+          "antigen_components": [
+            "ag_comp157"
+          ]
+        },
+        {
+          "antibody": "hc999|lc369",
+          "n_unrelated_antigens": 1,
+          "n_distinct_antigen_clusters": 1,
+          "n_instances": 3,
+          "n_test_instances": 3,
+          "has_light_chain": true,
+          "pdb_ids": [
+            "6r2s",
+            "9eze"
+          ],
+          "antigen_components": [
+            "ag_comp277"
+          ]
+        },
+        {
+          "antibody": "hc998|lNONE",
+          "n_unrelated_antigens": 1,
+          "n_distinct_antigen_clusters": 1,
+          "n_instances": 1,
+          "n_test_instances": 1,
+          "has_light_chain": false,
+          "pdb_ids": [
+            "8yvj"
+          ],
+          "antigen_components": [
+            "ag_comp4"
+          ]
+        }
+      ]
+    },
+    "all_test": {
+      "label": "all test clusters",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit": {
+        "1": 0.3243,
+        "3": 0.5085,
+        "5": 0.6326,
+        "10": 0.7858
+      },
+      "best_f1": {
+        "1": 0.1707,
+        "3": 0.262,
+        "5": 0.3235,
+        "10": 0.4005
+      },
+      "half_epitope_recovery": {
+        "1": 0.0444,
+        "3": 0.0794,
+        "5": 0.0904,
+        "10": 0.1424
+      },
+      "oracle": {
+        "majority_hit": 0.9959,
+        "best_f1": 0.5649
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.0863,
+          "sd": 0.0116
+        },
+        "3": {
+          "mean": 0.2347,
+          "sd": 0.017
+        },
+        "5": {
+          "mean": 0.3551,
+          "sd": 0.0182
+        },
+        "10": {
+          "mean": 0.5661,
+          "sd": 0.0188
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0661,
+          "sd": 0.0057
+        },
+        "3": {
+          "mean": 0.1623,
+          "sd": 0.0075
+        },
+        "5": {
+          "mean": 0.2277,
+          "sd": 0.0075
+        },
+        "10": {
+          "mean": 0.3277,
+          "sd": 0.0069
+        }
+      }
+    },
+    "reproduction_check": {
+      "expected": {
+        "1": 0.3243,
+        "3": 0.5085,
+        "5": 0.6326,
+        "10": 0.7858
+      },
+      "observed": {
+        "1": 0.3243,
+        "3": 0.5085,
+        "5": 0.6326,
+        "10": 0.7858
+      },
+      "ok": true
+    },
+    "well_sampled_ge3_antibodies": {
+      "label": "test clusters with >=3 distinct antibodies",
+      "n_interfaces": 528,
+      "n_clusters": 49,
+      "majority_hit": {
+        "1": 0.2127,
+        "3": 0.4596,
+        "5": 0.6037,
+        "10": 0.7873
+      },
+      "best_f1": {
+        "1": 0.1184,
+        "3": 0.242,
+        "5": 0.3106,
+        "10": 0.3946
+      },
+      "half_epitope_recovery": {
+        "1": 0.0134,
+        "3": 0.0412,
+        "5": 0.0605,
+        "10": 0.1068
+      },
+      "oracle": {
+        "majority_hit": 0.9938,
+        "best_f1": 0.5511
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.09,
+          "sd": 0.014
+        },
+        "3": {
+          "mean": 0.2425,
+          "sd": 0.0204
+        },
+        "5": {
+          "mean": 0.3676,
+          "sd": 0.0218
+        },
+        "10": {
+          "mean": 0.5901,
+          "sd": 0.0225
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0658,
+          "sd": 0.0071
+        },
+        "3": {
+          "mean": 0.1615,
+          "sd": 0.0089
+        },
+        "5": {
+          "mean": 0.2286,
+          "sd": 0.0084
+        },
+        "10": {
+          "mean": 0.3293,
+          "sd": 0.0078
+        }
+      }
+    },
+    "well_sampled_ge5_antibodies": {
+      "label": "test clusters with >=5 distinct antibodies",
+      "n_interfaces": 276,
+      "n_clusters": 19,
+      "majority_hit": {
+        "1": 0.1666,
+        "3": 0.3435,
+        "5": 0.475,
+        "10": 0.7139
+      },
+      "best_f1": {
+        "1": 0.1025,
+        "3": 0.1926,
+        "5": 0.2689,
+        "10": 0.3683
+      },
+      "half_epitope_recovery": {
+        "1": 0.0214,
+        "3": 0.045,
+        "5": 0.0763,
+        "10": 0.1203
+      },
+      "oracle": {
+        "majority_hit": 1.0,
+        "best_f1": 0.5532
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.075,
+          "sd": 0.0167
+        },
+        "3": {
+          "mean": 0.2063,
+          "sd": 0.024
+        },
+        "5": {
+          "mean": 0.3181,
+          "sd": 0.0288
+        },
+        "10": {
+          "mean": 0.5294,
+          "sd": 0.0272
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0548,
+          "sd": 0.0072
+        },
+        "3": {
+          "mean": 0.1392,
+          "sd": 0.0103
+        },
+        "5": {
+          "mean": 0.2009,
+          "sd": 0.0117
+        },
+        "10": {
+          "mean": 0.3011,
+          "sd": 0.0097
+        }
+      }
+    },
+    "singly_sampled": {
+      "label": "test clusters sampled by exactly 1 antibody",
+      "n_interfaces": 396,
+      "n_clusters": 162,
+      "majority_hit": {
+        "1": 0.369,
+        "3": 0.5156,
+        "5": 0.6416,
+        "10": 0.7866
+      },
+      "best_f1": {
+        "1": 0.1929,
+        "3": 0.27,
+        "5": 0.3319,
+        "10": 0.4079
+      },
+      "half_epitope_recovery": {
+        "1": 0.0627,
+        "3": 0.1075,
+        "5": 0.1154,
+        "10": 0.1766
+      },
+      "oracle": {
+        "majority_hit": 0.9985,
+        "best_f1": 0.5768
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.0817,
+          "sd": 0.0158
+        },
+        "3": {
+          "mean": 0.2274,
+          "sd": 0.025
+        },
+        "5": {
+          "mean": 0.344,
+          "sd": 0.0279
+        },
+        "10": {
+          "mean": 0.5543,
+          "sd": 0.027
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0637,
+          "sd": 0.0081
+        },
+        "3": {
+          "mean": 0.1592,
+          "sd": 0.0112
+        },
+        "5": {
+          "mean": 0.2251,
+          "sd": 0.0117
+        },
+        "10": {
+          "mean": 0.3279,
+          "sd": 0.0104
+        }
+      }
+    },
+    "union_epitope": {
+      "label": "all test clusters, scored against the cluster-union epitope",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit": {
+        "1": 0.4282,
+        "3": 0.6302,
+        "5": 0.7341,
+        "10": 0.8516
+      },
+      "best_f1": {
+        "1": 0.1703,
+        "3": 0.2486,
+        "5": 0.2968,
+        "10": 0.3553
+      },
+      "half_epitope_recovery": {
+        "1": 0.0372,
+        "3": 0.063,
+        "5": 0.066,
+        "10": 0.1073
+      },
+      "oracle": {
+        "majority_hit": 0.9972,
+        "best_f1": 0.4835
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.1432,
+          "sd": 0.0126
+        },
+        "3": {
+          "mean": 0.3406,
+          "sd": 0.0179
+        },
+        "5": {
+          "mean": 0.4746,
+          "sd": 0.0184
+        },
+        "10": {
+          "mean": 0.6755,
+          "sd": 0.017
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0704,
+          "sd": 0.0056
+        },
+        "3": {
+          "mean": 0.16,
+          "sd": 0.0071
+        },
+        "5": {
+          "mean": 0.2165,
+          "sd": 0.0073
+        },
+        "10": {
+          "mean": 0.2979,
+          "sd": 0.0063
+        }
+      },
+      "label_growth": {
+        "mean_n_epitope_per_instance": 20.06,
+        "mean_n_union_per_instance": 49.89,
+        "mean_ratio": 2.493
+      }
+    },
+    "union_vs_perinstance_delta": {
+      "majority_hit": {
+        "1": 0.1039,
+        "3": 0.1217,
+        "5": 0.1015,
+        "10": 0.0658
+      },
+      "best_f1": {
+        "1": -0.0004,
+        "3": -0.0134,
+        "5": -0.0267,
+        "10": -0.0452
+      }
+    },
+    "union_epitope_ge3": {
+      "label": "union epitope, test clusters with >=3 distinct antibodies",
+      "n_interfaces": 528,
+      "n_clusters": 49,
+      "majority_hit": {
+        "1": 0.5038,
+        "3": 0.8022,
+        "5": 0.8897,
+        "10": 0.9606
+      },
+      "best_f1": {
+        "1": 0.1173,
+        "3": 0.1967,
+        "5": 0.2303,
+        "10": 0.2626
+      },
+      "half_epitope_recovery": {
+        "1": 0.007,
+        "3": 0.0132,
+        "5": 0.0157,
+        "10": 0.0191
+      },
+      "oracle": {
+        "majority_hit": 0.9949,
+        "best_f1": 0.3311
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.2818,
+          "sd": 0.0222
+        },
+        "3": {
+          "mean": 0.5718,
+          "sd": 0.0234
+        },
+        "5": {
+          "mean": 0.7155,
+          "sd": 0.019
+        },
+        "10": {
+          "mean": 0.8723,
+          "sd": 0.0137
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0783,
+          "sd": 0.0051
+        },
+        "3": {
+          "mean": 0.1517,
+          "sd": 0.0053
+        },
+        "5": {
+          "mean": 0.1899,
+          "sd": 0.0047
+        },
+        "10": {
+          "mean": 0.2375,
+          "sd": 0.004
+        }
+      }
+    },
+    "excl_antibodies_vs_ge2_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=2 unrelated antigens",
+      "n_interfaces": 1098,
+      "n_clusters": 247,
+      "majority_hit": {
+        "1": 0.3185,
+        "3": 0.4987,
+        "5": 0.6273,
+        "10": 0.7829
+      },
+      "best_f1": {
+        "1": 0.1662,
+        "3": 0.257,
+        "5": 0.3207,
+        "10": 0.3994
+      },
+      "half_epitope_recovery": {
+        "1": 0.0411,
+        "3": 0.0771,
+        "5": 0.0884,
+        "10": 0.1417
+      },
+      "oracle": {
+        "majority_hit": 0.9959,
+        "best_f1": 0.5645
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.0851,
+          "sd": 0.0122
+        },
+        "3": {
+          "mean": 0.2324,
+          "sd": 0.0194
+        },
+        "5": {
+          "mean": 0.3528,
+          "sd": 0.0179
+        },
+        "10": {
+          "mean": 0.5657,
+          "sd": 0.0188
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0654,
+          "sd": 0.0061
+        },
+        "3": {
+          "mean": 0.1608,
+          "sd": 0.0083
+        },
+        "5": {
+          "mean": 0.2265,
+          "sd": 0.0074
+        },
+        "10": {
+          "mean": 0.3274,
+          "sd": 0.007
+        }
+      },
+      "excluded": {
+        "n_antibodies": 26,
+        "n_instances_all_splits": 127,
+        "n_test_instances": 22,
+        "n_test_clusters_lost": 4
+      }
+    },
+    "excl_antibodies_vs_ge3_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=3 unrelated antigens",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit": {
+        "1": 0.3243,
+        "3": 0.5085,
+        "5": 0.6326,
+        "10": 0.7858
+      },
+      "best_f1": {
+        "1": 0.1707,
+        "3": 0.262,
+        "5": 0.3235,
+        "10": 0.4005
+      },
+      "half_epitope_recovery": {
+        "1": 0.0444,
+        "3": 0.0794,
+        "5": 0.0904,
+        "10": 0.1424
+      },
+      "oracle": {
+        "majority_hit": 0.9959,
+        "best_f1": 0.5649
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.0863,
+          "sd": 0.0116
+        },
+        "3": {
+          "mean": 0.2347,
+          "sd": 0.017
+        },
+        "5": {
+          "mean": 0.3551,
+          "sd": 0.0182
+        },
+        "10": {
+          "mean": 0.5661,
+          "sd": 0.0188
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0661,
+          "sd": 0.0057
+        },
+        "3": {
+          "mean": 0.1623,
+          "sd": 0.0075
+        },
+        "5": {
+          "mean": 0.2277,
+          "sd": 0.0075
+        },
+        "10": {
+          "mean": 0.3277,
+          "sd": 0.0069
+        }
+      },
+      "excluded": {
+        "n_antibodies": 2,
+        "n_instances_all_splits": 20,
+        "n_test_instances": 0,
+        "n_test_clusters_lost": 0
+      }
+    },
+    "excl_antibodies_vs_ge5_unrelated_antigens": {
+      "label": "test, excluding antibodies seen against >=5 unrelated antigens",
+      "n_interfaces": 1120,
+      "n_clusters": 251,
+      "majority_hit": {
+        "1": 0.3243,
+        "3": 0.5085,
+        "5": 0.6326,
+        "10": 0.7858
+      },
+      "best_f1": {
+        "1": 0.1707,
+        "3": 0.262,
+        "5": 0.3235,
+        "10": 0.4005
+      },
+      "half_epitope_recovery": {
+        "1": 0.0444,
+        "3": 0.0794,
+        "5": 0.0904,
+        "10": 0.1424
+      },
+      "oracle": {
+        "majority_hit": 0.9959,
+        "best_f1": 0.5649
+      },
+      "random_control_reps": 200,
+      "random_majority_hit": {
+        "1": {
+          "mean": 0.0863,
+          "sd": 0.0116
+        },
+        "3": {
+          "mean": 0.2347,
+          "sd": 0.017
+        },
+        "5": {
+          "mean": 0.3551,
+          "sd": 0.0182
+        },
+        "10": {
+          "mean": 0.5661,
+          "sd": 0.0188
+        }
+      },
+      "random_best_f1": {
+        "1": {
+          "mean": 0.0661,
+          "sd": 0.0057
+        },
+        "3": {
+          "mean": 0.1623,
+          "sd": 0.0075
+        },
+        "5": {
+          "mean": 0.2277,
+          "sd": 0.0075
+        },
+        "10": {
+          "mean": 0.3277,
+          "sd": 0.0069
+        }
+      },
+      "excluded": {
+        "n_antibodies": 0,
+        "n_instances_all_splits": 0,
+        "n_test_instances": 0,
+        "n_test_clusters_lost": 0
+      }
+    }
+  }
+}

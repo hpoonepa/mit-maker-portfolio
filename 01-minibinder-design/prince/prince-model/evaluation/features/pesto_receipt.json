@@ -1,0 +1,5750 @@
+{
+  "cache_dir": "research/cache_full_antigen",
+  "contexts_attempted": 561,
+  "contexts_completed": 561,
+  "complete": true,
+  "errors": [],
+  "errors_total": 0,
+  "errors_dataless_input": 0,
+  "errors_other": 0,
+  "dataless_input_contexts": [],
+  "dataless_input_note": null,
+  "total_keys": 176842,
+  "total_keys_scored": 176842,
+  "overall_key_coverage": 1.0,
+  "contexts_below_full_coverage": [],
+  "coverage_single_chain_antigen": {
+    "contexts": 423,
+    "keys": 100201,
+    "keys_scored": 100201,
+    "key_coverage": 1.0,
+    "contexts_below_full_coverage": 0
+  },
+  "coverage_multi_chain_antigen": {
+    "contexts": 138,
+    "keys": 76641,
+    "keys_scored": 76641,
+    "key_coverage": 1.0,
+    "contexts_below_full_coverage": 0
+  },
+  "coverage_by_antigen_chain_count": {
+    "1": {
+      "contexts": 423,
+      "keys": 100201,
+      "keys_scored": 100201,
+      "key_coverage": 1.0,
+      "contexts_below_full_coverage": 0
+    },
+    "2": {
+      "contexts": 122,
+      "keys": 69307,
+      "keys_scored": 69307,
+      "key_coverage": 1.0,
+      "contexts_below_full_coverage": 0
+    },
+    "3": {
+      "contexts": 16,
+      "keys": 7334,
+      "keys_scored": 7334,
+      "key_coverage": 1.0,
+      "contexts_below_full_coverage": 0
+    }
+  },
+  "channel_index": 0,
+  "channel_name": "protein",
+  "channel_justification": "config_model['dm']['N2']==5 output channels map 1:1 onto config_data['r_types']==[protein, dna+rna, ion, ligand, lipid], so channel 0 is the protein-protein interface. Confirmed against interface_type_evaluation.ipynb, which forms pc=cat([1-max(p), p], dim=1) and reads class i at pc[:, i+1] with class_names=['protein','DNA/RNA','ion','ligand','lipid'] -- class 0 'protein' is therefore sigmoid(z[:,0]). z is logits; sigmoid is applied as in apply_model.ipynb. This model has no trained 'any interface' channel, so pesto_any records the notebook's own stand-in, max_c sigmoid(z[:,c]).",
+  "pesto_model": "i_v4_1_2021-09-07_11-21",
+  "pesto_git_commit": "ba651aa29aaa839d0ee2c458dee90ca1f934d90a",
+  "pesto_licence": "CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike 4.0 International)",
+  "pesto_licence_note": "Third-party comparator executed out-of-tree from its own clone. No PeSTo source is copied, vendored or redistributed by this script or its outputs; the outputs are per-residue numbers only.",
+  "alignment_proof": {
+    "naive_positional_would_be_wrong": true,
+    "contexts_where_pesto_residue_count_differs_from_our_key_count": 262,
+    "contexts_where_at_least_one_key_maps_to_a_row_not_equal_to_its_index": 60,
+    "keys_whose_pesto_row_index_differs_from_their_key_index": 18179,
+    "keys_total": 176842,
+    "fraction_of_keys_naive_indexing_would_misassign": 0.1028,
+    "note": "Had the scores been read off positionally, 18,179 of 176,842 keys (10.3%) across 60 of 561 contexts would have been given a different residue's score, silently. PeSTo parses the whole antigen including assembly copies of chains that are not declared antigen chains, and hetero groups, so its residue list is neither the same length nor the same order as our key list in 262 contexts.",
+    "falsification_tests": {
+      "duplicate_owner_corruption_is_rejected": "Mapping two distinct residue identities to one key index raises AssertionError('two residue rows claim the same key') -- the injectivity guard fires rather than silently keeping one.",
+      "unscorable_key_yields_null_in_place": "A fabricated residue identity inserted at position 100 of the key list comes back as null at exactly position 100, with all 100 keys before it and all 207 keys after it bit-identical to the baseline run. The array is not shifted, which is the specific failure mode that would invalidate the comparison.",
+      "per_row_unanimity": "Every residue row's atoms must agree on their provenance id or the run aborts; this held for all 561 contexts."
+    }
+  },
+  "comparator_only": true,
+  "comparator_only_note": "THESE OUTPUTS ARE COMPARATOR-ONLY. PeSTo is CC BY-NC-SA 4.0 (NonCommercial + ShareAlike), which is not an OSI-approved licence, while our tool must ship under an OSI licence. These numbers may be reported as a third-party baseline for comparison ONLY. They must NOT be used as an input feature, training target, label, initialisation or selection signal for any model of ours, and nothing PeSTo-derived may be placed in hotspot-preflight/. Doing any of those would make our model a derivative work of a NonCommercial ShareAlike work and render the iGEM entry ineligible.",
+  "training_overlap": {
+    "overlap_can_be_ruled_out": false,
+    "verdict": "Overlap CANNOT be ruled out, and it is demonstrably present on the side we score. PeSTo's scores on this benchmark must be reported as optimistic.",
+    "training_data": "First bioassembly of all PDB biological assemblies (paper Methods/'Datasets': 'The dataset is composed of all the biological assemblies from the Protein Data Bank'; Methods/'Training': 'We trained only on the first bioassembly provided by the PDB database'; consistent with config.py 'max_ba': 1). Fetched by live rsync with no date pin (upstream-pesto/data/rsyncPDB.sh).",
+    "stated_date_cutoff": null,
+    "stated_date_cutoff_note": "No cutoff is stated anywhere: checked README.md, pesto.yml, data/rsyncPDB.sh, data/datasets/README.md, processing/split_dataset.ipynb, processing/build_dataset.py, the i_v4_1 config and slurm logs, and the paper's Methods and Data availability sections.",
+    "derived_date_bound": "2021-03-03",
+    "derived_date_bound_note": "DERIVED BY US, not an authors' claim: RCSB initial_release_date resolved for all 30,629 resolvable entries in the shipped split lists whose id begins 6-9 gives a maximum release date of 2021-03-03, with releases falling to zero after it (2021-01: 418, 2021-02: 405, 2021-03: 96, then none). The checkpoint is dated 2021-09-07, which bounds it from above independently.",
+    "redundancy_filtering": "30% sequence identity, cluster level (paper Methods/'Datasets': 'The subunits are clustered using a maximum of 30% sequence identity between clusters'), using RCSB bc-30.out (named only in processing/split_dataset.ipynb, not the paper).",
+    "antibody_handling": "Neither excluded nor specially handled; not stated in the paper or the code. A grep for antibod|immunoglob|epitope|paratope|nanobod across all source in the clone returns zero matches. Immunoglobulin chains land mostly in the held-out split as an incidental side effect of 30% clustering (8.9% of a 448-subunit validation sample vs ~0.2% genuine in a 472-subunit train sample), but that is a side effect, not a design choice, and it is incomplete -- genuine antibody chains remain in train (e.g. 6S3T_D, 6MHR_C, 6OYH_C, 5CJX_G).",
+    "why_antigens_are_not_protected": "We score the ANTIGEN, and antigens are not protected by the antibody-side clustering effect. Training labels for a subunit are OR'd over every contacting partner in its bioassembly regardless of which split that partner went to (src/dataset.py select_by_sid masks only the target subunit; model/data_handler.py Dataset.__getitem__ ORs over all ckeys). The guard that would have prevented this, select_complete_assemblies, exists in src/dataset.py but is never called -- model/save/i_v4_1_2021-09-07_11-21/main.py imports only select_by_sid, select_by_max_ba and select_by_interface_types. So where an antigen chain is in train and its first bioassembly contains the Fab, that antigen's epitope was a positive protein-protein training label.",
+    "measured_overlap_this_benchmark": {
+      "method": "Exact per-subunit id join of each context's PDB id + declared antigen auth chain ids against subunits_train_set.txt (376,216 entries, read via 'git cat-file -p HEAD:data/datasets/subunits_train_set.txt' because the working-tree copy is a sparse 0-block file that reads as empty).",
+      "contexts_with_antigen_chain_in_pesto_train": 98,
+      "contexts_total": 561,
+      "fraction": 0.1747,
+      "entry_level_upper_bound": 118,
+      "test_split_contexts_leaked": 14,
+      "test_split_contexts_clean": 91,
+      "caveats": "A train-list hit is an UPPER bound on exact-chain exposure: PeSTo's HDF5 filters (max_ba=1, <=8192 atoms, >=48 residues, must have a contact of a selected type) cut 376,216 subunits to 113,805 actually trained on. A MISS is not safety: 30% clustering means a homolog of an antigen may be in train even when that exact chain is not, and bounding that needs a sequence search, not an id join."
+    },
+    "homolog_level_bound": {
+      "method": "Antigen chains joined to RCSB 30%-identity clusters (bc-30.out, shipped in upstream-pesto/data/datasets/), then asked whether any cluster-mate appears in subunits_train_set.txt. This is the homolog-level analogue of the exact join, at the identity threshold PeSTo itself clustered on.",
+      "contexts_with_cluster_coverage": 393,
+      "contexts_total": 561,
+      "coverage_caveat": "168 of 561 antigen chains are absent from the shipped bc-30.out, so no bound is computable for them. That file is a LATER RCSB download than the one used to build the splits (533,352 sids, vs 575,340 across the three split files, with 19,305 train sids missing from it), so it is an imperfect instrument.",
+      "covered_contexts_with_30pct_homolog_in_train": 125,
+      "covered_contexts_with_30pct_homolog_in_train_fraction": 0.318,
+      "test_covered": 90,
+      "test_covered_with_30pct_homolog_in_train": 30,
+      "covered_contexts_with_30pct_homolog_in_any_split": 392,
+      "interpretation": "Homolog-level exposure to the TRAIN split is 31.8% of covered contexts (33.3% of covered test contexts), roughly double the 17.5% exact-chain figure. But 99.7% of covered contexts have a 30%-identity cluster-mate somewhere in PeSTo's PDB snapshot, which is unavoidable for a model trained on all of PDB and means 'did it see a homolog' is not a discriminating question. The discriminating question is epitope-LABEL exposure, which is what the exact-chain join (17.5%) and the train-cluster join (31.8%) measure."
+    },
+    "measured_effect_on_scores": {
+      "note": "Stratification of the test-split signal by leak status. Not the real evaluation, but it shows the leak is not hypothetical. The pooled-residue figures came first; the macro figures below use the project's own aggregation (within-instance AUROC, mean within cluster, mean across clusters) on the 110 evaluated test interfaces, so they are the ones comparable to the published comparator numbers.",
+      "macro_auroc_leaked": 0.7487,
+      "macro_auroc_clean": 0.6235,
+      "macro_leaked_clusters": 7,
+      "macro_clean_clusters": 28,
+      "macro_leaked_interfaces": 15,
+      "macro_clean_interfaces": 95,
+      "macro_auroc_all_110": 0.6521,
+      "headline": "On the project's own macro aggregation, PeSTo scores 0.6521 over all 110 test interfaces but only 0.6235 on the 95 whose antigen chain is NOT in its training list, versus 0.7487 on the 15 that are. The clean figure is the honest comparator baseline; the all-interfaces figure is inflated by the leaked minority.",
+      "leaked_auroc": 0.8697,
+      "leaked_epitope_mean": 0.6489,
+      "leaked_nonepitope_mean": 0.1224,
+      "clean_auroc": 0.6294,
+      "clean_epitope_mean": 0.1431,
+      "clean_nonepitope_mean": 0.1329,
+      "interpretation": "On the 14 test contexts whose antigen chain is in PeSTo's training list, AUROC is 0.870 and the epitope mean is 5x the non-epitope mean. On the 91 clean contexts, AUROC is 0.629 and the epitope/non-epitope separation is +0.010, i.e. almost nothing. The pooled number is inflated by the leaked 13%; the clean-only figure is the honest comparator baseline."
+    },
+    "sources": [
+      "Krapp, Abriata, Cortes Rodriguez & Dal Peraro, Nat Commun 14:2175 (2023), https://pmc.ncbi.nlm.nih.gov/articles/PMC10113261/",
+      "upstream-pesto @ ba651aa29aaa839d0ee2c458dee90ca1f934d90a",
+      "RCSB Data API (release dates, chain descriptions)"
+    ]
+  },
+  "antigen_only": true,
+  "device": "cpu",
+  "workers": 1,
+  "torch_threads_per_worker": 2,
+  "total_seconds": 0.1,
+  "results": [
+    {
+      "context": "0047c45151ea9a60",
+      "pdb": "11hb",
+      "keys": 307,
+      "scored": 307,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "009adbacb2ac6d68",
+      "pdb": "1s5h",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "00a047e13b2ee772",
+      "pdb": "11lp",
+      "keys": 363,
+      "scored": 363,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "00ee33ffbd10f683",
+      "pdb": "4gxu",
+      "keys": 650,
+      "scored": 650,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "0109319a2ad97e14",
+      "pdb": "4h88",
+      "keys": 102,
+      "scored": 102,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "012236d3a4531235",
+      "pdb": "1a14",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "029e3201775e9e15",
+      "pdb": "2p46",
+      "keys": 120,
+      "scored": 120,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "031d39bc0c89c216",
+      "pdb": "2ny2",
+      "keys": 304,
+      "scored": 304,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0340ba28876f34bb",
+      "pdb": "4y5x",
+      "keys": 205,
+      "scored": 205,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "03b9ff8a9eb49214",
+      "pdb": "3i50",
+      "keys": 273,
+      "scored": 273,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0413ca91a8346d79",
+      "pdb": "2i9l",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "04a50a0020be028c",
+      "pdb": "4rgm",
+      "keys": 223,
+      "scored": 223,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "04c1c374dc584f71",
+      "pdb": "2bse",
+      "keys": 214,
+      "scored": 214,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "04d5d26c47136776",
+      "pdb": "2bdn",
+      "keys": 68,
+      "scored": 68,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "05b0aebfd1e2e3f3",
+      "pdb": "4hwb",
+      "keys": 111,
+      "scored": 111,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "067b80bc6cbb89eb",
+      "pdb": "10ih",
+      "keys": 889,
+      "scored": 889,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "06ab801dc1bc0830",
+      "pdb": "33cg",
+      "keys": 287,
+      "scored": 287,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "0720ac30ca55c64c",
+      "pdb": "11lr",
+      "keys": 734,
+      "scored": 734,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "073c9017840ad0c5",
+      "pdb": "1ncb",
+      "keys": 389,
+      "scored": 389,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "07a9bd62858f0a9d",
+      "pdb": "4i2x",
+      "keys": 314,
+      "scored": 314,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "084f131c57c658d4",
+      "pdb": "2i9l",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "087e50145ee592f7",
+      "pdb": "2i60",
+      "keys": 301,
+      "scored": 301,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "08f2ae8d1acb4aa0",
+      "pdb": "4ag4",
+      "keys": 341,
+      "scored": 341,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "08fcfb61ad3636dc",
+      "pdb": "1fe8",
+      "keys": 191,
+      "scored": 191,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "096249c4d9e72dfb",
+      "pdb": "1bzq",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "09cc18dca9357df7",
+      "pdb": "1zvh",
+      "keys": 127,
+      "scored": 127,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0aa7537188c8ed80",
+      "pdb": "2qad",
+      "keys": 312,
+      "scored": 312,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0adf3da4a96e1192",
+      "pdb": "1j1p",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0b0023639693196d",
+      "pdb": "1qfw",
+      "keys": 198,
+      "scored": 198,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "0b102914bddd143c",
+      "pdb": "2zjs",
+      "keys": 415,
+      "scored": 415,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0c7e083985c54cb9",
+      "pdb": "3b9k",
+      "keys": 117,
+      "scored": 117,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0c8cf82a581d9ed1",
+      "pdb": "1fsk",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0d2fb98dee4ea14b",
+      "pdb": "1e6j",
+      "keys": 210,
+      "scored": 210,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0e0316fae10b213f",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "0e274f48b536178e",
+      "pdb": "2qqn",
+      "keys": 154,
+      "scored": 154,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0e8b05a7a80f347a",
+      "pdb": "2xv6",
+      "keys": 68,
+      "scored": 68,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0eb1350f485261b3",
+      "pdb": "2uzi",
+      "keys": 166,
+      "scored": 166,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0f3e0ba6486bdb25",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0fc14dfd885598c9",
+      "pdb": "1mhp",
+      "keys": 184,
+      "scored": 184,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0fd10b950ba2f74a",
+      "pdb": "2p4a",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "0fff2bd0b34aad61",
+      "pdb": "2adf",
+      "keys": 189,
+      "scored": 189,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "10136a4b84c747c9",
+      "pdb": "1j1x",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "11070d42791e2ae9",
+      "pdb": "11zw",
+      "keys": 113,
+      "scored": 113,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "11909e73be87c059",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "11b562671afa18f3",
+      "pdb": "11ha",
+      "keys": 306,
+      "scored": 306,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "13db18c50c54c1a1",
+      "pdb": "1tpx",
+      "keys": 102,
+      "scored": 102,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1494a678f7b601dd",
+      "pdb": "3eo1",
+      "keys": 224,
+      "scored": 224,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "14bcc18c1aa4e0f6",
+      "pdb": "2wzp",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "1525613df0a25454",
+      "pdb": "3wfc",
+      "keys": 591,
+      "scored": 591,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "15868b0d8988e166",
+      "pdb": "1ob1",
+      "keys": 97,
+      "scored": 97,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "15b6844e9d256c50",
+      "pdb": "33ci",
+      "keys": 100,
+      "scored": 100,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "15db584e02e4e31d",
+      "pdb": "5cbe",
+      "keys": 66,
+      "scored": 66,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "15e62955b7aaa4e5",
+      "pdb": "10or",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "16154150502a8c25",
+      "pdb": "2p45",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "167415fa8f57c451",
+      "pdb": "1rjl",
+      "keys": 95,
+      "scored": 95,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "16fd8a132df76965",
+      "pdb": "2xv6",
+      "keys": 75,
+      "scored": 75,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1747251905dd7bff",
+      "pdb": "1cic",
+      "keys": 431,
+      "scored": 431,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "184eea6201068ef3",
+      "pdb": "21aq",
+      "keys": 315,
+      "scored": 315,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "195fbd80a214f815",
+      "pdb": "11lp",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "1993ef1f9e60bd94",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1a25a0842933300b",
+      "pdb": "2jix",
+      "keys": 215,
+      "scored": 215,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1a27ff08470b0886",
+      "pdb": "3ab0",
+      "keys": 136,
+      "scored": 136,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1cc665baa5afc296",
+      "pdb": "2ibz",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1cd31af052f87b61",
+      "pdb": "2r56",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1ce47151aff4db3e",
+      "pdb": "10fj",
+      "keys": 172,
+      "scored": 172,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1e25fedf6f6f73f8",
+      "pdb": "1pg7",
+      "keys": 426,
+      "scored": 426,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "1e6c50d781164580",
+      "pdb": "3s88",
+      "keys": 355,
+      "scored": 355,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "1eab71ad33ee302c",
+      "pdb": "23vf",
+      "keys": 109,
+      "scored": 109,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1f5733351e84c97f",
+      "pdb": "10ie",
+      "keys": 899,
+      "scored": 899,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "1f73598276b0ed1c",
+      "pdb": "29on",
+      "keys": 495,
+      "scored": 495,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1fab0487775c07f8",
+      "pdb": "3zks",
+      "keys": 360,
+      "scored": 360,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "1fb6432c93d0d500",
+      "pdb": "10op",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "20e5cac9e2c02501",
+      "pdb": "1uj3",
+      "keys": 205,
+      "scored": 205,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "220a39f2f380f58a",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "221cd45ea5905e0b",
+      "pdb": "1kxv",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "227524a351efe19b",
+      "pdb": "11ho",
+      "keys": 2064,
+      "scored": 2064,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "22d59e913cdb97f4",
+      "pdb": "2yc1",
+      "keys": 65,
+      "scored": 65,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "245020022d12d821",
+      "pdb": "12oz",
+      "keys": 285,
+      "scored": 285,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2537b13fe12b6ce5",
+      "pdb": "23it",
+      "keys": 219,
+      "scored": 219,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "25c652540c1dd8d0",
+      "pdb": "28jf",
+      "keys": 533,
+      "scored": 533,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "25c69b9efa22ab52",
+      "pdb": "4gxu",
+      "keys": 650,
+      "scored": 650,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "25f1ced2ee160bfc",
+      "pdb": "3o2d",
+      "keys": 178,
+      "scored": 178,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "260c3b5f56daa77d",
+      "pdb": "22ll",
+      "keys": 346,
+      "scored": 346,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2719102b84a2965f",
+      "pdb": "1kxt",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "273642610184670d",
+      "pdb": "4py8",
+      "keys": 499,
+      "scored": 499,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "275e3ea7cdb6e5e6",
+      "pdb": "1nby",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2792dd0db4933411",
+      "pdb": "1ahw",
+      "keys": 200,
+      "scored": 200,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "27b32057a990ea6f",
+      "pdb": "3k80",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "287ddefbaeb58bf7",
+      "pdb": "1lk3",
+      "keys": 136,
+      "scored": 136,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "292a49638d45d758",
+      "pdb": "11hb",
+      "keys": 307,
+      "scored": 307,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "298cd78a38506dfd",
+      "pdb": "23iu",
+      "keys": 403,
+      "scored": 403,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2a5bab5d5448feb2",
+      "pdb": "12id",
+      "keys": 417,
+      "scored": 417,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2a7f368f781e35f5",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2ae2153f0ea27624",
+      "pdb": "11sz",
+      "keys": 1782,
+      "scored": 1782,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2ae7047a12459400",
+      "pdb": "2zck",
+      "keys": 237,
+      "scored": 237,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2b410e4a73c36546",
+      "pdb": "10op",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "2b59f4bcec691984",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2bec650f00317e1e",
+      "pdb": "3fku",
+      "keys": 497,
+      "scored": 497,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2c50e76ce49459b7",
+      "pdb": "1kyo",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2c737ffbb73d916c",
+      "pdb": "21tw",
+      "keys": 276,
+      "scored": 276,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2d00e64ca846c56a",
+      "pdb": "2b2x",
+      "keys": 188,
+      "scored": 188,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2d5c535edd126214",
+      "pdb": "33ci",
+      "keys": 287,
+      "scored": 287,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2d934c3b1ac6d007",
+      "pdb": "2ny5",
+      "keys": 304,
+      "scored": 304,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "2dc65efde0f09b98",
+      "pdb": "1cz8",
+      "keys": 188,
+      "scored": 188,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2ef11adf4c75eee9",
+      "pdb": "1cic",
+      "keys": 432,
+      "scored": 432,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "2fb66e32b0b76a96",
+      "pdb": "1kxt",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "308d6e03dbb415de",
+      "pdb": "2vh5",
+      "keys": 166,
+      "scored": 166,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "30e68cb841c92619",
+      "pdb": "30xo",
+      "keys": 326,
+      "scored": 326,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "31e9d19645679868",
+      "pdb": "3g6d",
+      "keys": 106,
+      "scored": 106,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3284c8cc0a6bb89c",
+      "pdb": "13ha",
+      "keys": 84,
+      "scored": 84,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "328fd77e2e695a1c",
+      "pdb": "35uj",
+      "keys": 59,
+      "scored": 59,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "32e139b142fd22cb",
+      "pdb": "3fku",
+      "keys": 503,
+      "scored": 503,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "339f6d2b10daaba4",
+      "pdb": "12es",
+      "keys": 215,
+      "scored": 215,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "33f0d3a2dddc5ccc",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "341d7ad3eeff3404",
+      "pdb": "3h42",
+      "keys": 584,
+      "scored": 584,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "34503e318f013f9f",
+      "pdb": "2xtj",
+      "keys": 242,
+      "scored": 242,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "34b162f45a2ed6f2",
+      "pdb": "3ezj",
+      "keys": 396,
+      "scored": 396,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "3555d50fca3b3e9a",
+      "pdb": "31mr",
+      "keys": 1304,
+      "scored": 1304,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3681e68a97da9912",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "376af7427b9be0cf",
+      "pdb": "3k7u",
+      "keys": 98,
+      "scored": 98,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "37e83faaedc5a29b",
+      "pdb": "4z5r",
+      "keys": 137,
+      "scored": 137,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3827b59ea1326b13",
+      "pdb": "1i9r",
+      "keys": 143,
+      "scored": 143,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "38d4e5a2ea22fc28",
+      "pdb": "2xqb",
+      "keys": 105,
+      "scored": 105,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3997326d8c6608d9",
+      "pdb": "11ov",
+      "keys": 662,
+      "scored": 662,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "39f8503c9d42c16f",
+      "pdb": "2vxt",
+      "keys": 156,
+      "scored": 156,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3a1732ca8020d706",
+      "pdb": "1h0d",
+      "keys": 123,
+      "scored": 123,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3a427c2ea68b3037",
+      "pdb": "4plj",
+      "keys": 295,
+      "scored": 295,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "3a488d52cf7ab305",
+      "pdb": "1ezv",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3a938d3ee6bc6d0f",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3ad90d4ed15f28e2",
+      "pdb": "10fd",
+      "keys": 774,
+      "scored": 774,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3b0f7ea38de77a6e",
+      "pdb": "1kxq",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3b6405d657f2a75b",
+      "pdb": "11lp",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "3c4c06d9ef1b0921",
+      "pdb": "5cba",
+      "keys": 64,
+      "scored": 64,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3c4cb781d109b5a0",
+      "pdb": "11oo",
+      "keys": 216,
+      "scored": 216,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3cc29f22f9efec26",
+      "pdb": "1jtp",
+      "keys": 258,
+      "scored": 258,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "3d2e3f857cc3fb89",
+      "pdb": "1k4c",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3d6112a6d049f40e",
+      "pdb": "12uv",
+      "keys": 516,
+      "scored": 516,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3d87989ad0613317",
+      "pdb": "1tqb",
+      "keys": 102,
+      "scored": 102,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3e5679b9e388bfb8",
+      "pdb": "2ny7",
+      "keys": 290,
+      "scored": 290,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "3ead235fe6029ead",
+      "pdb": "28jf",
+      "keys": 522,
+      "scored": 522,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "3fa5a3fe54dd7cf3",
+      "pdb": "1g6v",
+      "keys": 256,
+      "scored": 256,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "40a4aec4444288ae",
+      "pdb": "3fku",
+      "keys": 503,
+      "scored": 503,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "40dc0414ed9d7d77",
+      "pdb": "3d9a",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "40ee434710ebc1d6",
+      "pdb": "10fd",
+      "keys": 771,
+      "scored": 771,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "41132687faa42acf",
+      "pdb": "12iu",
+      "keys": 323,
+      "scored": 323,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "412f517a973a1fe6",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "416c0258c2b9cdca",
+      "pdb": "3cfi",
+      "keys": 160,
+      "scored": 160,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "41aa72ce49e325a8",
+      "pdb": "28iy",
+      "keys": 277,
+      "scored": 277,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "41b7226f8356c233",
+      "pdb": "2p47",
+      "keys": 123,
+      "scored": 123,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "423e2079822306c2",
+      "pdb": "3bsz",
+      "keys": 174,
+      "scored": 174,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "429f0477f247c40d",
+      "pdb": "2ny0",
+      "keys": 306,
+      "scored": 306,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "42a4839f92118798",
+      "pdb": "3wih",
+      "keys": 88,
+      "scored": 88,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "433d5cb0c227b92f",
+      "pdb": "4z5r",
+      "keys": 140,
+      "scored": 140,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "438702f2b97d0633",
+      "pdb": "1zvy",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "43a34824eb20f352",
+      "pdb": "3b9k",
+      "keys": 117,
+      "scored": 117,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "44322a65ab4e5626",
+      "pdb": "4z5r",
+      "keys": 137,
+      "scored": 137,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "44ba8f4774d110f5",
+      "pdb": "4ypg",
+      "keys": 161,
+      "scored": 161,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "44bbfeb2dab0d19c",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "44bd1ce6c6ac7a19",
+      "pdb": "11lr",
+      "keys": 367,
+      "scored": 367,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "453ab9e87e24abb6",
+      "pdb": "1yy9",
+      "keys": 613,
+      "scored": 613,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "45ce198a8d357225",
+      "pdb": "21tw",
+      "keys": 277,
+      "scored": 277,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "45f70e03558f5522",
+      "pdb": "4liq",
+      "keys": 469,
+      "scored": 469,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "473efec824d5deb3",
+      "pdb": "2i5y",
+      "keys": 300,
+      "scored": 300,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4741a8a01a5a219b",
+      "pdb": "5fb8",
+      "keys": 84,
+      "scored": 84,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "47713563a848dbf0",
+      "pdb": "1xfp",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "47d9cce1c010ff1d",
+      "pdb": "2r0l",
+      "keys": 239,
+      "scored": 239,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "48a7dc81c319574e",
+      "pdb": "2vxq",
+      "keys": 92,
+      "scored": 92,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "496a9d7bca0edcf5",
+      "pdb": "1sq2",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "49d3e07ec44f881e",
+      "pdb": "3gi9",
+      "keys": 437,
+      "scored": 437,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "49e736788e08c992",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4a3d9cf4a44bf434",
+      "pdb": "1ors",
+      "keys": 132,
+      "scored": 132,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4a5f1a1d3e917fa1",
+      "pdb": "3o0r",
+      "keys": 591,
+      "scored": 591,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "4c3424b731f1403a",
+      "pdb": "1v7m",
+      "keys": 145,
+      "scored": 145,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4c7dc128d2bd1405",
+      "pdb": "3k2u",
+      "keys": 233,
+      "scored": 233,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4eaeb40b28b0e3ca",
+      "pdb": "2hfe",
+      "keys": 100,
+      "scored": 100,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4fc96ff8b5e21f70",
+      "pdb": "1eo8",
+      "keys": 319,
+      "scored": 319,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "4feb12008bade37c",
+      "pdb": "1a2y",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "50448879ee8b443e",
+      "pdb": "2wzp",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "50722d531394560d",
+      "pdb": "1kxq",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "50a8a353c9303553",
+      "pdb": "12ie",
+      "keys": 395,
+      "scored": 395,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "512e5669e307db9e",
+      "pdb": "1v7n",
+      "keys": 138,
+      "scored": 138,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "526076dba1d4162a",
+      "pdb": "11lp",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "53122ac31da572e9",
+      "pdb": "4bfb",
+      "keys": 373,
+      "scored": 373,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "533a596060b9753e",
+      "pdb": "1bj1",
+      "keys": 188,
+      "scored": 188,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "53c0431ab797c0b9",
+      "pdb": "2p42",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "53f0927b8b64c1f8",
+      "pdb": "1v7n",
+      "keys": 145,
+      "scored": 145,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "548394ecb6ec8e6b",
+      "pdb": "1egj",
+      "keys": 101,
+      "scored": 101,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "54875dd44aa691ce",
+      "pdb": "1j1o",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "54a02016dd8752a9",
+      "pdb": "1adq",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5546f9f73051a5c2",
+      "pdb": "12ie",
+      "keys": 395,
+      "scored": 395,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5592ba771dca9385",
+      "pdb": "2arj",
+      "keys": 115,
+      "scored": 115,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "55affcea9b4f6eba",
+      "pdb": "28je",
+      "keys": 794,
+      "scored": 794,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "55fd85b6f6423fa6",
+      "pdb": "21rt",
+      "keys": 441,
+      "scored": 441,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "567aa286da3ca05a",
+      "pdb": "11lt",
+      "keys": 662,
+      "scored": 662,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "57368a27ce3d099c",
+      "pdb": "1r3j",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "578905ff888d5100",
+      "pdb": "11iw",
+      "keys": 363,
+      "scored": 363,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "579bfdcfcbf480e6",
+      "pdb": "3gjf",
+      "keys": 285,
+      "scored": 285,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "57c049c8267b99cb",
+      "pdb": "2p49",
+      "keys": 119,
+      "scored": 119,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "57e4b973a85aaa6d",
+      "pdb": "2h32",
+      "keys": 117,
+      "scored": 117,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5884d529ae20897d",
+      "pdb": "3opz",
+      "keys": 625,
+      "scored": 625,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "59a75a7181f07320",
+      "pdb": "1fe8",
+      "keys": 381,
+      "scored": 381,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "5a145fa53b8829b5",
+      "pdb": "1dzb",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5a3b2c481078b99e",
+      "pdb": "4irz",
+      "keys": 592,
+      "scored": 592,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5ad001ef00bebb16",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5ad796747055b0e1",
+      "pdb": "4uta",
+      "keys": 386,
+      "scored": 386,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5b4f1d603e6e6b37",
+      "pdb": "1nma",
+      "keys": 378,
+      "scored": 378,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5b77780c59ac81a1",
+      "pdb": "2wub",
+      "keys": 232,
+      "scored": 232,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5b8140c475158a87",
+      "pdb": "1nfd",
+      "keys": 239,
+      "scored": 239,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5bb6a4b0ccf3cc72",
+      "pdb": "11lp",
+      "keys": 363,
+      "scored": 363,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5c4d7e62ec273e50",
+      "pdb": "28jf",
+      "keys": 523,
+      "scored": 523,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "5c9b9aff68cba191",
+      "pdb": "5cba",
+      "keys": 61,
+      "scored": 61,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5cf109e9b7153b81",
+      "pdb": "2wzp",
+      "keys": 798,
+      "scored": 798,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "5d781584dbbb9298",
+      "pdb": "2p43",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5e5dd53d78fe2d8c",
+      "pdb": "11lr",
+      "keys": 734,
+      "scored": 734,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "5e9f05d9882fa1be",
+      "pdb": "2ny1",
+      "keys": 305,
+      "scored": 305,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "5f211dc40507e074",
+      "pdb": "28jf",
+      "keys": 508,
+      "scored": 508,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "5f2b101a690e21c0",
+      "pdb": "25sb",
+      "keys": 213,
+      "scored": 213,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "60549a0130263dea",
+      "pdb": "3cxh",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "616850c840f609f5",
+      "pdb": "4gxu",
+      "keys": 650,
+      "scored": 650,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "61d7291dfb5f06e2",
+      "pdb": "21bp",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "62be9ddf434e4427",
+      "pdb": "2jix",
+      "keys": 217,
+      "scored": 217,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "62c6e1aa2410ccbf",
+      "pdb": "1kxv",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "62e05192706c2af0",
+      "pdb": "3b2u",
+      "keys": 193,
+      "scored": 193,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "634e2cc76dbde1e9",
+      "pdb": "1ncd",
+      "keys": 389,
+      "scored": 389,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6385deb5a2784d91",
+      "pdb": "11lr",
+      "keys": 367,
+      "scored": 367,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "63938cb1d709d0f7",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "64a345890d763d35",
+      "pdb": "21bo",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "64d5722262bc8332",
+      "pdb": "3cx5",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6524a29c814a7ce5",
+      "pdb": "3eoa",
+      "keys": 179,
+      "scored": 179,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "65b1e30fdfe6e218",
+      "pdb": "3fku",
+      "keys": 503,
+      "scored": 503,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "65b67eb5dd172443",
+      "pdb": "1kxq",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "65cb086d1a0da867",
+      "pdb": "1mhp",
+      "keys": 192,
+      "scored": 192,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "65f232313b9dcb48",
+      "pdb": "11lr",
+      "keys": 734,
+      "scored": 734,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "66089e38ff5891e1",
+      "pdb": "3cfi",
+      "keys": 157,
+      "scored": 157,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "665da84359bb1f22",
+      "pdb": "1g7j",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "66e1b3614794078f",
+      "pdb": "11oq",
+      "keys": 216,
+      "scored": 216,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6807be370ae249ab",
+      "pdb": "2q8b",
+      "keys": 292,
+      "scored": 292,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6811bbc2dc668a2d",
+      "pdb": "25sb",
+      "keys": 213,
+      "scored": 213,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "681424f9e1f594e8",
+      "pdb": "12id",
+      "keys": 417,
+      "scored": 417,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6870d086212b8e84",
+      "pdb": "21en",
+      "keys": 153,
+      "scored": 153,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6895ab734aaf0bcc",
+      "pdb": "10op",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "68edb740e11f2bc6",
+      "pdb": "21bo",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "696a270bc4d2ef83",
+      "pdb": "1pkq",
+      "keys": 118,
+      "scored": 118,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "69c99b9351bcf9cc",
+      "pdb": "13fj",
+      "keys": 224,
+      "scored": 224,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "69fe842b5059d4db",
+      "pdb": "1fbi",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6a201a010c41a08c",
+      "pdb": "3bsz",
+      "keys": 174,
+      "scored": 174,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6a6cb439d2bf97ba",
+      "pdb": "4bel",
+      "keys": 358,
+      "scored": 358,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6a8614cff223760c",
+      "pdb": "29on",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6b1b43a7ec55ae10",
+      "pdb": "1yym",
+      "keys": 301,
+      "scored": 301,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6cfec009fa7faa7c",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6e0864f9d95a88da",
+      "pdb": "13bf",
+      "keys": 51,
+      "scored": 51,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6e709dda7f462286",
+      "pdb": "2i9l",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6e9af4305d19a00e",
+      "pdb": "21rt",
+      "keys": 543,
+      "scored": 543,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "6eeac4047216b3b2",
+      "pdb": "3lzf",
+      "keys": 323,
+      "scored": 323,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6efae8823ff3a38a",
+      "pdb": "1fbi",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6f83beeae685092c",
+      "pdb": "30wc",
+      "keys": 872,
+      "scored": 872,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "6fe9ce024e51d4ea",
+      "pdb": "1yqv",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "6fefce0c0ecef019",
+      "pdb": "5fec",
+      "keys": 337,
+      "scored": 337,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "705a1190c9e00723",
+      "pdb": "3hmx",
+      "keys": 295,
+      "scored": 295,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "70c7630ab279ad45",
+      "pdb": "10zo",
+      "keys": 68,
+      "scored": 68,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7272baeffd944408",
+      "pdb": "29in",
+      "keys": 88,
+      "scored": 88,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7298d168e19d7555",
+      "pdb": "28jf",
+      "keys": 507,
+      "scored": 507,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "72dd0f3617b9acf0",
+      "pdb": "12iu",
+      "keys": 323,
+      "scored": 323,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "73274d6cee0d6972",
+      "pdb": "2bse",
+      "keys": 214,
+      "scored": 214,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "735dd45eb69a7772",
+      "pdb": "1v7n",
+      "keys": 139,
+      "scored": 139,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7464a25089f286b8",
+      "pdb": "1w72",
+      "keys": 283,
+      "scored": 283,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "7470bc3074cc2038",
+      "pdb": "1g7i",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "756d73150c4a3169",
+      "pdb": "3fku",
+      "keys": 497,
+      "scored": 497,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "75c97864e44f66c6",
+      "pdb": "12ut",
+      "keys": 518,
+      "scored": 518,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "76193ee70fe978c9",
+      "pdb": "4z5r",
+      "keys": 139,
+      "scored": 139,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7652feba8526acf7",
+      "pdb": "25sb",
+      "keys": 213,
+      "scored": 213,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "76b2e7597c0fcd56",
+      "pdb": "4z5r",
+      "keys": 145,
+      "scored": 145,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "775aef5973ed61b5",
+      "pdb": "10zo",
+      "keys": 65,
+      "scored": 65,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "776f21aab5dfa115",
+      "pdb": "3eoa",
+      "keys": 179,
+      "scored": 179,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "77d9795261b48c19",
+      "pdb": "4y5x",
+      "keys": 207,
+      "scored": 207,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "78a45b4ae511930c",
+      "pdb": "10or",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "79681d947d3ed0ca",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "7973647e73e624e2",
+      "pdb": "3ezj",
+      "keys": 395,
+      "scored": 395,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "797812c199bd253e",
+      "pdb": "1z3g",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "79de021696251fba",
+      "pdb": "3bqu",
+      "keys": 425,
+      "scored": 425,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "79e530797ae18d9e",
+      "pdb": "32nz",
+      "keys": 133,
+      "scored": 133,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7a46d80324fef6a6",
+      "pdb": "4bel",
+      "keys": 357,
+      "scored": 357,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7a5592b100483f88",
+      "pdb": "3iu3",
+      "keys": 116,
+      "scored": 116,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7b7c2a3ca4769988",
+      "pdb": "11lr",
+      "keys": 367,
+      "scored": 367,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7bc4e0eac6287138",
+      "pdb": "2ny4",
+      "keys": 306,
+      "scored": 306,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7cb1dc0f1850ee57",
+      "pdb": "3gbn",
+      "keys": 501,
+      "scored": 501,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "7cd4484cb2e9e558",
+      "pdb": "1iai",
+      "keys": 433,
+      "scored": 433,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "7cd97b115d1d3e54",
+      "pdb": "4rgn",
+      "keys": 220,
+      "scored": 220,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7d290257fa17ab9e",
+      "pdb": "11iw",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "7d4d0d51afe3d0c5",
+      "pdb": "4rgm",
+      "keys": 224,
+      "scored": 224,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7ed67eafb24b6eba",
+      "pdb": "1fj1",
+      "keys": 251,
+      "scored": 251,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "7fa4592547bc458e",
+      "pdb": "2zcl",
+      "keys": 237,
+      "scored": 237,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8041b56167eb4df5",
+      "pdb": "4y5v",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "80542f2c7ff9f3c5",
+      "pdb": "2p44",
+      "keys": 119,
+      "scored": 119,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8055cbdba99c7dd3",
+      "pdb": "11lp",
+      "keys": 363,
+      "scored": 363,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "80ffdd1eae3097bc",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "811bed61f3596b38",
+      "pdb": "11ol",
+      "keys": 197,
+      "scored": 197,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "812b47bed3ea5f53",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "812ef12672c59c44",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "815d0260df458e93",
+      "pdb": "28jf",
+      "keys": 520,
+      "scored": 520,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "81b8c04e2fa4a21d",
+      "pdb": "10or",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "834205b2491e4384",
+      "pdb": "1pg7",
+      "keys": 426,
+      "scored": 426,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "8348a1228379a5e5",
+      "pdb": "2i9l",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8462a1dd04dc1a67",
+      "pdb": "3g04",
+      "keys": 228,
+      "scored": 228,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "85e9175147d7bac2",
+      "pdb": "3zkm",
+      "keys": 375,
+      "scored": 375,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8674b469f21f2409",
+      "pdb": "1nmc",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "870964e0daa54601",
+      "pdb": "2arj",
+      "keys": 116,
+      "scored": 116,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "87745eeded57cf45",
+      "pdb": "2j88",
+      "keys": 319,
+      "scored": 319,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "883c1e6c60251200",
+      "pdb": "1iai",
+      "keys": 433,
+      "scored": 433,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "8847a7895be583f0",
+      "pdb": "4xak",
+      "keys": 211,
+      "scored": 211,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "884fe5b0ea5615f3",
+      "pdb": "10or",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "891e6d33d6ca44b8",
+      "pdb": "21en",
+      "keys": 153,
+      "scored": 153,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8969c80295217d24",
+      "pdb": "3grw",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "89c22fe1b9e4d9f9",
+      "pdb": "26pf",
+      "keys": 410,
+      "scored": 410,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "89e7b9eb714eaafc",
+      "pdb": "4gxu",
+      "keys": 650,
+      "scored": 650,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "89ed60cf9d7c7b94",
+      "pdb": "4ma8",
+      "keys": 108,
+      "scored": 108,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8bde33d553a08dd1",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8c14eb1e2a5cddf7",
+      "pdb": "33cg",
+      "keys": 100,
+      "scored": 100,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8c54988cc40c9ca1",
+      "pdb": "1osp",
+      "keys": 251,
+      "scored": 251,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8c8c9019c55d65db",
+      "pdb": "1jtp",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8cbfa9d01c83f3ef",
+      "pdb": "1kb9",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8d2424ec52a36bfc",
+      "pdb": "1kyo",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8d289d86108c1b0c",
+      "pdb": "35ui",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8d4cdf635434bb69",
+      "pdb": "1fj1",
+      "keys": 251,
+      "scored": 251,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8dc01a93fe9093f4",
+      "pdb": "11iw",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "8e1a76da5458f9b3",
+      "pdb": "3zkm",
+      "keys": 375,
+      "scored": 375,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8e6d0eedb9103c76",
+      "pdb": "1t6v",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "8ee7dff8f497eec2",
+      "pdb": "1z3g",
+      "keys": 173,
+      "scored": 173,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "90134af6d61aa056",
+      "pdb": "3d85",
+      "keys": 133,
+      "scored": 133,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "903af6e5dca603c3",
+      "pdb": "2h8p",
+      "keys": 100,
+      "scored": 100,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9040ddba008c2205",
+      "pdb": "1bzq",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "90e988857656724e",
+      "pdb": "1yym",
+      "keys": 299,
+      "scored": 299,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "91022bdfdaa7a566",
+      "pdb": "24kr",
+      "keys": 498,
+      "scored": 498,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "92156f521f3903fb",
+      "pdb": "1nca",
+      "keys": 389,
+      "scored": 389,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "92481b0aa327ca0c",
+      "pdb": "28jf",
+      "keys": 510,
+      "scored": 510,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "92a144d7f932c845",
+      "pdb": "12id",
+      "keys": 417,
+      "scored": 417,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "92f4ef18321bfbf9",
+      "pdb": "1ztx",
+      "keys": 101,
+      "scored": 101,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "93a15c6f53b004da",
+      "pdb": "10op",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "93a94aa57acf077f",
+      "pdb": "2zch",
+      "keys": 237,
+      "scored": 237,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "93c015be6484642e",
+      "pdb": "2p42",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "943e25382993cfb8",
+      "pdb": "1k4d",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "947b82bc754991c9",
+      "pdb": "3wfb",
+      "keys": 591,
+      "scored": 591,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "94f9d3682c7eeef8",
+      "pdb": "3wfe",
+      "keys": 591,
+      "scored": 591,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "950379353844aa8a",
+      "pdb": "3zlq",
+      "keys": 367,
+      "scored": 367,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "95dbf7083bb75575",
+      "pdb": "3g6j",
+      "keys": 1545,
+      "scored": 1545,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "977e9acad4f0557f",
+      "pdb": "1sy6",
+      "keys": 168,
+      "scored": 168,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "97b2b46966c5d32e",
+      "pdb": "2wzp",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "98418bdcde51441b",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "9955ccd14487458c",
+      "pdb": "1kb5",
+      "keys": 232,
+      "scored": 232,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "9964f47a13863871",
+      "pdb": "3opz",
+      "keys": 625,
+      "scored": 625,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "99774b6885c36b50",
+      "pdb": "1oak",
+      "keys": 196,
+      "scored": 196,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9a041413bc9c7fd8",
+      "pdb": "3b2u",
+      "keys": 195,
+      "scored": 195,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9a075d8ec4cadd4a",
+      "pdb": "1ahw",
+      "keys": 200,
+      "scored": 200,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9a356197e2ef7032",
+      "pdb": "2ybr",
+      "keys": 66,
+      "scored": 66,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9a662ee15ee510e0",
+      "pdb": "2r29",
+      "keys": 97,
+      "scored": 97,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9ae3e7b1ae024bf1",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9b3d747b45cfc1d6",
+      "pdb": "3gbm",
+      "keys": 501,
+      "scored": 501,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "9b81db8685646bb4",
+      "pdb": "1nmb",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9b9bc59675efcd03",
+      "pdb": "4i2x",
+      "keys": 296,
+      "scored": 296,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9e0439d27062c173",
+      "pdb": "1orq",
+      "keys": 223,
+      "scored": 223,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9e639bab383e001d",
+      "pdb": "4rgn",
+      "keys": 214,
+      "scored": 214,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9e6825a238adee5b",
+      "pdb": "11oq",
+      "keys": 182,
+      "scored": 182,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9eadd09aff178d92",
+      "pdb": "2xwt",
+      "keys": 234,
+      "scored": 234,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9ebd5b04e597b3e4",
+      "pdb": "11ha",
+      "keys": 305,
+      "scored": 305,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "9f5e9ad6ceedd327",
+      "pdb": "21en",
+      "keys": 153,
+      "scored": 153,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a1b8262ca9f9dc6f",
+      "pdb": "1pkq",
+      "keys": 121,
+      "scored": 121,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a1d7219030199c9d",
+      "pdb": "1dvf",
+      "keys": 223,
+      "scored": 223,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "a1f16f9b31dc5e50",
+      "pdb": "1ncc",
+      "keys": 389,
+      "scored": 389,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a1f597dbefa66426",
+      "pdb": "3wfd",
+      "keys": 591,
+      "scored": 591,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "a22512fed09430c5",
+      "pdb": "3g9a",
+      "keys": 227,
+      "scored": 227,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a393a08200569cb2",
+      "pdb": "12iu",
+      "keys": 323,
+      "scored": 323,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a593becc197311be",
+      "pdb": "4rgo",
+      "keys": 225,
+      "scored": 225,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a7301bc776f0f857",
+      "pdb": "1dzb",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a7465d28beb667c0",
+      "pdb": "2qql",
+      "keys": 554,
+      "scored": 554,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a7cdd00a07bd7c78",
+      "pdb": "1ar1",
+      "keys": 252,
+      "scored": 252,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a80a935dc5bc7cec",
+      "pdb": "21rn",
+      "keys": 440,
+      "scored": 440,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a8199a3226612df3",
+      "pdb": "2ny6",
+      "keys": 304,
+      "scored": 304,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a8b84793f6bfa3bb",
+      "pdb": "3cxh",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a8d8ea85eb377981",
+      "pdb": "11is",
+      "keys": 1032,
+      "scored": 1032,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a9040734c001c9c2",
+      "pdb": "4hjj",
+      "keys": 157,
+      "scored": 157,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a92d3b1261d0e8b0",
+      "pdb": "2ybr",
+      "keys": 65,
+      "scored": 65,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a97709d4809ccbfd",
+      "pdb": "10op",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "a97fc03f0e72ac96",
+      "pdb": "3dvn",
+      "keys": 151,
+      "scored": 151,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "a995d969344d6439",
+      "pdb": "33ch",
+      "keys": 287,
+      "scored": 287,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "a9d6c55e95c93823",
+      "pdb": "2nxy",
+      "keys": 304,
+      "scored": 304,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "aa7d3aa66783d90f",
+      "pdb": "25sb",
+      "keys": 213,
+      "scored": 213,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "aa7f8baef9afdc9e",
+      "pdb": "1i9r",
+      "keys": 143,
+      "scored": 143,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "aaf52170571aa294",
+      "pdb": "4uta",
+      "keys": 373,
+      "scored": 373,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ab415f3d759f4ce6",
+      "pdb": "4gxu",
+      "keys": 650,
+      "scored": 650,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ab713c10920a931b",
+      "pdb": "3zkx",
+      "keys": 370,
+      "scored": 370,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ab729210ef06e01f",
+      "pdb": "10op",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ac057c538a9040de",
+      "pdb": "1t6v",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ac3919f3214e84bd",
+      "pdb": "1fns",
+      "keys": 196,
+      "scored": 196,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ac592143dc9eb6c2",
+      "pdb": "1tzh",
+      "keys": 188,
+      "scored": 188,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ada9cb898c1be9ee",
+      "pdb": "4y5x",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ade55cc31993be64",
+      "pdb": "1ott",
+      "keys": 885,
+      "scored": 885,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "afa9990080ec9cce",
+      "pdb": "10op",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "afd7415d7da61110",
+      "pdb": "3s36",
+      "keys": 112,
+      "scored": 112,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b0140fc4f1a98364",
+      "pdb": "1lk3",
+      "keys": 136,
+      "scored": 136,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b15d4d66185b0223",
+      "pdb": "3cx5",
+      "keys": 185,
+      "scored": 185,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b21a187ceec0d31a",
+      "pdb": "10or",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "b27ac6d5e2df5ab0",
+      "pdb": "2wzp",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "b352b1442c4464ce",
+      "pdb": "1fsk",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b35b18e7b8738eb0",
+      "pdb": "3fmg",
+      "keys": 235,
+      "scored": 235,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b44c1acb946b7b85",
+      "pdb": "4y5x",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b4772caecd10ccbd",
+      "pdb": "2nxz",
+      "keys": 306,
+      "scored": 306,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b5f511e28e3b81f3",
+      "pdb": "11yb",
+      "keys": 690,
+      "scored": 690,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b5f5ddf4d46fd5ea",
+      "pdb": "12pb",
+      "keys": 285,
+      "scored": 285,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b6287c149bf533fe",
+      "pdb": "2b2x",
+      "keys": 176,
+      "scored": 176,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b6c2d24d0fcaf535",
+      "pdb": "21bp",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b6ff92ea3757bb88",
+      "pdb": "11zw",
+      "keys": 212,
+      "scored": 212,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "b80cf45fab1a7bd4",
+      "pdb": "11iw",
+      "keys": 726,
+      "scored": 726,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "b81a8863651d17e8",
+      "pdb": "3det",
+      "keys": 885,
+      "scored": 885,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "b9ac49d598b54bf0",
+      "pdb": "25sb",
+      "keys": 213,
+      "scored": 213,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "ba37455f911d2de4",
+      "pdb": "1bzq",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ba8489b6352edf28",
+      "pdb": "10gh",
+      "keys": 1006,
+      "scored": 1006,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "baee8a61751983bb",
+      "pdb": "1qle",
+      "keys": 252,
+      "scored": 252,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bb342ffc4877029b",
+      "pdb": "3s35",
+      "keys": 112,
+      "scored": 112,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bbd04c13e65f32e1",
+      "pdb": "3gjf",
+      "keys": 285,
+      "scored": 285,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "bc2cdc5ad3d6882e",
+      "pdb": "3wih",
+      "keys": 88,
+      "scored": 88,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bc79a51066baf989",
+      "pdb": "21bo",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bcb552acf37d2c45",
+      "pdb": "21au",
+      "keys": 315,
+      "scored": 315,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bd25d9b6215abb50",
+      "pdb": "3jwd",
+      "keys": 360,
+      "scored": 360,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bdd7d00ccaf4a3ec",
+      "pdb": "3hi6",
+      "keys": 180,
+      "scored": 180,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "be59f7b767ea6ccb",
+      "pdb": "1fsk",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bea86a5d035edaff",
+      "pdb": "2wub",
+      "keys": 229,
+      "scored": 229,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "bf2e30f4188f8d19",
+      "pdb": "2p48",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c0385b58f8222a26",
+      "pdb": "13br",
+      "keys": 160,
+      "scored": 160,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c1794dba64492be5",
+      "pdb": "1ots",
+      "keys": 885,
+      "scored": 885,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c1e9b91fe2e40ded",
+      "pdb": "11ol",
+      "keys": 216,
+      "scored": 216,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c251eb1d20958660",
+      "pdb": "4xak",
+      "keys": 211,
+      "scored": 211,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c26c3a82bf55b39e",
+      "pdb": "1rjc",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c2991c691cc2bbe7",
+      "pdb": "2j6e",
+      "keys": 419,
+      "scored": 419,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c3508bcba3802139",
+      "pdb": "2aep",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c37d18deaa709db5",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c397ac918760cf97",
+      "pdb": "28jf",
+      "keys": 530,
+      "scored": 530,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c397e26ca4e9f264",
+      "pdb": "1uac",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c3980c9fdd23f97d",
+      "pdb": "3gi8",
+      "keys": 435,
+      "scored": 435,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c4df1755684d1a69",
+      "pdb": "4u6v",
+      "keys": 544,
+      "scored": 544,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c4f35401f245deb1",
+      "pdb": "24kr",
+      "keys": 498,
+      "scored": 498,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c54d96dad3026506",
+      "pdb": "3k74",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c552d3ea7f0f79df",
+      "pdb": "3jwd",
+      "keys": 354,
+      "scored": 354,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c56b73180da31334",
+      "pdb": "2jel",
+      "keys": 85,
+      "scored": 85,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c5bd65ee426c2ce9",
+      "pdb": "25pv",
+      "keys": 251,
+      "scored": 251,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c5bdda1a4fdf8bd3",
+      "pdb": "3eba",
+      "keys": 130,
+      "scored": 130,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c6edf50e12293b8b",
+      "pdb": "10or",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "c70e665544d7b69e",
+      "pdb": "2i5y",
+      "keys": 302,
+      "scored": 302,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c7be38722fc64098",
+      "pdb": "1iqd",
+      "keys": 156,
+      "scored": 156,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c86e568558c723ec",
+      "pdb": "3ab0",
+      "keys": 136,
+      "scored": 136,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c928829dc440f2bb",
+      "pdb": "2ny3",
+      "keys": 305,
+      "scored": 305,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c9a7d2ed24953d9a",
+      "pdb": "4w6y",
+      "keys": 146,
+      "scored": 146,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c9b30d56e5c2f96d",
+      "pdb": "2ypv",
+      "keys": 229,
+      "scored": 229,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "c9d33291c68f2c03",
+      "pdb": "4dke",
+      "keys": 294,
+      "scored": 294,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ca0cb0e691e7e200",
+      "pdb": "3gbm",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ca1ba2af8e053cab",
+      "pdb": "2q8a",
+      "keys": 316,
+      "scored": 316,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ca72b56a6353648a",
+      "pdb": "11hb",
+      "keys": 307,
+      "scored": 307,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "cafbdedd3fcf123d",
+      "pdb": "4w6w",
+      "keys": 141,
+      "scored": 141,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "cb4b47f6809e0d59",
+      "pdb": "11ls",
+      "keys": 381,
+      "scored": 381,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "cc25a668dc9ca9e4",
+      "pdb": "2r56",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ceb6d1f889fab257",
+      "pdb": "1nfd",
+      "keys": 239,
+      "scored": 239,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "cf2acb98ddab2e2a",
+      "pdb": "4dkf",
+      "keys": 298,
+      "scored": 298,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "cf74469d1469d66a",
+      "pdb": "3b2u",
+      "keys": 193,
+      "scored": 193,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d005309fe80c5d0d",
+      "pdb": "2vwe",
+      "keys": 196,
+      "scored": 196,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "d05012a09bd76e9e",
+      "pdb": "4u6v",
+      "keys": 272,
+      "scored": 272,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d0570ecd726f18b3",
+      "pdb": "2aeq",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d0b675cd6ad594c6",
+      "pdb": "2bse",
+      "keys": 214,
+      "scored": 214,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "d0c81c0ca302f96b",
+      "pdb": "3ejz",
+      "keys": 885,
+      "scored": 885,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "d1bdb1f1b37de8db",
+      "pdb": "3s37",
+      "keys": 110,
+      "scored": 110,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d1e8d5665b01c7f7",
+      "pdb": "3eo1",
+      "keys": 224,
+      "scored": 224,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "d282c90713252657",
+      "pdb": "21bp",
+      "keys": 491,
+      "scored": 491,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d2989d08e34b9294",
+      "pdb": "1bgx",
+      "keys": 828,
+      "scored": 828,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d34f4f506ba86703",
+      "pdb": "12ie",
+      "keys": 395,
+      "scored": 395,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d3fc546e7016c2c4",
+      "pdb": "2ybr",
+      "keys": 65,
+      "scored": 65,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d445f46e67927496",
+      "pdb": "2xxm",
+      "keys": 73,
+      "scored": 73,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d470ce6c99a69718",
+      "pdb": "1nsn",
+      "keys": 138,
+      "scored": 138,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d4870285e3d99053",
+      "pdb": "1nmc",
+      "keys": 388,
+      "scored": 388,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d595ee6cb04efce4",
+      "pdb": "30us",
+      "keys": 894,
+      "scored": 894,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "d65e06b91f1ec76a",
+      "pdb": "1kxt",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d6dacc3711f56cab",
+      "pdb": "4y5v",
+      "keys": 206,
+      "scored": 206,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d807854e7849d797",
+      "pdb": "10op",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "d823295bc493297c",
+      "pdb": "3cfi",
+      "keys": 153,
+      "scored": 153,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d964f96916afab80",
+      "pdb": "1v7m",
+      "keys": 145,
+      "scored": 145,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d98d768279ec6205",
+      "pdb": "2w9e",
+      "keys": 99,
+      "scored": 99,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "d9b416570c73ffc3",
+      "pdb": "35uh",
+      "keys": 56,
+      "scored": 56,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "db48728fdc1aee4e",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "db59e1ba5dc26a06",
+      "pdb": "2qqk",
+      "keys": 541,
+      "scored": 541,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "dc6e0a7a4f39cfb4",
+      "pdb": "2yc1",
+      "keys": 65,
+      "scored": 65,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "dd8076ff176fd64f",
+      "pdb": "10op",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "dd8577955ea66d1a",
+      "pdb": "4ma7",
+      "keys": 110,
+      "scored": 110,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "dd98dc8ba09da89d",
+      "pdb": "1tqc",
+      "keys": 102,
+      "scored": 102,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "defed9d993909324",
+      "pdb": "3opz",
+      "keys": 625,
+      "scored": 625,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "df524daca01b4588",
+      "pdb": "10or",
+      "keys": 244,
+      "scored": 244,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "e1f328e7521d252d",
+      "pdb": "1w72",
+      "keys": 283,
+      "scored": 283,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "e2df5f712651518a",
+      "pdb": "21ao",
+      "keys": 314,
+      "scored": 314,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e2ef1aef7ea9bf49",
+      "pdb": "1xiw",
+      "keys": 91,
+      "scored": 91,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e34a047c2479a1ff",
+      "pdb": "3iu3",
+      "keys": 119,
+      "scored": 119,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e36e52335f7335c8",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "e3d426df70d6753c",
+      "pdb": "4w6x",
+      "keys": 142,
+      "scored": 142,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e3e371d6b76b1a1c",
+      "pdb": "4ypg",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e5edec21272acf7a",
+      "pdb": "3zlq",
+      "keys": 370,
+      "scored": 370,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e67a7803d1971c66",
+      "pdb": "3zkn",
+      "keys": 375,
+      "scored": 375,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e73107d0b6c68e17",
+      "pdb": "5fec",
+      "keys": 329,
+      "scored": 329,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e770ba3e4d5af743",
+      "pdb": "4xt1",
+      "keys": 291,
+      "scored": 291,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e780c4012c50ab1f",
+      "pdb": "1jps",
+      "keys": 200,
+      "scored": 200,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e7a5ea673b39e2b6",
+      "pdb": "2ih3",
+      "keys": 98,
+      "scored": 98,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e83f51a8c61b01b6",
+      "pdb": "1bzq",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e881ea6b66c37aa0",
+      "pdb": "2hvk",
+      "keys": 103,
+      "scored": 103,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e8bb4b1f6abd4931",
+      "pdb": "10or",
+      "keys": 183,
+      "scored": 183,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "e9b008b5c0df0d1e",
+      "pdb": "1vfb",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "eb5d0f1da4871297",
+      "pdb": "3fku",
+      "keys": 497,
+      "scored": 497,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "eb7ac753dcd1465f",
+      "pdb": "1fsk",
+      "keys": 159,
+      "scored": 159,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "eb80d91e5a13b3cf",
+      "pdb": "2p4a",
+      "keys": 124,
+      "scored": 124,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ebb4ab11618bec7b",
+      "pdb": "2zuq",
+      "keys": 148,
+      "scored": 148,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ebca68f36ff1c261",
+      "pdb": "1bql",
+      "keys": 129,
+      "scored": 129,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ebd4ae809369376d",
+      "pdb": "2wuc",
+      "keys": 240,
+      "scored": 240,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ec468f34b1cbdb53",
+      "pdb": "4y5v",
+      "keys": 191,
+      "scored": 191,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ecbcfb4e0831b1c5",
+      "pdb": "1v7n",
+      "keys": 138,
+      "scored": 138,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ecdbece1fc147f5e",
+      "pdb": "1wej",
+      "keys": 104,
+      "scored": 104,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ed9a6069cc656ce4",
+      "pdb": "10or",
+      "keys": 427,
+      "scored": 427,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "ee3df7a3d2f5689d",
+      "pdb": "12er",
+      "keys": 435,
+      "scored": 435,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ee409c03dc4194c0",
+      "pdb": "5cbe",
+      "keys": 64,
+      "scored": 64,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ee5adbe1757f791b",
+      "pdb": "2wzp",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ef38d46ef5924b69",
+      "pdb": "1op9",
+      "keys": 130,
+      "scored": 130,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f05c2066b17893f7",
+      "pdb": "4z5r",
+      "keys": 141,
+      "scored": 141,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f079fde40b387f59",
+      "pdb": "1ob1",
+      "keys": 96,
+      "scored": 96,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f0e0aebe3cc09381",
+      "pdb": "3g6j",
+      "keys": 1545,
+      "scored": 1545,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "f1009eb216329e0e",
+      "pdb": "11oo",
+      "keys": 197,
+      "scored": 197,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f1a4771e227ee262",
+      "pdb": "1fe8",
+      "keys": 190,
+      "scored": 190,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f2e8f01427e1643b",
+      "pdb": "4y5y",
+      "keys": 198,
+      "scored": 198,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f2f5a8591c3f4ad3",
+      "pdb": "4z5r",
+      "keys": 137,
+      "scored": 137,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f476fa5ef05845d0",
+      "pdb": "2i60",
+      "keys": 300,
+      "scored": 300,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f49be78297a37bff",
+      "pdb": "4y5y",
+      "keys": 209,
+      "scored": 209,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f4dfdb378eab76e9",
+      "pdb": "3zkn",
+      "keys": 375,
+      "scored": 375,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f575990f1410d97c",
+      "pdb": "28je",
+      "keys": 791,
+      "scored": 791,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 3,
+      "cached": true
+    },
+    {
+      "context": "f5f92d811bedb934",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "f695710bd4b4c602",
+      "pdb": "2zuq",
+      "keys": 148,
+      "scored": 148,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f701d8dc0c00b3e0",
+      "pdb": "4gxu",
+      "keys": 325,
+      "scored": 325,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f707e9d37e14985b",
+      "pdb": "1i9r",
+      "keys": 143,
+      "scored": 143,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f7b732803d120e5f",
+      "pdb": "3b2u",
+      "keys": 194,
+      "scored": 194,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f7ba04292e874bb2",
+      "pdb": "12qj",
+      "keys": 394,
+      "scored": 394,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f7d907cafaa92de8",
+      "pdb": "2x7l",
+      "keys": 57,
+      "scored": 57,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f7f88ce699a87c82",
+      "pdb": "28jf",
+      "keys": 532,
+      "scored": 532,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "f85b9d4400edc724",
+      "pdb": "23vf",
+      "keys": 109,
+      "scored": 109,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "f909416c1fb6b481",
+      "pdb": "12ut",
+      "keys": 1036,
+      "scored": 1036,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "fa05a869a121fa6d",
+      "pdb": "11or",
+      "keys": 211,
+      "scored": 211,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fa5ee1a505eefc37",
+      "pdb": "3w2d",
+      "keys": 225,
+      "scored": 225,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fafe021fb03824dc",
+      "pdb": "1xiw",
+      "keys": 87,
+      "scored": 87,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fb1d834e9da5a854",
+      "pdb": "1cz8",
+      "keys": 188,
+      "scored": 188,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "fb2a13762d72c135",
+      "pdb": "2p46",
+      "keys": 120,
+      "scored": 120,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fb4623292a1fe367",
+      "pdb": "4bfb",
+      "keys": 374,
+      "scored": 374,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fc213675a2673f8b",
+      "pdb": "4z5r",
+      "keys": 141,
+      "scored": 141,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fc2e316069b4dc60",
+      "pdb": "1kxq",
+      "keys": 496,
+      "scored": 496,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fc79681d09b95fd6",
+      "pdb": "24kr",
+      "keys": 498,
+      "scored": 498,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fce7ba028ce7a98c",
+      "pdb": "3hi6",
+      "keys": 180,
+      "scored": 180,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fd84356216a53b86",
+      "pdb": "21av",
+      "keys": 321,
+      "scored": 321,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fdc1f122649bb54d",
+      "pdb": "3zkq",
+      "keys": 376,
+      "scored": 376,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fdebcd85e80d41f0",
+      "pdb": "3b2u",
+      "keys": 194,
+      "scored": 194,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "fe2609686f0b32ed",
+      "pdb": "3dvn",
+      "keys": 151,
+      "scored": 151,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "feb51503de6a39f9",
+      "pdb": "28jf",
+      "keys": 521,
+      "scored": 521,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 2,
+      "cached": true
+    },
+    {
+      "context": "ff86de2d38450a2c",
+      "pdb": "3iu3",
+      "keys": 114,
+      "scored": 114,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    },
+    {
+      "context": "ffe24d225ca526e5",
+      "pdb": "3cfi",
+      "keys": 158,
+      "scored": 158,
+      "coverage": 1.0,
+      "pesto_residues": null,
+      "n_antigen_chains": 1,
+      "cached": true
+    }
+  ]
+}

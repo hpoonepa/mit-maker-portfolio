@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lambert-igem/hotspot-preflight/schema/run_record.schema.json",
+  "title": "hotspot-preflight run record",
+  "description": "The reproducibility artifact for one preflight run: what was checked, against which file, under which thresholds, and what the verdict was. Deliberately carries no timestamp, so two runs of the same input produce byte-identical records that can be committed and diffed.",
+  "type": "object",
+  "required": [
+    "record_version",
+    "tool",
+    "versions",
+    "input",
+    "site",
+    "parameters",
+    "verdict",
+    "n_kill",
+    "n_warn",
+    "kill_codes",
+    "findings",
+    "tool_formats"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "record_version": {
+      "description": "Schema generation of this record. Bumped only on a breaking change.",
+      "const": "1"
+    },
+    "tool": {
+      "type": "object",
+      "required": ["name", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "const": "hotspot-preflight" },
+        "version": { "type": "string" }
+      }
+    },
+    "versions": {
+      "description": "Versions of the libraries whose numbers end up in the findings.",
+      "type": "object",
+      "required": ["gemmi", "freesasa"],
+      "additionalProperties": false,
+      "properties": {
+        "gemmi": { "type": "string" },
+        "freesasa": { "type": "string" }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["filename", "sha256", "target_id", "assembly_id"],
+      "additionalProperties": false,
+      "properties": {
+        "filename": {
+          "description": "Base name only. A record must not embed the machine it was produced on.",
+          "type": "string"
+        },
+        "sha256": {
+          "description": "SHA-256 of the input file's bytes, so a record can be tied to the exact coordinates it describes.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "target_id": { "type": "string" },
+        "assembly_id": {
+          "description": "The biological assembly burial was measured on, or null when the entry declares none. Null is a statement, not a default: an asymmetric unit is not necessarily the biological form.",
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "site": {
+      "type": "object",
+      "required": ["hotspot_spec", "keys", "residues", "crop_range"],
+      "additionalProperties": false,
+      "properties": {
+        "hotspot_spec": {
+          "description": "The specification exactly as the user typed it.",
+          "type": "string"
+        },
+        "keys": {
+          "description": "The parsed residues in canonical author numbering, as displayed.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "residues": {
+          "description": "The same residues decomposed, so a consumer need not re-parse them.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/residue" }
+        },
+        "crop_range": {
+          "type": ["object", "null"],
+          "required": ["chain", "first", "last"],
+          "additionalProperties": false,
+          "properties": {
+            "chain": { "type": "string" },
+            "first": { "type": "integer" },
+            "last": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "description": "Every threshold and pinned measurement parameter the verdict depended on, harvested from the check modules rather than restated here.",
+      "type": "object",
+      "required": ["checks", "thresholds", "sasa"],
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "thresholds": {
+          "type": "object",
+          "required": [
+            "low_occupancy_at_or_below",
+            "buried_relative_sasa_below",
+            "crop_artifact_delta_above",
+            "partner_occlusion_delta_above",
+            "burial_contact_a",
+            "sasa_probe_radius"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "low_occupancy_at_or_below": { "type": "number" },
+            "buried_relative_sasa_below": { "type": "number" },
+            "crop_artifact_delta_above": { "type": "number" },
+            "partner_occlusion_delta_above": { "type": "number" },
+            "burial_contact_a": { "type": "number" },
+            "sasa_probe_radius": { "type": "number" }
+          }
+        },
+        "sasa": {
+          "description": "The pinned solvent-accessibility settings, taken from BurialProfile.parameters. Open-ended: a new pinned parameter in the burial check appears here without a schema change.",
+          "type": "object",
+          "required": [
+            "probe_radius",
+            "algorithm",
+            "algorithm_parameter",
+            "n_slices",
+            "classifier",
+            "include_hydrogens",
+            "include_hetatm",
+            "include_solvent",
+            "relative_sasa_method",
+            "reference_published_source",
+            "neighbour_cutoff_a",
+            "reference_id"
+          ],
+          "properties": {
+            "reference_id": {
+              "description": "Digest of the reference-maxima table the relative SASA values were divided by. Two runs with different ids produced numbers on different scales and must not be compared. Null when the burial check never ran.",
+              "type": ["string", "null"]
+            },
+            "probe_radius": { "type": "number" },
+            "algorithm": { "type": "string" },
+            "algorithm_parameter": { "type": "string" },
+            "n_slices": { "type": "integer" },
+            "classifier": { "type": "string" },
+            "include_hydrogens": { "type": "boolean" },
+            "include_hetatm": { "type": "boolean" },
+            "include_solvent": { "type": "boolean" },
+            "relative_sasa_method": { "type": "string" },
+            "reference_published_source": { "type": "string" },
+            "neighbour_cutoff_a": { "type": "number" }
+          }
+        }
+      }
+    },
+    "verdict": {
+      "description": "Worst-wins over the findings. Any KILL stops the site; any WARN qualifies it.",
+      "enum": ["GO", "GO_WITH_WARNINGS", "STOP"]
+    },
+    "n_kill": { "type": "integer" },
+    "n_warn": { "type": "integer" },
+    "kill_codes": {
+      "description": "Distinct KILL codes in first-seen order: the reason, not merely the yes/no.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "tool_formats": {
+      "description": "The hotspot list in each design tool's own numbering. A format that cannot be produced carries the reason as its value instead of being absent.",
+      "type": "object",
+      "required": ["rfdiffusion", "bindcraft", "boltzgen"],
+      "additionalProperties": false,
+      "properties": {
+        "rfdiffusion": { "type": "string" },
+        "bindcraft": { "type": "string" },
+        "boltzgen": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "residue": {
+      "type": "object",
+      "required": ["chain", "auth_seq_id", "icode"],
+      "additionalProperties": false,
+      "properties": {
+        "chain": { "type": "string" },
+        "auth_seq_id": {
+          "description": "Author residue number. Legitimately negative for expression tags.",
+          "type": "integer"
+        },
+        "icode": {
+          "description": "Insertion code, or null for none. Never the mmCIF single space.",
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "check",
+        "severity",
+        "code",
+        "message",
+        "residue",
+        "chain",
+        "auth_seq_id",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "check": { "type": "string" },
+        "severity": { "enum": ["PASS", "WARN", "KILL"] },
+        "code": {
+          "description": "Stable machine-readable reason. Changing one is a breaking change.",
+          "type": "string"
+        },
+        "message": { "type": "string" },
+        "residue": {
+          "description": "Null for a site-level finding such as a missing assembly.",
+          "type": ["string", "null"]
+        },
+        "chain": { "type": ["string", "null"] },
+        "auth_seq_id": { "type": ["integer", "null"] },
+        "evidence": {
+          "description": "The numbers behind the verdict, so a reader can disagree with our thresholds without re-running anything.",
+          "type": "object"
+        }
+      }
+    }
+  }
+}

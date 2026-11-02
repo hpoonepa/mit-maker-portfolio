@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import '@fontsource/instrument-sans/latin-400.css';
+import '@fontsource/instrument-sans/latin-500.css';
+import '@fontsource/instrument-sans/latin-600.css';
+import Mark from '../components/Mark.astro';
+import SiteMenu from '../components/SiteMenu.astro';
+interface Props { title?: string; description?: string; theme?: string; }
+const { title = 'PRINCE — Better beginnings for binder design', description = 'Find plausible surface sites, check your hotspots, and bring the evidence into view. Structural preflight for protein binder research.', theme = '' } = Astro.props;
+const names: Record<string, string> = { '/method/': 'The method', '/validation/': 'Validation', '/resources/': 'Resources', '/guide/': 'Quickstart' };
+const pageName = names[Astro.url.pathname] ?? 'PRINCE';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="theme-color" content="#14120e" />
+    <title>{title}</title><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class={theme}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Prince home"><Mark /><span>prince.</span></a>
+      <span class="header-caption">{pageName}</span>
+      <div class="header-actions"><a class="workspace-shortcut" href="/workspace/">Open workspace <span aria-hidden="true">↗</span></a><SiteMenu /></div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-top"><div><a class="brand footer-brand" href="/"><Mark /><span>prince.</span></a><p>A little more evidence.<br />A better place to begin.</p></div><div class="footer-links"><div><span class="eyebrow">Explore</span><a href="/workspace/">Workspace</a><a href="/method/">The method</a><a href="/validation/">Validation</a></div><div><span class="eyebrow">Go deeper</span><a href="/guide/">Quickstart</a><a href="/resources/">Resources</a><a href="/prince/LICENSE.txt">License</a></div></div><a class="back-top" href="#main" aria-label="Back to top">↑</a></div>
+      <div class="footer-bottom"><span>PRINCE · Lambert iGEM 2026</span><span>Open science. Human judgment.</span><span>Built for research · MIT licensed</span></div>
+    </footer>
+    <script>
+      document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+        const value=document.getElementById(button.dataset.copy || '')?.textContent;
+        if (!value) return;
+        try {await navigator.clipboard.writeText(value);button.textContent='Copied ✓';setTimeout(()=>button.textContent='Copy',2000);}catch{button.textContent='Select and copy the code below';}
+      }));
+    </script>
+  </body>
+</html>

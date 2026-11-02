@@ -1,0 +1,4 @@
+seed,passes_gate,boltz2_min_ipsae,chai1_min_ipsae,consensus_min_ipsae,rmsd_binder,sc
+1,0,0.6035,nan,0.9287,6.376489348222568,nan
+2,0,0.2411,nan,0.7443,8.56077184148159,nan
+3,0,0.1911,nan,0.7585,6.484106400576717,nan

@@ -1,0 +1,27 @@
+{
+  "pdb_id": "1jhl",
+  "context_id": "0cb68aa8668149e2",
+  "source_context_sha256": "f7c3bd43a61651a5f7d4e71f468bfca31161dc57363a0fcdbfe886dfb4f15274",
+  "coordinate_sha256": "800eee86dd9c1c3f03519773e771011e16d187274efc6c8ef107f05c49d9ab7c",
+  "patch_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "all_scores": [
+    0.04459677264094353,
+    0.08263979107141495,
+    0.02293306775391102,
+    0.4285017251968384,
+    0.06296799331903458,
+    0.10166098922491074,
+    0.4721606373786926,
+    0.05920201912522316
+  ],
+  "reference": "XGBClassifier.predict_proba, XGBoost 2.1.0; first eight source candidate patches"
+}

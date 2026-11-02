@@ -1,0 +1,81 @@
+# V5 5G51 hotspot campaign config.
+#
+# ===========================================================================
+# SUPERSEDED TARGETING -- KEPT AS THE HISTORICAL RECORD. DO NOT COPY.
+# ===========================================================================
+# The hotspots below (Ile405 / Phe408) were later retired. Checked against the
+# 6F5J virion assembly rather than this single deposited chain, they sit inside
+# the 399-416 stretch that is unresolved in the virion, so a binder steered onto
+# them is being steered onto coordinates that the assembled capsid does not
+# support. The replacement epitopes are:
+#
+#   EP-1  I302 / Y359 / R395     the TISV face; functionally supported
+#   EP-2  Y346 / Q325 / V322
+#
+# Trp289 looks like an attractive anchor on the isolated chain and is not one:
+# it is 59 % buried by the neighbouring VP1 subunit in the assembly.
+#
+# This file is also the clearest single illustration of the confound described
+# in the README: every weight here is tuned, and all of it is pointed at the
+# wrong patch, because accessibility was judged on one chain instead of on the
+# assembly. See README section 2 ("Hotspot selection") and section 4
+# ("Caveat: the target-crop artifact").
+# ===========================================================================
+#
+# Purpose: binder design against 5G51 with an explicit hotspot constraint on
+# Ile405 / Phe408 (0-indexed positions 145, 148 in chain A). Hotspot loss
+# is enabled at weight 2.5 — same magnitude as ipsae_min, clearly above
+# pTMEnergy (1.5), so it's a first-class constraint not a tiebreaker.
+# Self-contained — V5 reads ONE config file and does not merge with defaults.
+
+# ===== Campaign =====
+seed: 1
+target_structure: "5G51.cif"        # path to target PDB/CIF file
+target_chain: "A"
+binder_length: 85                   # 65 works for pockets; 85+ for flat beta surfaces
+
+# ===== Optimization =====
+phase1_steps: 160                   # continuous-simplex phase (v4 default)
+phase2_steps: 30                    # sharpening phase (v4 default)
+mpnn_weight: 4.0                    # v4 reduced from 8.0 to avoid alanine-repeat collapse
+mpnn_temperature: 0.1               # v4 raised from 0.01 for sequence diversity
+recycling_steps_design: 1           # during optimization
+sampling_steps: 20
+recycling_steps_predict: 4          # final high-quality prediction
+
+# ===== Loss weights =====
+loss_weights:
+  binder_target_contact: 0.8
+  within_binder_contact: 1.2
+  target_binder_pae: 0.2
+  binder_target_pae: 0.2
+  iptm: 0.15
+  within_binder_pae: 0.6
+  ptm_energy: 1.5                   # UPGRADED: dense-gradient primary interface term
+  plddt: 0.1
+  rog: 0.05
+  binder_target_ipsae: 0.7
+  target_binder_ipsae: 0.4
+  ipsae_min: 2.5
+  lis: 0.5                          # NEW (v5): Local Interaction Score
+  actifptm: 0.5                     # NEW (v5): contact-weighted ipTM
+  hotspot: 2.5                      # ENABLED, strong: bias binder toward Ile405/Phe408
+  helix: -0.08                      # mild helix propensity (natural binder topology)
+  no_cysteine: 5.0                  # hard penalty on cysteines (expression + redox robustness)
+
+# ===== Hotspot =====
+hotspot_indices: [145, 148]         # 0-indexed target-chain positions: Ile405, Phe408
+hotspot_threshold: 8.0              # Angstrom distance threshold for hotspot contact
+
+# ===== Validation =====
+run_chai1_consensus: true           # run Chai-1 alongside Boltz2, consensus PAE
+ipsae_consensus_threshold: 0.8      # per-predictor min_ipSAE must exceed this
+min_predictors_passing: 2           # at least N of {Protenix, Boltz2, Chai-1} must pass
+run_rmsd_binder: true               # post-hoc CA-RMSD designed vs predicted
+run_shape_complementarity: true     # PyRosetta SC (graceful skip if not installed)
+rmsd_binder_threshold_angstrom: 5.0 # designs above this RMSD fail filter
+sc_threshold: 0.55                  # SC below this fails filter
+
+# ===== Output =====
+output_dir: "v5_outputs"
+save_intermediate_structures: false

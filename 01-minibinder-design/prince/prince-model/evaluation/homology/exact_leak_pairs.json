@@ -1,0 +1,66 @@
+{
+  "definition": "test clusters holding an antigen chain whose MODELLED sequence is byte-identical to a train-split antigen chain; cluster.py did not join them because neither the UniProt accession nor the full SEQRES matched",
+  "n_test_clusters_affected": 7,
+  "pairs": [
+    {
+      "test_cluster": "component:seq:3718cbdafc23",
+      "test": "7WVG_B influenza A hemagglutinin",
+      "train": "8GV7_B influenza A H18-HA2 hemagglutinin",
+      "identical_lengths": [
+        170,
+        322
+      ],
+      "class": "viral strain variant, identical modelled region"
+    },
+    {
+      "test_cluster": "component:seq:0e0429eb3d73",
+      "test": "8WQW_D Dabie bandavirus glycoprotein Gn",
+      "train": "8WSP_A SFTS virus SD4 Gn",
+      "identical_length": 318,
+      "class": "same virus under two names (Dabie bandavirus == SFTSV)"
+    },
+    {
+      "test_cluster": "component:seq:0e0429eb3d73",
+      "test": "9JQV_L SD12 antibody light chain (as antigen)",
+      "train": "9L2K_L SD22 antibody light chain",
+      "identical_length": 321,
+      "class": "Ig light chain as antigen; shared framework"
+    },
+    {
+      "test_cluster": "component:seq:d935e056c56d",
+      "test": "9E89_A canine parvovirus 2b capsid",
+      "train": "9E60_A / 9E7X canine parvovirus 2a capsid",
+      "identical_length": 548,
+      "class": "virus serotype variant, identical modelled capsid"
+    },
+    {
+      "test_cluster": "component:seq:f6432e239a71",
+      "test": "9Z3J_L H1H7 light chain (as antigen)",
+      "train": "9OPR_L H1H7 antibody light chain",
+      "identical_length": 212,
+      "class": "same antibody light chain in both splits"
+    },
+    {
+      "test_cluster": "component:seq:225d4627348b",
+      "test": "9YFU_C Fab24 BAK5 light chain (as antigen)",
+      "train": "7TUY_L anti-BRIL Fab light chain + 10 other clusters",
+      "identical_length": 212,
+      "class": "Ig light chain framework shared across 11 clusters spanning train/val/test"
+    },
+    {
+      "test_cluster": "component:seq:3a15a1926996",
+      "test": "8TX3_B influenza A (A/Victoria) hemagglutinin",
+      "train": "9OM5_B influenza A hemagglutinin",
+      "identical_length": 173,
+      "class": "viral strain variant"
+    },
+    {
+      "test_cluster": "component:seq:c9c75652edf7",
+      "test": "4R8W_A influenza A (A/Anhui) hemagglutinin",
+      "train": "6II8_A influenza A hemagglutinin",
+      "identical_length": 316,
+      "class": "viral strain variant"
+    }
+  ],
+  "note": "8 named pairs over 7 distinct test clusters (cluster component:seq:0e0429eb3d73 is hit by two independent identical-sequence pairs)."
+}

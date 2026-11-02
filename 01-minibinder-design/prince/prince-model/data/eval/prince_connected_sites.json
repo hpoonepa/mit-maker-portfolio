@@ -1,0 +1,8021 @@
+{
+  "schema_version": 1,
+  "requested_instances": 110,
+  "evaluated_instances": 110,
+  "errors": [],
+  "patch_cap": null,
+  "candidate_universe": "Declared original antigen chains; assembly copies supply context only",
+  "distinct_antigen_contexts": 105,
+  "source_sha256": {
+    "data/eval/prince_connected.json": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+    "data/eval/prince_connected.manifest.csv": "8ca86371055ad56320981e7b7d689dcf0de6157a1e83d5c5998b194f4288b485",
+    "data/eval/features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "benchmark/geometric_predictor.py": "45d3053596c02a7d38b2c9a0dc8de1da16fe0d607e354900ce3890ce6911335f",
+    "benchmark/preflight_filter.py": "853a27948d5bd967f5094c59d0c59b497af733859684ef822fc371dd2feabc5a",
+    "src/hotspot_preflight/predict/profiles.py": "7d2c7f4d40d789bf289273041e52df1a39d606195288430f5ed49a5634d39719",
+    "scripts/evaluate_connected_sites.py": "4afaead6ea184d3a229f3c5315600ea9ab86789d9377cefc0546c8fc94b47e0f"
+  },
+  "majority_hit_definition": "Any top-k patch has >50% of its own residues in observed epitope",
+  "half_epitope_recovery_definition": "Any top-k patch covers >=50% of observed epitope residues",
+  "filter_policy": "drop entire patch if any constituent residue is killed",
+  "evidence_ablation": "NOT RUN: no independent reviewed literature labels",
+  "limitation": "Retrospective structural evaluation on 110 cached-feature held-out interfaces, not all 8241; no untouched external holdout.",
+  "summary": {
+    "fitted": {
+      "majority_hit": {
+        "1": {
+          "hits": 11,
+          "n": 110,
+          "cluster_macro": 0.08272058823529412
+        },
+        "3": {
+          "hits": 34,
+          "n": 110,
+          "cluster_macro": 0.23366013071895425
+        },
+        "5": {
+          "hits": 44,
+          "n": 110,
+          "cluster_macro": 0.31781045751633985
+        },
+        "10": {
+          "hits": 69,
+          "n": 110,
+          "cluster_macro": 0.5519607843137254
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.03125
+        },
+        "3": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.034926470588235295
+        },
+        "5": {
+          "hits": 6,
+          "n": 110,
+          "cluster_macro": 0.04166666666666667
+        },
+        "10": {
+          "hits": 8,
+          "n": 110,
+          "cluster_macro": 0.08578431372549021
+        }
+      }
+    },
+    "fitted+filter": {
+      "majority_hit": {
+        "1": {
+          "hits": 11,
+          "n": 110,
+          "cluster_macro": 0.08272058823529412
+        },
+        "3": {
+          "hits": 34,
+          "n": 110,
+          "cluster_macro": 0.23366013071895425
+        },
+        "5": {
+          "hits": 44,
+          "n": 110,
+          "cluster_macro": 0.31781045751633985
+        },
+        "10": {
+          "hits": 69,
+          "n": 110,
+          "cluster_macro": 0.5519607843137254
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.03125
+        },
+        "3": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.034926470588235295
+        },
+        "5": {
+          "hits": 6,
+          "n": 110,
+          "cluster_macro": 0.04166666666666667
+        },
+        "10": {
+          "hits": 8,
+          "n": 110,
+          "cluster_macro": 0.08578431372549021
+        }
+      }
+    },
+    "exposure_only": {
+      "majority_hit": {
+        "1": {
+          "hits": 9,
+          "n": 110,
+          "cluster_macro": 0.06433823529411764
+        },
+        "3": {
+          "hits": 32,
+          "n": 110,
+          "cluster_macro": 0.19914215686274508
+        },
+        "5": {
+          "hits": 38,
+          "n": 110,
+          "cluster_macro": 0.23202614379084968
+        },
+        "10": {
+          "hits": 54,
+          "n": 110,
+          "cluster_macro": 0.40882352941176464
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0
+        },
+        "3": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0
+        },
+        "5": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.029411764705882353
+        },
+        "10": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.03615196078431373
+        }
+      }
+    },
+    "exposure_only+filter": {
+      "majority_hit": {
+        "1": {
+          "hits": 9,
+          "n": 110,
+          "cluster_macro": 0.06433823529411764
+        },
+        "3": {
+          "hits": 32,
+          "n": 110,
+          "cluster_macro": 0.19914215686274508
+        },
+        "5": {
+          "hits": 38,
+          "n": 110,
+          "cluster_macro": 0.23202614379084968
+        },
+        "10": {
+          "hits": 54,
+          "n": 110,
+          "cluster_macro": 0.40882352941176464
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0
+        },
+        "3": {
+          "hits": 0,
+          "n": 110,
+          "cluster_macro": 0.0
+        },
+        "5": {
+          "hits": 2,
+          "n": 110,
+          "cluster_macro": 0.029411764705882353
+        },
+        "10": {
+          "hits": 4,
+          "n": 110,
+          "cluster_macro": 0.03615196078431373
+        }
+      }
+    }
+  },
+  "instances": [
+    {
+      "id": "11or:K",
+      "cluster": "component:seq:3cf4dac57883",
+      "arms": {
+        "fitted": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12id:D+E",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 93,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 93,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 96,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 96,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12id:H+L",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 97,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 97,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 99,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 99,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12id:M+N",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 99,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 99,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 97,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 97,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12ie:D+E",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12ie:H+L",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12ie:M+N",
+      "cluster": "component:seq:b57c0ab7aa72",
+      "arms": {
+        "fitted": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 86,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 90,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "12qj:B+C",
+      "cluster": "component:seq:0e0e4dbdb75e",
+      "arms": {
+        "fitted": {
+          "n_patches": 75,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 75,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 73,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 73,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1ahw:B+A",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "arms": {
+        "fitted": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1ahw:E+D",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "arms": {
+        "fitted": {
+          "n_patches": 50,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 50,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 51,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 51,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bgx:H+L",
+      "cluster": "component:seq:8ab10a3aad69",
+      "arms": {
+        "fitted": {
+          "n_patches": 176,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 176,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 180,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 180,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bj1:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 19,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 19,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bj1:K+J",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 19,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 19,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bzq:K",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bzq:L",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bzq:M",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1bzq:N",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1cz8:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1cz8:Y+X",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1eo8:H+L",
+      "cluster": "component:seq:222a37a9751c",
+      "arms": {
+        "fitted": {
+          "n_patches": 65,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 65,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 64,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 64,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fe8:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 47,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 47,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fe8:I+M",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fe8:J+N",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fj1:B+A",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "arms": {
+        "fitted": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 58,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 58,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fj1:D+C",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "arms": {
+        "fitted": {
+          "n_patches": 60,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 60,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1fns:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1jps:H+L",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "arms": {
+        "fitted": {
+          "n_patches": 48,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 48,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 48,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 48,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1mhp:H+L",
+      "cluster": "component:seq:3d67e0a923ec",
+      "arms": {
+        "fitted": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1mhp:X+Y",
+      "cluster": "component:seq:3d67e0a923ec",
+      "arms": {
+        "fitted": {
+          "n_patches": 38,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 38,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1oak:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1osp:H+L",
+      "cluster": "component:seq:2ce74c23c7b8",
+      "arms": {
+        "fitted": {
+          "n_patches": 60,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 60,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1tzh:B+A",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1tzh:H+L",
+      "cluster": "component:seq:557be0f03606",
+      "arms": {
+        "fitted": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 20,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1uj3:B+A",
+      "cluster": "component:seq:4f40c10c3b5d",
+      "arms": {
+        "fitted": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7m:H+L",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 36,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 36,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7m:I+M",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 32,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 32,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7n:H+L",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 38,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 38,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7n:I+M",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7n:J+N",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 35,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 35,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "1v7n:K+O",
+      "cluster": "component:seq:708f25e8078b",
+      "arms": {
+        "fitted": {
+          "n_patches": 32,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 32,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21ao:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 65,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 65,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21aq:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21au:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21au:C+D",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21av:A+B",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 72,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 72,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "21av:C+D",
+      "cluster": "component:seq:0e0429eb3d73",
+      "arms": {
+        "fitted": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 72,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 72,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "23iu:H+L",
+      "cluster": "component:seq:387c84fe6478",
+      "arms": {
+        "fitted": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2adf:H+L",
+      "cluster": "component:seq:51352530f5ee",
+      "arms": {
+        "fitted": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 44,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 44,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2arj:B+A",
+      "cluster": "component:seq:249bad6cb408",
+      "arms": {
+        "fitted": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2arj:H+L",
+      "cluster": "component:seq:249bad6cb408",
+      "arms": {
+        "fitted": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2b2x:H+L",
+      "cluster": "component:seq:3d67e0a923ec",
+      "arms": {
+        "fitted": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2b2x:I+M",
+      "cluster": "component:seq:3d67e0a923ec",
+      "arms": {
+        "fitted": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 41,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2bse:D",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2bse:E",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2bse:F",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2nxy:D+C",
+      "cluster": "component:seq:ba87b5233633",
+      "arms": {
+        "fitted": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 67,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 67,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2ny1:D+C",
+      "cluster": "component:seq:41cdcdcf62be",
+      "arms": {
+        "fitted": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2ny3:D+C",
+      "cluster": "component:seq:41cdcdcf62be",
+      "arms": {
+        "fitted": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p42:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p42:D",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p43:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 25,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p44:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p45:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 28,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p46:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p46:D",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p47:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p48:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p49:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p4a:B",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 29,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2p4a:D",
+      "cluster": "component:seq:088a72a47810",
+      "arms": {
+        "fitted": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 30,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2qqk:H+L",
+      "cluster": "component:seq:b985e28088ae",
+      "arms": {
+        "fitted": {
+          "n_patches": 124,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 124,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 126,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 126,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2qql:H+L",
+      "cluster": "component:seq:b985e28088ae",
+      "arms": {
+        "fitted": {
+          "n_patches": 121,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 121,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 118,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 118,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2r0l:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "arms": {
+        "fitted": {
+          "n_patches": 50,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 50,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2vwe:E+C",
+      "cluster": "component:seq:e6f8edcc8d97",
+      "arms": {
+        "fitted": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2vwe:L+J",
+      "cluster": "component:seq:e6f8edcc8d97",
+      "arms": {
+        "fitted": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 21,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 22,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2w9e:H+L",
+      "cluster": "component:seq:379d1046d08b",
+      "arms": {
+        "fitted": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wub:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "arms": {
+        "fitted": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 46,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wub:R+Q",
+      "cluster": "component:seq:b8d51e7becae",
+      "arms": {
+        "fitted": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 44,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 44,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wuc:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "arms": {
+        "fitted": {
+          "n_patches": 49,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 49,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 49,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 49,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:D",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 55,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 55,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 56,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 56,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:E",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:F",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 64,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 64,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 62,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 62,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:J",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:K",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 54,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 57,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2wzp:L",
+      "cluster": "component:seq:1faabd122add",
+      "arms": {
+        "fitted": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 59,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 58,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 58,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:A+B",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:C+D",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 16,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 16,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:E+F",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:G+I",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:H+L",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2x7l:J+K",
+      "cluster": "component:seq:5450e9bffc6a",
+      "arms": {
+        "fitted": {
+          "n_patches": 14,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 14,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 15,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2zuq:C+B",
+      "cluster": "component:seq:1234b5f1084b",
+      "arms": {
+        "fitted": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 37,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 39,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 39,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "2zuq:F+E",
+      "cluster": "component:seq:1234b5f1084b",
+      "arms": {
+        "fitted": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 40,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 42,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "31mr:H+L",
+      "cluster": "component:seq:7307fc69de1c",
+      "arms": {
+        "fitted": {
+          "n_patches": 280,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 280,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 278,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 278,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "32nz:A1+A2",
+      "cluster": "component:seq:d8cc4d129d7e",
+      "arms": {
+        "fitted": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 31,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3d85:B+A",
+      "cluster": "component:seq:2b725678b616",
+      "arms": {
+        "fitted": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 34,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 35,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 35,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3fmg:H+L",
+      "cluster": "component:seq:54edc1e08865",
+      "arms": {
+        "fitted": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3grw:H+L",
+      "cluster": "component:seq:64db5a0a9a9b",
+      "arms": {
+        "fitted": {
+          "n_patches": 52,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 52,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 53,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3hmx:H+L",
+      "cluster": "component:seq:2b725678b616",
+      "arms": {
+        "fitted": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 74,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 76,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 76,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3k2u:H+L",
+      "cluster": "component:seq:b8d51e7becae",
+      "arms": {
+        "fitted": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 45,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 43,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3opz:H+L",
+      "cluster": "component:seq:c2fbf27a999e",
+      "arms": {
+        "fitted": {
+          "n_patches": 101,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 101,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 107,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 107,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3opz:I+M",
+      "cluster": "component:seq:c2fbf27a999e",
+      "arms": {
+        "fitted": {
+          "n_patches": 106,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 106,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 108,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 108,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "3opz:J+N",
+      "cluster": "component:seq:c2fbf27a999e",
+      "arms": {
+        "fitted": {
+          "n_patches": 103,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 103,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 107,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 107,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4ag4:H+L",
+      "cluster": "component:seq:500626aa376e",
+      "arms": {
+        "fitted": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 68,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          }
+        },
+        "exposure_only": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 71,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4h88:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "arms": {
+        "fitted": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 23,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4liq:H+L",
+      "cluster": "component:seq:1bdb33ca5583",
+      "arms": {
+        "fitted": {
+          "n_patches": 128,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 128,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 126,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 126,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4ma7:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "arms": {
+        "fitted": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 24,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4ma8:H+L",
+      "cluster": "component:seq:069032ac1c7a",
+      "arms": {
+        "fitted": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 26,
+          "majority_hit": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 27,
+          "majority_hit": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "assembly_used": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4u6v:H+L",
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "arms": {
+        "fitted": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    },
+    {
+      "id": "4u6v:K+M",
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "arms": {
+        "fitted": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "fitted+filter": {
+          "n_patches": 66,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only": {
+          "n_patches": 67,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        },
+        "exposure_only+filter": {
+          "n_patches": 67,
+          "majority_hit": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "half_epitope_recovery": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          }
+        }
+      },
+      "assembly_stats": {
+        "no_assembly_declared": 1,
+        "instances": 1,
+        "ranked": 1
+      }
+    }
+  ]
+}

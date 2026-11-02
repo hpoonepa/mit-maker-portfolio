@@ -1,0 +1,647 @@
+{
+  "source": "local structure cache only; zero network calls",
+  "cache_dir": "work/cache_all",
+  "cache_files": 6464,
+  "cache_files_skipped_no_patches": 0,
+  "method": "per-residue aa_XXX one-hot columns of the cache feature matrix argmax-decoded to a 1-letter sequence; residues grouped by the chain prefix of each cache key; aa_UNK -> X",
+  "caveat": "MODELLED sequences: unresolved residues are absent and segments are collapsed, so a chain can be shorter than its SEQRES. This can only lower measured identity, so reported leakage is a floor.",
+  "chain_records": 8369,
+  "unique_sequences": 4744,
+  "onehot_violations": [],
+  "contexts_spanning_multiple_clusters": 0,
+  "contexts_spanning_multiple_splits": 0,
+  "contexts_spanning_multiple_splits_examples": [],
+  "exact_sequences_in_more_than_one_split": [
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:927d603d1e1a",
+        "component:seq:a706348257d4"
+      ],
+      "chains": [
+        "6iek_A",
+        "6iek_D",
+        "8awm_A"
+      ],
+      "len": 301
+    },
+    {
+      "splits": [
+        "test",
+        "train",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ],
+      "chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L",
+        "8tb7_L",
+        "8xvj_L"
+      ],
+      "len": 212
+    },
+    {
+      "splits": [
+        "test",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:7d57f98c23ba",
+        "component:seq:965a26d8c321"
+      ],
+      "chains": [
+        "6ddr_C",
+        "7s7i_A",
+        "7s7i_E",
+        "7s7i_F",
+        "7s7i_F"
+      ],
+      "len": 94
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:cfb51989dc06",
+        "component:seq:d935e056c56d"
+      ],
+      "chains": [
+        "9e60_A",
+        "9e7x_A",
+        "9e7x_C",
+        "9e7x_F",
+        "9e89_A"
+      ],
+      "len": 548
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:3b9d33c94abe",
+        "component:seq:d9ce328c4f89"
+      ],
+      "chains": [
+        "7b5g_G",
+        "7ocj_A",
+        "7zra_A",
+        "7zra_C",
+        "7zra_D"
+      ],
+      "len": 129
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:1cdd420e2447",
+        "component:seq:c9c75652edf7"
+      ],
+      "chains": [
+        "4r8w_A",
+        "6ii8_A",
+        "6ii8_C",
+        "6ii8_E",
+        "6ii9_E"
+      ],
+      "len": 316
+    },
+    {
+      "splits": [
+        "train",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:0c257726f9a0",
+        "component:seq:7f378540028c"
+      ],
+      "chains": [
+        "7keo_G",
+        "8a67_A",
+        "8a67_E"
+      ],
+      "len": 72
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:43d767d93f95",
+        "component:seq:eb45a0a0a6a1"
+      ],
+      "chains": [
+        "8idi_B",
+        "8idi_D",
+        "8ido_A",
+        "9uoc_C",
+        "9uoc_E"
+      ],
+      "len": 208
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:0e0429eb3d73",
+        "component:seq:a32146443b09"
+      ],
+      "chains": [
+        "8wqw_D",
+        "8wsp_A"
+      ],
+      "len": 318
+    },
+    {
+      "splits": [
+        "train",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:1454e41b661d",
+        "component:seq:bf4cc82ab50b"
+      ],
+      "chains": [
+        "8u4v_L",
+        "9cmi_L"
+      ],
+      "len": 213
+    },
+    {
+      "splits": [
+        "train",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:87a0d49e2a4e",
+        "component:seq:c88f445a98c5"
+      ],
+      "chains": [
+        "4plj_A",
+        "9jig_A",
+        "9jig_B"
+      ],
+      "len": 148
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:3b9d33c94abe",
+        "component:seq:d9ce328c4f89"
+      ],
+      "chains": [
+        "7b5g_C",
+        "7b5g_E",
+        "7ocj_C",
+        "7ocj_D"
+      ],
+      "len": 130
+    },
+    {
+      "splits": [
+        "test",
+        "val"
+      ],
+      "clusters": [
+        "component:seq:48dc4c405eae",
+        "component:seq:c9d71c7eea09"
+      ],
+      "chains": [
+        "7wpd_Y",
+        "7wpf_S",
+        "7wpf_V",
+        "7wpf_Y",
+        "7xod_S",
+        "7xod_Y"
+      ],
+      "len": 213
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:0e0429eb3d73",
+        "component:seq:adb8a8abc88b"
+      ],
+      "chains": [
+        "9jqv_A",
+        "9l2k_A"
+      ],
+      "len": 321
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:243f7fe545fc",
+        "component:seq:3a15a1926996"
+      ],
+      "chains": [
+        "8tx3_B",
+        "8tx3_D",
+        "9om5_B",
+        "9om5_D",
+        "9om5_F"
+      ],
+      "len": 173
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:046f653dafa9",
+        "component:seq:3718cbdafc23"
+      ],
+      "chains": [
+        "7wvg_A",
+        "8gv7_A"
+      ],
+      "len": 322
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:046f653dafa9",
+        "component:seq:3718cbdafc23"
+      ],
+      "chains": [
+        "7wvg_B",
+        "8gv7_B"
+      ],
+      "len": 170
+    },
+    {
+      "splits": [
+        "test",
+        "train"
+      ],
+      "clusters": [
+        "component:seq:b634df75c387",
+        "component:seq:f6432e239a71"
+      ],
+      "chains": [
+        "9opr_L",
+        "9z3j_L"
+      ],
+      "len": 212
+    }
+  ],
+  "exact_sequences_in_more_than_one_cluster": [
+    {
+      "clusters": [
+        "component:seq:65633a6c1b0a",
+        "component:seq:9da76db73c99"
+      ],
+      "chains": [
+        "9cq8_A",
+        "9cq8_D",
+        "9cql_A",
+        "9cql_E",
+        "9lsy_A",
+        "9lsy_D"
+      ],
+      "len": 202
+    },
+    {
+      "clusters": [
+        "component:seq:0b0b274ebb89",
+        "component:seq:4e08e9a9776d"
+      ],
+      "chains": [
+        "9cu7_B",
+        "9cu7_D",
+        "9cu7_F",
+        "9mtj_B",
+        "9mtj_D",
+        "9mtj_F"
+      ],
+      "len": 169
+    },
+    {
+      "clusters": [
+        "component:seq:44580e1cfca9",
+        "component:seq:f7ecb0fb9367"
+      ],
+      "chains": [
+        "7ur4_A",
+        "7ur4_B",
+        "7ur4_C",
+        "9pdy_A",
+        "9pdy_B",
+        "9pdy_C"
+      ],
+      "len": 431
+    },
+    {
+      "clusters": [
+        "component:seq:927d603d1e1a",
+        "component:seq:a706348257d4"
+      ],
+      "chains": [
+        "6iek_A",
+        "6iek_D",
+        "8awm_A"
+      ],
+      "len": 301
+    },
+    {
+      "clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ],
+      "chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L",
+        "8tb7_L",
+        "8xvj_L"
+      ],
+      "len": 212
+    },
+    {
+      "clusters": [
+        "component:seq:05c7a0cb028d",
+        "component:seq:276ef39574ea"
+      ],
+      "chains": [
+        "8tnn_F",
+        "8tnt_C",
+        "9ivj_C"
+      ],
+      "len": 178
+    },
+    {
+      "clusters": [
+        "component:seq:184df18e6db8",
+        "component:seq:577be126a29f"
+      ],
+      "chains": [
+        "6b0s_C",
+        "9ncy_A",
+        "9nhv_I",
+        "9ni1_B",
+        "9ni1_B",
+        "9ni1_C"
+      ],
+      "len": 65
+    },
+    {
+      "clusters": [
+        "component:seq:1d60c1b81f4f",
+        "component:seq:582fd08f7cb0"
+      ],
+      "chains": [
+        "21bo_C",
+        "21bo_D",
+        "21bo_I",
+        "21bp_A",
+        "21bp_B",
+        "21bp_C"
+      ],
+      "len": 491
+    },
+    {
+      "clusters": [
+        "component:seq:7d57f98c23ba",
+        "component:seq:965a26d8c321"
+      ],
+      "chains": [
+        "6ddr_C",
+        "7s7i_A",
+        "7s7i_E",
+        "7s7i_F",
+        "7s7i_F"
+      ],
+      "len": 94
+    },
+    {
+      "clusters": [
+        "component:seq:cfb51989dc06",
+        "component:seq:d935e056c56d"
+      ],
+      "chains": [
+        "9e60_A",
+        "9e7x_A",
+        "9e7x_C",
+        "9e7x_F",
+        "9e89_A"
+      ],
+      "len": 548
+    },
+    {
+      "clusters": [
+        "component:seq:7800bfdedc69",
+        "component:seq:7acb219aa221"
+      ],
+      "chains": [
+        "7wvd_A",
+        "7wvd_C",
+        "7wvd_E",
+        "8gv6_A",
+        "8gv6_C",
+        "8gv6_E"
+      ],
+      "len": 318
+    },
+    {
+      "clusters": [
+        "component:seq:7800bfdedc69",
+        "component:seq:7acb219aa221"
+      ],
+      "chains": [
+        "7wvd_D",
+        "7wvd_F",
+        "8gv6_D",
+        "8gv6_F"
+      ],
+      "len": 172
+    },
+    {
+      "clusters": [
+        "component:seq:3b9d33c94abe",
+        "component:seq:d9ce328c4f89"
+      ],
+      "chains": [
+        "7b5g_G",
+        "7ocj_A",
+        "7zra_A",
+        "7zra_C",
+        "7zra_D"
+      ],
+      "len": 129
+    },
+    {
+      "clusters": [
+        "component:seq:1cdd420e2447",
+        "component:seq:c9c75652edf7"
+      ],
+      "chains": [
+        "4r8w_A",
+        "6ii8_A",
+        "6ii8_C",
+        "6ii8_E",
+        "6ii9_E"
+      ],
+      "len": 316
+    },
+    {
+      "clusters": [
+        "component:seq:6268cc025d61",
+        "component:seq:92e1cff14a6d"
+      ],
+      "chains": [
+        "11ho_A",
+        "11ho_B",
+        "11is_C"
+      ],
+      "len": 1032
+    },
+    {
+      "clusters": [
+        "component:seq:0c257726f9a0",
+        "component:seq:7f378540028c"
+      ],
+      "chains": [
+        "7keo_G",
+        "8a67_A",
+        "8a67_E"
+      ],
+      "len": 72
+    },
+    {
+      "clusters": [
+        "component:seq:43d767d93f95",
+        "component:seq:eb45a0a0a6a1"
+      ],
+      "chains": [
+        "8idi_B",
+        "8idi_D",
+        "8ido_A",
+        "9uoc_C",
+        "9uoc_E"
+      ],
+      "len": 208
+    },
+    {
+      "clusters": [
+        "component:seq:4f69a7c81557",
+        "component:seq:9b79db050d84",
+        "component:seq:f9a27a14d961"
+      ],
+      "chains": [
+        "5if0_G",
+        "5if0_I",
+        "6d2p_C",
+        "9mic_C",
+        "9mif_C",
+        "9oao_C"
+      ],
+      "len": 169
+    },
+    {
+      "clusters": [
+        "component:seq:3a48859753eb",
+        "component:seq:7f841e1215d0"
+      ],
+      "chains": [
+        "6lxj_A",
+        "6lxj_B",
+        "6lxj_C",
+        "6lxj_D",
+        "6pzw_A",
+        "6pzw_A"
+      ],
+      "len": 388
+    },
+    {
+      "clusters": [
+        "component:seq:0e0429eb3d73",
+        "component:seq:a32146443b09"
+      ],
+      "chains": [
+        "8wqw_D",
+        "8wsp_A"
+      ],
+      "len": 318
+    }
+  ],
+  "n_exact_sequences_in_more_than_one_cluster": 33,
+  "cluster_coverage": {
+    "train": {
+      "manifest_clusters": 1065,
+      "clusters_with_sequences": 1065,
+      "clusters_without_sequences": [],
+      "unique_sequences": 3219
+    },
+    "val": {
+      "manifest_clusters": 233,
+      "clusters_with_sequences": 233,
+      "clusters_without_sequences": [],
+      "unique_sequences": 774
+    },
+    "test": {
+      "manifest_clusters": 251,
+      "clusters_with_sequences": 251,
+      "clusters_without_sequences": [],
+      "unique_sequences": 770
+    }
+  },
+  "length_quantiles": {
+    "1": 56,
+    "5": 81,
+    "25": 142,
+    "50": 227,
+    "75": 364,
+    "95": 585,
+    "99": 1002
+  },
+  "sequences_shorter_than_50aa": 27
+}

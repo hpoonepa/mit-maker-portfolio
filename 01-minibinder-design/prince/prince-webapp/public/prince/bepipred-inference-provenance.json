@@ -1,0 +1,29 @@
+{
+  "upstream": "https://github.com/UberClifford/BepiPred-3.0",
+  "revision": "98bedf2471e04766c981585180c20da7961c6804",
+  "model": "BepiPred-3.0 BP3C50IDSeqLenFFNN five-fold ensemble; ESM2 t33 650M UR50D",
+  "add_sequence_length": true,
+  "sequence_smoothing": false,
+  "device": "cpu",
+  "torch": "2.2.2",
+  "python": "3.10.9 (main, Mar  1 2023, 12:33:47) [Clang 14.0.6 ]",
+  "platform": "macOS-26.5-x86_64-i386-64bit",
+  "processor": "i386",
+  "threads": 6,
+  "elapsed_seconds": 135.45206379890442,
+  "source_sha256": "3937beded7f2a8a6592e6e858d5c8e2c3084bb439d6e237d359c33a4a2c9ce95",
+  "weight_sha256": {
+    "esm2_t33_650M_UR50D.pt": "ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c",
+    "esm2_t33_650M_UR50D-contact-regression.pt": "8ffe6edbd4173dc8d45c2cd5cb27d43aad77ec26b4c768200c58ae1f96693575",
+    "Fold1.pt": "b6d8691ee1d797ad49af185e970a8f5ef99157021e16a55b8da26a0f3fda0113",
+    "Fold5.pt": "f1ffcae53652081079097dcf64debca84dc3ac2f62702ad1f35807234e978554",
+    "Fold4.pt": "915b79b37f43b6c4e512a5422e5ae9999faf402ab49d446e877a855b494cb06d",
+    "Fold3.pt": "69148a4d967844e06c2a1e7f8e73b85c1234bd8fd56b525017ae2f8420f8ea19",
+    "Fold2.pt": "db3ef49584a7b46d6d3507809fb51468d9647e8f240a5b792b035169ed07228e"
+  },
+  "input_sha256": "2a638c0f5a3ef4737644fde5582cf6d65e3caa6337a9d872281540476523f409",
+  "runner_sha256": "279b3de72a84625d1e4e9dc5f68a56ae9870fab497154b95e4f9bc0beb8bc6f6",
+  "license": "Upstream academic noncommercial only; code and weights not bundled or relicensed",
+  "training_overlap": "Not established clean: BepiPred trained on antibody-antigen PDB structures; this is retrospective comparison, not pristine external generalization",
+  "input_context": "Observed structure-resolved amino acids per antigen chain; unresolved residues not supplied"
+}

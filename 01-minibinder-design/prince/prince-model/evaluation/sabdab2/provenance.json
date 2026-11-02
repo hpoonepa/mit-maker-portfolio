@@ -1,0 +1,88 @@
+{
+  "retrieved_utc": "2026-10-12T19:11:29.876379+00:00",
+  "retrieved_by": "PRINCE sabdab2-splits evaluation agent",
+  "record": {
+    "title": "SAbDab2 Machine Learning Dataset",
+    "version": "0.2.0",
+    "publication_date": "2026-08-20",
+    "doi": "10.5281/zenodo.22019991",
+    "concept_doi": "10.5281/zenodo.20083994",
+    "record_url": "https://zenodo.org/records/22019991",
+    "license": "CC-BY-4.0 (Creative Commons Attribution 4.0 International)",
+    "creators": [
+      "Capel, Henriette L.",
+      "Vavourakis, Odysseas",
+      "Williams, Benjamin H.",
+      "Taylor, Christopher",
+      "Deane, Charlotte M. (supervisor)"
+    ],
+    "affiliation": "University of Oxford"
+  },
+  "source_archive": {
+    "key": "splits.tar.gz",
+    "bytes": 889347536,
+    "zenodo_checksum": "md5:ada2fdd573418877d7eaa87afe92044e",
+    "zenodo_file_id": "381241e4-695e-4df8-a3a7-a583843738fd",
+    "download_url": "https://zenodo.org/api/records/22019991/files/splits.tar.gz/content",
+    "retention": "NOT retained. Streamed through tar; only README.md and the four split CSVs were written to disk. The 15810 mmCIF structures were discarded in-stream.",
+    "stream_command": "curl -sL <download_url> | tar -xz -C download \"splits_final/*.csv\" \"splits_final/README.md\" \"splits_final/*.md\"",
+    "archive_md5_not_verified": "The streamed archive was never materialised, so its md5 could not be recomputed locally; the Zenodo-published checksum above is recorded for citation. Per-file md5s of what we DID keep are below."
+  },
+  "retained_files": {
+    "README.md": {
+      "bytes": 12321,
+      "md5": "49add1d64944d263b8bcc11674c623d2"
+    },
+    "ab_split.csv": {
+      "bytes": 143494126,
+      "md5": "8207683907e1ab172fdb859393b9da38"
+    },
+    "ab_split_sd.csv": {
+      "bytes": 26177050,
+      "md5": "9205bc52d77841fd1dc52de71dddb774"
+    },
+    "abag_split.csv": {
+      "bytes": 143853067,
+      "md5": "8c5b42ad461012120e41ca7246f298dd"
+    },
+    "abag_split_sd.csv": {
+      "bytes": 26231321,
+      "md5": "19b0c839f1e0334c0ecd17d222630224"
+    }
+  },
+  "cite": {
+    "dataset": "Capel HL, Vavourakis O, Williams BH, Taylor C, Deane CM. SAbDab2 Machine Learning Dataset v0.2.0. Zenodo (2026). doi:10.5281/zenodo.22019991",
+    "publication": "Capel HL, Vavourakis O, Williams BH, Taylor C, Deane CM. SAbDab2: The structural antibody database in the age of machine learning. bioRxiv (2026). doi:10.64898/2026.06.16.732554 (posted 2026-06-20; DOI and author list verified via Crossref, NOT via the malformed BibTeX in the record README)"
+  },
+  "splits": {
+    "unit": "antibody instance = PDB entry + author Hchain + author Lchain, variable region cropped, with retained antigen chains",
+    "partitions": "two, 80:20 train/test (12648/3162); NO validation partition",
+    "flavours": {
+      "ab_split": "antibody similarity only (antigen-agnostic tasks)",
+      "ab_ag_split": "antibody + antigen similarity (antigen-aware tasks; the applicable one for PRINCE)"
+    },
+    "thresholds_ab_ag": {
+      "CDRH3": "95%",
+      "CDRH123": "100%",
+      "CDRL123": "100%",
+      "protein_antigen": "40%",
+      "peptide_DNA_RNA_antigen": "80%"
+    },
+    "thresholds_ab_only": {
+      "CDRH3": "85%",
+      "CDRH123": "85%",
+      "CDRL123": "85%"
+    },
+    "alignment": "global Needleman-Wunsch, match +1, mismatch 0, gap-open -2, gap-extend -1 (polypeptide)",
+    "grouping": "connected-component join over base clusters, same topology as hotspot-preflight benchmark/cluster.py assign_clusters",
+    "join_key": "PDB_ID (pdb_0000xxxx) + Hchain + Lchain, author chain ids"
+  },
+  "structure_set_not_downloaded": {
+    "count": 15810,
+    "format": "mmCIF, variable region cropped + retained antigen chains",
+    "resolution_ceiling_angstrom": 3.5,
+    "filename_key": "pdb_<PDB_ID>_<VH_CHAINID>_<VL_CHAINID>.cif; absent chain of a single-domain antibody written as +",
+    "csv_join": "the INSTANCE column equals the filename stem; also keyed on SABDAB_ID / HEAVY_ID / LIGHT_ID (IMGT numbering identifiers)",
+    "note": "deliberately not downloaded"
+  }
+}

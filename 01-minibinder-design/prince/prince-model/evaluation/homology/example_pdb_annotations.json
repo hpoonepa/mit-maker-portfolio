@@ -1,0 +1,2092 @@
+{
+ "9UA9": {
+  "title": "Nipah virus fusion glycoprotein in complex with a broadly neutralizing antibody 1D6",
+  "entities": [
+   {
+    "desc": "Fusion glycoprotein F0",
+    "org": [
+     "Henipavirus nipahense"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   },
+   {
+    "desc": "1D6 VH",
+    "org": [
+     "Macaca"
+    ],
+    "chains": [
+     "G",
+     "H",
+     "I"
+    ]
+   },
+   {
+    "desc": "1D6-VL",
+    "org": [
+     "Macaca"
+    ],
+    "chains": [
+     "D",
+     "E",
+     "F"
+    ]
+   }
+  ]
+ },
+ "9RSJ": {
+  "title": "Cryo-EM structure of MATE transporter NorM-VC in complex with doxorubicin",
+  "entities": [
+   {
+    "desc": "Anti-Fab nanobody",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "K"
+    ]
+   },
+   {
+    "desc": "NorM-Nb17_4",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "N"
+    ]
+   },
+   {
+    "desc": "NabFab LC",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "NabFab HC",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Multidrug resistance protein NorM",
+    "org": [
+     "Vibrio cholerae"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9PNU": {
+  "title": "Cryo-EM structure of K001-A1 Fab in complex with HIV-1 459C-OPT RnS DS-SOSIP Env trimer",
+  "entities": [
+   {
+    "desc": "459C-OPT probe RnS DS-SOSIP gp120",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "C",
+     "G",
+     "I"
+    ]
+   },
+   {
+    "desc": "459C-OPT probe RnS DS-SOSIP gp41",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "F"
+    ]
+   },
+   {
+    "desc": "K001-A1 Fab light chain",
+    "org": [
+     "Macaca mulatta"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "K001-A1 Fab heavy chain",
+    "org": [
+     "Macaca mulatta"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ },
+ "9NZ0": {
+  "title": "Cryo-EM structure of vaccine elicited antibody 22F5 bound to the post-fusion conformation of the LayV-F glycoprotein",
+  "entities": [
+   {
+    "desc": "22F5 Kappa Light Chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "E",
+     "G",
+     "H"
+    ]
+   },
+   {
+    "desc": "22F5 Heavy Chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "D",
+     "F",
+     "I"
+    ]
+   },
+   {
+    "desc": "Fusion glycoprotein F0",
+    "org": [
+     "Langya virus"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "9NR6": {
+  "title": "The structure of Noelin 1 with cerebellar GluA1/A4-ATD",
+  "entities": [
+   {
+    "desc": "Noelin",
+    "org": [
+     "Rattus norvegicus"
+    ],
+    "chains": [
+     "G",
+     "H"
+    ]
+   },
+   {
+    "desc": "11B8 scFv",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "E",
+     "F"
+    ]
+   },
+   {
+    "desc": "Glutamate receptor 4",
+    "org": [
+     "Rattus norvegicus"
+    ],
+    "chains": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "desc": "Glutamate receptor 1",
+    "org": [
+     "Rattus norvegicus"
+    ],
+    "chains": [
+     "A",
+     "C"
+    ]
+   }
+  ]
+ },
+ "9NAB": {
+  "title": "Cryo-EM structure of the alpha5beta1 integrin headpiece with OS2966 Fab",
+  "entities": [
+   {
+    "desc": "IgG light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "IgG heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "Human Integrin alpha 5",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Integrin beta-1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9MVU": {
+  "title": "C6 Herpes Virus Simplex Neutralizing Nanobody Bound to HSV Glycoprotein gB",
+  "entities": [
+   {
+    "desc": "C6 Neutralizing Nanobody",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "E",
+     "F"
+    ]
+   },
+   {
+    "desc": "Envelope glycoprotein B",
+    "org": [
+     "Human herpesvirus 1 (strain 17)"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "9L1P": {
+  "title": "Cryo-EM structure of the ICT01-BTN2A1/BTN3A1/BTN3A2 complex, local refinement",
+  "entities": [
+   {
+    "desc": "ICT01 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "ICT01 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Butyrophilin subfamily 3 member A2",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E"
+    ]
+   },
+   {
+    "desc": "Butyrophilin subfamily 2 member A1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   }
+  ]
+ },
+ "9I59": {
+  "title": "RVFV GnH complexed with RVFV-379 Fab",
+  "entities": [
+   {
+    "desc": "Light chain of Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L",
+     "Y"
+    ]
+   },
+   {
+    "desc": "Heavy chain of Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H",
+     "X"
+    ]
+   },
+   {
+    "desc": "Envelopment polyprotein",
+    "org": [
+     "Rift Valley fever virus"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "9FM1": {
+  "title": "Cryo-EM structure of Influenza B/Washington/02/2019 virus hemagglutinin in complex with single-domain antibody hVHH-69.",
+  "entities": [
+   {
+    "desc": "Single-domain antibody hVHH-69",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "D",
+     "E",
+     "F"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza B virus"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "9DAO": {
+  "title": "AlphaIIbbeta3 in fully-extended conformation in complex with R6H8 Fab",
+  "entities": [
+   {
+    "desc": "R6H8 Fab light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "R6H8 Fab heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Integrin beta-3",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Integrin alpha-IIb",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "9BJH": {
+  "title": "Crystal structure of neutralizing human monoclonal antibody 75C8 in complex with AMA1 DI-DII",
+  "entities": [
+   {
+    "desc": "75C8 Fab Light Chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L",
+     "M"
+    ]
+   },
+   {
+    "desc": "75C8 Fab Heavy Chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H",
+     "I"
+    ]
+   },
+   {
+    "desc": "Apical membrane antigen 1",
+    "org": [
+     "Plasmodium falciparum 3D7"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "8TVJ": {
+  "title": "Fab 227-1 in complex with OspA",
+  "entities": [
+   {
+    "desc": "Outer surface protein A",
+    "org": [
+     "Borreliella burgdorferi B31"
+    ],
+    "chains": [
+     "E"
+    ]
+   },
+   {
+    "desc": "Light chain of Fab 227-1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain of Fab 227-1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ },
+ "8RH2": {
+  "title": "Trimeric HSV-2G gB ectodomain in postfusion conformation with three bound HDIT102 Fab molecules.",
+  "entities": [
+   {
+    "desc": "HDIT102 Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E",
+     "G",
+     "L"
+    ]
+   },
+   {
+    "desc": "HDIT102 Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "F",
+     "H"
+    ]
+   },
+   {
+    "desc": "Envelope glycoprotein B",
+    "org": [
+     "Human herpesvirus 2 strain G"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "8RH1": {
+  "title": "Trimeric HSV-2F gB ectodomain in postfusion conformation with three bound HDIT101 Fab molecules.",
+  "entities": [
+   {
+    "desc": "HDIT101 Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E",
+     "G",
+     "L"
+    ]
+   },
+   {
+    "desc": "HDIT101 Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "F",
+     "H"
+    ]
+   },
+   {
+    "desc": "Envelope glycoprotein B",
+    "org": [
+     "Human herpesvirus 2 strain G"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "8REK": {
+  "title": "Plasmodium vivax Apical Membrane Antigen 1/Fab complex",
+  "entities": [
+   {
+    "desc": "Fab 8.1.1 light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Fab 8.1.1 heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Apical membrane antigen 1 (Fragment)",
+    "org": [
+     "Plasmodium vivax Sal-1"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "8R8D": {
+  "title": "Cryo-EM structure of coagulation factor beta-XIIa in complex with the garadacimab Fab fragment (symmetric dimer)",
+  "entities": [
+   {
+    "desc": "Garadacimab light chain variable region",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "I",
+     "L"
+    ]
+   },
+   {
+    "desc": "Garadacimab heavy chain variable region",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E",
+     "H"
+    ]
+   },
+   {
+    "desc": "Coagulation factor XII",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "8I5L": {
+  "title": "Crystal structure of P domain from norovirus GI.4 capsid protein in complex with broad specificity antibody single-chain Fv fragment CV-2F5.",
+  "entities": [
+   {
+    "desc": "scFv fragment",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "E"
+    ]
+   },
+   {
+    "desc": "Capsid protein",
+    "org": [
+     "Chiba virus"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ },
+ "8GPI": {
+  "title": "HIV-1 Env X18 UFO in complex with 8ANC195 Fab",
+  "entities": [
+   {
+    "desc": "X18 UFO gp41",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "R",
+     "S",
+     "T",
+     "X",
+     "Y",
+     "Z"
+    ]
+   },
+   {
+    "desc": "8ANC195 Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "E",
+     "L"
+    ]
+   },
+   {
+    "desc": "8ANC195 Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "D",
+     "H"
+    ]
+   }
+  ]
+ },
+ "8CZZ": {
+  "title": "Cryo-EM structure of T/F100 SOSIP.664 HIV-1 Env trimer with LMHS mutations in complex with Temsavir, 8ANC195, and 10-1074",
+  "entities": [
+   {
+    "desc": "Light chain of 10-1074 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "N",
+     "P",
+     "R"
+    ]
+   },
+   {
+    "desc": "Heavy chain of 10-1074 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "M",
+     "O",
+     "Q"
+    ]
+   },
+   {
+    "desc": "Light chain of 8ANC195 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "H",
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain of 8ANC195 Fab",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "G",
+     "K"
+    ]
+   },
+   {
+    "desc": "CRF-1_AE T/F100 HIV-1 gp41",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "B",
+     "F",
+     "J"
+    ]
+   },
+   {
+    "desc": "CRF01_AE T/F100 HIV-1 gp120",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "A",
+     "E",
+     "I"
+    ]
+   }
+  ]
+ },
+ "8AWM": {
+  "title": "RVFV GnH with Fab268 bound",
+  "entities": [
+   {
+    "desc": "Glycoprotein",
+    "org": [
+     "Rift Valley fever virus"
+    ],
+    "chains": [
+     "A"
+    ]
+   },
+   {
+    "desc": "Light chain Fab268",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Heavy chain Fab268",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ },
+ "7TTX": {
+  "title": "Crystal structure of potent neutralizing antibody 10-40 in complex with Sarbecovirus bat RaTG13 receptor-binding domain",
+  "entities": [
+   {
+    "desc": "1040 light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "1040 heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Spike glycoprotein",
+    "org": [
+     "Bat coronavirus RaTG13"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "7PHP": {
+  "title": "Structure of Multidrug and Toxin Compound Extrusion (MATE) transporter NorM by NabFab-fiducial assisted cryo-EM",
+  "entities": [
+   {
+    "desc": "Anti-Fab nanobody",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "K"
+    ]
+   },
+   {
+    "desc": "NorM-Nb17_4",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "N"
+    ]
+   },
+   {
+    "desc": "NabFab LC",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "NabFab HC",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Multidrug resistance protein NorM",
+    "org": [
+     "Vibrio cholerae RC385"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "7MFU": {
+  "title": "Crystal structure of synthetic nanobody (Sb14+Sb68) complexes with SARS-CoV-2 receptor binding domain",
+  "entities": [
+   {
+    "desc": "Synthetic nanobody #68 (Sb68)",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "C",
+     "F"
+    ]
+   },
+   {
+    "desc": "Synthetic Nanobody #14 (Sb14)",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "B",
+     "E"
+    ]
+   },
+   {
+    "desc": "Spike protein S1",
+    "org": [
+     "Severe acute respiratory syndrome coronavirus 2"
+    ],
+    "chains": [
+     "A",
+     "D"
+    ]
+   }
+  ]
+ },
+ "7LDD": {
+  "title": "native AMPA receptor",
+  "entities": [
+   {
+    "desc": "15F1 Fab heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "K",
+     "N"
+    ]
+   },
+   {
+    "desc": "15F1 Fab light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "J",
+     "M"
+    ]
+   },
+   {
+    "desc": "11B8 scFv",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "I",
+     "L"
+    ]
+   },
+   {
+    "desc": "Voltage-dependent calcium channel gamma-8 subunit",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "G",
+     "H"
+    ]
+   },
+   {
+    "desc": "Protein cornichon homolog 2",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "E",
+     "F"
+    ]
+   },
+   {
+    "desc": "Glutamate receptor",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "desc": "Glutamate receptor 1",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "A",
+     "C"
+    ]
+   }
+  ]
+ },
+ "7L5J": {
+  "title": "Mouse Norovirus Protruding domain complexed with neutralizing Fab fragment from mAb A6.2",
+  "entities": [
+   {
+    "desc": "Anti mouse norovirus mAb A6.2 Fab heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "W",
+     "Y"
+    ]
+   },
+   {
+    "desc": "Anti mouse norovirus mAb A6.2 Fab light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L",
+     "X"
+    ]
+   },
+   {
+    "desc": "Capsid protein",
+    "org": [
+     "Murine norovirus 1"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "6XW5": {
+  "title": "Crystal structure of murine norovirus P domain in complex with Nanobody NB-5820",
+  "entities": [
+   {
+    "desc": "Nanobody NB-5820",
+    "org": [
+     "Vicugna pacos"
+    ],
+    "chains": [
+     "C",
+     "D"
+    ]
+   },
+   {
+    "desc": "Capsid protein",
+    "org": [
+     "Murine norovirus 1"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "6V4P": {
+  "title": "Structure of the integrin AlphaIIbBeta3-Abciximab complex",
+  "entities": [
+   {
+    "desc": "Abciximab, light chain",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "Abciximab, heavy chain",
+    "org": [
+     "synthetic construct"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "Integrin beta-3",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Integrin alpha-IIb",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "6OSV": {
+  "title": "Potent and Selective Antitumor Antibody Targeting a Membrane-Proximal Epitope of ROR2",
+  "entities": [
+   {
+    "desc": "Antibody heavy chain variable region",
+    "org": [
+     "Oryctolagus cuniculus"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Tyrosine-protein kinase transmembrane receptor ROR2",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "K"
+    ]
+   },
+   {
+    "desc": "Antibody light chain variable region",
+    "org": [
+     "Oryctolagus cuniculus"
+    ],
+    "chains": [
+     "L"
+    ]
+   }
+  ]
+ },
+ "6OSH": {
+  "title": "Potent and Selective Antitumor Antibody Targeting a Membrane-Proximal Epitope of ROR2",
+  "entities": [
+   {
+    "desc": "Antibody heavy chain variable region",
+    "org": [
+     "Oryctolagus cuniculus"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Tyrosine-protein kinase transmembrane receptor ROR2",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "K"
+    ]
+   },
+   {
+    "desc": "Antibody Light chain variable region",
+    "org": [
+     "Oryctolagus cuniculus"
+    ],
+    "chains": [
+     "L"
+    ]
+   }
+  ]
+ },
+ "6OPO": {
+  "title": "Symmetric model of CD4- and 17-bound B41 HIV-1 Env SOSIP in complex with DDM",
+  "entities": [
+   {
+    "desc": "17b Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H",
+     "I",
+     "O"
+    ]
+   },
+   {
+    "desc": "T-cell surface glycoprotein CD4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "G",
+     "N"
+    ]
+   },
+   {
+    "desc": "Envelope glycoprotein gp41",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "B",
+     "F",
+     "M"
+    ]
+   },
+   {
+    "desc": "17b Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E",
+     "K",
+     "L"
+    ]
+   },
+   {
+    "desc": "Envelope glycoprotein gp160",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "A",
+     "D",
+     "J"
+    ]
+   }
+  ]
+ },
+ "6IEK": {
+  "title": "Structure of RVFV Gn and human monoclonal antibody R12",
+  "entities": [
+   {
+    "desc": "Light chain of Fab R12",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "F"
+    ]
+   },
+   {
+    "desc": "Heavy chain of Fab R12",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "E"
+    ]
+   },
+   {
+    "desc": "NSmGnGc",
+    "org": [
+     "Rift valley fever virus"
+    ],
+    "chains": [
+     "A",
+     "D"
+    ]
+   }
+  ]
+ },
+ "6H6Z": {
+  "title": "GI.1 human norovirus protruding domain in complex with Nano-62",
+  "entities": [
+   {
+    "desc": "Nanobody (VHH) Nano-62",
+    "org": [
+     "Vicugna pacos"
+    ],
+    "chains": [
+     "C",
+     "D"
+    ]
+   },
+   {
+    "desc": "Capsid protein VP1",
+    "org": [
+     "Norwalk virus (strain GI/Human/United States/Norwalk/1968)"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "6CK9": {
+  "title": "Crystal Structure of HIV-1 ConC_Base0 Prefusion Env Trimer in Complex with Human Antibody Fragment 3H109L and 35O22 variants at 3.5 Angstrom",
+  "entities": [
+   {
+    "desc": "3H109L Fab light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "3H109L Fab heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "gp120 of Envelope glycoprotein gp160",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "G"
+    ]
+   },
+   {
+    "desc": "35O22 scFv light chain portion",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "E"
+    ]
+   },
+   {
+    "desc": "35O22 scFv heavy chain portion",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "gp41 ectodomain of Envelope glycoprotein gp160",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "B"
+    ]
+   }
+  ]
+ },
+ "6BAN": {
+  "title": "Potent and Selective Antitumor Activity of a T-Cell Engaging Bispecific Antibody Targeting a Membrane-Proximal Epitope of ROR1",
+  "entities": [
+   {
+    "desc": "Inactive tyrosine-protein kinase transmembrane receptor ROR1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "M",
+     "N",
+     "O",
+     "P"
+    ]
+   },
+   {
+    "desc": "Variable domain R11 Heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ]
+   },
+   {
+    "desc": "Variable domain of R11 Light Chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ]
+   }
+  ]
+ },
+ "6BA5": {
+  "title": "Potent and Selective Antitumor Activity of a T-Cell Engaging Bispecific Antibody Targeting a Membrane-Proximal Epitope of ROR1",
+  "entities": [
+   {
+    "desc": "Inactive tyrosine-protein kinase transmembrane receptor ROR1",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "M",
+     "N",
+     "O",
+     "P"
+    ]
+   },
+   {
+    "desc": "Variable domain Heavy chain, antibody R11",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ]
+   },
+   {
+    "desc": "Variable domain of Light Chain, antibody R11",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ]
+   }
+  ]
+ },
+ "5UTZ": {
+  "title": "Human IL-2/Fab complex",
+  "entities": [
+   {
+    "desc": "Interleukin-2",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "D",
+     "E",
+     "I"
+    ]
+   },
+   {
+    "desc": "Fab 5111 light chain",
+    "org": [
+     "Homo sapiens",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "G",
+     "K",
+     "L"
+    ]
+   },
+   {
+    "desc": "Fab 5111 heavy chain",
+    "org": [
+     "Homo sapiens",
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "F",
+     "H",
+     "J"
+    ]
+   }
+  ]
+ },
+ "5NH3": {
+  "title": "CRYSTAL STRUCTURE OF THE Activin receptor type-2A LIGAND BINDING DOMAIN IN COMPLEX WITH BIMAGRUMAB FV",
+  "entities": [
+   {
+    "desc": "anti-human ActRIIB mAb BYM338 Fv light-chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L",
+     "M"
+    ]
+   },
+   {
+    "desc": "anti-human ActRIIB mAb BYM338 Fv heavy-chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H",
+     "I"
+    ]
+   },
+   {
+    "desc": "Activin receptor type-2A",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "5NGV": {
+  "title": "CRYSTAL STRUCTURE OF THE Activin receptor type-2B LIGAND BINDING DOMAIN IN COMPLEX WITH BIMAGRUMAB FV, ORTHORHOMBIC CRYSTAL FORM",
+  "entities": [
+   {
+    "desc": "anti-human ActRIIB mAb BYM338 light-chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "anti-human ActRIIB mAb BYM338 heavy-chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "Activin receptor type-2B",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "5E94": {
+  "title": "Antibody-bound Glucagon-like Peptide-1 receptor extracellular domain",
+  "entities": [
+   {
+    "desc": "Glucagon-like peptide 1 receptor",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "G",
+     "H"
+    ]
+   },
+   {
+    "desc": "Antibody Fab fragment heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "desc": "Antibody Fab fragment light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "A",
+     "C"
+    ]
+   }
+  ]
+ },
+ "4YUE": {
+  "title": "Mouse IL-2 Bound to S4B6 Fab Fragment",
+  "entities": [
+   {
+    "desc": "Interleukin-2",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "S4B6 Fab light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "S4B6 Fab heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "H"
+    ]
+   }
+  ]
+ },
+ "4WEU": {
+  "title": "Co-complex structure of the F4 fimbrial adhesin FaeG variant ad with llama single domain antibody V3",
+  "entities": [
+   {
+    "desc": "K88 fimbrial protein AD",
+    "org": [
+     "Escherichia coli"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   },
+   {
+    "desc": "Anti-F4+ETEC bacteria VHH variable region",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "D",
+     "E"
+    ]
+   }
+  ]
+ },
+ "4WEN": {
+  "title": "Co-complex structure of the F4 fimbrial adhesin FaeG variant ac with llama single domain antibody V2",
+  "entities": [
+   {
+    "desc": "Anti-F4+ETEC bacteria VHH variable region",
+    "org": [
+     "Lama glama"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "K88 fimbrial protein AC",
+    "org": [
+     "Escherichia coli"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "4RWY": {
+  "title": "Crystal structure of VH1-46 germline-derived CD4-binding site-directed antibody 8ANC131 in complex with HIV-1 clade B YU2 gp120",
+  "entities": [
+   {
+    "desc": "Antibody 8ANC131 Light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "Antibody 8ANC131 Heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "HIV-1 YU2 gp120",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "4HJ0": {
+  "title": "Crystal structure of the human GIPr ECD in complex with Gipg013 Fab at 3-A resolution",
+  "entities": [
+   {
+    "desc": "Gipg013 Fab, Antagonizing antibody to the GIP Receptor, Light chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D",
+     "Q"
+    ]
+   },
+   {
+    "desc": "Gipg013 Fab, Antagonizing antibody to the GIP Receptor, Heavy chain",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C",
+     "P"
+    ]
+   },
+   {
+    "desc": "Gastric inhibitory polypeptide receptor",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "B"
+    ]
+   }
+  ]
+ },
+ "3V4V": {
+  "title": "crystal structure of a4b7 headpiece complexed with Fab ACT-1 and RO0505376",
+  "entities": [
+   {
+    "desc": "MONOCLONAL ANTIBODY Act-1 LIGHT CHAIN",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L",
+     "N"
+    ]
+   },
+   {
+    "desc": "MONOCLONAL ANTIBODY Act-1 HEAVY CHAIN",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "H",
+     "M"
+    ]
+   },
+   {
+    "desc": "Integrin beta-7",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "desc": "Integrin alpha-4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "C"
+    ]
+   }
+  ]
+ },
+ "3V4P": {
+  "title": "crystal structure of a4b7 headpiece complexed with Fab ACT-1",
+  "entities": [
+   {
+    "desc": "MONOCLONAL ANTIBODY Act-1 LIGHT CHAIN",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "L",
+     "N"
+    ]
+   },
+   {
+    "desc": "MONOCLONAL ANTIBODY Act-1 HEAVY CHAIN",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "H",
+     "M"
+    ]
+   },
+   {
+    "desc": "Integrin beta-7",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B",
+     "D"
+    ]
+   },
+   {
+    "desc": "Integrin alpha-4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A",
+     "C"
+    ]
+   }
+  ]
+ },
+ "2R0L": {
+  "title": "Short Form HGFA with Inhibitory Fab75",
+  "entities": [
+   {
+    "desc": "Hepatocyte growth factor activator",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Hepatocyte growth factor activator",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "A"
+    ]
+   },
+   {
+    "desc": "antibody heavy chain, Fab portion only",
+    "org": [
+     "Homo sapiens",
+     "Synthetic construct"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "antibody light chain",
+    "org": [
+     "Homo sapiens",
+     "Synthetic construct"
+    ],
+    "chains": [
+     "L"
+    ]
+   }
+  ]
+ },
+ "2NXY": {
+  "title": "HIV-1 gp120 Envelope Glycoprotein(S334A) Complexed with CD4 and Antibody 17b",
+  "entities": [
+   {
+    "desc": "ANTIBODY 17B, HEAVY CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "ANTIBODY 17B, LIGHT CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "T-cell surface glycoprotein CD4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "ENVELOPE GLYCOPROTEIN GP120",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "1RZJ": {
+  "title": "HIV-1 HXBC2 GP120 ENVELOPE GLYCOPROTEIN COMPLEXED WITH CD4 AND INDUCED NEUTRALIZING ANTIBODY 17B",
+  "entities": [
+   {
+    "desc": "ANTIBODY 17B, HEAVY CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "ANTIBODY 17B, LIGHT CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "T-CELL SURFACE GLYCOPROTEIN CD4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "ENVELOPE GLYCOPROTEIN GP120",
+    "org": [
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "G"
+    ]
+   }
+  ]
+ },
+ "1RJL": {
+  "title": "Structure of the complex between OspB-CT and bactericidal Fab-H6831",
+  "entities": [
+   {
+    "desc": "Outer surface protein B",
+    "org": [
+     "Borrelia burgdorferi"
+    ],
+    "chains": [
+     "D"
+    ]
+   },
+   {
+    "desc": "Outer surface protein B",
+    "org": [
+     "Borrelia burgdorferi"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "Fab H6831 H-chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "B"
+    ]
+   },
+   {
+    "desc": "Fab H6831 L-chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "A"
+    ]
+   }
+  ]
+ },
+ "1PKQ": {
+  "title": "Myelin Oligodendrocyte Glycoprotein-(8-18C5) Fab-complex",
+  "entities": [
+   {
+    "desc": "Myelin Oligodendrocyte Glycoprotein",
+    "org": [
+     "Rattus norvegicus"
+    ],
+    "chains": [
+     "E",
+     "J"
+    ]
+   },
+   {
+    "desc": "(8-18C5) chimeric Fab, heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "B",
+     "G"
+    ]
+   },
+   {
+    "desc": "(8-18C5) chimeric Fab, light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "A",
+     "F"
+    ]
+   }
+  ]
+ },
+ "1G9M": {
+  "title": "HIV-1 HXBC2 GP120 ENVELOPE GLYCOPROTEIN COMPLEXED WITH CD4 AND INDUCED NEUTRALIZING ANTIBODY 17B",
+  "entities": [
+   {
+    "desc": "ANTIBODY 17B, HEAVY CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "H"
+    ]
+   },
+   {
+    "desc": "ANTIBODY 17B, LIGHT CHAIN",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "L"
+    ]
+   },
+   {
+    "desc": "T-CELL SURFACE GLYCOPROTEIN CD4",
+    "org": [
+     "Homo sapiens"
+    ],
+    "chains": [
+     "C"
+    ]
+   },
+   {
+    "desc": "ENVELOPE GLYCOPROTEIN GP120",
+    "org": [
+     "Human immunodeficiency virus 1",
+     "Human immunodeficiency virus 1",
+     "Human immunodeficiency virus 1"
+    ],
+    "chains": [
+     "G"
+    ]
+   }
+  ]
+ },
+ "12ID": {
+  "title": "Cryo-EM structure of B/Lee/1940 hemagglutinin trimer in complex with three KL-BHA-3F4 Fab fragments",
+  "entities": [
+   {
+    "desc": "KL-BHA-3F4 light chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "E",
+     "L",
+     "N"
+    ]
+   },
+   {
+    "desc": "KL-BHA-3F4 heavy chain",
+    "org": [
+     "Mus musculus"
+    ],
+    "chains": [
+     "D",
+     "H",
+     "M"
+    ]
+   },
+   {
+    "desc": "Hemagglutinin",
+    "org": [
+     "Influenza B virus (B/Lee/1940)"
+    ],
+    "chains": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  ]
+ }
+}

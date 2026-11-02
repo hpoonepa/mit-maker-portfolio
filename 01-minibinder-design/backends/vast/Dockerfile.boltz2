@@ -1,0 +1,92 @@
+# =============================================================================
+# Mosaic Boltz2 Validation — Vast.ai GPU Dockerfile
+# =============================================================================
+# Runs Boltz2 cross-validation on designed binder candidates.
+# This is the VALIDATION variant — it copies validate_boltz2.py instead of
+# the design scripts (design_2lgv.py, design_5g51.py, design_god.py).
+#
+# Build context is the mosaic project root (one level up from vast/):
+#   docker build -t mosaic-boltz2 -f vast/Dockerfile.boltz2 .
+#   docker push <registry>/mosaic-boltz2:latest
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Base CUDA image with Python 3.12
+# ---------------------------------------------------------------------------
+FROM nvidia/cuda:12.6.0-cudnn-devel-ubuntu22.04 AS base
+
+# Prevent interactive prompts during apt installs
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install Python 3.12 from deadsnakes PPA + system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        software-properties-common \
+    && add-apt-repository ppa:deadsnakes/ppa \
+    && apt-get update && apt-get install -y --no-install-recommends \
+        python3.12 \
+        python3.12-venv \
+        python3.12-dev \
+        git \
+        curl \
+        build-essential \
+    && update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1 \
+    && update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------------------------------------------------------
+# Install uv package manager
+# ---------------------------------------------------------------------------
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+ENV PATH="/root/.local/bin:$PATH"
+
+# ---------------------------------------------------------------------------
+# Clone and prepare jopenfold3
+# ---------------------------------------------------------------------------
+RUN git clone https://github.com/escalante-bio/jopenfold3.git /tmp/jopenfold3 \
+    && rm -f /tmp/jopenfold3/jopenfold3/mosaic
+
+# ---------------------------------------------------------------------------
+# Clone mosaic and patch pyproject.toml to use local jopenfold3
+# ---------------------------------------------------------------------------
+RUN git clone https://github.com/escalante-bio/mosaic.git /opt/mosaic \
+    && cd /opt/mosaic \
+    && sed -i 's|jopenfold3 = { git = "https://github.com/escalante-bio/jopenfold3.git" }|jopenfold3 = { path = "/tmp/jopenfold3" }|' pyproject.toml
+
+# ---------------------------------------------------------------------------
+# Install Python dependencies with uv (heaviest layer — cached by Docker)
+# ---------------------------------------------------------------------------
+WORKDIR /opt/mosaic
+RUN uv lock && uv sync --group jax-cuda
+
+# ---------------------------------------------------------------------------
+# Download reference structure (only 2LGV needed for validation)
+# ---------------------------------------------------------------------------
+RUN curl -fsSL -o /opt/mosaic/2LGV.cif https://files.rcsb.org/download/2LGV.cif
+
+# ---------------------------------------------------------------------------
+# Copy validation script and entrypoint
+# ---------------------------------------------------------------------------
+# Boltz2 validation script — NOT the design scripts
+COPY validate_boltz2.py /opt/mosaic/
+
+# Boltz2 validation entrypoint
+COPY vast/entrypoint_boltz2.sh /workspace/entrypoint_boltz2.sh
+RUN chmod +x /workspace/entrypoint_boltz2.sh
+
+# Create output and checkpoint directories
+RUN mkdir -p /workspace/outputs /workspace/checkpoints
+
+# ---------------------------------------------------------------------------
+# Environment and runtime configuration
+# ---------------------------------------------------------------------------
+# Allow JAX to use 90% of GPU memory for structure prediction
+ENV XLA_PYTHON_CLIENT_MEM_FRACTION=0.9
+
+# Activate the uv-managed virtualenv for all subsequent commands
+ENV PATH="/opt/mosaic/.venv/bin:$PATH"
+ENV VIRTUAL_ENV="/opt/mosaic/.venv"
+
+WORKDIR /opt/mosaic
+
+# Vast.ai uses onstart-cmd to launch jobs; default to bash to keep alive
+ENTRYPOINT ["/bin/bash"]

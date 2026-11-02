@@ -1,0 +1,5781 @@
+{
+  "component:seq:0c3fd2c837e0": {
+    "cluster": "component:seq:0c3fd2c837e0",
+    "max_identity": 31.53153153153153,
+    "n_sequences": 8,
+    "best_pair": {
+      "query": "seq00019",
+      "subject": "seq01725",
+      "cov_corrected_identity": 31.53153153153153,
+      "raw_pident": 28.398,
+      "aln_length": 493,
+      "nident": 140,
+      "qlen": 444,
+      "slen": 551,
+      "evalue": 1.19e-24,
+      "bitscore": 102.0,
+      "query_chains": [
+        "9uok_C"
+      ],
+      "subject_chains": [
+        "6gff_I"
+      ],
+      "query_clusters": [
+        "component:seq:0c3fd2c837e0"
+      ],
+      "subject_clusters": [
+        "component:seq:0d941ad3b870"
+      ]
+    }
+  },
+  "component:seq:3d3a060f0491": {
+    "cluster": "component:seq:3d3a060f0491",
+    "max_identity": 26.373626373626372,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq01519",
+      "subject": "seq04019",
+      "cov_corrected_identity": 26.373626373626372,
+      "raw_pident": 27.273,
+      "aln_length": 88,
+      "nident": 24,
+      "qlen": 111,
+      "slen": 91,
+      "evalue": 3.52e-05,
+      "bitscore": 36.2,
+      "query_chains": [
+        "6umg_c"
+      ],
+      "subject_chains": [
+        "4hj0_B"
+      ],
+      "query_clusters": [
+        "component:seq:3d3a060f0491"
+      ],
+      "subject_clusters": [
+        "component:seq:746cdb688ea8"
+      ]
+    }
+  },
+  "component:seq:1c2c08427d93": {
+    "cluster": "component:seq:1c2c08427d93",
+    "max_identity": 22.491349480968857,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq01718",
+      "subject": "seq01445",
+      "cov_corrected_identity": 22.491349480968857,
+      "raw_pident": 22.109,
+      "aln_length": 294,
+      "nident": 65,
+      "qlen": 289,
+      "slen": 292,
+      "evalue": 1.38e-17,
+      "bitscore": 77.4,
+      "query_chains": [
+        "9fzq_A"
+      ],
+      "subject_chains": [
+        "6gci_A"
+      ],
+      "query_clusters": [
+        "component:seq:1c2c08427d93"
+      ],
+      "subject_clusters": [
+        "component:seq:19e8674af5d8"
+      ]
+    }
+  },
+  "component:seq:35641f896d1e": {
+    "cluster": "component:seq:35641f896d1e",
+    "max_identity": 82.22222222222223,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00039",
+      "subject": "seq00554",
+      "cov_corrected_identity": 82.22222222222223,
+      "raw_pident": 78.42,
+      "aln_length": 519,
+      "nident": 407,
+      "qlen": 518,
+      "slen": 495,
+      "evalue": 0.0,
+      "bitscore": 832.0,
+      "query_chains": [
+        "12ut_0",
+        "12ut_A",
+        "12ut_B",
+        "12ut_C"
+      ],
+      "subject_chains": [
+        "9b7n_C",
+        "9b7n_F"
+      ],
+      "query_clusters": [
+        "component:seq:35641f896d1e"
+      ],
+      "subject_clusters": [
+        "component:seq:36618b516e1e"
+      ]
+    }
+  },
+  "component:seq:bb0c17c4ef7f": {
+    "cluster": "component:seq:bb0c17c4ef7f",
+    "max_identity": 96.56652360515021,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00044",
+      "subject": "seq03901",
+      "cov_corrected_identity": 96.56652360515021,
+      "raw_pident": 96.567,
+      "aln_length": 233,
+      "nident": 225,
+      "qlen": 233,
+      "slen": 387,
+      "evalue": 2.25e-168,
+      "bitscore": 466.0,
+      "query_chains": [
+        "9jno_A"
+      ],
+      "subject_chains": [
+        "9fm1_A",
+        "9fm1_A",
+        "9fm1_B",
+        "9fm1_B"
+      ],
+      "query_clusters": [
+        "component:seq:bb0c17c4ef7f"
+      ],
+      "subject_clusters": [
+        "component:seq:4b77d44acfe0"
+      ]
+    }
+  },
+  "component:seq:4d2cfcaa4f29": {
+    "cluster": "component:seq:4d2cfcaa4f29",
+    "max_identity": 0.0,
+    "n_sequences": 6,
+    "best_pair": null
+  },
+  "component:seq:f15bf1935aeb": {
+    "cluster": "component:seq:f15bf1935aeb",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:aa6b1c87d3a9": {
+    "cluster": "component:seq:aa6b1c87d3a9",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:f256a83f60fc": {
+    "cluster": "component:seq:f256a83f60fc",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:34f9559aef20": {
+    "cluster": "component:seq:34f9559aef20",
+    "max_identity": 34.11214953271028,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00089",
+      "subject": "seq04007",
+      "cov_corrected_identity": 34.11214953271028,
+      "raw_pident": 35.437,
+      "aln_length": 206,
+      "nident": 73,
+      "qlen": 231,
+      "slen": 214,
+      "evalue": 7.46e-25,
+      "bitscore": 94.4,
+      "query_chains": [
+        "9cq7_G"
+      ],
+      "subject_chains": [
+        "12er_E"
+      ],
+      "query_clusters": [
+        "component:seq:34f9559aef20"
+      ],
+      "subject_clusters": [
+        "component:seq:33fff1c72466"
+      ]
+    }
+  },
+  "component:seq:2cd74daabd48": {
+    "cluster": "component:seq:2cd74daabd48",
+    "max_identity": 0.0,
+    "n_sequences": 15,
+    "best_pair": null
+  },
+  "component:seq:7a104c001ee4": {
+    "cluster": "component:seq:7a104c001ee4",
+    "max_identity": 47.019867549668874,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq02037",
+      "subject": "seq03453",
+      "cov_corrected_identity": 47.019867549668874,
+      "raw_pident": 45.513,
+      "aln_length": 780,
+      "nident": 355,
+      "qlen": 755,
+      "slen": 767,
+      "evalue": 0.0,
+      "bitscore": 654.0,
+      "query_chains": [
+        "7e9g_S"
+      ],
+      "subject_chains": [
+        "8t8m_B"
+      ],
+      "query_clusters": [
+        "component:seq:7a104c001ee4"
+      ],
+      "subject_clusters": [
+        "component:seq:861136e04265"
+      ]
+    }
+  },
+  "component:seq:8910cfec336b": {
+    "cluster": "component:seq:8910cfec336b",
+    "max_identity": 94.79166666666667,
+    "n_sequences": 10,
+    "best_pair": {
+      "query": "seq02022",
+      "subject": "seq02107",
+      "cov_corrected_identity": 94.79166666666667,
+      "raw_pident": 94.792,
+      "aln_length": 96,
+      "nident": 91,
+      "qlen": 99,
+      "slen": 96,
+      "evalue": 3.76e-65,
+      "bitscore": 188.0,
+      "query_chains": [
+        "9zq9_D",
+        "9zqa_C"
+      ],
+      "subject_chains": [
+        "7u0i_H"
+      ],
+      "query_clusters": [
+        "component:seq:8910cfec336b"
+      ],
+      "subject_clusters": [
+        "component:seq:1eacecdb1cf2"
+      ]
+    }
+  },
+  "component:seq:707b94b86e25": {
+    "cluster": "component:seq:707b94b86e25",
+    "max_identity": 100.0,
+    "n_sequences": 19,
+    "best_pair": {
+      "query": "seq00160",
+      "subject": "seq02156",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 86,
+      "nident": 86,
+      "qlen": 168,
+      "slen": 86,
+      "evalue": 6.78e-58,
+      "bitscore": 172.0,
+      "query_chains": [
+        "6b0h_I"
+      ],
+      "subject_chains": [
+        "7txw_A"
+      ],
+      "query_clusters": [
+        "component:seq:707b94b86e25"
+      ],
+      "subject_clusters": [
+        "component:seq:99fadf7de952"
+      ]
+    }
+  },
+  "component:seq:c304ed8e1b8a": {
+    "cluster": "component:seq:c304ed8e1b8a",
+    "max_identity": 80.18867924528301,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00169",
+      "subject": "seq00164",
+      "cov_corrected_identity": 80.18867924528301,
+      "raw_pident": 75.893,
+      "aln_length": 112,
+      "nident": 85,
+      "qlen": 112,
+      "slen": 106,
+      "evalue": 2.23e-64,
+      "bitscore": 187.0,
+      "query_chains": [
+        "3eo1_C",
+        "3eo1_F",
+        "3eo1_I",
+        "3eo1_L"
+      ],
+      "subject_chains": [
+        "6xm2_K"
+      ],
+      "query_clusters": [
+        "component:seq:c304ed8e1b8a"
+      ],
+      "subject_clusters": [
+        "component:seq:371bc0a9b848"
+      ]
+    }
+  },
+  "component:seq:1c384f340015": {
+    "cluster": "component:seq:1c384f340015",
+    "max_identity": 99.51923076923077,
+    "n_sequences": 7,
+    "best_pair": {
+      "query": "seq01347",
+      "subject": "seq01493",
+      "cov_corrected_identity": 99.51923076923077,
+      "raw_pident": 99.519,
+      "aln_length": 208,
+      "nident": 207,
+      "qlen": 210,
+      "slen": 208,
+      "evalue": 5.39e-157,
+      "bitscore": 429.0,
+      "query_chains": [
+        "2j6e_A"
+      ],
+      "subject_chains": [
+        "5xmh_A"
+      ],
+      "query_clusters": [
+        "component:seq:1c384f340015"
+      ],
+      "subject_clusters": [
+        "component:seq:10b17d1038d8"
+      ]
+    }
+  },
+  "component:seq:25836034f190": {
+    "cluster": "component:seq:25836034f190",
+    "max_identity": 32.4468085106383,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00182",
+      "subject": "seq03336",
+      "cov_corrected_identity": 32.4468085106383,
+      "raw_pident": 32.796,
+      "aln_length": 186,
+      "nident": 61,
+      "qlen": 188,
+      "slen": 282,
+      "evalue": 3.54e-29,
+      "bitscore": 105.0,
+      "query_chains": [
+        "7zg0_C",
+        "7zg0_C",
+        "7zg0_D",
+        "7zg0_D"
+      ],
+      "subject_chains": [
+        "8d7e_C"
+      ],
+      "query_clusters": [
+        "component:seq:25836034f190"
+      ],
+      "subject_clusters": [
+        "component:seq:9e15d63ab04b"
+      ]
+    }
+  },
+  "component:seq:2409de84053e": {
+    "cluster": "component:seq:2409de84053e",
+    "max_identity": 69.44444444444444,
+    "n_sequences": 18,
+    "best_pair": {
+      "query": "seq00191",
+      "subject": "seq01843",
+      "cov_corrected_identity": 69.44444444444444,
+      "raw_pident": 64.655,
+      "aln_length": 116,
+      "nident": 75,
+      "qlen": 117,
+      "slen": 108,
+      "evalue": 9.8e-50,
+      "bitscore": 150.0,
+      "query_chains": [
+        "7su0_C"
+      ],
+      "subject_chains": [
+        "9dq4_A"
+      ],
+      "query_clusters": [
+        "component:seq:2409de84053e"
+      ],
+      "subject_clusters": [
+        "component:seq:4caeb70dec13"
+      ]
+    }
+  },
+  "component:seq:9de99e0f19f5": {
+    "cluster": "component:seq:9de99e0f19f5",
+    "max_identity": 57.262569832402235,
+    "n_sequences": 15,
+    "best_pair": {
+      "query": "seq02673",
+      "subject": "seq03853",
+      "cov_corrected_identity": 57.262569832402235,
+      "raw_pident": 55.256,
+      "aln_length": 371,
+      "nident": 205,
+      "qlen": 358,
+      "slen": 381,
+      "evalue": 2.86e-150,
+      "bitscore": 425.0,
+      "query_chains": [
+        "4bel_A"
+      ],
+      "subject_chains": [
+        "3r1g_B"
+      ],
+      "query_clusters": [
+        "component:seq:9de99e0f19f5"
+      ],
+      "subject_clusters": [
+        "component:seq:c9aee37b63e6"
+      ]
+    }
+  },
+  "component:seq:4c54e76ac0b6": {
+    "cluster": "component:seq:4c54e76ac0b6",
+    "max_identity": 99.65694682675814,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00209",
+      "subject": "seq00210",
+      "cov_corrected_identity": 99.65694682675814,
+      "raw_pident": 99.657,
+      "aln_length": 583,
+      "nident": 581,
+      "qlen": 583,
+      "slen": 583,
+      "evalue": 0.0,
+      "bitscore": 1217.0,
+      "query_chains": [
+        "8rgz_A",
+        "8rgz_B",
+        "8rgz_C",
+        "8rh0_A"
+      ],
+      "subject_chains": [
+        "9dd8_A",
+        "9dd8_B",
+        "9dd8_C"
+      ],
+      "query_clusters": [
+        "component:seq:4c54e76ac0b6"
+      ],
+      "subject_clusters": [
+        "component:seq:97101c9df30d"
+      ]
+    }
+  },
+  "component:seq:968f4fbd9bd5": {
+    "cluster": "component:seq:968f4fbd9bd5",
+    "max_identity": 17.272727272727273,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00217",
+      "subject": "seq02890",
+      "cov_corrected_identity": 17.272727272727273,
+      "raw_pident": 23.385,
+      "aln_length": 325,
+      "nident": 76,
+      "qlen": 552,
+      "slen": 440,
+      "evalue": 2.02e-07,
+      "bitscore": 49.7,
+      "query_chains": [
+        "8et0_A",
+        "8et0_B"
+      ],
+      "subject_chains": [
+        "21rn_F"
+      ],
+      "query_clusters": [
+        "component:seq:968f4fbd9bd5"
+      ],
+      "subject_clusters": [
+        "component:seq:24980f5bcca7"
+      ]
+    }
+  },
+  "component:seq:184df18e6db8": {
+    "cluster": "component:seq:184df18e6db8",
+    "max_identity": 41.964285714285715,
+    "n_sequences": 6,
+    "best_pair": {
+      "query": "seq04665",
+      "subject": "seq03218",
+      "cov_corrected_identity": 41.964285714285715,
+      "raw_pident": 39.496,
+      "aln_length": 119,
+      "nident": 47,
+      "qlen": 121,
+      "slen": 112,
+      "evalue": 4.62e-17,
+      "bitscore": 67.8,
+      "query_chains": [
+        "6ulf_K",
+        "6vln_K"
+      ],
+      "subject_chains": [
+        "8t9y_A"
+      ],
+      "query_clusters": [
+        "component:seq:184df18e6db8"
+      ],
+      "subject_clusters": [
+        "component:seq:dc10694d1cf3"
+      ]
+    }
+  },
+  "component:seq:2360324ff04a": {
+    "cluster": "component:seq:2360324ff04a",
+    "max_identity": 24.444444444444443,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq01498",
+      "subject": "seq03058",
+      "cov_corrected_identity": 24.444444444444443,
+      "raw_pident": 26.506,
+      "aln_length": 83,
+      "nident": 22,
+      "qlen": 90,
+      "slen": 101,
+      "evalue": 1.52e-05,
+      "bitscore": 37.0,
+      "query_chains": [
+        "6a78_A",
+        "6a78_B",
+        "6a79_A",
+        "6a79_B"
+      ],
+      "subject_chains": [
+        "6j6y_A"
+      ],
+      "query_clusters": [
+        "component:seq:2360324ff04a"
+      ],
+      "subject_clusters": [
+        "component:seq:bac51b0643d5"
+      ]
+    }
+  },
+  "component:seq:8e896dd799ab": {
+    "cluster": "component:seq:8e896dd799ab",
+    "max_identity": 97.91666666666667,
+    "n_sequences": 9,
+    "best_pair": {
+      "query": "seq00257",
+      "subject": "seq02928",
+      "cov_corrected_identity": 97.91666666666667,
+      "raw_pident": 97.917,
+      "aln_length": 144,
+      "nident": 141,
+      "qlen": 150,
+      "slen": 144,
+      "evalue": 8.15e-102,
+      "bitscore": 285.0,
+      "query_chains": [
+        "8pn0_C"
+      ],
+      "subject_chains": [
+        "9fnt_A",
+        "9fnt_B"
+      ],
+      "query_clusters": [
+        "component:seq:8e896dd799ab"
+      ],
+      "subject_clusters": [
+        "component:seq:c6e00882e4bc"
+      ]
+    }
+  },
+  "component:seq:6c1c6ef3a7eb": {
+    "cluster": "component:seq:6c1c6ef3a7eb",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:716eb8f51109": {
+    "cluster": "component:seq:716eb8f51109",
+    "max_identity": 0.0,
+    "n_sequences": 5,
+    "best_pair": null
+  },
+  "component:seq:88666a3edf77": {
+    "cluster": "component:seq:88666a3edf77",
+    "max_identity": 32.242990654205606,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00310",
+      "subject": "seq02003",
+      "cov_corrected_identity": 32.242990654205606,
+      "raw_pident": 31.797,
+      "aln_length": 217,
+      "nident": 69,
+      "qlen": 214,
+      "slen": 226,
+      "evalue": 1.83e-30,
+      "bitscore": 108.0,
+      "query_chains": [
+        "8xld_A"
+      ],
+      "subject_chains": [
+        "8sfz_F"
+      ],
+      "query_clusters": [
+        "component:seq:88666a3edf77"
+      ],
+      "subject_clusters": [
+        "component:seq:00182b96f9d8"
+      ]
+    }
+  },
+  "component:seq:6965741cd077": {
+    "cluster": "component:seq:6965741cd077",
+    "max_identity": 97.22222222222223,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00315",
+      "subject": "seq00313",
+      "cov_corrected_identity": 97.22222222222223,
+      "raw_pident": 97.222,
+      "aln_length": 216,
+      "nident": 210,
+      "qlen": 217,
+      "slen": 216,
+      "evalue": 1.1e-160,
+      "bitscore": 439.0,
+      "query_chains": [
+        "8hgi_B"
+      ],
+      "subject_chains": [
+        "6lz2_A",
+        "7cz0_B",
+        "7cz0_C"
+      ],
+      "query_clusters": [
+        "component:seq:6965741cd077"
+      ],
+      "subject_clusters": [
+        "component:seq:814b1e2c05b4"
+      ]
+    }
+  },
+  "component:seq:3e5224268604": {
+    "cluster": "component:seq:3e5224268604",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:1bd72dcebba1": {
+    "cluster": "component:seq:1bd72dcebba1",
+    "max_identity": 98.18181818181819,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq04147",
+      "subject": "seq03200",
+      "cov_corrected_identity": 98.18181818181819,
+      "raw_pident": 98.182,
+      "aln_length": 275,
+      "nident": 270,
+      "qlen": 275,
+      "slen": 325,
+      "evalue": 0.0,
+      "bitscore": 560.0,
+      "query_chains": [
+        "6e4x_B"
+      ],
+      "subject_chains": [
+        "9om5_A",
+        "9om5_A",
+        "9om5_C",
+        "9om5_E"
+      ],
+      "query_clusters": [
+        "component:seq:1bd72dcebba1"
+      ],
+      "subject_clusters": [
+        "component:seq:243f7fe545fc"
+      ]
+    }
+  },
+  "component:seq:420fbc6d7880": {
+    "cluster": "component:seq:420fbc6d7880",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:b1ac0860eae9": {
+    "cluster": "component:seq:b1ac0860eae9",
+    "max_identity": 59.5959595959596,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq00330",
+      "subject": "seq03995",
+      "cov_corrected_identity": 59.5959595959596,
+      "raw_pident": 52.679,
+      "aln_length": 112,
+      "nident": 59,
+      "qlen": 99,
+      "slen": 115,
+      "evalue": 3.53e-37,
+      "bitscore": 118.0,
+      "query_chains": [
+        "7lr4_C",
+        "7lr4_C"
+      ],
+      "subject_chains": [
+        "9yc3_B"
+      ],
+      "query_clusters": [
+        "component:seq:b1ac0860eae9"
+      ],
+      "subject_clusters": [
+        "component:seq:989d184d0f1e"
+      ]
+    }
+  },
+  "component:seq:ee99fcd36577": {
+    "cluster": "component:seq:ee99fcd36577",
+    "max_identity": 76.41357027463651,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00348",
+      "subject": "seq00349",
+      "cov_corrected_identity": 76.41357027463651,
+      "raw_pident": 74.254,
+      "aln_length": 637,
+      "nident": 473,
+      "qlen": 619,
+      "slen": 830,
+      "evalue": 0.0,
+      "bitscore": 920.0,
+      "query_chains": [
+        "9z76_A"
+      ],
+      "subject_chains": [
+        "9z7a_A"
+      ],
+      "query_clusters": [
+        "component:seq:ee99fcd36577"
+      ],
+      "subject_clusters": [
+        "component:seq:af97fbf40358"
+      ]
+    }
+  },
+  "component:seq:9f567389b7f1": {
+    "cluster": "component:seq:9f567389b7f1",
+    "max_identity": 88.6046511627907,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq02747",
+      "subject": "seq02748",
+      "cov_corrected_identity": 88.6046511627907,
+      "raw_pident": 84.479,
+      "aln_length": 451,
+      "nident": 381,
+      "qlen": 452,
+      "slen": 430,
+      "evalue": 0.0,
+      "bitscore": 769.0,
+      "query_chains": [
+        "7ur6_A",
+        "7ur6_F",
+        "7ur6_G"
+      ],
+      "subject_chains": [
+        "6ck9_G",
+        "6ck9_G"
+      ],
+      "query_clusters": [
+        "component:seq:9f567389b7f1"
+      ],
+      "subject_clusters": [
+        "component:seq:9b74ab4a662e"
+      ]
+    }
+  },
+  "component:seq:2f6a585b44ee": {
+    "cluster": "component:seq:2f6a585b44ee",
+    "max_identity": 87.93103448275862,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq02237",
+      "subject": "seq02242",
+      "cov_corrected_identity": 87.93103448275862,
+      "raw_pident": 70.345,
+      "aln_length": 145,
+      "nident": 102,
+      "qlen": 146,
+      "slen": 116,
+      "evalue": 1.05e-65,
+      "bitscore": 192.0,
+      "query_chains": [
+        "6dcq_D"
+      ],
+      "subject_chains": [
+        "9dim_B",
+        "9dim_D"
+      ],
+      "query_clusters": [
+        "component:seq:2f6a585b44ee"
+      ],
+      "subject_clusters": [
+        "component:seq:41bcb54f9558"
+      ]
+    }
+  },
+  "component:seq:22847d60534b": {
+    "cluster": "component:seq:22847d60534b",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:fb41d371ef2b": {
+    "cluster": "component:seq:fb41d371ef2b",
+    "max_identity": 66.66666666666667,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03430",
+      "subject": "seq01846",
+      "cov_corrected_identity": 66.66666666666667,
+      "raw_pident": 65.672,
+      "aln_length": 67,
+      "nident": 44,
+      "qlen": 68,
+      "slen": 66,
+      "evalue": 1.25e-23,
+      "bitscore": 81.3,
+      "query_chains": [
+        "8d9y_I",
+        "8d9y_J",
+        "8d9y_K"
+      ],
+      "subject_chains": [
+        "9gcn_V",
+        "9gcn_X",
+        "9gcn_Y",
+        "9gcn_Z"
+      ],
+      "query_clusters": [
+        "component:seq:fb41d371ef2b"
+      ],
+      "subject_clusters": [
+        "component:seq:acdc493c2104"
+      ]
+    }
+  },
+  "component:seq:d52183200aed": {
+    "cluster": "component:seq:d52183200aed",
+    "max_identity": 33.663366336633665,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00402",
+      "subject": "seq03081",
+      "cov_corrected_identity": 33.663366336633665,
+      "raw_pident": 32.381,
+      "aln_length": 210,
+      "nident": 68,
+      "qlen": 202,
+      "slen": 206,
+      "evalue": 4.67e-24,
+      "bitscore": 91.3,
+      "query_chains": [
+        "9r2e_P"
+      ],
+      "subject_chains": [
+        "8f8w_E",
+        "8f8w_E",
+        "8f8x_A"
+      ],
+      "query_clusters": [
+        "component:seq:d52183200aed"
+      ],
+      "subject_clusters": [
+        "component:seq:d9bda7843e80"
+      ]
+    }
+  },
+  "component:seq:01da29bd744d": {
+    "cluster": "component:seq:01da29bd744d",
+    "max_identity": 90.2439024390244,
+    "n_sequences": 12,
+    "best_pair": {
+      "query": "seq03550",
+      "subject": "seq01040",
+      "cov_corrected_identity": 90.2439024390244,
+      "raw_pident": 90.244,
+      "aln_length": 82,
+      "nident": 74,
+      "qlen": 82,
+      "slen": 87,
+      "evalue": 9.9e-52,
+      "bitscore": 153.0,
+      "query_chains": [
+        "8xa4_A",
+        "8xa4_B",
+        "9udq_B",
+        "9udq_J"
+      ],
+      "subject_chains": [
+        "4lu5_A"
+      ],
+      "query_clusters": [
+        "component:seq:01da29bd744d"
+      ],
+      "subject_clusters": [
+        "component:seq:a615777eff3e"
+      ]
+    }
+  },
+  "component:seq:172245cfb86b": {
+    "cluster": "component:seq:172245cfb86b",
+    "max_identity": 61.36363636363637,
+    "n_sequences": 19,
+    "best_pair": {
+      "query": "seq02798",
+      "subject": "seq02514",
+      "cov_corrected_identity": 61.36363636363637,
+      "raw_pident": 64.286,
+      "aln_length": 84,
+      "nident": 54,
+      "qlen": 88,
+      "slen": 102,
+      "evalue": 1.53e-35,
+      "bitscore": 113.0,
+      "query_chains": [
+        "5hi3_B"
+      ],
+      "subject_chains": [
+        "8ruu_Y",
+        "8ruu_Y"
+      ],
+      "query_clusters": [
+        "component:seq:172245cfb86b"
+      ],
+      "subject_clusters": [
+        "component:seq:cb89f7f960b6"
+      ]
+    }
+  },
+  "component:seq:bc3ad90aeb75": {
+    "cluster": "component:seq:bc3ad90aeb75",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:2dc189363fc6": {
+    "cluster": "component:seq:2dc189363fc6",
+    "max_identity": 37.86407766990291,
+    "n_sequences": 6,
+    "best_pair": {
+      "query": "seq00535",
+      "subject": "seq00167",
+      "cov_corrected_identity": 37.86407766990291,
+      "raw_pident": 38.614,
+      "aln_length": 101,
+      "nident": 39,
+      "qlen": 103,
+      "slen": 112,
+      "evalue": 2.86e-21,
+      "bitscore": 78.2,
+      "query_chains": [
+        "5f3b_D"
+      ],
+      "subject_chains": [
+        "4kxz_A",
+        "4kxz_A",
+        "4kxz_B",
+        "4kxz_B"
+      ],
+      "query_clusters": [
+        "component:seq:2dc189363fc6"
+      ],
+      "subject_clusters": [
+        "component:seq:371bc0a9b848"
+      ]
+    }
+  },
+  "component:seq:74d7d3f173f6": {
+    "cluster": "component:seq:74d7d3f173f6",
+    "max_identity": 34.65346534653465,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00477",
+      "subject": "seq02121",
+      "cov_corrected_identity": 34.65346534653465,
+      "raw_pident": 30.635,
+      "aln_length": 457,
+      "nident": 140,
+      "qlen": 446,
+      "slen": 404,
+      "evalue": 2.03e-50,
+      "bitscore": 172.0,
+      "query_chains": [
+        "7ce2_A"
+      ],
+      "subject_chains": [
+        "7uie_J"
+      ],
+      "query_clusters": [
+        "component:seq:74d7d3f173f6"
+      ],
+      "subject_clusters": [
+        "component:seq:5d1f8b99e68a"
+      ]
+    }
+  },
+  "component:seq:599733de6573": {
+    "cluster": "component:seq:599733de6573",
+    "max_identity": 99.03846153846153,
+    "n_sequences": 7,
+    "best_pair": {
+      "query": "seq00483",
+      "subject": "seq01937",
+      "cov_corrected_identity": 99.03846153846153,
+      "raw_pident": 99.038,
+      "aln_length": 104,
+      "nident": 103,
+      "qlen": 164,
+      "slen": 104,
+      "evalue": 1.74e-76,
+      "bitscore": 220.0,
+      "query_chains": [
+        "44ab_D"
+      ],
+      "subject_chains": [
+        "8tea_D"
+      ],
+      "query_clusters": [
+        "component:seq:599733de6573"
+      ],
+      "subject_clusters": [
+        "component:seq:a85ac90fd778"
+      ]
+    }
+  },
+  "component:seq:a6f77bca1d90": {
+    "cluster": "component:seq:a6f77bca1d90",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:dee177ff6a29": {
+    "cluster": "component:seq:dee177ff6a29",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:1bd6ddaf1256": {
+    "cluster": "component:seq:1bd6ddaf1256",
+    "max_identity": 60.1123595505618,
+    "n_sequences": 11,
+    "best_pair": {
+      "query": "seq00528",
+      "subject": "seq03235",
+      "cov_corrected_identity": 60.1123595505618,
+      "raw_pident": 60.225,
+      "aln_length": 533,
+      "nident": 321,
+      "qlen": 534,
+      "slen": 555,
+      "evalue": 0.0,
+      "bitscore": 660.0,
+      "query_chains": [
+        "6m47_A"
+      ],
+      "subject_chains": [
+        "8zp1_A",
+        "8zp2_A"
+      ],
+      "query_clusters": [
+        "component:seq:1bd6ddaf1256"
+      ],
+      "subject_clusters": [
+        "component:seq:a45bb256ed83"
+      ]
+    }
+  },
+  "component:seq:5013cd0dc9b9": {
+    "cluster": "component:seq:5013cd0dc9b9",
+    "max_identity": 91.12903225806451,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq00566",
+      "subject": "seq01762",
+      "cov_corrected_identity": 91.12903225806451,
+      "raw_pident": 82.482,
+      "aln_length": 137,
+      "nident": 113,
+      "qlen": 141,
+      "slen": 124,
+      "evalue": 1.95e-81,
+      "bitscore": 232.0,
+      "query_chains": [
+        "8zre_B"
+      ],
+      "subject_chains": [
+        "6cwt_E"
+      ],
+      "query_clusters": [
+        "component:seq:5013cd0dc9b9"
+      ],
+      "subject_clusters": [
+        "component:seq:37ee62cdfe41"
+      ]
+    }
+  },
+  "component:seq:54e873d7f8f5": {
+    "cluster": "component:seq:54e873d7f8f5",
+    "max_identity": 82.84313725490196,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00567",
+      "subject": "seq00588",
+      "cov_corrected_identity": 82.84313725490196,
+      "raw_pident": 78.972,
+      "aln_length": 214,
+      "nident": 169,
+      "qlen": 215,
+      "slen": 204,
+      "evalue": 1.84e-118,
+      "bitscore": 332.0,
+      "query_chains": [
+        "9yxd_C"
+      ],
+      "subject_chains": [
+        "8tii_L"
+      ],
+      "query_clusters": [
+        "component:seq:54e873d7f8f5"
+      ],
+      "subject_clusters": [
+        "component:seq:9b7fbdd85748"
+      ]
+    }
+  },
+  "component:seq:15bfe14258de": {
+    "cluster": "component:seq:15bfe14258de",
+    "max_identity": 36.55913978494624,
+    "n_sequences": 11,
+    "best_pair": {
+      "query": "seq00572",
+      "subject": "seq03742",
+      "cov_corrected_identity": 36.55913978494624,
+      "raw_pident": 33.01,
+      "aln_length": 206,
+      "nident": 68,
+      "qlen": 186,
+      "slen": 569,
+      "evalue": 1.13e-25,
+      "bitscore": 99.4,
+      "query_chains": [
+        "6gjq_C"
+      ],
+      "subject_chains": [
+        "6qv0_C"
+      ],
+      "query_clusters": [
+        "component:seq:15bfe14258de"
+      ],
+      "subject_clusters": [
+        "component:seq:322ac99f0052"
+      ]
+    }
+  },
+  "component:seq:c9d71c7eea09": {
+    "cluster": "component:seq:c9d71c7eea09",
+    "max_identity": 94.20289855072464,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00583",
+      "subject": "seq00581",
+      "cov_corrected_identity": 94.20289855072464,
+      "raw_pident": 92.417,
+      "aln_length": 211,
+      "nident": 195,
+      "qlen": 213,
+      "slen": 207,
+      "evalue": 3.11e-142,
+      "bitscore": 392.0,
+      "query_chains": [
+        "7wpd_Y",
+        "7wpf_S",
+        "7wpf_V",
+        "7wpf_Y"
+      ],
+      "subject_chains": [
+        "6vrq_B"
+      ],
+      "query_clusters": [
+        "component:seq:48dc4c405eae",
+        "component:seq:c9d71c7eea09"
+      ],
+      "subject_clusters": [
+        "component:seq:ae50808206c4"
+      ]
+    }
+  },
+  "component:seq:bf4cc82ab50b": {
+    "cluster": "component:seq:bf4cc82ab50b",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00587",
+      "subject": "seq00587",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 213,
+      "nident": 213,
+      "qlen": 213,
+      "slen": 213,
+      "evalue": 3.65e-158,
+      "bitscore": 432.0,
+      "query_chains": [
+        "8u4v_L",
+        "9cmi_L"
+      ],
+      "subject_chains": [
+        "8u4v_L",
+        "9cmi_L"
+      ],
+      "query_clusters": [
+        "component:seq:1454e41b661d",
+        "component:seq:bf4cc82ab50b"
+      ],
+      "subject_clusters": [
+        "component:seq:1454e41b661d",
+        "component:seq:bf4cc82ab50b"
+      ]
+    }
+  },
+  "component:seq:0bf57ddf1bf3": {
+    "cluster": "component:seq:0bf57ddf1bf3",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00590",
+      "subject": "seq00590",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 212,
+      "nident": 212,
+      "qlen": 212,
+      "slen": 212,
+      "evalue": 1.29e-157,
+      "bitscore": 431.0,
+      "query_chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L"
+      ],
+      "subject_chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L"
+      ],
+      "query_clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ],
+      "subject_clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ]
+    }
+  },
+  "component:seq:a63e2487510c": {
+    "cluster": "component:seq:a63e2487510c",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00590",
+      "subject": "seq00590",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 212,
+      "nident": 212,
+      "qlen": 212,
+      "slen": 212,
+      "evalue": 1.29e-157,
+      "bitscore": 431.0,
+      "query_chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L"
+      ],
+      "subject_chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L"
+      ],
+      "query_clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ],
+      "subject_clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ]
+    }
+  },
+  "component:seq:5156c269b311": {
+    "cluster": "component:seq:5156c269b311",
+    "max_identity": 97.64150943396227,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00595",
+      "subject": "seq01839",
+      "cov_corrected_identity": 97.64150943396227,
+      "raw_pident": 97.642,
+      "aln_length": 212,
+      "nident": 207,
+      "qlen": 212,
+      "slen": 212,
+      "evalue": 1.23e-153,
+      "bitscore": 421.0,
+      "query_chains": [
+        "7uym_L"
+      ],
+      "subject_chains": [
+        "9opr_L",
+        "9z3j_L"
+      ],
+      "query_clusters": [
+        "component:seq:5156c269b311"
+      ],
+      "subject_clusters": [
+        "component:seq:b634df75c387",
+        "component:seq:f6432e239a71"
+      ]
+    }
+  },
+  "component:seq:7d7a45e108f4": {
+    "cluster": "component:seq:7d7a45e108f4",
+    "max_identity": 92.05607476635514,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00609",
+      "subject": "seq00907",
+      "cov_corrected_identity": 92.05607476635514,
+      "raw_pident": 92.056,
+      "aln_length": 214,
+      "nident": 197,
+      "qlen": 214,
+      "slen": 214,
+      "evalue": 4.14e-147,
+      "bitscore": 404.0,
+      "query_chains": [
+        "5xaj_L"
+      ],
+      "subject_chains": [
+        "6o25_F",
+        "6o25_J"
+      ],
+      "query_clusters": [
+        "component:seq:7d7a45e108f4"
+      ],
+      "subject_clusters": [
+        "component:seq:c3704c709418"
+      ]
+    }
+  },
+  "component:seq:29645299bb21": {
+    "cluster": "component:seq:29645299bb21",
+    "max_identity": 94.4055944055944,
+    "n_sequences": 15,
+    "best_pair": {
+      "query": "seq03573",
+      "subject": "seq03571",
+      "cov_corrected_identity": 94.4055944055944,
+      "raw_pident": 93.103,
+      "aln_length": 145,
+      "nident": 135,
+      "qlen": 145,
+      "slen": 143,
+      "evalue": 7.29e-99,
+      "bitscore": 277.0,
+      "query_chains": [
+        "8z8m_E",
+        "8z8m_E"
+      ],
+      "subject_chains": [
+        "9jec_A",
+        "9jec_A",
+        "9jec_B",
+        "9jec_B"
+      ],
+      "query_clusters": [
+        "component:seq:29645299bb21"
+      ],
+      "subject_clusters": [
+        "component:seq:36b7ba8ea353"
+      ]
+    }
+  },
+  "component:seq:039c05fb3ea3": {
+    "cluster": "component:seq:039c05fb3ea3",
+    "max_identity": 82.95454545454545,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00633",
+      "subject": "seq02183",
+      "cov_corrected_identity": 82.95454545454545,
+      "raw_pident": 79.348,
+      "aln_length": 184,
+      "nident": 146,
+      "qlen": 176,
+      "slen": 231,
+      "evalue": 3.23e-94,
+      "bitscore": 270.0,
+      "query_chains": [
+        "8bk2_B"
+      ],
+      "subject_chains": [
+        "6h2y_D"
+      ],
+      "query_clusters": [
+        "component:seq:039c05fb3ea3"
+      ],
+      "subject_clusters": [
+        "component:seq:8c664ec99dc5"
+      ]
+    }
+  },
+  "component:seq:0f2193037c60": {
+    "cluster": "component:seq:0f2193037c60",
+    "max_identity": 53.125,
+    "n_sequences": 6,
+    "best_pair": {
+      "query": "seq02980",
+      "subject": "seq00253",
+      "cov_corrected_identity": 53.125,
+      "raw_pident": 50.296,
+      "aln_length": 169,
+      "nident": 85,
+      "qlen": 160,
+      "slen": 172,
+      "evalue": 4.38e-46,
+      "bitscore": 145.0,
+      "query_chains": [
+        "9pru_Y"
+      ],
+      "subject_chains": [
+        "10fj_A"
+      ],
+      "query_clusters": [
+        "component:seq:0f2193037c60"
+      ],
+      "subject_clusters": [
+        "component:seq:e3999a442463"
+      ]
+    }
+  },
+  "component:seq:5110017bc804": {
+    "cluster": "component:seq:5110017bc804",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00814",
+      "subject": "seq00813",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 181,
+      "nident": 181,
+      "qlen": 183,
+      "slen": 181,
+      "evalue": 2.02e-139,
+      "bitscore": 382.0,
+      "query_chains": [
+        "9qqn_A"
+      ],
+      "subject_chains": [
+        "9ghj_A"
+      ],
+      "query_clusters": [
+        "component:seq:5110017bc804"
+      ],
+      "subject_clusters": [
+        "component:seq:1c71eeafe266"
+      ]
+    }
+  },
+  "component:seq:a0822fdc2ed9": {
+    "cluster": "component:seq:a0822fdc2ed9",
+    "max_identity": 0.0,
+    "n_sequences": 14,
+    "best_pair": null
+  },
+  "component:seq:08f97b41dbce": {
+    "cluster": "component:seq:08f97b41dbce",
+    "max_identity": 86.3849765258216,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00659",
+      "subject": "seq00592",
+      "cov_corrected_identity": 86.3849765258216,
+      "raw_pident": 84.404,
+      "aln_length": 218,
+      "nident": 184,
+      "qlen": 218,
+      "slen": 213,
+      "evalue": 2.08e-133,
+      "bitscore": 370.0,
+      "query_chains": [
+        "8aci_L"
+      ],
+      "subject_chains": [
+        "4k7p_X"
+      ],
+      "query_clusters": [
+        "component:seq:08f97b41dbce"
+      ],
+      "subject_clusters": [
+        "component:seq:1889eafbb0a5"
+      ]
+    }
+  },
+  "component:seq:147afb85f574": {
+    "cluster": "component:seq:147afb85f574",
+    "max_identity": 99.4047619047619,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01399",
+      "subject": "seq01400",
+      "cov_corrected_identity": 99.4047619047619,
+      "raw_pident": 97.093,
+      "aln_length": 172,
+      "nident": 167,
+      "qlen": 172,
+      "slen": 168,
+      "evalue": 1.54e-122,
+      "bitscore": 339.0,
+      "query_chains": [
+        "7l0l_B",
+        "7l0l_E",
+        "7l0l_F"
+      ],
+      "subject_chains": [
+        "4hlz_B"
+      ],
+      "query_clusters": [
+        "component:seq:147afb85f574"
+      ],
+      "subject_clusters": [
+        "component:seq:67932dc1210a"
+      ]
+    }
+  },
+  "component:seq:388196b569e6": {
+    "cluster": "component:seq:388196b569e6",
+    "max_identity": 31.41025641025641,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01495",
+      "subject": "seq01477",
+      "cov_corrected_identity": 31.41025641025641,
+      "raw_pident": 31.613,
+      "aln_length": 155,
+      "nident": 49,
+      "qlen": 167,
+      "slen": 156,
+      "evalue": 3.99e-14,
+      "bitscore": 62.8,
+      "query_chains": [
+        "5w5x_A"
+      ],
+      "subject_chains": [
+        "6fs0_A"
+      ],
+      "query_clusters": [
+        "component:seq:388196b569e6"
+      ],
+      "subject_clusters": [
+        "component:seq:33365a1c3466"
+      ]
+    }
+  },
+  "component:seq:18cd305e49d7": {
+    "cluster": "component:seq:18cd305e49d7",
+    "max_identity": 97.55102040816327,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq03584",
+      "subject": "seq03583",
+      "cov_corrected_identity": 97.55102040816327,
+      "raw_pident": 97.551,
+      "aln_length": 245,
+      "nident": 239,
+      "qlen": 245,
+      "slen": 245,
+      "evalue": 0.0,
+      "bitscore": 503.0,
+      "query_chains": [
+        "9m7v_B"
+      ],
+      "subject_chains": [
+        "9rik_B",
+        "9rim_B",
+        "9rio_B"
+      ],
+      "query_clusters": [
+        "component:seq:18cd305e49d7"
+      ],
+      "subject_clusters": [
+        "component:seq:1f1bd885bb4c"
+      ]
+    }
+  },
+  "component:seq:8293c871c870": {
+    "cluster": "component:seq:8293c871c870",
+    "max_identity": 95.15151515151516,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01160",
+      "subject": "seq00739",
+      "cov_corrected_identity": 95.15151515151516,
+      "raw_pident": 95.152,
+      "aln_length": 165,
+      "nident": 157,
+      "qlen": 165,
+      "slen": 491,
+      "evalue": 2.63e-112,
+      "bitscore": 324.0,
+      "query_chains": [
+        "9nh7_G",
+        "9nh7_H"
+      ],
+      "subject_chains": [
+        "8veb_A",
+        "8veb_C",
+        "8veb_E",
+        "8ved_A"
+      ],
+      "query_clusters": [
+        "component:seq:8293c871c870"
+      ],
+      "subject_clusters": [
+        "component:seq:cb979ad47d07"
+      ]
+    }
+  },
+  "component:seq:858f77c5cd29": {
+    "cluster": "component:seq:858f77c5cd29",
+    "max_identity": 89.80891719745223,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01243",
+      "subject": "seq01413",
+      "cov_corrected_identity": 89.80891719745223,
+      "raw_pident": 89.809,
+      "aln_length": 157,
+      "nident": 141,
+      "qlen": 157,
+      "slen": 175,
+      "evalue": 1.04e-106,
+      "bitscore": 298.0,
+      "query_chains": [
+        "8gv5_B"
+      ],
+      "subject_chains": [
+        "8txp_B",
+        "8ty7_B",
+        "9dru_B",
+        "9ds1_B"
+      ],
+      "query_clusters": [
+        "component:seq:858f77c5cd29"
+      ],
+      "subject_clusters": [
+        "component:seq:0c30e8379937"
+      ]
+    }
+  },
+  "component:seq:2e15154072d7": {
+    "cluster": "component:seq:2e15154072d7",
+    "max_identity": 46.951219512195124,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00781",
+      "subject": "seq03034",
+      "cov_corrected_identity": 46.951219512195124,
+      "raw_pident": 45.833,
+      "aln_length": 168,
+      "nident": 77,
+      "qlen": 265,
+      "slen": 164,
+      "evalue": 1.13e-47,
+      "bitscore": 152.0,
+      "query_chains": [
+        "9ibf_B"
+      ],
+      "subject_chains": [
+        "6yax_BBB"
+      ],
+      "query_clusters": [
+        "component:seq:2e15154072d7"
+      ],
+      "subject_clusters": [
+        "component:seq:4f29385c218b"
+      ]
+    }
+  },
+  "component:seq:92561d8927ad": {
+    "cluster": "component:seq:92561d8927ad",
+    "max_identity": 49.01960784313726,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00802",
+      "subject": "seq02200",
+      "cov_corrected_identity": 49.01960784313726,
+      "raw_pident": 50.0,
+      "aln_length": 50,
+      "nident": 25,
+      "qlen": 54,
+      "slen": 51,
+      "evalue": 2.82e-14,
+      "bitscore": 56.6,
+      "query_chains": [
+        "7ahv_L"
+      ],
+      "subject_chains": [
+        "7ahu_F"
+      ],
+      "query_clusters": [
+        "component:seq:92561d8927ad"
+      ],
+      "subject_clusters": [
+        "component:seq:026193255302"
+      ]
+    }
+  },
+  "component:seq:3a9fdd9898ab": {
+    "cluster": "component:seq:3a9fdd9898ab",
+    "max_identity": 57.8125,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00806",
+      "subject": "seq04632",
+      "cov_corrected_identity": 57.8125,
+      "raw_pident": 57.812,
+      "aln_length": 64,
+      "nident": 37,
+      "qlen": 65,
+      "slen": 64,
+      "evalue": 1.42e-25,
+      "bitscore": 85.9,
+      "query_chains": [
+        "10zo_D"
+      ],
+      "subject_chains": [
+        "4w2o_B",
+        "4w2o_D",
+        "4w2o_F",
+        "4w2o_H"
+      ],
+      "query_clusters": [
+        "component:seq:3a9fdd9898ab"
+      ],
+      "subject_clusters": [
+        "component:seq:afe3cc09bc61"
+      ]
+    }
+  },
+  "component:seq:c3d49350be8e": {
+    "cluster": "component:seq:c3d49350be8e",
+    "max_identity": 15.897435897435898,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00810",
+      "subject": "seq00420",
+      "cov_corrected_identity": 15.897435897435898,
+      "raw_pident": 23.485,
+      "aln_length": 132,
+      "nident": 31,
+      "qlen": 195,
+      "slen": 208,
+      "evalue": 4.21e-08,
+      "bitscore": 47.8,
+      "query_chains": [
+        "6p67_J"
+      ],
+      "subject_chains": [
+        "7kq7_B"
+      ],
+      "query_clusters": [
+        "component:seq:c3d49350be8e"
+      ],
+      "subject_clusters": [
+        "component:seq:2bd889793728"
+      ]
+    }
+  },
+  "component:seq:882b290fef88": {
+    "cluster": "component:seq:882b290fef88",
+    "max_identity": 98.20359281437126,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq04586",
+      "subject": "seq00818",
+      "cov_corrected_identity": 98.20359281437126,
+      "raw_pident": 97.91,
+      "aln_length": 335,
+      "nident": 328,
+      "qlen": 334,
+      "slen": 336,
+      "evalue": 0.0,
+      "bitscore": 672.0,
+      "query_chains": [
+        "5igx_G"
+      ],
+      "subject_chains": [
+        "6mft_C",
+        "6mft_G"
+      ],
+      "query_clusters": [
+        "component:seq:882b290fef88"
+      ],
+      "subject_clusters": [
+        "component:seq:222e720d6791"
+      ]
+    }
+  },
+  "component:seq:76ff197321b7": {
+    "cluster": "component:seq:76ff197321b7",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq00823",
+      "subject": "seq04362",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 99.015,
+      "aln_length": 203,
+      "nident": 201,
+      "qlen": 201,
+      "slen": 205,
+      "evalue": 1.08e-147,
+      "bitscore": 405.0,
+      "query_chains": [
+        "8ysf_A"
+      ],
+      "subject_chains": [
+        "7coe_A"
+      ],
+      "query_clusters": [
+        "component:seq:76ff197321b7"
+      ],
+      "subject_clusters": [
+        "component:seq:43d767d93f95"
+      ]
+    }
+  },
+  "component:seq:044d7ce8d14e": {
+    "cluster": "component:seq:044d7ce8d14e",
+    "max_identity": 97.87234042553192,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq02054",
+      "subject": "seq01136",
+      "cov_corrected_identity": 97.87234042553192,
+      "raw_pident": 97.872,
+      "aln_length": 94,
+      "nident": 92,
+      "qlen": 94,
+      "slen": 1005,
+      "evalue": 1.52e-64,
+      "bitscore": 206.0,
+      "query_chains": [
+        "6rvc_A",
+        "6rvc_B",
+        "6rvc_C"
+      ],
+      "subject_chains": [
+        "7k65_A"
+      ],
+      "query_clusters": [
+        "component:seq:044d7ce8d14e"
+      ],
+      "subject_clusters": [
+        "component:seq:b98b30f6e2e1"
+      ]
+    }
+  },
+  "component:seq:3c434cf32991": {
+    "cluster": "component:seq:3c434cf32991",
+    "max_identity": 30.8411214953271,
+    "n_sequences": 13,
+    "best_pair": {
+      "query": "seq00961",
+      "subject": "seq00602",
+      "cov_corrected_identity": 30.8411214953271,
+      "raw_pident": 26.613,
+      "aln_length": 124,
+      "nident": 33,
+      "qlen": 114,
+      "slen": 107,
+      "evalue": 6.55e-06,
+      "bitscore": 38.5,
+      "query_chains": [
+        "6nmu_C",
+        "6nmu_S"
+      ],
+      "subject_chains": [
+        "1dvf_A"
+      ],
+      "query_clusters": [
+        "component:seq:3c434cf32991"
+      ],
+      "subject_clusters": [
+        "component:seq:192839cbe680"
+      ]
+    }
+  },
+  "component:seq:57b66a6bdfd3": {
+    "cluster": "component:seq:57b66a6bdfd3",
+    "max_identity": 0.0,
+    "n_sequences": 16,
+    "best_pair": null
+  },
+  "component:seq:e49dcce7abb2": {
+    "cluster": "component:seq:e49dcce7abb2",
+    "max_identity": 28.169014084507044,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00864",
+      "subject": "seq00592",
+      "cov_corrected_identity": 28.169014084507044,
+      "raw_pident": 26.549,
+      "aln_length": 226,
+      "nident": 60,
+      "qlen": 296,
+      "slen": 213,
+      "evalue": 9.07e-11,
+      "bitscore": 57.0,
+      "query_chains": [
+        "4i2x_F"
+      ],
+      "subject_chains": [
+        "4k7p_X"
+      ],
+      "query_clusters": [
+        "component:seq:e49dcce7abb2"
+      ],
+      "subject_clusters": [
+        "component:seq:1889eafbb0a5"
+      ]
+    }
+  },
+  "component:seq:577be126a29f": {
+    "cluster": "component:seq:577be126a29f",
+    "max_identity": 0.0,
+    "n_sequences": 9,
+    "best_pair": null
+  },
+  "component:seq:6df08163409b": {
+    "cluster": "component:seq:6df08163409b",
+    "max_identity": 92.99065420560747,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00912",
+      "subject": "seq00907",
+      "cov_corrected_identity": 92.99065420560747,
+      "raw_pident": 92.558,
+      "aln_length": 215,
+      "nident": 199,
+      "qlen": 215,
+      "slen": 214,
+      "evalue": 8.43e-145,
+      "bitscore": 399.0,
+      "query_chains": [
+        "9n8i_B"
+      ],
+      "subject_chains": [
+        "6o25_F",
+        "6o25_J"
+      ],
+      "query_clusters": [
+        "component:seq:6df08163409b"
+      ],
+      "subject_clusters": [
+        "component:seq:c3704c709418"
+      ]
+    }
+  },
+  "component:seq:0c4a7bc90ad3": {
+    "cluster": "component:seq:0c4a7bc90ad3",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:c099127c9cfa": {
+    "cluster": "component:seq:c099127c9cfa",
+    "max_identity": 98.54014598540147,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq00957",
+      "subject": "seq04239",
+      "cov_corrected_identity": 98.54014598540147,
+      "raw_pident": 82.822,
+      "aln_length": 163,
+      "nident": 135,
+      "qlen": 137,
+      "slen": 185,
+      "evalue": 5.19e-91,
+      "bitscore": 258.0,
+      "query_chains": [
+        "7uds_A",
+        "7uds_B",
+        "7uds_C"
+      ],
+      "subject_chains": [
+        "7uov_A",
+        "7uov_A",
+        "7uov_B",
+        "7uov_B"
+      ],
+      "query_clusters": [
+        "component:seq:c099127c9cfa"
+      ],
+      "subject_clusters": [
+        "component:seq:071406123052"
+      ]
+    }
+  },
+  "component:seq:1e313ba7898a": {
+    "cluster": "component:seq:1e313ba7898a",
+    "max_identity": 93.22033898305085,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq00969",
+      "subject": "seq00967",
+      "cov_corrected_identity": 93.22033898305085,
+      "raw_pident": 88.71,
+      "aln_length": 62,
+      "nident": 55,
+      "qlen": 63,
+      "slen": 59,
+      "evalue": 4.48e-34,
+      "bitscore": 107.0,
+      "query_chains": [
+        "5ob5_A"
+      ],
+      "subject_chains": [
+        "6wzj_F"
+      ],
+      "query_clusters": [
+        "component:seq:1e313ba7898a"
+      ],
+      "subject_clusters": [
+        "component:seq:0845a63ae18f"
+      ]
+    }
+  },
+  "component:seq:cd8dc474e01c": {
+    "cluster": "component:seq:cd8dc474e01c",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:180427167ca0": {
+    "cluster": "component:seq:180427167ca0",
+    "max_identity": 0.0,
+    "n_sequences": 8,
+    "best_pair": null
+  },
+  "component:seq:d810c87a08ca": {
+    "cluster": "component:seq:d810c87a08ca",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:4eace644f040": {
+    "cluster": "component:seq:4eace644f040",
+    "max_identity": 62.80701754385965,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01034",
+      "subject": "seq02809",
+      "cov_corrected_identity": 62.80701754385965,
+      "raw_pident": 57.556,
+      "aln_length": 311,
+      "nident": 179,
+      "qlen": 395,
+      "slen": 285,
+      "evalue": 7.27e-131,
+      "bitscore": 374.0,
+      "query_chains": [
+        "9dx6_A"
+      ],
+      "subject_chains": [
+        "9bjh_A"
+      ],
+      "query_clusters": [
+        "component:seq:4eace644f040"
+      ],
+      "subject_clusters": [
+        "component:seq:cc8680ff21d8"
+      ]
+    }
+  },
+  "component:seq:9ff7088716cc": {
+    "cluster": "component:seq:9ff7088716cc",
+    "max_identity": 77.77777777777777,
+    "n_sequences": 13,
+    "best_pair": {
+      "query": "seq04390",
+      "subject": "seq02303",
+      "cov_corrected_identity": 77.77777777777777,
+      "raw_pident": 77.778,
+      "aln_length": 261,
+      "nident": 203,
+      "qlen": 261,
+      "slen": 267,
+      "evalue": 4.89e-164,
+      "bitscore": 451.0,
+      "query_chains": [
+        "7pa6_EEE",
+        "7pa6_EEE"
+      ],
+      "subject_chains": [
+        "28jf_E",
+        "28jf_E",
+        "28jf_P",
+        "28jf_P"
+      ],
+      "query_clusters": [
+        "component:seq:9ff7088716cc"
+      ],
+      "subject_clusters": [
+        "component:seq:f859840e0c3d"
+      ]
+    }
+  },
+  "component:seq:5c1c4dbc2ac7": {
+    "cluster": "component:seq:5c1c4dbc2ac7",
+    "max_identity": 92.01877934272301,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01099",
+      "subject": "seq03289",
+      "cov_corrected_identity": 92.01877934272301,
+      "raw_pident": 88.688,
+      "aln_length": 221,
+      "nident": 196,
+      "qlen": 213,
+      "slen": 221,
+      "evalue": 2.78e-130,
+      "bitscore": 362.0,
+      "query_chains": [
+        "5xaj_F"
+      ],
+      "subject_chains": [
+        "5jo4_A"
+      ],
+      "query_clusters": [
+        "component:seq:5c1c4dbc2ac7"
+      ],
+      "subject_clusters": [
+        "component:seq:1b0f7cbbd0b2"
+      ]
+    }
+  },
+  "component:seq:2bfd116516a8": {
+    "cluster": "component:seq:2bfd116516a8",
+    "max_identity": 92.85714285714286,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01101",
+      "subject": "seq04550",
+      "cov_corrected_identity": 92.85714285714286,
+      "raw_pident": 92.857,
+      "aln_length": 154,
+      "nident": 143,
+      "qlen": 155,
+      "slen": 154,
+      "evalue": 3.48e-104,
+      "bitscore": 291.0,
+      "query_chains": [
+        "8u03_C"
+      ],
+      "subject_chains": [
+        "8u08_C"
+      ],
+      "query_clusters": [
+        "component:seq:2bfd116516a8"
+      ],
+      "subject_clusters": [
+        "component:seq:189a40f4a7c9"
+      ]
+    }
+  },
+  "component:seq:8c071c19fe42": {
+    "cluster": "component:seq:8c071c19fe42",
+    "max_identity": 99.34210526315789,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01117",
+      "subject": "seq01115",
+      "cov_corrected_identity": 99.34210526315789,
+      "raw_pident": 98.693,
+      "aln_length": 306,
+      "nident": 302,
+      "qlen": 306,
+      "slen": 304,
+      "evalue": 0.0,
+      "bitscore": 617.0,
+      "query_chains": [
+        "2ny0_A"
+      ],
+      "subject_chains": [
+        "2ny5_G"
+      ],
+      "query_clusters": [
+        "component:seq:8c071c19fe42"
+      ],
+      "subject_clusters": [
+        "component:seq:0c5b1fef10eb"
+      ]
+    }
+  },
+  "component:seq:154910176225": {
+    "cluster": "component:seq:154910176225",
+    "max_identity": 52.83018867924528,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01122",
+      "subject": "seq01022",
+      "cov_corrected_identity": 52.83018867924528,
+      "raw_pident": 52.83,
+      "aln_length": 212,
+      "nident": 112,
+      "qlen": 212,
+      "slen": 218,
+      "evalue": 4.51e-81,
+      "bitscore": 238.0,
+      "query_chains": [
+        "9cbn_D",
+        "9cbn_D"
+      ],
+      "subject_chains": [
+        "7rk1_A"
+      ],
+      "query_clusters": [
+        "component:seq:154910176225"
+      ],
+      "subject_clusters": [
+        "component:seq:463b28c590fa"
+      ]
+    }
+  },
+  "component:seq:3283ea01bc6c": {
+    "cluster": "component:seq:3283ea01bc6c",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq01129",
+      "subject": "seq01322",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 386,
+      "nident": 386,
+      "qlen": 386,
+      "slen": 388,
+      "evalue": 0.0,
+      "bitscore": 796.0,
+      "query_chains": [
+        "8gat_A"
+      ],
+      "subject_chains": [
+        "9md2_A",
+        "9md2_A",
+        "9md2_B",
+        "9md2_B"
+      ],
+      "query_clusters": [
+        "component:seq:3283ea01bc6c"
+      ],
+      "subject_clusters": [
+        "component:seq:6e3c3604b788"
+      ]
+    }
+  },
+  "component:seq:a5428e870e8b": {
+    "cluster": "component:seq:a5428e870e8b",
+    "max_identity": 94.7565543071161,
+    "n_sequences": 7,
+    "best_pair": {
+      "query": "seq01141",
+      "subject": "seq03901",
+      "cov_corrected_identity": 94.7565543071161,
+      "raw_pident": 91.007,
+      "aln_length": 278,
+      "nident": 253,
+      "qlen": 267,
+      "slen": 387,
+      "evalue": 0.0,
+      "bitscore": 530.0,
+      "query_chains": [
+        "9nj6_A",
+        "9nj6_A",
+        "9nj6_B",
+        "9nj6_B"
+      ],
+      "subject_chains": [
+        "9fm1_A",
+        "9fm1_A",
+        "9fm1_B",
+        "9fm1_B"
+      ],
+      "query_clusters": [
+        "component:seq:a5428e870e8b"
+      ],
+      "subject_clusters": [
+        "component:seq:4b77d44acfe0"
+      ]
+    }
+  },
+  "component:seq:afbb8108e961": {
+    "cluster": "component:seq:afbb8108e961",
+    "max_identity": 32.19512195121951,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01171",
+      "subject": "seq03263",
+      "cov_corrected_identity": 32.19512195121951,
+      "raw_pident": 32.673,
+      "aln_length": 202,
+      "nident": 66,
+      "qlen": 205,
+      "slen": 206,
+      "evalue": 1.22e-17,
+      "bitscore": 74.3,
+      "query_chains": [
+        "9lad_C"
+      ],
+      "subject_chains": [
+        "9vca_E"
+      ],
+      "query_clusters": [
+        "component:seq:afbb8108e961"
+      ],
+      "subject_clusters": [
+        "component:seq:0af2b8bd3754"
+      ]
+    }
+  },
+  "component:seq:1a1a3eb8f67f": {
+    "cluster": "component:seq:1a1a3eb8f67f",
+    "max_identity": 88.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01176",
+      "subject": "seq01333",
+      "cov_corrected_identity": 88.0,
+      "raw_pident": 84.615,
+      "aln_length": 130,
+      "nident": 110,
+      "qlen": 132,
+      "slen": 125,
+      "evalue": 2.39e-77,
+      "bitscore": 221.0,
+      "query_chains": [
+        "8d53_B"
+      ],
+      "subject_chains": [
+        "8czz_B"
+      ],
+      "query_clusters": [
+        "component:seq:1a1a3eb8f67f"
+      ],
+      "subject_clusters": [
+        "component:seq:1932e319338b"
+      ]
+    }
+  },
+  "component:seq:10a9c69c4b50": {
+    "cluster": "component:seq:10a9c69c4b50",
+    "max_identity": 0.0,
+    "n_sequences": 3,
+    "best_pair": null
+  },
+  "component:seq:18e13bda295e": {
+    "cluster": "component:seq:18e13bda295e",
+    "max_identity": 24.358974358974358,
+    "n_sequences": 8,
+    "best_pair": {
+      "query": "seq01232",
+      "subject": "seq01958",
+      "cov_corrected_identity": 24.358974358974358,
+      "raw_pident": 22.892,
+      "aln_length": 83,
+      "nident": 19,
+      "qlen": 89,
+      "slen": 78,
+      "evalue": 0.000821,
+      "bitscore": 32.0,
+      "query_chains": [
+        "6ejg_A",
+        "6ejg_B",
+        "6ek2_B"
+      ],
+      "subject_chains": [
+        "6rlo_J",
+        "6rlo_L"
+      ],
+      "query_clusters": [
+        "component:seq:18e13bda295e"
+      ],
+      "subject_clusters": [
+        "component:seq:cd499abf997d"
+      ]
+    }
+  },
+  "component:seq:c0fd2c3ba542": {
+    "cluster": "component:seq:c0fd2c3ba542",
+    "max_identity": 30.091185410334347,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03712",
+      "subject": "seq01060",
+      "cov_corrected_identity": 30.091185410334347,
+      "raw_pident": 29.819,
+      "aln_length": 332,
+      "nident": 99,
+      "qlen": 329,
+      "slen": 373,
+      "evalue": 1.1e-36,
+      "bitscore": 132.0,
+      "query_chains": [
+        "3liz_A"
+      ],
+      "subject_chains": [
+        "9rxi_B"
+      ],
+      "query_clusters": [
+        "component:seq:c0fd2c3ba542"
+      ],
+      "subject_clusters": [
+        "component:seq:4c468a163b2f"
+      ]
+    }
+  },
+  "component:seq:8cebca5b78f9": {
+    "cluster": "component:seq:8cebca5b78f9",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:c5f7375ff5e8": {
+    "cluster": "component:seq:c5f7375ff5e8",
+    "max_identity": 80.38585209003216,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01287",
+      "subject": "seq00618",
+      "cov_corrected_identity": 80.38585209003216,
+      "raw_pident": 78.616,
+      "aln_length": 318,
+      "nident": 250,
+      "qlen": 311,
+      "slen": 319,
+      "evalue": 0.0,
+      "bitscore": 544.0,
+      "query_chains": [
+        "6mlm_A",
+        "6mlm_A",
+        "6mlm_B",
+        "6mlm_B"
+      ],
+      "subject_chains": [
+        "6fyu_A",
+        "8t1g_A",
+        "8t1g_A",
+        "8t1g_C"
+      ],
+      "query_clusters": [
+        "component:seq:c5f7375ff5e8"
+      ],
+      "subject_clusters": [
+        "component:seq:1cdd420e2447"
+      ]
+    }
+  },
+  "component:seq:d2b3591e357e": {
+    "cluster": "component:seq:d2b3591e357e",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01294",
+      "subject": "seq02087",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 210,
+      "nident": 210,
+      "qlen": 323,
+      "slen": 210,
+      "evalue": 7.32e-160,
+      "bitscore": 441.0,
+      "query_chains": [
+        "9c0v_A"
+      ],
+      "subject_chains": [
+        "4xnm_D"
+      ],
+      "query_clusters": [
+        "component:seq:d2b3591e357e"
+      ],
+      "subject_clusters": [
+        "component:seq:04d4ca99f38b"
+      ]
+    }
+  },
+  "component:seq:21c42209b782": {
+    "cluster": "component:seq:21c42209b782",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:223bdbf926b7": {
+    "cluster": "component:seq:223bdbf926b7",
+    "max_identity": 34.38914027149321,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq01869",
+      "subject": "seq02680",
+      "cov_corrected_identity": 34.38914027149321,
+      "raw_pident": 28.096,
+      "aln_length": 541,
+      "nident": 152,
+      "qlen": 442,
+      "slen": 551,
+      "evalue": 1.66e-59,
+      "bitscore": 200.0,
+      "query_chains": [
+        "8vym_A",
+        "8vym_A"
+      ],
+      "subject_chains": [
+        "9uy9_A",
+        "9uy9_B",
+        "9uy9_C"
+      ],
+      "query_clusters": [
+        "component:seq:223bdbf926b7"
+      ],
+      "subject_clusters": [
+        "component:seq:c599dad647b4"
+      ]
+    }
+  },
+  "component:seq:774b32ca7a91": {
+    "cluster": "component:seq:774b32ca7a91",
+    "max_identity": 96.47577092511013,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03722",
+      "subject": "seq01387",
+      "cov_corrected_identity": 96.47577092511013,
+      "raw_pident": 96.903,
+      "aln_length": 226,
+      "nident": 219,
+      "qlen": 227,
+      "slen": 227,
+      "evalue": 2.52e-166,
+      "bitscore": 454.0,
+      "query_chains": [
+        "7e53_A"
+      ],
+      "subject_chains": [
+        "3g9a_A"
+      ],
+      "query_clusters": [
+        "component:seq:774b32ca7a91"
+      ],
+      "subject_clusters": [
+        "component:seq:00182b96f9d8"
+      ]
+    }
+  },
+  "component:seq:820c7f61a484": {
+    "cluster": "component:seq:820c7f61a484",
+    "max_identity": 99.18367346938776,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq03581",
+      "subject": "seq03583",
+      "cov_corrected_identity": 99.18367346938776,
+      "raw_pident": 99.184,
+      "aln_length": 245,
+      "nident": 243,
+      "qlen": 245,
+      "slen": 245,
+      "evalue": 0.0,
+      "bitscore": 506.0,
+      "query_chains": [
+        "6z3q_B",
+        "9rih_B",
+        "9rii_B"
+      ],
+      "subject_chains": [
+        "9rik_B",
+        "9rim_B",
+        "9rio_B"
+      ],
+      "query_clusters": [
+        "component:seq:820c7f61a484"
+      ],
+      "subject_clusters": [
+        "component:seq:1f1bd885bb4c"
+      ]
+    }
+  },
+  "component:seq:2edeba4ec81b": {
+    "cluster": "component:seq:2edeba4ec81b",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:6313e5e9bd71": {
+    "cluster": "component:seq:6313e5e9bd71",
+    "max_identity": 18.75,
+    "n_sequences": 6,
+    "best_pair": {
+      "query": "seq01715",
+      "subject": "seq00588",
+      "cov_corrected_identity": 18.75,
+      "raw_pident": 33.333,
+      "aln_length": 63,
+      "nident": 21,
+      "qlen": 112,
+      "slen": 204,
+      "evalue": 0.000605,
+      "bitscore": 33.9,
+      "query_chains": [
+        "6ymq_K"
+      ],
+      "subject_chains": [
+        "8tii_L"
+      ],
+      "query_clusters": [
+        "component:seq:6313e5e9bd71"
+      ],
+      "subject_clusters": [
+        "component:seq:9b7fbdd85748"
+      ]
+    }
+  },
+  "component:seq:6cb2a5e76056": {
+    "cluster": "component:seq:6cb2a5e76056",
+    "max_identity": 96.34703196347031,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01364",
+      "subject": "seq01366",
+      "cov_corrected_identity": 96.34703196347031,
+      "raw_pident": 96.789,
+      "aln_length": 218,
+      "nident": 211,
+      "qlen": 219,
+      "slen": 219,
+      "evalue": 3.44e-162,
+      "bitscore": 443.0,
+      "query_chains": [
+        "23it_3"
+      ],
+      "subject_chains": [
+        "7dst_C"
+      ],
+      "query_clusters": [
+        "component:seq:6cb2a5e76056"
+      ],
+      "subject_clusters": [
+        "component:seq:c401eab90948"
+      ]
+    }
+  },
+  "component:seq:8d26db460ef6": {
+    "cluster": "component:seq:8d26db460ef6",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:0959f3b87aa5": {
+    "cluster": "component:seq:0959f3b87aa5",
+    "max_identity": 35.19553072625698,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01457",
+      "subject": "seq01193",
+      "cov_corrected_identity": 35.19553072625698,
+      "raw_pident": 34.426,
+      "aln_length": 183,
+      "nident": 63,
+      "qlen": 179,
+      "slen": 751,
+      "evalue": 5.43e-33,
+      "bitscore": 120.0,
+      "query_chains": [
+        "3eoa_I",
+        "3eoa_J"
+      ],
+      "subject_chains": [
+        "7p2d_A"
+      ],
+      "query_clusters": [
+        "component:seq:0959f3b87aa5"
+      ],
+      "subject_clusters": [
+        "component:seq:4efd7ca002e7"
+      ]
+    }
+  },
+  "component:seq:22fbcd0b977c": {
+    "cluster": "component:seq:22fbcd0b977c",
+    "max_identity": 86.74033149171271,
+    "n_sequences": 9,
+    "best_pair": {
+      "query": "seq02984",
+      "subject": "seq02986",
+      "cov_corrected_identity": 86.74033149171271,
+      "raw_pident": 86.264,
+      "aln_length": 364,
+      "nident": 314,
+      "qlen": 362,
+      "slen": 371,
+      "evalue": 0.0,
+      "bitscore": 659.0,
+      "query_chains": [
+        "5tpw_A"
+      ],
+      "subject_chains": [
+        "8zh7_A",
+        "8zh7_D",
+        "8zh7_G",
+        "8zh7_J"
+      ],
+      "query_clusters": [
+        "component:seq:22fbcd0b977c"
+      ],
+      "subject_clusters": [
+        "component:seq:f6714413ac45"
+      ]
+    }
+  },
+  "component:seq:098c66ff55bb": {
+    "cluster": "component:seq:098c66ff55bb",
+    "max_identity": 0.0,
+    "n_sequences": 3,
+    "best_pair": null
+  },
+  "component:seq:3aebb521aa01": {
+    "cluster": "component:seq:3aebb521aa01",
+    "max_identity": 28.37837837837838,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01500",
+      "subject": "seq04688",
+      "cov_corrected_identity": 28.37837837837838,
+      "raw_pident": 24.609,
+      "aln_length": 256,
+      "nident": 63,
+      "qlen": 282,
+      "slen": 222,
+      "evalue": 8.02e-10,
+      "bitscore": 54.3,
+      "query_chains": [
+        "7c4s_A"
+      ],
+      "subject_chains": [
+        "9xqb_C"
+      ],
+      "query_clusters": [
+        "component:seq:3aebb521aa01"
+      ],
+      "subject_clusters": [
+        "component:seq:602a31288da8"
+      ]
+    }
+  },
+  "component:seq:2e076713eb1a": {
+    "cluster": "component:seq:2e076713eb1a",
+    "max_identity": 79.83193277310924,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq01512",
+      "subject": "seq01357",
+      "cov_corrected_identity": 79.83193277310924,
+      "raw_pident": 79.832,
+      "aln_length": 119,
+      "nident": 95,
+      "qlen": 119,
+      "slen": 119,
+      "evalue": 2.66e-70,
+      "bitscore": 202.0,
+      "query_chains": [
+        "5iml_A"
+      ],
+      "subject_chains": [
+        "5imo_A"
+      ],
+      "query_clusters": [
+        "component:seq:2e076713eb1a"
+      ],
+      "subject_clusters": [
+        "component:seq:01ca8547ba44"
+      ]
+    }
+  },
+  "component:seq:31bcd4ec9ad0": {
+    "cluster": "component:seq:31bcd4ec9ad0",
+    "max_identity": 95.98540145985402,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01543",
+      "subject": "seq01534",
+      "cov_corrected_identity": 95.98540145985402,
+      "raw_pident": 95.985,
+      "aln_length": 274,
+      "nident": 263,
+      "qlen": 275,
+      "slen": 274,
+      "evalue": 0.0,
+      "bitscore": 553.0,
+      "query_chains": [
+        "9qqf_A"
+      ],
+      "subject_chains": [
+        "1w72_A",
+        "1w72_D"
+      ],
+      "query_clusters": [
+        "component:seq:31bcd4ec9ad0"
+      ],
+      "subject_clusters": [
+        "component:seq:01381b6801b3"
+      ]
+    }
+  },
+  "component:seq:132c71f610d4": {
+    "cluster": "component:seq:132c71f610d4",
+    "max_identity": 36.53846153846154,
+    "n_sequences": 9,
+    "best_pair": {
+      "query": "seq01573",
+      "subject": "seq01308",
+      "cov_corrected_identity": 36.53846153846154,
+      "raw_pident": 32.759,
+      "aln_length": 116,
+      "nident": 38,
+      "qlen": 104,
+      "slen": 116,
+      "evalue": 1.42e-12,
+      "bitscore": 55.8,
+      "query_chains": [
+        "7vyt_T",
+        "8jen_P"
+      ],
+      "subject_chains": [
+        "9ucl_G",
+        "9ucl_H",
+        "9ucl_I"
+      ],
+      "query_clusters": [
+        "component:seq:132c71f610d4"
+      ],
+      "subject_clusters": [
+        "component:seq:01b4fb61f283"
+      ]
+    }
+  },
+  "component:seq:6b6eaf7e7e95": {
+    "cluster": "component:seq:6b6eaf7e7e95",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:f93a7b07547b": {
+    "cluster": "component:seq:f93a7b07547b",
+    "max_identity": 98.30827067669173,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01598",
+      "subject": "seq01599",
+      "cov_corrected_identity": 98.30827067669173,
+      "raw_pident": 95.438,
+      "aln_length": 548,
+      "nident": 523,
+      "qlen": 532,
+      "slen": 548,
+      "evalue": 0.0,
+      "bitscore": 1074.0,
+      "query_chains": [
+        "7m3n_A"
+      ],
+      "subject_chains": [
+        "9e60_A",
+        "9e7x_A",
+        "9e7x_C",
+        "9e7x_F"
+      ],
+      "query_clusters": [
+        "component:seq:f93a7b07547b"
+      ],
+      "subject_clusters": [
+        "component:seq:cfb51989dc06",
+        "component:seq:d935e056c56d"
+      ]
+    }
+  },
+  "component:seq:6e83b7be9fd5": {
+    "cluster": "component:seq:6e83b7be9fd5",
+    "max_identity": 18.154761904761905,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01651",
+      "subject": "seq00804",
+      "cov_corrected_identity": 18.154761904761905,
+      "raw_pident": 21.034,
+      "aln_length": 290,
+      "nident": 61,
+      "qlen": 336,
+      "slen": 471,
+      "evalue": 4.15e-08,
+      "bitscore": 50.8,
+      "query_chains": [
+        "4lvn_A"
+      ],
+      "subject_chains": [
+        "5jmo_B"
+      ],
+      "query_clusters": [
+        "component:seq:6e83b7be9fd5"
+      ],
+      "subject_clusters": [
+        "component:seq:01285fef0f51"
+      ]
+    }
+  },
+  "component:seq:262e528ae58d": {
+    "cluster": "component:seq:262e528ae58d",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:5a9067c3b7ed": {
+    "cluster": "component:seq:5a9067c3b7ed",
+    "max_identity": 57.142857142857146,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01777",
+      "subject": "seq03359",
+      "cov_corrected_identity": 57.142857142857146,
+      "raw_pident": 56.744,
+      "aln_length": 430,
+      "nident": 244,
+      "qlen": 427,
+      "slen": 432,
+      "evalue": 6.48e-174,
+      "bitscore": 490.0,
+      "query_chains": [
+        "9pur_A",
+        "9pur_B"
+      ],
+      "subject_chains": [
+        "9yq6_F",
+        "9yq6_F",
+        "9yts_F",
+        "9yts_F"
+      ],
+      "query_clusters": [
+        "component:seq:5a9067c3b7ed"
+      ],
+      "subject_clusters": [
+        "component:seq:175176f34f29"
+      ]
+    }
+  },
+  "component:seq:0ba4a117d813": {
+    "cluster": "component:seq:0ba4a117d813",
+    "max_identity": 34.65346534653465,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01835",
+      "subject": "seq03140",
+      "cov_corrected_identity": 34.65346534653465,
+      "raw_pident": 33.654,
+      "aln_length": 104,
+      "nident": 35,
+      "qlen": 101,
+      "slen": 160,
+      "evalue": 2.93e-05,
+      "bitscore": 37.4,
+      "query_chains": [
+        "1egj_A"
+      ],
+      "subject_chains": [
+        "6oel_C"
+      ],
+      "query_clusters": [
+        "component:seq:0ba4a117d813"
+      ],
+      "subject_clusters": [
+        "component:seq:212108c05622"
+      ]
+    }
+  },
+  "component:seq:6853c9660173": {
+    "cluster": "component:seq:6853c9660173",
+    "max_identity": 98.5781990521327,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01837",
+      "subject": "seq00590",
+      "cov_corrected_identity": 98.5781990521327,
+      "raw_pident": 98.578,
+      "aln_length": 211,
+      "nident": 208,
+      "qlen": 211,
+      "slen": 212,
+      "evalue": 2.63e-152,
+      "bitscore": 417.0,
+      "query_chains": [
+        "7sk7_C"
+      ],
+      "subject_chains": [
+        "7tuy_L",
+        "8j9o_D",
+        "8jh7_L",
+        "8jhc_L"
+      ],
+      "query_clusters": [
+        "component:seq:6853c9660173"
+      ],
+      "subject_clusters": [
+        "component:seq:0bf57ddf1bf3",
+        "component:seq:225d4627348b",
+        "component:seq:3c18bb19dd48",
+        "component:seq:49518f4d5646",
+        "component:seq:53af6be11e07",
+        "component:seq:78c84dc6c5f0",
+        "component:seq:81af3c03afc4",
+        "component:seq:8d6efe277300",
+        "component:seq:940029cd25b8",
+        "component:seq:a63e2487510c",
+        "component:seq:ac9b83a22835"
+      ]
+    }
+  },
+  "component:seq:d2c4649c3d40": {
+    "cluster": "component:seq:d2c4649c3d40",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01859",
+      "subject": "seq01860",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 405,
+      "nident": 405,
+      "qlen": 405,
+      "slen": 504,
+      "evalue": 0.0,
+      "bitscore": 849.0,
+      "query_chains": [
+        "8dv6_A",
+        "8dv6_B"
+      ],
+      "subject_chains": [
+        "9js7_B",
+        "9js7_C"
+      ],
+      "query_clusters": [
+        "component:seq:d2c4649c3d40"
+      ],
+      "subject_clusters": [
+        "component:seq:45fd62bbf450"
+      ]
+    }
+  },
+  "component:seq:5e9cdf482855": {
+    "cluster": "component:seq:5e9cdf482855",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01864",
+      "subject": "seq01862",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 98.214,
+      "aln_length": 392,
+      "nident": 385,
+      "qlen": 385,
+      "slen": 392,
+      "evalue": 0.0,
+      "bitscore": 799.0,
+      "query_chains": [
+        "5jhl_A"
+      ],
+      "subject_chains": [
+        "8eee_E"
+      ],
+      "query_clusters": [
+        "component:seq:5e9cdf482855"
+      ],
+      "subject_clusters": [
+        "component:seq:45fd62bbf450"
+      ]
+    }
+  },
+  "component:seq:1cdec2b54ab3": {
+    "cluster": "component:seq:1cdec2b54ab3",
+    "max_identity": 96.65809768637533,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq01866",
+      "subject": "seq01868",
+      "cov_corrected_identity": 96.65809768637533,
+      "raw_pident": 96.658,
+      "aln_length": 389,
+      "nident": 376,
+      "qlen": 389,
+      "slen": 389,
+      "evalue": 0.0,
+      "bitscore": 784.0,
+      "query_chains": [
+        "1nca_N"
+      ],
+      "subject_chains": [
+        "1ncd_N"
+      ],
+      "query_clusters": [
+        "component:seq:1cdec2b54ab3"
+      ],
+      "subject_clusters": [
+        "component:seq:3430a0263124"
+      ]
+    }
+  },
+  "component:seq:7de05a2981a3": {
+    "cluster": "component:seq:7de05a2981a3",
+    "max_identity": 39.166666666666664,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01872",
+      "subject": "seq01298",
+      "cov_corrected_identity": 39.166666666666664,
+      "raw_pident": 39.496,
+      "aln_length": 238,
+      "nident": 94,
+      "qlen": 585,
+      "slen": 240,
+      "evalue": 1.22e-48,
+      "bitscore": 166.0,
+      "query_chains": [
+        "6tej_B"
+      ],
+      "subject_chains": [
+        "7ndf_B"
+      ],
+      "query_clusters": [
+        "component:seq:7de05a2981a3"
+      ],
+      "subject_clusters": [
+        "component:seq:bd1f6eab4b96"
+      ]
+    }
+  },
+  "component:seq:b63cc89deb69": {
+    "cluster": "component:seq:b63cc89deb69",
+    "max_identity": 98.34123222748815,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq01894",
+      "subject": "seq03361",
+      "cov_corrected_identity": 98.34123222748815,
+      "raw_pident": 97.19,
+      "aln_length": 427,
+      "nident": 415,
+      "qlen": 422,
+      "slen": 429,
+      "evalue": 0.0,
+      "bitscore": 846.0,
+      "query_chains": [
+        "8tqi_A"
+      ],
+      "subject_chains": [
+        "9b2w_A"
+      ],
+      "query_clusters": [
+        "component:seq:b63cc89deb69"
+      ],
+      "subject_clusters": [
+        "component:seq:175176f34f29"
+      ]
+    }
+  },
+  "component:seq:ee6515288e7e": {
+    "cluster": "component:seq:ee6515288e7e",
+    "max_identity": 87.5,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq01927",
+      "subject": "seq00795",
+      "cov_corrected_identity": 87.5,
+      "raw_pident": 87.5,
+      "aln_length": 216,
+      "nident": 189,
+      "qlen": 216,
+      "slen": 217,
+      "evalue": 1.59e-140,
+      "bitscore": 388.0,
+      "query_chains": [
+        "9b2c_L"
+      ],
+      "subject_chains": [
+        "9ulm_D"
+      ],
+      "query_clusters": [
+        "component:seq:ee6515288e7e"
+      ],
+      "subject_clusters": [
+        "component:seq:1535b45799b0"
+      ]
+    }
+  },
+  "component:seq:7639af46d69f": {
+    "cluster": "component:seq:7639af46d69f",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:6e3d1b222207": {
+    "cluster": "component:seq:6e3d1b222207",
+    "max_identity": 92.85714285714286,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq01997",
+      "subject": "seq04367",
+      "cov_corrected_identity": 92.85714285714286,
+      "raw_pident": 77.717,
+      "aln_length": 184,
+      "nident": 143,
+      "qlen": 363,
+      "slen": 154,
+      "evalue": 3.9e-92,
+      "bitscore": 269.0,
+      "query_chains": [
+        "11iw_A",
+        "11iw_A",
+        "11iw_A",
+        "11iw_B"
+      ],
+      "subject_chains": [
+        "9kep_B"
+      ],
+      "query_clusters": [
+        "component:seq:6e3d1b222207"
+      ],
+      "subject_clusters": [
+        "component:seq:06462deec2a9"
+      ]
+    }
+  },
+  "component:seq:f6f44943154e": {
+    "cluster": "component:seq:f6f44943154e",
+    "max_identity": 22.01086956521739,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02001",
+      "subject": "seq01994",
+      "cov_corrected_identity": 22.01086956521739,
+      "raw_pident": 23.754,
+      "aln_length": 341,
+      "nident": 81,
+      "qlen": 426,
+      "slen": 368,
+      "evalue": 3.01e-12,
+      "bitscore": 63.9,
+      "query_chains": [
+        "9hh9_A",
+        "9hh9_B",
+        "9hh9_C",
+        "9hhr_A"
+      ],
+      "subject_chains": [
+        "6lgw_E"
+      ],
+      "query_clusters": [
+        "component:seq:f6f44943154e"
+      ],
+      "subject_clusters": [
+        "component:seq:6c677a653e66"
+      ]
+    }
+  },
+  "component:seq:5a747e43b813": {
+    "cluster": "component:seq:5a747e43b813",
+    "max_identity": 81.72413793103448,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq02220",
+      "subject": "seq01452",
+      "cov_corrected_identity": 81.72413793103448,
+      "raw_pident": 61.88,
+      "aln_length": 383,
+      "nident": 237,
+      "qlen": 290,
+      "slen": 447,
+      "evalue": 5.98e-156,
+      "bitscore": 439.0,
+      "query_chains": [
+        "3lqa_G"
+      ],
+      "subject_chains": [
+        "7kmd_G",
+        "7kmd_G"
+      ],
+      "query_clusters": [
+        "component:seq:5a747e43b813"
+      ],
+      "subject_clusters": [
+        "component:seq:14d7fbe50dfd"
+      ]
+    }
+  },
+  "component:seq:282b7985fb3d": {
+    "cluster": "component:seq:282b7985fb3d",
+    "max_identity": 100.0,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq02053",
+      "subject": "seq02607",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 110,
+      "nident": 110,
+      "qlen": 115,
+      "slen": 110,
+      "evalue": 2.35e-79,
+      "bitscore": 225.0,
+      "query_chains": [
+        "5d1x_E"
+      ],
+      "subject_chains": [
+        "7xli_A"
+      ],
+      "query_clusters": [
+        "component:seq:282b7985fb3d"
+      ],
+      "subject_clusters": [
+        "component:seq:7786ca98dde2"
+      ]
+    }
+  },
+  "component:seq:9ef5ce911b03": {
+    "cluster": "component:seq:9ef5ce911b03",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:a2721877d21f": {
+    "cluster": "component:seq:a2721877d21f",
+    "max_identity": 88.9908256880734,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02064",
+      "subject": "seq03344",
+      "cov_corrected_identity": 88.9908256880734,
+      "raw_pident": 88.991,
+      "aln_length": 109,
+      "nident": 97,
+      "qlen": 109,
+      "slen": 327,
+      "evalue": 1.84e-67,
+      "bitscore": 202.0,
+      "query_chains": [
+        "9osx_A"
+      ],
+      "subject_chains": [
+        "7pi2_D"
+      ],
+      "query_clusters": [
+        "component:seq:a2721877d21f"
+      ],
+      "subject_clusters": [
+        "component:seq:3efa8b8bcbdd"
+      ]
+    }
+  },
+  "component:seq:58bcffe1d57e": {
+    "cluster": "component:seq:58bcffe1d57e",
+    "max_identity": 69.73684210526316,
+    "n_sequences": 11,
+    "best_pair": {
+      "query": "seq03734",
+      "subject": "seq02072",
+      "cov_corrected_identity": 69.73684210526316,
+      "raw_pident": 67.732,
+      "aln_length": 313,
+      "nident": 212,
+      "qlen": 312,
+      "slen": 304,
+      "evalue": 7.22e-151,
+      "bitscore": 422.0,
+      "query_chains": [
+        "5o03_B"
+      ],
+      "subject_chains": [
+        "5o02_A"
+      ],
+      "query_clusters": [
+        "component:seq:58bcffe1d57e"
+      ],
+      "subject_clusters": [
+        "component:seq:ec17b311f4e1"
+      ]
+    }
+  },
+  "component:seq:232e6329a1ca": {
+    "cluster": "component:seq:232e6329a1ca",
+    "max_identity": 94.76190476190476,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq02085",
+      "subject": "seq02087",
+      "cov_corrected_identity": 94.76190476190476,
+      "raw_pident": 94.762,
+      "aln_length": 210,
+      "nident": 199,
+      "qlen": 218,
+      "slen": 210,
+      "evalue": 6.08e-153,
+      "bitscore": 419.0,
+      "query_chains": [
+        "5dur_A"
+      ],
+      "subject_chains": [
+        "4xnm_D"
+      ],
+      "query_clusters": [
+        "component:seq:232e6329a1ca"
+      ],
+      "subject_clusters": [
+        "component:seq:04d4ca99f38b"
+      ]
+    }
+  },
+  "component:seq:dbdcb6f9f970": {
+    "cluster": "component:seq:dbdcb6f9f970",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:25546d28da4e": {
+    "cluster": "component:seq:25546d28da4e",
+    "max_identity": 60.02239641657335,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq02434",
+      "subject": "seq04540",
+      "cov_corrected_identity": 60.02239641657335,
+      "raw_pident": 59.292,
+      "aln_length": 904,
+      "nident": 536,
+      "qlen": 1090,
+      "slen": 893,
+      "evalue": 0.0,
+      "bitscore": 995.0,
+      "query_chains": [
+        "9pav_B"
+      ],
+      "subject_chains": [
+        "7s6d_B"
+      ],
+      "query_clusters": [
+        "component:seq:25546d28da4e"
+      ],
+      "subject_clusters": [
+        "component:seq:115c6f4daa6f"
+      ]
+    }
+  },
+  "component:seq:b0297099ab39": {
+    "cluster": "component:seq:b0297099ab39",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:71ace1d64e96": {
+    "cluster": "component:seq:71ace1d64e96",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:37543831bf7a": {
+    "cluster": "component:seq:37543831bf7a",
+    "max_identity": 99.48186528497409,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04170",
+      "subject": "seq04169",
+      "cov_corrected_identity": 99.48186528497409,
+      "raw_pident": 97.959,
+      "aln_length": 196,
+      "nident": 192,
+      "qlen": 193,
+      "slen": 197,
+      "evalue": 4.33e-143,
+      "bitscore": 393.0,
+      "query_chains": [
+        "9au1_R"
+      ],
+      "subject_chains": [
+        "9atm_R"
+      ],
+      "query_clusters": [
+        "component:seq:37543831bf7a"
+      ],
+      "subject_clusters": [
+        "component:seq:0d28b60153a0"
+      ]
+    }
+  },
+  "component:seq:de0166e7c87f": {
+    "cluster": "component:seq:de0166e7c87f",
+    "max_identity": 74.47916666666667,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02199",
+      "subject": "seq02724",
+      "cov_corrected_identity": 74.47916666666667,
+      "raw_pident": 72.589,
+      "aln_length": 197,
+      "nident": 143,
+      "qlen": 192,
+      "slen": 197,
+      "evalue": 1.91e-100,
+      "bitscore": 285.0,
+      "query_chains": [
+        "8j5j_A"
+      ],
+      "subject_chains": [
+        "7oaq_EEE"
+      ],
+      "query_clusters": [
+        "component:seq:de0166e7c87f"
+      ],
+      "subject_clusters": [
+        "component:seq:0a3bc85d4a8c"
+      ]
+    }
+  },
+  "component:seq:278c01d7901f": {
+    "cluster": "component:seq:278c01d7901f",
+    "max_identity": 0.0,
+    "n_sequences": 2,
+    "best_pair": null
+  },
+  "component:seq:96f125a01f11": {
+    "cluster": "component:seq:96f125a01f11",
+    "max_identity": 99.41176470588235,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq02321",
+      "subject": "seq02936",
+      "cov_corrected_identity": 99.41176470588235,
+      "raw_pident": 77.88,
+      "aln_length": 217,
+      "nident": 169,
+      "qlen": 170,
+      "slen": 234,
+      "evalue": 1.63e-114,
+      "bitscore": 321.0,
+      "query_chains": [
+        "6mek_C"
+      ],
+      "subject_chains": [
+        "6mej_C"
+      ],
+      "query_clusters": [
+        "component:seq:96f125a01f11"
+      ],
+      "subject_clusters": [
+        "component:seq:3c9a336e8e16"
+      ]
+    }
+  },
+  "component:seq:d148529e0834": {
+    "cluster": "component:seq:d148529e0834",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:e73e6431e2fd": {
+    "cluster": "component:seq:e73e6431e2fd",
+    "max_identity": 24.56140350877193,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03375",
+      "subject": "seq03956",
+      "cov_corrected_identity": 24.56140350877193,
+      "raw_pident": 24.561,
+      "aln_length": 456,
+      "nident": 112,
+      "qlen": 481,
+      "slen": 456,
+      "evalue": 1.6e-28,
+      "bitscore": 114.0,
+      "query_chains": [
+        "9r1f_A"
+      ],
+      "subject_chains": [
+        "7php_A"
+      ],
+      "query_clusters": [
+        "component:seq:e73e6431e2fd"
+      ],
+      "subject_clusters": [
+        "component:seq:3a08580794cc"
+      ]
+    }
+  },
+  "component:seq:e16eb7bc27d1": {
+    "cluster": "component:seq:e16eb7bc27d1",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq02430",
+      "subject": "seq02429",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 99.535,
+      "aln_length": 215,
+      "nident": 214,
+      "qlen": 216,
+      "slen": 214,
+      "evalue": 1.3e-160,
+      "bitscore": 439.0,
+      "query_chains": [
+        "7saj_A",
+        "7saj_C",
+        "7saj_E",
+        "7saj_G"
+      ],
+      "subject_chains": [
+        "6ir2_A"
+      ],
+      "query_clusters": [
+        "component:seq:e16eb7bc27d1"
+      ],
+      "subject_clusters": [
+        "component:seq:4d5b4fd62a85"
+      ]
+    }
+  },
+  "component:seq:78a338620bb6": {
+    "cluster": "component:seq:78a338620bb6",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:3652177d48f2": {
+    "cluster": "component:seq:3652177d48f2",
+    "max_identity": 30.434782608695652,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02448",
+      "subject": "seq04456",
+      "cov_corrected_identity": 30.434782608695652,
+      "raw_pident": 26.119,
+      "aln_length": 268,
+      "nident": 70,
+      "qlen": 1853,
+      "slen": 230,
+      "evalue": 9.93e-09,
+      "bitscore": 54.3,
+      "query_chains": [
+        "7z12_A"
+      ],
+      "subject_chains": [
+        "4k2u_A"
+      ],
+      "query_clusters": [
+        "component:seq:3652177d48f2"
+      ],
+      "subject_clusters": [
+        "component:seq:e15d7076f489"
+      ]
+    }
+  },
+  "component:seq:722775997e0c": {
+    "cluster": "component:seq:722775997e0c",
+    "max_identity": 81.04575163398692,
+    "n_sequences": 5,
+    "best_pair": {
+      "query": "seq02468",
+      "subject": "seq00335",
+      "cov_corrected_identity": 81.04575163398692,
+      "raw_pident": 82.119,
+      "aln_length": 151,
+      "nident": 124,
+      "qlen": 153,
+      "slen": 153,
+      "evalue": 8.85e-86,
+      "bitscore": 244.0,
+      "query_chains": [
+        "8zd5_A",
+        "8zd5_D",
+        "8zd5_G",
+        "8zd5_J"
+      ],
+      "subject_chains": [
+        "7nxx_A",
+        "8k33_A",
+        "8k33_C",
+        "8k33_E"
+      ],
+      "query_clusters": [
+        "component:seq:722775997e0c"
+      ],
+      "subject_clusters": [
+        "component:seq:6a26973eeb19"
+      ]
+    }
+  },
+  "component:seq:ddca0d461099": {
+    "cluster": "component:seq:ddca0d461099",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:8cd1358410a2": {
+    "cluster": "component:seq:8cd1358410a2",
+    "max_identity": 27.77777777777778,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02502",
+      "subject": "seq03742",
+      "cov_corrected_identity": 27.77777777777778,
+      "raw_pident": 25.49,
+      "aln_length": 255,
+      "nident": 65,
+      "qlen": 234,
+      "slen": 569,
+      "evalue": 1.37e-10,
+      "bitscore": 57.0,
+      "query_chains": [
+        "7kyo_B"
+      ],
+      "subject_chains": [
+        "6qv0_C"
+      ],
+      "query_clusters": [
+        "component:seq:8cd1358410a2"
+      ],
+      "subject_clusters": [
+        "component:seq:322ac99f0052"
+      ]
+    }
+  },
+  "component:seq:26734065d930": {
+    "cluster": "component:seq:26734065d930",
+    "max_identity": 18.143459915611814,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02533",
+      "subject": "seq01435",
+      "cov_corrected_identity": 18.143459915611814,
+      "raw_pident": 25.294,
+      "aln_length": 170,
+      "nident": 43,
+      "qlen": 246,
+      "slen": 237,
+      "evalue": 2.26e-08,
+      "bitscore": 49.7,
+      "query_chains": [
+        "6jhs_C"
+      ],
+      "subject_chains": [
+        "7x3d_C",
+        "7x3e_C"
+      ],
+      "query_clusters": [
+        "component:seq:26734065d930"
+      ],
+      "subject_clusters": [
+        "component:seq:2d36a7ad3cfd"
+      ]
+    }
+  },
+  "component:seq:9d02d60e1fd5": {
+    "cluster": "component:seq:9d02d60e1fd5",
+    "max_identity": 22.82471626733922,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02538",
+      "subject": "seq02545",
+      "cov_corrected_identity": 22.82471626733922,
+      "raw_pident": 22.97,
+      "aln_length": 788,
+      "nident": 181,
+      "qlen": 1187,
+      "slen": 793,
+      "evalue": 1.44e-25,
+      "bitscore": 110.0,
+      "query_chains": [
+        "9ea9_B"
+      ],
+      "subject_chains": [
+        "7k84_A"
+      ],
+      "query_clusters": [
+        "component:seq:9d02d60e1fd5"
+      ],
+      "subject_clusters": [
+        "component:seq:5d1f8b99e68a"
+      ]
+    }
+  },
+  "component:seq:7f378540028c": {
+    "cluster": "component:seq:7f378540028c",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq02550",
+      "subject": "seq03668",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 71,
+      "nident": 71,
+      "qlen": 71,
+      "slen": 75,
+      "evalue": 2e-48,
+      "bitscore": 144.0,
+      "query_chains": [
+        "7nbb_A",
+        "7nbb_E"
+      ],
+      "subject_chains": [
+        "3dvg_X",
+        "3dvn_U",
+        "3dvn_X"
+      ],
+      "query_clusters": [
+        "component:seq:7f378540028c"
+      ],
+      "subject_clusters": [
+        "component:seq:0c257726f9a0"
+      ]
+    }
+  },
+  "component:seq:163ad41769a8": {
+    "cluster": "component:seq:163ad41769a8",
+    "max_identity": 96.7005076142132,
+    "n_sequences": 8,
+    "best_pair": {
+      "query": "seq02568",
+      "subject": "seq02566",
+      "cov_corrected_identity": 96.7005076142132,
+      "raw_pident": 96.947,
+      "aln_length": 393,
+      "nident": 381,
+      "qlen": 394,
+      "slen": 493,
+      "evalue": 0.0,
+      "bitscore": 804.0,
+      "query_chains": [
+        "4ut6_A"
+      ],
+      "subject_chains": [
+        "7cth_A"
+      ],
+      "query_clusters": [
+        "component:seq:163ad41769a8"
+      ],
+      "subject_clusters": [
+        "component:seq:407e68206063"
+      ]
+    }
+  },
+  "component:seq:95e934abbc65": {
+    "cluster": "component:seq:95e934abbc65",
+    "max_identity": 98.33795013850416,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02578",
+      "subject": "seq02580",
+      "cov_corrected_identity": 98.33795013850416,
+      "raw_pident": 91.26,
+      "aln_length": 389,
+      "nident": 355,
+      "qlen": 493,
+      "slen": 361,
+      "evalue": 0.0,
+      "bitscore": 700.0,
+      "query_chains": [
+        "8jn4_C",
+        "8jn4_E"
+      ],
+      "subject_chains": [
+        "7a3p_B"
+      ],
+      "query_clusters": [
+        "component:seq:95e934abbc65"
+      ],
+      "subject_clusters": [
+        "component:seq:9712143f1334"
+      ]
+    }
+  },
+  "component:seq:659fe09d84bf": {
+    "cluster": "component:seq:659fe09d84bf",
+    "max_identity": 60.95890410958904,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02599",
+      "subject": "seq04697",
+      "cov_corrected_identity": 60.95890410958904,
+      "raw_pident": 54.103,
+      "aln_length": 329,
+      "nident": 178,
+      "qlen": 332,
+      "slen": 292,
+      "evalue": 2.16e-133,
+      "bitscore": 378.0,
+      "query_chains": [
+        "4uao_A"
+      ],
+      "subject_chains": [
+        "2q8b_A"
+      ],
+      "query_clusters": [
+        "component:seq:659fe09d84bf"
+      ],
+      "subject_clusters": [
+        "component:seq:cc8680ff21d8"
+      ]
+    }
+  },
+  "component:seq:4daa875fb5f0": {
+    "cluster": "component:seq:4daa875fb5f0",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:78ee2efa9055": {
+    "cluster": "component:seq:78ee2efa9055",
+    "max_identity": 96.045197740113,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq02642",
+      "subject": "seq00791",
+      "cov_corrected_identity": 96.045197740113,
+      "raw_pident": 96.591,
+      "aln_length": 176,
+      "nident": 170,
+      "qlen": 328,
+      "slen": 177,
+      "evalue": 9.85e-130,
+      "bitscore": 364.0,
+      "query_chains": [
+        "7k93_B"
+      ],
+      "subject_chains": [
+        "7bsc_A"
+      ],
+      "query_clusters": [
+        "component:seq:78ee2efa9055"
+      ],
+      "subject_clusters": [
+        "component:seq:72b657e89dc7"
+      ]
+    }
+  },
+  "component:seq:08d4a0c290fb": {
+    "cluster": "component:seq:08d4a0c290fb",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:4c792ae3a65d": {
+    "cluster": "component:seq:4c792ae3a65d",
+    "max_identity": 62.82051282051282,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02652",
+      "subject": "seq04106",
+      "cov_corrected_identity": 62.82051282051282,
+      "raw_pident": 58.683,
+      "aln_length": 167,
+      "nident": 98,
+      "qlen": 170,
+      "slen": 156,
+      "evalue": 1.12e-65,
+      "bitscore": 194.0,
+      "query_chains": [
+        "6vlw_G"
+      ],
+      "subject_chains": [
+        "5kzc_F"
+      ],
+      "query_clusters": [
+        "component:seq:4c792ae3a65d"
+      ],
+      "subject_clusters": [
+        "component:seq:74f47dfab877"
+      ]
+    }
+  },
+  "component:seq:00eaef2295e1": {
+    "cluster": "component:seq:00eaef2295e1",
+    "max_identity": 23.67149758454106,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq02671",
+      "subject": "seq02701",
+      "cov_corrected_identity": 23.67149758454106,
+      "raw_pident": 24.257,
+      "aln_length": 202,
+      "nident": 49,
+      "qlen": 256,
+      "slen": 207,
+      "evalue": 0.000257,
+      "bitscore": 37.4,
+      "query_chains": [
+        "6gv4_A"
+      ],
+      "subject_chains": [
+        "9vg1_B"
+      ],
+      "query_clusters": [
+        "component:seq:00eaef2295e1"
+      ],
+      "subject_clusters": [
+        "component:seq:08cece8a245c"
+      ]
+    }
+  },
+  "component:seq:4a810c851039": {
+    "cluster": "component:seq:4a810c851039",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq02745",
+      "subject": "seq02244",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 120,
+      "nident": 120,
+      "qlen": 554,
+      "slen": 120,
+      "evalue": 1.73e-82,
+      "bitscore": 249.0,
+      "query_chains": [
+        "9ogl_C",
+        "9ogl_C"
+      ],
+      "subject_chains": [
+        "7t75_B"
+      ],
+      "query_clusters": [
+        "component:seq:4a810c851039"
+      ],
+      "subject_clusters": [
+        "component:seq:108949115734"
+      ]
+    }
+  },
+  "component:seq:0edd3574e94b": {
+    "cluster": "component:seq:0edd3574e94b",
+    "max_identity": 98.85496183206106,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03968",
+      "subject": "seq03969",
+      "cov_corrected_identity": 98.85496183206106,
+      "raw_pident": 98.855,
+      "aln_length": 262,
+      "nident": 259,
+      "qlen": 262,
+      "slen": 262,
+      "evalue": 0.0,
+      "bitscore": 547.0,
+      "query_chains": [
+        "8e8s_2"
+      ],
+      "subject_chains": [
+        "8e8y_2"
+      ],
+      "query_clusters": [
+        "component:seq:0edd3574e94b"
+      ],
+      "subject_clusters": [
+        "component:seq:b4c83de13dd1"
+      ]
+    }
+  },
+  "component:seq:17b23ea94cbf": {
+    "cluster": "component:seq:17b23ea94cbf",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:e96a556ec191": {
+    "cluster": "component:seq:e96a556ec191",
+    "max_identity": 73.58247422680412,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02823",
+      "subject": "seq00207",
+      "cov_corrected_identity": 73.58247422680412,
+      "raw_pident": 73.488,
+      "aln_length": 777,
+      "nident": 571,
+      "qlen": 778,
+      "slen": 776,
+      "evalue": 0.0,
+      "bitscore": 1209.0,
+      "query_chains": [
+        "7ldd_B",
+        "7ldd_D"
+      ],
+      "subject_chains": [
+        "7ldd_A",
+        "7ldd_C"
+      ],
+      "query_clusters": [
+        "component:seq:e96a556ec191"
+      ],
+      "subject_clusters": [
+        "component:seq:e6101c015d54"
+      ]
+    }
+  },
+  "component:seq:de5aa7f69931": {
+    "cluster": "component:seq:de5aa7f69931",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:b2656d2a4fd8": {
+    "cluster": "component:seq:b2656d2a4fd8",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:a92c5bf4b264": {
+    "cluster": "component:seq:a92c5bf4b264",
+    "max_identity": 33.74741200828157,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq02872",
+      "subject": "seq01348",
+      "cov_corrected_identity": 33.74741200828157,
+      "raw_pident": 31.589,
+      "aln_length": 516,
+      "nident": 163,
+      "qlen": 483,
+      "slen": 655,
+      "evalue": 8.05e-60,
+      "bitscore": 204.0,
+      "query_chains": [
+        "8bf4_C"
+      ],
+      "subject_chains": [
+        "9j4c_A"
+      ],
+      "query_clusters": [
+        "component:seq:a92c5bf4b264"
+      ],
+      "subject_clusters": [
+        "component:seq:795ca2ccec2c"
+      ]
+    }
+  },
+  "component:seq:b610485ecd26": {
+    "cluster": "component:seq:b610485ecd26",
+    "max_identity": 69.1588785046729,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq02897",
+      "subject": "seq03840",
+      "cov_corrected_identity": 69.1588785046729,
+      "raw_pident": 63.248,
+      "aln_length": 234,
+      "nident": 148,
+      "qlen": 236,
+      "slen": 214,
+      "evalue": 4.57e-101,
+      "bitscore": 289.0,
+      "query_chains": [
+        "9xzx_A"
+      ],
+      "subject_chains": [
+        "4rgn_A"
+      ],
+      "query_clusters": [
+        "component:seq:b610485ecd26"
+      ],
+      "subject_clusters": [
+        "component:seq:67e5d2f1d967"
+      ]
+    }
+  },
+  "component:seq:7bca15c13fa8": {
+    "cluster": "component:seq:7bca15c13fa8",
+    "max_identity": 99.48320413436693,
+    "n_sequences": 6,
+    "best_pair": {
+      "query": "seq02911",
+      "subject": "seq01007",
+      "cov_corrected_identity": 99.48320413436693,
+      "raw_pident": 99.483,
+      "aln_length": 387,
+      "nident": 385,
+      "qlen": 387,
+      "slen": 390,
+      "evalue": 0.0,
+      "bitscore": 806.0,
+      "query_chains": [
+        "8u1q_A"
+      ],
+      "subject_chains": [
+        "9cyh_A",
+        "9cyh_B",
+        "9cyh_C",
+        "9cyh_D"
+      ],
+      "query_clusters": [
+        "component:seq:7bca15c13fa8"
+      ],
+      "subject_clusters": [
+        "component:seq:ee21451e9e59"
+      ]
+    }
+  },
+  "component:seq:8a80bd6a4b6f": {
+    "cluster": "component:seq:8a80bd6a4b6f",
+    "max_identity": 75.65011820330969,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04181",
+      "subject": "seq01064",
+      "cov_corrected_identity": 75.65011820330969,
+      "raw_pident": 74.766,
+      "aln_length": 428,
+      "nident": 320,
+      "qlen": 431,
+      "slen": 423,
+      "evalue": 0.0,
+      "bitscore": 703.0,
+      "query_chains": [
+        "9p3y_B",
+        "9p3y_D",
+        "9p3y_F",
+        "9p3y_H"
+      ],
+      "subject_chains": [
+        "7qqb_B"
+      ],
+      "query_clusters": [
+        "component:seq:8a80bd6a4b6f"
+      ],
+      "subject_clusters": [
+        "component:seq:bfcba74e8460"
+      ]
+    }
+  },
+  "component:seq:903827f15ba1": {
+    "cluster": "component:seq:903827f15ba1",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:b4e077877fcf": {
+    "cluster": "component:seq:b4e077877fcf",
+    "max_identity": 29.25531914893617,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03030",
+      "subject": "seq01897",
+      "cov_corrected_identity": 29.25531914893617,
+      "raw_pident": 27.094,
+      "aln_length": 203,
+      "nident": 55,
+      "qlen": 188,
+      "slen": 291,
+      "evalue": 1.45e-05,
+      "bitscore": 40.8,
+      "query_chains": [
+        "4i18_C"
+      ],
+      "subject_chains": [
+        "9mfg_D"
+      ],
+      "query_clusters": [
+        "component:seq:b4e077877fcf"
+      ],
+      "subject_clusters": [
+        "component:seq:f168fbceb33c"
+      ]
+    }
+  },
+  "component:seq:072734a497a5": {
+    "cluster": "component:seq:072734a497a5",
+    "max_identity": 18.93644617380026,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03044",
+      "subject": "seq00207",
+      "cov_corrected_identity": 18.93644617380026,
+      "raw_pident": 29.259,
+      "aln_length": 499,
+      "nident": 146,
+      "qlen": 771,
+      "slen": 776,
+      "evalue": 1.34e-47,
+      "bitscore": 177.0,
+      "query_chains": [
+        "10fd_D"
+      ],
+      "subject_chains": [
+        "7ldd_A",
+        "7ldd_C"
+      ],
+      "query_clusters": [
+        "component:seq:072734a497a5"
+      ],
+      "subject_clusters": [
+        "component:seq:e6101c015d54"
+      ]
+    }
+  },
+  "component:seq:1f4d250f62e8": {
+    "cluster": "component:seq:1f4d250f62e8",
+    "max_identity": 0.0,
+    "n_sequences": 6,
+    "best_pair": null
+  },
+  "component:seq:04a4ec998cb3": {
+    "cluster": "component:seq:04a4ec998cb3",
+    "max_identity": 92.71844660194175,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03083",
+      "subject": "seq03081",
+      "cov_corrected_identity": 92.71844660194175,
+      "raw_pident": 92.718,
+      "aln_length": 206,
+      "nident": 191,
+      "qlen": 206,
+      "slen": 206,
+      "evalue": 2.65e-147,
+      "bitscore": 404.0,
+      "query_chains": [
+        "1adq_A"
+      ],
+      "subject_chains": [
+        "8f8w_E",
+        "8f8w_E",
+        "8f8x_A"
+      ],
+      "query_clusters": [
+        "component:seq:04a4ec998cb3"
+      ],
+      "subject_clusters": [
+        "component:seq:d9bda7843e80"
+      ]
+    }
+  },
+  "component:seq:152c40416f3b": {
+    "cluster": "component:seq:152c40416f3b",
+    "max_identity": 86.64688427299703,
+    "n_sequences": 17,
+    "best_pair": {
+      "query": "seq04581",
+      "subject": "seq02752",
+      "cov_corrected_identity": 86.64688427299703,
+      "raw_pident": 70.702,
+      "aln_length": 413,
+      "nident": 292,
+      "qlen": 337,
+      "slen": 435,
+      "evalue": 0.0,
+      "bitscore": 565.0,
+      "query_chains": [
+        "4h8w_G"
+      ],
+      "subject_chains": [
+        "8dok_E"
+      ],
+      "query_clusters": [
+        "component:seq:152c40416f3b"
+      ],
+      "subject_clusters": [
+        "component:seq:1932e319338b"
+      ]
+    }
+  },
+  "component:seq:7a696824d493": {
+    "cluster": "component:seq:7a696824d493",
+    "max_identity": 25.112107623318387,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03133",
+      "subject": "seq02479",
+      "cov_corrected_identity": 25.112107623318387,
+      "raw_pident": 32.37,
+      "aln_length": 173,
+      "nident": 56,
+      "qlen": 223,
+      "slen": 244,
+      "evalue": 1.33e-21,
+      "bitscore": 86.3,
+      "query_chains": [
+        "8v91_B",
+        "8v91_C",
+        "8v9d_A",
+        "8v9d_B"
+      ],
+      "subject_chains": [
+        "8uy6_A",
+        "8uy6_A",
+        "8uy6_C",
+        "8uy6_C"
+      ],
+      "query_clusters": [
+        "component:seq:7a696824d493"
+      ],
+      "subject_clusters": [
+        "component:seq:f5b63b5962c2"
+      ]
+    }
+  },
+  "component:seq:e2adbd7177b0": {
+    "cluster": "component:seq:e2adbd7177b0",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:2dc9f80ce0bb": {
+    "cluster": "component:seq:2dc9f80ce0bb",
+    "max_identity": 86.79245283018868,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03711",
+      "subject": "seq00607",
+      "cov_corrected_identity": 86.79245283018868,
+      "raw_pident": 87.204,
+      "aln_length": 211,
+      "nident": 184,
+      "qlen": 212,
+      "slen": 214,
+      "evalue": 1.88e-140,
+      "bitscore": 387.0,
+      "query_chains": [
+        "6ol6_B"
+      ],
+      "subject_chains": [
+        "1iai_L"
+      ],
+      "query_clusters": [
+        "component:seq:2dc9f80ce0bb"
+      ],
+      "subject_clusters": [
+        "component:seq:0c72455f25bf"
+      ]
+    }
+  },
+  "component:seq:b50b809e1f97": {
+    "cluster": "component:seq:b50b809e1f97",
+    "max_identity": 70.08547008547009,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03283",
+      "subject": "seq03421",
+      "cov_corrected_identity": 70.08547008547009,
+      "raw_pident": 68.333,
+      "aln_length": 120,
+      "nident": 82,
+      "qlen": 122,
+      "slen": 117,
+      "evalue": 1.17e-45,
+      "bitscore": 140.0,
+      "query_chains": [
+        "9pmt_N"
+      ],
+      "subject_chains": [
+        "7ul3_C",
+        "9mqi_C",
+        "9mqk_E"
+      ],
+      "query_clusters": [
+        "component:seq:b50b809e1f97"
+      ],
+      "subject_clusters": [
+        "component:seq:27f818139bc0"
+      ]
+    }
+  },
+  "component:seq:056bde91c161": {
+    "cluster": "component:seq:056bde91c161",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03372",
+      "subject": "seq03371",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 94.309,
+      "aln_length": 123,
+      "nident": 116,
+      "qlen": 124,
+      "slen": 116,
+      "evalue": 3.74e-80,
+      "bitscore": 228.0,
+      "query_chains": [
+        "9jzq_E"
+      ],
+      "subject_chains": [
+        "8v5q_G"
+      ],
+      "query_clusters": [
+        "component:seq:056bde91c161"
+      ],
+      "subject_clusters": [
+        "component:seq:fe9beff6b225"
+      ]
+    }
+  },
+  "component:seq:1e2227cccbde": {
+    "cluster": "component:seq:1e2227cccbde",
+    "max_identity": 37.944664031620555,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03425",
+      "subject": "seq00117",
+      "cov_corrected_identity": 37.944664031620555,
+      "raw_pident": 37.066,
+      "aln_length": 259,
+      "nident": 96,
+      "qlen": 253,
+      "slen": 448,
+      "evalue": 1.13e-50,
+      "bitscore": 168.0,
+      "query_chains": [
+        "5l8j_A"
+      ],
+      "subject_chains": [
+        "4yga_A"
+      ],
+      "query_clusters": [
+        "component:seq:1e2227cccbde"
+      ],
+      "subject_clusters": [
+        "component:seq:c607c9a3b743"
+      ]
+    }
+  },
+  "component:seq:38a6bf51127f": {
+    "cluster": "component:seq:38a6bf51127f",
+    "max_identity": 62.032085561497325,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03478",
+      "subject": "seq04729",
+      "cov_corrected_identity": 62.032085561497325,
+      "raw_pident": 75.817,
+      "aln_length": 153,
+      "nident": 116,
+      "qlen": 187,
+      "slen": 544,
+      "evalue": 6.21e-66,
+      "bitscore": 207.0,
+      "query_chains": [
+        "5zs0_C"
+      ],
+      "subject_chains": [
+        "9jmr_A"
+      ],
+      "query_clusters": [
+        "component:seq:38a6bf51127f"
+      ],
+      "subject_clusters": [
+        "component:seq:1c6e719ac716"
+      ]
+    }
+  },
+  "component:seq:0749528680a8": {
+    "cluster": "component:seq:0749528680a8",
+    "max_identity": 99.23371647509579,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03589",
+      "subject": "seq04712",
+      "cov_corrected_identity": 99.23371647509579,
+      "raw_pident": 98.479,
+      "aln_length": 263,
+      "nident": 259,
+      "qlen": 261,
+      "slen": 264,
+      "evalue": 0.0,
+      "bitscore": 538.0,
+      "query_chains": [
+        "8e8z_2",
+        "9oea_2"
+      ],
+      "subject_chains": [
+        "8e8l_2"
+      ],
+      "query_clusters": [
+        "component:seq:0749528680a8"
+      ],
+      "subject_clusters": [
+        "component:seq:004f0ca2700c"
+      ]
+    }
+  },
+  "component:seq:d3082b986931": {
+    "cluster": "component:seq:d3082b986931",
+    "max_identity": 85.2233676975945,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03603",
+      "subject": "seq03602",
+      "cov_corrected_identity": 85.2233676975945,
+      "raw_pident": 79.233,
+      "aln_length": 313,
+      "nident": 248,
+      "qlen": 322,
+      "slen": 291,
+      "evalue": 9.69e-180,
+      "bitscore": 495.0,
+      "query_chains": [
+        "8e0e_A"
+      ],
+      "subject_chains": [
+        "8dam_A"
+      ],
+      "query_clusters": [
+        "component:seq:d3082b986931"
+      ],
+      "subject_clusters": [
+        "component:seq:90ad0e0dcbe6"
+      ]
+    }
+  },
+  "component:seq:60645045956c": {
+    "cluster": "component:seq:60645045956c",
+    "max_identity": 0.0,
+    "n_sequences": 8,
+    "best_pair": null
+  },
+  "component:seq:4ff8776b3a76": {
+    "cluster": "component:seq:4ff8776b3a76",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03726",
+      "subject": "seq01968",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 92.701,
+      "aln_length": 137,
+      "nident": 127,
+      "qlen": 154,
+      "slen": 127,
+      "evalue": 1.42e-88,
+      "bitscore": 251.0,
+      "query_chains": [
+        "6cvk_C"
+      ],
+      "subject_chains": [
+        "6cwd_F"
+      ],
+      "query_clusters": [
+        "component:seq:4ff8776b3a76"
+      ],
+      "subject_clusters": [
+        "component:seq:37ee62cdfe41"
+      ]
+    }
+  },
+  "component:seq:5f68c2bac0c5": {
+    "cluster": "component:seq:5f68c2bac0c5",
+    "max_identity": 96.5909090909091,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03775",
+      "subject": "seq01448",
+      "cov_corrected_identity": 96.5909090909091,
+      "raw_pident": 96.591,
+      "aln_length": 528,
+      "nident": 510,
+      "qlen": 528,
+      "slen": 543,
+      "evalue": 0.0,
+      "bitscore": 1040.0,
+      "query_chains": [
+        "5vqm_A",
+        "5vqm_B"
+      ],
+      "subject_chains": [
+        "6oq8_A",
+        "6oq8_B"
+      ],
+      "query_clusters": [
+        "component:seq:5f68c2bac0c5"
+      ],
+      "subject_clusters": [
+        "component:seq:07a124ee92ca"
+      ]
+    }
+  },
+  "component:seq:47f9c260d5c7": {
+    "cluster": "component:seq:47f9c260d5c7",
+    "max_identity": 98.59154929577464,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03791",
+      "subject": "seq02616",
+      "cov_corrected_identity": 98.59154929577464,
+      "raw_pident": 100.0,
+      "aln_length": 70,
+      "nident": 70,
+      "qlen": 71,
+      "slen": 73,
+      "evalue": 7.14e-50,
+      "bitscore": 147.0,
+      "query_chains": [
+        "25sb_A",
+        "25sb_A",
+        "25sb_A",
+        "25sb_D"
+      ],
+      "subject_chains": [
+        "25rg_A",
+        "25rg_A",
+        "25rg_D",
+        "25rg_D"
+      ],
+      "query_clusters": [
+        "component:seq:47f9c260d5c7"
+      ],
+      "subject_clusters": [
+        "component:seq:f1936a7db330"
+      ]
+    }
+  },
+  "component:seq:39316bcaf721": {
+    "cluster": "component:seq:39316bcaf721",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03823",
+      "subject": "seq03825",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 73,
+      "nident": 73,
+      "qlen": 73,
+      "slen": 86,
+      "evalue": 9.96e-53,
+      "bitscore": 155.0,
+      "query_chains": [
+        "2xxm_A"
+      ],
+      "subject_chains": [
+        "2xt1_A"
+      ],
+      "query_clusters": [
+        "component:seq:39316bcaf721"
+      ],
+      "subject_clusters": [
+        "component:seq:f23d492c8041"
+      ]
+    }
+  },
+  "component:seq:1f732cbfc6e4": {
+    "cluster": "component:seq:1f732cbfc6e4",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:25245593bc15": {
+    "cluster": "component:seq:25245593bc15",
+    "max_identity": 29.906542056074766,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq03832",
+      "subject": "seq00587",
+      "cov_corrected_identity": 29.906542056074766,
+      "raw_pident": 29.907,
+      "aln_length": 107,
+      "nident": 32,
+      "qlen": 107,
+      "slen": 213,
+      "evalue": 1.49e-08,
+      "bitscore": 47.0,
+      "query_chains": [
+        "8ew6_W"
+      ],
+      "subject_chains": [
+        "8u4v_L",
+        "9cmi_L"
+      ],
+      "query_clusters": [
+        "component:seq:25245593bc15"
+      ],
+      "subject_clusters": [
+        "component:seq:1454e41b661d",
+        "component:seq:bf4cc82ab50b"
+      ]
+    }
+  },
+  "component:seq:50aab752937b": {
+    "cluster": "component:seq:50aab752937b",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq03851",
+      "subject": "seq04722",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 94,
+      "nident": 94,
+      "qlen": 373,
+      "slen": 94,
+      "evalue": 9.51e-67,
+      "bitscore": 202.0,
+      "query_chains": [
+        "6j5g_A"
+      ],
+      "subject_chains": [
+        "6j5f_A"
+      ],
+      "query_clusters": [
+        "component:seq:50aab752937b"
+      ],
+      "subject_clusters": [
+        "component:seq:09d712a26825"
+      ]
+    }
+  },
+  "component:seq:87a0d49e2a4e": {
+    "cluster": "component:seq:87a0d49e2a4e",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq03866",
+      "subject": "seq03866",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 148,
+      "nident": 148,
+      "qlen": 148,
+      "slen": 148,
+      "evalue": 4.95e-109,
+      "bitscore": 303.0,
+      "query_chains": [
+        "4plj_A",
+        "9jig_A",
+        "9jig_B"
+      ],
+      "subject_chains": [
+        "4plj_A",
+        "9jig_A",
+        "9jig_B"
+      ],
+      "query_clusters": [
+        "component:seq:87a0d49e2a4e",
+        "component:seq:c88f445a98c5"
+      ],
+      "subject_clusters": [
+        "component:seq:87a0d49e2a4e",
+        "component:seq:c88f445a98c5"
+      ]
+    }
+  },
+  "component:seq:a832de2da8fa": {
+    "cluster": "component:seq:a832de2da8fa",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:2831321904e4": {
+    "cluster": "component:seq:2831321904e4",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:ce2af472cd13": {
+    "cluster": "component:seq:ce2af472cd13",
+    "max_identity": 0.0,
+    "n_sequences": 14,
+    "best_pair": null
+  },
+  "component:seq:3a508a501a7d": {
+    "cluster": "component:seq:3a508a501a7d",
+    "max_identity": 100.0,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq04003",
+      "subject": "seq04004",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 97,
+      "nident": 97,
+      "qlen": 97,
+      "slen": 100,
+      "evalue": 5.25e-70,
+      "bitscore": 200.0,
+      "query_chains": [
+        "2r29_A"
+      ],
+      "subject_chains": [
+        "6flb_G"
+      ],
+      "query_clusters": [
+        "component:seq:3a508a501a7d"
+      ],
+      "subject_clusters": [
+        "component:seq:407e68206063"
+      ]
+    }
+  },
+  "component:seq:c7e56632ee68": {
+    "cluster": "component:seq:c7e56632ee68",
+    "max_identity": 98.79518072289157,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04008",
+      "subject": "seq02606",
+      "cov_corrected_identity": 98.79518072289157,
+      "raw_pident": 86.316,
+      "aln_length": 95,
+      "nident": 82,
+      "qlen": 83,
+      "slen": 98,
+      "evalue": 2.47e-51,
+      "bitscore": 152.0,
+      "query_chains": [
+        "5vic_E"
+      ],
+      "subject_chains": [
+        "4l5f_E"
+      ],
+      "query_clusters": [
+        "component:seq:c7e56632ee68"
+      ],
+      "subject_clusters": [
+        "component:seq:3a3757e8c1f3"
+      ]
+    }
+  },
+  "component:seq:821daf6d7fc0": {
+    "cluster": "component:seq:821daf6d7fc0",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:cbec8eeb002b": {
+    "cluster": "component:seq:cbec8eeb002b",
+    "max_identity": 98.59484777517564,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04094",
+      "subject": "seq03361",
+      "cov_corrected_identity": 98.59484777517564,
+      "raw_pident": 98.595,
+      "aln_length": 427,
+      "nident": 421,
+      "qlen": 427,
+      "slen": 429,
+      "evalue": 0.0,
+      "bitscore": 868.0,
+      "query_chains": [
+        "9pum_A",
+        "9pum_B",
+        "9pup_A",
+        "9pup_B"
+      ],
+      "subject_chains": [
+        "9b2w_A"
+      ],
+      "query_clusters": [
+        "component:seq:cbec8eeb002b"
+      ],
+      "subject_clusters": [
+        "component:seq:175176f34f29"
+      ]
+    }
+  },
+  "component:seq:94a3617a2992": {
+    "cluster": "component:seq:94a3617a2992",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:fc79941e7577": {
+    "cluster": "component:seq:fc79941e7577",
+    "max_identity": 98.94736842105263,
+    "n_sequences": 4,
+    "best_pair": {
+      "query": "seq04142",
+      "subject": "seq02440",
+      "cov_corrected_identity": 98.94736842105263,
+      "raw_pident": 100.0,
+      "aln_length": 94,
+      "nident": 94,
+      "qlen": 95,
+      "slen": 96,
+      "evalue": 3.72e-68,
+      "bitscore": 195.0,
+      "query_chains": [
+        "4am0_T"
+      ],
+      "subject_chains": [
+        "4bz1_A"
+      ],
+      "query_clusters": [
+        "component:seq:fc79941e7577"
+      ],
+      "subject_clusters": [
+        "component:seq:6c60ee82a1bf"
+      ]
+    }
+  },
+  "component:seq:206e2b2feeb0": {
+    "cluster": "component:seq:206e2b2feeb0",
+    "max_identity": 100.0,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04144",
+      "subject": "seq02585",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 95,
+      "nident": 95,
+      "qlen": 95,
+      "slen": 366,
+      "evalue": 4.51e-65,
+      "bitscore": 196.0,
+      "query_chains": [
+        "5aam_C"
+      ],
+      "subject_chains": [
+        "7a3q_B"
+      ],
+      "query_clusters": [
+        "component:seq:206e2b2feeb0"
+      ],
+      "subject_clusters": [
+        "component:seq:2430d8722b91"
+      ]
+    }
+  },
+  "component:seq:4b6c199ffb50": {
+    "cluster": "component:seq:4b6c199ffb50",
+    "max_identity": 81.05263157894737,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04166",
+      "subject": "seq02726",
+      "cov_corrected_identity": 81.05263157894737,
+      "raw_pident": 79.381,
+      "aln_length": 194,
+      "nident": 154,
+      "qlen": 195,
+      "slen": 190,
+      "evalue": 4.95e-110,
+      "bitscore": 309.0,
+      "query_chains": [
+        "7ttm_A"
+      ],
+      "subject_chains": [
+        "7tty_A"
+      ],
+      "query_clusters": [
+        "component:seq:4b6c199ffb50"
+      ],
+      "subject_clusters": [
+        "component:seq:69e1e8bfa95c"
+      ]
+    }
+  },
+  "component:seq:7d1803660b8d": {
+    "cluster": "component:seq:7d1803660b8d",
+    "max_identity": 0.0,
+    "n_sequences": 4,
+    "best_pair": null
+  },
+  "component:seq:9702838dc231": {
+    "cluster": "component:seq:9702838dc231",
+    "max_identity": 43.40659340659341,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04236",
+      "subject": "seq03111",
+      "cov_corrected_identity": 43.40659340659341,
+      "raw_pident": 44.258,
+      "aln_length": 357,
+      "nident": 158,
+      "qlen": 364,
+      "slen": 372,
+      "evalue": 1.54e-104,
+      "bitscore": 309.0,
+      "query_chains": [
+        "9t5z_B"
+      ],
+      "subject_chains": [
+        "9dao_B"
+      ],
+      "query_clusters": [
+        "component:seq:9702838dc231"
+      ],
+      "subject_clusters": [
+        "component:seq:0d5d24eb65f2"
+      ]
+    }
+  },
+  "component:seq:3752c4d5f4f4": {
+    "cluster": "component:seq:3752c4d5f4f4",
+    "max_identity": 100.0,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04281",
+      "subject": "seq00886",
+      "cov_corrected_identity": 100.0,
+      "raw_pident": 100.0,
+      "aln_length": 211,
+      "nident": 211,
+      "qlen": 1169,
+      "slen": 211,
+      "evalue": 1.04e-146,
+      "bitscore": 436.0,
+      "query_chains": [
+        "6nb3_A",
+        "6nb3_A",
+        "6nb3_C"
+      ],
+      "subject_chains": [
+        "9v0o_C",
+        "9v0o_D",
+        "9v0o_F",
+        "9v0o_H"
+      ],
+      "query_clusters": [
+        "component:seq:3752c4d5f4f4"
+      ],
+      "subject_clusters": [
+        "component:seq:3872f27f85db"
+      ]
+    }
+  },
+  "component:seq:7d57f98c23ba": {
+    "cluster": "component:seq:7d57f98c23ba",
+    "max_identity": 39.77272727272727,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04303",
+      "subject": "seq01531",
+      "cov_corrected_identity": 39.77272727272727,
+      "raw_pident": 42.169,
+      "aln_length": 83,
+      "nident": 35,
+      "qlen": 88,
+      "slen": 276,
+      "evalue": 1.15e-16,
+      "bitscore": 68.9,
+      "query_chains": [
+        "6ddm_C"
+      ],
+      "subject_chains": [
+        "7bh8_A"
+      ],
+      "query_clusters": [
+        "component:seq:7d57f98c23ba"
+      ],
+      "subject_clusters": [
+        "component:seq:01381b6801b3"
+      ]
+    }
+  },
+  "component:seq:eda3b509452a": {
+    "cluster": "component:seq:eda3b509452a",
+    "max_identity": 78.57142857142857,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04304",
+      "subject": "seq00362",
+      "cov_corrected_identity": 78.57142857142857,
+      "raw_pident": 51.562,
+      "aln_length": 128,
+      "nident": 66,
+      "qlen": 84,
+      "slen": 154,
+      "evalue": 6.72e-33,
+      "bitscore": 108.0,
+      "query_chains": [
+        "3p30_A"
+      ],
+      "subject_chains": [
+        "5fyj_B"
+      ],
+      "query_clusters": [
+        "component:seq:eda3b509452a"
+      ],
+      "subject_clusters": [
+        "component:seq:c720345e933a"
+      ]
+    }
+  },
+  "component:seq:45786e4f3efe": {
+    "cluster": "component:seq:45786e4f3efe",
+    "max_identity": 99.51845906902086,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04320",
+      "subject": "seq04319",
+      "cov_corrected_identity": 99.51845906902086,
+      "raw_pident": 99.518,
+      "aln_length": 623,
+      "nident": 620,
+      "qlen": 623,
+      "slen": 623,
+      "evalue": 0.0,
+      "bitscore": 1279.0,
+      "query_chains": [
+        "44ab_A"
+      ],
+      "subject_chains": [
+        "7t4q_A"
+      ],
+      "query_clusters": [
+        "component:seq:45786e4f3efe"
+      ],
+      "subject_clusters": [
+        "component:seq:571f493680a1"
+      ]
+    }
+  },
+  "component:seq:f7162fd1c51d": {
+    "cluster": "component:seq:f7162fd1c51d",
+    "max_identity": 67.37044145873321,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04369",
+      "subject": "seq00087",
+      "cov_corrected_identity": 67.37044145873321,
+      "raw_pident": 66.603,
+      "aln_length": 527,
+      "nident": 351,
+      "qlen": 538,
+      "slen": 521,
+      "evalue": 0.0,
+      "bitscore": 696.0,
+      "query_chains": [
+        "9cp4_A"
+      ],
+      "subject_chains": [
+        "9k0o_A"
+      ],
+      "query_clusters": [
+        "component:seq:f7162fd1c51d"
+      ],
+      "subject_clusters": [
+        "component:seq:81844168eaa0"
+      ]
+    }
+  },
+  "component:seq:4991ce57059c": {
+    "cluster": "component:seq:4991ce57059c",
+    "max_identity": 33.333333333333336,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04375",
+      "subject": "seq02587",
+      "cov_corrected_identity": 33.333333333333336,
+      "raw_pident": 47.17,
+      "aln_length": 53,
+      "nident": 25,
+      "qlen": 75,
+      "slen": 111,
+      "evalue": 9.66e-11,
+      "bitscore": 50.1,
+      "query_chains": [
+        "6ywd_C"
+      ],
+      "subject_chains": [
+        "6xxv_C"
+      ],
+      "query_clusters": [
+        "component:seq:4991ce57059c"
+      ],
+      "subject_clusters": [
+        "component:seq:89c3832dd89a"
+      ]
+    }
+  },
+  "component:seq:664f22e72e83": {
+    "cluster": "component:seq:664f22e72e83",
+    "max_identity": 93.28165374677003,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq04431",
+      "subject": "seq04544",
+      "cov_corrected_identity": 93.28165374677003,
+      "raw_pident": 93.282,
+      "aln_length": 387,
+      "nident": 361,
+      "qlen": 387,
+      "slen": 387,
+      "evalue": 0.0,
+      "bitscore": 756.0,
+      "query_chains": [
+        "6lxi_A",
+        "6lxi_B"
+      ],
+      "subject_chains": [
+        "9kod_A",
+        "9kod_A",
+        "9kod_B",
+        "9kod_B"
+      ],
+      "query_clusters": [
+        "component:seq:664f22e72e83"
+      ],
+      "subject_clusters": [
+        "component:seq:7f1cf3c74e86"
+      ]
+    }
+  },
+  "component:seq:b339b048221c": {
+    "cluster": "component:seq:b339b048221c",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:d109cbad7510": {
+    "cluster": "component:seq:d109cbad7510",
+    "max_identity": 39.04761904761905,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04436",
+      "subject": "seq03357",
+      "cov_corrected_identity": 39.04761904761905,
+      "raw_pident": 47.674,
+      "aln_length": 258,
+      "nident": 123,
+      "qlen": 380,
+      "slen": 315,
+      "evalue": 8.13e-88,
+      "bitscore": 265.0,
+      "query_chains": [
+        "7jhg_A"
+      ],
+      "subject_chains": [
+        "8r4o_C",
+        "8r4o_E",
+        "8r4q_A",
+        "8r4q_C"
+      ],
+      "query_clusters": [
+        "component:seq:d109cbad7510"
+      ],
+      "subject_clusters": [
+        "component:seq:cf5db2d152b8"
+      ]
+    }
+  },
+  "component:seq:19312db8c15d": {
+    "cluster": "component:seq:19312db8c15d",
+    "max_identity": 94.54545454545455,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04437",
+      "subject": "seq04544",
+      "cov_corrected_identity": 94.54545454545455,
+      "raw_pident": 94.545,
+      "aln_length": 385,
+      "nident": 364,
+      "qlen": 385,
+      "slen": 387,
+      "evalue": 0.0,
+      "bitscore": 758.0,
+      "query_chains": [
+        "9nj2_A",
+        "9nj2_B",
+        "9nj2_C",
+        "9nj2_D"
+      ],
+      "subject_chains": [
+        "9kod_A",
+        "9kod_A",
+        "9kod_B",
+        "9kod_B"
+      ],
+      "query_clusters": [
+        "component:seq:19312db8c15d"
+      ],
+      "subject_clusters": [
+        "component:seq:7f1cf3c74e86"
+      ]
+    }
+  },
+  "component:seq:308b915aeefa": {
+    "cluster": "component:seq:308b915aeefa",
+    "max_identity": 95.07772020725389,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04439",
+      "subject": "seq03961",
+      "cov_corrected_identity": 95.07772020725389,
+      "raw_pident": 95.325,
+      "aln_length": 385,
+      "nident": 367,
+      "qlen": 387,
+      "slen": 386,
+      "evalue": 0.0,
+      "bitscore": 759.0,
+      "query_chains": [
+        "9dpc_D"
+      ],
+      "subject_chains": [
+        "4qnp_A",
+        "4qnp_B",
+        "4qnp_B"
+      ],
+      "query_clusters": [
+        "component:seq:308b915aeefa"
+      ],
+      "subject_clusters": [
+        "component:seq:d195d83de084"
+      ]
+    }
+  },
+  "component:seq:2cd921ff32b5": {
+    "cluster": "component:seq:2cd921ff32b5",
+    "max_identity": 16.24548736462094,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04441",
+      "subject": "seq01882",
+      "cov_corrected_identity": 16.24548736462094,
+      "raw_pident": 24.862,
+      "aln_length": 181,
+      "nident": 45,
+      "qlen": 281,
+      "slen": 277,
+      "evalue": 8.58e-05,
+      "bitscore": 39.7,
+      "query_chains": [
+        "7kzz_A",
+        "7kzz_B"
+      ],
+      "subject_chains": [
+        "8j7w_B"
+      ],
+      "query_clusters": [
+        "component:seq:2cd921ff32b5"
+      ],
+      "subject_clusters": [
+        "component:seq:2ddb20a439bb"
+      ]
+    }
+  },
+  "component:seq:72823f2821a8": {
+    "cluster": "component:seq:72823f2821a8",
+    "max_identity": 40.74074074074074,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04469",
+      "subject": "seq01924",
+      "cov_corrected_identity": 40.74074074074074,
+      "raw_pident": 38.261,
+      "aln_length": 230,
+      "nident": 88,
+      "qlen": 720,
+      "slen": 216,
+      "evalue": 3.24e-45,
+      "bitscore": 157.0,
+      "query_chains": [
+        "9nrc_A"
+      ],
+      "subject_chains": [
+        "8fgx_C"
+      ],
+      "query_clusters": [
+        "component:seq:72823f2821a8"
+      ],
+      "subject_clusters": [
+        "component:seq:3fa4fba9020b"
+      ]
+    }
+  },
+  "component:seq:35666d6d5b42": {
+    "cluster": "component:seq:35666d6d5b42",
+    "max_identity": 34.25414364640884,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04503",
+      "subject": "seq01296",
+      "cov_corrected_identity": 34.25414364640884,
+      "raw_pident": 29.952,
+      "aln_length": 207,
+      "nident": 62,
+      "qlen": 181,
+      "slen": 210,
+      "evalue": 1.29e-17,
+      "bitscore": 73.6,
+      "query_chains": [
+        "9ly5_C"
+      ],
+      "subject_chains": [
+        "6x4t_A"
+      ],
+      "query_clusters": [
+        "component:seq:35666d6d5b42"
+      ],
+      "subject_clusters": [
+        "component:seq:a12420b02edf"
+      ]
+    }
+  },
+  "component:seq:8357ee0bc647": {
+    "cluster": "component:seq:8357ee0bc647",
+    "max_identity": 91.50326797385621,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04554",
+      "subject": "seq04550",
+      "cov_corrected_identity": 91.50326797385621,
+      "raw_pident": 91.503,
+      "aln_length": 153,
+      "nident": 140,
+      "qlen": 153,
+      "slen": 154,
+      "evalue": 8.28e-101,
+      "bitscore": 283.0,
+      "query_chains": [
+        "9bdh_C"
+      ],
+      "subject_chains": [
+        "8u08_C"
+      ],
+      "query_clusters": [
+        "component:seq:8357ee0bc647"
+      ],
+      "subject_clusters": [
+        "component:seq:189a40f4a7c9"
+      ]
+    }
+  },
+  "component:seq:e27527bead1f": {
+    "cluster": "component:seq:e27527bead1f",
+    "max_identity": 79.6923076923077,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04598",
+      "subject": "seq04614",
+      "cov_corrected_identity": 79.6923076923077,
+      "raw_pident": 75.953,
+      "aln_length": 341,
+      "nident": 259,
+      "qlen": 341,
+      "slen": 325,
+      "evalue": 0.0,
+      "bitscore": 519.0,
+      "query_chains": [
+        "5te4_G"
+      ],
+      "subject_chains": [
+        "4rx4_G"
+      ],
+      "query_clusters": [
+        "component:seq:e27527bead1f"
+      ],
+      "subject_clusters": [
+        "component:seq:617f31ade7e9"
+      ]
+    }
+  },
+  "component:seq:ff8884091236": {
+    "cluster": "component:seq:ff8884091236",
+    "max_identity": 0.0,
+    "n_sequences": 1,
+    "best_pair": null
+  },
+  "component:seq:03e04efc60b8": {
+    "cluster": "component:seq:03e04efc60b8",
+    "max_identity": 21.53846153846154,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq04652",
+      "subject": "seq01953",
+      "cov_corrected_identity": 21.53846153846154,
+      "raw_pident": 27.273,
+      "aln_length": 154,
+      "nident": 42,
+      "qlen": 216,
+      "slen": 195,
+      "evalue": 2.91e-08,
+      "bitscore": 48.5,
+      "query_chains": [
+        "9h39_A"
+      ],
+      "subject_chains": [
+        "9h6v_A",
+        "9h6v_B"
+      ],
+      "query_clusters": [
+        "component:seq:03e04efc60b8"
+      ],
+      "subject_clusters": [
+        "component:seq:194e2bc28aa3"
+      ]
+    }
+  },
+  "component:seq:7ae23800dea0": {
+    "cluster": "component:seq:7ae23800dea0",
+    "max_identity": 92.95774647887323,
+    "n_sequences": 2,
+    "best_pair": {
+      "query": "seq04654",
+      "subject": "seq03105",
+      "cov_corrected_identity": 92.95774647887323,
+      "raw_pident": 93.839,
+      "aln_length": 211,
+      "nident": 198,
+      "qlen": 217,
+      "slen": 213,
+      "evalue": 2.91e-146,
+      "bitscore": 402.0,
+      "query_chains": [
+        "8q6k_L"
+      ],
+      "subject_chains": [
+        "8vs8_B"
+      ],
+      "query_clusters": [
+        "component:seq:7ae23800dea0"
+      ],
+      "subject_clusters": [
+        "component:seq:3a4cf2010dc8"
+      ]
+    }
+  },
+  "component:seq:ee07fe461691": {
+    "cluster": "component:seq:ee07fe461691",
+    "max_identity": 82.79569892473118,
+    "n_sequences": 1,
+    "best_pair": {
+      "query": "seq04714",
+      "subject": "seq04722",
+      "cov_corrected_identity": 82.79569892473118,
+      "raw_pident": 82.796,
+      "aln_length": 93,
+      "nident": 77,
+      "qlen": 93,
+      "slen": 94,
+      "evalue": 3.96e-57,
+      "bitscore": 167.0,
+      "query_chains": [
+        "7kyl_E",
+        "7kyl_Z"
+      ],
+      "subject_chains": [
+        "6j5f_A"
+      ],
+      "query_clusters": [
+        "component:seq:ee07fe461691"
+      ],
+      "subject_clusters": [
+        "component:seq:09d712a26825"
+      ]
+    }
+  },
+  "component:seq:61aa559cbcb3": {
+    "cluster": "component:seq:61aa559cbcb3",
+    "max_identity": 99.73474801061008,
+    "n_sequences": 3,
+    "best_pair": {
+      "query": "seq04730",
+      "subject": "seq04734",
+      "cov_corrected_identity": 99.73474801061008,
+      "raw_pident": 96.246,
+      "aln_length": 1172,
+      "nident": 1128,
+      "qlen": 1131,
+      "slen": 1190,
+      "evalue": 0.0,
+      "bitscore": 2267.0,
+      "query_chains": [
+        "7v3l_A"
+      ],
+      "subject_chains": [
+        "7x29_B",
+        "7x29_C"
+      ],
+      "query_clusters": [
+        "component:seq:61aa559cbcb3"
+      ],
+      "subject_clusters": [
+        "component:seq:43d767d93f95"
+      ]
+    }
+  }
+}

@@ -1,0 +1,867 @@
+{
+ "script_sha256": "2d9ca58af94863128dad18a16a5d041a9e106ffd0bd2d345dd386e08cd2c5523",
+ "feature_version": "atom_v2",
+ "python": "./.venv/bin/python",
+ "gemmi": "0.7.5",
+ "cache_dir": "cache_all",
+ "out_dir": "research/atom_cache",
+ "contexts_attempted": 6464,
+ "contexts_completed": 6464,
+ "contexts_reused": 545,
+ "residues": 2467314,
+ "runtime_seconds": 1865.8,
+ "workers": 3,
+ "feature_count": 104,
+ "feature_names": [
+  "orient_has_sidechain",
+  "orient_sc_arm_len",
+  "orient_dot_local_out",
+  "orient_dot_global_out",
+  "orient_dot_surface_normal",
+  "orient_local_out_dot_normal",
+  "orient_sc_sasa_fraction",
+  "orient_sc_minus_bb_depth",
+  "rdf0_4_log_count",
+  "rdf0_4_frac_C",
+  "rdf0_4_frac_N",
+  "rdf0_4_frac_O",
+  "rdf0_4_frac_S",
+  "rdf0_4_frac_backbone",
+  "rdf0_4_frac_exposed",
+  "rdf0_4_mean_atom_sasa",
+  "rdf4_8_log_count",
+  "rdf4_8_frac_C",
+  "rdf4_8_frac_N",
+  "rdf4_8_frac_O",
+  "rdf4_8_frac_S",
+  "rdf4_8_frac_backbone",
+  "rdf4_8_frac_exposed",
+  "rdf4_8_mean_atom_sasa",
+  "rdf8_12_log_count",
+  "rdf8_12_frac_C",
+  "rdf8_12_frac_N",
+  "rdf8_12_frac_O",
+  "rdf8_12_frac_S",
+  "rdf8_12_frac_backbone",
+  "rdf8_12_frac_exposed",
+  "rdf8_12_mean_atom_sasa",
+  "shape8_log_surf_count",
+  "shape8_eig0_frac",
+  "shape8_eig1_frac",
+  "shape8_planarity",
+  "shape8_anisotropy",
+  "shape8_convexity_dot",
+  "shape8_mean_signed_offset",
+  "shape12_log_surf_count",
+  "shape12_eig0_frac",
+  "shape12_eig1_frac",
+  "shape12_planarity",
+  "shape12_anisotropy",
+  "shape12_convexity_dot",
+  "shape12_mean_signed_offset",
+  "shape16_log_surf_count",
+  "shape16_eig0_frac",
+  "shape16_eig1_frac",
+  "shape16_planarity",
+  "shape16_anisotropy",
+  "shape16_convexity_dot",
+  "shape16_mean_signed_offset",
+  "ray_blocked_frac_6",
+  "ray_blocked_frac_9",
+  "ray_blocked_frac_13",
+  "ray_mean_free_path",
+  "ray_std_free_path",
+  "ray_open_anisotropy",
+  "depth_hull_signed",
+  "depth_hull_max_atom",
+  "depth_to_surface_atom",
+  "depth_bb_to_surface_atom",
+  "depth_com_over_rg",
+  "depth_com_over_max",
+  "sasa_total_abs",
+  "sasa_total_rel",
+  "sasa_bb_abs",
+  "sasa_bb_rel",
+  "sasa_sc_abs",
+  "sasa_sc_rel",
+  "sasa_polar_abs",
+  "sasa_polar_rel",
+  "sasa_apolar_abs",
+  "sasa_apolar_rel",
+  "sasa_frac_polar",
+  "sasa_frac_sidechain",
+  "sasa_exposed_atom_frac",
+  "elec5_log_donors",
+  "elec5_log_acceptors",
+  "elec5_log_positive",
+  "elec5_log_negative",
+  "elec5_net_charge_density",
+  "elec5_hbond_balance",
+  "elec8_log_donors",
+  "elec8_log_acceptors",
+  "elec8_log_positive",
+  "elec8_log_negative",
+  "elec8_net_charge_density",
+  "elec8_hbond_balance",
+  "elec_min_dist_charged",
+  "elec_min_dist_polar",
+  "elec_coulomb_12A",
+  "pack_density_6",
+  "pack_density_8",
+  "pack_density_10",
+  "chain_ca_span",
+  "chain_pseudo_angle_cos",
+  "chain_pseudo_dihedral_cos",
+  "chain_pseudo_dihedral_sin",
+  "chain_log_ca_within_10",
+  "chain_bb_hbond_count",
+  "chain_mean_contact_order",
+  "size_sc_heavy_atoms"
+ ],
+ "errors": [],
+ "constant_in_every_context": [],
+ "pooled_stats": [
+  {
+   "feature": "orient_has_sidechain",
+   "min": 0.0,
+   "mean": 0.929669,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_sc_arm_len",
+   "min": 0.0,
+   "mean": 0.499234,
+   "max": 0.964009
+  },
+  {
+   "feature": "orient_dot_local_out",
+   "min": -1.0,
+   "mean": 0.25573,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_dot_global_out",
+   "min": -0.999999,
+   "mean": 0.150547,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_dot_surface_normal",
+   "min": -0.999999,
+   "mean": 0.250131,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_local_out_dot_normal",
+   "min": 1e-06,
+   "mean": 0.824248,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_sc_sasa_fraction",
+   "min": 0.0,
+   "mean": 0.663393,
+   "max": 1.0
+  },
+  {
+   "feature": "orient_sc_minus_bb_depth",
+   "min": -0.971365,
+   "mean": -0.190033,
+   "max": 0.722112
+  },
+  {
+   "feature": "rdf0_4_log_count",
+   "min": 0.0,
+   "mean": 0.184924,
+   "max": 0.566866
+  },
+  {
+   "feature": "rdf0_4_frac_C",
+   "min": 0.0,
+   "mean": 0.332802,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_frac_N",
+   "min": 0.0,
+   "mean": 0.223073,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_frac_O",
+   "min": 0.0,
+   "mean": 0.276901,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_frac_S",
+   "min": 0.0,
+   "mean": 0.00717,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_frac_backbone",
+   "min": 0.0,
+   "mean": 0.579704,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_frac_exposed",
+   "min": 0.0,
+   "mean": 0.147992,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf0_4_mean_atom_sasa",
+   "min": 0.0,
+   "mean": 0.123927,
+   "max": 2.559647
+  },
+  {
+   "feature": "rdf4_8_log_count",
+   "min": 0.0,
+   "mean": 0.693279,
+   "max": 0.856944
+  },
+  {
+   "feature": "rdf4_8_frac_C",
+   "min": 0.0,
+   "mean": 0.646567,
+   "max": 0.923077
+  },
+  {
+   "feature": "rdf4_8_frac_N",
+   "min": 0.0,
+   "mean": 0.168533,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf4_8_frac_O",
+   "min": 0.0,
+   "mean": 0.178976,
+   "max": 0.538462
+  },
+  {
+   "feature": "rdf4_8_frac_S",
+   "min": 0.0,
+   "mean": 0.005921,
+   "max": 0.333333
+  },
+  {
+   "feature": "rdf4_8_frac_backbone",
+   "min": 0.0,
+   "mean": 0.541021,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf4_8_frac_exposed",
+   "min": 0.0,
+   "mean": 0.257236,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf4_8_mean_atom_sasa",
+   "min": 0.0,
+   "mean": 0.249243,
+   "max": 1.533476
+  },
+  {
+   "feature": "rdf8_12_log_count",
+   "min": 0.115525,
+   "mean": 0.814885,
+   "max": 0.994785
+  },
+  {
+   "feature": "rdf8_12_frac_C",
+   "min": 0.0,
+   "mean": 0.648912,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf8_12_frac_N",
+   "min": 0.0,
+   "mean": 0.163836,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf8_12_frac_O",
+   "min": 0.0,
+   "mean": 0.180301,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf8_12_frac_S",
+   "min": 0.0,
+   "mean": 0.006948,
+   "max": 0.181818
+  },
+  {
+   "feature": "rdf8_12_frac_backbone",
+   "min": 0.0,
+   "mean": 0.503558,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf8_12_frac_exposed",
+   "min": 0.0,
+   "mean": 0.262729,
+   "max": 1.0
+  },
+  {
+   "feature": "rdf8_12_mean_atom_sasa",
+   "min": 0.001195,
+   "mean": 0.260696,
+   "max": 2.696228
+  },
+  {
+   "feature": "shape8_log_surf_count",
+   "min": 0.0,
+   "mean": 0.479892,
+   "max": 0.616784
+  },
+  {
+   "feature": "shape8_eig0_frac",
+   "min": 0.0,
+   "mean": 0.143482,
+   "max": 0.328159
+  },
+  {
+   "feature": "shape8_eig1_frac",
+   "min": 0.0,
+   "mean": 0.332444,
+   "max": 0.490668
+  },
+  {
+   "feature": "shape8_planarity",
+   "min": 0.0,
+   "mean": 0.363099,
+   "max": 0.962607
+  },
+  {
+   "feature": "shape8_anisotropy",
+   "min": 0.0,
+   "mean": 0.704638,
+   "max": 1.0
+  },
+  {
+   "feature": "shape8_convexity_dot",
+   "min": -1.0,
+   "mean": -0.207302,
+   "max": 1.0
+  },
+  {
+   "feature": "shape8_mean_signed_offset",
+   "min": -0.895171,
+   "mean": -0.087881,
+   "max": 0.800347
+  },
+  {
+   "feature": "shape12_log_surf_count",
+   "min": 0.255966,
+   "mean": 0.64032,
+   "max": 0.751813
+  },
+  {
+   "feature": "shape12_eig0_frac",
+   "min": 0.01276,
+   "mean": 0.172493,
+   "max": 0.330424
+  },
+  {
+   "feature": "shape12_eig1_frac",
+   "min": 0.041201,
+   "mean": 0.343482,
+   "max": 0.489357
+  },
+  {
+   "feature": "shape12_planarity",
+   "min": 0.000167,
+   "mean": 0.351151,
+   "max": 0.956611
+  },
+  {
+   "feature": "shape12_anisotropy",
+   "min": 0.017886,
+   "mean": 0.622399,
+   "max": 0.985811
+  },
+  {
+   "feature": "shape12_convexity_dot",
+   "min": -1.0,
+   "mean": -0.541625,
+   "max": 1.0
+  },
+  {
+   "feature": "shape12_mean_signed_offset",
+   "min": -0.793189,
+   "mean": -0.152777,
+   "max": 0.5331
+  },
+  {
+   "feature": "shape16_log_surf_count",
+   "min": 0.420634,
+   "mean": 0.743286,
+   "max": 0.861183
+  },
+  {
+   "feature": "shape16_eig0_frac",
+   "min": 0.015958,
+   "mean": 0.184184,
+   "max": 0.329786
+  },
+  {
+   "feature": "shape16_eig1_frac",
+   "min": 0.029932,
+   "mean": 0.34069,
+   "max": 0.478087
+  },
+  {
+   "feature": "shape16_planarity",
+   "min": 0.000437,
+   "mean": 0.327578,
+   "max": 0.910688
+  },
+  {
+   "feature": "shape16_anisotropy",
+   "min": 0.022845,
+   "mean": 0.592077,
+   "max": 0.982351
+  },
+  {
+   "feature": "shape16_convexity_dot",
+   "min": -1.0,
+   "mean": -0.693975,
+   "max": 0.999999
+  },
+  {
+   "feature": "shape16_mean_signed_offset",
+   "min": -0.728201,
+   "mean": -0.188617,
+   "max": 0.408738
+  },
+  {
+   "feature": "ray_blocked_frac_6",
+   "min": 0.0,
+   "mean": 0.583177,
+   "max": 1.0
+  },
+  {
+   "feature": "ray_blocked_frac_9",
+   "min": 0.033333,
+   "mean": 0.702085,
+   "max": 1.0
+  },
+  {
+   "feature": "ray_blocked_frac_13",
+   "min": 0.033333,
+   "mean": 0.73812,
+   "max": 1.0
+  },
+  {
+   "feature": "ray_mean_free_path",
+   "min": 0.199451,
+   "mean": 0.52374,
+   "max": 0.9867
+  },
+  {
+   "feature": "ray_std_free_path",
+   "min": 0.026801,
+   "mean": 0.256477,
+   "max": 0.410833
+  },
+  {
+   "feature": "ray_open_anisotropy",
+   "min": 0.00029,
+   "mean": 0.097382,
+   "max": 0.210577
+  },
+  {
+   "feature": "depth_hull_signed",
+   "min": 0.0,
+   "mean": 0.507873,
+   "max": 1.0
+  },
+  {
+   "feature": "depth_hull_max_atom",
+   "min": -0.0,
+   "mean": 0.607874,
+   "max": 1.0
+  },
+  {
+   "feature": "depth_to_surface_atom",
+   "min": 0.045955,
+   "mean": 0.326052,
+   "max": 0.832797
+  },
+  {
+   "feature": "depth_bb_to_surface_atom",
+   "min": 0.048461,
+   "mean": 0.246871,
+   "max": 0.915063
+  },
+  {
+   "feature": "depth_com_over_rg",
+   "min": 0.005656,
+   "mean": 0.93592,
+   "max": 3.256043
+  },
+  {
+   "feature": "depth_com_over_max",
+   "min": 0.002804,
+   "mean": 0.48954,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_total_abs",
+   "min": 0.0,
+   "mean": 0.495326,
+   "max": 3.021188
+  },
+  {
+   "feature": "sasa_total_rel",
+   "min": 0.0,
+   "mean": 0.185949,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_bb_abs",
+   "min": 0.0,
+   "mean": 0.109218,
+   "max": 1.45305
+  },
+  {
+   "feature": "sasa_bb_rel",
+   "min": 0.0,
+   "mean": 0.077146,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_sc_abs",
+   "min": 0.0,
+   "mean": 0.386107,
+   "max": 2.243596
+  },
+  {
+   "feature": "sasa_sc_rel",
+   "min": 0.0,
+   "mean": 0.2895,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_polar_abs",
+   "min": 0.0,
+   "mean": 0.233395,
+   "max": 2.233823
+  },
+  {
+   "feature": "sasa_polar_rel",
+   "min": 0.0,
+   "mean": 0.155839,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_apolar_abs",
+   "min": 0.0,
+   "mean": 0.261931,
+   "max": 2.231487
+  },
+  {
+   "feature": "sasa_apolar_rel",
+   "min": 0.0,
+   "mean": 0.199955,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_frac_polar",
+   "min": 0.0,
+   "mean": 0.399318,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_frac_sidechain",
+   "min": 0.0,
+   "mean": 0.663393,
+   "max": 1.0
+  },
+  {
+   "feature": "sasa_exposed_atom_frac",
+   "min": 0.0,
+   "mean": 0.306464,
+   "max": 1.0
+  },
+  {
+   "feature": "elec5_log_donors",
+   "min": 0.0,
+   "mean": 0.266914,
+   "max": 0.693147
+  },
+  {
+   "feature": "elec5_log_acceptors",
+   "min": 0.0,
+   "mean": 0.323638,
+   "max": 0.659764
+  },
+  {
+   "feature": "elec5_log_positive",
+   "min": 0.0,
+   "mean": 0.035345,
+   "max": 0.752039
+  },
+  {
+   "feature": "elec5_log_negative",
+   "min": 0.0,
+   "mean": 0.045967,
+   "max": 0.804719
+  },
+  {
+   "feature": "elec5_net_charge_density",
+   "min": -3.75,
+   "mean": -0.023421,
+   "max": 6.666667
+  },
+  {
+   "feature": "elec5_hbond_balance",
+   "min": -0.9,
+   "mean": -0.128036,
+   "max": 0.888889
+  },
+  {
+   "feature": "elec8_log_donors",
+   "min": 0.0,
+   "mean": 0.643182,
+   "max": 0.902729
+  },
+  {
+   "feature": "elec8_log_acceptors",
+   "min": 0.0,
+   "mean": 0.645155,
+   "max": 0.9403
+  },
+  {
+   "feature": "elec8_log_positive",
+   "min": 0.0,
+   "mean": 0.160052,
+   "max": 0.972955
+  },
+  {
+   "feature": "elec8_log_negative",
+   "min": 0.0,
+   "mean": 0.198934,
+   "max": 1.098612
+  },
+  {
+   "feature": "elec8_net_charge_density",
+   "min": -1.764706,
+   "mean": -0.019718,
+   "max": 1.785714
+  },
+  {
+   "feature": "elec8_hbond_balance",
+   "min": -0.833333,
+   "mean": -0.004189,
+   "max": 0.833333
+  },
+  {
+   "feature": "elec_min_dist_charged",
+   "min": 0.03251,
+   "mean": 0.573039,
+   "max": 1.0
+  },
+  {
+   "feature": "elec_min_dist_polar",
+   "min": 0.03251,
+   "mean": 0.305425,
+   "max": 0.702437
+  },
+  {
+   "feature": "elec_coulomb_12A",
+   "min": -1.596576,
+   "mean": -0.037258,
+   "max": 1.116462
+  },
+  {
+   "feature": "pack_density_6",
+   "min": 0.0,
+   "mean": 0.31618,
+   "max": 0.928404
+  },
+  {
+   "feature": "pack_density_8",
+   "min": 0.0,
+   "mean": 0.329854,
+   "max": 0.857945
+  },
+  {
+   "feature": "pack_density_10",
+   "min": 0.009549,
+   "mean": 0.314769,
+   "max": 0.823627
+  },
+  {
+   "feature": "chain_ca_span",
+   "min": 0.0,
+   "mean": 0.860872,
+   "max": 1.5
+  },
+  {
+   "feature": "chain_pseudo_angle_cos",
+   "min": -0.999749,
+   "mean": -0.296999,
+   "max": 0.946001
+  },
+  {
+   "feature": "chain_pseudo_dihedral_cos",
+   "min": -1.0,
+   "mean": -0.090119,
+   "max": 1.0
+  },
+  {
+   "feature": "chain_pseudo_dihedral_sin",
+   "min": -1.0,
+   "mean": -0.114726,
+   "max": 1.0
+  },
+  {
+   "feature": "chain_log_ca_within_10",
+   "min": 0.0,
+   "mean": 0.574099,
+   "max": 0.818869
+  },
+  {
+   "feature": "chain_bb_hbond_count",
+   "min": 0.0,
+   "mean": 0.233454,
+   "max": 1.0
+  },
+  {
+   "feature": "chain_mean_contact_order",
+   "min": 0.0,
+   "mean": 0.654911,
+   "max": 1.424788
+  },
+  {
+   "feature": "size_sc_heavy_atoms",
+   "min": 0.0,
+   "mean": 0.477097,
+   "max": 3.0
+  }
+ ],
+ "epitope_sanity_check": {
+  "all_residues": {
+   "contexts_used": 1027,
+   "epitope_residues": 22392,
+   "other_residues": 343466,
+   "note": "within-context z-scored; Cohen's d and rank AUC, epitope vs other",
+   "top10": [
+    {
+     "feature": "pack_density_8",
+     "cohens_d": -0.5252,
+     "auc": 0.3274
+    },
+    {
+     "feature": "ray_blocked_frac_9",
+     "cohens_d": -0.5184,
+     "auc": 0.3283
+    },
+    {
+     "feature": "ray_mean_free_path",
+     "cohens_d": 0.5116,
+     "auc": 0.6689
+    },
+    {
+     "feature": "pack_density_10",
+     "cohens_d": -0.5114,
+     "auc": 0.3323
+    },
+    {
+     "feature": "ray_blocked_frac_13",
+     "cohens_d": -0.511,
+     "auc": 0.3271
+    },
+    {
+     "feature": "sasa_total_abs",
+     "cohens_d": 0.5071,
+     "auc": 0.6766
+    },
+    {
+     "feature": "sasa_total_rel",
+     "cohens_d": 0.5048,
+     "auc": 0.6756
+    },
+    {
+     "feature": "sasa_exposed_atom_frac",
+     "cohens_d": 0.4976,
+     "auc": 0.666
+    },
+    {
+     "feature": "rdf4_8_log_count",
+     "cohens_d": -0.489,
+     "auc": 0.3288
+    },
+    {
+     "feature": "ray_blocked_frac_6",
+     "cohens_d": -0.4861,
+     "auc": 0.3412
+    }
+   ]
+  },
+  "exposed_only_rsa20": {
+   "contexts_used": 1027,
+   "epitope_residues": 22392,
+   "other_residues": 182296,
+   "note": "within-context z-scored; Cohen's d and rank AUC, epitope vs other",
+   "top10": [
+    {
+     "feature": "shape8_convexity_dot",
+     "cohens_d": 0.5265,
+     "auc": 0.5724
+    },
+    {
+     "feature": "ray_open_anisotropy",
+     "cohens_d": -0.4939,
+     "auc": 0.4068
+    },
+    {
+     "feature": "ray_std_free_path",
+     "cohens_d": -0.4534,
+     "auc": 0.4148
+    },
+    {
+     "feature": "shape12_convexity_dot",
+     "cohens_d": 0.3892,
+     "auc": 0.5561
+    },
+    {
+     "feature": "pack_density_10",
+     "cohens_d": 0.3034,
+     "auc": 0.5644
+    },
+    {
+     "feature": "sasa_apolar_rel",
+     "cohens_d": -0.3018,
+     "auc": 0.4137
+    },
+    {
+     "feature": "shape8_mean_signed_offset",
+     "cohens_d": 0.3,
+     "auc": 0.5667
+    },
+    {
+     "feature": "pack_density_8",
+     "cohens_d": 0.2966,
+     "auc": 0.5611
+    },
+    {
+     "feature": "ray_blocked_frac_6",
+     "cohens_d": 0.2923,
+     "auc": 0.5692
+    },
+    {
+     "feature": "ray_blocked_frac_9",
+     "cohens_d": 0.2855,
+     "auc": 0.5667
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "reviewed_on": "2026-10-25",
+  "local_primary_sources": [
+    {
+      "path": "/Users/harsha/Desktop/claudeprojects/mosaic/lambert-ga-gitlab/src/pages/minibinder-design.mdx",
+      "bytes": 4670,
+      "sha256": "31e84feab03a636307b46312d1b4203cbb81fdea2fe1e02326508916a7680acf"
+    },
+    {
+      "path": "/Users/harsha/Desktop/claudeprojects/mosaic/lambert-ga-gitlab/src/components/modeling/MinibinderDesign.astro",
+      "bytes": 16056,
+      "sha256": "869c7d1a4f3a6d207645595e68c025c64ccb96fb125993e01736ce64b08b2de6"
+    },
+    {
+      "path": "/Users/harsha/Desktop/claudeprojects/mosaic/SWARM-iGEM-Upload/files-to-upload/modeling-main-protein-modeling.pdf",
+      "bytes": 134839,
+      "sha256": "1804ae454d9cf3b9a09c0bd11bbdf94b33f1f70e4f3fc6bd5380dae31409fec3"
+    }
+  ],
+  "user_clarification": "Harsha confirmed both BoltzGen and BoltzProt were used at different stages.",
+  "scientific_background": [
+    "https://journals.asm.org/doi/10.1128/msphere.00497-24",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5373406/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9117152/",
+    "https://www.ars.usda.gov/oc/br/ccd/index/"
+  ],
+  "diagram": {
+    "source": "Original SVG authored for this portfolio from the modeling report and assay summaries.",
+    "svg": "design-process.svg",
+    "png": "design-process.png",
+    "status": "Retrospective overview; does not establish which individual change caused the later positive result.",
+    "png_renderer": "sharp 160 dpi from the included SVG"
+  },
+  "evidence_limits": [
+    "Neutralization and bee protection are goals, not measured results.",
+    "Published 95 C thermostability does not establish heat or pH stability of this binder.",
+    "Post-assay consensus ranking is retrospective, not evidence of prospective selection."
+  ]
+}

@@ -1,0 +1,2274 @@
+{
+  "locked_model": "patch_classifier_d6_geom+atom+esm",
+  "combo": [
+    "geom",
+    "atom",
+    "esm"
+  ],
+  "projection": "residue score = max over enumerated patches containing it; uncovered residues floored below all covered ones",
+  "aggregation": "within-instance AUROC, mean within cluster, mean across clusters",
+  "join": "by residue key (BepiPred order matches cache order for only 105/110)",
+  "mean_patch_covered_fraction": 0.5967732388854545,
+  "n_instances": 110,
+  "subsets": {
+    "all_110": {
+      "n_instances": 110,
+      "arms": {
+        "prince_v2": {
+          "macro_auroc": 0.6722226791622435,
+          "n_scored": 110,
+          "n_clusters": 34
+        },
+        "bepipred3": {
+          "macro_auroc": 0.6524413923392663,
+          "n_scored": 110,
+          "n_clusters": 34
+        },
+        "pesto": {
+          "macro_auroc": 0.6520587061770211,
+          "n_scored": 110,
+          "n_clusters": 34
+        },
+        "prince_v2_covered": {
+          "macro_auroc": 0.6289384933478404,
+          "n_scored": 110,
+          "n_clusters": 34
+        },
+        "bepipred3_covered": {
+          "macro_auroc": 0.5993498107461598,
+          "n_scored": 110,
+          "n_clusters": 34
+        },
+        "pesto_covered": {
+          "macro_auroc": 0.5657260724149046,
+          "n_scored": 110,
+          "n_clusters": 34
+        }
+      }
+    },
+    "bepipred_clean": {
+      "n_instances": 93,
+      "arms": {
+        "prince_v2": {
+          "macro_auroc": 0.6851076449414047,
+          "n_scored": 93,
+          "n_clusters": 29
+        },
+        "bepipred3": {
+          "macro_auroc": 0.6618975386574345,
+          "n_scored": 93,
+          "n_clusters": 29
+        },
+        "pesto": {
+          "macro_auroc": 0.6506698581727192,
+          "n_scored": 93,
+          "n_clusters": 29
+        },
+        "prince_v2_covered": {
+          "macro_auroc": 0.6639071674161297,
+          "n_scored": 93,
+          "n_clusters": 29
+        },
+        "bepipred3_covered": {
+          "macro_auroc": 0.618651893972901,
+          "n_scored": 93,
+          "n_clusters": 29
+        },
+        "pesto_covered": {
+          "macro_auroc": 0.5639120244549327,
+          "n_scored": 93,
+          "n_clusters": 29
+        }
+      }
+    },
+    "bepipred_clean_strict": {
+      "n_instances": 71,
+      "arms": {
+        "prince_v2": {
+          "macro_auroc": 0.6700321684198085,
+          "n_scored": 71,
+          "n_clusters": 21
+        },
+        "bepipred3": {
+          "macro_auroc": 0.6799099680871674,
+          "n_scored": 71,
+          "n_clusters": 21
+        },
+        "pesto": {
+          "macro_auroc": 0.6326175348581831,
+          "n_scored": 71,
+          "n_clusters": 21
+        },
+        "prince_v2_covered": {
+          "macro_auroc": 0.6264839545051193,
+          "n_scored": 71,
+          "n_clusters": 21
+        },
+        "bepipred3_covered": {
+          "macro_auroc": 0.6250403506154759,
+          "n_scored": 71,
+          "n_clusters": 21
+        },
+        "pesto_covered": {
+          "macro_auroc": 0.5454807120505586,
+          "n_scored": 71,
+          "n_clusters": 21
+        }
+      }
+    },
+    "pesto_clean": {
+      "n_instances": 95,
+      "arms": {
+        "prince_v2": {
+          "macro_auroc": 0.7020577705464698,
+          "n_scored": 95,
+          "n_clusters": 28
+        },
+        "bepipred3": {
+          "macro_auroc": 0.6769498756338976,
+          "n_scored": 95,
+          "n_clusters": 28
+        },
+        "pesto": {
+          "macro_auroc": 0.6235444674874625,
+          "n_scored": 95,
+          "n_clusters": 28
+        },
+        "prince_v2_covered": {
+          "macro_auroc": 0.6700516962992784,
+          "n_scored": 95,
+          "n_clusters": 28
+        },
+        "bepipred3_covered": {
+          "macro_auroc": 0.6268850071857354,
+          "n_scored": 95,
+          "n_clusters": 28
+        },
+        "pesto_covered": {
+          "macro_auroc": 0.5267827777142352,
+          "n_scored": 95,
+          "n_clusters": 28
+        }
+      }
+    },
+    "both_clean": {
+      "n_instances": 83,
+      "arms": {
+        "prince_v2": {
+          "macro_auroc": 0.7112076830368054,
+          "n_scored": 83,
+          "n_clusters": 25
+        },
+        "bepipred3": {
+          "macro_auroc": 0.684030797431207,
+          "n_scored": 83,
+          "n_clusters": 25
+        },
+        "pesto": {
+          "macro_auroc": 0.619425548853508,
+          "n_scored": 83,
+          "n_clusters": 25
+        },
+        "prince_v2_covered": {
+          "macro_auroc": 0.7017843482366146,
+          "n_scored": 83,
+          "n_clusters": 25
+        },
+        "bepipred3_covered": {
+          "macro_auroc": 0.6411705339457761,
+          "n_scored": 83,
+          "n_clusters": 25
+        },
+        "pesto_covered": {
+          "macro_auroc": 0.5261234595954732,
+          "n_scored": 83,
+          "n_clusters": 25
+        }
+      }
+    }
+  },
+  "paired": {
+    "all_110": {
+      "prince_v2_minus_bepipred3": {
+        "delta": 0.019781286822977195,
+        "ci95": [
+          -0.027530861508188405,
+          0.07148185867852579
+        ],
+        "p_two_sided": 0.456,
+        "n_clusters": 34,
+        "n_instances": 110
+      },
+      "prince_v2_minus_pesto": {
+        "delta": 0.020163972985222434,
+        "ci95": [
+          -0.04707995157586144,
+          0.08814918594460874
+        ],
+        "p_two_sided": 0.543,
+        "n_clusters": 34,
+        "n_instances": 110
+      },
+      "prince_v2_covered_minus_bepipred3_covered": {
+        "delta": 0.02958868260168057,
+        "ci95": [
+          -0.034854786024791945,
+          0.09902036817858842
+        ],
+        "p_two_sided": 0.363,
+        "n_clusters": 34,
+        "n_instances": 110
+      },
+      "prince_v2_covered_minus_pesto_covered": {
+        "delta": 0.06321242093293578,
+        "ci95": [
+          -0.035357692529427935,
+          0.15898132754312166
+        ],
+        "p_two_sided": 0.22,
+        "n_clusters": 34,
+        "n_instances": 110
+      }
+    },
+    "bepipred_clean": {
+      "prince_v2_minus_bepipred3": {
+        "delta": 0.023210106283970244,
+        "ci95": [
+          -0.03149639042468589,
+          0.08218769842582213
+        ],
+        "p_two_sided": 0.421,
+        "n_clusters": 29,
+        "n_instances": 93
+      },
+      "prince_v2_minus_pesto": {
+        "delta": 0.034437786768685585,
+        "ci95": [
+          -0.0460833119082065,
+          0.10809835038050987
+        ],
+        "p_two_sided": 0.423,
+        "n_clusters": 29,
+        "n_instances": 93
+      },
+      "prince_v2_covered_minus_bepipred3_covered": {
+        "delta": 0.04525527344322866,
+        "ci95": [
+          -0.02297825620837729,
+          0.11906198586052713
+        ],
+        "p_two_sided": 0.187,
+        "n_clusters": 29,
+        "n_instances": 93
+      },
+      "prince_v2_covered_minus_pesto_covered": {
+        "delta": 0.09999514296119694,
+        "ci95": [
+          -0.006999459980689012,
+          0.20120296008188673
+        ],
+        "p_two_sided": 0.067,
+        "n_clusters": 29,
+        "n_instances": 93
+      }
+    },
+    "bepipred_clean_strict": {
+      "prince_v2_minus_bepipred3": {
+        "delta": -0.00987779966735891,
+        "ci95": [
+          -0.06182535474908093,
+          0.04191781240222818
+        ],
+        "p_two_sided": 0.701,
+        "n_clusters": 21,
+        "n_instances": 71
+      },
+      "prince_v2_minus_pesto": {
+        "delta": 0.03741463356162544,
+        "ci95": [
+          -0.07065413199161837,
+          0.1390287044052646
+        ],
+        "p_two_sided": 0.45,
+        "n_clusters": 21,
+        "n_instances": 71
+      },
+      "prince_v2_covered_minus_bepipred3_covered": {
+        "delta": 0.0014436038896433745,
+        "ci95": [
+          -0.07429584337935267,
+          0.0771274288145013
+        ],
+        "p_two_sided": 0.977,
+        "n_clusters": 21,
+        "n_instances": 71
+      },
+      "prince_v2_covered_minus_pesto_covered": {
+        "delta": 0.0810032424545607,
+        "ci95": [
+          -0.05944213785527142,
+          0.2153278020787166
+        ],
+        "p_two_sided": 0.272,
+        "n_clusters": 21,
+        "n_instances": 71
+      }
+    },
+    "pesto_clean": {
+      "prince_v2_minus_bepipred3": {
+        "delta": 0.02510789491257215,
+        "ci95": [
+          -0.031686205497855655,
+          0.0875579089999342
+        ],
+        "p_two_sided": 0.425,
+        "n_clusters": 28,
+        "n_instances": 95
+      },
+      "prince_v2_minus_pesto": {
+        "delta": 0.07851330305900728,
+        "ci95": [
+          0.02445565596844863,
+          0.14009024367545622
+        ],
+        "p_two_sided": 0.005,
+        "n_clusters": 28,
+        "n_instances": 95
+      },
+      "prince_v2_covered_minus_bepipred3_covered": {
+        "delta": 0.043166689113543044,
+        "ci95": [
+          -0.03296593515685279,
+          0.1240668528505017
+        ],
+        "p_two_sided": 0.283,
+        "n_clusters": 28,
+        "n_instances": 95
+      },
+      "prince_v2_covered_minus_pesto_covered": {
+        "delta": 0.1432689185850432,
+        "ci95": [
+          0.0612648034752141,
+          0.2336727458530836
+        ],
+        "p_two_sided": 0.0,
+        "n_clusters": 28,
+        "n_instances": 95
+      }
+    },
+    "both_clean": {
+      "prince_v2_minus_bepipred3": {
+        "delta": 0.02717688560559839,
+        "ci95": [
+          -0.03192068677155344,
+          0.09444948722869351
+        ],
+        "p_two_sided": 0.393,
+        "n_clusters": 25,
+        "n_instances": 83
+      },
+      "prince_v2_minus_pesto": {
+        "delta": 0.09178213418329739,
+        "ci95": [
+          0.03207458617388392,
+          0.15538830734161488
+        ],
+        "p_two_sided": 0.005,
+        "n_clusters": 25,
+        "n_instances": 83
+      },
+      "prince_v2_covered_minus_bepipred3_covered": {
+        "delta": 0.060613814290838564,
+        "ci95": [
+          -0.019290833702989205,
+          0.13965861807329225
+        ],
+        "p_two_sided": 0.149,
+        "n_clusters": 25,
+        "n_instances": 83
+      },
+      "prince_v2_covered_minus_pesto_covered": {
+        "delta": 0.17566088864114138,
+        "ci95": [
+          0.08533092411365212,
+          0.2636879662576226
+        ],
+        "p_two_sided": 0.001,
+        "n_clusters": 25,
+        "n_instances": 83
+      }
+    }
+  },
+  "instances": {
+    "pdb_00004h88-H-L": {
+      "cluster": "component:seq:069032ac1c7a",
+      "n_res": 102,
+      "n_pos": 12,
+      "patch_covered": 0.6470588235294118,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6458333333333333,
+        "bepipred3": 0.5537037037037037,
+        "pesto": 0.43518518518518523,
+        "prince_v2_covered": 0.6842105263157895,
+        "bepipred3_covered": 0.6062378167641326,
+        "pesto_covered": 0.3099415204678363
+      }
+    },
+    "pdb_00002p46-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 120,
+      "n_pos": 17,
+      "patch_covered": 0.625,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7150199885779555,
+        "bepipred3": 0.5625356938892062,
+        "pesto": 0.6784694460308395,
+        "prince_v2_covered": 0.6266666666666667,
+        "bepipred3_covered": 0.3944444444444445,
+        "pesto_covered": 0.6322222222222222
+      }
+    },
+    "pdb_00002bse-D": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 214,
+      "n_pos": 19,
+      "patch_covered": 0.5560747663551402,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6527665317139002,
+        "bepipred3": 0.8368421052631578,
+        "pesto": 0.27746288798920377,
+        "prince_v2_covered": 0.6350340136054422,
+        "bepipred3_covered": 0.7976190476190477,
+        "pesto_covered": 0.15510204081632653
+      }
+    },
+    "pdb_00004ag4-H-L": {
+      "cluster": "component:seq:500626aa376e",
+      "n_res": 341,
+      "n_pos": 19,
+      "patch_covered": 0.5190615835777126,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6317423994769531,
+        "bepipred3": 0.47270349787512256,
+        "pesto": 0.610330173259235,
+        "prince_v2_covered": 0.34889705882352945,
+        "bepipred3_covered": 0.27389705882352944,
+        "pesto_covered": 0.4389705882352941
+      }
+    },
+    "pdb_00001fe8-J-N": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 191,
+      "n_pos": 22,
+      "patch_covered": 0.5026178010471204,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7331898870360409,
+        "bepipred3": 0.7323830016137709,
+        "pesto": 0.9230769230769231,
+        "prince_v2_covered": 0.6452991452991453,
+        "bepipred3_covered": 0.5498575498575499,
+        "pesto_covered": 0.8945868945868947
+      }
+    },
+    "pdb_00001bzq-K": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6370967741935484,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6197916666666667,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.9253472222222223,
+        "prince_v2_covered": 0.5384615384615384,
+        "bepipred3_covered": 0.4393939393939394,
+        "pesto_covered": 0.916083916083916
+      }
+    },
+    "pdb_00001mhp-H-L": {
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_res": 184,
+      "n_pos": 17,
+      "patch_covered": 0.483695652173913,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7404015498414935,
+        "bepipred3": 0.8890454385346953,
+        "pesto": 0.740049313138429,
+        "prince_v2_covered": 0.8625541125541125,
+        "bepipred3_covered": 0.9036796536796537,
+        "pesto_covered": 0.6125541125541126
+      }
+    },
+    "pdb_00002p4a-D": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6209677419354839,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5818865740740741,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.7633101851851851,
+        "prince_v2_covered": 0.44170673076923067,
+        "bepipred3_covered": 0.4206730769230769,
+        "pesto_covered": 0.7259615384615385
+      }
+    },
+    "pdb_00002adf-H-L": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 189,
+      "n_pos": 19,
+      "patch_covered": 0.5343915343915344,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7277089783281734,
+        "bepipred3": 0.678328173374613,
+        "pesto": 0.9746130030959752,
+        "prince_v2_covered": 0.7151162790697675,
+        "bepipred3_covered": 0.4767441860465116,
+        "pesto_covered": 0.9651162790697674
+      }
+    },
+    "pdb_00002wzp-J": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 532,
+      "n_pos": 18,
+      "patch_covered": 0.5864661654135338,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6083009079118029,
+        "bepipred3": 0.8566796368352788,
+        "pesto": 0.46973627323821876,
+        "prince_v2_covered": 0.7669888251283599,
+        "bepipred3_covered": 0.8506493506493507,
+        "pesto_covered": 0.45001510117789184
+      }
+    },
+    "pdb_00002p45-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6370967741935484,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5315393518518519,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.6394675925925926,
+        "prince_v2_covered": 0.3607226107226107,
+        "bepipred3_covered": 0.4184149184149184,
+        "pesto_covered": 0.6375291375291375
+      }
+    },
+    "pdb_000021aq-A-B": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 315,
+      "n_pos": 21,
+      "patch_covered": 0.5333333333333333,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7147716229348882,
+        "bepipred3": 0.5244574020084224,
+        "pesto": 0.6645610625202462,
+        "prince_v2_covered": 0.910482374768089,
+        "bepipred3_covered": 0.4874768089053803,
+        "pesto_covered": 0.5556586270871985
+      }
+    },
+    "pdb_00001uj3-B-A": {
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_res": 205,
+      "n_pos": 25,
+      "patch_covered": 0.6048780487804878,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5534444444444444,
+        "bepipred3": 0.8126666666666666,
+        "pesto": 0.6584444444444444,
+        "prince_v2_covered": 0.42130325814536335,
+        "bepipred3_covered": 0.7573934837092732,
+        "pesto_covered": 0.6100250626566416
+      }
+    },
+    "pdb_00001ahw-E-D": {
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_res": 200,
+      "n_pos": 21,
+      "patch_covered": 0.585,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6424581005586594,
+        "bepipred3": 0.8217611066773078,
+        "pesto": 0.8435754189944134,
+        "prince_v2_covered": 0.6725490196078432,
+        "bepipred3_covered": 0.7764705882352941,
+        "pesto_covered": 0.7803921568627452
+      }
+    },
+    "pdb_000023iu-H-L": {
+      "cluster": "component:seq:387c84fe6478",
+      "n_res": 403,
+      "n_pos": 26,
+      "patch_covered": 0.5359801488833746,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5575902876963885,
+        "bepipred3": 0.6326259946949602,
+        "pesto": 0.3849214446031422,
+        "prince_v2_covered": 0.54640625,
+        "bepipred3_covered": 0.638125,
+        "pesto_covered": 0.29281250000000003
+      }
+    },
+    "pdb_000012id-M-N": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 417,
+      "n_pos": 26,
+      "patch_covered": 0.5539568345323741,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.805331497147354,
+        "bepipred3": 0.6198111351564036,
+        "pesto": 0.8783198898288411,
+        "prince_v2_covered": 0.9590047393364929,
+        "bepipred3_covered": 0.6042654028436019,
+        "pesto_covered": 0.8037914691943128
+      }
+    },
+    "pdb_00002x7l-H-L": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.8947368421052632,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.4562937062937063,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.4840909090909092,
+        "bepipred3_covered": 0.4704545454545454,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_00002x7l-J-K": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.9122807017543859,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.34265734265734266,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.30416666666666664,
+        "bepipred3_covered": 0.44166666666666665,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_00002b2x-H-L": {
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_res": 188,
+      "n_pos": 21,
+      "patch_covered": 0.48404255319148937,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7847162817222697,
+        "bepipred3": 0.8999144568006843,
+        "pesto": 0.8585685771314514,
+        "prince_v2_covered": 0.8750000000000001,
+        "bepipred3_covered": 0.9075,
+        "pesto_covered": 0.7808333333333333
+      }
+    },
+    "pdb_00001cz8-Y-X": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 19,
+      "patch_covered": 0.6968085106382979,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6838990968545624,
+        "bepipred3": 0.8260666459047026,
+        "pesto": 0.7206477732793523,
+        "prince_v2_covered": 0.6798913043478261,
+        "bepipred3_covered": 0.8510869565217392,
+        "pesto_covered": 0.7179347826086957
+      }
+    },
+    "pdb_000031mr-H-L": {
+      "cluster": "component:seq:7307fc69de1c",
+      "n_res": 1304,
+      "n_pos": 20,
+      "patch_covered": 0.4854294478527607,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6766744548286604,
+        "bepipred3": 0.5035046728971962,
+        "pesto": 0.4396028037383177,
+        "prince_v2_covered": 0.617259978425027,
+        "bepipred3_covered": 0.37378640776699024,
+        "pesto_covered": 0.31348435814455233
+      }
+    },
+    "pdb_00002x7l-A-B": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.8947368421052632,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.34877622377622375,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.3443181818181818,
+        "bepipred3_covered": 0.4704545454545454,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_00002p47-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 123,
+      "n_pos": 16,
+      "patch_covered": 0.6178861788617886,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5870327102803738,
+        "bepipred3": 0.5531542056074767,
+        "pesto": 0.7978971962616823,
+        "prince_v2_covered": 0.4481074481074482,
+        "bepipred3_covered": 0.4395604395604396,
+        "pesto_covered": 0.6923076923076923
+      }
+    },
+    "pdb_00004liq-H-L": {
+      "cluster": "component:seq:1bdb33ca5583",
+      "n_res": 469,
+      "n_pos": 21,
+      "patch_covered": 0.6098081023454158,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.44116709183673464,
+        "bepipred3": 0.3788265306122449,
+        "pesto": 0.49521683673469385,
+        "prince_v2_covered": 0.16389678547999126,
+        "bepipred3_covered": 0.24032363874918,
+        "pesto_covered": 0.4216050732560682
+      }
+    },
+    "pdb_00002r0l-H-L": {
+      "cluster": "component:seq:b8d51e7becae",
+      "n_res": 239,
+      "n_pos": 25,
+      "patch_covered": 0.4895397489539749,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6469158878504673,
+        "bepipred3": 0.7177570093457943,
+        "pesto": 0.6448598130841121,
+        "prince_v2_covered": 0.6276470588235294,
+        "bepipred3_covered": 0.5970588235294118,
+        "pesto_covered": 0.5017647058823529
+      }
+    },
+    "pdb_00001v7m-H-L": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 145,
+      "n_pos": 18,
+      "patch_covered": 0.5862068965517241,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6574803149606299,
+        "bepipred3": 0.7690288713910761,
+        "pesto": 0.336832895888014,
+        "prince_v2_covered": 0.6106639839034205,
+        "bepipred3_covered": 0.8108651911468813,
+        "pesto_covered": 0.17605633802816903
+      }
+    },
+    "pdb_00003k2u-H-L": {
+      "cluster": "component:seq:b8d51e7becae",
+      "n_res": 233,
+      "n_pos": 26,
+      "patch_covered": 0.4678111587982833,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6514306949089558,
+        "bepipred3": 0.7032701597918989,
+        "pesto": 0.7521367521367521,
+        "prince_v2_covered": 0.7473118279569892,
+        "bepipred3_covered": 0.6182795698924731,
+        "pesto_covered": 0.6391129032258064
+      }
+    },
+    "pdb_00001eo8-H-L": {
+      "cluster": "component:seq:222a37a9751c",
+      "n_res": 319,
+      "n_pos": 21,
+      "patch_covered": 0.5266457680250783,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6148130393096836,
+        "bepipred3": 0.5466602748481943,
+        "pesto": 0.5572067753275807,
+        "prince_v2_covered": 0.7029776674937966,
+        "bepipred3_covered": 0.5320099255583126,
+        "pesto_covered": 0.38411910669975186
+      }
+    },
+    "pdb_00002wzp-E": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 532,
+      "n_pos": 18,
+      "patch_covered": 0.5902255639097744,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6002485948984004,
+        "bepipred3": 0.8566796368352788,
+        "pesto": 0.2616731517509728,
+        "prince_v2_covered": 0.7482748274827482,
+        "bepipred3_covered": 0.8522352235223523,
+        "pesto_covered": 0.20132013201320131
+      }
+    },
+    "pdb_000012ie-M-N": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 395,
+      "n_pos": 12,
+      "patch_covered": 0.5468354430379747,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6195604873803306,
+        "bepipred3": 0.8011314186248912,
+        "pesto": 0.4066579634464752,
+        "prince_v2_covered": 0.3549889135254989,
+        "bepipred3_covered": 0.7308203991130822,
+        "pesto_covered": 0.23991130820399112
+      }
+    },
+    "pdb_00001v7n-K-O": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 138,
+      "n_pos": 14,
+      "patch_covered": 0.5797101449275363,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7880184331797235,
+        "bepipred3": 0.8392857142857143,
+        "pesto": 0.3513824884792627,
+        "prince_v2_covered": 0.7843137254901961,
+        "bepipred3_covered": 0.8333333333333333,
+        "pesto_covered": 0.1875
+      }
+    },
+    "pdb_00001bj1-H-L": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 19,
+      "patch_covered": 0.6914893617021277,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6592961694176269,
+        "bepipred3": 0.8260666459047026,
+        "pesto": 0.5711616318903768,
+        "prince_v2_covered": 0.6950724637681159,
+        "bepipred3_covered": 0.8559420289855072,
+        "pesto_covered": 0.5576811594202898
+      }
+    },
+    "pdb_00001bj1-K-J": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 19,
+      "patch_covered": 0.6914893617021277,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7404235440672688,
+        "bepipred3": 0.8260666459047026,
+        "pesto": 0.6262846465275614,
+        "prince_v2_covered": 0.8460869565217392,
+        "bepipred3_covered": 0.8559420289855072,
+        "pesto_covered": 0.6278260869565218
+      }
+    },
+    "pdb_00002p42-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6451612903225806,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5870949074074074,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.5792824074074074,
+        "prince_v2_covered": 0.4822043628013778,
+        "bepipred3_covered": 0.44661308840413316,
+        "pesto_covered": 0.5315729047072331
+      }
+    },
+    "pdb_00001v7n-H-L": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 145,
+      "n_pos": 17,
+      "patch_covered": 0.5724137931034483,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6941636029411764,
+        "bepipred3": 0.8120404411764706,
+        "pesto": 0.3166360294117647,
+        "prince_v2_covered": 0.7038461538461538,
+        "bepipred3_covered": 0.810989010989011,
+        "pesto_covered": 0.15164835164835164
+      }
+    },
+    "pdb_000012ie-D-E": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 395,
+      "n_pos": 12,
+      "patch_covered": 0.5468354430379747,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6735204525674499,
+        "bepipred3": 0.8011314186248912,
+        "pesto": 0.4036118363794604,
+        "prince_v2_covered": 0.4649667405764967,
+        "bepipred3_covered": 0.7308203991130822,
+        "pesto_covered": 0.23725055432372505
+      }
+    },
+    "pdb_00002arj-H-L": {
+      "cluster": "component:seq:249bad6cb408",
+      "n_res": 115,
+      "n_pos": 19,
+      "patch_covered": 0.6521739130434783,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.5783991228070176,
+        "bepipred3": 0.49890350877192985,
+        "pesto": 0.8283991228070176,
+        "prince_v2_covered": 0.49222222222222217,
+        "bepipred3_covered": 0.36666666666666664,
+        "pesto_covered": 0.7744444444444445
+      }
+    },
+    "pdb_00002p49-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 119,
+      "n_pos": 15,
+      "patch_covered": 0.6218487394957983,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7044871794871795,
+        "bepipred3": 0.5673076923076923,
+        "pesto": 0.7551282051282051,
+        "prince_v2_covered": 0.626733921815889,
+        "bepipred3_covered": 0.42370744010088274,
+        "pesto_covered": 0.6733921815889029
+      }
+    },
+    "pdb_00003opz-I-M": {
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_res": 625,
+      "n_pos": 18,
+      "patch_covered": 0.416,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8518671059857221,
+        "bepipred3": 0.9578070657148088,
+        "pesto": 0.8190554640307524,
+        "prince_v2_covered": 0.9073469387755101,
+        "bepipred3_covered": 0.9374149659863946,
+        "pesto_covered": 0.7673469387755102
+      }
+    },
+    "pdb_00001fe8-H-L": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 381,
+      "n_pos": 36,
+      "patch_covered": 0.5118110236220472,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6665056360708534,
+        "bepipred3": 0.7375201288244766,
+        "pesto": 0.827133655394525,
+        "prince_v2_covered": 0.4723232323232323,
+        "bepipred3_covered": 0.5862626262626263,
+        "pesto_covered": 0.7903030303030303
+      }
+    },
+    "pdb_00002wub-H-L": {
+      "cluster": "component:seq:b8d51e7becae",
+      "n_res": 232,
+      "n_pos": 23,
+      "patch_covered": 0.5,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6607031412523403,
+        "bepipred3": 0.7149989598502184,
+        "pesto": 0.5631370917412107,
+        "prince_v2_covered": 0.7419141914191419,
+        "bepipred3_covered": 0.6726072607260727,
+        "pesto_covered": 0.4184818481848185
+      }
+    },
+    "pdb_00002wzp-D": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 798,
+      "n_pos": 19,
+      "patch_covered": 0.6090225563909775,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5835078710897912,
+        "bepipred3": 0.8505506384703736,
+        "pesto": 0.20349976352949126,
+        "prince_v2_covered": 0.6872362869198312,
+        "bepipred3_covered": 0.8437060478199718,
+        "pesto_covered": 0.135196905766526
+      }
+    },
+    "pdb_00002p43-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 15,
+      "patch_covered": 0.6129032258064516,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6125382262996941,
+        "bepipred3": 0.5602446483180428,
+        "pesto": 0.8519877675840979,
+        "prince_v2_covered": 0.4365079365079365,
+        "bepipred3_covered": 0.39682539682539686,
+        "pesto_covered": 0.8217338217338218
+      }
+    },
+    "pdb_00002ny1-D-C": {
+      "cluster": "component:seq:41cdcdcf62be",
+      "n_res": 305,
+      "n_pos": 14,
+      "patch_covered": 0.5934426229508196,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.93826705940108,
+        "bepipred3": 0.5586647029945999,
+        "pesto": 0.8873343151693667,
+        "prince_v2_covered": 0.9899267399267399,
+        "bepipred3_covered": 0.5265567765567766,
+        "pesto_covered": 0.8397435897435898
+      }
+    },
+    "pdb_00001mhp-X-Y": {
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_res": 192,
+      "n_pos": 21,
+      "patch_covered": 0.484375,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7279309384572543,
+        "bepipred3": 0.8939014202172098,
+        "pesto": 0.9504316346421608,
+        "prince_v2_covered": 0.8034188034188035,
+        "bepipred3_covered": 0.882051282051282,
+        "pesto_covered": 0.9111111111111112
+      }
+    },
+    "pdb_000012id-D-E": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 417,
+      "n_pos": 25,
+      "patch_covered": 0.5515587529976019,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7966326530612245,
+        "bepipred3": 0.6075510204081633,
+        "pesto": 0.8673469387755102,
+        "prince_v2_covered": 0.9541032676477924,
+        "bepipred3_covered": 0.590920429034672,
+        "pesto_covered": 0.7894736842105263
+      }
+    },
+    "pdb_00003hmx-H-L": {
+      "cluster": "component:seq:2b725678b616",
+      "n_res": 295,
+      "n_pos": 22,
+      "patch_covered": 0.6169491525423729,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6892274392274393,
+        "bepipred3": 0.6988011988011987,
+        "pesto": 0.6433566433566433,
+        "prince_v2_covered": 0.7249554367201426,
+        "bepipred3_covered": 0.7183600713012478,
+        "pesto_covered": 0.5768270944741534
+      }
+    },
+    "pdb_00002bse-E": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 214,
+      "n_pos": 19,
+      "patch_covered": 0.5514018691588785,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5890688259109311,
+        "bepipred3": 0.8368421052631578,
+        "pesto": 0.3765182186234818,
+        "prince_v2_covered": 0.543956043956044,
+        "bepipred3_covered": 0.8010989010989011,
+        "pesto_covered": 0.2446886446886447
+      }
+    },
+    "pdb_00001v7n-J-N": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 139,
+      "n_pos": 16,
+      "patch_covered": 0.5611510791366906,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7665142276422765,
+        "bepipred3": 0.8165650406504065,
+        "pesto": 0.3795731707317073,
+        "prince_v2_covered": 0.7899408284023668,
+        "bepipred3_covered": 0.829585798816568,
+        "pesto_covered": 0.1905325443786982
+      }
+    },
+    "pdb_000032nz-A1-A2": {
+      "cluster": "component:seq:d8cc4d129d7e",
+      "n_res": 133,
+      "n_pos": 15,
+      "patch_covered": 0.5789473684210527,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.48192090395480225,
+        "bepipred3": 0.4847457627118644,
+        "pesto": 0.4559322033898305,
+        "prince_v2_covered": 0.11658653846153846,
+        "bepipred3_covered": 0.36177884615384615,
+        "pesto_covered": 0.37740384615384615
+      }
+    },
+    "pdb_00001fj1-D-C": {
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_res": 251,
+      "n_pos": 20,
+      "patch_covered": 0.6334661354581673,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6883116883116884,
+        "bepipred3": 0.7017316017316018,
+        "pesto": 0.6038961038961039,
+        "prince_v2_covered": 0.6975524475524475,
+        "bepipred3_covered": 0.6896853146853148,
+        "pesto_covered": 0.56993006993007
+      }
+    },
+    "pdb_00002p44-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 119,
+      "n_pos": 16,
+      "patch_covered": 0.6386554621848739,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5919296116504854,
+        "bepipred3": 0.5558252427184467,
+        "pesto": 0.7384708737864079,
+        "prince_v2_covered": 0.4153225806451613,
+        "bepipred3_covered": 0.3882488479262673,
+        "pesto_covered": 0.7016129032258065
+      }
+    },
+    "pdb_00002x7l-G-I": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.8947368421052632,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.39860139860139865,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.40909090909090906,
+        "bepipred3_covered": 0.4704545454545454,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_00002x7l-E-F": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.8947368421052632,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.4134615384615385,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.42840909090909085,
+        "bepipred3_covered": 0.4704545454545454,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_00002arj-B-A": {
+      "cluster": "component:seq:249bad6cb408",
+      "n_res": 116,
+      "n_pos": 20,
+      "patch_covered": 0.6379310344827587,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.5786458333333333,
+        "bepipred3": 0.5208333333333333,
+        "pesto": 0.565625,
+        "prince_v2_covered": 0.4601293103448276,
+        "bepipred3_covered": 0.37823275862068967,
+        "pesto_covered": 0.4892241379310345
+      }
+    },
+    "pdb_00003grw-H-L": {
+      "cluster": "component:seq:64db5a0a9a9b",
+      "n_res": 206,
+      "n_pos": 37,
+      "patch_covered": 0.6601941747572816,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.6098672637134176,
+        "bepipred3": 0.6971053894130818,
+        "pesto": 0.9470654086038701,
+        "prince_v2_covered": 0.6433910975195379,
+        "bepipred3_covered": 0.6924906557934081,
+        "pesto_covered": 0.9255861365953109
+      }
+    },
+    "pdb_00004ma8-H-L": {
+      "cluster": "component:seq:069032ac1c7a",
+      "n_res": 108,
+      "n_pos": 12,
+      "patch_covered": 0.6851851851851852,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6571180555555556,
+        "bepipred3": 0.578125,
+        "pesto": 0.7526041666666666,
+        "prince_v2_covered": 0.7376068376068375,
+        "bepipred3_covered": 0.6581196581196581,
+        "pesto_covered": 0.711111111111111
+      }
+    },
+    "pdb_00001osp-H-L": {
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_res": 251,
+      "n_pos": 21,
+      "patch_covered": 0.6414342629482072,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6417184265010352,
+        "bepipred3": 0.608695652173913,
+        "pesto": 0.8072463768115942,
+        "prince_v2_covered": 0.8002915451895044,
+        "bepipred3_covered": 0.6501457725947521,
+        "pesto_covered": 0.8367346938775511
+      }
+    },
+    "pdb_00001fj1-B-A": {
+      "cluster": "component:seq:2ce74c23c7b8",
+      "n_res": 251,
+      "n_pos": 19,
+      "patch_covered": 0.6334661354581673,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6723003629764066,
+        "bepipred3": 0.7000907441016333,
+        "pesto": 0.5263157894736842,
+        "prince_v2_covered": 0.6793981481481481,
+        "bepipred3_covered": 0.6972222222222222,
+        "pesto_covered": 0.4546296296296296
+      }
+    },
+    "pdb_00003d85-B-A": {
+      "cluster": "component:seq:2b725678b616",
+      "n_res": 133,
+      "n_pos": 18,
+      "patch_covered": 0.6165413533834586,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.6893719806763285,
+        "bepipred3": 0.7555555555555555,
+        "pesto": 0.4173913043478261,
+        "prince_v2_covered": 0.7959866220735786,
+        "bepipred3_covered": 0.6421404682274248,
+        "pesto_covered": 0.3801560758082497
+      }
+    },
+    "pdb_00001bzq-N": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6451612903225806,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6371527777777777,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.8344907407407407,
+        "prince_v2_covered": 0.5097402597402597,
+        "bepipred3_covered": 0.4101731601731602,
+        "pesto_covered": 0.843073593073593
+      }
+    },
+    "pdb_000012id-H-L": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 417,
+      "n_pos": 26,
+      "patch_covered": 0.5539568345323741,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8004623253983868,
+        "bepipred3": 0.6198111351564036,
+        "pesto": 0.827267361794216,
+        "prince_v2_covered": 0.9472748815165876,
+        "bepipred3_covered": 0.6042654028436019,
+        "pesto_covered": 0.726303317535545
+      }
+    },
+    "pdb_00002p42-D": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6290322580645161,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6365740740740741,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.7002314814814814,
+        "prince_v2_covered": 0.5639053254437869,
+        "bepipred3_covered": 0.42958579881656805,
+        "pesto_covered": 0.6343195266272189
+      }
+    },
+    "pdb_00002wzp-F": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 532,
+      "n_pos": 18,
+      "patch_covered": 0.5864661654135338,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.637862083873757,
+        "bepipred3": 0.8566796368352788,
+        "pesto": 0.19930825767401644,
+        "prince_v2_covered": 0.7476388888888889,
+        "bepipred3_covered": 0.8372222222222222,
+        "pesto_covered": 0.11694444444444445
+      }
+    },
+    "pdb_00003opz-H-L": {
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_res": 625,
+      "n_pos": 18,
+      "patch_covered": 0.4112,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.85612300933553,
+        "bepipred3": 0.9578070657148088,
+        "pesto": 0.7871133077063884,
+        "prince_v2_covered": 0.9177685950413222,
+        "bepipred3_covered": 0.9363636363636363,
+        "pesto_covered": 0.6790633608815426
+      }
+    },
+    "pdb_00001oak-H-L": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 196,
+      "n_pos": 13,
+      "patch_covered": 0.5102040816326531,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7059688944934847,
+        "bepipred3": 0.8524590163934426,
+        "pesto": 0.8263976460697772,
+        "prince_v2_covered": 0.6777777777777778,
+        "bepipred3_covered": 0.8922222222222222,
+        "pesto_covered": 0.7966666666666666
+      }
+    },
+    "pdb_00001ahw-B-A": {
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_res": 200,
+      "n_pos": 22,
+      "patch_covered": 0.59,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6007405515832482,
+        "bepipred3": 0.7921348314606742,
+        "pesto": 0.6371297242083759,
+        "prince_v2_covered": 0.5566789215686274,
+        "bepipred3_covered": 0.7837009803921569,
+        "pesto_covered": 0.5220588235294118
+      }
+    },
+    "pdb_00002qql-H-L": {
+      "cluster": "component:seq:b985e28088ae",
+      "n_res": 554,
+      "n_pos": 14,
+      "patch_covered": 0.48736462093862815,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.49464285714285705,
+        "bepipred3": 0.5457671957671958,
+        "pesto": 0.6714285714285714,
+        "prince_v2_covered": 0.2260536398467433,
+        "bepipred3_covered": 0.48744146445295866,
+        "pesto_covered": 0.5491698595146871
+      }
+    },
+    "pdb_00002nxy-D-C": {
+      "cluster": "component:seq:ba87b5233633",
+      "n_res": 304,
+      "n_pos": 14,
+      "patch_covered": 0.5789473684210527,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.9177339901477832,
+        "bepipred3": 0.5004926108374383,
+        "pesto": 0.8568965517241378,
+        "prince_v2_covered": 0.9492685228881547,
+        "bepipred3_covered": 0.4511562057574328,
+        "pesto_covered": 0.803680981595092
+      }
+    },
+    "pdb_00001fns-H-L": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 196,
+      "n_pos": 13,
+      "patch_covered": 0.5204081632653061,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6326187473728457,
+        "bepipred3": 0.8532997057587222,
+        "pesto": 0.8659100462379151,
+        "prince_v2_covered": 0.4983695652173913,
+        "bepipred3_covered": 0.898913043478261,
+        "pesto_covered": 0.9206521739130434
+      }
+    },
+    "pdb_00001tzh-B-A": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 20,
+      "patch_covered": 0.675531914893617,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7171130952380953,
+        "bepipred3": 0.8482142857142858,
+        "pesto": 0.850297619047619,
+        "prince_v2_covered": 0.7789977477477478,
+        "bepipred3_covered": 0.8198198198198199,
+        "pesto_covered": 0.8102477477477478
+      }
+    },
+    "pdb_00001tzh-H-L": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 18,
+      "patch_covered": 0.675531914893617,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6882352941176472,
+        "bepipred3": 0.8686274509803922,
+        "pesto": 0.507516339869281,
+        "prince_v2_covered": 0.6839285714285714,
+        "bepipred3_covered": 0.8220238095238096,
+        "pesto_covered": 0.4285714285714285
+      }
+    },
+    "pdb_00002wzp-K": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 532,
+      "n_pos": 20,
+      "patch_covered": 0.5864661654135338,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6141601562500001,
+        "bepipred3": 0.8572265625000001,
+        "pesto": 0.231640625,
+        "prince_v2_covered": 0.8047222222222222,
+        "bepipred3_covered": 0.8538888888888888,
+        "pesto_covered": 0.1611111111111111
+      }
+    },
+    "pdb_00003fmg-H-L": {
+      "cluster": "component:seq:54edc1e08865",
+      "n_res": 235,
+      "n_pos": 7,
+      "patch_covered": 0.4765957446808511,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.656641604010025,
+        "bepipred3": 0.6716791979949874,
+        "pesto": 0.6359649122807017,
+        "prince_v2_covered": 0.254421768707483,
+        "bepipred3_covered": 0.5333333333333333,
+        "pesto_covered": 0.4476190476190476
+      }
+    },
+    "pdb_00002b2x-I-M": {
+      "cluster": "component:seq:3d67e0a923ec",
+      "n_res": 176,
+      "n_pos": 19,
+      "patch_covered": 0.5056818181818182,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8095876634260812,
+        "bepipred3": 0.9027824337914852,
+        "pesto": 0.8863560174321153,
+        "prince_v2_covered": 0.9045045045045046,
+        "bepipred3_covered": 0.9378378378378379,
+        "pesto_covered": 0.8072072072072072
+      }
+    },
+    "pdb_00001bzq-M": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6209677419354839,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6276041666666667,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.9108796296296297,
+        "prince_v2_covered": 0.5366586538461539,
+        "bepipred3_covered": 0.43149038461538464,
+        "pesto_covered": 0.8725961538461539
+      }
+    },
+    "pdb_000021au-A-B": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 315,
+      "n_pos": 15,
+      "patch_covered": 0.5523809523809524,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7295555555555555,
+        "bepipred3": 0.7453333333333334,
+        "pesto": 0.5728888888888889,
+        "prince_v2_covered": 0.6387959866220736,
+        "bepipred3_covered": 0.6774964166268514,
+        "pesto_covered": 0.4032489249880555
+      }
+    },
+    "pdb_000021au-C-D": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 315,
+      "n_pos": 21,
+      "patch_covered": 0.5523809523809524,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6576773566569485,
+        "bepipred3": 0.44865565273728536,
+        "pesto": 0.7978620019436347,
+        "prince_v2_covered": 0.54608467590858,
+        "bepipred3_covered": 0.43349569127013865,
+        "pesto_covered": 0.7920569501686024
+      }
+    },
+    "pdb_00002wub-R-Q": {
+      "cluster": "component:seq:b8d51e7becae",
+      "n_res": 229,
+      "n_pos": 24,
+      "patch_covered": 0.4978165938864629,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6571138211382114,
+        "bepipred3": 0.7595528455284553,
+        "pesto": 0.7091463414634147,
+        "prince_v2_covered": 0.7851851851851851,
+        "bepipred3_covered": 0.7198653198653199,
+        "pesto_covered": 0.6134680134680135
+      }
+    },
+    "pdb_00002p48-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6209677419354839,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5439814814814815,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.587962962962963,
+        "prince_v2_covered": 0.3629807692307693,
+        "bepipred3_covered": 0.4483173076923077,
+        "pesto_covered": 0.5120192307692308
+      }
+    },
+    "pdb_00004u6v-H-L": {
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "n_res": 544,
+      "n_pos": 16,
+      "patch_covered": 0.5128676470588235,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7730823863636364,
+        "bepipred3": 0.920217803030303,
+        "pesto": 0.6825284090909092,
+        "prince_v2_covered": 0.7900520532099481,
+        "bepipred3_covered": 0.8714574898785425,
+        "pesto_covered": 0.5445344129554656
+      }
+    },
+    "pdb_00002ny3-D-C": {
+      "cluster": "component:seq:41cdcdcf62be",
+      "n_res": 305,
+      "n_pos": 14,
+      "patch_covered": 0.5836065573770491,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.9221894943544429,
+        "bepipred3": 0.47471772214040253,
+        "pesto": 0.9153166421207658,
+        "prince_v2_covered": 0.9585081585081585,
+        "bepipred3_covered": 0.43822843822843827,
+        "pesto_covered": 0.8927738927738929
+      }
+    },
+    "pdb_00002vwe-E-C": {
+      "cluster": "component:seq:e6f8edcc8d97",
+      "n_res": 196,
+      "n_pos": 23,
+      "patch_covered": 0.7142857142857143,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.6492837396330737,
+        "bepipred3": 0.5952500628298568,
+        "pesto": 0.8542347323448103,
+        "prince_v2_covered": 0.6487603305785123,
+        "bepipred3_covered": 0.5809047411918226,
+        "pesto_covered": 0.8399304045237059
+      }
+    },
+    "pdb_00002vwe-L-J": {
+      "cluster": "component:seq:e6f8edcc8d97",
+      "n_res": 196,
+      "n_pos": 25,
+      "patch_covered": 0.7142857142857143,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.6205847953216375,
+        "bepipred3": 0.6228070175438597,
+        "pesto": 0.9136842105263157,
+        "prince_v2_covered": 0.5830332132853141,
+        "bepipred3_covered": 0.6124449779911965,
+        "pesto_covered": 0.9135654261704682
+      }
+    },
+    "pdb_00004u6v-K-M": {
+      "cluster": "component:seq:fbe6fcfe7b67",
+      "n_res": 272,
+      "n_pos": 16,
+      "patch_covered": 0.5183823529411765,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.77685546875,
+        "bepipred3": 0.933349609375,
+        "pesto": 0.622802734375,
+        "prince_v2_covered": 0.796875,
+        "bepipred3_covered": 0.8840144230769231,
+        "pesto_covered": 0.45552884615384615
+      }
+    },
+    "pdb_00002bse-F": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 214,
+      "n_pos": 19,
+      "patch_covered": 0.5420560747663551,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5920377867746289,
+        "bepipred3": 0.8368421052631578,
+        "pesto": 0.26504723346828607,
+        "prince_v2_covered": 0.6274038461538461,
+        "bepipred3_covered": 0.7932692307692307,
+        "pesto_covered": 0.1578525641025641
+      }
+    },
+    "pdb_00001bgx-H-L": {
+      "cluster": "component:seq:8ab10a3aad69",
+      "n_res": 828,
+      "n_pos": 65,
+      "patch_covered": 0.5,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6070773263433813,
+        "bepipred3": 0.6812581913499345,
+        "pesto": 0.7021675572134288,
+        "prince_v2_covered": 0.26251904270480125,
+        "bepipred3_covered": 0.5291660523858666,
+        "pesto_covered": 0.5156518747850017
+      }
+    },
+    "pdb_000012ie-H-L": {
+      "cluster": "component:seq:b57c0ab7aa72",
+      "n_res": 395,
+      "n_pos": 12,
+      "patch_covered": 0.5468354430379747,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6504569190600521,
+        "bepipred3": 0.8011314186248912,
+        "pesto": 0.4023063533507398,
+        "prince_v2_covered": 0.417960088691796,
+        "bepipred3_covered": 0.7308203991130822,
+        "pesto_covered": 0.23547671840354767
+      }
+    },
+    "pdb_00001v7m-I-M": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 145,
+      "n_pos": 17,
+      "patch_covered": 0.593103448275862,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6647518382352942,
+        "bepipred3": 0.8042279411764706,
+        "pesto": 0.3226102941176471,
+        "prince_v2_covered": 0.5739087301587302,
+        "bepipred3_covered": 0.8115079365079365,
+        "pesto_covered": 0.14880952380952378
+      }
+    },
+    "pdb_00002w9e-H-L": {
+      "cluster": "component:seq:379d1046d08b",
+      "n_res": 99,
+      "n_pos": 17,
+      "patch_covered": 0.6767676767676768,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7263271162123386,
+        "bepipred3": 0.644906743185079,
+        "pesto": 0.53012912482066,
+        "prince_v2_covered": 0.7587601078167115,
+        "bepipred3_covered": 0.6684636118598383,
+        "pesto_covered": 0.4460916442048518
+      }
+    },
+    "pdb_00002qqk-H-L": {
+      "cluster": "component:seq:b985e28088ae",
+      "n_res": 541,
+      "n_pos": 15,
+      "patch_covered": 0.5046210720887245,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.6122306717363752,
+        "bepipred3": 0.5835234474017744,
+        "pesto": 0.9295310519645119,
+        "prince_v2_covered": 0.4000638569604087,
+        "bepipred3_covered": 0.5134099616858238,
+        "pesto_covered": 0.9054916985951469
+      }
+    },
+    "pdb_00004ma7-H-L": {
+      "cluster": "component:seq:069032ac1c7a",
+      "n_res": 110,
+      "n_pos": 12,
+      "patch_covered": 0.6454545454545455,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6284013605442177,
+        "bepipred3": 0.5756802721088434,
+        "pesto": 0.5663265306122449,
+        "prince_v2_covered": 0.6469534050179211,
+        "bepipred3_covered": 0.632616487455197,
+        "pesto_covered": 0.46415770609319
+      }
+    },
+    "pdb_00003opz-J-N": {
+      "cluster": "component:seq:c2fbf27a999e",
+      "n_res": 625,
+      "n_pos": 18,
+      "patch_covered": 0.4096,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8527365916163281,
+        "bepipred3": 0.9578070657148088,
+        "pesto": 0.6065348709500274,
+        "prince_v2_covered": 0.906777316735823,
+        "bepipred3_covered": 0.9366528354080221,
+        "pesto_covered": 0.41051175656984784
+      }
+    },
+    "pdb_000021ao-A-B": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 314,
+      "n_pos": 15,
+      "patch_covered": 0.5222929936305732,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8282051282051283,
+        "bepipred3": 0.7221850613154961,
+        "pesto": 0.5513935340022297,
+        "prince_v2_covered": 0.8367294956698931,
+        "bepipred3_covered": 0.6479877738155884,
+        "pesto_covered": 0.3683138053998981
+      }
+    },
+    "pdb_00001jps-H-L": {
+      "cluster": "component:seq:4f40c10c3b5d",
+      "n_res": 200,
+      "n_pos": 22,
+      "patch_covered": 0.59,
+      "bp_leak": false,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.5896322778345251,
+        "bepipred3": 0.8156281920326864,
+        "pesto": 0.7236976506639428,
+        "prince_v2_covered": 0.5300245098039216,
+        "bepipred3_covered": 0.7524509803921569,
+        "pesto_covered": 0.7126225490196079
+      }
+    },
+    "pdb_00001bzq-L": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6290322580645161,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6374421296296297,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.9398148148148149,
+        "prince_v2_covered": 0.565680473372781,
+        "bepipred3_covered": 0.44023668639053254,
+        "pesto_covered": 0.914792899408284
+      }
+    },
+    "pdb_00002p4a-B": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 124,
+      "n_pos": 16,
+      "patch_covered": 0.6209677419354839,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6087962962962964,
+        "bepipred3": 0.5480324074074074,
+        "pesto": 0.7071759259259258,
+        "prince_v2_covered": 0.4975961538461539,
+        "bepipred3_covered": 0.4206730769230769,
+        "pesto_covered": 0.6213942307692307
+      }
+    },
+    "pdb_00002zuq-F-E": {
+      "cluster": "component:seq:1234b5f1084b",
+      "n_res": 148,
+      "n_pos": 12,
+      "patch_covered": 0.7432432432432432,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.9586397058823529,
+        "bepipred3": 0.9221813725490196,
+        "pesto": 0.5337009803921569,
+        "prince_v2_covered": 0.9426020408163265,
+        "bepipred3_covered": 0.8962585034013605,
+        "pesto_covered": 0.47193877551020413
+      }
+    },
+    "pdb_00002wuc-H-L": {
+      "cluster": "component:seq:b8d51e7becae",
+      "n_res": 240,
+      "n_pos": 22,
+      "patch_covered": 0.4791666666666667,
+      "bp_leak": true,
+      "bp_leak_pre": true,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6552335279399499,
+        "bepipred3": 0.7016263552960801,
+        "pesto": 0.6265638031693077,
+        "prince_v2_covered": 0.733026874115983,
+        "bepipred3_covered": 0.6478076379066477,
+        "pesto_covered": 0.516973125884017
+      }
+    },
+    "pdb_00001v7n-I-M": {
+      "cluster": "component:seq:708f25e8078b",
+      "n_res": 138,
+      "n_pos": 16,
+      "patch_covered": 0.572463768115942,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.8368340163934427,
+        "bepipred3": 0.8263319672131147,
+        "pesto": 0.39344262295081966,
+        "prince_v2_covered": 0.8554945054945055,
+        "bepipred3_covered": 0.7923076923076924,
+        "pesto_covered": 0.1725274725274725
+      }
+    },
+    "pdb_00002wzp-L": {
+      "cluster": "component:seq:1faabd122add",
+      "n_res": 532,
+      "n_pos": 18,
+      "patch_covered": 0.5883458646616542,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6602896670990055,
+        "bepipred3": 0.8566796368352788,
+        "pesto": 0.20330739299610895,
+        "prince_v2_covered": 0.8067552602436323,
+        "bepipred3_covered": 0.8377630121816168,
+        "pesto_covered": 0.1270764119601329
+      }
+    },
+    "pdb_00001fe8-I-M": {
+      "cluster": "component:seq:51352530f5ee",
+      "n_res": 190,
+      "n_pos": 23,
+      "patch_covered": 0.5157894736842106,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7270242124446759,
+        "bepipred3": 0.7214267117938037,
+        "pesto": 0.8956001041395469,
+        "prince_v2_covered": 0.6292471685542971,
+        "bepipred3_covered": 0.525649566955363,
+        "pesto_covered": 0.8474350433044636
+      }
+    },
+    "pdb_00002zuq-C-B": {
+      "cluster": "component:seq:1234b5f1084b",
+      "n_res": 148,
+      "n_pos": 11,
+      "patch_covered": 0.7027027027027027,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.9495686794956868,
+        "bepipred3": 0.8911745189117453,
+        "pesto": 0.5096217650962177,
+        "prince_v2_covered": 0.9257086999022484,
+        "bepipred3_covered": 0.8553274682306939,
+        "pesto_covered": 0.41739980449657865
+      }
+    },
+    "pdb_000012qj-B-C": {
+      "cluster": "component:seq:0e0e4dbdb75e",
+      "n_res": 394,
+      "n_pos": 11,
+      "patch_covered": 0.4720812182741117,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7152860194635652,
+        "bepipred3": 0.47472110135295514,
+        "pesto": 0.6916686446712556,
+        "prince_v2_covered": 0.7485955056179775,
+        "bepipred3_covered": 0.363061797752809,
+        "pesto_covered": 0.5737359550561798
+      }
+    },
+    "pdb_00002x7l-C-D": {
+      "cluster": "component:seq:5450e9bffc6a",
+      "n_res": 57,
+      "n_pos": 13,
+      "patch_covered": 0.9122807017543859,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": true,
+      "auroc": {
+        "prince_v2": 0.31993006993006995,
+        "bepipred3": 0.4405594405594406,
+        "pesto": 1.0,
+        "prince_v2_covered": 0.27708333333333335,
+        "bepipred3_covered": 0.44166666666666665,
+        "pesto_covered": 1.0
+      }
+    },
+    "pdb_000011or-K": {
+      "cluster": "component:seq:3cf4dac57883",
+      "n_res": 211,
+      "n_pos": 17,
+      "patch_covered": 0.6445497630331753,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7169496664645241,
+        "bepipred3": 0.5733778047301394,
+        "pesto": 0.39508793208004855,
+        "prince_v2_covered": 0.9069220430107526,
+        "bepipred3_covered": 0.5463709677419355,
+        "pesto_covered": 0.3333333333333333
+      }
+    },
+    "pdb_00001cz8-H-L": {
+      "cluster": "component:seq:557be0f03606",
+      "n_res": 188,
+      "n_pos": 19,
+      "patch_covered": 0.6968085106382979,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.7514792899408284,
+        "bepipred3": 0.8260666459047026,
+        "pesto": 0.8290252257863593,
+        "prince_v2_covered": 0.7978260869565217,
+        "bepipred3_covered": 0.8510869565217392,
+        "pesto_covered": 0.8896739130434783
+      }
+    },
+    "pdb_00002p46-D": {
+      "cluster": "component:seq:088a72a47810",
+      "n_res": 120,
+      "n_pos": 16,
+      "patch_covered": 0.6166666666666667,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6715745192307692,
+        "bepipred3": 0.5769230769230769,
+        "pesto": 0.774639423076923,
+        "prince_v2_covered": 0.5446428571428571,
+        "bepipred3_covered": 0.40595238095238095,
+        "pesto_covered": 0.7130952380952381
+      }
+    },
+    "pdb_000021av-A-B": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 321,
+      "n_pos": 20,
+      "patch_covered": 0.5545171339563862,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.789700996677741,
+        "bepipred3": 0.5068106312292359,
+        "pesto": 0.8107973421926911,
+        "prince_v2_covered": 0.8688271604938271,
+        "bepipred3_covered": 0.45563271604938266,
+        "pesto_covered": 0.7550154320987654
+      }
+    },
+    "pdb_000021av-C-D": {
+      "cluster": "component:seq:0e0429eb3d73",
+      "n_res": 321,
+      "n_pos": 20,
+      "patch_covered": 0.5545171339563862,
+      "bp_leak": false,
+      "bp_leak_pre": false,
+      "pesto_leak": false,
+      "auroc": {
+        "prince_v2": 0.6404485049833886,
+        "bepipred3": 0.49269102990033226,
+        "pesto": 0.7418604651162791,
+        "prince_v2_covered": 0.40850694444444446,
+        "bepipred3_covered": 0.4375,
+        "pesto_covered": 0.7336805555555556
+      }
+    }
+  }
+}

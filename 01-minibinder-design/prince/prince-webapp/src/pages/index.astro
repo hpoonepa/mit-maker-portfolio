@@ -1,0 +1,91 @@
+---
+import Mark from '../components/Mark.astro';
+import '../styles/observatory.css';
+import '@fontsource/instrument-sans/latin-400.css';
+import '@fontsource/instrument-sans/latin-500.css';
+import '@fontsource/instrument-sans/latin-600.css';
+const chapters = ['The structure', 'The surface', 'The preflight', 'The evidence', 'Your starting point'];
+const ids = ['intro', 'surface', 'preflight', 'evidence', 'begin'];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#14120e" />
+    <meta name="description" content="Go beneath the surface. PRINCE helps you explore protein surfaces, check your hotspots, and bring the evidence into view before binder design." />
+    <title>PRINCE — A better place to begin</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="observatory">
+    <a class="obs-skip" href="#story">Skip to the story</a>
+    <div class="world" id="world" aria-hidden="true"><div class="world-fallback"><i></i><i></i><i></i></div></div>
+    <div class="world-shade" aria-hidden="true"></div>
+    <header class="obs-header">
+      <a class="obs-brand" href="/" aria-label="Prince home"><Mark /><span>prince.</span></a>
+      <span class="header-caption">A new perspective on protein design</span>
+      <div class="obs-header-actions"><a class="workspace-shortcut" href="/workspace/">Open workspace <span>↗</span></a><button id="open-menu" class="menu-pill" aria-haspopup="dialog" aria-controls="navigation">menu <span class="menu-dot"></span></button></div>
+    </header>
+    <main id="story">
+      <section id="intro" class="chapter chapter-intro" aria-labelledby="intro-title" data-chapter="0">
+        <div class="chapter-copy">
+          <p class="chapter-eyebrow"><span class="signal-dot"></span> Before the first design</p>
+          <h1 id="intro-title">Go beneath<br />the <span>surface.</span></h1>
+          <p class="chapter-description">Every great binder starts somewhere.<br />Find your starting point with PRINCE.</p>
+          <a class="explore-link" href="#surface">Explore the possibilities <span>↘</span></a>
+        </div>
+        <aside class="specimen-note"><span class="note-rule"></span><span>6F5J / CHAIN C<small>A study in structure</small></span><button id="specimen-view" aria-pressed="false" aria-label="Show protein backbone trace">View trace <span>◌</span></button></aside>
+      </section>
+      <section id="surface" class="chapter" aria-labelledby="surface-title" data-chapter="1">
+        <div class="chapter-copy">
+          <p class="chapter-eyebrow"><span>01</span> Read the landscape</p>
+          <h2 id="surface-title">A world of<br /><span>possibility.</span></h2>
+          <p class="chapter-description">Not every patch is a place to start.<br />Find surface sites worth a closer look.</p>
+          <div class="chapter-detail"><p>Four structural features. One transparent score. Explore ranked patches, with the reasoning in reach.</p><a href="/method/">How the ranking works <span>↗</span></a></div>
+        </div>
+        <div class="scene-caption"><span class="caption-cross">+</span><span>THE SURFACE FIELD<small>Explore. Compare. Inspect.</small></span></div>
+      </section>
+      <section id="preflight" class="chapter" aria-labelledby="preflight-title" data-chapter="2">
+        <div class="chapter-copy">
+          <p class="chapter-eyebrow"><span>02</span> Ask the right questions</p>
+          <h2 id="preflight-title">Look closer.<br /><span>Before you leap.</span></h2>
+          <p class="chapter-description">Is it present? Is it exposed?<br />Is there room to approach?</p>
+          <div class="chapter-detail"><p>Check your chosen hotspots independently. A promising proposal never hides a problem with the site you selected.</p><a href="/workspace/">Run a real preflight <span>↗</span></a></div>
+        </div>
+        <div class="preflight-note"><span class="status-dot"></span><div>Sometimes the answer is STOP.<small>6F5J · C405 & C408 are unmodelled.</small></div></div>
+      </section>
+      <section id="evidence" class="chapter" aria-labelledby="evidence-title" data-chapter="3">
+        <div class="chapter-copy">
+          <p class="chapter-eyebrow"><span>03</span> Keep the story attached</p>
+          <h2 id="evidence-title">A little more<br /><span>evidence.</span></h2>
+          <p class="chapter-description">Behind every decision,<br />something you can trace.</p>
+          <div class="chapter-detail"><p>Bring source-grounded drafts, human-reviewed evidence, and structural findings into the same conversation.</p><a href="/resources/">Follow the evidence <span>↗</span></a></div>
+        </div>
+        <div class="scene-caption"><span class="caption-cross">+</span><span>THE EVIDENCE ARCHIVE<small>Source. Review. Preserve.</small></span></div>
+      </section>
+      <section id="begin" class="chapter chapter-final" aria-labelledby="begin-title" data-chapter="4">
+        <div class="chapter-copy">
+          <p class="chapter-eyebrow"><span class="signal-dot"></span> Your next discovery starts here</p>
+          <h2 id="begin-title">A better place<br /><span>to begin.</span></h2>
+          <p class="chapter-description">Bring a target. Follow your curiosity.<br />Leave with a clearer next question.</p>
+          <a class="launch-button" href="/workspace/">Enter the workspace <span>↗</span></a>
+          <div class="final-links"><a href="/guide/">Quickstart ↗</a><a href="/validation/">Explore the validation ↗</a></div>
+        </div>
+        <div class="final-signature">Open science. Human judgment.<small>PRINCE / Lambert iGEM 2026</small></div>
+      </section>
+    </main>
+    <footer class="journey-bar">
+      <a class="scroll-hint" id="next-chapter" href="#surface"><span class="scroll-line"></span><span id="journey-label">Scroll to explore</span><span class="scroll-arrow">↓</span></a>
+      <nav class="chapter-nav" aria-label="Explore the homepage">{chapters.map((name,i)=><a href={`#${ids[i]}`} aria-label={`${i+1}. ${name}`} aria-current={i===0?'step':undefined}><span class="chapter-tick"></span><span class="chapter-tooltip">{name}</span></a>)}<span id="chapter-number" aria-hidden="true">01 / 05</span></nav>
+      <div class="scene-controls"><button id="scene-info" aria-label="About this visualization" aria-haspopup="dialog">i</button><button id="motion-toggle" aria-label="Pause scene motion" aria-pressed="false"><svg class="pause-icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2v8M8 2v8" stroke="currentColor"/></svg><svg class="play-icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m4 2 6 4-6 4Z" fill="currentColor"/></svg></button></div>
+    </footer>
+    <div id="residue-label" class="residue-label" hidden></div>
+    <dialog id="navigation" class="nav-dialog" aria-labelledby="nav-title"><div class="dialog-top"><span id="nav-title">Explore Prince</span><button class="close-dialog" aria-label="Close menu">Close <span>×</span></button></div><nav aria-label="Main navigation"><a href="/"><span>01</span>Home <i>↗</i></a><a href="/method/"><span>02</span>The method <i>↗</i></a><a href="/validation/"><span>03</span>Validation <i>↗</i></a><a href="/resources/"><span>04</span>Resources <i>↗</i></a><a href="/guide/"><span>05</span>Quickstart <i>↗</i></a></nav><a class="launch-button" href="/workspace/">Enter the workspace <span>↗</span></a><p class="nav-footnote">A little more evidence.<br />A better place to begin.</p></dialog>
+    <dialog id="about-scene" class="info-dialog" aria-labelledby="scene-title"><div class="dialog-top"><span>The Surface Observatory</span><button class="close-dialog" aria-label="Close visualization details">×</button></div><h2 id="scene-title">A different perspective.</h2><p>The opening specimen uses the 393 resolved Cα positions of 6F5J chain C. Its beads are a sculptural backbone view, not an atomic or solvent-accessible surface.</p><p>The landscape, gates, and archive illustrate Prince’s workflow. They do not display a live analysis. Open the workspace to inspect real structural findings, scores, and evidence.</p><a href="/method/">Explore the method ↗</a></dialog>
+    <noscript><div class="no-script-note">Explore the story below, or <a href="/workspace/">open the workspace</a>.</div></noscript>
+    <script>
+      import { initObservatory } from '../home/observatory';
+      initObservatory();
+    </script>
+  </body>
+</html>

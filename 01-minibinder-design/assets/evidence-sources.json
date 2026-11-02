@@ -1,0 +1,86 @@
+{
+  "verified_on": "2026-10-25",
+  "structure_image": {
+    "portfolio_path": "01-minibinder-design/assets/binder-complex.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/SWARM-iGEM-Upload/files-to-upload/homepage-overview-minibinder.png",
+    "sha256": "6d07394157e0c6f6e85bd420b01e5be19f46f34f80b18e823bb44f7dbf51b44f",
+    "asset_map_record": {
+      "upload_filename": "homepage-overview-minibinder.png",
+      "source_file": "static/home/assets/journey/overview-minibinder.png",
+      "current_local_url": "/lambert-ga/home/assets/journey/overview-minibinder.png",
+      "suggested_igem_url": "https://static.igem.wiki/teams/6185/wiki/lastmin/homepage-overview-minibinder.avif",
+      "bytes": "782639",
+      "sha256": "6d07394157e0c6f6e85bd420b01e5be19f46f34f80b18e823bb44f7dbf51b44f"
+    },
+    "status": "Unmodified campaign illustration from the original iGEM upload package. No image-to-coordinate render sidecar was present; the image alone does not authenticate a particular design or pose."
+  },
+  "named_design_coordinates": {
+    "portfolio_path": "01-minibinder-design/assets/l79_s469532_mpnn9.pdb",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/SWARM-iGEM-Upload/files-to-upload/protein-l79_s469532_mpnn9.pdb",
+    "sha256": "92f84b66a3517bcc7a5f6982ba23e8bacbcd1b42ccf333a95de42b2a3fac0564",
+    "metadata": {
+      "source": "Team BindCraft predicted complex: exports/5g51_bindcraft_aridge8_solubility/complex/l79_s469532_mpnn9.pdb",
+      "sha256": "92f84b66a3517bcc7a5f6982ba23e8bacbcd1b42ccf333a95de42b2a3fac0564",
+      "experimental_structure": false,
+      "note": "The predicted pose is separate from the BLI binding measurements. Original coordinates and atom records are preserved."
+    }
+  },
+  "bli_archive": {
+    "source": "/Users/harsha/Downloads/Lambert_iGEM_VP3_Deformed_Wing_Virus_Binder_data_package (1).zip",
+    "sha256": "ba6d951448d8aa90473d0b806a4f60f3e5b26ba4ed1a32f9c0c9aa3df55da87b",
+    "files": [
+      {
+        "member": "package/data/sensorgrams/rep31/sg_rep31_f3.png",
+        "portfolio_path": "01-minibinder-design/results/bli/sg_rep31_f3.png",
+        "sha256": "f950633d57b8e54ad8557c8fbfaf3ff6fb5541b748e15a7920bd29f94675f0a2",
+        "bytes": 487929,
+        "identical_to_existing_copy": true
+      },
+      {
+        "member": "package/data/sensorgrams/rep32/sg_rep32_f6.png",
+        "portfolio_path": "01-minibinder-design/results/bli/sg_rep32_f6.png",
+        "sha256": "93b6cf3468f09623963a006e7042f39bf901625443664dede83cc42e5530df8f",
+        "bytes": 428520,
+        "identical_to_existing_copy": true
+      },
+      {
+        "member": "package/summaries/replicates.csv",
+        "portfolio_path": "01-minibinder-design/results/bli/round2-replicates.csv",
+        "sha256": "aea22432a6618b96ae86219983929cdaaf68b15b6ad053dd9e2f8b4ee519cc61",
+        "bytes": 2192,
+        "identical_to_existing_copy": true
+      },
+      {
+        "member": "package/summaries/fits.csv",
+        "portfolio_path": "01-minibinder-design/results/bli/round2-fits.csv",
+        "sha256": "0c929176971d8af87fd72624b317fc4b15eb301e294e36c51f5c0034c000f669",
+        "bytes": 943,
+        "identical_to_existing_copy": true
+      },
+      {
+        "member": "Lambert_iGEM_VP3_Deformed_Wing_Virus_Binder_summary.csv",
+        "portfolio_path": "01-minibinder-design/results/bli/round2-adaptyv-summary.csv",
+        "sha256": "d4fc46b01c7653ad410ee0c457dd718c658629f8808f8e4a0e91da6a1263fcc1",
+        "bytes": 13000,
+        "identical_to_existing_copy": true
+      }
+    ],
+    "member_count": 207,
+    "positive_binder_replicates": [
+      {
+        "replicate_id": "31",
+        "name": "l79_s469532_mpnn9",
+        "replicate_number": "1",
+        "method": "BLI",
+        "sensorgram_folder": "data/sensorgrams/rep31/"
+      },
+      {
+        "replicate_id": "32",
+        "name": "l79_s469532_mpnn9",
+        "replicate_number": "2",
+        "method": "BLI",
+        "sensorgram_folder": "data/sensorgrams/rep32/"
+      }
+    ]
+  }
+}

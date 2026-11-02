@@ -1,0 +1,1161 @@
+{
+  "identity_definition": {
+    "coverage_corrected_identity": "100 * nident / min(qlen, slen), best single HSP",
+    "raw_pident": "BLAST pident over the aligned region only (reported alongside)",
+    "qualifying_hsp": "evalue <= 0.001 AND aln_length >= 50 AND aln_length >= 0.5 * min(qlen, slen); the 50-column floor relaxes to 0.5 * shorter when the shorter sequence is < 50 aa",
+    "permissive_sensitivity_variant": "evalue <= 0.001 AND aln_length >= 25, no coverage requirement",
+    "multi_hsp": "best single HSP by coverage-corrected identity; HSPs never summed",
+    "cluster_rule": "a cluster max = max over its own chain sequences of the max over all train-split chain sequences",
+    "tool_limitation": "blastp only; mmseqs/HHsearch not available on this machine, so the >=30% tier is a LOWER BOUND on true remote homology"
+  },
+  "test_strict": {
+    "n_clusters_evaluated": 251,
+    "restricted_to_scored_clusters": false,
+    "unjudgeable_clusters_all_UNK_sequence": [
+      "component:seq:98831b1ba4e6"
+    ],
+    "n_unjudgeable": 1,
+    "tiers": {
+      "90": {
+        "n_clusters_with_train_homolog": 79,
+        "of": 251,
+        "pct": 31.5,
+        "n_clusters_clean": 172
+      },
+      "70": {
+        "n_clusters_with_train_homolog": 111,
+        "of": 251,
+        "pct": 44.2,
+        "n_clusters_clean": 140
+      },
+      "50": {
+        "n_clusters_with_train_homolog": 130,
+        "of": 251,
+        "pct": 51.8,
+        "n_clusters_clean": 121
+      },
+      "30": {
+        "n_clusters_with_train_homolog": 158,
+        "of": 251,
+        "pct": 62.9,
+        "n_clusters_clean": 93
+      }
+    },
+    "identity_quantiles": {
+      "50": 56.3,
+      "75": 95.3,
+      "90": 99.8,
+      "95": 100.0,
+      "99": 100.0
+    },
+    "n_with_no_qualifying_hit": 72,
+    "examples_by_band": {
+      "90-100": [
+        {
+          "test_cluster": "component:seq:b317c6ace4f2",
+          "identity": 99.8,
+          "raw_pident": 99.8,
+          "aln_length": 456,
+          "qlen": 456,
+          "slen": 456,
+          "evalue": 0.0,
+          "test_chains": [
+            "9rsj_A"
+          ],
+          "train_chains": [
+            "7php_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:3a08580794cc"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:a81d2d04b33b",
+          "identity": 99.7,
+          "raw_pident": 99.7,
+          "aln_length": 373,
+          "qlen": 373,
+          "slen": 776,
+          "evalue": 0.0,
+          "test_chains": [
+            "9nr6_C"
+          ],
+          "train_chains": [
+            "7ldd_A",
+            "7ldd_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:e6101c015d54"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:0368b2f3bf3e",
+          "identity": 99.7,
+          "raw_pident": 99.7,
+          "aln_length": 305,
+          "qlen": 305,
+          "slen": 306,
+          "evalue": 0.0,
+          "test_chains": [
+            "7l5j_A"
+          ],
+          "train_chains": [
+            "6xw5_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:1ec293416682"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:ba87b5233633",
+          "identity": 99.7,
+          "raw_pident": 99.7,
+          "aln_length": 304,
+          "qlen": 304,
+          "slen": 305,
+          "evalue": 0.0,
+          "test_chains": [
+            "2nxy_A"
+          ],
+          "train_chains": [
+            "1g9m_G",
+            "1rzj_G"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0c5b1fef10eb"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:866c091dfa34",
+          "identity": 99.7,
+          "raw_pident": 98.0,
+          "aln_length": 301,
+          "qlen": 296,
+          "slen": 301,
+          "evalue": 0.0,
+          "test_chains": [
+            "9i59_A"
+          ],
+          "train_chains": [
+            "6iek_A",
+            "6iek_D",
+            "8awm_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:927d603d1e1a",
+            "component:seq:a706348257d4"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:3fdc623670a5",
+          "identity": 99.5,
+          "raw_pident": 98.3,
+          "aln_length": 583,
+          "qlen": 583,
+          "slen": 576,
+          "evalue": 0.0,
+          "test_chains": [
+            "8rh1_A",
+            "8rh1_B",
+            "8rh1_C",
+            "8rh2_A"
+          ],
+          "train_chains": [
+            "9mvu_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:a451ff528702"
+          ]
+        }
+      ],
+      "70-90": [
+        {
+          "test_cluster": "component:seq:b57c0ab7aa72",
+          "identity": 89.7,
+          "raw_pident": 87.4,
+          "aln_length": 397,
+          "qlen": 417,
+          "slen": 387,
+          "evalue": 0.0,
+          "test_chains": [
+            "12id_A",
+            "12id_B",
+            "12id_C"
+          ],
+          "train_chains": [
+            "9fm1_A",
+            "9fm1_A",
+            "9fm1_B",
+            "9fm1_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:4b77d44acfe0"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:35b3a309106f",
+          "identity": 89.6,
+          "raw_pident": 83.9,
+          "aln_length": 360,
+          "qlen": 384,
+          "slen": 337,
+          "evalue": 0.0,
+          "test_chains": [
+            "6opo_A",
+            "6opo_D",
+            "6opo_J"
+          ],
+          "train_chains": [
+            "4rwy_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0c5b1fef10eb"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:f9e8c7357dd3",
+          "identity": 89.5,
+          "raw_pident": 85.2,
+          "aln_length": 452,
+          "qlen": 453,
+          "slen": 430,
+          "evalue": 0.0,
+          "test_chains": [
+            "9pnu_C",
+            "9pnu_I"
+          ],
+          "train_chains": [
+            "6ck9_G",
+            "6ck9_G"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:9b74ab4a662e"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:42cbff647fb6",
+          "identity": 89.2,
+          "raw_pident": 89.2,
+          "aln_length": 195,
+          "qlen": 195,
+          "slen": 197,
+          "evalue": 3.67e-131,
+          "test_chains": [
+            "7ttx_A"
+          ],
+          "train_chains": [
+            "7mfu_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0a3bc85d4a8c"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:77652f1e2aa5",
+          "identity": 89.1,
+          "raw_pident": 84.8,
+          "aln_length": 125,
+          "qlen": 119,
+          "slen": 125,
+          "evalue": 1.66e-75,
+          "test_chains": [
+            "8gpi_R",
+            "8gpi_S",
+            "8gpi_T"
+          ],
+          "train_chains": [
+            "8czz_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:1932e319338b"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:d6e3e5fd5120",
+          "identity": 88.6,
+          "raw_pident": 84.4,
+          "aln_length": 257,
+          "qlen": 245,
+          "slen": 253,
+          "evalue": 8.75e-150,
+          "test_chains": [
+            "4weu_A"
+          ],
+          "train_chains": [
+            "4wen_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:d60943fbc71e"
+          ]
+        }
+      ],
+      "50-70": [
+        {
+          "test_cluster": "component:seq:bc754164f2ce",
+          "identity": 66.6,
+          "raw_pident": 62.6,
+          "aln_length": 305,
+          "qlen": 309,
+          "slen": 287,
+          "evalue": 8.19e-131,
+          "test_chains": [
+            "8i5l_A"
+          ],
+          "train_chains": [
+            "6h6z_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0c0ab06fdbcb"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:20eeab195248",
+          "identity": 65.4,
+          "raw_pident": 57.1,
+          "aln_length": 119,
+          "qlen": 131,
+          "slen": 104,
+          "evalue": 1.7e-39,
+          "test_chains": [
+            "5utz_A"
+          ],
+          "train_chains": [
+            "4yue_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:de107602271e"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:853f5e123df2",
+          "identity": 63.4,
+          "raw_pident": 63.4,
+          "aln_length": 93,
+          "qlen": 94,
+          "slen": 93,
+          "evalue": 1.7e-47,
+          "test_chains": [
+            "5nh3_A"
+          ],
+          "train_chains": [
+            "5ngv_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:8126f9be2ab6"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:2ce74c23c7b8",
+          "identity": 62.1,
+          "raw_pident": 60.8,
+          "aln_length": 97,
+          "qlen": 240,
+          "slen": 95,
+          "evalue": 5.61e-30,
+          "test_chains": [
+            "8tvj_E"
+          ],
+          "train_chains": [
+            "1rjl_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:3a57cc71473d"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:9834c5ada474",
+          "identity": 62.1,
+          "raw_pident": 57.3,
+          "aln_length": 309,
+          "qlen": 397,
+          "slen": 285,
+          "evalue": 1.28e-127,
+          "test_chains": [
+            "8rek_A"
+          ],
+          "train_chains": [
+            "9bjh_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:cc8680ff21d8"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:e1a2dfd44c18",
+          "identity": 61.7,
+          "raw_pident": 61.7,
+          "aln_length": 81,
+          "qlen": 81,
+          "slen": 81,
+          "evalue": 8.31e-40,
+          "test_chains": [
+            "6ba5_M",
+            "6ba5_N",
+            "6ban_M",
+            "6ban_N"
+          ],
+          "train_chains": [
+            "6osh_K",
+            "6osv_K"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:4869ee1a4e21"
+          ]
+        }
+      ],
+      "30-50": [
+        {
+          "test_cluster": "component:seq:b8d51e7becae",
+          "identity": 48.7,
+          "raw_pident": 46.0,
+          "aln_length": 237,
+          "qlen": 239,
+          "slen": 224,
+          "evalue": 1.6e-67,
+          "test_chains": [
+            "2r0l_A"
+          ],
+          "train_chains": [
+            "8r8d_A",
+            "8r8d_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:626f9a1914f1"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:5d17a7f3fda9",
+          "identity": 47.4,
+          "raw_pident": 48.2,
+          "aln_length": 114,
+          "qlen": 116,
+          "slen": 118,
+          "evalue": 2.22e-37,
+          "test_chains": [
+            "9l1p_E"
+          ],
+          "train_chains": [
+            "1pkq_J"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:e73da5a895e4"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:2953eb6a0257",
+          "identity": 47.3,
+          "raw_pident": 46.7,
+          "aln_length": 362,
+          "qlen": 357,
+          "slen": 375,
+          "evalue": 1.49e-112,
+          "test_chains": [
+            "9nab_A"
+          ],
+          "train_chains": [
+            "6v4p_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0d5d24eb65f2"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:14a6612afb9a",
+          "identity": 45.6,
+          "raw_pident": 41.1,
+          "aln_length": 440,
+          "qlen": 397,
+          "slen": 443,
+          "evalue": 9.42e-123,
+          "test_chains": [
+            "9nz0_A",
+            "9nz0_B",
+            "9nz0_C"
+          ],
+          "train_chains": [
+            "9ua9_A",
+            "9ua9_A",
+            "9ua9_B",
+            "9ua9_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:05d8fca33470"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:6a4d95aaa390",
+          "identity": 44.9,
+          "raw_pident": 44.9,
+          "aln_length": 372,
+          "qlen": 375,
+          "slen": 372,
+          "evalue": 1.41e-108,
+          "test_chains": [
+            "3v4p_B",
+            "3v4p_D",
+            "3v4v_B",
+            "3v4v_D"
+          ],
+          "train_chains": [
+            "9dao_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0d5d24eb65f2"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:056f78c697ba",
+          "identity": 44.0,
+          "raw_pident": 42.1,
+          "aln_length": 95,
+          "qlen": 100,
+          "slen": 91,
+          "evalue": 4.43e-22,
+          "test_chains": [
+            "5e94_H"
+          ],
+          "train_chains": [
+            "4hj0_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:746cdb688ea8"
+          ]
+        }
+      ]
+    }
+  },
+  "test_permissive": {
+    "n_clusters_evaluated": 251,
+    "restricted_to_scored_clusters": false,
+    "unjudgeable_clusters_all_UNK_sequence": [
+      "component:seq:98831b1ba4e6"
+    ],
+    "n_unjudgeable": 1,
+    "tiers": {
+      "90": {
+        "n_clusters_with_train_homolog": 79,
+        "of": 251,
+        "pct": 31.5,
+        "n_clusters_clean": 172
+      },
+      "70": {
+        "n_clusters_with_train_homolog": 111,
+        "of": 251,
+        "pct": 44.2,
+        "n_clusters_clean": 140
+      },
+      "50": {
+        "n_clusters_with_train_homolog": 130,
+        "of": 251,
+        "pct": 51.8,
+        "n_clusters_clean": 121
+      },
+      "30": {
+        "n_clusters_with_train_homolog": 158,
+        "of": 251,
+        "pct": 62.9,
+        "n_clusters_clean": 93
+      }
+    },
+    "identity_quantiles": {
+      "50": 56.3,
+      "75": 95.3,
+      "90": 99.8,
+      "95": 100.0,
+      "99": 100.0
+    },
+    "n_with_no_qualifying_hit": 69
+  },
+  "val_strict": {
+    "n_clusters_evaluated": 233,
+    "restricted_to_scored_clusters": false,
+    "unjudgeable_clusters_all_UNK_sequence": [],
+    "n_unjudgeable": 0,
+    "tiers": {
+      "90": {
+        "n_clusters_with_train_homolog": 79,
+        "of": 233,
+        "pct": 33.9,
+        "n_clusters_clean": 154
+      },
+      "70": {
+        "n_clusters_with_train_homolog": 108,
+        "of": 233,
+        "pct": 46.4,
+        "n_clusters_clean": 125
+      },
+      "50": {
+        "n_clusters_with_train_homolog": 126,
+        "of": 233,
+        "pct": 54.1,
+        "n_clusters_clean": 107
+      },
+      "30": {
+        "n_clusters_with_train_homolog": 156,
+        "of": 233,
+        "pct": 67.0,
+        "n_clusters_clean": 77
+      }
+    },
+    "identity_quantiles": {
+      "50": 61.4,
+      "75": 96.0,
+      "90": 99.6,
+      "95": 100.0,
+      "99": 100.0
+    },
+    "n_with_no_qualifying_hit": 55,
+    "examples_by_band": {
+      "90-100": [
+        {
+          "test_cluster": "component:seq:61aa559cbcb3",
+          "identity": 99.7,
+          "raw_pident": 96.2,
+          "aln_length": 1172,
+          "qlen": 1131,
+          "slen": 1190,
+          "evalue": 0.0,
+          "test_chains": [
+            "7v3l_A"
+          ],
+          "train_chains": [
+            "7x29_B",
+            "7x29_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:43d767d93f95"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:4c54e76ac0b6",
+          "identity": 99.7,
+          "raw_pident": 99.7,
+          "aln_length": 583,
+          "qlen": 583,
+          "slen": 583,
+          "evalue": 0.0,
+          "test_chains": [
+            "8rgz_A",
+            "8rgz_B",
+            "8rgz_C",
+            "8rh0_A"
+          ],
+          "train_chains": [
+            "9dd8_A",
+            "9dd8_B",
+            "9dd8_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:97101c9df30d"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:1c384f340015",
+          "identity": 99.5,
+          "raw_pident": 99.5,
+          "aln_length": 208,
+          "qlen": 210,
+          "slen": 208,
+          "evalue": 5.39e-157,
+          "test_chains": [
+            "2j6e_A"
+          ],
+          "train_chains": [
+            "5xmh_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:10b17d1038d8"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:45786e4f3efe",
+          "identity": 99.5,
+          "raw_pident": 99.5,
+          "aln_length": 623,
+          "qlen": 623,
+          "slen": 623,
+          "evalue": 0.0,
+          "test_chains": [
+            "44ab_A"
+          ],
+          "train_chains": [
+            "7t4q_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:571f493680a1"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:7bca15c13fa8",
+          "identity": 99.5,
+          "raw_pident": 99.5,
+          "aln_length": 387,
+          "qlen": 387,
+          "slen": 390,
+          "evalue": 0.0,
+          "test_chains": [
+            "8u1q_A"
+          ],
+          "train_chains": [
+            "9cyh_A",
+            "9cyh_B",
+            "9cyh_C",
+            "9cyh_D"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:ee21451e9e59"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:37543831bf7a",
+          "identity": 99.5,
+          "raw_pident": 98.0,
+          "aln_length": 196,
+          "qlen": 193,
+          "slen": 197,
+          "evalue": 4.33e-143,
+          "test_chains": [
+            "9au1_R"
+          ],
+          "train_chains": [
+            "9atm_R"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0d28b60153a0"
+          ]
+        }
+      ],
+      "70-90": [
+        {
+          "test_cluster": "component:seq:858f77c5cd29",
+          "identity": 89.8,
+          "raw_pident": 89.8,
+          "aln_length": 157,
+          "qlen": 157,
+          "slen": 175,
+          "evalue": 1.04e-106,
+          "test_chains": [
+            "8gv5_B"
+          ],
+          "train_chains": [
+            "8txp_B",
+            "8ty7_B",
+            "9dru_B",
+            "9ds1_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0c30e8379937"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:a2721877d21f",
+          "identity": 89.0,
+          "raw_pident": 89.0,
+          "aln_length": 109,
+          "qlen": 109,
+          "slen": 327,
+          "evalue": 1.84e-67,
+          "test_chains": [
+            "9osx_A"
+          ],
+          "train_chains": [
+            "7pi2_D"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:3efa8b8bcbdd"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:9f567389b7f1",
+          "identity": 88.6,
+          "raw_pident": 84.5,
+          "aln_length": 451,
+          "qlen": 452,
+          "slen": 430,
+          "evalue": 0.0,
+          "test_chains": [
+            "7ur6_A",
+            "7ur6_F",
+            "7ur6_G"
+          ],
+          "train_chains": [
+            "6ck9_G",
+            "6ck9_G"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:9b74ab4a662e"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:1a1a3eb8f67f",
+          "identity": 88.0,
+          "raw_pident": 84.6,
+          "aln_length": 130,
+          "qlen": 132,
+          "slen": 125,
+          "evalue": 2.39e-77,
+          "test_chains": [
+            "8d53_B"
+          ],
+          "train_chains": [
+            "8czz_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:1932e319338b"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:2f6a585b44ee",
+          "identity": 87.9,
+          "raw_pident": 70.3,
+          "aln_length": 145,
+          "qlen": 146,
+          "slen": 116,
+          "evalue": 1.05e-65,
+          "test_chains": [
+            "6dcq_D"
+          ],
+          "train_chains": [
+            "9dim_B",
+            "9dim_D"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:41bcb54f9558"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:ee6515288e7e",
+          "identity": 87.5,
+          "raw_pident": 87.5,
+          "aln_length": 216,
+          "qlen": 216,
+          "slen": 217,
+          "evalue": 1.59e-140,
+          "test_chains": [
+            "9b2c_L"
+          ],
+          "train_chains": [
+            "9ulm_D"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:1535b45799b0"
+          ]
+        }
+      ],
+      "50-70": [
+        {
+          "test_cluster": "component:seq:58bcffe1d57e",
+          "identity": 69.7,
+          "raw_pident": 67.7,
+          "aln_length": 313,
+          "qlen": 312,
+          "slen": 304,
+          "evalue": 7.22e-151,
+          "test_chains": [
+            "5o03_B"
+          ],
+          "train_chains": [
+            "5o02_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:ec17b311f4e1"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:2409de84053e",
+          "identity": 69.4,
+          "raw_pident": 64.7,
+          "aln_length": 116,
+          "qlen": 117,
+          "slen": 108,
+          "evalue": 9.8e-50,
+          "test_chains": [
+            "7su0_C"
+          ],
+          "train_chains": [
+            "9dq4_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:4caeb70dec13"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:b610485ecd26",
+          "identity": 69.2,
+          "raw_pident": 63.2,
+          "aln_length": 234,
+          "qlen": 236,
+          "slen": 214,
+          "evalue": 4.57e-101,
+          "test_chains": [
+            "9xzx_A"
+          ],
+          "train_chains": [
+            "4rgn_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:67e5d2f1d967"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:f7162fd1c51d",
+          "identity": 67.4,
+          "raw_pident": 66.6,
+          "aln_length": 527,
+          "qlen": 538,
+          "slen": 521,
+          "evalue": 0.0,
+          "test_chains": [
+            "9cp4_A"
+          ],
+          "train_chains": [
+            "9k0o_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:81844168eaa0"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:fb41d371ef2b",
+          "identity": 66.7,
+          "raw_pident": 65.7,
+          "aln_length": 67,
+          "qlen": 68,
+          "slen": 66,
+          "evalue": 1.25e-23,
+          "test_chains": [
+            "8d9y_I",
+            "8d9y_J",
+            "8d9y_K"
+          ],
+          "train_chains": [
+            "9gcn_V",
+            "9gcn_X",
+            "9gcn_Y",
+            "9gcn_Z"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:acdc493c2104"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:4c792ae3a65d",
+          "identity": 62.8,
+          "raw_pident": 58.7,
+          "aln_length": 167,
+          "qlen": 170,
+          "slen": 156,
+          "evalue": 1.12e-65,
+          "test_chains": [
+            "6vlw_G"
+          ],
+          "train_chains": [
+            "5kzc_F"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:74f47dfab877"
+          ]
+        }
+      ],
+      "30-50": [
+        {
+          "test_cluster": "component:seq:92561d8927ad",
+          "identity": 49.0,
+          "raw_pident": 50.0,
+          "aln_length": 50,
+          "qlen": 54,
+          "slen": 51,
+          "evalue": 2.82e-14,
+          "test_chains": [
+            "7ahv_L"
+          ],
+          "train_chains": [
+            "7ahu_F"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:026193255302"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:7a104c001ee4",
+          "identity": 47.0,
+          "raw_pident": 45.5,
+          "aln_length": 780,
+          "qlen": 755,
+          "slen": 767,
+          "evalue": 0.0,
+          "test_chains": [
+            "7e9g_S"
+          ],
+          "train_chains": [
+            "8t8m_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:861136e04265"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:2e15154072d7",
+          "identity": 47.0,
+          "raw_pident": 45.8,
+          "aln_length": 168,
+          "qlen": 265,
+          "slen": 164,
+          "evalue": 1.13e-47,
+          "test_chains": [
+            "9ibf_B"
+          ],
+          "train_chains": [
+            "6yax_BBB"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:4f29385c218b"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:9702838dc231",
+          "identity": 43.4,
+          "raw_pident": 44.3,
+          "aln_length": 357,
+          "qlen": 364,
+          "slen": 372,
+          "evalue": 1.54e-104,
+          "test_chains": [
+            "9t5z_B"
+          ],
+          "train_chains": [
+            "9dao_B"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:0d5d24eb65f2"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:184df18e6db8",
+          "identity": 42.0,
+          "raw_pident": 39.5,
+          "aln_length": 119,
+          "qlen": 121,
+          "slen": 112,
+          "evalue": 4.62e-17,
+          "test_chains": [
+            "6ulf_K",
+            "6vln_K"
+          ],
+          "train_chains": [
+            "8t9y_A"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:dc10694d1cf3"
+          ]
+        },
+        {
+          "test_cluster": "component:seq:72823f2821a8",
+          "identity": 40.7,
+          "raw_pident": 38.3,
+          "aln_length": 230,
+          "qlen": 720,
+          "slen": 216,
+          "evalue": 3.24e-45,
+          "test_chains": [
+            "9nrc_A"
+          ],
+          "train_chains": [
+            "8fgx_C"
+          ],
+          "identical_modelled_sequence_in_train": false,
+          "train_clusters": [
+            "component:seq:3fa4fba9020b"
+          ]
+        }
+      ]
+    }
+  },
+  "val_permissive": {
+    "n_clusters_evaluated": 233,
+    "restricted_to_scored_clusters": false,
+    "unjudgeable_clusters_all_UNK_sequence": [],
+    "n_unjudgeable": 0,
+    "tiers": {
+      "90": {
+        "n_clusters_with_train_homolog": 79,
+        "of": 233,
+        "pct": 33.9,
+        "n_clusters_clean": 154
+      },
+      "70": {
+        "n_clusters_with_train_homolog": 108,
+        "of": 233,
+        "pct": 46.4,
+        "n_clusters_clean": 125
+      },
+      "50": {
+        "n_clusters_with_train_homolog": 126,
+        "of": 233,
+        "pct": 54.1,
+        "n_clusters_clean": 107
+      },
+      "30": {
+        "n_clusters_with_train_homolog": 156,
+        "of": 233,
+        "pct": 67.0,
+        "n_clusters_clean": 77
+      }
+    },
+    "identity_quantiles": {
+      "50": 61.4,
+      "75": 96.0,
+      "90": 99.6,
+      "95": 100.0,
+      "99": 100.0
+    },
+    "n_with_no_qualifying_hit": 53
+  }
+}

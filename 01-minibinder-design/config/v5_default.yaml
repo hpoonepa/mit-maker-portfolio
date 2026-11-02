@@ -1,0 +1,57 @@
+# V5 minibinder design config — copy and edit per campaign.
+# Usage: python src/design_v5.py --config config/my_campaign.yaml
+#
+# All fields map 1:1 to DesignConfig (src/design_config.py).
+
+# ===== Campaign =====
+seed: 1
+target_structure: "5G51.cif"        # path to target PDB/CIF file
+target_chain: "A"
+binder_length: 85                   # 65 works for pockets; 85+ for flat beta surfaces
+
+# ===== Optimization =====
+phase1_steps: 160                   # continuous-simplex phase (v4 default)
+phase2_steps: 30                    # sharpening phase (v4 default)
+mpnn_weight: 4.0                    # v4 reduced from 8.0 to avoid alanine-repeat collapse
+mpnn_temperature: 0.1               # v4 raised from 0.01 for sequence diversity
+recycling_steps_design: 1           # during optimization
+sampling_steps: 20
+recycling_steps_predict: 4          # final high-quality prediction
+
+# ===== Loss weights =====
+# All 16 terms active. v5 upweights ptm_energy (0.075 -> 1.5) and adds
+# lis + actifptm. Existing v4 weights preserved.
+loss_weights:
+  binder_target_contact: 0.8
+  within_binder_contact: 1.2
+  target_binder_pae: 0.2
+  binder_target_pae: 0.2
+  iptm: 0.15
+  within_binder_pae: 0.6
+  ptm_energy: 1.5                   # UPGRADED: dense-gradient primary interface term
+  plddt: 0.1
+  rog: 0.05
+  binder_target_ipsae: 0.7
+  target_binder_ipsae: 0.4
+  ipsae_min: 2.5
+  lis: 0.5                          # NEW (v5): Local Interaction Score
+  actifptm: 0.5                     # NEW (v5): contact-weighted ipTM
+  hotspot: 0.0                      # NEW (v5): disabled by default
+  helix: -0.08                      # mild helix propensity (natural binder topology)
+  no_cysteine: 5.0                  # hard penalty on cysteines (expression + redox robustness)
+
+hotspot_indices: []
+hotspot_threshold: 8.0
+
+# ===== Validation =====
+run_chai1_consensus: true           # run Chai-1 alongside Boltz2, consensus PAE
+ipsae_consensus_threshold: 0.8      # per-predictor min_ipSAE must exceed this
+min_predictors_passing: 2           # at least N of {Protenix, Boltz2, Chai-1} must pass
+run_rmsd_binder: true               # post-hoc CA-RMSD designed vs predicted
+run_shape_complementarity: true     # PyRosetta SC (graceful skip if not installed)
+rmsd_binder_threshold_angstrom: 5.0 # designs above this RMSD fail filter
+sc_threshold: 0.55                  # SC below this fails filter
+
+# ===== Output =====
+output_dir: "v5_outputs"
+save_intermediate_structures: false

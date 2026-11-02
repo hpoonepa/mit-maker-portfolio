@@ -1,0 +1,26 @@
+{
+  "reproduces_published_majority_hit": true,
+  "detail": {
+    "1": {
+      "computed": 0.32426809054508776,
+      "published": 0.32426809054508776,
+      "delta": 0.0
+    },
+    "3": {
+      "computed": 0.5084567668416484,
+      "published": 0.5084567668416484,
+      "delta": 0.0
+    },
+    "5": {
+      "computed": 0.6325634690674531,
+      "published": 0.6325634690674531,
+      "delta": 0.0
+    },
+    "10": {
+      "computed": 0.7858394174498179,
+      "published": 0.7858394174498179,
+      "delta": 0.0
+    }
+  },
+  "model_file": "work/recovery/patch_classifier_d6_geom+atom+esm__refit_train.json"
+}

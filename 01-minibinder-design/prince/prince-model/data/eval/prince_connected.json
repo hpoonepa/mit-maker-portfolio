@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "model_type": "L2 logistic regression; not an LLM",
+  "status": "retrospective_connected_component_reanalysis",
+  "features": [
+    "exposure",
+    "concavity",
+    "hydrophobicity",
+    "connectivity"
+  ],
+  "weights": {
+    "exposure": 1.0756266877590568,
+    "concavity": -2.3035477542532203,
+    "hydrophobicity": -0.0943157861683642,
+    "connectivity": 0.9803490089433473
+  },
+  "intercept": -3.0953482864844784,
+  "l2": 1.0,
+  "seed": "prince-connected-v1",
+  "sources": {
+    "manifest.csv": "2cad8fe652cdef7c742cb25423ac933e4a2990dae33e574cf6d1ee1f51a5f057",
+    "features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197"
+  },
+  "metadata_sha256": "fb1c454f4c5babd6254ee007981e568d87be6f5dc1343b501b4dbf4b5847d2e7",
+  "identity_overlap_audit": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "protocol_sha256": {
+    "scripts/train_ranker.py": "12c588698fa44858743ee28a93fcc4729f3bdd0d9151df28299b35ed5e8f33c8",
+    "scripts/featurise_benchmark.py": "ae35b5155c815cc9217b15d19a86919a52e2ff8ac3f6138d2676db38db265846",
+    "scripts/repair_feature_records.py": "1c79c7ca947176465f96b7ad849cbc588b85aaeed4c7fb86d1316dcf87f160f5",
+    "benchmark/cluster.py": "d35d7bb724864ef144edcf1c6119dd041c806d8936448b467ae1ea1775e6355c"
+  },
+  "feature_identity_repair": {
+    "schema_version": 1,
+    "status": "all_records_uniquely_recovered",
+    "instances": 649,
+    "method": "unique ordered full-chain identity matching; declared antigen chains only",
+    "source_sha256": {
+      "features_train.jsonl.gz": "86cfa65c877d9e603c88eb80069b617ef56467eca667472294d80b74159b4016",
+      "features_test.jsonl.gz": "0efec38edaa0c25104ab23aa25158506e4c7fe0190816becfdd8ba5acc35cda5"
+    },
+    "output_sha256": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "removed_copy_rows": 27074,
+    "removed_copy_positive_labels": 120,
+    "changed_declared_labels": 28,
+    "retained_rows": 213703
+  },
+  "manifest_instances": 8241,
+  "retained_instances": 6937,
+  "excluded_by_component_cap": 1304,
+  "retained_without_cached_features": 6348,
+  "cached_feature_instances": 649,
+  "available_features_not_used": 60,
+  "split_instances": {
+    "train": 340,
+    "val": 139,
+    "test": 110
+  },
+  "split_clusters": {
+    "train": 116,
+    "val": 39,
+    "test": 34
+  },
+  "split_overlap_components": 0,
+  "evaluation": {
+    "fitted": {
+      "macro_auroc": 0.6479048086879345,
+      "macro_auprc": 0.1360984701841365,
+      "auroc_ci95": [
+        0.6217967531332501,
+        0.6721844996763564
+      ],
+      "auprc_ci95": [
+        0.11681764452123171,
+        0.15725652701549192
+      ],
+      "n_instances": 110,
+      "n_clusters": 34,
+      "aggregation": "within-instance metric, mean within cluster, mean across clusters"
+    },
+    "exposure_only": {
+      "macro_auroc": 0.64500125763451,
+      "macro_auprc": 0.13293803634688628,
+      "auroc_ci95": [
+        0.61929709266114,
+        0.6682010730319817
+      ],
+      "auprc_ci95": [
+        0.11286360681466036,
+        0.15352981119532796
+      ],
+      "n_instances": 110,
+      "n_clusters": 34,
+      "aggregation": "within-instance metric, mean within cluster, mean across clusters"
+    },
+    "designability": {
+      "macro_auroc": 0.5069378115971768,
+      "macro_auprc": 0.11559497332345721,
+      "auroc_ci95": [
+        0.4773265759174364,
+        0.5358976595628885
+      ],
+      "auprc_ci95": [
+        0.09678162525342693,
+        0.13591154882324283
+      ],
+      "n_instances": 110,
+      "n_clusters": 34,
+      "aggregation": "within-instance metric, mean within cluster, mean across clusters"
+    }
+  },
+  "limitations": [
+    "Cached features cover only a subset of the 8241-interface manifest.",
+    "All cached features have appeared in earlier exploratory analyses; this is not an untouched external test.",
+    "Connected accession/exact-sequence disjointness does not establish homology-disjointness.",
+    "Antibody epitopes are not designed-minibinder outcome labels.",
+    "No LLM training corpus/checkpoint exists; no trained-LLM or 83-percent recovery claim is supported.",
+    "Residue AUROC and AUPRC are not patch recovery; see the separate connected-sites evaluation artifact."
+  ]
+}

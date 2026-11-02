@@ -1,0 +1,111 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "hotspot-preflight",
+  "name": "hotspot-preflight",
+  "version": "0.1.0",
+  "codeRepository": "https://gitlab.igem.org/2026/software/lambert-ga/prince-model",
+  "description": "Preflight checks for protein binder design: given a target structure and the hotspot residues a designer intends to target, report whether those residues are modelled in the deposited coordinates, remain solvent-exposed on the biological assembly rather than only on a truncated construct, and are expressed in the residue numbering scheme the downstream design tool expects.",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "Python",
+    "version": ">=3.10"
+  },
+  "runtimePlatform": "Python 3.10",
+  "operatingSystem": [
+    "Linux",
+    "macOS"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Lambert iGEM 2026"
+    }
+  ],
+  "maintainer": {
+    "@type": "Organization",
+    "name": "Lambert iGEM 2026"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Lambert iGEM"
+  },
+  "copyrightYear": 2026,
+  "developmentStatus": "active",
+  "applicationCategory": "Bioinformatics",
+  "applicationSubCategory": [
+    {
+      "@id": "http://edamontology.org/topic_0166",
+      "name": "Protein structural motifs and surfaces"
+    },
+    {
+      "@id": "http://edamontology.org/topic_0128",
+      "name": "Protein interactions"
+    },
+    {
+      "@id": "http://edamontology.org/topic_3510",
+      "name": "Protein sites, features and motifs"
+    }
+  ],
+  "featureList": [
+    {
+      "@id": "http://edamontology.org/operation_2406",
+      "name": "Protein structure analysis"
+    },
+    {
+      "@id": "http://edamontology.org/operation_2464",
+      "name": "Protein-protein binding site prediction"
+    },
+    {
+      "@id": "http://edamontology.org/operation_0416",
+      "name": "Epitope mapping"
+    },
+    {
+      "@id": "http://edamontology.org/operation_0384",
+      "name": "Accessible surface calculation"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "gemmi",
+      "name": "gemmi",
+      "version": ">=0.7.5",
+      "license": "https://spdx.org/licenses/MPL-2.0"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "freesasa",
+      "name": "freesasa",
+      "version": ">=2.2.1",
+      "license": "https://spdx.org/licenses/MIT"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "typer",
+      "name": "typer",
+      "version": ">=0.12",
+      "license": "https://spdx.org/licenses/MIT"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "pyyaml",
+      "name": "pyyaml",
+      "version": ">=6.0",
+      "license": "https://spdx.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "protein-design",
+    "binder-design",
+    "epitope",
+    "hotspot-residues",
+    "structural-biology",
+    "synthetic-biology",
+    "solvent-accessible-surface-area",
+    "biological-assembly",
+    "mmcif",
+    "igem"
+  ]
+}

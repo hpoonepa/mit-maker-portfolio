@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+title: hotspot-preflight
+abstract: >-
+  A preflight checker for de novo protein binder design. Given a target
+  structure and the hotspot residues a designer intends to target, it reports
+  whether those residues are actually modelled in the deposited coordinates,
+  whether they remain solvent-exposed on the biological assembly rather than
+  only on a truncated construct, and whether they are expressed in the residue
+  numbering scheme the downstream design tool expects. It sits in front of
+  tools such as BindCraft, RFdiffusion and BoltzGen, which take hotspot
+  residues as user input and do not validate them.
+type: software
+version: 0.1.0
+repository-code: https://gitlab.igem.org/2026/software/lambert-ga/prince-model
+license: MIT
+authors:
+  - name: "Lambert iGEM 2026"
+keywords:
+  - protein-design
+  - binder-design
+  - epitope
+  - hotspot-residues
+  - structural-biology
+  - synthetic-biology
+  - solvent-accessible-surface-area
+  - biological-assembly
+  - mmcif
+  - igem

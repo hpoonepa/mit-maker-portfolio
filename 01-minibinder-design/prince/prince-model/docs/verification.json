@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-15",
+  "tests": 896,
+  "skipped": 1,
+  "skip_reason": "optional-dependency absence path is inapplicable because sbol3 is installed",
+  "failed": 0,
+  "artifact_checksums": 64,
+  "original_model_bytes_preserved": true,
+  "ranker_example": {
+    "pdb": "1jhl",
+    "patches": 8,
+    "input_features": 660,
+    "parity_tolerance": 1e-06
+  },
+  "wheel": {
+    "built": true,
+    "imported_outside_source": true,
+    "ranker_inference": true,
+    "residue_model_loaded": true
+  },
+  "research": {
+    "python_syntax": "passed",
+    "core_command_help": "passed",
+    "full_training_rerun": false
+  },
+  "environment": {
+    "python": "3.10.9",
+    "xgboost": "2.1.0",
+    "numpy": "1.23.5",
+    "dependencies": "reused installed scientific stack; sbol3 installed in local virtual environment"
+  },
+  "source_distribution": {
+    "built": true,
+    "includes_research_and_evaluation": true
+  }
+}

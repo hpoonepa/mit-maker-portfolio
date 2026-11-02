@@ -1,0 +1,18 @@
+---
+import PrinceApp from '../components/PrinceApp';
+import Mark from '../components/Mark.astro';
+import '../styles/workspace.css';
+import '@fontsource/instrument-sans/latin-400.css';
+import '@fontsource/instrument-sans/latin-500.css';
+import '@fontsource/instrument-sans/latin-600.css';
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#14120e" /><meta name="description" content="Analyze protein surface sites, check selected hotspots, and inspect the evidence in PRINCE." /><title>Workspace — PRINCE</title><link rel="icon" type="image/svg+xml" href="/favicon.svg" /></head>
+  <body class="bench">
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <header class="bench-header"><div class="bench-identity"><a href="/" class="bench-brand" aria-label="Prince home"><Mark /><span>prince.</span></a><span class="header-divider"></span><span class="bench-location">Workspace</span></div><nav aria-label="Workspace navigation"><a href="/method/">Method</a><a href="/validation/">Validation</a><a href="/resources/">Resources</a><a class="bench-guide" href="/guide/">Guide <span>↗</span></a></nav><details class="bench-mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/">Home</a><a href="/method/">Method</a><a href="/validation/">Validation</a><a href="/resources/">Resources</a><a href="/guide/">Guide</a></nav></details></header>
+    <main id="workspace"><div class="bench-title"><div><span class="bench-project">PRINCE / STRUCTURAL ANALYSIS</span><h1>Workspace</h1></div><p>Surface sites & hotspot checks</p></div><PrinceApp client:load /><noscript><p class="no-script">Enable JavaScript to run analysis, or use the <a href="/guide/">command-line guide</a>.</p></noscript></main>
+    <footer class="bench-footer"><span>PRINCE · Lambert iGEM 2026</span><div><a href="/guide/#setup">Worker setup</a><a href="/prince/LICENSE.txt">License</a><a href="/">Back to the observatory ↗</a></div></footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "cached_instances_checked": 649,
+  "potential_original_antibody_chain_name_collisions": [],
+  "status": "code_path_and_declared_chain_name_audit",
+  "scope": "649 cached feature instances; this is a declared-original-chain-name audit, not a new coordinate/feature recomputation",
+  "feature_path": "scripts/featurise_benchmark.py calls benchmark.structures.load_antigen before compute_burial and feature extraction",
+  "patch_path": "benchmark.geometric_predictor.GeometricArm uses the same antigen-only loader before SASA and patch ranking",
+  "assembly_path": "antigen_assembly removes non-antigen chains before neighbourhood trimming; antigen_only removes all nondeclared chains for the asymmetric-unit fallback",
+  "interpretation": "Antigen-only coordinates retain the bound-complex conformation; these are not experimentally measured unbound structures. Antibody coordinates are used to define contact labels, not retained intentionally as feature context.",
+  "source_sha256": {
+    "benchmark/structures.py": "2cf39831644ac98e33848c3191dabf2ac17a4b704d5a34e1a916bcbb1e7e37b2",
+    "scripts/featurise_benchmark.py": "ae35b5155c815cc9217b15d19a86919a52e2ff8ac3f6138d2676db38db265846",
+    "benchmark/geometric_predictor.py": "45d3053596c02a7d38b2c9a0dc8de1da16fe0d607e354900ce3890ce6911335f",
+    "data/eval/features_corrected.jsonl.gz": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197"
+  }
+}

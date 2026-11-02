@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hotspot-preflight"
+version = "0.1.0"
+description = "Preflight checks for protein binder design: is the target site you chose actually real?"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md", "DATA_LICENSES.md"]
+authors = [{ name = "Lambert iGEM 2026" }]
+keywords = ["protein-design", "binder", "epitope", "structural-biology", "synthetic-biology"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+# Pinned lower bounds: these exact versions are the ones the validation runs used.
+dependencies = [
+  "gemmi>=0.7.5",
+  "freesasa>=2.2.1",
+  "typer>=0.12",
+  "pyyaml>=6.0",
+]
+
+[project.urls]
+Repository = "https://gitlab.igem.org/2026/software/lambert-ga/prince-model"
+Issues = "https://gitlab.igem.org/2026/software/lambert-ga/prince-model/-/issues"
+"Web app" = "https://gitlab.igem.org/2026/software/lambert-ga/prince-webapp"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "jsonschema>=4.0", "tomli>=2; python_version < '3.11'"]
+ranker = ["numpy>=1.23.5,<3", "xgboost>=2.1,<3"]
+research = ["numpy>=1.23.5,<2", "scipy>=1.10,<2", "scikit-learn==1.2.1", "xgboost==2.1.0", "pandas>=2,<3", "pyarrow>=12", "requests>=2.31", "biopython>=1.81"]
+# SBOL 3 output. Optional: the structural checks must install without rdflib.
+# Lower bound is the version the standards tests were verified against.
+sbol = ["sbol3>=1.2"]
+# Only the benchmark build needs these. The installed library must not: a user
+# checking their own hotspots should not have to pull scipy, and no runtime
+# code path may depend on a pinned snapshot of somebody else's database.
+benchmark = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.scripts]
+preflight = "hotspot_preflight.cli:app"
+prince-rank = "prince_ranker.inference:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Without this the JSON Schema is absent from a built wheel, so schema_text()
+# raises on an installed package while passing from a source checkout. The run
+# record is a reproducibility artifact and a judged deliverable, so it must
+# validate for someone who installed us, not only for us.
+[tool.setuptools.package-data]
+hotspot_preflight = ["schema/*.json", "model/*.json"]
+prince_ranker = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# "." so the repo-root `benchmark/` package imports in tests without a
+# sys.path shim in every test module.
+pythonpath = ["src", "."]
+addopts = "-q"
+markers = ["network: requires internet access"]

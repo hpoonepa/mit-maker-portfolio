@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "description_of_executed_retrospective_fit_not_new_model_artifact",
+  "model_artifact": "model-evaluation.json",
+  "model_sha256": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+  "labels": {
+    "source": "SAbDab-derived antibody-antigen coordinate contacts",
+    "coordinate_context": "deposited asymmetric unit; declared original antigen chains only",
+    "positive": "Retained antigen heavy atom within nearest-neighbour query boundary of retained amino-acid antibody heavy atom",
+    "nominal_cutoff_angstrom": 4.5,
+    "query_slack_angstrom": 0.01,
+    "effective_boundary": "distance < 4.51 angstrom; finite nearest-neighbour hits accepted without strict 4.5 postfilter",
+    "negatives": "other observed antigen residues; unresolved positions absent",
+    "not_labels": [
+      "functional epitope assays",
+      "prospective designed-minibinder binding outcomes"
+    ]
+  },
+  "selection": {
+    "component_identity": "connected shared UniProt accessions or exact sequence digest",
+    "homology_disjoint_established": false,
+    "component_cap": 20,
+    "cap_order": "ascending resolution; then instance ID",
+    "nominal_split_fractions": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "split_seed": "prince-connected-v1",
+    "manifest_instances": 8241,
+    "retained_manifest_instances": 6937,
+    "excluded_by_cap": 1304,
+    "cached_instances": 649,
+    "cached_used_across_splits": 589,
+    "cached_not_used": 60,
+    "split_instances": {
+      "train": 340,
+      "val": 139,
+      "test": 110
+    },
+    "split_components": {
+      "train": 116,
+      "val": 39,
+      "test": 34
+    },
+    "coverage": "cached subset; non-random availability; prior exploratory reuse"
+  },
+  "fit": {
+    "features": [
+      "exposure",
+      "concavity",
+      "hydrophobicity",
+      "connectivity"
+    ],
+    "preprocessing": "Deterministic features used directly; no learned scaling, imputation, feature selection, or class balancing; reject invalid/nonfinite records",
+    "estimated_preprocessing_statistics": null,
+    "fit_data": "all residues from only the 340 training interfaces; no per-interface training weights",
+    "optimizer": "scipy.optimize.minimize L-BFGS-B",
+    "initialization": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective": "(sum binary logistic negative log likelihood + sum squared four feature coefficients) / n_training_residues",
+    "intercept_penalized": false,
+    "l2": 1.0,
+    "regularization_selection": "fixed; no search or validation-based tuning",
+    "validation_role": "139 reserved interfaces; not used for parameter or hyperparameter fitting",
+    "weights": {
+      "exposure": 1.0756266877590568,
+      "concavity": -2.3035477542532203,
+      "hydrophobicity": -0.0943157861683642,
+      "connectivity": 0.9803490089433473
+    },
+    "intercept": -3.0953482864844784
+  },
+  "evaluation": {
+    "aggregation": "within-interface metric -> mean within component -> mean across components",
+    "bootstrap_draws": 2000,
+    "numpy_random_seed": 0,
+    "interval": "2.5th and97.5th percentiles of component resampling",
+    "test_interfaces": 110,
+    "test_components": 34,
+    "test_observed_residues": 28845
+  },
+  "provenance": {
+    "fit_source_sha256": {
+      "scripts/train_ranker.py": "12c588698fa44858743ee28a93fcc4729f3bdd0d9151df28299b35ed5e8f33c8",
+      "scripts/featurise_benchmark.py": "ae35b5155c815cc9217b15d19a86919a52e2ff8ac3f6138d2676db38db265846",
+      "scripts/repair_feature_records.py": "1c79c7ca947176465f96b7ad849cbc588b85aaeed4c7fb86d1316dcf87f160f5",
+      "benchmark/cluster.py": "d35d7bb724864ef144edcf1c6119dd041c806d8936448b467ae1ea1775e6355c"
+    },
+    "label_source_sha256": "9728728b243a5ddbc87fe9fb393c1d152da2d37d72ef7ef4c167487b36177600",
+    "corrected_features_sha256": "fd94df29806dc55b3242524bb9263e655cc027f2fc2aac754d0b2a284415a197",
+    "antigen_loader_sha256": "2cf39831644ac98e33848c3191dabf2ac17a4b704d5a34e1a916bcbb1e7e37b2"
+  },
+  "claims_not_supported": [
+    "prospective minibinder performance",
+    "functional epitope specificity",
+    "trained literature LLM",
+    "predictive benefit from literature ranking"
+  ],
+  "structural_input_context": {
+    "source": "benchmark.structures.load_antigen, used by scripts/featurise_benchmark.py and benchmark/geometric_predictor.py",
+    "selection": "Remove non-antigen chains before SASA/features; retain antigen assembly copies; asymmetric-unit fallback also strips non-antigen chains",
+    "coordinate_state": "antigen-only coordinates retaining bound conformation; not experimental unbound structures",
+    "label_context": "original antibody-antigen complex; labels separate from predictor coordinates",
+    "historic_cache_caveat": "Cached features reused rather than regenerated; source protocol is documented, not a new all-structure recomputation"
+  },
+  "runtime_scoring": {
+    "coefficients": "exact fitted coefficients; signed unnormalized dot product",
+    "normalization_by_weight_sum": false,
+    "score_clipping": false,
+    "sigmoid": false,
+    "intercept": "omitted constant; ranking preserved for residues and default mean patches",
+    "patch_aggregation": "arithmetic mean of residue scores, then overlapping-patch suppression",
+    "probability_claim": false,
+    "actual_6f5j_smoke": {
+      "target": "6F5J",
+      "chain": "C",
+      "assembly": "1",
+      "model_sha256": "8d95fbf465a1c4610a13b59994d242cd37f98d17702a373fe9f88852eca49f01",
+      "coefficients_exact_match": true,
+      "coefficient_sum": -0.34188784371918035,
+      "residues_compared": 393,
+      "runtime_vs_independent_dot_max_abs_error": 0.0,
+      "score_range": [
+        -1.421944884861855,
+        1.375839670912162
+      ],
+      "intercept": -3.0953482864844784,
+      "intercept_omission": "constant across residue scores and mean patch scores; preserves descending rank",
+      "patches_verified": 44,
+      "aggregation": "arithmetic mean of residue linear scores; no division by coefficient sum; no score clipping or sigmoid",
+      "top_patch_score": 0.945876581398605,
+      "live_api_top_patch_score": 0.945877,
+      "top_patch_matches_live_api": true,
+      "score_is_probability": false,
+      "raw_example": {
+        "residue": "C2",
+        "features": {
+          "exposure": 0.14783628168126198,
+          "concavity": 0.29411764705882354,
+          "hydrophobicity": 0.0,
+          "connectivity": 0.25
+        },
+        "runtime_score": -0.2734101431373267
+      }
+    }
+  }
+}

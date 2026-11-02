@@ -1,0 +1,241 @@
+{
+  "what": "Random-patch-selection control under the identical NMS/denominator protocol as all other arms. The missing control: no prior PRINCE benchmark included it.",
+  "reps": 400,
+  "seed": 20261011,
+  "n_test_interfaces": 110,
+  "surface_composition": {
+    "epitope_fraction_of_candidate_residues_median": 0.10106382978723404,
+    "majority_correct_patch_fraction_median": 0.08876050420168068
+  },
+  "random": {
+    "majority_hit": {
+      "1": {
+        "mean": 0.08161509395424836,
+        "sd": 0.033767866226699715
+      },
+      "3": {
+        "mean": 0.2274128880718954,
+        "sd": 0.05003586056134401
+      },
+      "5": {
+        "mean": 0.3479211601307189,
+        "sd": 0.059796958203896626
+      },
+      "10": {
+        "mean": 0.5692061887254902,
+        "sd": 0.05840632540062731
+      }
+    },
+    "half_epitope_recovery": {
+      "1": {
+        "mean": 0.00922640931372549,
+        "sd": 0.012494129390703287
+      },
+      "3": {
+        "mean": 0.027219669117647057,
+        "sd": 0.02153277289601823
+      },
+      "5": {
+        "mean": 0.04447916666666666,
+        "sd": 0.023879038108528622
+      },
+      "10": {
+        "mean": 0.08051623774509804,
+        "sd": 0.028518334494944238
+      }
+    }
+  },
+  "arms": {
+    "original_incumbent": {
+      "majority_hit": {
+        "1": {
+          "component_macro": 0.08272058823529412,
+          "z_vs_random": 0.0327380555710582,
+          "p_random_ge_arm": 0.475
+        },
+        "3": {
+          "component_macro": 0.23366013071895425,
+          "z_vs_random": 0.12485530531446966,
+          "p_random_ge_arm": 0.465
+        },
+        "5": {
+          "component_macro": 0.31781045751633985,
+          "z_vs_random": -0.5035490686952182,
+          "p_random_ge_arm": 0.6925
+        },
+        "10": {
+          "component_macro": 0.5519607843137254,
+          "z_vs_random": -0.295266039996065,
+          "p_random_ge_arm": 0.625
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "component_macro": 0.03125,
+          "z_vs_random": 1.7627151118398028,
+          "p_random_ge_arm": 0.07
+        },
+        "3": {
+          "component_macro": 0.034926470588235295,
+          "z_vs_random": 0.3579103122391336,
+          "p_random_ge_arm": 0.34
+        },
+        "5": {
+          "component_macro": 0.04166666666666667,
+          "z_vs_random": -0.11778112615832201,
+          "p_random_ge_arm": 0.545
+        },
+        "10": {
+          "component_macro": 0.08578431372549021,
+          "z_vs_random": 0.18472593416442668,
+          "p_random_ge_arm": 0.415
+        }
+      }
+    },
+    "incumbent": {
+      "majority_hit": {
+        "1": {
+          "component_macro": 0.08272058823529412,
+          "z_vs_random": 0.0327380555710582,
+          "p_random_ge_arm": 0.475
+        },
+        "3": {
+          "component_macro": 0.26960784313725494,
+          "z_vs_random": 0.8432942811811637,
+          "p_random_ge_arm": 0.185
+        },
+        "5": {
+          "component_macro": 0.3504901960784314,
+          "z_vs_random": 0.04296265269802817,
+          "p_random_ge_arm": 0.4825
+        },
+        "10": {
+          "component_macro": 0.5666666666666667,
+          "z_vs_random": -0.04348025734206346,
+          "p_random_ge_arm": 0.52
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "component_macro": 0.03125,
+          "z_vs_random": 1.7627151118398028,
+          "p_random_ge_arm": 0.07
+        },
+        "3": {
+          "component_macro": 0.034926470588235295,
+          "z_vs_random": 0.3579103122391336,
+          "p_random_ge_arm": 0.34
+        },
+        "5": {
+          "component_macro": 0.04166666666666667,
+          "z_vs_random": -0.11778112615832201,
+          "p_random_ge_arm": 0.545
+        },
+        "10": {
+          "component_macro": 0.08578431372549021,
+          "z_vs_random": 0.18472593416442668,
+          "p_random_ge_arm": 0.415
+        }
+      }
+    },
+    "exposure": {
+      "majority_hit": {
+        "1": {
+          "component_macro": 0.06924019607843136,
+          "z_vs_random": -0.36646964284738737,
+          "p_random_ge_arm": 0.61
+        },
+        "3": {
+          "component_macro": 0.20404411764705882,
+          "z_vs_random": -0.46704044184843113,
+          "p_random_ge_arm": 0.675
+        },
+        "5": {
+          "component_macro": 0.24019607843137258,
+          "z_vs_random": -1.8015144070041755,
+          "p_random_ge_arm": 0.9675
+        },
+        "10": {
+          "component_macro": 0.4333333333333333,
+          "z_vs_random": -2.3263380200716686,
+          "p_random_ge_arm": 0.98
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "component_macro": 0.0,
+          "z_vs_random": -0.7384595617034938,
+          "p_random_ge_arm": 1.0
+        },
+        "3": {
+          "component_macro": 0.0,
+          "z_vs_random": -1.264104221462366,
+          "p_random_ge_arm": 1.0
+        },
+        "5": {
+          "component_macro": 0.029411764705882353,
+          "z_vs_random": -0.6309886475453483,
+          "p_random_ge_arm": 0.7125
+        },
+        "10": {
+          "component_macro": 0.03125,
+          "z_vs_random": -1.7275285747781666,
+          "p_random_ge_arm": 0.95
+        }
+      }
+    },
+    "selected": {
+      "majority_hit": {
+        "1": {
+          "component_macro": 0.12009803921568626,
+          "z_vs_random": 1.1396321284585655,
+          "p_random_ge_arm": 0.1225
+        },
+        "3": {
+          "component_macro": 0.30473856209150324,
+          "z_vs_random": 1.5454050985054306,
+          "p_random_ge_arm": 0.075
+        },
+        "5": {
+          "component_macro": 0.4939542483660131,
+          "z_vs_random": 2.442149109614376,
+          "p_random_ge_arm": 0.01
+        },
+        "10": {
+          "component_macro": 0.6256944444444443,
+          "z_vs_random": 0.9671598980330202,
+          "p_random_ge_arm": 0.15
+        }
+      },
+      "half_epitope_recovery": {
+        "1": {
+          "component_macro": 0.058823529411764705,
+          "z_vs_random": 3.969633941436829,
+          "p_random_ge_arm": 0.005
+        },
+        "3": {
+          "component_macro": 0.058823529411764705,
+          "z_vs_random": 1.467709730034896,
+          "p_random_ge_arm": 0.095
+        },
+        "5": {
+          "component_macro": 0.07352941176470588,
+          "z_vs_random": 1.2165584294479457,
+          "p_random_ge_arm": 0.1225
+        },
+        "10": {
+          "component_macro": 0.08823529411764706,
+          "z_vs_random": 0.27066995703825075,
+          "p_random_ge_arm": 0.3825
+        }
+      }
+    }
+  },
+  "pre_registered_primary_endpoint": "majority_hit component-macro @1 (the locked selection criterion). The selected arm does NOT clear random on it (p=0.1225). Wins at @5 majority-hit (p=0.0100) and @1 half-epitope (p=0.0050) are SECONDARY endpoints, not pre-specified, among 32 arm x metric x k comparisons.",
+  "headline_findings": [
+    "The SHIPPED PRINCE site ranker (original_incumbent) is statistically indistinguishable from random patch selection at every k on majority-hit (z = +0.0/+0.1/-0.5/-0.3). Its advertised 69/110 top-10 majority-hit equals the random-control rate.",
+    "Exposure-alone is WORSE than random at top-5 and top-10 (z = -1.8, -2.3): ranking by maximum solvent exposure actively steers proposals away from antibody epitopes.",
+    "The new patch-level XGBoost learning-to-rank model is the first PRINCE arm to exceed the random control, but only at secondary endpoints.",
+    "It does NOT beat the shipped model head-to-head (all paired CIs include zero) and is worse on raw unweighted counts. Its gains are concentrated in small antigen clusters."
+  ]
+}

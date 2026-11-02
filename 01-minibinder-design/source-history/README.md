@@ -1,0 +1,18 @@
+# Original campaign source
+
+These are snapshots of the original development files, with source comments and research credits retained. The directory name does not imply a Git history for the unversioned campaign folders.
+
+| Directory | Role |
+|---|---|
+| `campaign-scripts/` | Early DWV VP3 and RBX1/2LGV design, folding and filtering iterations |
+| `config/`, `src/`, `validators/`, `tests/` | Original settings, objective adapters, consensus analysis and software checks |
+| `scripts/` | Colab/API clients, sequence assessment, post-assay ranking and modeling utilities |
+| `scripts/egfr_pilot/` | Separate EGFR simulation pilot retained as a learning experiment |
+| `nebius/` | SSH campaign/checkpoint runner, validation and selected output summaries |
+| `runpod/` | Tri-model scoring worker and container/launch setup |
+| `vast/` | GPU instance orchestration, monitoring, resume and earlier campaign entry points |
+| `Proteinbase Analysis.ipynb` | Exploratory binder-metric analysis |
+
+The DWV story and what was actually measured are in the [pipeline notes](../docs/PIPELINE-NOTES.md). Earlier RBX1 and EGFR work is reference source, not evidence for the positive DWV binder. Historical comments record what was believed at the time; unsupported score claims are not experimental findings. [Citations](../CITATIONS.md) clarify adapted metrics and external dependencies.
+
+Some scripts need workspace-specific files, scientific packages, GPU assets or separately configured cloud accounts. No model weights or credentials are supplied. Original files and Git histories remain preserved outside this public copy.

@@ -1,0 +1,13 @@
+{
+  "cache_dir": "cache_all",
+  "contexts": 6464,
+  "packed": {
+    "atom": 6464
+  },
+  "missing_block_files": {},
+  "blocks": [
+    "atom"
+  ],
+  "aggregation": "per-patch mean|max|std of residue features, plus [n_res, area, radius_gyration]",
+  "script_sha256": "39ba0e41fe96be07d3f726a427607e3eecb5e3aac5ae69679dbe39df89ec86c6"
+}

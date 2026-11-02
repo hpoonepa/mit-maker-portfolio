@@ -1,0 +1,9 @@
+include LICENSE NOTICE.md DATA_LICENSES.md CITATION.cff codemeta.json MODEL_CARD.md ARTIFACTS.sha256 hotspot-preflight.cwl
+recursive-include docs *.md
+recursive-include examples *.md *.json
+recursive-include benchmark *.py *.json *.gz
+recursive-include data *.csv *.json *.yaml
+recursive-include evaluation *.json *.csv
+recursive-include research *.py *.md
+recursive-include scripts *.py
+recursive-include tests *.py

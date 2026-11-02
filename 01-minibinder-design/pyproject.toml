@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "minibinder"
+version = "0.1.0"
+description = "Minibinder campaign and analysis source for DWV VP3 (5G51)"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+# Dependencies are split into what you need to read and test this code (here)
+# and what you need to actually run a design campaign (the optional groups).
+# Nothing in the base set needs a GPU.
+dependencies = [
+    "numpy>=1.26",
+    "gemmi>=0.6",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "biopython>=1.83",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+# The design and folding jobs. jax[cuda12] is the configuration every campaign
+# in this repo actually ran on; the CPU wheel imports but is far too slow to
+# design with.
+design = [
+    "jax[cuda12]>=0.4.30",
+    "equinox>=0.11",
+]
+# Launching on the four compute backends.
+backends = [
+    "modal>=0.64",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+minibinder = "minibinder.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/minibinder"]
+
+# ---------------------------------------------------------------------------
+# The dependency this file cannot honestly declare
+# ---------------------------------------------------------------------------
+#
+# Every design, folding and consensus job imports `mosaic`
+# (https://github.com/escalante-bio/mosaic), which supplies Boltz-2, Protenix,
+# ProteinMPNN and the APGM optimizer. It is not on PyPI, and it is NOT listed
+# in [project.dependencies] on purpose:
+#
+#   * The name `mosaic` on PyPI is an unrelated package. Declaring it here
+#     would make `pip install .` quietly install the wrong library, and the
+#     failure surfaces much later as a confusing attribute error.
+#   * The same trap applies to `protenix`, `boltz` and `esm`: upstream resolves
+#     those through [tool.uv.sources] git pins, and pip does not read that
+#     table at all, so a pip install of upstream also lands on the wrong
+#     PyPI packages.
+#
+# Install it the way the campaigns did, with uv, from its own checkout:
+#
+#   git clone https://github.com/escalante-bio/mosaic && cd mosaic
+#   uv sync --group jax-cuda
+#
+# and run the jobs with `uv run` from that checkout, or inside one of the
+# container images under `backends/`, which do exactly this.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

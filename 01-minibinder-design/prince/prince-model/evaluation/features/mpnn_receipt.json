@@ -1,0 +1,798 @@
+{
+  "generated": "2026-10-11T10:46:29-0700",
+  "licence": {
+    "package": "ProteinMPNN",
+    "spdx": "MIT",
+    "verified_from": "research/upstream-proteinmpnn/LICENSE",
+    "header": "MIT License\n\nCopyright (c) 2022 Justas Dauparas\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+    "weights": "checkpoints are committed inside the MIT repo (vanilla_model_weights/*.pt) with no separate or additional licence; find over the tree returns only ./LICENSE and ./training/LICENSE, both identical MIT, and README.md contains no licence carve-out",
+    "obligation": "retain the copyright notice if code is redistributed",
+    "esm_if1_used": false
+  },
+  "upstream": {
+    "repo": "https://github.com/dauparas/ProteinMPNN",
+    "clone": "research/upstream-proteinmpnn",
+    "git_commit": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57"
+  },
+  "checkpoint": {
+    "file": "upstream-proteinmpnn/vanilla_model_weights/v_48_020.pt",
+    "name": "v_48_020",
+    "variant": "vanilla",
+    "note": "the published default of protein_mpnn_run.py (--model_name v_48_020), 48 neighbours, 0.20 A training noise",
+    "not_soluble_weights": "soluble_model_weights/ deliberately NOT used: trained on a filtered PDB subset, which would confound a designability signal",
+    "ca_only": false,
+    "backbone_noise": 0.0,
+    "backbone_noise_note": "augment_eps=0.0, i.e. --backbone_noise 0.0: no Gaussian perturbation of backbone atoms, so the encoder is deterministic"
+  },
+  "entry_point": {
+    "calls": [
+      "ProteinMPNN.unconditional_probs",
+      "ProteinMPNN.forward (teacher-forced)"
+    ],
+    "equivalent_cli": [
+      "protein_mpnn_run.py --unconditional_probs_only 1",
+      "protein_mpnn_run.py --save_probs 1"
+    ],
+    "note": "imported from protein_mpnn_utils and called directly, the same code paths protein_mpnn_run.py takes at lines 297-307 and ~309; distribution reads only, no sequence sampling anywhere",
+    "conditional_probs_rejected": {
+      "what": "ProteinMPNN.conditional_probs, i.e. --conditional_probs_only 1, giving p(s_i | all other residues, backbone)",
+      "why": "it is NOT a single forward pass. protein_mpnn_utils.py line 1321 is `for idx in idx_to_loop:` -- one full decoder pass per designed position. Measured 68.8 s for a single 307-residue antigen against 0.43 s for the teacher-forced forward, ~160x, which is ~100 CPU-hours over 561 contexts.",
+      "also_not_deterministic": "line 1330 derives the decoding order from `randn`. The target position is forced last (so it does see all others), but the relative order of the remaining positions is random and the decoder's representations depend on it, so it would still need a fixed seed.",
+      "substitute": "the teacher-forced forward, averaged over 20 seeded decoding orders, named mpnn_autoreg_* rather than mpnn_cond_* so it is never mistaken for the above",
+      "substitute_validated": {
+        "method": "ran the real conditional_probs on 3 small contexts and took Spearman rho against both of our blocks, per residue",
+        "spearman_vs_true_conditional": {
+          "entropy": {
+            "uncond": 0.918,
+            "autoreg": 0.977
+          },
+          "logp_native": {
+            "uncond": 0.889,
+            "autoreg": 0.985
+          },
+          "p_argmax": {
+            "uncond": 0.85,
+            "autoreg": 0.957
+          },
+          "native_rank": {
+            "uncond": 0.776,
+            "autoreg": 0.945
+          },
+          "top2_gap": {
+            "uncond": 0.76,
+            "autoreg": 0.896
+          },
+          "mass_hydrophobic": {
+            "uncond": 0.86,
+            "autoreg": 0.967
+          },
+          "mass_charged": {
+            "uncond": 0.907,
+            "autoreg": 0.974
+          },
+          "mass_aromatic": {
+            "uncond": 0.935,
+            "autoreg": 0.977
+          }
+        },
+        "conclusion": "autoreg tracks the true conditional at rho 0.90-0.99 and beats uncond on all 8 statistics, so it is a faithful stand-in at 1/160 the cost"
+      }
+    },
+    "featurisation": "tied_featurize on an input dict built by build_mpnn_input (same layout as parse_PDB / helper_scripts/parse_multiple_chains.py), with numbering gaps padded as masked 'X' residues",
+    "determinism": "unconditional_probs is deterministic (augment_eps=0, backbone_noise=0). conditional_probs samples a decoding order, so torch.manual_seed(37) is set per context and 20 orders are averaged."
+  },
+  "config": {
+    "workers": 4,
+    "threads_per_worker": 8,
+    "n_decoding_orders": 20,
+    "seed": 37,
+    "max_numbering_gap_padded": 33,
+    "device": "cpu"
+  },
+  "contexts": {
+    "attempted": 506,
+    "completed": 0,
+    "already_cached": 402,
+    "errors": 0,
+    "skipped_dataless": 0,
+    "skipped_blacklist": 104,
+    "npz_on_disk": 421
+  },
+  "errors": [],
+  "dataless_skips": {
+    "count": 0,
+    "cause": "inputs are iCloud-evicted (SF_DATALESS) stubs. stat reports the full size but the bytes are not local; reading one returns zero bytes or blocks forever, so they are detected by flag and skipped before any read. This is an environment fault, not a modelling result.",
+    "remedy": "materialise them (`brctl download`, or open in Finder with iCloud reachable) and re-run; the build is resumable and will fill only the gaps",
+    "contexts": []
+  },
+  "key_coverage": {
+    "total_cache_keys_written": 134137,
+    "keys_not_scored": 13,
+    "fraction_scored": 0.999903,
+    "per_context_min": null,
+    "per_context_mean": null,
+    "by_chain_count": {
+      "single_chain": {
+        "contexts": 302,
+        "cache_keys": 73964,
+        "scored": 73957,
+        "fraction_scored": 0.999905,
+        "per_context_min": 0.989691,
+        "per_context_mean": 0.999876,
+        "contexts_below_99pct": 1,
+        "max_antigen_chains": 1
+      },
+      "multi_chain": {
+        "contexts": 100,
+        "cache_keys": 51434,
+        "scored": 51429,
+        "fraction_scored": 0.999903,
+        "per_context_min": 0.989796,
+        "per_context_mean": 0.9998,
+        "contexts_below_99pct": 1,
+        "max_antigen_chains": 3
+      },
+      "npz_not_in_this_cache_dir": 19
+    },
+    "note": "single vs multi refers to the number of DECLARED antigen chains. Every declared chain is in ProteinMPNN's designed set, asserted per context via chain_M; assembly-expanded neighbours are present as structural context and scored but not emitted."
+  },
+  "runtime": {
+    "wall_seconds": 1.1,
+    "mean_seconds_per_context": null,
+    "max_seconds_per_context": null
+  },
+  "feature_names": [
+    "mpnn_uncond_entropy",
+    "mpnn_uncond_logp_native",
+    "mpnn_uncond_p_native",
+    "mpnn_uncond_p_argmax",
+    "mpnn_uncond_argmax_is_native",
+    "mpnn_uncond_native_rank",
+    "mpnn_uncond_top2_gap",
+    "mpnn_uncond_kl_to_background",
+    "mpnn_uncond_mass_hydrophobic",
+    "mpnn_uncond_mass_charged",
+    "mpnn_uncond_mass_polar_uncharged",
+    "mpnn_uncond_mass_small",
+    "mpnn_uncond_mass_aromatic",
+    "mpnn_uncond_mass_gly",
+    "mpnn_uncond_mass_pro",
+    "mpnn_uncond_mass_unknown_token",
+    "mpnn_autoreg_entropy",
+    "mpnn_autoreg_logp_native",
+    "mpnn_autoreg_p_native",
+    "mpnn_autoreg_p_argmax",
+    "mpnn_autoreg_argmax_is_native",
+    "mpnn_autoreg_native_rank",
+    "mpnn_autoreg_top2_gap",
+    "mpnn_autoreg_kl_to_background",
+    "mpnn_autoreg_mass_hydrophobic",
+    "mpnn_autoreg_mass_charged",
+    "mpnn_autoreg_mass_polar_uncharged",
+    "mpnn_autoreg_mass_small",
+    "mpnn_autoreg_mass_aromatic",
+    "mpnn_autoreg_mass_gly",
+    "mpnn_autoreg_mass_pro",
+    "mpnn_autoreg_mass_unknown_token",
+    "mpnn_scored"
+  ],
+  "feature_stats": {
+    "mpnn_uncond_entropy": {
+      "min": 0.274679,
+      "mean": 1.919437,
+      "max": 2.949307,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_logp_native": {
+      "min": -6.272357,
+      "mean": -1.792696,
+      "max": -0.039864,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_p_native": {
+      "min": 0.001888,
+      "mean": 0.30643,
+      "max": 0.96092,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_p_argmax": {
+      "min": 0.078497,
+      "mean": 0.425294,
+      "max": 0.96092,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_argmax_is_native": {
+      "min": 0.0,
+      "mean": 0.436641,
+      "max": 1.0,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_native_rank": {
+      "min": 0.0,
+      "mean": 2.497659,
+      "max": 19.0,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_top2_gap": {
+      "min": 4e-06,
+      "mean": 0.278413,
+      "max": 0.954651,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_kl_to_background": {
+      "min": 0.022743,
+      "mean": 1.027223,
+      "max": 4.099589,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_hydrophobic": {
+      "min": 0.011868,
+      "mean": 0.382129,
+      "max": 0.976089,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_charged": {
+      "min": 0.009411,
+      "mean": 0.235993,
+      "max": 0.974192,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_polar_uncharged": {
+      "min": 0.011287,
+      "mean": 0.257599,
+      "max": 0.959811,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_small": {
+      "min": 0.009347,
+      "mean": 0.345603,
+      "max": 0.961685,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_aromatic": {
+      "min": 0.005388,
+      "mean": 0.124924,
+      "max": 0.962619,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_gly": {
+      "min": 0.001109,
+      "mean": 0.071542,
+      "max": 0.93346,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_pro": {
+      "min": 0.000949,
+      "mean": 0.052737,
+      "max": 0.933464,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_uncond_mass_unknown_token": {
+      "min": 0.001018,
+      "mean": 0.004155,
+      "max": 0.007375,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_entropy": {
+      "min": 0.290963,
+      "mean": 1.877325,
+      "max": 2.946757,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_logp_native": {
+      "min": -5.906379,
+      "mean": -1.603153,
+      "max": -0.042856,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_p_native": {
+      "min": 0.002722,
+      "mean": 0.342116,
+      "max": 0.95805,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_p_argmax": {
+      "min": 0.076603,
+      "mean": 0.440822,
+      "max": 0.95805,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_argmax_is_native": {
+      "min": 0.0,
+      "mean": 0.503884,
+      "max": 1.0,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_native_rank": {
+      "min": 0.0,
+      "mean": 2.028093,
+      "max": 19.0,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_top2_gap": {
+      "min": 1e-06,
+      "mean": 0.29465,
+      "max": 0.950267,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_kl_to_background": {
+      "min": 0.022881,
+      "mean": 1.073287,
+      "max": 4.082629,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_hydrophobic": {
+      "min": 0.010515,
+      "mean": 0.379046,
+      "max": 0.975128,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_charged": {
+      "min": 0.009722,
+      "mean": 0.228873,
+      "max": 0.972829,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_polar_uncharged": {
+      "min": 0.010764,
+      "mean": 0.267989,
+      "max": 0.957792,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_small": {
+      "min": 0.00903,
+      "mean": 0.350126,
+      "max": 0.959607,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_aromatic": {
+      "min": 0.006505,
+      "mean": 0.125301,
+      "max": 0.956654,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_gly": {
+      "min": 0.001101,
+      "mean": 0.072097,
+      "max": 0.937125,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_pro": {
+      "min": 0.001104,
+      "mean": 0.051995,
+      "max": 0.933545,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_autoreg_mass_unknown_token": {
+      "min": 0.00119,
+      "mean": 0.004122,
+      "max": 0.00722,
+      "n_finite": 134124,
+      "n_nan": 13
+    },
+    "mpnn_scored": {
+      "min": 1.0,
+      "mean": 1.0,
+      "max": 1.0,
+      "n_finite": 134124,
+      "n_nan": 13
+    }
+  },
+  "build_completeness": {
+    "cache_dir_used": "/private/tmp/mpnn_stage/cache",
+    "cache_dir_contexts": 506,
+    "reference_cache_contexts": 561,
+    "built_of_reference": 421,
+    "fraction_of_reference_built": 0.7504,
+    "cache_contexts_total": 506,
+    "contexts_built": 402,
+    "contexts_not_built": [
+      "245020022d12d821",
+      "308d6e03dbb415de",
+      "40dc0414ed9d7d77",
+      "41b7226f8356c233",
+      "4c7dc128d2bd1405",
+      "4fc96ff8b5e21f70",
+      "533a596060b9753e",
+      "947b82bc754991c9",
+      "b5f5ddf4d46fd5ea",
+      "d0570ecd726f18b3",
+      "d0b675cd6ad594c6",
+      "d0c81c0ca302f96b",
+      "d1bdb1f1b37de8db",
+      "d1e8d5665b01c7f7",
+      "d282c90713252657",
+      "d2989d08e34b9294",
+      "d34f4f506ba86703",
+      "d3fc546e7016c2c4",
+      "d445f46e67927496",
+      "d470ce6c99a69718",
+      "d4870285e3d99053",
+      "d595ee6cb04efce4",
+      "d65e06b91f1ec76a",
+      "d6dacc3711f56cab",
+      "d807854e7849d797",
+      "d823295bc493297c",
+      "d964f96916afab80",
+      "d98d768279ec6205",
+      "d9b416570c73ffc3",
+      "db48728fdc1aee4e",
+      "db59e1ba5dc26a06",
+      "dc6e0a7a4f39cfb4",
+      "dd8076ff176fd64f",
+      "dd8577955ea66d1a",
+      "dd98dc8ba09da89d",
+      "defed9d993909324",
+      "df524daca01b4588",
+      "e1f328e7521d252d",
+      "e2df5f712651518a",
+      "e2ef1aef7ea9bf49",
+      "e34a047c2479a1ff",
+      "e36e52335f7335c8",
+      "e3d426df70d6753c",
+      "e3e371d6b76b1a1c",
+      "e5edec21272acf7a",
+      "e67a7803d1971c66",
+      "e73107d0b6c68e17",
+      "e770ba3e4d5af743",
+      "e780c4012c50ab1f",
+      "e7a5ea673b39e2b6",
+      "e83f51a8c61b01b6",
+      "e881ea6b66c37aa0",
+      "e8bb4b1f6abd4931",
+      "e9b008b5c0df0d1e",
+      "eb5d0f1da4871297",
+      "eb7ac753dcd1465f",
+      "eb80d91e5a13b3cf",
+      "ebb4ab11618bec7b",
+      "ebca68f36ff1c261",
+      "ebd4ae809369376d",
+      "ec468f34b1cbdb53",
+      "ecbcfb4e0831b1c5",
+      "ecdbece1fc147f5e",
+      "ed9a6069cc656ce4",
+      "ee3df7a3d2f5689d",
+      "ee409c03dc4194c0",
+      "ee5adbe1757f791b",
+      "ef38d46ef5924b69",
+      "f05c2066b17893f7",
+      "f079fde40b387f59",
+      "f0e0aebe3cc09381",
+      "f1009eb216329e0e",
+      "f1a4771e227ee262",
+      "f2e8f01427e1643b",
+      "f2f5a8591c3f4ad3",
+      "f476fa5ef05845d0",
+      "f49be78297a37bff",
+      "f575990f1410d97c",
+      "f5f92d811bedb934",
+      "f695710bd4b4c602",
+      "f701d8dc0c00b3e0",
+      "f707e9d37e14985b",
+      "f7b732803d120e5f",
+      "f7ba04292e874bb2",
+      "f7d907cafaa92de8",
+      "f7f88ce699a87c82",
+      "f85b9d4400edc724",
+      "f909416c1fb6b481",
+      "fa05a869a121fa6d",
+      "fa5ee1a505eefc37",
+      "fafe021fb03824dc",
+      "fb1d834e9da5a854",
+      "fb2a13762d72c135",
+      "fb4623292a1fe367",
+      "fc213675a2673f8b",
+      "fc2e316069b4dc60",
+      "fc79681d09b95fd6",
+      "fce7ba028ce7a98c",
+      "fd84356216a53b86",
+      "fdc1f122649bb54d",
+      "fdebcd85e80d41f0",
+      "fe2609686f0b32ed",
+      "feb51503de6a39f9",
+      "ff86de2d38450a2c"
+    ],
+    "fraction_built": 0.7945,
+    "why_incomplete": "Not a limitation of the method: every context that was reachable built cleanly with 0 errors and ~100% key coverage. The machine ran out of resources. The volume holding both the repo and swap is 99% full (33.9 GB free of 1.9 TB addressable) and swap is exhausted at 36.4 GB of 37.9 GB, so the host thrashes: one context takes ~18 s on an idle process but six parallel workers together managed 2 contexts in 20 minutes. On top of that, macOS keeps evicting iCloud-backed inputs to reclaim space, which is why some inputs were unreadable at all.",
+    "how_to_finish": "Free disk space, then re-run: `python build_mpnn_features.py --inline --threads 10`. The build is resumable and will fill only the gaps. Inputs staged outside iCloud can be pointed at with MPNN_CACHE_DIR / MPNN_CIF_DIR."
+  },
+  "sanity_epitope_effect_sizes": {
+    "n_test_contexts": 66,
+    "n_epitope_residues": 1257,
+    "n_non_epitope_residues": 16588,
+    "features": {
+      "mpnn_uncond_entropy": {
+        "mean_epitope": 1.99873,
+        "mean_non_epitope": 1.86441,
+        "pooled_d": 0.1972,
+        "within_context_d_mean": 0.1137,
+        "within_context_d_se": 0.0389,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_logp_native": {
+        "mean_epitope": -2.08544,
+        "mean_non_epitope": -1.72998,
+        "pooled_d": -0.2862,
+        "within_context_d_mean": -0.2645,
+        "within_context_d_se": 0.0384,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_p_native": {
+        "mean_epitope": 0.25675,
+        "mean_non_epitope": 0.32124,
+        "pooled_d": -0.215,
+        "within_context_d_mean": -0.1753,
+        "within_context_d_se": 0.0387,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_p_argmax": {
+        "mean_epitope": 0.39895,
+        "mean_non_epitope": 0.44294,
+        "pooled_d": -0.1768,
+        "within_context_d_mean": -0.1082,
+        "within_context_d_se": 0.0367,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_argmax_is_native": {
+        "mean_epitope": 0.35959,
+        "mean_non_epitope": 0.44555,
+        "pooled_d": -0.1734,
+        "within_context_d_mean": -0.1516,
+        "within_context_d_se": 0.0327,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_native_rank": {
+        "mean_epitope": 3.24821,
+        "mean_non_epitope": 2.29872,
+        "pooled_d": 0.2708,
+        "within_context_d_mean": 0.2694,
+        "within_context_d_se": 0.0434,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_top2_gap": {
+        "mean_epitope": 0.2545,
+        "mean_non_epitope": 0.29671,
+        "pooled_d": -0.1433,
+        "within_context_d_mean": -0.1036,
+        "within_context_d_se": 0.0347,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_kl_to_background": {
+        "mean_epitope": 0.9467,
+        "mean_non_epitope": 1.07065,
+        "pooled_d": -0.1693,
+        "within_context_d_mean": -0.1186,
+        "within_context_d_se": 0.0362,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_hydrophobic": {
+        "mean_epitope": 0.29147,
+        "mean_non_epitope": 0.37862,
+        "pooled_d": -0.2855,
+        "within_context_d_mean": -0.3126,
+        "within_context_d_se": 0.0293,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_charged": {
+        "mean_epitope": 0.28735,
+        "mean_non_epitope": 0.23555,
+        "pooled_d": 0.256,
+        "within_context_d_mean": 0.2386,
+        "within_context_d_se": 0.0318,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_polar_uncharged": {
+        "mean_epitope": 0.28767,
+        "mean_non_epitope": 0.26421,
+        "pooled_d": 0.1091,
+        "within_context_d_mean": 0.1605,
+        "within_context_d_se": 0.0274,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_small": {
+        "mean_epitope": 0.367,
+        "mean_non_epitope": 0.35014,
+        "pooled_d": 0.0567,
+        "within_context_d_mean": 0.0435,
+        "within_context_d_se": 0.0334,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_aromatic": {
+        "mean_epitope": 0.10055,
+        "mean_non_epitope": 0.11545,
+        "pooled_d": -0.0738,
+        "within_context_d_mean": -0.0721,
+        "within_context_d_se": 0.0302,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_gly": {
+        "mean_epitope": 0.07061,
+        "mean_non_epitope": 0.07226,
+        "pooled_d": -0.0081,
+        "within_context_d_mean": 0.0922,
+        "within_context_d_se": 0.053,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_pro": {
+        "mean_epitope": 0.06289,
+        "mean_non_epitope": 0.04937,
+        "pooled_d": 0.0872,
+        "within_context_d_mean": 0.0598,
+        "within_context_d_se": 0.0321,
+        "within_context_n": 66
+      },
+      "mpnn_uncond_mass_unknown_token": {
+        "mean_epitope": 0.00414,
+        "mean_non_epitope": 0.00415,
+        "pooled_d": -0.0119,
+        "within_context_d_mean": -0.0614,
+        "within_context_d_se": 0.0369,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_entropy": {
+        "mean_epitope": 2.0023,
+        "mean_non_epitope": 1.82369,
+        "pooled_d": 0.2615,
+        "within_context_d_mean": 0.1741,
+        "within_context_d_se": 0.0428,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_logp_native": {
+        "mean_epitope": -1.91336,
+        "mean_non_epitope": -1.52127,
+        "pooled_d": -0.3364,
+        "within_context_d_mean": -0.2944,
+        "within_context_d_se": 0.0402,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_p_native": {
+        "mean_epitope": 0.28117,
+        "mean_non_epitope": 0.3613,
+        "pooled_d": -0.2671,
+        "within_context_d_mean": -0.2067,
+        "within_context_d_se": 0.0401,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_p_argmax": {
+        "mean_epitope": 0.39658,
+        "mean_non_epitope": 0.45649,
+        "pooled_d": -0.2406,
+        "within_context_d_mean": -0.1685,
+        "within_context_d_se": 0.0408,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_argmax_is_native": {
+        "mean_epitope": 0.42243,
+        "mean_non_epitope": 0.52225,
+        "pooled_d": -0.2,
+        "within_context_d_mean": -0.1674,
+        "within_context_d_se": 0.0319,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_native_rank": {
+        "mean_epitope": 2.78839,
+        "mean_non_epitope": 1.81488,
+        "pooled_d": 0.3063,
+        "within_context_d_mean": 0.2954,
+        "within_context_d_se": 0.0453,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_top2_gap": {
+        "mean_epitope": 0.25288,
+        "mean_non_epitope": 0.30885,
+        "pooled_d": -0.1883,
+        "within_context_d_mean": -0.1455,
+        "within_context_d_se": 0.0381,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_kl_to_background": {
+        "mean_epitope": 0.95636,
+        "mean_non_epitope": 1.11338,
+        "pooled_d": -0.2126,
+        "within_context_d_mean": -0.1577,
+        "within_context_d_se": 0.0389,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_hydrophobic": {
+        "mean_epitope": 0.28596,
+        "mean_non_epitope": 0.37195,
+        "pooled_d": -0.2789,
+        "within_context_d_mean": -0.3012,
+        "within_context_d_se": 0.0343,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_charged": {
+        "mean_epitope": 0.27362,
+        "mean_non_epitope": 0.22776,
+        "pooled_d": 0.2267,
+        "within_context_d_mean": 0.1877,
+        "within_context_d_se": 0.0328,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_polar_uncharged": {
+        "mean_epitope": 0.30998,
+        "mean_non_epitope": 0.28097,
+        "pooled_d": 0.1286,
+        "within_context_d_mean": 0.1968,
+        "within_context_d_se": 0.028,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_small": {
+        "mean_epitope": 0.37315,
+        "mean_non_epitope": 0.35582,
+        "pooled_d": 0.0575,
+        "within_context_d_mean": 0.0549,
+        "within_context_d_se": 0.0314,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_aromatic": {
+        "mean_epitope": 0.10395,
+        "mean_non_epitope": 0.11402,
+        "pooled_d": -0.0491,
+        "within_context_d_mean": -0.0484,
+        "within_context_d_se": 0.0289,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_gly": {
+        "mean_epitope": 0.0705,
+        "mean_non_epitope": 0.07233,
+        "pooled_d": -0.009,
+        "within_context_d_mean": 0.0971,
+        "within_context_d_se": 0.0516,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_pro": {
+        "mean_epitope": 0.05994,
+        "mean_non_epitope": 0.04699,
+        "pooled_d": 0.0857,
+        "within_context_d_mean": 0.0498,
+        "within_context_d_se": 0.0308,
+        "within_context_n": 66
+      },
+      "mpnn_autoreg_mass_unknown_token": {
+        "mean_epitope": 0.00413,
+        "mean_non_epitope": 0.00412,
+        "pooled_d": 0.0086,
+        "within_context_d_mean": -0.0525,
+        "within_context_d_se": 0.0384,
+        "within_context_n": 66
+      },
+      "mpnn_scored": {
+        "mean_epitope": 1.0,
+        "mean_non_epitope": 1.0,
+        "pooled_d": null
+      }
+    }
+  }
+}
