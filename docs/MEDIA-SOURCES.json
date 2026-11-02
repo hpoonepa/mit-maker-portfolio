@@ -1,0 +1,236 @@
+[
+  {
+    "file": "media/MIT-Maker-Portfolio.mp4",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "The final 1:45.9 portfolio video. The project clips below are excerpts of the same demonstrations."
+  },
+  {
+    "file": "01-minibinder-design/assets/first-round-assay.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/01-MiniBinder/06-your-first-round-assay.png",
+    "source_sha256": "8237e70b23723c5c3252cabc2406ebfc688b96a95b950e071d1d4ff43002afb6",
+    "sha256": "8237e70b23723c5c3252cabc2406ebfc688b96a95b950e071d1d4ff43002afb6",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "First-round assay report: nine negative measurements and six unresolved/no-loading results; zero confirmed binders among 15 designs."
+  },
+  {
+    "file": "01-minibinder-design/assets/bli-replicate-31.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/01-MiniBinder/07-BLI-replicate-31.png",
+    "source_sha256": "f950633d57b8e54ad8557c8fbfaf3ff6fb5541b748e15a7920bd29f94675f0a2",
+    "sha256": "f950633d57b8e54ad8557c8fbfaf3ff6fb5541b748e15a7920bd29f94675f0a2",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "Original Adaptyv BLI replicate 31 for l79_s469532_mpnn9. Apparent affinity: 546 nM; report fit quality: Medium."
+  },
+  {
+    "file": "01-minibinder-design/assets/bli-replicate-32.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/01-MiniBinder/08-BLI-replicate-32.png",
+    "source_sha256": "93b6cf3468f09623963a006e7042f39bf901625443664dede83cc42e5530df8f",
+    "sha256": "93b6cf3468f09623963a006e7042f39bf901625443664dede83cc42e5530df8f",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "Original Adaptyv BLI replicate 32 for the same design. Apparent affinity: 666 nM; report fit quality: Medium."
+  },
+  {
+    "file": "01-minibinder-design/assets/predicted-complex.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "57feb18ea8a0042d79a363e0ca0b443546528ad2076af6032aec6b6915d8d36c",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 12,
+    "caption": "Predicted binder\u2013VP3 target complex. Teal is the designed binder; gold is the target fragment. The coordinates are a prediction, not an experimentally solved binding pose."
+  },
+  {
+    "file": "01-minibinder-design/assets/design-comparison.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "fc6d4b8661d9335b21e663d82885777e4413a69c43efc266a7d90f343c3ff0e5",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 21.4,
+    "caption": "Target-site inspection, BindCraft design animation, and predicted binder fold shown together during the first design round."
+  },
+  {
+    "file": "01-minibinder-design/assets/whiteboard.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v13/visuals/05-whiteboard-wider.mp4",
+    "source_sha256": "3d0cda604493d1a80499cec1eb14146c561ba656e0cfa42db2ab02760f13d24d",
+    "sha256": "0403e1380fd76c3b66a7a2c7160912a35541877dba62fda62e5c4a03d52d4cca",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 0.5,
+    "caption": "Harsha's hand-drawn design notes. The portfolio crop retains the workflow and redesign notes; assay counts are reported separately from the original assay exports."
+  },
+  {
+    "file": "01-minibinder-design/assets/epitope-review.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "990aca127658fedf69c09f0dea137e8ac3787733b680e46290f8547e6ea1f727",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 34.4,
+    "caption": "Review of the initial and revised target regions. This is the retrospective process illustration used in the video."
+  },
+  {
+    "file": "01-minibinder-design/assets/sequence-checks.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "9efe82559a5fe197bba25b1cd4f6a549ed2ea93584523c955d0b135157af4d29",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 37.1,
+    "caption": "The 79-residue candidate sequence and computational composition checks. These do not measure protein expression or solubility in a hive."
+  },
+  {
+    "file": "01-minibinder-design/assets/binding-confidence.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "c280be26d11371a8b781b21c0538e93185b48e0a409de2113264028563ca39d2",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 38.9,
+    "caption": "Independently predicted candidate complex used to inspect the binding interface."
+  },
+  {
+    "file": "01-minibinder-design/assets/binder-result.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "8cd936270e65a7f8c6283fd251d5291f180a2578fcc8011fdadb0c8d0ff7c6c9",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 47,
+    "caption": "Portfolio result card for the 79-residue design with approximately 604 nM apparent affinity. The associated original BLI plots provide the measurement evidence."
+  },
+  {
+    "file": "01-minibinder-design/assets/prince-demo.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/01-MiniBinder/Optional-later-work/PRINCE-1UBQ-demo-6sec.mp4",
+    "source_sha256": "3526367f1be924d30e3c60ab998fcb4ff0713c0936948055cb22b463add507ef",
+    "sha256": "ccd870da4763272b13bafd66e98557c737429b0128f5aa9af49cdf5cf1a85d5a",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 3,
+    "caption": "PRINCE interface example using 1UBQ. This demonstrates the later site-review tool, not the historical selection of the positive DWV binder."
+  },
+  {
+    "file": "03-papercrane-platform/assets/papercrane-logo.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/01-logo-TRANSPARENT.png",
+    "source_sha256": "1e28baa587d433d5972a7d63460fc0467af5e0aaf8eb45278f8d867f2735558e",
+    "sha256": "1e28baa587d433d5972a7d63460fc0467af5e0aaf8eb45278f8d867f2735558e",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "Paper Crane's existing transparent logo, also used in the video."
+  },
+  {
+    "file": "03-papercrane-platform/assets/papercrane-demo.mp4",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v9/visuals/papercrane/PaperCrane-Demo-EDITED-10s.mp4",
+    "source_sha256": "587a7f05d738d950eb95174eaa6a4559c7be1623800fab1e3b9c99dd182f4bb4",
+    "sha256": "587a7f05d738d950eb95174eaa6a4559c7be1623800fab1e3b9c99dd182f4bb4",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "Excerpt of the real October 29 application recording used in the final video: catalog, BoltzGen input, then a separately saved Boltz-2 result. It does not depict a new completed job."
+  },
+  {
+    "file": "03-papercrane-platform/assets/tool-library.png",
+    "source": "/Users/harsha/Downloads/papercranedemoass.mov",
+    "source_sha256": "80c31cce485120801c18179d543160d97f6fc6c8c278ffb35e01ee5004d535d4",
+    "sha256": "6a29d368933158b900bb6749a1204e732684f1e97cc1ceeb0bfce3667a086ddf",
+    "treatment": "Full frame extracted from the original app recording; no crop or added artwork.",
+    "source_seconds": 0.8,
+    "caption": "The live tool catalog in the recorded local Paper Crane app."
+  },
+  {
+    "file": "03-papercrane-platform/assets/job-input.png",
+    "source": "/Users/harsha/Downloads/papercranedemoass.mov",
+    "source_sha256": "80c31cce485120801c18179d543160d97f6fc6c8c278ffb35e01ee5004d535d4",
+    "sha256": "5090dfe4e9b52beb9aad8af0c7afdb3ceb88dde81e7bfe69c3eda56995aa9c8b",
+    "treatment": "Full frame extracted from the original app recording; no crop or added artwork.",
+    "source_seconds": 9.0,
+    "caption": "Configuring a BoltzGen target in the real application."
+  },
+  {
+    "file": "03-papercrane-platform/assets/platform-demo.png",
+    "source": "/Users/harsha/Downloads/papercranedemoass.mov",
+    "source_sha256": "80c31cce485120801c18179d543160d97f6fc6c8c278ffb35e01ee5004d535d4",
+    "sha256": "7dfa5bbf1ed69bda586af751832fe4910bfde525b24bee07f99742b063a0fd9b",
+    "treatment": "Full frame extracted from the original app recording; no crop or added artwork.",
+    "source_seconds": 32.0,
+    "caption": "Saved Boltz-2 output and the structure viewer in the actual application."
+  },
+  {
+    "file": "03-papercrane-platform/assets/tool-names.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v16/MIT-Maker-V16.mp4",
+    "source_sha256": "d6985417b6ddad25a23082b11561df5b25c783611070f19d57aca66efcb94450",
+    "sha256": "60238b31e205daf2c41c7f1bda2aec29b2cd8135fa2ca23c34dfad5dea4915fb",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 58.5,
+    "caption": "The scientific tool names shown during the platform introduction. These identify integrated upstream projects, not models authored by Harsha."
+  },
+  {
+    "file": "03-papercrane-platform/dynamics/assets/recorded-md.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v10/visuals/dynamics/12-original-MD.mp4",
+    "source_sha256": "b4b80e15a93d559fce2570b6d1cc51de4aea3b932e33e0ef32dfa220776b15ff",
+    "sha256": "96bca511cc64d74aea91c7bf5f06c47d86d021e224e2b6def5b58ea9c8660b83",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 1.7,
+    "caption": "Chronological molecular-dynamics frames for the mdCATH example, aligned to its input reference."
+  },
+  {
+    "file": "03-papercrane-platform/dynamics/assets/dynamics-comparison.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v13/visuals/13-SENBA-model-simple.mp4",
+    "source_sha256": "29a8555104e57eb3524b66ddd551183e2c87af9ac822bb2afa26250097bd06d6",
+    "sha256": "0c71b60568c0a0a206918b08988275e71172474c413eb6e2d620cf84ac341f46",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 3.2,
+    "caption": "SENBA predicted endpoint compared with the input reference. The displayed interpolation is a visual transition, not a generated physical trajectory."
+  },
+  {
+    "file": "03-papercrane-platform/dynamics/assets/benchmark.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v13/visuals/SENBA-benchmark-simple.png",
+    "source_sha256": "54fd5d78b035e407e788de54ebe038bf1263963d01ef759a93e51e8b0ae0e7b7",
+    "sha256": "54fd5d78b035e407e788de54ebe038bf1263963d01ef759a93e51e8b0ae0e7b7",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "All 28 validation proteins. Twenty-seven have lower ensemble-mean endpoint C-alpha RMSD than the original model. The panel was reused during development and is not an independent test."
+  },
+  {
+    "file": "03-papercrane-platform/dynamics/assets/benchmark-source.svg",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/assets/senba-28-protein-original.svg",
+    "source_sha256": "0e32f9914046bc8a0c48543ec2f23fba7f9d6e5bda264c5c6b9a0e3c5db6ae10",
+    "sha256": "0e32f9914046bc8a0c48543ec2f23fba7f9d6e5bda264c5c6b9a0e3c5db6ae10",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "Editable figure based on the retained 28-protein comparison. The source data and metric definitions accompany the dynamics code."
+  },
+  {
+    "file": "02-squash-vision/assets/squashvision-demo.mp4",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v10/visuals/squash/SquashVision-Demo-EDITED-8.8s.mp4",
+    "source_sha256": "084815c21280a87a71333ff6f9c58387554cb9c785078f5703ed07e6b683f58a",
+    "sha256": "084815c21280a87a71333ff6f9c58387554cb9c785078f5703ed07e6b683f58a",
+    "treatment": "original",
+    "source_seconds": null,
+    "caption": "The real Canary Wharf match review shown in the final video, with court mapping and shot-review statistics. Some annotations are manual; this clip is not a tracking-accuracy benchmark."
+  },
+  {
+    "file": "02-squash-vision/assets/review-demo.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v10/visuals/squash/SquashVision-Demo-EDITED-8.8s.mp4",
+    "source_sha256": "084815c21280a87a71333ff6f9c58387554cb9c785078f5703ed07e6b683f58a",
+    "sha256": "1dc11d58f5e9f33ddc61b25abd9d2af158aa8f9142b5cf2fb0be44f9d41df8a8",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 3.8,
+    "caption": "SquashVision reviewing the professional Canary Wharf match, with the court map and synchronized statistics."
+  },
+  {
+    "file": "02-squash-vision/assets/shot-review.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v10/visuals/squash/SquashVision-Demo-EDITED-8.8s.mp4",
+    "source_sha256": "084815c21280a87a71333ff6f9c58387554cb9c785078f5703ed07e6b683f58a",
+    "sha256": "1c15162900f45a413938ce9c70ce8fef9335543e325a59c4f87d016a7864993e",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 7.1,
+    "caption": "Review of an individual shot with saved annotations and estimated shot quality."
+  },
+  {
+    "file": "02-squash-vision/assets/personal-rally.png",
+    "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/mit-maker-video-2026-10-28/independent-cut-v8/visuals/squash/Squash-Rally-IMG4285-5.2s.mp4",
+    "source_sha256": "041ee2213b544b8804c4c874ebb0200342db17a235f822d9d397b14435ce3723",
+    "sha256": "7c0623b01876f585055600c7a4c6eff277367bcb65359f7ac2b2c231a2ad1fa2",
+    "treatment": "Unaltered video frame",
+    "source_seconds": 2.4,
+    "caption": "Harsha's own squash footage from IMG_4285.mov. The application demonstration separately uses the professional Canary Wharf match."
+  }
+]

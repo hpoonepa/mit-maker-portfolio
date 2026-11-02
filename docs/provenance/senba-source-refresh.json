@@ -1,0 +1,3733 @@
+{
+  "copied_files": [
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/1d1rA00.npz",
+      "destination": "source-original/senba-sprint/inputs/1d1rA00.npz",
+      "source_sha256": "0bc6c06b50b6f1120eeb83191f211633b493cbf86c3f3dae24b8e8341567c69c",
+      "bytes": 150221
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/1q16B03.npz",
+      "destination": "source-original/senba-sprint/inputs/1q16B03.npz",
+      "source_sha256": "74385f86bc41f6cfc66db9ede153e8140fd256e381584dfa7a88c2bd5650f788",
+      "bytes": 144126
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/1e7uA04.npz",
+      "destination": "source-original/senba-sprint/inputs/1e7uA04.npz",
+      "source_sha256": "af6b09f5814a45c9244d4c4cfa817864b65b2953075253bcc4b6f50a59509ed0",
+      "bytes": 301494
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/2k4qA00.npz",
+      "destination": "source-original/senba-sprint/inputs/2k4qA00.npz",
+      "source_sha256": "0dd0226c4f5a529770961937f48a6bb9740896e98d5082ebabcb38ef5f89a4a6",
+      "bytes": 287714
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/2dp9A01.npz",
+      "destination": "source-original/senba-sprint/inputs/2dp9A01.npz",
+      "source_sha256": "bed68fdb00755b13e624cbc57eb53716299472abef31a520bc3130912a07133f",
+      "bytes": 197605
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/1rquA01.npz",
+      "destination": "source-original/senba-sprint/inputs/1rquA01.npz",
+      "source_sha256": "27268d20e75e0d7ef9742bacd4a6b03ba2113d51275875f2d6b9147ade89343a",
+      "bytes": 92795
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/2f2cA02.npz",
+      "destination": "source-original/senba-sprint/inputs/2f2cA02.npz",
+      "source_sha256": "60279746e35dfd12fe861673fd93b8e570d19eb170588e5f01990a35b82bac3d",
+      "bytes": 199894
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/inputs/5k2mA01.npz",
+      "destination": "source-original/senba-sprint/inputs/5k2mA01.npz",
+      "source_sha256": "4f41f729ef347e6f084361abbf33e63c7a8977eb66dd9d82032370220b75d628",
+      "bytes": 187405
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/FROZEN_EVALUATION_PROTOCOL.md",
+      "destination": "source-original/senba-sprint/FROZEN_EVALUATION_PROTOCOL.md",
+      "source_sha256": "924686f766ff5c6906d0b6dbf637a00e13dce1c3d9c8b2072fefb3cbe018d0eb",
+      "bytes": 6469
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/K4_AUDIT.md",
+      "destination": "source-original/senba-sprint/K4_AUDIT.md",
+      "source_sha256": "c5d0c76933db5375b461f2fc59086f175ad08fb081d504dc50f6101ffa8bbfb7",
+      "bytes": 10473
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/SCIENTIFIC_REVIEW.md",
+      "destination": "source-original/senba-sprint/SCIENTIFIC_REVIEW.md",
+      "source_sha256": "639998c44ee9a58359a0c783a1d43de9bbbf40f48b386aed1caf7fb5af678b8e",
+      "bytes": 6393
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/build_figures.py",
+      "destination": "source-original/senba-sprint/paper-revision/build_figures.py",
+      "source_sha256": "c387782cbb86bda08cf24d0b355828dee90f7b0292866a90d91923e4d8f24189",
+      "bytes": 4766
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/neurips_2026.sty",
+      "destination": "source-original/senba-sprint/paper-revision/neurips_2026.sty",
+      "source_sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9",
+      "bytes": 13677
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/figures/plotted_values.json",
+      "destination": "source-original/senba-sprint/paper-revision/figures/plotted_values.json",
+      "source_sha256": "ec96bb5b778d4e07dee9ed7b76bd9111221c1793cbe87a2b93b7a4577654e091",
+      "bytes": 3505
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/context/CURRENT_PAPER.txt",
+      "destination": "source-original/senba-sprint/paper-revision/context/CURRENT_PAPER.txt",
+      "source_sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c",
+      "bytes": 32973
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/context/CFP.md",
+      "destination": "source-original/senba-sprint/paper-revision/context/CFP.md",
+      "source_sha256": "bbd3fff2e1e07ea8c326e8a86eb16bd43ebf0ed22d09b6a1947c1fce2eda8f8d",
+      "bytes": 1731
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/context/NEW_RESULTS.txt",
+      "destination": "source-original/senba-sprint/paper-revision/context/NEW_RESULTS.txt",
+      "source_sha256": "90682849b94249f72494403fe526b2e70df406c29f54282afcb99fb07bc0105f",
+      "bytes": 18277
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/context/FINAL_PAPER.txt",
+      "destination": "source-original/senba-sprint/paper-revision/context/FINAL_PAPER.txt",
+      "source_sha256": "c9c4c223f262784791b0c2fa943f67a0d179cb22dd3fa446db472b00a9a40e3a",
+      "bytes": 54555
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/main.log",
+      "destination": "source-original/senba-sprint/paper-revision/tex/main.log",
+      "source_sha256": "a201ae6f132623e47599f8388c9c3b13ee81468b3e4a9411dbd3c12bb9f4b746",
+      "bytes": 18349
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/main_ORIGINAL_BACKUP.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/main_ORIGINAL_BACKUP.tex",
+      "source_sha256": "fb7bbe6e8e14630684493ac63a4eb0f2be8cd6bf8225296d1e556af96a30a437",
+      "bytes": 32562
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/neurips_2026.sty",
+      "destination": "source-original/senba-sprint/paper-revision/tex/neurips_2026.sty",
+      "source_sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9",
+      "bytes": 13677
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/reconstruction/main.log",
+      "destination": "source-original/senba-sprint/paper-revision/tex/reconstruction/main.log",
+      "source_sha256": "72812aaafc33be6b6728a8520879efcbc514259312e67d0e3115020f6980a190",
+      "bytes": 17708
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/reconstruction/neurips_2026.sty",
+      "destination": "source-original/senba-sprint/paper-revision/tex/reconstruction/neurips_2026.sty",
+      "source_sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9",
+      "bytes": 13677
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/reconstruction/main.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/reconstruction/main.tex",
+      "source_sha256": "fb7bbe6e8e14630684493ac63a4eb0f2be8cd6bf8225296d1e556af96a30a437",
+      "bytes": 32562
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/main_prev.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/main_prev.tex",
+      "source_sha256": "0c297a4d70f60f7d60c8c453512fe48a2e2f5a9eea0dbb45188ffab2c1618f74",
+      "bytes": 46227
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/main.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/main.tex",
+      "source_sha256": "93696b6c02b3ab5f62d71d7377acb4da12d45d8af44eceacf6212b3a61730490",
+      "bytes": 47922
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/orig.txt",
+      "destination": "source-original/senba-sprint/paper-revision/tex/orig.txt",
+      "source_sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c",
+      "bytes": 32973
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/checklist_filled.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/checklist_filled.tex",
+      "source_sha256": "d337f34ae16cdf1f6c89dce88e67ad9bb0f8129a01e03e56d04d7ab7f101ecfd",
+      "bytes": 3352
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/main_before_takeaway.tex",
+      "destination": "source-original/senba-sprint/paper-revision/tex/main_before_takeaway.tex",
+      "source_sha256": "1571490d3e83c953d9aca16e78f6d55a4baa87e222031b078d133396554087ce",
+      "bytes": 47717
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/paper-revision/tex/out.txt",
+      "destination": "source-original/senba-sprint/paper-revision/tex/out.txt",
+      "source_sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c",
+      "bytes": 32973
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/RESULTS_SUMMARY.md",
+      "destination": "source-original/senba-sprint/RESULTS_SUMMARY.md",
+      "source_sha256": "8463c9d3129a3cab2d25b54c6336e41dc7cb5826fce400ce5d0222b8df9827bf",
+      "bytes": 8140
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/configs/sprint.json",
+      "destination": "source-original/senba-sprint/configs/sprint.json",
+      "source_sha256": "96e2110695f8b13cc9bb818ac2b899805bb516262b37b75721cbcb023dbd668b",
+      "bytes": 4282
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/.gitignore",
+      "destination": "source-original/senba-sprint/.gitignore",
+      "source_sha256": "6de174e32217f183a608e9f55d10f3dc4c4ccd6433cacc4bd29976f4f164ae97",
+      "bytes": 68
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/settle_panel.py",
+      "destination": "source-original/senba-sprint/senba_sprint/settle_panel.py",
+      "source_sha256": "2767b42dcf2880ec9156f2d22b0191c267bd22d84f64d1410ea31ae4c49e8947",
+      "bytes": 3586
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/data.py",
+      "destination": "source-original/senba-sprint/senba_sprint/data.py",
+      "source_sha256": "df217427116205a22f4a2105d6bf1aff4520421b7a0f1fce95f00d7ddebf0c81",
+      "bytes": 7960
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/report.py",
+      "destination": "source-original/senba-sprint/senba_sprint/report.py",
+      "source_sha256": "8e6fbddb3e524be2f95028b5f52d650e7f0e46886ef362584a57c6d868837165",
+      "bytes": 10505
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/__main__.py",
+      "destination": "source-original/senba-sprint/senba_sprint/__main__.py",
+      "source_sha256": "aa18bac5e143639ddee73b8f2991c19161b39c16e02f9f949380293bf65538fa",
+      "bytes": 4749
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/inference.py",
+      "destination": "source-original/senba-sprint/senba_sprint/inference.py",
+      "source_sha256": "4533c5e34228574e52a0167f086edc2c06747b5045ecb6cff42efa1665b7f382",
+      "bytes": 13926
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/__init__.py",
+      "destination": "source-original/senba-sprint/senba_sprint/__init__.py",
+      "source_sha256": "84d3454bc963200030c03902524603d290a335b8906b8390d60795fbc6e445c2",
+      "bytes": 88
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/augmentation.py",
+      "destination": "source-original/senba-sprint/senba_sprint/augmentation.py",
+      "source_sha256": "f729985c6714ad63a1a886bea760b872d6ce0670e6c3dea5fbcf9d67c9d80375",
+      "bytes": 10761
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/cloud.py",
+      "destination": "source-original/senba-sprint/senba_sprint/cloud.py",
+      "source_sha256": "04c6ac131d3f7f54516ae6475f06556c7d2801d34ae6f2b8e73534e058c72217",
+      "bytes": 9178
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/audit.py",
+      "destination": "source-original/senba-sprint/senba_sprint/audit.py",
+      "source_sha256": "20b749b8612784bf06daeeced985af03ad1d6387006014f7735eb3ee9560c784",
+      "bytes": 9591
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/release.py",
+      "destination": "source-original/senba-sprint/senba_sprint/release.py",
+      "source_sha256": "41f03ba00afea96bd45b43838f0c970dba3f4d571a444186910f490a3db600ac",
+      "bytes": 11994
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/runner.py",
+      "destination": "source-original/senba-sprint/senba_sprint/runner.py",
+      "source_sha256": "b0073e4ab8ade81d79d62105fc3652ec17fe726d8d575b3307c713fc30b1f2dc",
+      "bytes": 18636
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/senba_sprint/metrics.py",
+      "destination": "source-original/senba-sprint/senba_sprint/metrics.py",
+      "source_sha256": "e738dfb13ed037d30bd8b4622a8b08ad9f9d89983513713348b20c57247dd1f1",
+      "bytes": 15264
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/README.md",
+      "destination": "source-original/senba-sprint/README.md",
+      "source_sha256": "146084bc50798c8658c1139ab827d8b95a3add7d38f9a3b133d8ff9761f7bdb7",
+      "bytes": 8211
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_cli.py",
+      "destination": "source-original/senba-sprint/tests/test_cli.py",
+      "source_sha256": "880bed648a54736e43592a374a5583cf7bd2f2d8406f49b997e0c906abf13850",
+      "bytes": 2038
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_data.py",
+      "destination": "source-original/senba-sprint/tests/test_data.py",
+      "source_sha256": "2252576607a7851ba016f957cc394d895322096f79e9983b21200fc55b7f446a",
+      "bytes": 931
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_audit.py",
+      "destination": "source-original/senba-sprint/tests/test_audit.py",
+      "source_sha256": "1968cea1bd7a0fb4698759f5590eb6b1854fe5f502e7d1d48be2372e08f57432",
+      "bytes": 5194
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_runner.py",
+      "destination": "source-original/senba-sprint/tests/test_runner.py",
+      "source_sha256": "5b994d7606c9a0d87af26bc62ccf2df90c5e87ad931f13b5a0fa233aa8ff417a",
+      "bytes": 7568
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_augmentation.py",
+      "destination": "source-original/senba-sprint/tests/test_augmentation.py",
+      "source_sha256": "8fa0d51d033b8a2da16cd34b7679f86d90a0eb13b03d7a3625f080da4520b444",
+      "bytes": 4023
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_report.py",
+      "destination": "source-original/senba-sprint/tests/test_report.py",
+      "source_sha256": "c015a43413d2c0f780427b46900df6b9be292f865eaaea25863adc44a9b6d57b",
+      "bytes": 3252
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_metrics.py",
+      "destination": "source-original/senba-sprint/tests/test_metrics.py",
+      "source_sha256": "103066574dac55e72463919bd61bf1b9bb8d58fa9a355b3129e677e9fe20c78d",
+      "bytes": 7522
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_inference.py",
+      "destination": "source-original/senba-sprint/tests/test_inference.py",
+      "source_sha256": "a61979e6a8e767efe64f6da710f4f841b8f94f7da217fed04a14f1e2f4c673d5",
+      "bytes": 6369
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/tests/test_release.py",
+      "destination": "source-original/senba-sprint/tests/test_release.py",
+      "source_sha256": "2f40f97963b130e0c1fc442269b507673ab859e8e07276052bf2bf00ac4a284b",
+      "bytes": 7756
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/STATUS.md",
+      "destination": "source-original/senba-sprint/STATUS.md",
+      "source_sha256": "3c43c750d3c2afd10e8c6f2f63e116ab478585b92e92ac867555021cb7610f66",
+      "bytes": 8350
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/pyproject.toml",
+      "destination": "source-original/senba-sprint/pyproject.toml",
+      "source_sha256": "6a57c664e9f203872688fc1f674188d1c83fd6945800889d4a06b3168f0e51ed",
+      "bytes": 399
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/SAMPLING_AUDIT.md",
+      "destination": "source-original/senba-sprint/SAMPLING_AUDIT.md",
+      "source_sha256": "35dcd58a401ed14c92232456058b25793ba38aeb82021580db757300c39e8a68",
+      "bytes": 3688
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k8-v1/analysis.json",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k8-v1/analysis.json",
+      "source_sha256": "1bd3e2abaedad8f8f7468ac6dbc94ec9faf510ac5d4794526337b654772b2b76",
+      "bytes": 612379
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k8-v1/results.md",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k8-v1/results.md",
+      "source_sha256": "19375c3f09de7960c881874e359ef6bf28ed13f14acf237322eb570ad4347a0e",
+      "bytes": 1351
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/panel-k4-v1/analysis.json",
+      "destination": "source-original/senba-sprint/artifacts/reports/panel-k4-v1/analysis.json",
+      "source_sha256": "d4bac1055ac73ddba1b807236d9399bf190741c49d1c6affff56cf0b29ed8572",
+      "bytes": 610515
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/panel-k4-v1/results.md",
+      "destination": "source-original/senba-sprint/artifacts/reports/panel-k4-v1/results.md",
+      "source_sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2",
+      "bytes": 1350
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/preflight-verified.json",
+      "destination": "source-original/senba-sprint/artifacts/preflight-verified.json",
+      "source_sha256": "d1b44bb27de55c79cfd6c7f0f92d3848f3a2e9e1950ec138df07f3b2b9b6d5a7",
+      "bytes": 1502
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/receipt-audit.json",
+      "destination": "source-original/senba-sprint/artifacts/receipt-audit.json",
+      "source_sha256": "f867a0cb35e2a8ba1b55fd2d0f7f546522c0f088a3bc229e242384538a44886c",
+      "bytes": 20282
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/pinned-job-plan.json",
+      "destination": "source-original/senba-sprint/artifacts/pinned-job-plan.json",
+      "source_sha256": "5830cc2a7a4a5fa8dc4f5ca6db05cd700baab8daf7615fad9d9574a8ed964d55",
+      "bytes": 5157
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/budget-ledger.json",
+      "destination": "source-original/senba-sprint/artifacts/budget-ledger.json",
+      "source_sha256": "d6ed1ff65cbef2b42df85ecae2a52627cc3bf5f2aac496bf70360ec8089b2143",
+      "bytes": 2323
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/k16-billing-reconciliation.json",
+      "destination": "source-original/senba-sprint/artifacts/k16-billing-reconciliation.json",
+      "source_sha256": "d50a8f5fb0f97c40e8c288bf695d90fa76de6ff3ddae48e3045bade8651fc779",
+      "bytes": 8501
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/sprint-demo-verified.json",
+      "destination": "source-original/senba-sprint/artifacts/sprint-demo-verified.json",
+      "source_sha256": "faadb4ef17ab34b1d935b5a213acb0ce18b479cdc529ab681d47a61feca3bf23",
+      "bytes": 78284
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/k4-billing-reconciliation.json",
+      "destination": "source-original/senba-sprint/artifacts/k4-billing-reconciliation.json",
+      "source_sha256": "9138baba19c1df119fec55f145dad1a921b05218aa4a3d2df12af7d788ef08dd",
+      "bytes": 4719
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/budget-ledger.json.lock",
+      "destination": "source-original/senba-sprint/artifacts/budget-ledger.json.lock",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k16-v1/analysis.json",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k16-v1/analysis.json",
+      "source_sha256": "7a14d3a0676c06d084b82fc26b9b197aa82d99cfd307878d7fc6784d9c37e5be",
+      "bytes": 686044
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k16-v1/results.md",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k16-v1/results.md",
+      "source_sha256": "df2ec1a63fa02dd9fcaf5b6ca355860194ba622b60923b31a2fb9ea77db36e7d",
+      "bytes": 1351
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/inference_example.py",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/inference_example.py",
+      "source_sha256": "295e88d21551c455c28a0223e928257672a3f3e0b49e8713f295a77047231ae9",
+      "bytes": 8683
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k4-v1/analysis.json",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k4-v1/analysis.json",
+      "source_sha256": "c58f06d173e68bf2c4c3065b1172e6e945551fbd34c5bd0f7dbef566ffa18efa",
+      "bytes": 612275
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/sampling-k4-v1/results.md",
+      "destination": "source-original/senba-sprint/artifacts/reports/sampling-k4-v1/results.md",
+      "source_sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2",
+      "bytes": 1350
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EPOCH_SWEEP_V1_PROTOCOL.md",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EPOCH_SWEEP_V1_PROTOCOL.md",
+      "source_sha256": "c922519170603aa71d94ed3f6bab9cd2c2463575d820173ea83b7d660f913a7c",
+      "bytes": 4773
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EQUILIBRIUM_SUITE_PROTOCOL.md",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EQUILIBRIUM_SUITE_PROTOCOL.md",
+      "source_sha256": "1fcd7674c305d43ed96e26ecc0ea0a7ca45fec2081478ff2781ee0966ecf979f",
+      "bytes": 1605
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/protocols/MARS_FM_MDCATH_ADAPTATION_PROTOCOL.md",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_MDCATH_ADAPTATION_PROTOCOL.md",
+      "source_sha256": "8d5ba3e0a015d85164da7164b84876e3e742e45b5e206bb3ea1be35da89be3d8",
+      "bytes": 3895
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/protocols/MARS_FM_ANCHOR08_FULL_VALIDATION_V1_PROTOCOL.md",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_ANCHOR08_FULL_VALIDATION_V1_PROTOCOL.md",
+      "source_sha256": "779988158703632aa2e043a44f50b2f8b1112ff7a08e87d848c62cef67fea9d1",
+      "bytes": 4777
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/release-manifest.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/release-manifest.json",
+      "source_sha256": "980a42ef274d53061dcf4b674c799371f0887dece0b4a4c4d4745dd67f6f0adc",
+      "bytes": 4492
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/README.md",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/README.md",
+      "source_sha256": "ec11820f293b150695d011d8e670a58a07c706b45f7cb073a4987899474dd2ed",
+      "bytes": 9339
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/release-snapshot.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/release-snapshot.json",
+      "source_sha256": "e285f9b3ee01282ebab5aa8bd12727571c56b743b5f094fc50c2e4dd12ba84c8",
+      "bytes": 9722
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/LICENSE",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/LICENSE",
+      "source_sha256": "d496726bd0f4f32c2ac80a1b64f511716e3877ec9ff19afb8641e291af3c1747",
+      "bytes": 1310
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/completion.json",
+      "source_sha256": "b2a890e7251ec2fbe8110a814c23885abbe5bafe536b48b22ec1fc6182cf4030",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/frozen-spec.json",
+      "source_sha256": "f6678a6f73de77c121f22931124cfee7c605dde2c2079d5b2982f915323b07a0",
+      "bytes": 25500
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/completion.json",
+      "source_sha256": "aa8f2815d6b21a2f55718b09e2222e3a6d6c5ecdb32c5be7fc911c51de112e04",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/frozen-spec.json",
+      "source_sha256": "e52444da7a1bc2009d0a6b209a369c8fc1dee37dfb0bb7e57c725e93db7e7993",
+      "bytes": 19788
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/analysis.json",
+      "destination": "source-original/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/analysis.json",
+      "source_sha256": "a1e23cb3553a8bd08a5bdc191f88f869872b6c9319bc07f7bfdb64337876102d",
+      "bytes": 81243
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/results.md",
+      "destination": "source-original/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/results.md",
+      "source_sha256": "5f04608a0c021d5802ba4988c76f229f586a62a4522fb63ca35c5892c3542351",
+      "bytes": 1336
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/completion.json",
+      "source_sha256": "56d67d8a5419935160c2ee2f094da70decd0b7fd5b04b6f847d83c80c2d4d328",
+      "bytes": 162
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/frozen-spec.json",
+      "source_sha256": "58a91fe9f82d1661b22d58bfbcac63d1175b9942489e8d03364c471cc44ecfdb",
+      "bytes": 32034
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/completion.json",
+      "source_sha256": "016fdade2e37fdae4c3e89f7702277c94397be03198e16886b42dcc09880be28",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/completion.json",
+      "source_sha256": "bd07b6a35ec60a43c25a75312cb3451c4a41e2fd040bd89c9f54b6413b7a7a8b",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/frozen-spec.json",
+      "source_sha256": "7cd36b54d04c51e3068680661f16e3cfc0a3c350c6ecece336e43df45c5021dc",
+      "bytes": 43540
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/frozen-spec.json",
+      "source_sha256": "8b9dc1646aef322ffc5a4c31810d896333e99297abbb5ba9e199b8cdc2df21c3",
+      "bytes": 43749
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/parent/training-config.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/parent/training-config.json",
+      "source_sha256": "cb9228e34e3db544c5cc18fa154ce9d43e7a04e2e7fefc36af49bb5465d0e21d",
+      "bytes": 1612
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/parent/training-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/parent/training-result.json",
+      "source_sha256": "5bdb3b2b91e4c6138f619dcd32b065a4fd7719382bc2150b0a500aa464ef73a5",
+      "bytes": 2656
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/completion.json",
+      "source_sha256": "54fd85d197fb7f3a23f7296e0d1cc9173b23f885ca3d1b4bd1b135ebd5d39eac",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/frozen-spec.json",
+      "source_sha256": "5551d896384415487326264d08f9a9c5abcb5c650107ee3bc148bf1471065d13",
+      "bytes": 29967
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v1/frozen-spec.json",
+      "source_sha256": "a6d27e55ece3273c2b6fccb150bf1be74107747fa82c31e3a5cf7a0f886c71b5",
+      "bytes": 44139
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/completion.json",
+      "source_sha256": "39494eedd401034306fbd4455639acbd3f21acb0aafd97f8369d7d4300c27c9e",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/frozen-spec.json",
+      "source_sha256": "86475aa9c14af8e30d75c5c3acf5739e3b1460d3b4ec915adf62c220c8b47c4b",
+      "bytes": 29758
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/completion.json",
+      "source_sha256": "c49b4d7a70ec67015863badb4967d00eeb4483c44292e00bed799f174166b80f",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/frozen-spec.json",
+      "source_sha256": "2d3b2c3049d13b02f1b91e193da76907625a17dd6782874aed932e90014fc65d",
+      "bytes": 26647
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/interpolation-config.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/interpolation-config.json",
+      "source_sha256": "f2f1a8e1f462e48e196f91d5854474f02b78cbf9b1d564abdba794f27fb05019",
+      "bytes": 278
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/selection-v2.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/selection-v2.json",
+      "source_sha256": "1f1429751c9526a969aab72cfdc71b4304dc297f47af4b5884bcda63d1b0bd2b",
+      "bytes": 4823
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/equilibrium-suite-comparison.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/equilibrium-suite-comparison.json",
+      "source_sha256": "74b59827a85e2f868f8cc5d8301981aadeadf8a4a8c6777d7f50818975b1559f",
+      "bytes": 22201
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/interpolation-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/interpolation-result.json",
+      "source_sha256": "75289e17c293a0ae60ea99d4c5512d6177f0e7123d6d1b112efdba4fa4d07682",
+      "bytes": 1397
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/full-transition-comparison.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/full-transition-comparison.json",
+      "source_sha256": "9a6ea0073fd7a3af50c987ecbb1b5abec365689ccdd1acd1089eb0ff270e9c54",
+      "bytes": 16425
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/head-to-head-vs-previous-senba.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/head-to-head-vs-previous-senba.json",
+      "source_sha256": "3e6cd8467a2c4ca390011efd12d846d0ffb64c8f72bf1eb4348bf07ba5f66d3e",
+      "bytes": 16591
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/completion.json",
+      "source_sha256": "b3333bcead9e226f204f4c6a0e038f25ccd9eb5b989e60fd05709278358237d8",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/frozen-spec.json",
+      "source_sha256": "b2f39e3b1cb39101bd2888d6624d37748003b26525a93388d7337f34556aa267",
+      "bytes": 44348
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed2/interpolation-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/interpolation-result.json",
+      "source_sha256": "4e51d9e2a2d94d6cba9819b795592e9161115868094c671b30ce955f8fdfd34e",
+      "bytes": 1398
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed2/parent-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/parent-result.json",
+      "source_sha256": "1cf4b89bbce75dc9a7ca4c36ba6dbbf63cd0389b3ccb8661de834087792ffc3a",
+      "bytes": 2639
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed2/compact-transition-comparison.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/compact-transition-comparison.json",
+      "source_sha256": "aa059c76970a4a7048764b7761b7347bbb1d3692b3875b0852d34c3e5f39133d",
+      "bytes": 5685
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/completion.json",
+      "source_sha256": "fd6cba1dd8150fb50af4a8e5e88aca349c05afe457b75f6d4fdcc6e4ecbfbf86",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/frozen-spec.json",
+      "source_sha256": "bfcd55768424195f0a0803ecab11f3f9d5d9e6adfb013f3141c4b67a6db37234",
+      "bytes": 44139
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/completion.json",
+      "source_sha256": "64071b6ef2c0482b30465bcf44e42a0c4ff28a1a4c062a4551395f452994e885",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/frozen-spec.json",
+      "source_sha256": "108180d9756168a945b82fe026c493233d8102706eb521639c5fa1859ae0b66d",
+      "bytes": 32243
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/frozen-spec.json",
+      "source_sha256": "c58504e3e1c8b63d94803dc2fa5574d3cc2ffbf6e678f92805637d1ea39b36f4",
+      "bytes": 26856
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed3/parent-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/parent-result.json",
+      "source_sha256": "006621399c33632fe68295039df5120a86162de4844c50e0f0eca00c1d7efb0c",
+      "bytes": 2632
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed3/compact-transition-comparison.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/compact-transition-comparison.json",
+      "source_sha256": "80f9cc8e85abe3f03b5bc9df8f8fd72f7e26b9938717e4535c145d946de2c954",
+      "bytes": 5678
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/hf-release/receipts/replications/seed3/interpolation-result.json",
+      "destination": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/interpolation-result.json",
+      "source_sha256": "d2eba5a0475e344f9522b0010bbcd37894874bd034dcda060428e4b776eb4b47",
+      "bytes": 1397
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/completion.json",
+      "source_sha256": "faab559a96ad7b0c73f48fefa1682104b099b734f27954017cbff6c95a6c74af",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/frozen-spec.json",
+      "source_sha256": "0f372227bcc2488d1345a8a3050785a2299737386d0e2a3a3c7288ee4355db9e",
+      "bytes": 30952
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/completion.json",
+      "source_sha256": "f5ecb9ad4648947a8e48a7c17a415edfb0946a8123c979f23ae12abcf6f0aeec",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/frozen-spec.json",
+      "source_sha256": "b3063155b7680191a18b841bfaa1fd60181fbbdb1a29459f922a3b20a41b1b1a",
+      "bytes": 25291
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/completion.json",
+      "source_sha256": "1f145a49b83f7c73e4857d119be1ba2b256f4221a79da23ba8923f2b4ad90be7",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/completion.json",
+      "source_sha256": "b3bcc62ea7b3a836bbded26681d4161e635cd6380b131bbdde3ecb773a59c8d6",
+      "bytes": 164
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/frozen-spec.json",
+      "source_sha256": "fddc9313c131f7cd2b8b07d4fd1f06048daa8d80e9f208f3c79bf21943a186bf",
+      "bytes": 30743
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/frozen-spec.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/frozen-spec.json",
+      "source_sha256": "2ef6f303c1122a96587ffa87385d4752c5891555443e5e3e086eba9360e4050b",
+      "bytes": 19579
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/completion.json",
+      "destination": "source-original/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/completion.json",
+      "source_sha256": "787f2b6c07dfc147c0fdd212c03f9cc37e6523ad755fe1c40c07ffd42e55d84f",
+      "bytes": 163
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars.yaml",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars.yaml",
+      "source_sha256": "1866038a7671aab8d4179531fa18ca63762ffb8a500adbb10b616c3934b66468",
+      "bytes": 355
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/mdCATH_val.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_val.csv",
+      "source_sha256": "2c869105459109d163a8575b43dcbf20749faf38ccabf7fb1a73c4a6d9c04b88",
+      "bytes": 75819
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/4AA_test.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_test.csv",
+      "source_sha256": "6f9e1ecc2b6ced7b6704831bfde84b996e193fb57926a1d76c693a65c478b4f9",
+      "bytes": 1012
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/mdCATH_test.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_test.csv",
+      "source_sha256": "123465c60184f747e7403d501a6d8d526090c511453f4581b84705076dec130d",
+      "bytes": 71099
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/4AA.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA.csv",
+      "source_sha256": "a58620595b9f25679645d780356427f993a4bb5df03de20893cc4df94274e758",
+      "bytes": 33102
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/4AA_val.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_val.csv",
+      "source_sha256": "d229fc83602db0e6957ac899088ddecee67cc94453470480cf257937158a72c5",
+      "bytes": 1012
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/4AA_train.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_train.csv",
+      "source_sha256": "458286ab902e712ff88b28ae182318ab6093c5639253287c71cb0ad0d2ec28e2",
+      "bytes": 31102
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/mdCATH_train.csv",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_train.csv",
+      "source_sha256": "d61ffe3b63e5026c91acc8fc50bf4bdaad4ed4200c6b6a053bc1592a2f5d9b2a",
+      "bytes": 632850
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/splits/mdCATH.txt",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH.txt",
+      "source_sha256": "f40930058f38ba86f3e8f952a819da2e5657195a59c0ab6021c844bb9bf39832",
+      "bytes": 43040
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/data/geometry.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/data/geometry.py",
+      "source_sha256": "42473bf4c0633d8dc4589913e1b09ea56ef3aa11693de23610ce4bebba08a8bc",
+      "bytes": 9033
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/data/dataset.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/data/dataset.py",
+      "source_sha256": "9543326f5b8a7c0677ed5d39eb729c2c0e8681444ce60592c1adfcd3479005ad",
+      "bytes": 14895
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/mha.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/mha.py",
+      "source_sha256": "bc9171e59092b414b1f146101ac379f66b9b24293c2b2d8631bc8a2f576c8c5e",
+      "bytes": 20369
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/ema.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/ema.py",
+      "source_sha256": "61552e3f0120f848dc5a7a19d9988ccc580b222f9c979f8b881237985158251a",
+      "bytes": 2433
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/residue_constants.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/residue_constants.py",
+      "source_sha256": "4c51f662a8cc14a9a40b7455bc9b1b20bf56016dfc0dd3ac94589c178d5df881",
+      "bytes": 46570
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/ipa.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/ipa.py",
+      "source_sha256": "1a6cd5e5253ab089625ddd60ffe4f4f504e575c6817831a113719604c3b91d9a",
+      "bytes": 8366
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/protein.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/protein.py",
+      "source_sha256": "ecc0ad83352c430813333935cb0e61ed98422a15f3815fbf53d98b625aed70d0",
+      "bytes": 22695
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/tensor_utils.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/tensor_utils.py",
+      "source_sha256": "bd39e2d2b5e8fb872ca49aabc6189643f389311081a084873e95fda14354d411",
+      "bytes": 3621
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/rigid_utils.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/rigid_utils.py",
+      "source_sha256": "d1777be8d6463d26d8e4600ecbd0fd0a161778d9ab1b9c4e9ee66ddf3c42c47e",
+      "bytes": 42909
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/primitives.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/primitives.py",
+      "source_sha256": "916b72964a03bb4005b8ca6515d7e35849b0c8949ee9477651f4d018f35a6fc4",
+      "bytes": 25156
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/model/module.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/model/module.py",
+      "source_sha256": "44c57a5e1d0024b7c478ed40e735f614b419b0d952bdc6667726ca9b8f9d3024",
+      "bytes": 7513
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/model/model.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/model/model.py",
+      "source_sha256": "cc64929d721e90b3a579b19e6a98780ae7498f0222d2b4c0f85806278bfb848a",
+      "bytes": 10854
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/utils.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/utils.py",
+      "source_sha256": "e05d46dae39c586d135cba4ec459852af5ef7894a2fb5875ebb9a21e0a9127f8",
+      "bytes": 1962
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/transport.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/transport.py",
+      "source_sha256": "648ad5a36309ecd5a2f7885ed6b57ef3c1941b3241ed9acb2015b0f50197b3f2",
+      "bytes": 3580
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/mars/analysis.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/mars/analysis.py",
+      "source_sha256": "8e4a7268b09064722793fe8c2c1a8c90d9c55891c0500100375512dcf7fdb285",
+      "bytes": 14023
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/train.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/train.py",
+      "source_sha256": "643151827cfce024867c32c9564bd473d6b7667db3bb6b862303eaf4c6dd9789",
+      "bytes": 2920
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_4AA.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_4AA.py",
+      "source_sha256": "b6032d46805bed039b8118cc81d861788ad6e4da505922dcf95514a076549bd9",
+      "bytes": 2321
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_mdcath.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_mdcath.py",
+      "source_sha256": "c2a494e5ea5c4babce25b4fbc48b2bb0fb2c4a6b1fc4d68fae41e86a290be1c6",
+      "bytes": 3439
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_4AA.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_4AA.py",
+      "source_sha256": "12adb787f748c666d848a6bf33d69dbb22f461eb8343cfdc439f54a4211e71b9",
+      "bytes": 2199
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_mdcath.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_mdcath.py",
+      "source_sha256": "d36acf2d27b930abe9657d03e6bf32e5521e6041e7360cf6e81adbb8ccec9ec0",
+      "bytes": 2673
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/training_args.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/training_args.py",
+      "source_sha256": "9978c213b2f78c2a4fe3c9f5eec6fdcb20aa973dac7185e879ec87f7e3ead045",
+      "bytes": 2865
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/generate.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/generate.py",
+      "source_sha256": "88cb3c502084f214aa18db6961b6596d991cfae50c3d9d7877e5f49e2069e4ab",
+      "bytes": 9606
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_mdcath.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_mdcath.py",
+      "source_sha256": "63ed2296ffff6892b7fbf90a332b78f705c7781391dc85eb2dfcd37d02d9d939",
+      "bytes": 20872
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_4AA.py",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_4AA.py",
+      "source_sha256": "8b0033b5f988f92d411dfd2fe32802cfdd264d8e02b51353a2ce78f16c50b679",
+      "bytes": 11001
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/.gitignore",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/.gitignore",
+      "source_sha256": "b38272d6dc30527f93b0b9952d1a267356878d6245a9723baec000f612d52e03",
+      "bytes": 336
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/README.md",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/README.md",
+      "source_sha256": "17fe886ecc97b6a9bce9405e7b14cf853955976451e352dfdfb80d48d7b78adf",
+      "bytes": 6490
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/senba-sprint/artifacts/mars-fm/LICENSE",
+      "destination": "source-original/senba-sprint/artifacts/mars-fm/LICENSE",
+      "source_sha256": "47b8d8e22f57c4fe83d141388fb6d64aace0167f78059af1d7f9c4af234132d2",
+      "bytes": 1069
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/prepare_trajectory.py",
+      "destination": "studio/prepare_trajectory.py",
+      "source_sha256": "7fa8d0a757a9e28af98db140891909554f31a86339fcd093d1d89b5846c44dee",
+      "bytes": 2494
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/SOURCE-MAP.json",
+      "destination": "studio/SOURCE-MAP.json",
+      "source_sha256": "5f248d5fee43b795b27244fea1a087593df212b0017885e808bf6d870941d3fc",
+      "bytes": 3556
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/start_saved_demo.py",
+      "destination": "studio/start_saved_demo.py",
+      "source_sha256": "fee0fca3e7e8a6ec3a7c6881782b0352282faf79a259a4440ed5d8277310796f",
+      "bytes": 441
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/vendor/OrbitControls.js",
+      "destination": "studio/static/vendor/OrbitControls.js",
+      "source_sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "bytes": 40755
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/vendor/THREE-LICENSE",
+      "destination": "studio/static/vendor/THREE-LICENSE",
+      "source_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "bytes": 1081
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/vendor/three.core.js",
+      "destination": "studio/static/vendor/three.core.js",
+      "source_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "bytes": 1458113
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/vendor/three.module.js",
+      "destination": "studio/static/vendor/three.module.js",
+      "source_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "bytes": 662772
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/app.js",
+      "destination": "studio/static/app.js",
+      "source_sha256": "6e4ae105da193ab936612117c7ba59199cc17b99e2e21a45c61642fa4035d409",
+      "bytes": 28399
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/data/examples.json",
+      "destination": "studio/static/data/examples.json",
+      "source_sha256": "6046133a0e51970f5d4af804714f8c58c24ec1efe1ced09cc139d1f41e67c655",
+      "bytes": 814131
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/style.css",
+      "destination": "studio/static/style.css",
+      "source_sha256": "91bf8c03e116a6c67ce863cffd8d221069a7c2b03b0509930bd355c695cba3b1",
+      "bytes": 13017
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/static/index.html",
+      "destination": "studio/static/index.html",
+      "source_sha256": "8cef91a2548b5216855d0877cc77b1fe76ef1569ed29a79a1550e8db34325755",
+      "bytes": 8416
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/start_demo.py",
+      "destination": "studio/start_demo.py",
+      "source_sha256": "a070c9024c8db80337a9999fe0269c07d3c8b22435e0b89d187d454dc101ae0e",
+      "bytes": 607
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/README.md",
+      "destination": "studio/README.md",
+      "source_sha256": "757ac9044da7d630f7808fc111c817230e571b0caeef757ae7708d84f60e504e",
+      "bytes": 1926
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/runtime/results/08e1f9a791684a00bf906e25edabdd0d.json",
+      "destination": "studio/runtime/results/08e1f9a791684a00bf906e25edabdd0d.json",
+      "source_sha256": "abe22a510997ded83223004bf462a4ff8a352369dce75a86de8c5340fc8ad2f9",
+      "bytes": 87977
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/runtime/results/0c092b5ab313496b949b38d73c6cddad.json",
+      "destination": "studio/runtime/results/0c092b5ab313496b949b38d73c6cddad.json",
+      "source_sha256": "a85214d4f3cfff50253dc1536a54fbd7daedbcda1ed56da56499c9f2a4b3aa63",
+      "bytes": 87977
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/runtime/results/415eb4e301ae4148bb3bac1f34bea554.json",
+      "destination": "studio/runtime/results/415eb4e301ae4148bb3bac1f34bea554.json",
+      "source_sha256": "7bd222aae099f2586246c0f34c33e2e3b1ed1cb8730cec9d36c28a6640f573ca",
+      "bytes": 87977
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/prepare_data.py",
+      "destination": "studio/prepare_data.py",
+      "source_sha256": "10c709ab36c2846262e567170acf6c25beef9be05f3632fc3cd0cd620a08e6b9",
+      "bytes": 2992
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/requirements.txt",
+      "destination": "studio/requirements.txt",
+      "source_sha256": "38df9b3224057e390e3a17614887532a61541c6e914499be412e454cf1c04cdd",
+      "bytes": 152
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/mosaic/output/MIT-Maker-Video-Assets/02-PaperCrane/SENBA/04-Senba-Studio/server.py",
+      "destination": "studio/server.py",
+      "source_sha256": "2246624f4811a2033bb21bda4ce7d1737f81aeda6263ec5016e9524ba832ce84",
+      "bytes": 12303
+    },
+    {
+      "source": "/Users/harsha/Desktop/claudeprojects/lambert-ga/senba-demo/smoke.cjs",
+      "destination": "studio/smoke-inference.cjs",
+      "source_sha256": "30c087f46e8b308bd44fcd704f9a65aa7021a46108fa31366c725513195f1d4e",
+      "bytes": 3631
+    }
+  ],
+  "headers_added": [
+    "src/ember/tests/test_quality.py",
+    "src/ember/tests/test_prepared_cli.py",
+    "src/ember/tests/test_data_splits_budget.py",
+    "src/ember/tests/test_features_cache.py",
+    "src/ember/tests/test_release_contract.py",
+    "src/ember/tests/test_fpocket.py",
+    "src/ember/tests/test_lacuna.py",
+    "src/ember/tests/test_mapping_geometry.py",
+    "src/ember/tests/test_scientific_audit.py",
+    "src/ember/tests/test_contracts.py",
+    "src/ember/tests/test_p2rank.py",
+    "src/legacy_poc/__init__.py",
+    "senba-audit/tests/test_cli.py",
+    "senba-audit/tests/test_data.py",
+    "senba-audit/tests/test_audit.py",
+    "senba-audit/tests/test_runner.py",
+    "senba-audit/tests/test_augmentation.py",
+    "senba-audit/tests/test_report.py",
+    "senba-audit/tests/test_metrics.py",
+    "senba-audit/tests/test_inference.py",
+    "senba-audit/tests/test_release.py",
+    "tests/test_ensemble.py",
+    "tests/test_cryptic.py",
+    "tests/test_cluster.py",
+    "tests/test_benchmark.py",
+    "tests/__init__.py",
+    "tests/test_datasets.py",
+    "studio/static/app.js",
+    "studio/smoke-inference.cjs",
+    "source-original/dynamics/tests/test_ensemble.py",
+    "source-original/dynamics/tests/test_cryptic.py",
+    "source-original/dynamics/tests/test_cluster.py",
+    "source-original/dynamics/tests/test_benchmark.py",
+    "source-original/dynamics/tests/__init__.py",
+    "source-original/dynamics/tests/test_datasets.py",
+    "source-original/dynamics/ember/tests/test_quality.py",
+    "source-original/dynamics/ember/tests/test_prepared_cli.py",
+    "source-original/dynamics/ember/tests/test_data_splits_budget.py",
+    "source-original/dynamics/ember/tests/test_features_cache.py",
+    "source-original/dynamics/ember/tests/test_release_contract.py",
+    "source-original/dynamics/ember/tests/test_fpocket.py",
+    "source-original/dynamics/ember/tests/test_lacuna.py",
+    "source-original/dynamics/ember/tests/test_mapping_geometry.py",
+    "source-original/dynamics/ember/tests/test_scientific_audit.py",
+    "source-original/dynamics/ember/tests/test_contracts.py",
+    "source-original/dynamics/ember/tests/test_p2rank.py",
+    "source-original/dynamics/__init__.py",
+    "source-original/senba-sprint/tests/test_cli.py",
+    "source-original/senba-sprint/tests/test_data.py",
+    "source-original/senba-sprint/tests/test_audit.py",
+    "source-original/senba-sprint/tests/test_runner.py",
+    "source-original/senba-sprint/tests/test_augmentation.py",
+    "source-original/senba-sprint/tests/test_report.py",
+    "source-original/senba-sprint/tests/test_metrics.py",
+    "source-original/senba-sprint/tests/test_inference.py",
+    "source-original/senba-sprint/tests/test_release.py"
+  ],
+  "portable_path_changes": [
+    "studio/server.py",
+    "studio/prepare_data.py",
+    "studio/start_demo.py"
+  ],
+  "excluded_large_assets": [
+    "model checkpoint files (*.ckpt)",
+    "raw mdCATH HDF5 files (*.h5)",
+    "repeated raw generated coordinate JSONL arrays",
+    "rendered paper figures/PDFs and vendor tectonic binary"
+  ],
+  "original_model_adaptation_code_status": "Original SENBA adaptation/evaluation repository and train/validation CSVs unavailable; upstream MarS-FM model/training source, released training receipts and full local evaluation code included.",
+  "verification": {
+    "python_syntax_files": 216,
+    "source_ast_or_js_header_matches": 126,
+    "intentional_portability_edits": [
+      "studio/start_demo.py",
+      "studio/prepare_data.py",
+      "studio/server.py",
+      "studio/smoke-inference.cjs"
+    ],
+    "header_insertion_checks": "Every Python comment insertion was asserted AST-identical before write; JavaScript insertion adds one leading // line only.",
+    "javascript_syntax": "Studio app.js and smoke-inference.cjs pass node syntax checks",
+    "offline_asset_http": "7/7 retained static files served HTTP 200; staged index additionally verified via local HTTP",
+    "browser_smoke": "Blocked: original playwright-core import hung before launch; connected Chrome create/get tab each timed out. No fresh browser pass claimed."
+  },
+  "final_files": [
+    {
+      "path": "src/ember/schema.py",
+      "bytes": 12241,
+      "sha256": "ab5999cd97a5da86dac54c3a85e2fa1a05da7311864bd4eef59f3f353a4fc08e"
+    },
+    {
+      "path": "src/ember/data.py",
+      "bytes": 6606,
+      "sha256": "8f9100b3cba83a9dd4b2d8accb1405b00320f7933661fbcbdfa6c347d4f03074"
+    },
+    {
+      "path": "src/ember/report.py",
+      "bytes": 3769,
+      "sha256": "03a71bdbee0d81c99b722db9807428f87d8f8af8c55120d18a734f1404fc500c"
+    },
+    {
+      "path": "src/ember/__main__.py",
+      "bytes": 9030,
+      "sha256": "1708fedddaf56967d875d88eeece99fdfd1b6f238c458ab8d4fa48d6228eeef0"
+    },
+    {
+      "path": "src/ember/quality.py",
+      "bytes": 4579,
+      "sha256": "4c582598720e29575bc6d483d97b805cb5b90a6d59ec5f8611533ff00496552b"
+    },
+    {
+      "path": "src/ember/mapping.py",
+      "bytes": 14229,
+      "sha256": "4cd8486858abb35c635f14add484fabec869c782d948083ed9a374a69b8cb48a"
+    },
+    {
+      "path": "src/ember/baselines/lacuna.py",
+      "bytes": 5113,
+      "sha256": "9d259c28015daec311400ecf8f181b22dd145930b04b9e59d8f065912106eddc"
+    },
+    {
+      "path": "src/ember/baselines/p2rank.py",
+      "bytes": 2728,
+      "sha256": "cc0bd29de82d0a60d48df11f1ba18ead3bc5bdac504a1bedc11054bfdb82b681"
+    },
+    {
+      "path": "src/ember/baselines/native.py",
+      "bytes": 2404,
+      "sha256": "0399f9719a122ad3d215c59de5de62fe21e230843ab2473ae728793a5978be92"
+    },
+    {
+      "path": "src/ember/baselines/__init__.py",
+      "bytes": 71,
+      "sha256": "f126714c2c8a6b8c9bb327c06364f1b85e0977f25c668490dc2d42752e725cb6"
+    },
+    {
+      "path": "src/ember/baselines/fpocket.py",
+      "bytes": 5815,
+      "sha256": "dbc4bf10d8f1069feaefa1a92b2b7d14b86568940cbde8352801d23df1c9d0af"
+    },
+    {
+      "path": "src/ember/verify_local.py",
+      "bytes": 2398,
+      "sha256": "da4951d8ef1829d11c7f09a606f41ad6f2ed91a44ec29c50eb6755881471cb7a"
+    },
+    {
+      "path": "src/ember/candidates.py",
+      "bytes": 5391,
+      "sha256": "7c51ed7246d8af2c6ff75eb8724becbce79c37f34d1e2182a428f6a59fc107c7"
+    },
+    {
+      "path": "src/ember/workflow.py",
+      "bytes": 13338,
+      "sha256": "f7910b6f4ae5f5aa8d627e314df32b1e00a4c524552ca8440f62aa296f0d55ca"
+    },
+    {
+      "path": "src/ember/evaluate.py",
+      "bytes": 11953,
+      "sha256": "548b87f792a50e3b479ef226f03c38617aabdf054f9d0f3d73cc9ede70190766"
+    },
+    {
+      "path": "src/ember/splits.py",
+      "bytes": 9848,
+      "sha256": "1800c79ef15c7ae37a58a537815480843921164d71afb4756bde201e015cb677"
+    },
+    {
+      "path": "src/ember/train.py",
+      "bytes": 20233,
+      "sha256": "d41d13c13c8b11755cc1dd55acf89fd62cefbb107dfb250746b9e9a7c11901c9"
+    },
+    {
+      "path": "src/ember/sampling.py",
+      "bytes": 6026,
+      "sha256": "f646f0199e5f2d26ff7b16b0572a1dc4903a29bebdbd61c31411c6195cefc434"
+    },
+    {
+      "path": "src/ember/geometry.py",
+      "bytes": 8038,
+      "sha256": "0a9e9a9dfa54e26121883a6980bf85ad5239e20a4cc4b24fbb0f222973b14bda"
+    },
+    {
+      "path": "src/ember/configs/linear-probe.json",
+      "bytes": 327,
+      "sha256": "25a54ba149f73846d255b9cbecbe59327f9965b533aac55378771f5b51a26835"
+    },
+    {
+      "path": "src/ember/configs/s0-linear.json",
+      "bytes": 324,
+      "sha256": "7b91f9e511012a0d94cb72dc6c29e5fc99c3618ed5dd849df715097a90450f9a"
+    },
+    {
+      "path": "src/ember/configs/e0-mlp.json",
+      "bytes": 325,
+      "sha256": "c87b3c0d63c7b88dd556c5d6e86affa0a614cc5a543f9aaacea86c2936de9a49"
+    },
+    {
+      "path": "src/ember/configs/README.md",
+      "bytes": 1097,
+      "sha256": "b3142389954ef4c228868bab9d01af7248a561716780024714c9f3d760fe523d"
+    },
+    {
+      "path": "src/ember/configs/s0-mlp.json",
+      "bytes": 321,
+      "sha256": "bc4ef858bd415f81f7b457e74382991cd5f695be80fb91271bf0e5cf8830c9e1"
+    },
+    {
+      "path": "src/ember/configs/e0-no-support-counts.json",
+      "bytes": 342,
+      "sha256": "e356ef32fe0e708e08b15a0ca5ee90b8e65c5c3e33e1beacd8a8e1c9015d8ddb"
+    },
+    {
+      "path": "src/ember/configs/e0-linear.json",
+      "bytes": 328,
+      "sha256": "f45099399f5ff16066ae24e63231a8557db7601e6b57c124eb4e35ff0f472830"
+    },
+    {
+      "path": "src/ember/configs/r0.json",
+      "bytes": 324,
+      "sha256": "c91658869040faac349402ccc6394f471b5379ea9451d20b6ca5d380ae36d010"
+    },
+    {
+      "path": "src/ember/ruff.toml",
+      "bytes": 112,
+      "sha256": "7f4c29a9c84093d889bf8debb0171f83734ca9f828c514419cff4eb438e16a42"
+    },
+    {
+      "path": "src/ember/pipeline.py",
+      "bytes": 3977,
+      "sha256": "2a975f4020c04e3585695ee539c4c0bd00601e8ee54f6506126cb6594e548743"
+    },
+    {
+      "path": "src/ember/supervision.py",
+      "bytes": 3024,
+      "sha256": "eb3d623dfebec2bfd705c1d2d22a5fcdbcab16b42c0f8054f6b6f85500f863e7"
+    },
+    {
+      "path": "src/ember/embeddings.py",
+      "bytes": 7020,
+      "sha256": "2945451d9dd7d17e3e4f9edbb5694961f3416d2c443d72fb3bdfdb767b314324"
+    },
+    {
+      "path": "src/ember/release_contract.py",
+      "bytes": 1587,
+      "sha256": "685b16ad773a6895948cc3b79f9ac640ba13fbe62080178c09bb49754d577c87"
+    },
+    {
+      "path": "src/ember/export.py",
+      "bytes": 2186,
+      "sha256": "ff039d16e0316b987081255a9698aedb843ea60767941be49997211d52ef7caf"
+    },
+    {
+      "path": "src/ember/features.py",
+      "bytes": 10942,
+      "sha256": "e9ae795370aabf5ac305a59f6986216f5b59e4e26a476cf7d418d17381f0f9a4"
+    },
+    {
+      "path": "src/ember/__init__.py",
+      "bytes": 267,
+      "sha256": "4aa7489d9928e1e1797b6ce0f05f403167de781d5e2ed3b11893d457aa926f8c"
+    },
+    {
+      "path": "src/ember/predict.py",
+      "bytes": 13197,
+      "sha256": "a033f608d6f6124e5070c53b61e23f98f9191867c44490ce0aa2081bebe0ae45"
+    },
+    {
+      "path": "src/ember/tests/test_quality.py",
+      "bytes": 1875,
+      "sha256": "4ebe9af369fffe8cd22ddc4830da63d5315cc6a4c72dc90b05de824ed882878d"
+    },
+    {
+      "path": "src/ember/tests/test_checkpoint_store.py",
+      "bytes": 1855,
+      "sha256": "6db1bb6eb2c2378c4111c05f693b9d76337e5843de37d58ccb6a46a2a20dfa4a"
+    },
+    {
+      "path": "src/ember/tests/test_prepared_cli.py",
+      "bytes": 4841,
+      "sha256": "0623e9ed087fe1ee803832639ad718f697584c119f67c5386013fb1bea4e7395"
+    },
+    {
+      "path": "src/ember/tests/test_data_splits_budget.py",
+      "bytes": 6094,
+      "sha256": "98ded44de2c43bcac5c9ed8c780b38e5344347df11d00d47bcfdd9a6f6e6557e"
+    },
+    {
+      "path": "src/ember/tests/__init__.py",
+      "bytes": 73,
+      "sha256": "74197122f22aeda33005ce4127cec5012d5c7b27549f9847e688cee37e329884"
+    },
+    {
+      "path": "src/ember/tests/test_features_cache.py",
+      "bytes": 5820,
+      "sha256": "6cd3855e025fed7beeb38947bc7041312df2f7dba469fbdfda58eda59ed1c1f2"
+    },
+    {
+      "path": "src/ember/tests/test_release_contract.py",
+      "bytes": 1791,
+      "sha256": "5aa807e07653cedd48fd1a0f5ab7aa38aa0898f7e9f95e84a45154b8273f3e2b"
+    },
+    {
+      "path": "src/ember/tests/test_fpocket.py",
+      "bytes": 2878,
+      "sha256": "803c8a9ca4f8fc4db27eaa75d69c1473b7ff6ff278c65ef91fc07ffd4b161343"
+    },
+    {
+      "path": "src/ember/tests/test_lacuna.py",
+      "bytes": 1585,
+      "sha256": "bb0142de0134412817745bdc53c0b8a063dad68fbe8a9fdffb6dbc0732c49aec"
+    },
+    {
+      "path": "src/ember/tests/test_mapping_geometry.py",
+      "bytes": 6594,
+      "sha256": "107a7cf1f18c4f0937c45bc4881ffe9fef5f6105d5f08d63f9b9f8331e9bde4e"
+    },
+    {
+      "path": "src/ember/tests/test_pipeline_integration.py",
+      "bytes": 3923,
+      "sha256": "339399f0fe4fcdc8353459801beda9fde05491f11979c7500432b4d82387ccde"
+    },
+    {
+      "path": "src/ember/tests/test_scientific_audit.py",
+      "bytes": 4387,
+      "sha256": "1b7396bd2561cb95939361ec08bc9cbf9bc2b1a3261e33be1499b3b877801243"
+    },
+    {
+      "path": "src/ember/tests/test_contracts.py",
+      "bytes": 8364,
+      "sha256": "0661b9769dd1a6f973329982493e8d91377423dc1b750d996cb60a9ac66dd912"
+    },
+    {
+      "path": "src/ember/tests/test_p2rank.py",
+      "bytes": 1099,
+      "sha256": "f04f01484cc271b4286200890b81b58eea7438f66f2e77dbfa9f392e69217094"
+    },
+    {
+      "path": "src/ember/io.py",
+      "bytes": 3243,
+      "sha256": "52fc3a83d860b925453d886308b25d22c553e17bed71968a47b1e9f5bc971773"
+    },
+    {
+      "path": "src/ember/model_checks/run_checks.py",
+      "bytes": 4983,
+      "sha256": "7a523a536430c915c08403f3c8d284d4c233ab592a55d0d005a171094ad84683"
+    },
+    {
+      "path": "src/ember/budget.py",
+      "bytes": 7376,
+      "sha256": "3291ca7abff40f4c710f4adbc901d279327f92df1e97dfdc83a851c074f48195"
+    },
+    {
+      "path": "src/ember/prepared.py",
+      "bytes": 6263,
+      "sha256": "9ac0ae20930c4540f160ffc1262c8686c3a6759c21f25aa71bbd980ec39f2775"
+    },
+    {
+      "path": "src/ember/requirements-model.in",
+      "bytes": 331,
+      "sha256": "a86b426766a74c8675fde1e57c59b4232bced662ed9326e508824c1156be643f"
+    },
+    {
+      "path": "src/ember/models.py",
+      "bytes": 4568,
+      "sha256": "0ac5da48d2b24a1646b4726e8797a6cc49014491c0da80845c07a99b95d13686"
+    },
+    {
+      "path": "src/ember/execution.py",
+      "bytes": 603,
+      "sha256": "b127b383fea556cfd6b05b2e498fdddecc32c7ffa66a1b37803c65fad2cdcb1b"
+    },
+    {
+      "path": "src/ember/requirements-local.txt",
+      "bytes": 180,
+      "sha256": "bc1fb42783bbe7ced4188f26362f0e2a447de60af5534ec4bcc7028fa776331c"
+    },
+    {
+      "path": "src/ember/ingest.py",
+      "bytes": 6152,
+      "sha256": "13b1ad04c8c4d5778e486d91be0f7925a12e739282136c14d8a3df1128d44c9e"
+    },
+    {
+      "path": "src/ember/artifacts/preflight.json",
+      "bytes": 647,
+      "sha256": "181e8af35ea959cd1e0e9890c2a41a0adeb9bd28c8002f36c483bb2c9f8be46b"
+    },
+    {
+      "path": "src/ember/artifacts/research-inventory.json",
+      "bytes": 8333,
+      "sha256": "7aacc881cb2274b60d04664bbf828081e3bfd67f259f1e04b76bc062ec65b65d"
+    },
+    {
+      "path": "src/ember/artifacts/local-verification.json",
+      "bytes": 15153,
+      "sha256": "f9f045a043ad5ec308b222645348c84646fd9576408e7f7dbc742dde023e236d"
+    },
+    {
+      "path": "src/ember/artifacts/README.md",
+      "bytes": 1959,
+      "sha256": "d0f5f13c760c7e2142e35159fb8c36f9b48966996e8826e2bb647af8a3dca43b"
+    },
+    {
+      "path": "src/ember/artifacts/file-inventory.json",
+      "bytes": 18798,
+      "sha256": "b03eee5bb908fad2fe02629284c220da3c4cd97fe1dcff9905f96a4323add318"
+    },
+    {
+      "path": "src/ember/artifacts/experiment-plan.json",
+      "bytes": 3110,
+      "sha256": "115983368aee824db1168c2fc3d367e2639e16adb1a4da2b4dc0a1f948d45085"
+    },
+    {
+      "path": "src/ember/plan.py",
+      "bytes": 7053,
+      "sha256": "202a62e69816a316e8c178193b44cd80c0affc534531f54e3c80de6b8692040b"
+    },
+    {
+      "path": "src/ember/checkpoint_store.py",
+      "bytes": 3565,
+      "sha256": "c4cc98020ef37d837389190e0cd5a75d752a0927cfb16827f3013e4fe9733c66"
+    },
+    {
+      "path": "src/ember/research/fpocket-tests_reference_output_1ATP_out_1ATP_info.txt",
+      "bytes": 11182,
+      "sha256": "6c24ab65a78c71ca2edb9acfa01cd9340e5e00c5244ead26f24bfa0c5785ebe3"
+    },
+    {
+      "path": "src/ember/research/fpocket-tests_reference_output_1ATP_out_pockets_pocket1_vert.pqr",
+      "bytes": 8788,
+      "sha256": "cb5d311e3c0cb93b07bab24bd703d87da1e2331605510dbd3d075f04cc8ade58"
+    },
+    {
+      "path": "src/ember/research/structure-fixtures/receipts.json",
+      "bytes": 1273,
+      "sha256": "86ecbef190261c98413af19275317a7ea81ec90511a00ba4e0406c1f55a7927f"
+    },
+    {
+      "path": "src/ember/research/structure-fixtures/4os8.cif",
+      "bytes": 534593,
+      "sha256": "e128f647ba8407061902fa6b3c885807d17c6c5d09d6e949d0286aeb60a209c6"
+    },
+    {
+      "path": "src/ember/research/structure-fixtures/annotation-mapping-audit.json",
+      "bytes": 1263,
+      "sha256": "efbbeb9bcf6364d1ca726660d0bb2524af88ddfb0258a26ded3dcf5799e453bb"
+    },
+    {
+      "path": "src/ember/research/structure-fixtures/8jis.cif",
+      "bytes": 946866,
+      "sha256": "3aca4f5f46e74d699842ca751b60ea5b9e0cb0da7a3cfa3a5e0edf641a073423"
+    },
+    {
+      "path": "src/ember/research/structure-fixtures/7r00.cif",
+      "bytes": 340829,
+      "sha256": "4ce52ef11b7f2943706bf95df9d6a1e61365cccfbc63444998a744298af596f9"
+    },
+    {
+      "path": "src/ember/research/fpocket-tests_reference_output_1ATP_out_pockets_pocket1_atm.pdb",
+      "bytes": 5586,
+      "sha256": "2ac77787ed2f8940dec46dbe454e5eb7f1afba8c07e2f966ad3f046a3d8a6b4b"
+    },
+    {
+      "path": "src/ember/research/lacuna-paper_figures_software_kras_A_pocket_report.json",
+      "bytes": 5740,
+      "sha256": "9c40aff6efd3b00348f55fe1758dad587ed36e1c99b2cf994f16bc00216f41e0"
+    },
+    {
+      "path": "src/ember/research/README.md",
+      "bytes": 5795,
+      "sha256": "33bcc7d3590e7db17272d22091a2c60c81d485d51633c256b74f84f922c35366"
+    },
+    {
+      "path": "src/ember/research/cryptobench-metadata/inventory-report.json",
+      "bytes": 1450,
+      "sha256": "36ccaa10e597050795c67312ff4e746f19473d0198e4d94408a25b602645e5ad"
+    },
+    {
+      "path": "src/ember/research/cryptobench-metadata/receipts.json",
+      "bytes": 1090,
+      "sha256": "71aac99efe4526f6e4e5419433a80d96d5dc337dba6bb9ddae8c3827d5fc8248"
+    },
+    {
+      "path": "src/ember/research/cryptobench-metadata/folds.json",
+      "bytes": 17826,
+      "sha256": "ced97a50b55504007216165167a1b3995312434ee50f7f93f8728fca3c6ac67d"
+    },
+    {
+      "path": "src/ember/research/p2rank-misc_visualization_predict_1fbl_1fbl.pdb_predictions.csv",
+      "bytes": 1223,
+      "sha256": "80423ad1850b157216643ed150470d9aa254cdc1fbb8d879984d3e0aaa91faa9"
+    },
+    {
+      "path": "src/ember/research/licenses/bioemu-LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "src/ember/research/licenses/lacuna-LICENSE",
+      "bytes": 1070,
+      "sha256": "e8cf2da4b72d2e9f777705043bd9af2f816a5033a412dba6a6589a4c974713e0"
+    },
+    {
+      "path": "src/ember/research/licenses/CryptoBench-LICENSE",
+      "bytes": 1070,
+      "sha256": "4c4bb06c86b2b31735745d6c227a921b9a1044239dfd777c04807014f3f5fa39"
+    },
+    {
+      "path": "src/ember/research/licenses/p2rank-LICENSE.txt",
+      "bytes": 1145,
+      "sha256": "c63014a403b53ff17ee1056f9c4bf49879fb1fbda08c3a4e52cac3a3d38ce675"
+    },
+    {
+      "path": "src/ember/research/licenses/fpocket-LICENSE",
+      "bytes": 1094,
+      "sha256": "cf22a1b400afa433f68fa0ffb8c2454d3b6bebb34466693512ca63aaa52dcc6b"
+    },
+    {
+      "path": "src/ember/research/sources.json",
+      "bytes": 6776,
+      "sha256": "476eba437ef04cb53a0c120271d0bcd97b3c341ecf7e6effdb33298b286297d3"
+    },
+    {
+      "path": "src/ember/research/cryptobench-release-inventory.json",
+      "bytes": 14595,
+      "sha256": "f323fb542aa804deb9f991593d6deebeec97a40905a2e23dc36ae98c5660c202"
+    },
+    {
+      "path": "src/legacy_poc/cryptic.py",
+      "bytes": 2447,
+      "sha256": "f3f560f6dcde5bc7ad5784b047c2fd62eaa40618413e829564f47c5a2736b80e"
+    },
+    {
+      "path": "src/legacy_poc/ensemble.py",
+      "bytes": 4838,
+      "sha256": "7cdea6478fdaa0fbbe48c491aa4014a912d179d7efe3aa0c7285c7b2017dfd82"
+    },
+    {
+      "path": "src/legacy_poc/cluster.py",
+      "bytes": 2433,
+      "sha256": "d5a5eb2cb9c53059872047f32dbeee45ec61cc18f57f891fc640c9b45cb9b10e"
+    },
+    {
+      "path": "src/legacy_poc/.dockerignore",
+      "bytes": 415,
+      "sha256": "1fb962fd810a9d8ac304684cc2784ab234b4204ab32ca345c1f9af8368e6470a"
+    },
+    {
+      "path": "src/legacy_poc/pockets.py",
+      "bytes": 5449,
+      "sha256": "0d6053c30239d571ea62193dec405488bb9227597082c2b8bfd4d4d0589697ec"
+    },
+    {
+      "path": "src/legacy_poc/__init__.py",
+      "bytes": 34,
+      "sha256": "71ce7eb84ae269aa5077ef6916902a380fea3f475707cf9108cc3e0b54399c9b"
+    },
+    {
+      "path": "src/legacy_poc/datasets.py",
+      "bytes": 4543,
+      "sha256": "c80952f7cfda09ec92df08a4487e7d5a08b59f3e180edf1ea569c52ad973107f"
+    },
+    {
+      "path": "src/legacy_poc/Dockerfile",
+      "bytes": 3738,
+      "sha256": "b0712da52a41d21c74964a8e7d81e400cb3d9165a55d395b2ff5622d1f782695"
+    },
+    {
+      "path": "src/legacy_poc/run_target.py",
+      "bytes": 2898,
+      "sha256": "f5ea3a897d34dd77d862a982fbaf25c38d3242785b23f11eabe98e92fb48bf19"
+    },
+    {
+      "path": "src/legacy_poc/requirements.txt",
+      "bytes": 125,
+      "sha256": "94f01f6fc48a3467e3318e9ca66c73df30c350179edefb539a871cfd3e935b96"
+    },
+    {
+      "path": "src/legacy_poc/benchmark.py",
+      "bytes": 1261,
+      "sha256": "a216b751a30339709799444bf1a115d28c12093ae4ef0e1d1cd7836e7cd60f04"
+    },
+    {
+      "path": "src/legacy_poc/aggregate.py",
+      "bytes": 2925,
+      "sha256": "e47086700d974b8973d2f1f03ae330caa85ccdeb7ef5de03358e3c0c3d2cbcda"
+    },
+    {
+      "path": "senba-audit/reports/receipt-audit.json",
+      "bytes": 20282,
+      "sha256": "f867a0cb35e2a8ba1b55fd2d0f7f546522c0f088a3bc229e242384538a44886c"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k8-v1/results.md",
+      "bytes": 1351,
+      "sha256": "19375c3f09de7960c881874e359ef6bf28ed13f14acf237322eb570ad4347a0e"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k8-v1/forest.png",
+      "bytes": 67947,
+      "sha256": "740523ecfcde7152b30e431b31c7c5d45a37e7235aedcb341a63a4df43017060"
+    },
+    {
+      "path": "senba-audit/reports/k16-billing-reconciliation.json",
+      "bytes": 8501,
+      "sha256": "d50a8f5fb0f97c40e8c288bf695d90fa76de6ff3ddae48e3045bade8651fc779"
+    },
+    {
+      "path": "senba-audit/reports/panel-k4-v1/results.md",
+      "bytes": 1350,
+      "sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2"
+    },
+    {
+      "path": "senba-audit/reports/panel-k4-v1/forest.png",
+      "bytes": 66508,
+      "sha256": "7c181cc64d0ed53234ee3c2ed7c66b6ee59c29a6e4bfb7994900af4956523d69"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k16-v1/results.md",
+      "bytes": 1351,
+      "sha256": "df2ec1a63fa02dd9fcaf5b6ca355860194ba622b60923b31a2fb9ea77db36e7d"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k16-v1/forest.png",
+      "bytes": 67134,
+      "sha256": "491f8001272c18780bfd153438549a7829dae71519de028b0bcd26c41d75ccaf"
+    },
+    {
+      "path": "senba-audit/reports/budget-ledger.json",
+      "bytes": 2323,
+      "sha256": "d6ed1ff65cbef2b42df85ecae2a52627cc3bf5f2aac496bf70360ec8089b2143"
+    },
+    {
+      "path": "senba-audit/reports/k4-billing-reconciliation.json",
+      "bytes": 4719,
+      "sha256": "9138baba19c1df119fec55f145dad1a921b05218aa4a3d2df12af7d788ef08dd"
+    },
+    {
+      "path": "senba-audit/reports/pilot-1e7uA04-k4-v2/results.md",
+      "bytes": 1336,
+      "sha256": "5f04608a0c021d5802ba4988c76f229f586a62a4522fb63ca35c5892c3542351"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k4-v1/results.md",
+      "bytes": 1350,
+      "sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2"
+    },
+    {
+      "path": "senba-audit/reports/sampling-k4-v1/forest.png",
+      "bytes": 66508,
+      "sha256": "7c181cc64d0ed53234ee3c2ed7c66b6ee59c29a6e4bfb7994900af4956523d69"
+    },
+    {
+      "path": "senba-audit/reports/preflight-verified.json",
+      "bytes": 1502,
+      "sha256": "d1b44bb27de55c79cfd6c7f0f92d3848f3a2e9e1950ec138df07f3b2b9b6d5a7"
+    },
+    {
+      "path": "senba-audit/configs/sprint.json",
+      "bytes": 4282,
+      "sha256": "96e2110695f8b13cc9bb818ac2b899805bb516262b37b75721cbcb023dbd668b"
+    },
+    {
+      "path": "senba-audit/senba_sprint/settle_panel.py",
+      "bytes": 3586,
+      "sha256": "2767b42dcf2880ec9156f2d22b0191c267bd22d84f64d1410ea31ae4c49e8947"
+    },
+    {
+      "path": "senba-audit/senba_sprint/data.py",
+      "bytes": 7960,
+      "sha256": "df217427116205a22f4a2105d6bf1aff4520421b7a0f1fce95f00d7ddebf0c81"
+    },
+    {
+      "path": "senba-audit/senba_sprint/report.py",
+      "bytes": 10505,
+      "sha256": "8e6fbddb3e524be2f95028b5f52d650e7f0e46886ef362584a57c6d868837165"
+    },
+    {
+      "path": "senba-audit/senba_sprint/__main__.py",
+      "bytes": 4749,
+      "sha256": "aa18bac5e143639ddee73b8f2991c19161b39c16e02f9f949380293bf65538fa"
+    },
+    {
+      "path": "senba-audit/senba_sprint/inference.py",
+      "bytes": 13926,
+      "sha256": "4533c5e34228574e52a0167f086edc2c06747b5045ecb6cff42efa1665b7f382"
+    },
+    {
+      "path": "senba-audit/senba_sprint/__init__.py",
+      "bytes": 88,
+      "sha256": "84d3454bc963200030c03902524603d290a335b8906b8390d60795fbc6e445c2"
+    },
+    {
+      "path": "senba-audit/senba_sprint/augmentation.py",
+      "bytes": 10761,
+      "sha256": "f729985c6714ad63a1a886bea760b872d6ce0670e6c3dea5fbcf9d67c9d80375"
+    },
+    {
+      "path": "senba-audit/senba_sprint/cloud.py",
+      "bytes": 9178,
+      "sha256": "04c6ac131d3f7f54516ae6475f06556c7d2801d34ae6f2b8e73534e058c72217"
+    },
+    {
+      "path": "senba-audit/senba_sprint/audit.py",
+      "bytes": 9591,
+      "sha256": "20b749b8612784bf06daeeced985af03ad1d6387006014f7735eb3ee9560c784"
+    },
+    {
+      "path": "senba-audit/senba_sprint/release.py",
+      "bytes": 11994,
+      "sha256": "41f03ba00afea96bd45b43838f0c970dba3f4d571a444186910f490a3db600ac"
+    },
+    {
+      "path": "senba-audit/senba_sprint/runner.py",
+      "bytes": 18636,
+      "sha256": "b0073e4ab8ade81d79d62105fc3652ec17fe726d8d575b3307c713fc30b1f2dc"
+    },
+    {
+      "path": "senba-audit/senba_sprint/metrics.py",
+      "bytes": 15264,
+      "sha256": "e738dfb13ed037d30bd8b4622a8b08ad9f9d89983513713348b20c57247dd1f1"
+    },
+    {
+      "path": "senba-audit/README.md",
+      "bytes": 704,
+      "sha256": "396ab6d0966dfad6a8fa2a9f5efb77da7aa2ff6fb490ef64a576d072363db343"
+    },
+    {
+      "path": "senba-audit/docs/FROZEN_EVALUATION_PROTOCOL.md",
+      "bytes": 6469,
+      "sha256": "924686f766ff5c6906d0b6dbf637a00e13dce1c3d9c8b2072fefb3cbe018d0eb"
+    },
+    {
+      "path": "senba-audit/docs/K4_AUDIT.md",
+      "bytes": 10473,
+      "sha256": "c5d0c76933db5375b461f2fc59086f175ad08fb081d504dc50f6101ffa8bbfb7"
+    },
+    {
+      "path": "senba-audit/docs/SCIENTIFIC_REVIEW.md",
+      "bytes": 6393,
+      "sha256": "639998c44ee9a58359a0c783a1d43de9bbbf40f48b386aed1caf7fb5af678b8e"
+    },
+    {
+      "path": "senba-audit/docs/RESULTS_SUMMARY.md",
+      "bytes": 8118,
+      "sha256": "72626cd3a76ca1561b71cd8137c0db13c5d0ec7bd7594f4a8267f55dfab4e7f9"
+    },
+    {
+      "path": "senba-audit/docs/STATUS.md",
+      "bytes": 8329,
+      "sha256": "28f3c8b296147705ed9d3f88eb4d721b33683ec7d653d8c326eaed40ecec9fd8"
+    },
+    {
+      "path": "senba-audit/docs/SAMPLING_AUDIT.md",
+      "bytes": 3688,
+      "sha256": "35dcd58a401ed14c92232456058b25793ba38aeb82021580db757300c39e8a68"
+    },
+    {
+      "path": "senba-audit/tests/test_cli.py",
+      "bytes": 2082,
+      "sha256": "fdfcf09e1270262b87139eaf2505635f9f29c6251d526f3ee6cf5fdec167473f"
+    },
+    {
+      "path": "senba-audit/tests/test_data.py",
+      "bytes": 976,
+      "sha256": "d9eabb45f354028c368cf2a4ddcebb6d4b81257c31ece7bcf2617ed34a2ff340"
+    },
+    {
+      "path": "senba-audit/tests/test_audit.py",
+      "bytes": 5240,
+      "sha256": "daf0ca66b8961d21fc0005ea4bf4e0c09bd4f63303f928b1bdc5dd4d3b85f9fe"
+    },
+    {
+      "path": "senba-audit/tests/test_runner.py",
+      "bytes": 7615,
+      "sha256": "441f7a1a0ec5272c41ccd0687c9c3dda678069f4bd98c24e2c61117ed7697014"
+    },
+    {
+      "path": "senba-audit/tests/test_augmentation.py",
+      "bytes": 4076,
+      "sha256": "cf1a2dbbac0771d57f4d0c6d0a9c5dd52ad33633ed4fca7a514b6cdd582b8c24"
+    },
+    {
+      "path": "senba-audit/tests/test_report.py",
+      "bytes": 3299,
+      "sha256": "da451214ccd0a7187017633b5186762a78303c11fac1043191d96d86bd124b97"
+    },
+    {
+      "path": "senba-audit/tests/test_metrics.py",
+      "bytes": 7570,
+      "sha256": "b4d245f29591340d8b1fed9252124168e847ee74331547ef55109fef187d5f17"
+    },
+    {
+      "path": "senba-audit/tests/test_inference.py",
+      "bytes": 6419,
+      "sha256": "a57c7c4af17f0a7e5e9aedb287d217adf4774d27fbd035cf84583196314ffcdf"
+    },
+    {
+      "path": "senba-audit/tests/test_release.py",
+      "bytes": 7804,
+      "sha256": "9c04011008cc50a3f98747433d658eff2b0ecb85e1e4c0e80547166aff376f7b"
+    },
+    {
+      "path": "senba-audit/pyproject.toml",
+      "bytes": 399,
+      "sha256": "6a57c664e9f203872688fc1f674188d1c83fd6945800889d4a06b3168f0e51ed"
+    },
+    {
+      "path": "assets/dynamics-comparison.png",
+      "bytes": 374124,
+      "sha256": "0c71b60568c0a0a206918b08988275e71172474c413eb6e2d620cf84ac341f46"
+    },
+    {
+      "path": "assets/benchmark.png",
+      "bytes": 140135,
+      "sha256": "54fd5d78b035e407e788de54ebe038bf1263963d01ef759a93e51e8b0ae0e7b7"
+    },
+    {
+      "path": "assets/recorded-md.png",
+      "bytes": 382373,
+      "sha256": "96bca511cc64d74aea91c7bf5f06c47d86d021e224e2b6def5b58ea9c8660b83"
+    },
+    {
+      "path": "assets/benchmark-source.svg",
+      "bytes": 11173,
+      "sha256": "0e32f9914046bc8a0c48543ec2f23fba7f9d6e5bda264c5c6b9a0e3c5db6ae10"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2451,
+      "sha256": "376a4d829997f80033f78df335118fcce83f4d55838a8ce166c90dd48960b820"
+    },
+    {
+      "path": "docs/legacy-poc-notes.md",
+      "bytes": 10918,
+      "sha256": "62960a930bc0791a1027cd7ce0ef05c0fd9b8fce37908d9715522f3eb0703278"
+    },
+    {
+      "path": "docs/ember-work-log.md",
+      "bytes": 6535,
+      "sha256": "5ad2f849c7c160f099277858ed2b7e46e2693600890a035f6b78c16acaa5f959"
+    },
+    {
+      "path": "docs/ember-original-readme.md",
+      "bytes": 7233,
+      "sha256": "8c9849436ce5ca4fd7f16e084dbe03a61831fb85718a7ef6d21107a0205e9230"
+    },
+    {
+      "path": "tests/test_ensemble.py",
+      "bytes": 791,
+      "sha256": "4ac9d68fac5506b9a45cf881ce8bd85d85a785c014d79194611f67537822d195"
+    },
+    {
+      "path": "tests/test_cryptic.py",
+      "bytes": 2186,
+      "sha256": "681b496344c1ac72bbc15f95cb866bfc76da95f87afe1e5dbe0ee295298d4301"
+    },
+    {
+      "path": "tests/fixtures/sample_fpocket_info.txt",
+      "bytes": 1229,
+      "sha256": "336d683e53b27e8697a49c39fa1ed384e099cdee48051772d2c9cdd94d48a341"
+    },
+    {
+      "path": "tests/fixtures/sample_pocket1_atm.pdb",
+      "bytes": 462,
+      "sha256": "1cb3cff3cdba5cf5770f09ff573a025dd7cabcc6d02b29aea6b4cab475dd7b72"
+    },
+    {
+      "path": "tests/fixtures/tiny_protein.pdb",
+      "bytes": 117855,
+      "sha256": "6fbb3d5c324e717fe7284703426e74ea58191431720daab1b2faa0bbb6430f30"
+    },
+    {
+      "path": "tests/fixtures/ensemble_3frames.pdb",
+      "bytes": 544,
+      "sha256": "ed464f67922ae480b1cc2809e76aa00dc1052e18d87495e145b6b09af3a9a0ea"
+    },
+    {
+      "path": "tests/fixtures/sample_pocketminer.xlsx",
+      "bytes": 5072,
+      "sha256": "fed4d732586ce5845104fcb63b662629dcc9781f7dd6ecf17250482b9728b07e"
+    },
+    {
+      "path": "tests/test_cluster.py",
+      "bytes": 1930,
+      "sha256": "617828d299f55f1590f192d3891f1677ac87a7d839b7d25448f3f3ef34c6d036"
+    },
+    {
+      "path": "tests/test_benchmark.py",
+      "bytes": 4325,
+      "sha256": "d52206a098d6388dab6f680dcc09a5b51de59f4c5048f1e8655607553ada66e1"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 29,
+      "sha256": "48807b0a1c33030b642171678d582a80ffb59749419a178f124712e6504c95e4"
+    },
+    {
+      "path": "tests/test_pockets.py",
+      "bytes": 4036,
+      "sha256": "bea380a2b76a63d2cf39f42340aa67910908f5200c9a8188341cfe6789135e16"
+    },
+    {
+      "path": "tests/test_datasets.py",
+      "bytes": 2627,
+      "sha256": "93def0a694fdbef150a0f2192276c01f8ba9b02dbd53344866aee2282a12d9bd"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 130,
+      "sha256": "c0eda7e76467cf75264ab3764855b61991bcf8ec5b4f0a95b201851681909bce"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1457,
+      "sha256": "f45b5061d5eb556962749ac4cb5c13cd663197eb0415f530dce678099795e4a2"
+    },
+    {
+      "path": "plans/ember-pocket-implementation-and-compute-plan-2026-09-28.md",
+      "bytes": 27339,
+      "sha256": "c59c9cbf54ac543ff8b3004a6fc47b46aac7bcfb27683e5c947b7f2632de387a"
+    },
+    {
+      "path": "plans/senba-pocket-experiment-v0.json",
+      "bytes": 4312,
+      "sha256": "14f5cfa08619612621ccf5a4c62af0d04b555c0cbc971663f65545315019d00c"
+    },
+    {
+      "path": "plans/ember-pocket-master-build-plan-2026-09-24.md",
+      "bytes": 31840,
+      "sha256": "e15ef0fef89089db064bd11bac1bb40589900b6c198d4c17963681ec6aced500"
+    },
+    {
+      "path": "plans/senba-pocket-build-plan-2026-09-23.md",
+      "bytes": 32296,
+      "sha256": "f34185b61fc76e93c9b5a103b0f1884852c4b1bf7727ee6403cecafc4c921893"
+    },
+    {
+      "path": "plans/ember-pocket-v0-plan.json",
+      "bytes": 5103,
+      "sha256": "390a2b2898f8a3b4d1503a803e37699d34931d25a5d44b067050728fe725287d"
+    },
+    {
+      "path": "plans/ember-pocket-benchmark-protocol-2026-09-24.md",
+      "bytes": 19039,
+      "sha256": "f8f54b655e895d5d5e2a7a54627f5c4402ef7a7f26b77450b06a419c7cb3fffc"
+    },
+    {
+      "path": "studio/prepare_trajectory.py",
+      "bytes": 2494,
+      "sha256": "7fa8d0a757a9e28af98db140891909554f31a86339fcd093d1d89b5846c44dee"
+    },
+    {
+      "path": "studio/SOURCE-MAP.json",
+      "bytes": 3556,
+      "sha256": "5f248d5fee43b795b27244fea1a087593df212b0017885e808bf6d870941d3fc"
+    },
+    {
+      "path": "studio/start_saved_demo.py",
+      "bytes": 441,
+      "sha256": "fee0fca3e7e8a6ec3a7c6881782b0352282faf79a259a4440ed5d8277310796f"
+    },
+    {
+      "path": "studio/smoke-inference.cjs",
+      "bytes": 3687,
+      "sha256": "5303479c7d61c69f82729bca92b0ab8f797ec2408d2e5a6b1f8dc521b5dadd70"
+    },
+    {
+      "path": "studio/prepare_data.py",
+      "bytes": 2997,
+      "sha256": "b6ca56b921aa9249f3b7e81dc7eece45457b63174c941e674d2f6bd2a35b1378"
+    },
+    {
+      "path": "studio/static/app.js",
+      "bytes": 28485,
+      "sha256": "27287e5d3d02557608df4d452276862a7872cbb14a7c1ef32f01065bdce53f05"
+    },
+    {
+      "path": "studio/static/vendor/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "studio/static/style.css",
+      "bytes": 13017,
+      "sha256": "91bf8c03e116a6c67ce863cffd8d221069a7c2b03b0509930bd355c695cba3b1"
+    },
+    {
+      "path": "studio/static/vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "studio/static/vendor/THREE-LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "studio/start_demo.py",
+      "bytes": 466,
+      "sha256": "9fddec8760118d2995573095a40925727313bdb4f0f0a2fb0801598474109ca6"
+    },
+    {
+      "path": "studio/README.md",
+      "bytes": 1937,
+      "sha256": "80e23b766a3d814abea39a50503455b7ff9856e420e4b72795b308e2debcac24"
+    },
+    {
+      "path": "studio/static/index.html",
+      "bytes": 8416,
+      "sha256": "8cef91a2548b5216855d0877cc77b1fe76ef1569ed29a79a1550e8db34325755"
+    },
+    {
+      "path": "studio/server.py",
+      "bytes": 12308,
+      "sha256": "03a62d8907410fe7f221ebbe4118213c158d2e42f33ecdcbf34b780a323b0fb0"
+    },
+    {
+      "path": "studio/static/vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "studio/requirements.txt",
+      "bytes": 152,
+      "sha256": "38df9b3224057e390e3a17614887532a61541c6e914499be412e454cf1c04cdd"
+    },
+    {
+      "path": "studio/static/data/examples.json",
+      "bytes": 814131,
+      "sha256": "6046133a0e51970f5d4af804714f8c58c24ec1efe1ced09cc139d1f41e67c655"
+    },
+    {
+      "path": "source-original/README.md",
+      "bytes": 557,
+      "sha256": "168a7667742cf42fdd16478fdad438c141ee6e5fc5c6ff0c14129ff19ad254fc"
+    },
+    {
+      "path": "source-original/dynamics/cryptic.py",
+      "bytes": 2443,
+      "sha256": "52a63a9444c1a5b1abda8b76aecc05e1148a02437c7824ecefc33a5bec45797d"
+    },
+    {
+      "path": "source-original/dynamics/senba-pocket-experiment-v0.json",
+      "bytes": 4312,
+      "sha256": "14f5cfa08619612621ccf5a4c62af0d04b555c0cbc971663f65545315019d00c"
+    },
+    {
+      "path": "studio/runtime/results/08e1f9a791684a00bf906e25edabdd0d.json",
+      "bytes": 87977,
+      "sha256": "abe22a510997ded83223004bf462a4ff8a352369dce75a86de8c5340fc8ad2f9"
+    },
+    {
+      "path": "studio/runtime/results/0c092b5ab313496b949b38d73c6cddad.json",
+      "bytes": 87977,
+      "sha256": "a85214d4f3cfff50253dc1536a54fbd7daedbcda1ed56da56499c9f2a4b3aa63"
+    },
+    {
+      "path": "studio/runtime/results/415eb4e301ae4148bb3bac1f34bea554.json",
+      "bytes": 87977,
+      "sha256": "7bd222aae099f2586246c0f34c33e2e3b1ed1cb8730cec9d36c28a6640f573ca"
+    },
+    {
+      "path": "source-original/dynamics/ember/schema.py",
+      "bytes": 12241,
+      "sha256": "ab5999cd97a5da86dac54c3a85e2fa1a05da7311864bd4eef59f3f353a4fc08e"
+    },
+    {
+      "path": "source-original/dynamics/ember/WORK_LOG.md",
+      "bytes": 6535,
+      "sha256": "5ad2f849c7c160f099277858ed2b7e46e2693600890a035f6b78c16acaa5f959"
+    },
+    {
+      "path": "source-original/dynamics/ember/data.py",
+      "bytes": 6606,
+      "sha256": "8f9100b3cba83a9dd4b2d8accb1405b00320f7933661fbcbdfa6c347d4f03074"
+    },
+    {
+      "path": "source-original/dynamics/ember/report.py",
+      "bytes": 3769,
+      "sha256": "03a71bdbee0d81c99b722db9807428f87d8f8af8c55120d18a734f1404fc500c"
+    },
+    {
+      "path": "source-original/dynamics/ember/__main__.py",
+      "bytes": 9030,
+      "sha256": "1708fedddaf56967d875d88eeece99fdfd1b6f238c458ab8d4fa48d6228eeef0"
+    },
+    {
+      "path": "source-original/dynamics/ember/quality.py",
+      "bytes": 4579,
+      "sha256": "4c582598720e29575bc6d483d97b805cb5b90a6d59ec5f8611533ff00496552b"
+    },
+    {
+      "path": "source-original/dynamics/ember/mapping.py",
+      "bytes": 14229,
+      "sha256": "4cd8486858abb35c635f14add484fabec869c782d948083ed9a374a69b8cb48a"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_ensemble.py",
+      "bytes": 789,
+      "sha256": "51cd7a3bc1ca693734fbed3edd9575640c6ab72dd5eda56e513ae28f4fed4770"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_cryptic.py",
+      "bytes": 2180,
+      "sha256": "baba0466a85e7ed5973de7c8220daed0be497bb90f3e92b9e165bad6e814910b"
+    },
+    {
+      "path": "source-original/dynamics/ember/baselines/lacuna.py",
+      "bytes": 5113,
+      "sha256": "9d259c28015daec311400ecf8f181b22dd145930b04b9e59d8f065912106eddc"
+    },
+    {
+      "path": "source-original/dynamics/ember/baselines/p2rank.py",
+      "bytes": 2728,
+      "sha256": "cc0bd29de82d0a60d48df11f1ba18ead3bc5bdac504a1bedc11054bfdb82b681"
+    },
+    {
+      "path": "source-original/dynamics/ember/baselines/native.py",
+      "bytes": 2404,
+      "sha256": "0399f9719a122ad3d215c59de5de62fe21e230843ab2473ae728793a5978be92"
+    },
+    {
+      "path": "source-original/dynamics/ember/baselines/__init__.py",
+      "bytes": 71,
+      "sha256": "f126714c2c8a6b8c9bb327c06364f1b85e0977f25c668490dc2d42752e725cb6"
+    },
+    {
+      "path": "source-original/dynamics/ember/baselines/fpocket.py",
+      "bytes": 5815,
+      "sha256": "dbc4bf10d8f1069feaefa1a92b2b7d14b86568940cbde8352801d23df1c9d0af"
+    },
+    {
+      "path": "source-original/dynamics/ember/verify_local.py",
+      "bytes": 2402,
+      "sha256": "f1b8afbf4655f5f0d3b246648af0f5bee1388a4de196207f993cc07cf45c3c1e"
+    },
+    {
+      "path": "source-original/dynamics/ember/candidates.py",
+      "bytes": 5391,
+      "sha256": "7c51ed7246d8af2c6ff75eb8724becbce79c37f34d1e2182a428f6a59fc107c7"
+    },
+    {
+      "path": "source-original/dynamics/ember/workflow.py",
+      "bytes": 13338,
+      "sha256": "f7910b6f4ae5f5aa8d627e314df32b1e00a4c524552ca8440f62aa296f0d55ca"
+    },
+    {
+      "path": "source-original/dynamics/ember/evaluate.py",
+      "bytes": 11953,
+      "sha256": "548b87f792a50e3b479ef226f03c38617aabdf054f9d0f3d73cc9ede70190766"
+    },
+    {
+      "path": "source-original/dynamics/ember/splits.py",
+      "bytes": 9848,
+      "sha256": "1800c79ef15c7ae37a58a537815480843921164d71afb4756bde201e015cb677"
+    },
+    {
+      "path": "source-original/dynamics/ember/train.py",
+      "bytes": 20233,
+      "sha256": "d41d13c13c8b11755cc1dd55acf89fd62cefbb107dfb250746b9e9a7c11901c9"
+    },
+    {
+      "path": "source-original/dynamics/ember/sampling.py",
+      "bytes": 6026,
+      "sha256": "f646f0199e5f2d26ff7b16b0572a1dc4903a29bebdbd61c31411c6195cefc434"
+    },
+    {
+      "path": "source-original/dynamics/ember/geometry.py",
+      "bytes": 8038,
+      "sha256": "0a9e9a9dfa54e26121883a6980bf85ad5239e20a4cc4b24fbb0f222973b14bda"
+    },
+    {
+      "path": "source-original/dynamics/tests/fixtures/sample_fpocket_info.txt",
+      "bytes": 1229,
+      "sha256": "336d683e53b27e8697a49c39fa1ed384e099cdee48051772d2c9cdd94d48a341"
+    },
+    {
+      "path": "source-original/dynamics/tests/fixtures/sample_pocketminer.xlsx",
+      "bytes": 5072,
+      "sha256": "fed4d732586ce5845104fcb63b662629dcc9781f7dd6ecf17250482b9728b07e"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_cluster.py",
+      "bytes": 1926,
+      "sha256": "a0abbba4566f3b2a30bd4d16694e10a6965313a4a8b0f211455719ea8976986f"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_benchmark.py",
+      "bytes": 4317,
+      "sha256": "00010f05dfbc618dd409fd36053371af342666fe9125814a3f7d7aecb435947b"
+    },
+    {
+      "path": "source-original/dynamics/tests/__init__.py",
+      "bytes": 29,
+      "sha256": "48807b0a1c33030b642171678d582a80ffb59749419a178f124712e6504c95e4"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_pockets.py",
+      "bytes": 4043,
+      "sha256": "b565a5c48bd7e6d147921873a1d1e0d96d470987be3f0478f54b400d14a86017"
+    },
+    {
+      "path": "source-original/dynamics/tests/test_datasets.py",
+      "bytes": 2634,
+      "sha256": "f1108ea88dc5f1bc85a221f79119e357d70c949fb28be6ed8b044adb6ce940b2"
+    },
+    {
+      "path": "source-original/dynamics/tests/conftest.py",
+      "bytes": 130,
+      "sha256": "c0eda7e76467cf75264ab3764855b61991bcf8ec5b4f0a95b201851681909bce"
+    },
+    {
+      "path": "source-original/dynamics/ember-pocket-v0-plan.json",
+      "bytes": 5103,
+      "sha256": "390a2b2898f8a3b4d1503a803e37699d34931d25a5d44b067050728fe725287d"
+    },
+    {
+      "path": "source-original/dynamics/Dockerfile",
+      "bytes": 3738,
+      "sha256": "b0712da52a41d21c74964a8e7d81e400cb3d9165a55d395b2ff5622d1f782695"
+    },
+    {
+      "path": "source-original/dynamics/run_target.py",
+      "bytes": 2888,
+      "sha256": "49a360037c219dc7dbc4ae7d9041dd4aa450856b23241bbf908aeb9b410033ad"
+    },
+    {
+      "path": "source-original/dynamics/requirements.txt",
+      "bytes": 125,
+      "sha256": "94f01f6fc48a3467e3318e9ca66c73df30c350179edefb539a871cfd3e935b96"
+    },
+    {
+      "path": "source-original/dynamics/benchmark.py",
+      "bytes": 1261,
+      "sha256": "a216b751a30339709799444bf1a115d28c12093ae4ef0e1d1cd7836e7cd60f04"
+    },
+    {
+      "path": "source-original/dynamics/aggregate.py",
+      "bytes": 2921,
+      "sha256": "a80d4c9e46e892ee87f84f847b00fe0487ebf04df39880a5565e6111d091e778"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/1d1rA00.npz",
+      "bytes": 150221,
+      "sha256": "0bc6c06b50b6f1120eeb83191f211633b493cbf86c3f3dae24b8e8341567c69c"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/1q16B03.npz",
+      "bytes": 144126,
+      "sha256": "74385f86bc41f6cfc66db9ede153e8140fd256e381584dfa7a88c2bd5650f788"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/1e7uA04.npz",
+      "bytes": 301494,
+      "sha256": "af6b09f5814a45c9244d4c4cfa817864b65b2953075253bcc4b6f50a59509ed0"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/2k4qA00.npz",
+      "bytes": 287714,
+      "sha256": "0dd0226c4f5a529770961937f48a6bb9740896e98d5082ebabcb38ef5f89a4a6"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/2dp9A01.npz",
+      "bytes": 197605,
+      "sha256": "bed68fdb00755b13e624cbc57eb53716299472abef31a520bc3130912a07133f"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/1rquA01.npz",
+      "bytes": 92795,
+      "sha256": "27268d20e75e0d7ef9742bacd4a6b03ba2113d51275875f2d6b9147ade89343a"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/2f2cA02.npz",
+      "bytes": 199894,
+      "sha256": "60279746e35dfd12fe861673fd93b8e570d19eb170588e5f01990a35b82bac3d"
+    },
+    {
+      "path": "source-original/senba-sprint/inputs/5k2mA01.npz",
+      "bytes": 187405,
+      "sha256": "4f41f729ef347e6f084361abbf33e63c7a8977eb66dd9d82032370220b75d628"
+    },
+    {
+      "path": "source-original/senba-sprint/FROZEN_EVALUATION_PROTOCOL.md",
+      "bytes": 6469,
+      "sha256": "924686f766ff5c6906d0b6dbf637a00e13dce1c3d9c8b2072fefb3cbe018d0eb"
+    },
+    {
+      "path": "source-original/senba-sprint/K4_AUDIT.md",
+      "bytes": 10473,
+      "sha256": "c5d0c76933db5375b461f2fc59086f175ad08fb081d504dc50f6101ffa8bbfb7"
+    },
+    {
+      "path": "source-original/senba-sprint/SCIENTIFIC_REVIEW.md",
+      "bytes": 6393,
+      "sha256": "639998c44ee9a58359a0c783a1d43de9bbbf40f48b386aed1caf7fb5af678b8e"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/linear-probe.json",
+      "bytes": 327,
+      "sha256": "25a54ba149f73846d255b9cbecbe59327f9965b533aac55378771f5b51a26835"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/s0-linear.json",
+      "bytes": 324,
+      "sha256": "7b91f9e511012a0d94cb72dc6c29e5fc99c3618ed5dd849df715097a90450f9a"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/e0-mlp.json",
+      "bytes": 325,
+      "sha256": "c87b3c0d63c7b88dd556c5d6e86affa0a614cc5a543f9aaacea86c2936de9a49"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/README.md",
+      "bytes": 1097,
+      "sha256": "b3142389954ef4c228868bab9d01af7248a561716780024714c9f3d760fe523d"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/s0-mlp.json",
+      "bytes": 321,
+      "sha256": "bc4ef858bd415f81f7b457e74382991cd5f695be80fb91271bf0e5cf8830c9e1"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/e0-no-support-counts.json",
+      "bytes": 342,
+      "sha256": "e356ef32fe0e708e08b15a0ca5ee90b8e65c5c3e33e1beacd8a8e1c9015d8ddb"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/e0-linear.json",
+      "bytes": 328,
+      "sha256": "f45099399f5ff16066ae24e63231a8557db7601e6b57c124eb4e35ff0f472830"
+    },
+    {
+      "path": "source-original/dynamics/ember/configs/r0.json",
+      "bytes": 324,
+      "sha256": "c91658869040faac349402ccc6394f471b5379ea9451d20b6ca5d380ae36d010"
+    },
+    {
+      "path": "source-original/dynamics/ember/ruff.toml",
+      "bytes": 112,
+      "sha256": "7f4c29a9c84093d889bf8debb0171f83734ca9f828c514419cff4eb438e16a42"
+    },
+    {
+      "path": "source-original/dynamics/ember/pipeline.py",
+      "bytes": 3977,
+      "sha256": "2a975f4020c04e3585695ee539c4c0bd00601e8ee54f6506126cb6594e548743"
+    },
+    {
+      "path": "source-original/dynamics/ember/supervision.py",
+      "bytes": 3024,
+      "sha256": "eb3d623dfebec2bfd705c1d2d22a5fcdbcab16b42c0f8054f6b6f85500f863e7"
+    },
+    {
+      "path": "source-original/dynamics/ember/embeddings.py",
+      "bytes": 7020,
+      "sha256": "2945451d9dd7d17e3e4f9edbb5694961f3416d2c443d72fb3bdfdb767b314324"
+    },
+    {
+      "path": "source-original/dynamics/ember/release_contract.py",
+      "bytes": 1587,
+      "sha256": "685b16ad773a6895948cc3b79f9ac640ba13fbe62080178c09bb49754d577c87"
+    },
+    {
+      "path": "source-original/dynamics/ember/README.md",
+      "bytes": 7224,
+      "sha256": "b98d2ca8e43076a4e8137ce3e9c4f2259fe91c7e2af11eff0e79d7d0c41df6a3"
+    },
+    {
+      "path": "source-original/dynamics/ember/export.py",
+      "bytes": 2186,
+      "sha256": "ff039d16e0316b987081255a9698aedb843ea60767941be49997211d52ef7caf"
+    },
+    {
+      "path": "source-original/dynamics/ember/features.py",
+      "bytes": 10942,
+      "sha256": "e9ae795370aabf5ac305a59f6986216f5b59e4e26a476cf7d418d17381f0f9a4"
+    },
+    {
+      "path": "source-original/dynamics/ember/__init__.py",
+      "bytes": 265,
+      "sha256": "b34576bd9ea5cb594e91d7a28efdc4b035a3de4967b85e98df111c42b18198ef"
+    },
+    {
+      "path": "source-original/dynamics/ember/predict.py",
+      "bytes": 13197,
+      "sha256": "a033f608d6f6124e5070c53b61e23f98f9191867c44490ce0aa2081bebe0ae45"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/settle_panel.py",
+      "bytes": 3586,
+      "sha256": "2767b42dcf2880ec9156f2d22b0191c267bd22d84f64d1410ea31ae4c49e8947"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/data.py",
+      "bytes": 7960,
+      "sha256": "df217427116205a22f4a2105d6bf1aff4520421b7a0f1fce95f00d7ddebf0c81"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/report.py",
+      "bytes": 10505,
+      "sha256": "8e6fbddb3e524be2f95028b5f52d650e7f0e46886ef362584a57c6d868837165"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/__main__.py",
+      "bytes": 4749,
+      "sha256": "aa18bac5e143639ddee73b8f2991c19161b39c16e02f9f949380293bf65538fa"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/inference.py",
+      "bytes": 13926,
+      "sha256": "4533c5e34228574e52a0167f086edc2c06747b5045ecb6cff42efa1665b7f382"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/__init__.py",
+      "bytes": 88,
+      "sha256": "84d3454bc963200030c03902524603d290a335b8906b8390d60795fbc6e445c2"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/augmentation.py",
+      "bytes": 10761,
+      "sha256": "f729985c6714ad63a1a886bea760b872d6ce0670e6c3dea5fbcf9d67c9d80375"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/cloud.py",
+      "bytes": 9178,
+      "sha256": "04c6ac131d3f7f54516ae6475f06556c7d2801d34ae6f2b8e73534e058c72217"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/audit.py",
+      "bytes": 9591,
+      "sha256": "20b749b8612784bf06daeeced985af03ad1d6387006014f7735eb3ee9560c784"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/release.py",
+      "bytes": 11994,
+      "sha256": "41f03ba00afea96bd45b43838f0c970dba3f4d571a444186910f490a3db600ac"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/runner.py",
+      "bytes": 18636,
+      "sha256": "b0073e4ab8ade81d79d62105fc3652ec17fe726d8d575b3307c713fc30b1f2dc"
+    },
+    {
+      "path": "source-original/senba-sprint/senba_sprint/metrics.py",
+      "bytes": 15264,
+      "sha256": "e738dfb13ed037d30bd8b4622a8b08ad9f9d89983513713348b20c57247dd1f1"
+    },
+    {
+      "path": "source-original/senba-sprint/README.md",
+      "bytes": 8211,
+      "sha256": "146084bc50798c8658c1139ab827d8b95a3add7d38f9a3b133d8ff9761f7bdb7"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/build_figures.py",
+      "bytes": 4766,
+      "sha256": "c387782cbb86bda08cf24d0b355828dee90f7b0292866a90d91923e4d8f24189"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/neurips_2026.sty",
+      "bytes": 13677,
+      "sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_quality.py",
+      "bytes": 1902,
+      "sha256": "427d4a61d481e1efa50caffd629c7f8cc4dab5260cd0cb18e3360428eca3d14c"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_checkpoint_store.py",
+      "bytes": 1864,
+      "sha256": "3e6d7611cb77e4e3105cfe8c5de1f7a82132c60af55280a3278ea5f7f4fdbc58"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_prepared_cli.py",
+      "bytes": 4913,
+      "sha256": "79379c0f5333568f1a363072d3dd7b2b490bb91909547f68e894865481d73743"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_data_splits_budget.py",
+      "bytes": 6157,
+      "sha256": "2342783ac16e457bf44c139e26c4c5c7c06a0f6882b6183ea6481188b95ab99f"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/__init__.py",
+      "bytes": 73,
+      "sha256": "74197122f22aeda33005ce4127cec5012d5c7b27549f9847e688cee37e329884"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_features_cache.py",
+      "bytes": 5865,
+      "sha256": "e2293cd8b8d9a7554aec58e34fba43430b199f25e1e7e111a2386a78a27f4ffd"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_release_contract.py",
+      "bytes": 1818,
+      "sha256": "09963addfe6220292d2f69e62db66cf783a345caf3b36deed9119f28527b2713"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_fpocket.py",
+      "bytes": 2896,
+      "sha256": "a06ff6bd1675fcf67d821fedebe508ab1f54d8c93bf8cbb27e072987e74cd016"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_lacuna.py",
+      "bytes": 1612,
+      "sha256": "e8cf88b19f786c856b0db31a039373a4b742ac70a6ebe612865461942325474a"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_mapping_geometry.py",
+      "bytes": 6621,
+      "sha256": "20ef9b1faa5c2dc79f84fccfd8281876d6abf92333b13da041889f7ef5372e03"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_pipeline_integration.py",
+      "bytes": 4013,
+      "sha256": "1991b6ae108356bdd664161bb42c86e53492ce91a1d2004704921cb606a3d2cf"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_scientific_audit.py",
+      "bytes": 4459,
+      "sha256": "3285fe8351bb81b7241e041043e9f512d96508c87f3992cd49e9a74c3a1c0359"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_contracts.py",
+      "bytes": 8400,
+      "sha256": "74fdd5c349d45a7024dda2b419d2ebeec37a512813845d02f978b08ae864be8e"
+    },
+    {
+      "path": "source-original/dynamics/ember/tests/test_p2rank.py",
+      "bytes": 1117,
+      "sha256": "a5d4d42dbc69aac09daf52397ef426ce033b0267f4b7bac628ac6ae04665180b"
+    },
+    {
+      "path": "source-original/dynamics/ember/io.py",
+      "bytes": 3243,
+      "sha256": "52fc3a83d860b925453d886308b25d22c553e17bed71968a47b1e9f5bc971773"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/figures/plotted_values.json",
+      "bytes": 3505,
+      "sha256": "ec96bb5b778d4e07dee9ed7b76bd9111221c1793cbe87a2b93b7a4577654e091"
+    },
+    {
+      "path": "source-original/dynamics/ember/model_checks/run_checks.py",
+      "bytes": 5027,
+      "sha256": "66ea0a554540b68ce7f422f1905849919125c8d9e43edd9dd466cdc6e818025a"
+    },
+    {
+      "path": "source-original/dynamics/ember/budget.py",
+      "bytes": 7376,
+      "sha256": "3291ca7abff40f4c710f4adbc901d279327f92df1e97dfdc83a851c074f48195"
+    },
+    {
+      "path": "source-original/dynamics/ember/prepared.py",
+      "bytes": 6263,
+      "sha256": "9ac0ae20930c4540f160ffc1262c8686c3a6759c21f25aa71bbd980ec39f2775"
+    },
+    {
+      "path": "source-original/dynamics/ember/requirements-model.in",
+      "bytes": 331,
+      "sha256": "a86b426766a74c8675fde1e57c59b4232bced662ed9326e508824c1156be643f"
+    },
+    {
+      "path": "source-original/dynamics/ember/models.py",
+      "bytes": 4568,
+      "sha256": "0ac5da48d2b24a1646b4726e8797a6cc49014491c0da80845c07a99b95d13686"
+    },
+    {
+      "path": "source-original/dynamics/ember/execution.py",
+      "bytes": 603,
+      "sha256": "b127b383fea556cfd6b05b2e498fdddecc32c7ffa66a1b37803c65fad2cdcb1b"
+    },
+    {
+      "path": "source-original/dynamics/ember/requirements-local.txt",
+      "bytes": 180,
+      "sha256": "bc1fb42783bbe7ced4188f26362f0e2a447de60af5534ec4bcc7028fa776331c"
+    },
+    {
+      "path": "source-original/dynamics/ember/ingest.py",
+      "bytes": 6152,
+      "sha256": "13b1ad04c8c4d5778e486d91be0f7925a12e739282136c14d8a3df1128d44c9e"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_cli.py",
+      "bytes": 2082,
+      "sha256": "fdfcf09e1270262b87139eaf2505635f9f29c6251d526f3ee6cf5fdec167473f"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_data.py",
+      "bytes": 976,
+      "sha256": "d9eabb45f354028c368cf2a4ddcebb6d4b81257c31ece7bcf2617ed34a2ff340"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_audit.py",
+      "bytes": 5240,
+      "sha256": "daf0ca66b8961d21fc0005ea4bf4e0c09bd4f63303f928b1bdc5dd4d3b85f9fe"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_runner.py",
+      "bytes": 7615,
+      "sha256": "441f7a1a0ec5272c41ccd0687c9c3dda678069f4bd98c24e2c61117ed7697014"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_augmentation.py",
+      "bytes": 4076,
+      "sha256": "cf1a2dbbac0771d57f4d0c6d0a9c5dd52ad33633ed4fca7a514b6cdd582b8c24"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_report.py",
+      "bytes": 3299,
+      "sha256": "da451214ccd0a7187017633b5186762a78303c11fac1043191d96d86bd124b97"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_metrics.py",
+      "bytes": 7570,
+      "sha256": "b4d245f29591340d8b1fed9252124168e847ee74331547ef55109fef187d5f17"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_inference.py",
+      "bytes": 6419,
+      "sha256": "a57c7c4af17f0a7e5e9aedb287d217adf4774d27fbd035cf84583196314ffcdf"
+    },
+    {
+      "path": "source-original/senba-sprint/tests/test_release.py",
+      "bytes": 7804,
+      "sha256": "9c04011008cc50a3f98747433d658eff2b0ecb85e1e4c0e80547166aff376f7b"
+    },
+    {
+      "path": "source-original/senba-sprint/STATUS.md",
+      "bytes": 8350,
+      "sha256": "3c43c750d3c2afd10e8c6f2f63e116ab478585b92e92ac867555021cb7610f66"
+    },
+    {
+      "path": "source-original/senba-sprint/pyproject.toml",
+      "bytes": 399,
+      "sha256": "6a57c664e9f203872688fc1f674188d1c83fd6945800889d4a06b3168f0e51ed"
+    },
+    {
+      "path": "source-original/senba-sprint/SAMPLING_AUDIT.md",
+      "bytes": 3688,
+      "sha256": "35dcd58a401ed14c92232456058b25793ba38aeb82021580db757300c39e8a68"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/context/CURRENT_PAPER.txt",
+      "bytes": 32973,
+      "sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/context/CFP.md",
+      "bytes": 1731,
+      "sha256": "bbd3fff2e1e07ea8c326e8a86eb16bd43ebf0ed22d09b6a1947c1fce2eda8f8d"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/context/NEW_RESULTS.txt",
+      "bytes": 18277,
+      "sha256": "90682849b94249f72494403fe526b2e70df406c29f54282afcb99fb07bc0105f"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/context/FINAL_PAPER.txt",
+      "bytes": 54555,
+      "sha256": "c9c4c223f262784791b0c2fa943f67a0d179cb22dd3fa446db472b00a9a40e3a"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/preflight.json",
+      "bytes": 647,
+      "sha256": "181e8af35ea959cd1e0e9890c2a41a0adeb9bd28c8002f36c483bb2c9f8be46b"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/research-inventory.json",
+      "bytes": 8333,
+      "sha256": "7aacc881cb2274b60d04664bbf828081e3bfd67f259f1e04b76bc062ec65b65d"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/local-verification.json",
+      "bytes": 15153,
+      "sha256": "f9f045a043ad5ec308b222645348c84646fd9576408e7f7dbc742dde023e236d"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/README.md",
+      "bytes": 1959,
+      "sha256": "d0f5f13c760c7e2142e35159fb8c36f9b48966996e8826e2bb647af8a3dca43b"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/file-inventory.json",
+      "bytes": 18798,
+      "sha256": "b03eee5bb908fad2fe02629284c220da3c4cd97fe1dcff9905f96a4323add318"
+    },
+    {
+      "path": "source-original/dynamics/ember/artifacts/experiment-plan.json",
+      "bytes": 3110,
+      "sha256": "115983368aee824db1168c2fc3d367e2639e16adb1a4da2b4dc0a1f948d45085"
+    },
+    {
+      "path": "source-original/dynamics/ember/plan.py",
+      "bytes": 7053,
+      "sha256": "202a62e69816a316e8c178193b44cd80c0affc534531f54e3c80de6b8692040b"
+    },
+    {
+      "path": "source-original/dynamics/ember/checkpoint_store.py",
+      "bytes": 3565,
+      "sha256": "c4cc98020ef37d837389190e0cd5a75d752a0927cfb16827f3013e4fe9733c66"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/main.log",
+      "bytes": 18349,
+      "sha256": "a201ae6f132623e47599f8388c9c3b13ee81468b3e4a9411dbd3c12bb9f4b746"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/main_ORIGINAL_BACKUP.tex",
+      "bytes": 32562,
+      "sha256": "fb7bbe6e8e14630684493ac63a4eb0f2be8cd6bf8225296d1e556af96a30a437"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/neurips_2026.sty",
+      "bytes": 13677,
+      "sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/reconstruction/main.log",
+      "bytes": 17708,
+      "sha256": "72812aaafc33be6b6728a8520879efcbc514259312e67d0e3115020f6980a190"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/reconstruction/neurips_2026.sty",
+      "bytes": 13677,
+      "sha256": "83b89e0540708d9a3d0fb1f1ee78dc1d2b6206651efe5bf1c8c4769bef625db9"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/reconstruction/main.tex",
+      "bytes": 32562,
+      "sha256": "fb7bbe6e8e14630684493ac63a4eb0f2be8cd6bf8225296d1e556af96a30a437"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/main_prev.tex",
+      "bytes": 46227,
+      "sha256": "0c297a4d70f60f7d60c8c453512fe48a2e2f5a9eea0dbb45188ffab2c1618f74"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/main.tex",
+      "bytes": 47922,
+      "sha256": "93696b6c02b3ab5f62d71d7377acb4da12d45d8af44eceacf6212b3a61730490"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/orig.txt",
+      "bytes": 32973,
+      "sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/checklist_filled.tex",
+      "bytes": 3352,
+      "sha256": "d337f34ae16cdf1f6c89dce88e67ad9bb0f8129a01e03e56d04d7ab7f101ecfd"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/main_before_takeaway.tex",
+      "bytes": 47717,
+      "sha256": "1571490d3e83c953d9aca16e78f6d55a4baa87e222031b078d133396554087ce"
+    },
+    {
+      "path": "source-original/senba-sprint/paper-revision/tex/out.txt",
+      "bytes": 32973,
+      "sha256": "f114e84f63f0b5d2c91b0c9d0643906d6017cfa373966088faf53323d13fb95c"
+    },
+    {
+      "path": "source-original/senba-sprint/RESULTS_SUMMARY.md",
+      "bytes": 8140,
+      "sha256": "8463c9d3129a3cab2d25b54c6336e41dc7cb5826fce400ce5d0222b8df9827bf"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/fpocket-tests_reference_output_1ATP_out_1ATP_info.txt",
+      "bytes": 11182,
+      "sha256": "6c24ab65a78c71ca2edb9acfa01cd9340e5e00c5244ead26f24bfa0c5785ebe3"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/bioemu-src_bioemu_sidechain_relax.py",
+      "bytes": 11159,
+      "sha256": "9001b5bf46f6e0edad0ef39eabbc8859a4e5fa9c1878c5ec8544292df7e88591"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/fpocket-tests_reference_output_1ATP_out_pockets_pocket1_vert.pqr",
+      "bytes": 8788,
+      "sha256": "cb5d311e3c0cb93b07bab24bd703d87da1e2331605510dbd3d075f04cc8ade58"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/fpocket-src_writepocket.c",
+      "bytes": 27858,
+      "sha256": "b90d882f86d65f7c36fe9ff7ba1360f0f1dc5d5546e278e274dadff0160b2ebf"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/seq2pocket-tree.json",
+      "bytes": 28405,
+      "sha256": "a90236610adc8229a50ebc2adec850748cdcbdb6a0e49cf4a6613fdece8f6607"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k8-v1/analysis.json",
+      "bytes": 612379,
+      "sha256": "1bd3e2abaedad8f8f7468ac6dbc94ec9faf510ac5d4794526337b654772b2b76"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k8-v1/results.md",
+      "bytes": 1351,
+      "sha256": "19375c3f09de7960c881874e359ef6bf28ed13f14acf237322eb570ad4347a0e"
+    },
+    {
+      "path": "source-original/senba-sprint/configs/sprint.json",
+      "bytes": 4282,
+      "sha256": "96e2110695f8b13cc9bb818ac2b899805bb516262b37b75721cbcb023dbd668b"
+    },
+    {
+      "path": "source-original/senba-sprint/.gitignore",
+      "bytes": 68,
+      "sha256": "6de174e32217f183a608e9f55d10f3dc4c4ccd6433cacc4bd29976f4f164ae97"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/bioemu-README.md",
+      "bytes": 12745,
+      "sha256": "70c92153c76707ac23f6d1d935c5b840fc95084125080ee3d1e64c4d65682646"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobank-archive.json",
+      "bytes": 6679,
+      "sha256": "0395961b5e31cebfaabed112a411a9f5e21d4ed5da3be27b64dfe841ffe76e9d"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-lacuna_cli.py",
+      "bytes": 22418,
+      "sha256": "e47e12d03b8e8cf51ec451101a8aa37c3ee81680d3b97068838f749285447f1e"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/bioemu-tree.json",
+      "bytes": 54488,
+      "sha256": "7052c2be9333502e67ca554a8758023eaabb8db2b7fa2608846afdc7e9ee058f"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-src_I-final_dataset-overview.md",
+      "bytes": 2971,
+      "sha256": "a6448854a33bdcfea9326c6ed092951f4c579e2b161638f845189d824e7476de"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-tree.json",
+      "bytes": 26550,
+      "sha256": "aaf1ce063b3fa88e1712f66a7a6c70717d804368e79af5a33bf1c1e05b79ef16"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-src_I-final_benchmark-example.py",
+      "bytes": 2695,
+      "sha256": "e013d40ef548dcf0f45afd82550770a56cc16373c641c1b72c58d5537c27262d"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/p2rank-LICENSE.txt",
+      "bytes": 1145,
+      "sha256": "c63014a403b53ff17ee1056f9c4bf49879fb1fbda08c3a4e52cac3a3d38ce675"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-lacuna_ensemble_nma_backend.py",
+      "bytes": 7797,
+      "sha256": "ed51c013be831e513021092d3a97659d281c9615e96d6abaf0bf2f7b331e8d5b"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBank-tree.json",
+      "bytes": 5482,
+      "sha256": "3f304ef9dac754e24e13697a3c0834edd0c02999b73dc0005d674cee6950680b"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/sources.json",
+      "bytes": 6776,
+      "sha256": "476eba437ef04cb53a0c120271d0bcd97b3c341ecf7e6effdb33298b286297d3"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/p2rank-README.md",
+      "bytes": 14547,
+      "sha256": "b2e2ee1df8fcb779b34565a4625c8c150bed4253e0d97918c7049e2dc9af71b2"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-tree.json",
+      "bytes": 92611,
+      "sha256": "48068d1f38dfbb1553a0d1ad2c7b6b1d726949042b9a7c5ce895ac54b801fbc1"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-release-inventory.json",
+      "bytes": 14595,
+      "sha256": "f323fb542aa804deb9f991593d6deebeec97a40905a2e23dc36ae98c5660c202"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-src_I-final_Protein.py",
+      "bytes": 2212,
+      "sha256": "0e21212f2918cb5a0cc912f0f61d800285138a30db779f79d991b39e56f81b2e"
+    },
+    {
+      "path": "source-original/dynamics/ensemble.py",
+      "bytes": 4838,
+      "sha256": "7cdea6478fdaa0fbbe48c491aa4014a912d179d7efe3aa0c7285c7b2017dfd82"
+    },
+    {
+      "path": "source-original/dynamics/cluster.py",
+      "bytes": 2431,
+      "sha256": "b02dec34e0703eb3828221444eaad0a69b443218229fc7a58aa5600679ea8b3b"
+    },
+    {
+      "path": "source-original/dynamics/README.md",
+      "bytes": 10967,
+      "sha256": "793fa02ef65ead6216a864b34c3723d050ba5a1db01038791fb7732760d2c4e4"
+    },
+    {
+      "path": "source-original/dynamics/pockets.py",
+      "bytes": 5449,
+      "sha256": "0d6053c30239d571ea62193dec405488bb9227597082c2b8bfd4d4d0589697ec"
+    },
+    {
+      "path": "source-original/dynamics/__init__.py",
+      "bytes": 32,
+      "sha256": "e8773a343586c158afdecfa6ed4f280e234b57a2379bcd02882a9aecbfd4e9e4"
+    },
+    {
+      "path": "source-original/dynamics/datasets.py",
+      "bytes": 4543,
+      "sha256": "c80952f7cfda09ec92df08a4487e7d5a08b59f3e180edf1ea569c52ad973107f"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-paper_figures_software_kras_A_pocket_report.json",
+      "bytes": 5740,
+      "sha256": "9c40aff6efd3b00348f55fe1758dad587ed36e1c99b2cf994f16bc00216f41e0"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/osf-storage.json",
+      "bytes": 957,
+      "sha256": "cb3af1266cd98166b0517ddfb0795a5a793bd468650f4d16e2bb44743ef5095a"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/README.md",
+      "bytes": 5795,
+      "sha256": "33bcc7d3590e7db17272d22091a2c60c81d485d51633c256b74f84f922c35366"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/seq2pocket-README.md",
+      "bytes": 5492,
+      "sha256": "1b42eaa7d3e92b7289c0dbeaea5d14a5d54427b8c4345c6c8726708604c78b2c"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/bioemu-src_bioemu_sample.py",
+      "bytes": 13662,
+      "sha256": "3c39332563eafd7bdb709290f7d7974e0e0a14daa05f3c08fe9c71ded51f5775"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBank-README.md",
+      "bytes": 6490,
+      "sha256": "a5141e6525c3fcbb1cb663c0ebca0b4889bed7f5b315bf52c136f8d957b61159"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-README.md",
+      "bytes": 9593,
+      "sha256": "b34723a496c8d33baca622b8cf8467175f0c7d1e98337ef34823eb4af0729585"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/p2rank-tree.json",
+      "bytes": 505162,
+      "sha256": "ca752302b5201cdbc3bb26aae1f97af135536b0970ff17e80a9dafc1693d3a54"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/osf-cryptobench-folder.json",
+      "bytes": 7435,
+      "sha256": "5da363d3b1692a91b3b24726e601290dc01a132b3275e735619a6edd7a9426ff"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-README.md",
+      "bytes": 6126,
+      "sha256": "e6366106fd6103fb62b616411c29f0d52fb06d69d2928de06d55eafef38f25fd"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/structure-fixtures/receipts.json",
+      "bytes": 1273,
+      "sha256": "86ecbef190261c98413af19275317a7ea81ec90511a00ba4e0406c1f55a7927f"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/structure-fixtures/annotation-mapping-audit.json",
+      "bytes": 1263,
+      "sha256": "efbbeb9bcf6364d1ca726660d0bb2524af88ddfb0258a26ded3dcf5799e453bb"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-docs_USAGE.md",
+      "bytes": 4705,
+      "sha256": "f094f9ad341b884600dabe2ad690795bc787c4d919abc38f95c9714f2a9de92b"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-docs_BENCHMARKS.md",
+      "bytes": 36540,
+      "sha256": "e0d5c89c728944770bef16cd44a1778ca9dd42dc56b3656232c5979617ae1375"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/osf-root.json",
+      "bytes": 1841,
+      "sha256": "8b6977212b4236e1ce92a6b3e2015d9de125797510632ffde2e3c47b8df58642"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-lacuna_io_writers.py",
+      "bytes": 8373,
+      "sha256": "20a515d702bab518eafc37745d320590caafd693a172a9e24ed3f5a22211a639"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/fpocket-tree.json",
+      "bytes": 1304041,
+      "sha256": "2f8b6f146dc295622eb1ae770bc9aba030fba1b20531da3cf4018ca821d9c965"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/fpocket-README.md",
+      "bytes": 7286,
+      "sha256": "f04e648950ac8bbc57d7ac18b30cba6ebeee7e42370e7f266b66905d9eb79229"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-tutorial_tutorial.ipynb",
+      "bytes": 32793,
+      "sha256": "56455f6a848b2122191e4a717b6c80f30e22a91a68d003dafb57ba4346cc5356"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/CryptoBench-src_D-create-folds_main.py",
+      "bytes": 7770,
+      "sha256": "988b93be5d7a74dbea274c9e38587b053448b708792abbf4028f47cca1078cfa"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-lacuna_io_structure.py",
+      "bytes": 14217,
+      "sha256": "c5ea1d47f156f91fb6425224a84d251d1bcee6aa2a4c73d4d2f31ad3aeaf2baa"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/lacuna-docs_RANKING.md",
+      "bytes": 3401,
+      "sha256": "5cc5b3e0dc589b5aaae98ccbbbf07abd3169ee6235f72cd6996010db83dff1ce"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/pinned-job-plan.json",
+      "bytes": 5157,
+      "sha256": "5830cc2a7a4a5fa8dc4f5ca6db05cd700baab8daf7615fad9d9574a8ed964d55"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/budget-ledger.json",
+      "bytes": 2323,
+      "sha256": "d6ed1ff65cbef2b42df85ecae2a52627cc3bf5f2aac496bf70360ec8089b2143"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/k4-billing-reconciliation.json",
+      "bytes": 4719,
+      "sha256": "9138baba19c1df119fec55f145dad1a921b05218aa4a3d2df12af7d788ef08dd"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/budget-ledger.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/preflight-verified.json",
+      "bytes": 1502,
+      "sha256": "d1b44bb27de55c79cfd6c7f0f92d3848f3a2e9e1950ec138df07f3b2b9b6d5a7"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/sprint-demo-verified.json",
+      "bytes": 78284,
+      "sha256": "faadb4ef17ab34b1d935b5a213acb0ce18b479cdc529ab681d47a61feca3bf23"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/panel-k4-v1/analysis.json",
+      "bytes": 610515,
+      "sha256": "d4bac1055ac73ddba1b807236d9399bf190741c49d1c6affff56cf0b29ed8572"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/panel-k4-v1/results.md",
+      "bytes": 1350,
+      "sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/inventory-report.json",
+      "bytes": 1450,
+      "sha256": "36ccaa10e597050795c67312ff4e746f19473d0198e4d94408a25b602645e5ad"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/train-fold-0.json",
+      "bytes": 1721723,
+      "sha256": "ba41942b3893d420fa7fedaa32a079d7a2528514f971a524a423ce108f0b3f96"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/train-fold-1.json",
+      "bytes": 2130591,
+      "sha256": "5047a0dbf0de52e316a8b09c0a90c28474f5e702acab14325b803a1340643f34"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/receipts.json",
+      "bytes": 1090,
+      "sha256": "71aac99efe4526f6e4e5419433a80d96d5dc337dba6bb9ddae8c3827d5fc8248"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/folds.json",
+      "bytes": 17826,
+      "sha256": "ced97a50b55504007216165167a1b3995312434ee50f7f93f8728fca3c6ac67d"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/train-fold-2.json",
+      "bytes": 1738396,
+      "sha256": "15d5f32917629dc4727a03acf7997c2e48d590b35be572d41885497486602503"
+    },
+    {
+      "path": "source-original/dynamics/ember/research/cryptobench-metadata/train-fold-3.json",
+      "bytes": 1090093,
+      "sha256": "b4358e50984372ff539766b9161750342a86d2f082e5a36af9259db56cfefa1e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/receipt-audit.json",
+      "bytes": 20282,
+      "sha256": "f867a0cb35e2a8ba1b55fd2d0f7f546522c0f088a3bc229e242384538a44886c"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k16-v1/analysis.json",
+      "bytes": 686044,
+      "sha256": "7a14d3a0676c06d084b82fc26b9b197aa82d99cfd307878d7fc6784d9c37e5be"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k16-v1/results.md",
+      "bytes": 1351,
+      "sha256": "df2ec1a63fa02dd9fcaf5b6ca355860194ba622b60923b31a2fb9ea77db36e7d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/inference_example.py",
+      "bytes": 8683,
+      "sha256": "295e88d21551c455c28a0223e928257672a3f3e0b49e8713f295a77047231ae9"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/analysis.json",
+      "bytes": 81243,
+      "sha256": "a1e23cb3553a8bd08a5bdc191f88f869872b6c9319bc07f7bfdb64337876102d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/pilot-1e7uA04-k4-v2/results.md",
+      "bytes": 1336,
+      "sha256": "5f04608a0c021d5802ba4988c76f229f586a62a4522fb63ca35c5892c3542351"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EPOCH_SWEEP_V1_PROTOCOL.md",
+      "bytes": 4773,
+      "sha256": "c922519170603aa71d94ed3f6bab9cd2c2463575d820173ea83b7d660f913a7c"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_EQUILIBRIUM_SUITE_PROTOCOL.md",
+      "bytes": 1605,
+      "sha256": "1fcd7674c305d43ed96e26ecc0ea0a7ca45fec2081478ff2781ee0966ecf979f"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_MDCATH_ADAPTATION_PROTOCOL.md",
+      "bytes": 3895,
+      "sha256": "8d5ba3e0a015d85164da7164b84876e3e742e45b5e206bb3ea1be35da89be3d8"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/protocols/MARS_FM_ANCHOR08_FULL_VALIDATION_V1_PROTOCOL.md",
+      "bytes": 4777,
+      "sha256": "779988158703632aa2e043a44f50b2f8b1112ff7a08e87d848c62cef67fea9d1"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/release-manifest.json",
+      "bytes": 4492,
+      "sha256": "980a42ef274d53061dcf4b674c799371f0887dece0b4a4c4d4745dd67f6f0adc"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/README.md",
+      "bytes": 9339,
+      "sha256": "ec11820f293b150695d011d8e670a58a07c706b45f7cb073a4987899474dd2ed"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/release-snapshot.json",
+      "bytes": 9722,
+      "sha256": "e285f9b3ee01282ebab5aa8bd12727571c56b743b5f094fc50c2e4dd12ba84c8"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/LICENSE",
+      "bytes": 1310,
+      "sha256": "d496726bd0f4f32c2ac80a1b64f511716e3877ec9ff19afb8641e291af3c1747"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k4-v1/analysis.json",
+      "bytes": 612275,
+      "sha256": "c58f06d173e68bf2c4c3065b1172e6e945551fbd34c5bd0f7dbef566ffa18efa"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/reports/sampling-k4-v1/results.md",
+      "bytes": 1350,
+      "sha256": "807368ed33a4ea5aede2606f45789762b90a1213818a83432965d11c307b52b2"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/parent/training-config.json",
+      "bytes": 1612,
+      "sha256": "cb9228e34e3db544c5cc18fa154ce9d43e7a04e2e7fefc36af49bb5465d0e21d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/parent/training-result.json",
+      "bytes": 2656,
+      "sha256": "5bdb3b2b91e4c6138f619dcd32b065a4fd7719382bc2150b0a500aa464ef73a5"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/completion.json",
+      "bytes": 163,
+      "sha256": "b2a890e7251ec2fbe8110a814c23885abbe5bafe536b48b22ec1fc6182cf4030"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1q16B03-k16-v1/frozen-spec.json",
+      "bytes": 25500,
+      "sha256": "f6678a6f73de77c121f22931124cfee7c605dde2c2079d5b2982f915323b07a0"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/parent-result.json",
+      "bytes": 2639,
+      "sha256": "1cf4b89bbce75dc9a7ca4c36ba6dbbf63cd0389b3ccb8661de834087792ffc3a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/compact-transition-comparison.json",
+      "bytes": 5685,
+      "sha256": "aa059c76970a4a7048764b7761b7347bbb1d3692b3875b0852d34c3e5f39133d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed2/interpolation-result.json",
+      "bytes": 1398,
+      "sha256": "4e51d9e2a2d94d6cba9819b795592e9161115868094c671b30ce955f8fdfd34e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/completion.json",
+      "bytes": 163,
+      "sha256": "bd07b6a35ec60a43c25a75312cb3451c4a41e2fd040bd89c9f54b6413b7a7a8b"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2k4qA00-k16-v1/frozen-spec.json",
+      "bytes": 43749,
+      "sha256": "8b9dc1646aef322ffc5a4c31810d896333e99297abbb5ba9e199b8cdc2df21c3"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars.yaml",
+      "bytes": 355,
+      "sha256": "1866038a7671aab8d4179531fa18ca63762ffb8a500adbb10b616c3934b66468"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/parent-result.json",
+      "bytes": 2632,
+      "sha256": "006621399c33632fe68295039df5120a86162de4844c50e0f0eca00c1d7efb0c"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/compact-transition-comparison.json",
+      "bytes": 5678,
+      "sha256": "80f9cc8e85abe3f03b5bc9df8f8fd72f7e26b9938717e4535c145d946de2c954"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/replications/seed3/interpolation-result.json",
+      "bytes": 1397,
+      "sha256": "d2eba5a0475e344f9522b0010bbcd37894874bd034dcda060428e4b776eb4b47"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/full-transition-comparison.json",
+      "bytes": 16425,
+      "sha256": "9a6ea0073fd7a3af50c987ecbb1b5abec365689ccdd1acd1089eb0ff270e9c54"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/head-to-head-vs-previous-senba.json",
+      "bytes": 16591,
+      "sha256": "3e6cd8467a2c4ca390011efd12d846d0ffb64c8f72bf1eb4348bf07ba5f66d3e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/interpolation-config.json",
+      "bytes": 278,
+      "sha256": "f2f1a8e1f462e48e196f91d5854474f02b78cbf9b1d564abdba794f27fb05019"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/selection-v2.json",
+      "bytes": 4823,
+      "sha256": "1f1429751c9526a969aab72cfdc71b4304dc297f47af4b5884bcda63d1b0bd2b"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/equilibrium-suite-comparison.json",
+      "bytes": 22201,
+      "sha256": "74b59827a85e2f868f8cc5d8301981aadeadf8a4a8c6777d7f50818975b1559f"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/hf-release/receipts/interpolation-result.json",
+      "bytes": 1397,
+      "sha256": "75289e17c293a0ae60ea99d4c5512d6177f0e7123d6d1b112efdba4fa4d07682"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/k16-billing-reconciliation.json",
+      "bytes": 8501,
+      "sha256": "d50a8f5fb0f97c40e8c288bf695d90fa76de6ff3ddae48e3045bade8651fc779"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/.gitignore",
+      "bytes": 336,
+      "sha256": "b38272d6dc30527f93b0b9952d1a267356878d6245a9723baec000f612d52e03"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/README.md",
+      "bytes": 6490,
+      "sha256": "17fe886ecc97b6a9bce9405e7b14cf853955976451e352dfdfb80d48d7b78adf"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/LICENSE",
+      "bytes": 1069,
+      "sha256": "47b8d8e22f57c4fe83d141388fb6d64aace0167f78059af1d7f9c4af234132d2"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v1/frozen-spec.json",
+      "bytes": 44139,
+      "sha256": "a6d27e55ece3273c2b6fccb150bf1be74107747fa82c31e3a5cf7a0f886c71b5"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_val.csv",
+      "bytes": 75819,
+      "sha256": "2c869105459109d163a8575b43dcbf20749faf38ccabf7fb1a73c4a6d9c04b88"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_test.csv",
+      "bytes": 1012,
+      "sha256": "6f9e1ecc2b6ced7b6704831bfde84b996e193fb57926a1d76c693a65c478b4f9"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_test.csv",
+      "bytes": 71099,
+      "sha256": "123465c60184f747e7403d501a6d8d526090c511453f4581b84705076dec130d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA.csv",
+      "bytes": 33102,
+      "sha256": "a58620595b9f25679645d780356427f993a4bb5df03de20893cc4df94274e758"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_val.csv",
+      "bytes": 1012,
+      "sha256": "d229fc83602db0e6957ac899088ddecee67cc94453470480cf257937158a72c5"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/4AA_train.csv",
+      "bytes": 31102,
+      "sha256": "458286ab902e712ff88b28ae182318ab6093c5639253287c71cb0ad0d2ec28e2"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH_train.csv",
+      "bytes": 632850,
+      "sha256": "d61ffe3b63e5026c91acc8fc50bf4bdaad4ed4200c6b6a053bc1592a2f5d9b2a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/splits/mdCATH.txt",
+      "bytes": 43040,
+      "sha256": "f40930058f38ba86f3e8f952a819da2e5657195a59c0ab6021c844bb9bf39832"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/train.py",
+      "bytes": 2920,
+      "sha256": "643151827cfce024867c32c9564bd473d6b7667db3bb6b862303eaf4c6dd9789"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/completion.json",
+      "bytes": 163,
+      "sha256": "b3333bcead9e226f204f4c6a0e038f25ccd9eb5b989e60fd05709278358237d8"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1e7uA04-k16-v1/frozen-spec.json",
+      "bytes": 44348,
+      "sha256": "b2f39e3b1cb39101bd2888d6624d37748003b26525a93388d7337f34556aa267"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_4AA.py",
+      "bytes": 2321,
+      "sha256": "b6032d46805bed039b8118cc81d861788ad6e4da505922dcf95514a076549bd9"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/msm_clusters/create_msm_states_mdcath.py",
+      "bytes": 3439,
+      "sha256": "c2a494e5ea5c4babce25b4fbc48b2bb0fb2c4a6b1fc4d68fae41e86a290be1c6"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/completion.json",
+      "bytes": 164,
+      "sha256": "64071b6ef2c0482b30465bcf44e42a0c4ff28a1a4c062a4551395f452994e885"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2f2cA02-k16-v1/frozen-spec.json",
+      "bytes": 32243,
+      "sha256": "108180d9756168a945b82fe026c493233d8102706eb521639c5fa1859ae0b66d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/data/geometry.py",
+      "bytes": 9033,
+      "sha256": "42473bf4c0633d8dc4589913e1b09ea56ef3aa11693de23610ce4bebba08a8bc"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/data/dataset.py",
+      "bytes": 14895,
+      "sha256": "9543326f5b8a7c0677ed5d39eb729c2c0e8681444ce60592c1adfcd3479005ad"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_4AA.py",
+      "bytes": 2199,
+      "sha256": "12adb787f748c666d848a6bf33d69dbb22f461eb8343cfdc439f54a4211e71b9"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/prepare_data/prep_sims_mdcath.py",
+      "bytes": 2673,
+      "sha256": "d36acf2d27b930abe9657d03e6bf32e5521e6041e7360cf6e81adbb8ccec9ec0"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/training_args.py",
+      "bytes": 2865,
+      "sha256": "9978c213b2f78c2a4fe3c9f5eec6fdcb20aa973dac7185e879ec87f7e3ead045"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/generate.py",
+      "bytes": 9606,
+      "sha256": "88cb3c502084f214aa18db6961b6596d991cfae50c3d9d7877e5f49e2069e4ab"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/completion.json",
+      "bytes": 164,
+      "sha256": "b3bcc62ea7b3a836bbded26681d4161e635cd6380b131bbdde3ecb773a59c8d6"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2dp9A01-k4-v1/frozen-spec.json",
+      "bytes": 30743,
+      "sha256": "fddc9313c131f7cd2b8b07d4fd1f06048daa8d80e9f208f3c79bf21943a186bf"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/mha.py",
+      "bytes": 20369,
+      "sha256": "bc9171e59092b414b1f146101ac379f66b9b24293c2b2d8631bc8a2f576c8c5e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/ema.py",
+      "bytes": 2433,
+      "sha256": "61552e3f0120f848dc5a7a19d9988ccc580b222f9c979f8b881237985158251a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_mdcath.py",
+      "bytes": 20872,
+      "sha256": "63ed2296ffff6892b7fbf90a332b78f705c7781391dc85eb2dfcd37d02d9d939"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/scripts/analysis/analyze_4AA.py",
+      "bytes": 11001,
+      "sha256": "8b0033b5f988f92d411dfd2fe32802cfdd264d8e02b51353a2ce78f16c50b679"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/transport.py",
+      "bytes": 3580,
+      "sha256": "648ad5a36309ecd5a2f7885ed6b57ef3c1941b3241ed9acb2015b0f50197b3f2"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/analysis.py",
+      "bytes": 14023,
+      "sha256": "8e4a7268b09064722793fe8c2c1a8c90d9c55891c0500100375512dcf7fdb285"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/utils.py",
+      "bytes": 1962,
+      "sha256": "e05d46dae39c586d135cba4ec459852af5ef7894a2fb5875ebb9a21e0a9127f8"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/completion.json",
+      "bytes": 163,
+      "sha256": "f5ecb9ad4648947a8e48a7c17a415edfb0946a8123c979f23ae12abcf6f0aeec"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-2dp9A01-k16-v1/frozen-spec.json",
+      "bytes": 30952,
+      "sha256": "0f372227bcc2488d1345a8a3050785a2299737386d0e2a3a3c7288ee4355db9e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/residue_constants.py",
+      "bytes": 46570,
+      "sha256": "4c51f662a8cc14a9a40b7455bc9b1b20bf56016dfc0dd3ac94589c178d5df881"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/ipa.py",
+      "bytes": 8366,
+      "sha256": "1a6cd5e5253ab089625ddd60ffe4f4f504e575c6817831a113719604c3b91d9a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/protein.py",
+      "bytes": 22695,
+      "sha256": "ecc0ad83352c430813333935cb0e61ed98422a15f3815fbf53d98b625aed70d0"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/tensor_utils.py",
+      "bytes": 3621,
+      "sha256": "bd39e2d2b5e8fb872ca49aabc6189643f389311081a084873e95fda14354d411"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/rigid_utils.py",
+      "bytes": 42909,
+      "sha256": "d1777be8d6463d26d8e4600ecbd0fd0a161778d9ab1b9c4e9ee66ddf3c42c47e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/vendored/openfold/primitives.py",
+      "bytes": 25156,
+      "sha256": "916b72964a03bb4005b8ca6515d7e35849b0c8949ee9477651f4d018f35a6fc4"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/model/module.py",
+      "bytes": 7513,
+      "sha256": "44c57a5e1d0024b7c478ed40e735f614b419b0d952bdc6667726ca9b8f9d3024"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/mars-fm/mars/model/model.py",
+      "bytes": 10854,
+      "sha256": "cc64929d721e90b3a579b19e6a98780ae7498f0222d2b4c0f85806278bfb848a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/completion.json",
+      "bytes": 164,
+      "sha256": "faab559a96ad7b0c73f48fefa1682104b099b734f27954017cbff6c95a6c74af"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1d1rA00-k16-v1/frozen-spec.json",
+      "bytes": 26856,
+      "sha256": "c58504e3e1c8b63d94803dc2fa5574d3cc2ffbf6e678f92805637d1ea39b36f4"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/completion.json",
+      "bytes": 164,
+      "sha256": "fd6cba1dd8150fb50af4a8e5e88aca349c05afe457b75f6d4fdcc6e4ecbfbf86"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/pilot-1e7uA04-k4-v2/frozen-spec.json",
+      "bytes": 44139,
+      "sha256": "bfcd55768424195f0a0803ecab11f3f9d5d9e6adfb013f3141c4b67a6db37234"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/completion.json",
+      "bytes": 163,
+      "sha256": "787f2b6c07dfc147c0fdd212c03f9cc37e6523ad755fe1c40c07ffd42e55d84f"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1rquA01-k4-v1/frozen-spec.json",
+      "bytes": 19579,
+      "sha256": "2ef6f303c1122a96587ffa87385d4752c5891555443e5e3e086eba9360e4050b"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/completion.json",
+      "bytes": 164,
+      "sha256": "c49b4d7a70ec67015863badb4967d00eeb4483c44292e00bed799f174166b80f"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1d1rA00-k4-v1/frozen-spec.json",
+      "bytes": 26647,
+      "sha256": "2d3b2c3049d13b02f1b91e193da76907625a17dd6782874aed932e90014fc65d"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/completion.json",
+      "bytes": 162,
+      "sha256": "56d67d8a5419935160c2ee2f094da70decd0b7fd5b04b6f847d83c80c2d4d328"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2f2cA02-k4-v1/frozen-spec.json",
+      "bytes": 32034,
+      "sha256": "58a91fe9f82d1661b22d58bfbcac63d1175b9942489e8d03364c471cc44ecfdb"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/completion.json",
+      "bytes": 164,
+      "sha256": "aa8f2815d6b21a2f55718b09e2222e3a6d6c5ecdb32c5be7fc911c51de112e04"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-1rquA01-k16-v1/frozen-spec.json",
+      "bytes": 19788,
+      "sha256": "e52444da7a1bc2009d0a6b209a369c8fc1dee37dfb0bb7e57c725e93db7e7993"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/completion.json",
+      "bytes": 163,
+      "sha256": "1f145a49b83f7c73e4857d119be1ba2b256f4221a79da23ba8923f2b4ad90be7"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-1q16B03-k4-v1/frozen-spec.json",
+      "bytes": 25291,
+      "sha256": "b3063155b7680191a18b841bfaa1fd60181fbbdb1a29459f922a3b20a41b1b1a"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/completion.json",
+      "bytes": 163,
+      "sha256": "54fd85d197fb7f3a23f7296e0d1cc9173b23f885ca3d1b4bd1b135ebd5d39eac"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/augment-5k2mA01-k16-v1/frozen-spec.json",
+      "bytes": 29967,
+      "sha256": "5551d896384415487326264d08f9a9c5abcb5c650107ee3bc148bf1471065d13"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/completion.json",
+      "bytes": 163,
+      "sha256": "016fdade2e37fdae4c3e89f7702277c94397be03198e16886b42dcc09880be28"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-2k4qA00-k4-v1/frozen-spec.json",
+      "bytes": 43540,
+      "sha256": "7cd36b54d04c51e3068680661f16e3cfc0a3c350c6ecece336e43df45c5021dc"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/completion.json",
+      "bytes": 164,
+      "sha256": "39494eedd401034306fbd4455639acbd3f21acb0aafd97f8369d7d4300c27c9e"
+    },
+    {
+      "path": "source-original/senba-sprint/artifacts/runs/panel-5k2mA01-k4-v1/frozen-spec.json",
+      "bytes": 29758,
+      "sha256": "86475aa9c14af8e30d75c5c3acf5739e3b1460d3b4ec915adf62c220c8b47c4b"
+    }
+  ]
+}

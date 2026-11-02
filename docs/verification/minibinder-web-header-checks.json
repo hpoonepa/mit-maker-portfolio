@@ -1,0 +1,171 @@
+{
+  "files": [
+    {
+      "file": "prince/prince-webapp/astro.config.mjs",
+      "purpose": "Builds the static Astro site with React components and consistent trailing slashes.",
+      "inserted_comment": "// Builds the static Astro site with React components and consistent trailing slashes.\n",
+      "before_sha256": "f6f53d89108b1b8ece427fd32046971a05ac687a17d7b35706644a9f1e85802f",
+      "after_sha256": "948181335fe792a4346d06c4c3df900689708f74022a314908bbd8ae357d6b15",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": null,
+      "node_check_exit": 0
+    },
+    {
+      "file": "prince/prince-webapp/scripts/check-links.mjs",
+      "purpose": "Checks built HTML routes and local asset references for missing targets.",
+      "inserted_comment": "// Checks built HTML routes and local asset references for missing targets.\n",
+      "before_sha256": "b1a215a63b01126380b021aff4ca1f0c8f575ce9176b941164d64f2bc4dd311f",
+      "after_sha256": "62b2a83165d6d77a8a148cc8844d75365fdf344ecf5cebf05e4070121f240c0b",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": null,
+      "node_check_exit": 0
+    },
+    {
+      "file": "prince/prince-webapp/scripts/verify-integration.mjs",
+      "purpose": "Checks site routes, downloads, real API analyses and origin restrictions.",
+      "inserted_comment": "// Checks site routes, downloads, real API analyses and origin restrictions.\n",
+      "before_sha256": "a2363a7ac6bae16d0f9a8ed117d0408975cc6dccbe819ceab980a575c9c403bc",
+      "after_sha256": "5021df3a19fc1d790c9b9c93ff261e680782ac91db42f03695b9dd78ec4553b2",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": null,
+      "node_check_exit": 0
+    },
+    {
+      "file": "prince/prince-webapp/src/components/Mark.astro",
+      "purpose": "Draws the shared PRINCE symbol with an optional CSS class.",
+      "inserted_comment": "// Draws the shared PRINCE symbol with an optional CSS class.\n",
+      "before_sha256": "528c2a76920e4922d0efd6e020108005e91b8155ec1423531ef319fb6a861696",
+      "after_sha256": "dc1f3a0994df3754f4994446a59249ac5a6f6770a646f2eca9dbe5aa7460ff74",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/components/SiteMenu.astro",
+      "purpose": "Provides the modal navigation menu and restores focus when it closes.",
+      "inserted_comment": "// Provides the modal navigation menu and restores focus when it closes.\n",
+      "before_sha256": "a5cae3341f8bcc605c726aca2d6a93eb66abb3dd67043d257bf9972b92be1226",
+      "after_sha256": "72d012e60f21a732c3b88e55fbf7113e5795c1bbfef3137d57884f23fe0f23d5",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/layouts/Layout.astro",
+      "purpose": "Wraps reference pages with shared metadata, navigation and footer controls.",
+      "inserted_comment": "// Wraps reference pages with shared metadata, navigation and footer controls.\n",
+      "before_sha256": "c5b1d27b81e715ad7beb9012b22708af665c000061a6612f369968d6e8075b28",
+      "after_sha256": "b491c1e327e59936ce60a640b2db145fe7bbeef9f2b48f1dbc9c8b928ebe027c",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/404.astro",
+      "purpose": "Offers homepage and workspace links when a requested page is missing.",
+      "inserted_comment": "// Offers homepage and workspace links when a requested page is missing.\n",
+      "before_sha256": "95ada2f6439de010662e56b2c28c6bae465d87f82fa357dad87a7508b9dc5942",
+      "after_sha256": "c5b626c8c327613c2e0c19a1833150d482a3f10ce910b7f29c5a1f4132a6c0a9",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/guide.astro",
+      "purpose": "Explains local setup, structure inputs, evidence review and result exports.",
+      "inserted_comment": "// Explains local setup, structure inputs, evidence review and result exports.\n",
+      "before_sha256": "09adbdcde0dc96db3f524746bc75323ca605a7f416556a1958b962115d8914ff",
+      "after_sha256": "2eeaaf92d0313e1c0f268093cc47382255ac4de0982d3d7de4ed3e1a410e7437",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/index.astro",
+      "purpose": "Presents the scrolling protein-surface introduction and workspace entry points.",
+      "inserted_comment": "// Presents the scrolling protein-surface introduction and workspace entry points.\n",
+      "before_sha256": "624dba55096608313fe8cbc95d54b0a37541ff0446ee76cf8c4320dbf92e7d44",
+      "after_sha256": "6043b2b3412f021275195dd78b6e608d0adf2fa50ee31781df198f7ce2477c18",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/method.astro",
+      "purpose": "Explains structural context, site scoring and reviewed literature evidence.",
+      "inserted_comment": "// Explains structural context, site scoring and reviewed literature evidence.\n",
+      "before_sha256": "1dbc7f78f782f11f3e5d246386b372b7e2f1b64ab568b7f42cfc358305713b8d",
+      "after_sha256": "3c383b6da8b8be221a2c69cd16585f587384655e68f20afaac1efb74e4719494",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/resources.astro",
+      "purpose": "Lists downloadable model, benchmark and provenance files with their licenses.",
+      "inserted_comment": "// Lists downloadable model, benchmark and provenance files with their licenses.\n",
+      "before_sha256": "412f4b548f7fa60622a9dbd824a5b4589a6287735a48c0ed5bb28dcc7e4516dd",
+      "after_sha256": "a4d3bc86baaca8c772ab8fb9169971ae78d470f7cacc225f2879a3676409637f",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/validation.astro",
+      "purpose": "Presents benchmark comparisons, held-out results and evaluation records.",
+      "inserted_comment": "// Presents benchmark comparisons, held-out results and evaluation records.\n",
+      "before_sha256": "120c9a6873b02572e751c1ef94a2c5f32300e720560f44da038c132bf1763a7c",
+      "after_sha256": "e9e6511d65ef7633d5cc3633987ac1bdfd6b7a45a0b592b69cdd8f64c3bd42da",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/pages/workspace.astro",
+      "purpose": "Hosts the interactive target-analysis workspace and local API controls.",
+      "inserted_comment": "// Hosts the interactive target-analysis workspace and local API controls.\n",
+      "before_sha256": "630c9da1f836ff38160ce12dcb5a155c9879af5f4ab2e7393c91af389211ce82",
+      "after_sha256": "22b8e4147a8b5ab6e432fe83bc77ad5a0c3a75753ac88cfcd9f0ca495c667930",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": true,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/styles/observatory.css",
+      "purpose": "Styles the scrolling protein introduction, chapter navigation and dialogs.",
+      "inserted_comment": "/* Styles the scrolling protein introduction, chapter navigation and dialogs. */\n",
+      "before_sha256": "415cd1ec10f6200a9734a88c9a232a8a81f40d1495e6eda27201d61ae4fe4a85",
+      "after_sha256": "1d1dd2daaa6701dc059c2d523b0fda30140f371c43ae4b684774ab553d373f94",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": null,
+      "node_check_exit": null
+    },
+    {
+      "file": "prince/prince-webapp/src/styles/workspace.css",
+      "purpose": "Styles analysis inputs, results, evidence panels and mobile workspace layouts.",
+      "inserted_comment": "/* Styles analysis inputs, results, evidence panels and mobile workspace layouts. */\n",
+      "before_sha256": "e0b4f84ae13b428995f160756aeb0b990f146b3735f3a67e76e4baf50d7e327a",
+      "after_sha256": "31769297294ca135c20057c460f3fa53d2e7a1d6fb1bd7f5d2d532fc870353aa",
+      "exact_comment_removal_restores_before": true,
+      "before_equal_baseline": true,
+      "astro_rendered_body_unchanged": null,
+      "node_check_exit": null
+    }
+  ],
+  "count": 15,
+  "scope": "Three MJS, ten Astro, two CSS files; existing global CSS, Dockerfile and CWL headers retained"
+}

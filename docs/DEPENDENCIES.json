@@ -1,0 +1,2954 @@
+[
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "ajv",
+    "declared_version": "^8.18.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/ajv"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "ajv-formats",
+    "declared_version": "^3.0.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/ajv-formats"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "prettier",
+    "declared_version": "^3.4.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/prettier"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "turbo",
+    "declared_version": "^2.3.3",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/turbo"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@astrojs/react",
+    "declared_version": "3.6.3",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@astrojs/react"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@fontsource/instrument-sans",
+    "declared_version": "^5.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fontsource/instrument-sans"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@fontsource/instrument-serif",
+    "declared_version": "^5.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fontsource/instrument-serif"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "astro",
+    "declared_version": "5.18.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/astro"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "three",
+    "declared_version": "0.186.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/three"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@astrojs/check",
+    "declared_version": "0.9.9",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@astrojs/check"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "18.3.31",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "18.3.7",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "@types/three",
+    "declared_version": "^0.170.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/three"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-webapp/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "5.9.3",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@supabase/ssr",
+    "declared_version": "0.5.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@supabase/ssr"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@supabase/supabase-js",
+    "declared_version": "2.45.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@supabase/supabase-js"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@tanstack/react-query",
+    "declared_version": "5.51.21",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@tanstack/react-query"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@trpc/client",
+    "declared_version": "11.0.0-rc.477",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@trpc/client"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@trpc/react-query",
+    "declared_version": "11.0.0-rc.477",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@trpc/react-query"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "clsx",
+    "declared_version": "^2.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/clsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "fflate",
+    "declared_version": "0.8.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/fflate"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "html2canvas",
+    "declared_version": "^1.4.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/html2canvas"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "declared_version": "^0.468.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/lucide-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "molstar",
+    "declared_version": "4.8.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/molstar"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "motion",
+    "declared_version": "^11.13.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/motion"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "next",
+    "declared_version": "^16.2.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "superjson",
+    "declared_version": "2.2.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/superjson"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "declared_version": "^2.5.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwind-merge"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@playwright/test",
+    "declared_version": "1.48.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@playwright/test"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/dom",
+    "declared_version": "10.4.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/react",
+    "declared_version": "16.0.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^18.3.12",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "@vitest/ui",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@vitest/ui"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "autoprefixer",
+    "declared_version": "^10.4.20",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/autoprefixer"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "eslint-config-next",
+    "declared_version": "16.2.4",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint-config-next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "jsdom",
+    "declared_version": "24.1.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/jsdom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "postcss",
+    "declared_version": "^8.4.49",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/postcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "tailwindcss",
+    "declared_version": "^3.4.15",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwindcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/app/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "@supabase/supabase-js",
+    "declared_version": "2.45.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@supabase/supabase-js"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "clsx",
+    "declared_version": "^2.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/clsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "declared_version": "^0.468.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/lucide-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "molstar",
+    "declared_version": "4.8.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/molstar"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "motion",
+    "declared_version": "^11.13.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/motion"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "next",
+    "declared_version": "^16.2.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "declared_version": "^2.5.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwind-merge"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^18.3.12",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "autoprefixer",
+    "declared_version": "^10.4.20",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/autoprefixer"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "eslint-config-next",
+    "declared_version": "16.2.4",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint-config-next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "postcss",
+    "declared_version": "^8.4.49",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/postcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "tailwindcss",
+    "declared_version": "^3.4.15",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwindcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@mdx-js/loader",
+    "declared_version": "^3.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@mdx-js/loader"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@mdx-js/react",
+    "declared_version": "^3.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@mdx-js/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@next/mdx",
+    "declared_version": "^16.2.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@next/mdx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@types/mdx",
+    "declared_version": "^2.0.13",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/mdx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "clsx",
+    "declared_version": "^2.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/clsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "declared_version": "^0.468.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/lucide-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "next",
+    "declared_version": "^16.2.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "rehype-slug",
+    "declared_version": "^6.0.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/rehype-slug"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "remark-gfm",
+    "declared_version": "^4.0.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/remark-gfm"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "shiki",
+    "declared_version": "^1.24.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/shiki"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "declared_version": "^2.5.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwind-merge"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^18.3.12",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "autoprefixer",
+    "declared_version": "^10.4.20",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/autoprefixer"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "eslint-config-next",
+    "declared_version": "16.2.4",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint-config-next"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "postcss",
+    "declared_version": "^8.4.49",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/postcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "tailwindcss",
+    "declared_version": "^3.4.15",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwindcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/docs/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@fastify/cors",
+    "declared_version": "9.0.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fastify/cors"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@fastify/rate-limit",
+    "declared_version": "9.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fastify/rate-limit"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@fastify/sensible",
+    "declared_version": "5.6.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fastify/sensible"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@sentry/node",
+    "declared_version": "8.26.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@sentry/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@trpc/server",
+    "declared_version": "11.0.0-rc.477",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@trpc/server"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "bullmq",
+    "declared_version": "5.13.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/bullmq"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "dotenv",
+    "declared_version": "16.4.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/dotenv"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "fastify",
+    "declared_version": "4.28.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/fastify"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "fastify-plugin",
+    "declared_version": "4.5.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/fastify-plugin"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "fastify-type-provider-zod",
+    "declared_version": "1.2.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/fastify-type-provider-zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "ioredis",
+    "declared_version": "5.4.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ioredis"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "4.19.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/api/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "bullmq",
+    "declared_version": "5.13.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/bullmq"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "dotenv",
+    "declared_version": "16.4.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/dotenv"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "ioredis",
+    "declared_version": "5.4.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ioredis"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "4.19.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/worker/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "astro",
+    "declared_version": "^5.0.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/astro"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "bezier-easing",
+    "declared_version": "^2.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/bezier-easing"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "shaders",
+    "declared_version": "^2.5.110",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/shaders"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "split-type",
+    "declared_version": "^0.3.4",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/split-type"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "three",
+    "declared_version": "^0.170.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/three"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "@types/three",
+    "declared_version": "^0.170.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/three"
+  },
+  {
+    "manifest": "03-papercrane-platform/apps/web/landing/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.6.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/jest-dom",
+    "declared_version": "^6.4.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/jest-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/react",
+    "declared_version": "^16.0.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/user-event",
+    "declared_version": "^14.5.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/user-event"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^18.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^18.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@vitejs/plugin-react",
+    "declared_version": "^4.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@vitejs/plugin-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "@vitest/ui",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@vitest/ui"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "clsx",
+    "declared_version": "^2.1.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/clsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "jsdom",
+    "declared_version": "^25.0.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/jsdom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "declared_version": "^0.468.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/lucide-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "declared_version": "^2.5.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwind-merge"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "tailwindcss",
+    "declared_version": "^3.4.15",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwindcss"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.0.0 || ^19.0.0",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.0.0 || ^19.0.0",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "lucide-react",
+    "declared_version": "*",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/lucide-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "clsx",
+    "declared_version": "*",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/clsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/ui/package.json",
+    "ecosystem": "npm",
+    "name": "tailwind-merge",
+    "declared_version": "*",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/tailwind-merge"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/types/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/types/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/types/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/types/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/auth/package.json",
+    "ecosystem": "npm",
+    "name": "argon2",
+    "declared_version": "0.41.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/argon2"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/auth/package.json",
+    "ecosystem": "npm",
+    "name": "jose",
+    "declared_version": "5.8.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/jose"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/auth/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/auth/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/auth/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "@trpc/server",
+    "declared_version": "11.0.0-rc.477",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@trpc/server"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "ajv",
+    "declared_version": "^8.18.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ajv"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "ajv-formats",
+    "declared_version": "^3.0.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ajv-formats"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "superjson",
+    "declared_version": "2.2.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/superjson"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "trpc-to-openapi",
+    "declared_version": "2.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/trpc-to-openapi"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/trpc/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/tools-sdk/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/tools-sdk/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/tools-sdk/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/tools-sdk/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/jest-dom",
+    "declared_version": "^6.4.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/jest-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/react",
+    "declared_version": "^16.0.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^18.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^18.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "@vitejs/plugin-react",
+    "declared_version": "^4.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@vitejs/plugin-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "jsdom",
+    "declared_version": "^25.0.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/jsdom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.3.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^18.0.0 || ^19.0.0",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/brand/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^18.0.0 || ^19.0.0",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "chalk",
+    "declared_version": "5.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/chalk"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "cli-table3",
+    "declared_version": "0.6.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/cli-table3"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "commander",
+    "declared_version": "12.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/commander"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "ora",
+    "declared_version": "8.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ora"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "prompts",
+    "declared_version": "2.4.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/prompts"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "smol-toml",
+    "declared_version": "1.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/smol-toml"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "@types/prompts",
+    "declared_version": "2.4.9",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/prompts"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/cli/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "@sentry/node",
+    "declared_version": "8.26.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@sentry/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "pino",
+    "declared_version": "9.3.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/pino"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "pino-pretty",
+    "declared_version": "11.2.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/pino-pretty"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "prom-client",
+    "declared_version": "15.1.3",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/prom-client"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/observability/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/storage/package.json",
+    "ecosystem": "npm",
+    "name": "@aws-sdk/client-s3",
+    "declared_version": "3.637.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@aws-sdk/client-s3"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/storage/package.json",
+    "ecosystem": "npm",
+    "name": "@aws-sdk/s3-request-presigner",
+    "declared_version": "3.637.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@aws-sdk/s3-request-presigner"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/storage/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/storage/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/storage/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/env/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/env/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/env/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/env/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/eslint-plugin",
+    "declared_version": "^8.18.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@typescript-eslint/eslint-plugin"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "@typescript-eslint/parser",
+    "declared_version": "^8.18.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@typescript-eslint/parser"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "eslint-plugin-react",
+    "declared_version": "^7.37.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint-plugin-react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "eslint-plugin-react-hooks",
+    "declared_version": "^5.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint-plugin-react-hooks"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "globals",
+    "declared_version": "^15.14.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/globals"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/eslint-config/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.0.0",
+    "group": "peerDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "@prisma/client",
+    "declared_version": "5.18.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@prisma/client"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "@supabase/supabase-js",
+    "declared_version": "2.45.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@supabase/supabase-js"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "prisma",
+    "declared_version": "5.18.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/prisma"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "^4.19.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/db/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/jobs/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/jobs/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/jobs/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/jobs/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "@react-email/components",
+    "declared_version": "0.0.25",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@react-email/components"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "@react-email/render",
+    "declared_version": "1.0.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@react-email/render"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "18.3.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "resend",
+    "declared_version": "4.0.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/resend"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "18.3.12",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "eslint",
+    "declared_version": "^9.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/email/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/billing/package.json",
+    "ecosystem": "npm",
+    "name": "stripe",
+    "declared_version": "16.2.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/stripe"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/billing/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/billing/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "22.4.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/billing/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/packages/billing/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "pg",
+    "declared_version": "^8.11.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "yaml",
+    "declared_version": "^2.4.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/yaml"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "ulid",
+    "declared_version": "^2.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/ulid"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "glob",
+    "declared_version": "^10.4.5",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/glob"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^20.12.12",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "@types/pg",
+    "declared_version": "^8.11.6",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "^4.16.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.5.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/benchmark/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "^1.6.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/smoke/package.json",
+    "ecosystem": "npm",
+    "name": "execa",
+    "declared_version": "9.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/execa"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/smoke/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/smoke/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "^4.19.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/smoke/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/smoke/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "chalk",
+    "declared_version": "5.3.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/chalk"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "commander",
+    "declared_version": "12.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/commander"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "handlebars",
+    "declared_version": "4.7.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/handlebars"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "prompts",
+    "declared_version": "2.4.2",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/prompts"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "@types/prompts",
+    "declared_version": "^2.4.9",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/prompts"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "^4.19.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/scripts/papercrane-cli/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "2.0.5",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "pg",
+    "declared_version": "8.12.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "vega-lite",
+    "declared_version": "5.21.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/vega-lite"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "vega",
+    "declared_version": "5.30.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/vega"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "20.14.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "@types/pg",
+    "declared_version": "8.11.6",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "4.16.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "1.6.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/preprint/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "5.5.3",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "commander",
+    "declared_version": "^12.1.0",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/commander"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "pg",
+    "declared_version": "^8.13.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "zod",
+    "declared_version": "^3.23.8",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/zod"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "declared_version": "^22.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/node"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "@types/pg",
+    "declared_version": "^8.11.10",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/pg"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "tsx",
+    "declared_version": "^4.19.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/tsx"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.7.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "03-papercrane-platform/benchmark/migrate/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "^2.1.8",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@fontsource/barlow-condensed",
+    "declared_version": "^5.2.6",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fontsource/barlow-condensed"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@fontsource/ibm-plex-mono",
+    "declared_version": "^5.2.6",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fontsource/ibm-plex-mono"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@fontsource/inter-tight",
+    "declared_version": "^5.2.6",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@fontsource/inter-tight"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@tanstack/react-query",
+    "declared_version": "^5.87.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/@tanstack/react-query"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "react",
+    "declared_version": "^19.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "react-dom",
+    "declared_version": "^19.1.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-dom"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "react-router-dom",
+    "declared_version": "^7.9.1",
+    "group": "dependencies",
+    "primary_url": "https://www.npmjs.com/package/react-router-dom"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@playwright/test",
+    "declared_version": "^1.62.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@playwright/test"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/jest-dom",
+    "declared_version": "^6.8.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/jest-dom"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@testing-library/react",
+    "declared_version": "^16.3.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@testing-library/react"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react",
+    "declared_version": "^19.1.10",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@types/react-dom",
+    "declared_version": "^19.1.7",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@types/react-dom"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "@vitejs/plugin-react",
+    "declared_version": "^5.0.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/@vitejs/plugin-react"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "jsdom",
+    "declared_version": "^26.1.0",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/jsdom"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "openapi-typescript",
+    "declared_version": "^7.10.1",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/openapi-typescript"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "typescript",
+    "declared_version": "^5.9.2",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/typescript"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "vite",
+    "declared_version": "^7.1.3",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vite"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/web/package.json",
+    "ecosystem": "npm",
+    "name": "vitest",
+    "declared_version": "^3.2.4",
+    "group": "devDependencies",
+    "primary_url": "https://www.npmjs.com/package/vitest"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.26",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "gemmi",
+    "declared_version": "gemmi>=0.6",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/gemmi/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.11",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pyyaml",
+    "declared_version": "pyyaml>=6.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pyyaml/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "biopython",
+    "declared_version": "biopython>=1.83",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/biopython/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "matplotlib",
+    "declared_version": "matplotlib>=3.8",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/matplotlib/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "jax",
+    "declared_version": "jax[cuda12]>=0.4.30",
+    "group": "design",
+    "primary_url": "https://pypi.org/project/jax/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "equinox",
+    "declared_version": "equinox>=0.11",
+    "group": "design",
+    "primary_url": "https://pypi.org/project/equinox/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "modal",
+    "declared_version": "modal>=0.64",
+    "group": "backends",
+    "primary_url": "https://pypi.org/project/modal/"
+  },
+  {
+    "manifest": "01-minibinder-design/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest>=8.0",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "gemmi",
+    "declared_version": "gemmi>=0.7.5",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/gemmi/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "freesasa",
+    "declared_version": "freesasa>=2.2.1",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/freesasa/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "typer",
+    "declared_version": "typer>=0.12",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/typer/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pyyaml",
+    "declared_version": "pyyaml>=6.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pyyaml/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest>=8.0",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "jsonschema",
+    "declared_version": "jsonschema>=4.0",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/jsonschema/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "tomli",
+    "declared_version": "tomli>=2; python_version < '3.11'",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/tomli/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.23.5,<3",
+    "group": "ranker",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "xgboost",
+    "declared_version": "xgboost>=2.1,<3",
+    "group": "ranker",
+    "primary_url": "https://pypi.org/project/xgboost/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.23.5,<2",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.10,<2",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scikit-learn",
+    "declared_version": "scikit-learn==1.2.1",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/scikit-learn/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "xgboost",
+    "declared_version": "xgboost==2.1.0",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/xgboost/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pandas",
+    "declared_version": "pandas>=2,<3",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/pandas/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pyarrow",
+    "declared_version": "pyarrow>=12",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/pyarrow/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "requests",
+    "declared_version": "requests>=2.31",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/requests/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "biopython",
+    "declared_version": "biopython>=1.81",
+    "group": "research",
+    "primary_url": "https://pypi.org/project/biopython/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "sbol3",
+    "declared_version": "sbol3>=1.2",
+    "group": "sbol",
+    "primary_url": "https://pypi.org/project/sbol3/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.26",
+    "group": "benchmark",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "01-minibinder-design/prince/prince-model/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.11",
+    "group": "benchmark",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.26,<3",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "biopython",
+    "declared_version": "biopython>=1.83,<2",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/biopython/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "openpyxl",
+    "declared_version": "openpyxl>=3.1,<4",
+    "group": "legacy-poc",
+    "primary_url": "https://pypi.org/project/openpyxl/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pandas",
+    "declared_version": "pandas>=2.0,<3",
+    "group": "legacy-poc",
+    "primary_url": "https://pypi.org/project/pandas/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.11,<2",
+    "group": "legacy-poc",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "requests",
+    "declared_version": "requests>=2.31,<3",
+    "group": "legacy-poc",
+    "primary_url": "https://pypi.org/project/requests/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "torch",
+    "declared_version": "torch>=2.6,<3",
+    "group": "model",
+    "primary_url": "https://pypi.org/project/torch/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "transformers",
+    "declared_version": "transformers>=4.45,<5",
+    "group": "model",
+    "primary_url": "https://pypi.org/project/transformers/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "safetensors",
+    "declared_version": "safetensors>=0.4,<1",
+    "group": "model",
+    "primary_url": "https://pypi.org/project/safetensors/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest>=8,<9",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest-mock",
+    "declared_version": "pytest-mock>=3.14,<4",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest-mock/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "ruff",
+    "declared_version": "ruff>=0.6",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/ruff/"
+  },
+  {
+    "manifest": "03-papercrane-platform/binder-scorer/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "lightgbm",
+    "declared_version": "lightgbm>=4.5",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/lightgbm/"
+  },
+  {
+    "manifest": "03-papercrane-platform/binder-scorer/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=2.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/binder-scorer/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scikit-learn",
+    "declared_version": "scikit-learn>=1.5",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/scikit-learn/"
+  },
+  {
+    "manifest": "03-papercrane-platform/binder-scorer/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.14",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/binder-scorer/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest>=9",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "03-papercrane-platform/python/papercrane-sdk/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pydantic",
+    "declared_version": "pydantic>=2.7",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pydantic/"
+  },
+  {
+    "manifest": "03-papercrane-platform/python/papercrane-sdk/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "jsonschema",
+    "declared_version": "jsonschema>=4.23",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/jsonschema/"
+  },
+  {
+    "manifest": "03-papercrane-platform/python/papercrane-sdk/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pyyaml",
+    "declared_version": "pyyaml>=6.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pyyaml/"
+  },
+  {
+    "manifest": "03-papercrane-platform/python/papercrane-sdk/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest>=8.0",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "03-papercrane-platform/python/papercrane-sdk/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest-cov",
+    "declared_version": "pytest-cov>=5.0",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest-cov/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/senba-audit/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.23,<3",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "03-papercrane-platform/dynamics/source-original/senba-sprint/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=1.23,<3",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "alembic",
+    "declared_version": "alembic>=1.19.1",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/alembic/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "av",
+    "declared_version": "av>=18.1.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/av/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "fastapi",
+    "declared_version": "fastapi",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/fastapi/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "httpx",
+    "declared_version": "httpx",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/httpx/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "huggingface-hub",
+    "declared_version": "huggingface-hub",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/huggingface-hub/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "imageio-ffmpeg",
+    "declared_version": "imageio-ffmpeg==0.6.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/imageio-ffmpeg/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "numpy",
+    "declared_version": "numpy>=2.5.2",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/numpy/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "opencv-python-headless",
+    "declared_version": "opencv-python-headless>=5.0.0.93",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/opencv-python-headless/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pyarrow",
+    "declared_version": "pyarrow>=21.0.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pyarrow/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "platformdirs",
+    "declared_version": "platformdirs",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/platformdirs/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pydantic-settings",
+    "declared_version": "pydantic-settings",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/pydantic-settings/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "python-multipart",
+    "declared_version": "python-multipart>=0.0.32",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/python-multipart/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "scipy",
+    "declared_version": "scipy>=1.18.1",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/scipy/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "sqlalchemy",
+    "declared_version": "sqlalchemy>=2.0.52",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/sqlalchemy/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "torch",
+    "declared_version": "torch>=2.6.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/torch/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "torchvision",
+    "declared_version": "torchvision>=0.21.0",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/torchvision/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "ultralytics",
+    "declared_version": "ultralytics>=8.4.129,<8.5",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/ultralytics/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "uvicorn",
+    "declared_version": "uvicorn[standard]",
+    "group": "dependencies",
+    "primary_url": "https://pypi.org/project/uvicorn/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest",
+    "declared_version": "pytest",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest/"
+  },
+  {
+    "manifest": "02-squash-vision/src/squashvision/backend/pyproject.toml",
+    "ecosystem": "pypi",
+    "name": "pytest-asyncio",
+    "declared_version": "pytest-asyncio",
+    "group": "dev",
+    "primary_url": "https://pypi.org/project/pytest-asyncio/"
+  }
+]

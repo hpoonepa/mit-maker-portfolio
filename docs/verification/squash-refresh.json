@@ -1,0 +1,38 @@
+{
+  "frontend_unit_tests": {
+    "status": "passed",
+    "files": 31,
+    "tests": 234,
+    "log": "frontend-tests.log"
+  },
+  "full_frontend_typecheck": {
+    "status": "passed after removing eight unsupported redundant role-query options in two test files",
+    "log": "frontend-typecheck-fixed.log"
+  },
+  "typing_repair_regressions": {
+    "status": "passed",
+    "files": 2,
+    "tests": 19,
+    "log": "typing-repair-tests.log"
+  },
+  "production_typecheck": {
+    "status": "passed",
+    "log": "production-typecheck.log"
+  },
+  "production_build": {
+    "status": "passed",
+    "log": "production-build.log"
+  },
+  "backend_focused": {
+    "status": "not completed",
+    "attempt_timeouts_seconds": [
+      180,
+      150
+    ],
+    "reason": "Available pytest/dependency files are macOS dataless; neither attempt produced test output before timeout. No backend pass claimed.",
+    "log": "backend-focused.log"
+  },
+  "source_equivalence": "See comment-verification.json",
+  "dependency_tree_in_snapshot": false,
+  "original_sources_modified": false
+}

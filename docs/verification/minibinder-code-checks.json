@@ -1,0 +1,1417 @@
+{
+  "python": {
+    "checked": 345,
+    "mismatch": [],
+    "missing_baseline": [],
+    "parse_errors": []
+  },
+  "notebooks": {
+    "checked": 22,
+    "mismatch": [],
+    "missing_baseline": []
+  },
+  "headers": {
+    "suspicious": [
+      {
+        "file": "src/minibinder/score/direction_score.py",
+        "summary": "Compare predicted binder placement with the deGFP Enhancer face."
+      },
+      {
+        "file": "src/minibinder/score/analyse_enhancer.py",
+        "summary": "Inspect the independently supplied Enhancer-face designs in the crystal frame."
+      },
+      {
+        "file": "source-history/degfp-minimizer/analyse_enhancer.py",
+        "summary": "Independent audit of the Enhancer-face candidates."
+      }
+    ],
+    "duplicate": [
+      "source-history/vast/config.py",
+      "backends/vast/config.py",
+      "source-history/vast/setup.sh",
+      "source-history/vast/build_and_push.sh"
+    ],
+    "summaries": [
+      {
+        "file": "backends/__init__.py",
+        "summary": "Launch design and validation jobs on the supported compute providers."
+      },
+      {
+        "file": "tests/test_tri_objective.py",
+        "summary": "Check seed aggregation, confidence gates, and ranking across the three scoring models."
+      },
+      {
+        "file": "tests/nebius_test_checkpoint.py",
+        "summary": "Check saved campaign state, completed seeds, and resume behavior."
+      },
+      {
+        "file": "tests/nebius_test_run_validation.py",
+        "summary": "Check that candidate validation records failures and continues with the next sequence."
+      },
+      {
+        "file": "tests/test_placement.py",
+        "summary": "Check residue numbering and contact measurements around the deGFP M-patch."
+      },
+      {
+        "file": "tests/nebius_test_run_campaign.py",
+        "summary": "Check campaign gates, GPU assignment, retries, and resuming completed seeds."
+      },
+      {
+        "file": "tests/test_consensus_rank.py",
+        "summary": "Check consensus scores, sequence flags, and candidate ranking."
+      },
+      {
+        "file": "tests/test_run_state.py",
+        "summary": "Check target validation and exclusive, resumable campaign output."
+      },
+      {
+        "file": "tests/test_ot2_degfp_analysis.py",
+        "summary": "Check arithmetic, invalid reader input, and the portable command-line interface."
+      },
+      {
+        "file": "tests/nebius_test_candidates.py",
+        "summary": "Check the validation panel contains 23 distinct seed and sequence pairs."
+      },
+      {
+        "file": "tests/test_ot2_degfp_reference.py",
+        "summary": "Offline tests using the real Opentrons 9.0.0 simulator, never a robot."
+      },
+      {
+        "file": "tests/nebius_test_config.py",
+        "summary": "Check Nebius defaults, campaign paths, and required environment settings."
+      },
+      {
+        "file": "tests/nebius_test_runner.py",
+        "summary": "Check result CSV merging, including empty rows and headers."
+      },
+      {
+        "file": "legacy/fold_5g51_boltzapi.py",
+        "summary": "Fold all 5G51 (DWV VP3 P-domain) minibinder+target complexes via the Boltz API."
+      },
+      {
+        "file": "legacy/5mv5_chainC_design.py",
+        "summary": "Design VP3 binders with Mosaic and compare their predicted complexes with Protenix."
+      },
+      {
+        "file": "legacy/compile_minibinders.py",
+        "summary": "Collect VP3 designs into a combined FASTA and a campaign report."
+      },
+      {
+        "file": "legacy/score_chai1.py",
+        "summary": "Run Chai-1 structure predictions for the VP3 candidate panel."
+      },
+      {
+        "file": "legacy/eval_5g51_minibinders.py",
+        "summary": "Evaluate 5G51 (DWV VP3) minibinders: Boltz2 metrics + LLM per-target prior."
+      },
+      {
+        "file": "src/minibinder/run_state.py",
+        "summary": "Validate campaign inputs and save results safely across interrupted runs."
+      },
+      {
+        "file": "src/minibinder/__init__.py",
+        "summary": "Prepare targets, design sequences, refold complexes, and rank candidates."
+      },
+      {
+        "file": "src/minibinder/cli.py",
+        "summary": "Single entry point for the minibinder pipeline."
+      },
+      {
+        "file": "src/minibinder/design/god_5g51_v4.py",
+        "summary": "Design DWV VP3 binders with the V4 loss settings for the 5G51 target."
+      },
+      {
+        "file": "src/minibinder/design/tri_objective.py",
+        "summary": "Tri-objective scoring: Protenix + Boltz2 + ESMFold."
+      },
+      {
+        "file": "src/minibinder/design/config.py",
+        "summary": "Load the V5 design settings from a dataclass and campaign YAML."
+      },
+      {
+        "file": "src/minibinder/design/god_campaign.py",
+        "summary": "Design RBX1 binders with the campaign-specific Protenix loss weights."
+      },
+      {
+        "file": "src/minibinder/design/design_2lgv.py",
+        "summary": "Run a seeded Protenix binder-design job against RBX1."
+      },
+      {
+        "file": "src/minibinder/design/__init__.py",
+        "summary": "Generate binder sequences against a prepared protein target."
+      },
+      {
+        "file": "src/minibinder/design/design_degfp.py",
+        "summary": "Design deGFP binders against the M-patch with Boltz-2 or Protenix."
+      },
+      {
+        "file": "src/minibinder/design/design_v5.py",
+        "summary": "Run configurable minibinder design with Mosaic and the V5 loss terms."
+      },
+      {
+        "file": "src/minibinder/design/god_5g51.py",
+        "summary": "Design DWV VP3 binders with the campaign-specific Protenix loss weights."
+      },
+      {
+        "file": "src/minibinder/design/design_5g51.py",
+        "summary": "Run a seeded Protenix binder-design job against DWV VP3."
+      },
+      {
+        "file": "src/minibinder/prepare/candidates_5g51.py",
+        "summary": "The 23 hardcoded Boltz2 validation candidates for the 5G51 V4 campaign."
+      },
+      {
+        "file": "src/minibinder/prepare/__init__.py",
+        "summary": "Prepare target coordinates and inspect candidate binding sites."
+      },
+      {
+        "file": "src/minibinder/prepare/hotspots.py",
+        "summary": "Measure the selected hotspot contacts in each completed V5 design."
+      },
+      {
+        "file": "src/minibinder/prepare/degfp_target.py",
+        "summary": "Write the cropped, cleaned deGFP design target and verify its numbering."
+      },
+      {
+        "file": "src/minibinder/wetlab/build_ot2_degfp_package.py",
+        "summary": "Build the canonical OT-2 package, then refresh the project's existing download paths."
+      },
+      {
+        "file": "src/minibinder/wetlab/analyze_ot2_degfp.py",
+        "summary": "Offline fluorescence analysis for the reference OT-2 plate map; no robot control."
+      },
+      {
+        "file": "src/minibinder/wetlab/__init__.py",
+        "summary": "Prepare the deGFP pilot protocol and analyze its plate-reader measurements."
+      },
+      {
+        "file": "src/minibinder/wetlab/ot2_degfp_purexpress_pilot.py",
+        "summary": "Reference deGFP fluorescence-modulation pilot; see the accompanying SOP."
+      },
+      {
+        "file": "src/minibinder/score/rescore.py",
+        "summary": "Rescore saved designs while retaining each individual loss term."
+      },
+      {
+        "file": "src/minibinder/score/audit_binders.py",
+        "summary": "Read-only audit of existing predictions; writes a separate audit JSON."
+      },
+      {
+        "file": "src/minibinder/score/analyse_replicates.py",
+        "summary": "Compare replicate predictions and the reference-nanobody control."
+      },
+      {
+        "file": "src/minibinder/score/analyse_placement.py",
+        "summary": "Audit predicted complexes for 5 Angstrom contacts across four M-patch segments."
+      },
+      {
+        "file": "src/minibinder/score/analyse_full.py",
+        "summary": "Recheck shortlisted binders against full-length deGFP with its chromophore."
+      },
+      {
+        "file": "src/minibinder/score/consensus_rank.py",
+        "summary": "Rank saved binder designs using the retrospective VP3 assay analysis."
+      },
+      {
+        "file": "src/minibinder/score/__init__.py",
+        "summary": "Score folded complexes and inspect their interfaces and sequence properties."
+      },
+      {
+        "file": "src/minibinder/score/dossier.py",
+        "summary": "Summarize each design's predicted fold, interface, and aggregation risks."
+      },
+      {
+        "file": "src/minibinder/score/naturalness.py",
+        "summary": "Inspect sequence composition, buried atoms, and secondary-structure patterns."
+      },
+      {
+        "file": "src/minibinder/score/direction_score.py",
+        "summary": "Compare predicted binder placement with the deGFP Enhancer face."
+      },
+      {
+        "file": "src/minibinder/score/expression_check.py",
+        "summary": "Expression and solubility audit for the ordered designs."
+      },
+      {
+        "file": "src/minibinder/score/analyse_enhancer.py",
+        "summary": "Inspect the independently supplied Enhancer-face designs in the crystal frame."
+      },
+      {
+        "file": "src/minibinder/score/tri_consensus.py",
+        "summary": "Compare Protenix, Boltz-2, and ESMFold predictions for each candidate."
+      },
+      {
+        "file": "src/minibinder/score/boltz2_consensus.py",
+        "summary": "Validate candidates with Boltz-2 and Chai-1, then recompute interface metrics."
+      },
+      {
+        "file": "src/minibinder/score/electrostatics.py",
+        "summary": "Measure electrostatic fields and geometry around the deGFP chromophore."
+      },
+      {
+        "file": "src/minibinder/score/audit_full_target.py",
+        "summary": "Audit the five saved full-target CRO complexes without submitting inference."
+      },
+      {
+        "file": "src/minibinder/score/success_model.py",
+        "summary": "Monte Carlo model of the probability this campaign produces a working quencher."
+      },
+      {
+        "file": "src/minibinder/fold/refold_degfp.py",
+        "summary": "Refold shortlisted binders as complexes and write CIFs for the epitope audit."
+      },
+      {
+        "file": "src/minibinder/fold/__init__.py",
+        "summary": "Refold designed sequences independently and retain the predicted complexes."
+      },
+      {
+        "file": "src/minibinder/fold/validate_boltz2.py",
+        "summary": "Boltz2 cross-validation for RBX1 minibinder candidates."
+      },
+      {
+        "file": "src/minibinder/filter/build_constructs.py",
+        "summary": "Codon-optimised expression constructs for the three ordered binders."
+      },
+      {
+        "file": "src/minibinder/filter/__init__.py",
+        "summary": "Filter candidates and prepare sequences for experimental ordering."
+      },
+      {
+        "file": "src/minibinder/filter/filter_rbx1.py",
+        "summary": "Combine Protenix and Boltz-2 evidence to filter RBX1 candidates."
+      },
+      {
+        "file": "src/minibinder/filter/filter_god.py",
+        "summary": "Filter candidates by structure scores and sequence properties."
+      },
+      {
+        "file": "src/minibinder/design/losses/rmsd_binder.py",
+        "summary": "Post-hoc scoring: RMSD_binder and ShapeComplementarity."
+      },
+      {
+        "file": "src/minibinder/design/losses/ipsae_metrics.py",
+        "summary": "ipSAE + LIS loss module."
+      },
+      {
+        "file": "src/minibinder/design/losses/hotspot_distance.py",
+        "summary": "Hotspot-distance loss for V5 minibinder design."
+      },
+      {
+        "file": "src/minibinder/design/losses/__init__.py",
+        "summary": "Loss terms and structural metrics used by the V5 design experiments."
+      },
+      {
+        "file": "src/minibinder/design/losses/confide.py",
+        "summary": "Compute the CONFIDE score from AlphaFold 3 diffusion embeddings."
+      },
+      {
+        "file": "src/minibinder/design/losses/actifptm.py",
+        "summary": "Weight interface confidence by predicted residue-contact probabilities."
+      },
+      {
+        "file": "src/minibinder/design/losses/consensus.py",
+        "summary": "Chai-1 wrapper + multi-predictor consensus utilities."
+      },
+      {
+        "file": "src/minibinder/design/losses/ptm_energy.py",
+        "summary": "pTMEnergy loss term: BindEnergyCraft (ICML 2025, arxiv 2505.21241)."
+      },
+      {
+        "file": "src/minibinder/design/losses/esmfold_score.py",
+        "summary": "Run ESMFold and report folding-confidence and interface measurements."
+      },
+      {
+        "file": "src/minibinder/design/degfp/objective.py",
+        "summary": "Build the deGFP design objective with soluble MPNN and a cysteine penalty."
+      },
+      {
+        "file": "src/minibinder/design/degfp/__init__.py",
+        "summary": "deGFP M-patch design core."
+      },
+      {
+        "file": "src/minibinder/design/degfp/target.py",
+        "summary": "Load the deGFP target and its numbering map for Boltz-2 and Protenix."
+      },
+      {
+        "file": "source-history/tests/test_tri_objective.py",
+        "summary": "Tests for src/tri_objective.py: the Protenix+Boltz2+ESMFold objective."
+      },
+      {
+        "file": "source-history/tests/test_consensus_rank.py",
+        "summary": "Tests for scripts/consensus_rank.py: the VP3-derived consensus scorer."
+      },
+      {
+        "file": "source-history/tests/test_ot2_degfp_analysis.py",
+        "summary": "Check arithmetic, invalid reader input, and the portable command-line interface."
+      },
+      {
+        "file": "source-history/tests/test_ot2_degfp_reference.py",
+        "summary": "Offline tests using the real Opentrons 9.0.0 simulator, never a robot."
+      },
+      {
+        "file": "source-history/runpod/esmfold_worker.py",
+        "summary": "Run ESMFold in its separate environment and return scores as JSON."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_5g51.py",
+        "summary": "Modal app: 5G51 minibinder design campaign on GPU."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_god_5g51_v4.py",
+        "summary": "Modal app for 5G51 V4 beta-optimized minibinder design campaign."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_boltz2.py",
+        "summary": "Validate the RBX1 V3b candidate panel with Boltz-2 on Modal."
+      },
+      {
+        "file": "source-history/campaign-scripts/design_god_5g51.py",
+        "summary": "Design DWV VP3 binders with the campaign-specific Protenix loss weights."
+      },
+      {
+        "file": "source-history/campaign-scripts/design_god_5g51_v4.py",
+        "summary": "Design DWV VP3 binders with the V4 loss settings for the 5G51 target."
+      },
+      {
+        "file": "source-history/campaign-scripts/design_2lgv.py",
+        "summary": "Run a seeded Protenix binder-design job against RBX1."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_boltz2_round2.py",
+        "summary": "Modal app: Boltz2 independent cross-validation for Round 2 candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/validate_boltz2.py",
+        "summary": "Boltz2 cross-validation for RBX1 minibinder candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_god.py",
+        "summary": "Launch the RBX1 campaign with its selected loss settings on Modal."
+      },
+      {
+        "file": "source-history/campaign-scripts/design_god.py",
+        "summary": "Design RBX1 binders with the campaign-specific Protenix loss weights."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_boltz2_5g51_v4.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 V4 candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_boltz2_5g51.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 (DWV-VP3) candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_2lgv.py",
+        "summary": "Modal app: RBX1 (2LGV) minibinder design campaign on GPU."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_god_5g51.py",
+        "summary": "Launch the DWV VP3 campaign with its selected loss settings on Modal."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_boltz2_5g51_v4_run.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 V4 candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/filter_rbx1.py",
+        "summary": "Combine Protenix and Boltz-2 evidence to filter RBX1 candidates."
+      },
+      {
+        "file": "source-history/campaign-scripts/modal_run.py",
+        "summary": "Modal script for running JAX + CUDA GPU workloads remotely."
+      },
+      {
+        "file": "source-history/campaign-scripts/design_5g51.py",
+        "summary": "Run a seeded Protenix binder-design job against DWV VP3."
+      },
+      {
+        "file": "source-history/campaign-scripts/filter_god.py",
+        "summary": "Filter candidates by structure scores and sequence properties."
+      },
+      {
+        "file": "source-history/scripts/mosaic_5g51_design.py",
+        "summary": "Mosaic binder design against 5G51 (DWV VP3 P-domain), two epitope groups."
+      },
+      {
+        "file": "source-history/scripts/verify_gfp_arms.py",
+        "summary": "Verify the GFP hotspot indices before launching design jobs."
+      },
+      {
+        "file": "source-history/scripts/consensus_rank.py",
+        "summary": "Rank saved binder designs using the retrospective VP3 assay analysis."
+      },
+      {
+        "file": "source-history/scripts/build_ot2_degfp_package.py",
+        "summary": "Build the canonical OT-2 package, then refresh the project's existing download paths."
+      },
+      {
+        "file": "source-history/scripts/analyze_ot2_degfp.py",
+        "summary": "Offline fluorescence analysis for the reference OT-2 plate map; no robot control."
+      },
+      {
+        "file": "source-history/scripts/_peek_volume.py",
+        "summary": "Inspect files saved in the Mosaic weights volume on Modal."
+      },
+      {
+        "file": "source-history/scripts/bee_pk_model.py",
+        "summary": "Two-compartment oral PK model for a protein binder fed to honey bees."
+      },
+      {
+        "file": "source-history/scripts/ot2_degfp_purexpress_pilot.py",
+        "summary": "Reference deGFP fluorescence-modulation pilot; see the accompanying SOP."
+      },
+      {
+        "file": "source-history/scripts/gfp_surface_scan.py",
+        "summary": "Measure surface features across the eGFP target to compare candidate sites."
+      },
+      {
+        "file": "source-history/scripts/modal_boltz2_5g51_combined.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 COMBINED candidates."
+      },
+      {
+        "file": "source-history/degfp-minimizer/prepare_target.py",
+        "summary": "Write the cropped, cleaned deGFP design target and verify its numbering."
+      },
+      {
+        "file": "source-history/degfp-minimizer/run_state.py",
+        "summary": "Validate campaign inputs and save results safely across interrupted runs."
+      },
+      {
+        "file": "source-history/degfp-minimizer/build_constructs.py",
+        "summary": "Codon-optimised expression constructs for the three ordered binders."
+      },
+      {
+        "file": "source-history/degfp-minimizer/rescore.py",
+        "summary": "Re-score finished designs and KEEP the per-term metrics."
+      },
+      {
+        "file": "source-history/degfp-minimizer/common_degfp.py",
+        "summary": "Shared core for the deGFP M-patch block: Boltz2 and Protenix-v2 via vanilla mosaic."
+      },
+      {
+        "file": "source-history/degfp-minimizer/audit_binders.py",
+        "summary": "Read-only audit of existing predictions; writes a separate audit JSON."
+      },
+      {
+        "file": "source-history/degfp-minimizer/analyse_replicates.py",
+        "summary": "Compare replicate predictions and the reference-nanobody control."
+      },
+      {
+        "file": "source-history/degfp-minimizer/configure_environment.py",
+        "summary": "Apply the two-model campaign dependency profile to upstream pyproject.toml."
+      },
+      {
+        "file": "source-history/degfp-minimizer/refold_degfp.py",
+        "summary": "Refold shortlisted binders as complexes and write CIFs for the epitope audit."
+      },
+      {
+        "file": "source-history/degfp-minimizer/analyse_placement.py",
+        "summary": "Audit predicted complexes for 5 Angstrom contacts across four M-patch segments."
+      },
+      {
+        "file": "source-history/degfp-minimizer/analyse_full.py",
+        "summary": "Recheck shortlisted binders against full-length deGFP with its chromophore."
+      },
+      {
+        "file": "source-history/degfp-minimizer/dossier.py",
+        "summary": "Per-design dossier: biophysics, fold quality, aggregation risk, interface anatomy."
+      },
+      {
+        "file": "source-history/degfp-minimizer/design_degfp.py",
+        "summary": "deGFP M-patch minibinder design: adapted from the 5G51 pod driver."
+      },
+      {
+        "file": "source-history/degfp-minimizer/naturalness.py",
+        "summary": "Inspect sequence composition, buried atoms, and secondary-structure patterns."
+      },
+      {
+        "file": "source-history/degfp-minimizer/direction_score.py",
+        "summary": "Rebuilt quench-direction score, with ONE consistent definition throughout."
+      },
+      {
+        "file": "source-history/degfp-minimizer/expression_check.py",
+        "summary": "Expression and solubility audit for the ordered designs."
+      },
+      {
+        "file": "source-history/degfp-minimizer/analyse_enhancer.py",
+        "summary": "Independent audit of the Enhancer-face candidates."
+      },
+      {
+        "file": "source-history/degfp-minimizer/electrostatics.py",
+        "summary": "Measure electrostatic fields and geometry around the deGFP chromophore."
+      },
+      {
+        "file": "source-history/degfp-minimizer/audit_full_target.py",
+        "summary": "Audit the five saved full-target CRO complexes without submitting inference."
+      },
+      {
+        "file": "source-history/degfp-minimizer/success_model.py",
+        "summary": "Monte Carlo model of the probability this campaign produces a working quencher."
+      },
+      {
+        "file": "source-history/nebius/best_sequences.py",
+        "summary": "Rank the completed V5 designs by hotspot contacts and export their sequences."
+      },
+      {
+        "file": "source-history/nebius/runner.py",
+        "summary": "Run remote jobs over SSH and collect their result CSVs."
+      },
+      {
+        "file": "source-history/nebius/config.py",
+        "summary": "Configuration for the Nebius single-VM V5 5G51-hotspots campaign runner."
+      },
+      {
+        "file": "source-history/nebius/analyze_hotspots.py",
+        "summary": "Measure the selected hotspot contacts in each completed V5 design."
+      },
+      {
+        "file": "source-history/nebius/checkpoint.py",
+        "summary": "JSON-backed campaign state for the sequential Nebius runner."
+      },
+      {
+        "file": "source-history/nebius/fold_5g51_order_complexes.py",
+        "summary": "Modal app: Co-fold 12 binder+target complexes with Boltz2 for the 5G51 (DWV VP3) order."
+      },
+      {
+        "file": "source-history/nebius/__init__.py",
+        "summary": "Nebius campaign runners and saved-state helpers."
+      },
+      {
+        "file": "source-history/nebius/combined_order.py",
+        "summary": "Combine the selected Nebius and Modal sequences into one candidate order."
+      },
+      {
+        "file": "source-history/nebius/run_validation.py",
+        "summary": "Validate the 5G51 V4 sequences on one Nebius GPU instance."
+      },
+      {
+        "file": "source-history/nebius/run_campaign.py",
+        "summary": "5G51 V5-hotspots design runner for a Nebius H100/H200 VM."
+      },
+      {
+        "file": "source-history/nebius/candidates_5g51_v4.py",
+        "summary": "The 23 hardcoded Boltz2 validation candidates for the 5G51 V4 campaign."
+      },
+      {
+        "file": "source-history/nebius/fold_mainsub1.py",
+        "summary": "Modal app: Co-fold mainsub1 binder+target complexes with Boltz2 for 5G51 (DWV VP3)."
+      },
+      {
+        "file": "source-history/validators/__init__.py",
+        "summary": "Compare structure predictors and calculate candidate validation metrics."
+      },
+      {
+        "file": "source-history/validators/tri_consensus.py",
+        "summary": "Tri-objective validator: Protenix (multi-seed) + Boltz2 + ESMFold."
+      },
+      {
+        "file": "source-history/validators/boltz2_consensus.py",
+        "summary": "V5 validator: Boltz2 + Chai-1 consensus with post-hoc metrics."
+      },
+      {
+        "file": "source-history/vast/vast_run.py",
+        "summary": "Vast.ai reference script for running a single JAX workload on a rented GPU."
+      },
+      {
+        "file": "source-history/vast/config.py",
+        "summary": "Vast.ai configuration for mosaic protein design campaigns."
+      },
+      {
+        "file": "source-history/vast/monitor.py",
+        "summary": "Live monitoring dashboard for running Vast.ai campaigns."
+      },
+      {
+        "file": "source-history/vast/resume.py",
+        "summary": "Inspect, resume, and export interrupted Vast.ai campaigns."
+      },
+      {
+        "file": "source-history/vast/vast_5g51.py",
+        "summary": "Vast.ai app: 5G51 minibinder design campaign on GPU."
+      },
+      {
+        "file": "source-history/vast/__init__.py",
+        "summary": "Vast.ai campaign launchers, monitoring, and recovery helpers."
+      },
+      {
+        "file": "source-history/vast/vast_boltz2.py",
+        "summary": "Vast.ai Boltz2 validation for RBX1 candidates."
+      },
+      {
+        "file": "source-history/vast/cleanup.py",
+        "summary": "Utility script for managing Vast.ai instances and campaign state."
+      },
+      {
+        "file": "source-history/vast/vast_boltz2_round2.py",
+        "summary": "Vast.ai: Boltz2 independent cross-validation for Round 2 candidates."
+      },
+      {
+        "file": "source-history/vast/orchestrator.py",
+        "summary": "Vast.ai orchestrator for mosaic protein design campaigns."
+      },
+      {
+        "file": "source-history/vast/vast_god.py",
+        "summary": "Run the RBX1 design campaign on Vast.ai and collect its result CSV."
+      },
+      {
+        "file": "source-history/vast/vast_2lgv.py",
+        "summary": "Vast.ai: RBX1 (2LGV) minibinder design campaign on GPU."
+      },
+      {
+        "file": "source-history/vast/vast_dynamics.py",
+        "summary": "Vast.ai campaign launcher for the Paper Crane dynamics POC."
+      },
+      {
+        "file": "source-history/src/design_config.py",
+        "summary": "V5 design config: dataclass + YAML loader."
+      },
+      {
+        "file": "source-history/src/tri_objective.py",
+        "summary": "Tri-objective scoring: Protenix + Boltz2 + ESMFold."
+      },
+      {
+        "file": "source-history/src/modal_design_v5.py",
+        "summary": "Modal orchestrator for V5 minibinder design + consensus validation."
+      },
+      {
+        "file": "source-history/src/__init__.py",
+        "summary": "Shared configuration and loss functions for V5 design jobs."
+      },
+      {
+        "file": "source-history/src/design_v5.py",
+        "summary": "V5 minibinder design: Mosaic pipeline with novel loss terms."
+      },
+      {
+        "file": "source-history/src/losses/rmsd_binder.py",
+        "summary": "Post-hoc scoring: RMSD_binder and ShapeComplementarity."
+      },
+      {
+        "file": "source-history/src/losses/ipsae_metrics.py",
+        "summary": "ipSAE + LIS loss module."
+      },
+      {
+        "file": "source-history/src/losses/hotspot_distance.py",
+        "summary": "Hotspot-distance loss for V5 minibinder design."
+      },
+      {
+        "file": "source-history/src/losses/__init__.py",
+        "summary": "Loss terms and structural metrics used by the V5 design experiments."
+      },
+      {
+        "file": "source-history/src/losses/confide.py",
+        "summary": "Compute the CONFIDE score from AlphaFold 3 diffusion embeddings."
+      },
+      {
+        "file": "source-history/src/losses/actifptm.py",
+        "summary": "Weight interface confidence by predicted residue-contact probabilities."
+      },
+      {
+        "file": "source-history/src/losses/consensus.py",
+        "summary": "Chai-1 wrapper + multi-predictor consensus utilities."
+      },
+      {
+        "file": "source-history/src/losses/ptm_energy.py",
+        "summary": "pTMEnergy loss term: BindEnergyCraft (ICML 2025, arxiv 2505.21241)."
+      },
+      {
+        "file": "source-history/src/losses/esmfold_score.py",
+        "summary": "Run ESMFold and report folding-confidence and interface measurements."
+      },
+      {
+        "file": "source-history/nebius/tests/test_candidates.py",
+        "summary": "Check the validation panel contains 23 distinct seed and sequence pairs."
+      },
+      {
+        "file": "source-history/nebius/tests/test_run_campaign.py",
+        "summary": "Check campaign gates, GPU assignment, retries, and resuming completed seeds."
+      },
+      {
+        "file": "source-history/nebius/tests/__init__.py",
+        "summary": "Nebius campaign runners and saved-state helpers."
+      },
+      {
+        "file": "source-history/nebius/tests/test_run_validation.py",
+        "summary": "Check that candidate validation records failures and continues with the next sequence."
+      },
+      {
+        "file": "source-history/nebius/tests/test_runner.py",
+        "summary": "Check result CSV merging, including empty rows and headers."
+      },
+      {
+        "file": "source-history/nebius/tests/test_config.py",
+        "summary": "Check Nebius defaults, campaign paths, and required environment settings."
+      },
+      {
+        "file": "source-history/nebius/tests/test_checkpoint.py",
+        "summary": "Check saved campaign state, completed seeds, and resume behavior."
+      },
+      {
+        "file": "source-history/nebius/outputs/run_hotspot_contacts_all.py",
+        "summary": "Measure hotspot contacts for the 15 ordered 5G51 binder complexes."
+      },
+      {
+        "file": "source-history/nebius/outputs/make_ranked_csv.py",
+        "summary": "Rank candidates by hotspot coverage and the recorded Boltz-2 interface scores."
+      },
+      {
+        "file": "source-history/nebius/outputs/5g51_v5_hotspots/run_hotspot_contacts.py",
+        "summary": "Measure hotspot contacts in the saved V5 complexes."
+      },
+      {
+        "file": "source-history/degfp-minimizer/tests/test_placement.py",
+        "summary": "Check residue numbering and contact measurements around the deGFP M-patch."
+      },
+      {
+        "file": "source-history/degfp-minimizer/tests/test_run_state.py",
+        "summary": "Check target validation and exclusive, resumable campaign output."
+      },
+      {
+        "file": "source-history/degfp-minimizer/review-final3/compare_folds.py",
+        "summary": "Compare original predicted binder structures without modifying their coordinates."
+      },
+      {
+        "file": "source-history/degfp-minimizer/review-final3/check_surfaces.py",
+        "summary": "Measure accessible surfaces in the final three predicted binder complexes."
+      },
+      {
+        "file": "source-history/degfp-minimizer/review-final3/audit_final3.py",
+        "summary": "Independent, local-only checks of the supplied archive and original raw predictions."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/common_degfp.py",
+        "summary": "Shared core for the deGFP M-patch block: Boltz2 and Protenix-v2 via vanilla mosaic."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/audit_binders.py",
+        "summary": "Read-only audit of existing predictions; writes a separate audit JSON."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/refold_degfp.py",
+        "summary": "Refold shortlisted binders as complexes and write CIFs for the epitope audit."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/analyse_full.py",
+        "summary": "Recheck shortlisted binders against full-length deGFP with its chromophore."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/dossier.py",
+        "summary": "Per-design dossier: biophysics, fold quality, aggregation risk, interface anatomy."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/direction_score.py",
+        "summary": "Rebuilt quench-direction score, with ONE consistent definition throughout."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/electrostatics.py",
+        "summary": "Measure electrostatic fields and geometry around the deGFP chromophore."
+      },
+      {
+        "file": "source-history/degfp-minimizer/partner_handoff/analysis_source/audit_full_target.py",
+        "summary": "Audit the five saved full-target CRO complexes without submitting inference."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/worker.py",
+        "summary": "Run inside the pinned Mosaic environment; imports models only in worker jobs."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/pilot.py",
+        "summary": "Compare design and evaluation runs sequentially on one device."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/test_pilot.py",
+        "summary": "Check the pilot's time budgets, result collection, and candidate comparisons."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/common.py",
+        "summary": "Read pilot inputs, identify sequences, and classify comparison results."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/md_microstate.py",
+        "summary": "Optional fixed-microstate MD on an explicitly prepared PDB; NOT constant-pH MD."
+      },
+      {
+        "file": "source-history/scripts/egfr_pilot/prepare.py",
+        "summary": "Download public targets, map canonical residues, and preserve raw inputs."
+      },
+      {
+        "file": "prince/prince-model/benchmark/bootstrap.py",
+        "summary": "Bootstrap paired benchmark differences by antigen cluster."
+      },
+      {
+        "file": "prince/prince-model/benchmark/metrics.py",
+        "summary": "Pure metric functions for the hotspot-preflight benchmark."
+      },
+      {
+        "file": "prince/prince-model/benchmark/manifest.py",
+        "summary": "Read and write the benchmark manifest, including residue and chain identities."
+      },
+      {
+        "file": "prince/prince-model/benchmark/sabdab.py",
+        "summary": "The SAbDab2 summary table: fetching, pinning, parsing, chain resolution."
+      },
+      {
+        "file": "prince/prince-model/benchmark/render.py",
+        "summary": "Render the benchmark results and uncertainty estimates as Markdown."
+      },
+      {
+        "file": "prince/prince-model/benchmark/epitope.py",
+        "summary": "Deriving epitope residues from antibody-antigen coordinates."
+      },
+      {
+        "file": "prince/prince-model/benchmark/arms.py",
+        "summary": "Define predictor and filter outputs for each benchmark arm."
+      },
+      {
+        "file": "prince/prince-model/benchmark/__init__.py",
+        "summary": "Epitope benchmark construction."
+      },
+      {
+        "file": "prince/prince-model/benchmark/cluster.py",
+        "summary": "Antigen-level redundancy clustering and held-out splits."
+      },
+      {
+        "file": "prince/prince-model/benchmark/delta.py",
+        "summary": "Calculate paired differences and confidence intervals between benchmark arms."
+      },
+      {
+        "file": "prince/prince-model/benchmark/evaluate.py",
+        "summary": "Evaluate the four predictor and filter combinations on the benchmark."
+      },
+      {
+        "file": "prince/prince-model/benchmark/structures.py",
+        "summary": "Locating benchmark coordinates, and isolating the antigen from the complex."
+      },
+      {
+        "file": "prince/prince-model/benchmark/geometric_predictor.py",
+        "summary": "Run the geometric site proposer on benchmark antigen structures."
+      },
+      {
+        "file": "prince/prince-model/benchmark/preflight_filter.py",
+        "summary": "Apply PRINCE's structural preflight checks to benchmark candidates."
+      },
+      {
+        "file": "prince/prince-model/benchmark/score.py",
+        "summary": "Scoring one arm: per-instance metrics, macro-averaged by antigen cluster."
+      },
+      {
+        "file": "prince/prince-model/research/learning_curve.py",
+        "summary": "Measure how ranking performance changes with the amount of training data."
+      },
+      {
+        "file": "prince/prince-model/research/build_site_benchmark.py",
+        "summary": "Build a site-level benchmark from the public minibinder-designability dataset."
+      },
+      {
+        "file": "prince/prince-model/research/build_cache_all.py",
+        "summary": "Full-manifest twin of build_cache.py: identical feature semantics, every interface."
+      },
+      {
+        "file": "prince/prince-model/research/metric_f1.py",
+        "summary": "Calculate site F1 and Jaccard scores for each proposed patch."
+      },
+      {
+        "file": "prince/prince-model/research/split_homology_audit.py",
+        "summary": "Audit homology across antigen splits and recompute the affected comparisons."
+      },
+      {
+        "file": "prince/prince-model/research/acquire_minibinder_metadata.py",
+        "summary": "Retrieve public dataset documentation/tables, never submit private inputs."
+      },
+      {
+        "file": "prince/prince-model/research/paths.py",
+        "summary": "Shared paths for research scripts; large generated data stays outside source."
+      },
+      {
+        "file": "prince/prince-model/research/score_site_benchmark.py",
+        "summary": "Score PRINCE site scores against the minibinder-designability benchmark."
+      },
+      {
+        "file": "prince/prince-model/research/run_pesto.py",
+        "summary": "Run the pretrained PeSTo model as an external comparator over the benchmark antigens."
+      },
+      {
+        "file": "prince/prince-model/research/residue_h2h.py",
+        "summary": "Residue-level AUROC head-to-head: PRINCE v2 (CV-locked) vs BepiPred-3.0 vs PeSTo."
+      },
+      {
+        "file": "prince/prince-model/research/designability_transfer.py",
+        "summary": "Transfer the CV-LOCKED PRINCE model onto the minibinder-designability benchmark."
+      },
+      {
+        "file": "prince/prince-model/research/build_cache.py",
+        "summary": "Build target-only features and exact original patch pools without changing PRINCE."
+      },
+      {
+        "file": "prince/prince-model/research/train_models.py",
+        "summary": "Validation-selected site models."
+      },
+      {
+        "file": "prince/prince-model/research/build_mpnn_features.py",
+        "summary": "Align ProteinMPNN inverse-folding features with candidate surface residues."
+      },
+      {
+        "file": "prince/prince-model/research/build_atom_features.py",
+        "summary": "Atom-level geometric features for candidate surface residues."
+      },
+      {
+        "file": "prince/prince-model/research/arm.py",
+        "summary": "Define the SAbDab2-based sensitivity arm for PRINCE's held-out read."
+      },
+      {
+        "file": "prince/prince-model/research/label_sampling_audit.py",
+        "summary": "Audit how incomplete epitope labels affect negative benchmark examples."
+      },
+      {
+        "file": "prince/prince-model/research/atom_learnability.py",
+        "summary": "Test whether atom-level target geometry predicts the benchmark labels."
+      },
+      {
+        "file": "prince/prince-model/research/sweep.py",
+        "summary": "Full-scale pre-registered sweep: feature blocks x model families, grouped CV."
+      },
+      {
+        "file": "prince/prince-model/research/build_esm.py",
+        "summary": "Per-residue ESM2 embeddings for every full-antigen cache context."
+      },
+      {
+        "file": "prince/prince-model/research/designability_train.py",
+        "summary": "Design-level minibinder designability model from site/footprint features."
+      },
+      {
+        "file": "prince/prince-model/research/relock_top3.py",
+        "summary": "Reanalyze the retained validation table using a top-three endpoint."
+      },
+      {
+        "file": "prince/prince-model/research/crossmap.py",
+        "summary": "Cross-map PRINCE's antigen-clustered benchmark onto the SAbDab2 published splits."
+      },
+      {
+        "file": "prince/prince-model/research/recovery_counts.py",
+        "summary": "Count recovered epitopes for the locked model and comparison baselines."
+      },
+      {
+        "file": "prince/prince-model/tests/test_structure.py",
+        "summary": "Tests for structure loading, numbering maps, and unmodelled-residue detection."
+      },
+      {
+        "file": "prince/prince-model/tests/test_html_report.py",
+        "summary": "Tests for the single-file HTML report."
+      },
+      {
+        "file": "prince/prince-model/tests/test_prince_service.py",
+        "summary": "Boundary regressions: source grounding, review-gated ranking and local API safety."
+      },
+      {
+        "file": "prince/prince-model/tests/conftest.py",
+        "summary": "Shared synthetic structures and numbering fixtures for PRINCE tests."
+      },
+      {
+        "file": "prince/prince-model/tests/test_packaging.py",
+        "summary": "Tests for the packaging, citation and standards metadata."
+      },
+      {
+        "file": "prince/prince-model/tests/test_numbering.py",
+        "summary": "Tests for the numbering-reconciliation check."
+      },
+      {
+        "file": "prince/prince-model/tests/test_ranker.py",
+        "summary": "Check frozen inference against independently saved XGBoost probabilities."
+      },
+      {
+        "file": "prince/prince-model/tests/test_record.py",
+        "summary": "Check the saved run-record schema and its provenance fields."
+      },
+      {
+        "file": "prince/prince-model/tests/test_propose.py",
+        "summary": "Proposing sites, tested as library code and then through the CLI."
+      },
+      {
+        "file": "prince/prince-model/tests/test_cli_stages.py",
+        "summary": "Check that analysis stages are available through the command-line interface."
+      },
+      {
+        "file": "prince/prince-model/tests/test_report.py",
+        "summary": "Check preflight results and their text and HTML reports."
+      },
+      {
+        "file": "prince/prince-model/tests/test_dwv_retrospective.py",
+        "summary": "Tests for the DWV retrospective scripts."
+      },
+      {
+        "file": "prince/prince-model/tests/test_predict.py",
+        "summary": "Tests for the site-proposal stage."
+      },
+      {
+        "file": "prince/prince-model/tests/test_patch.py",
+        "summary": "Surface patch enumeration and the patch-geometry check (C5)."
+      },
+      {
+        "file": "prince/prince-model/tests/test_burial.py",
+        "summary": "Tests for the burial check."
+      },
+      {
+        "file": "prince/prince-model/tests/test_evaluate.py",
+        "summary": "Tests for the benchmark evaluation harness."
+      },
+      {
+        "file": "prince/prince-model/tests/test_benchmark.py",
+        "summary": "Tests for the epitope benchmark pipeline."
+      },
+      {
+        "file": "prince/prince-model/tests/test_profiles.py",
+        "summary": "Tests for the named weight profiles."
+      },
+      {
+        "file": "prince/prince-model/tests/test_evidence.py",
+        "summary": "Tests for the literature-evidence layer."
+      },
+      {
+        "file": "prince/prince-model/tests/test_residue.py",
+        "summary": "Tests for the numbering contract."
+      },
+      {
+        "file": "prince/prince-model/tests/test_resolved.py",
+        "summary": "Tests for the resolved-residue check."
+      },
+      {
+        "file": "prince/prince-model/tests/test_cli.py",
+        "summary": "Check CLI exit codes for successful runs, warnings, and failures."
+      },
+      {
+        "file": "prince/prince-model/tests/test_standards.py",
+        "summary": "Tests for the synthetic-biology standards adapters."
+      },
+      {
+        "file": "prince/prince-model/scripts/run_evaluation.py",
+        "summary": "CLI for the benchmark evaluation, plus the markdown renderer."
+      },
+      {
+        "file": "prince/prince-model/scripts/evaluate_connected_sites.py",
+        "summary": "Evaluate every cached-feature held-out interface with real structural proposals."
+      },
+      {
+        "file": "prince/prince-model/scripts/summarize_connected_sites.py",
+        "summary": "Bootstrap complete saved site outcomes, without recomputing or sampling interfaces."
+      },
+      {
+        "file": "prince/prince-model/scripts/build_benchmark.py",
+        "summary": "Build the epitope benchmark manifest."
+      },
+      {
+        "file": "prince/prince-model/scripts/fit_epitope_weights.py",
+        "summary": "Fit epitope weights and compare them with within-instance label permutations."
+      },
+      {
+        "file": "prince/prince-model/scripts/repair_feature_records.py",
+        "summary": "Recover explicit cached-feature identities; remove symmetry-copy candidate rows."
+      },
+      {
+        "file": "prince/prince-model/scripts/patch_pool_diagnostic.py",
+        "summary": "Measure how often candidate patches touch the labeled epitope by chance."
+      },
+      {
+        "file": "prince/prince-model/scripts/verify_artifacts.py",
+        "summary": "Verify the distributed model, example, and evaluation artifact checksums."
+      },
+      {
+        "file": "prince/prince-model/scripts/false_rejection_report.py",
+        "summary": "Aggregate the full-n false-rejection run into the primary result."
+      },
+      {
+        "file": "prince/prince-model/scripts/false_rejection_full.py",
+        "summary": "Filter false-rejection rate at full n, parallel and resumable."
+      },
+      {
+        "file": "prince/prince-model/scripts/dwv_retrospective_report.py",
+        "summary": "Render the saved DWV retrospective measurements and source references."
+      },
+      {
+        "file": "prince/prince-model/scripts/patch_pool_analyse.py",
+        "summary": "Compare patch-ranker errors with uniform patch-selection baselines."
+      },
+      {
+        "file": "prince/prince-model/scripts/patch_pool_significance.py",
+        "summary": "Exact significance test of a patch ranker against uniform patch selection."
+      },
+      {
+        "file": "prince/prince-model/scripts/dwv_retrospective.py",
+        "summary": "Measure target-context and interface changes in the DWV retrospective."
+      },
+      {
+        "file": "prince/prince-model/scripts/train_ranker.py",
+        "summary": "CPU-only, connected-component reanalysis of cached real structural features."
+      },
+      {
+        "file": "prince/prince-model/scripts/featurise_benchmark.py",
+        "summary": "Per-residue featurisation for the ranker-fix experiment."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/service_cli.py",
+        "summary": "CLI boundaries for the local service and combined evidence analysis."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/findings.py",
+        "summary": "Shared severity, verdict, and finding records for structural checks."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/server.py",
+        "summary": "Loopback-only PRINCE JSON service over the existing structural analysis core."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/html_report.py",
+        "summary": "A single-file, offline HTML report for one preflight run."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/propose.py",
+        "summary": "Propose and rank surface patches as potential binder sites."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/__init__.py",
+        "summary": "PRINCE structural preflight checks and site-proposal interfaces."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/residue.py",
+        "summary": "Parse hotspot specifications and preserve author residue numbering."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/cli.py",
+        "summary": "Run PRINCE checks and site proposals from the command line."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/record.py",
+        "summary": "Save input hashes, settings, and findings for a reproducible preflight run."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/structure.py",
+        "summary": "Structure loading, numbering maps, and unmodelled-residue detection."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/report.py",
+        "summary": "Run structural checks and summarize their findings."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/surface.py",
+        "summary": "Enumerate surface patches and measure their contact geometry."
+      },
+      {
+        "file": "prince/prince-model/src/prince_ranker/__init__.py",
+        "summary": "Inference for PRINCE's frozen patch classifier."
+      },
+      {
+        "file": "prince/prince-model/src/prince_ranker/inference.py",
+        "summary": "Validate prepared patch features and apply the published model unchanged."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/evidence/grader.py",
+        "summary": "Draft literature-evidence rows for a human reviewer to accept or reject."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/evidence/__init__.py",
+        "summary": "Extract and review literature evidence used alongside structural scores."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/evidence/table.py",
+        "summary": "Load evidence rows and enforce their human-review status."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/evidence/extract.py",
+        "summary": "Conservative source-span extraction and explicitly uncalibrated evidence ranking."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/patch.py",
+        "summary": "Check whether a hotspot set fits within one accessible surface patch."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/burial.py",
+        "summary": "Compare target exposure in a fragment and its surrounding assembly."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/sasa.py",
+        "summary": "Calculate solvent-accessible surface areas and residue burial."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/__init__.py",
+        "summary": "PRINCE structural preflight checks and site-proposal interfaces."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/numbering.py",
+        "summary": "Reconcile a hotspot list against the structure's two numbering schemes."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/assembly.py",
+        "summary": "Building the biological assembly from the deposited asymmetric unit."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/checks/resolved.py",
+        "summary": "Check whether requested hotspot residues have usable coordinates."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/schema/__init__.py",
+        "summary": "The published JSON Schema for the run record."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/geometric.py",
+        "summary": "Score surface patches with the four-feature geometric baseline."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/registry.py",
+        "summary": "Register site predictors and load them by name."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/__init__.py",
+        "summary": "Site proposal: rank surface patches as candidate binder sites."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/features.py",
+        "summary": "Measure the four geometric features used by the baseline site scorer."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/normalise.py",
+        "summary": "Convert predictor scores to comparable midrank percentiles."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/scorefile.py",
+        "summary": "Load and normalize per-residue scores from an external predictor."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/external.py",
+        "summary": "Use externally calculated residue scores to rank candidate patches."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/profiles.py",
+        "summary": "Named weight profiles for the geometric predictor, each carrying its own provenance."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/predict/base.py",
+        "summary": "The predictor interface, and patch-level aggregation of residue scores."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/emit/__init__.py",
+        "summary": "PRINCE structural preflight checks and site-proposal interfaces."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/standards/__init__.py",
+        "summary": "Bridges to published synthetic-biology standards."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/standards/rfc.py",
+        "summary": "Reverse-translate binder sequences while checking iGEM assembly constraints."
+      },
+      {
+        "file": "prince/prince-model/src/hotspot_preflight/standards/sbol.py",
+        "summary": "Export PDB-derived protein annotations through the SBOL 3 interface."
+      },
+      {
+        "file": "prince/prince-model/benchmark/external_bepipred/run.py",
+        "summary": "Local official BepiPred-3.0 comparison; no uploads or fitting on test labels."
+      },
+      {
+        "file": "backends/runpod/esmfold_worker.py",
+        "summary": "Run ESMFold in its separate environment and return scores as JSON."
+      },
+      {
+        "file": "backends/runpod/__init__.py",
+        "summary": "RunPod pod bootstrap and the ESMFold scoring worker."
+      },
+      {
+        "file": "backends/nebius/runner.py",
+        "summary": "Run remote jobs over SSH and collect their result CSVs."
+      },
+      {
+        "file": "backends/nebius/config.py",
+        "summary": "Configuration for the Nebius single-VM V5 5G51-hotspots campaign runner."
+      },
+      {
+        "file": "backends/nebius/checkpoint.py",
+        "summary": "JSON-backed campaign state for the sequential Nebius runner."
+      },
+      {
+        "file": "backends/nebius/__init__.py",
+        "summary": "Nebius single-VM H100 runner with checkpointed, resumable campaigns."
+      },
+      {
+        "file": "backends/nebius/run_validation.py",
+        "summary": "Validate the 5G51 V4 sequences on one Nebius GPU instance."
+      },
+      {
+        "file": "backends/nebius/run_campaign.py",
+        "summary": "5G51 V5-hotspots design runner for a Nebius H100/H200 VM."
+      },
+      {
+        "file": "backends/modal/modal_5g51.py",
+        "summary": "Modal app: 5G51 minibinder design campaign on GPU."
+      },
+      {
+        "file": "backends/modal/modal_god_5g51_v4.py",
+        "summary": "Modal app for 5G51 V4 beta-optimized minibinder design campaign."
+      },
+      {
+        "file": "backends/modal/modal_boltz2.py",
+        "summary": "Validate the RBX1 V3b candidate panel with Boltz-2 on Modal."
+      },
+      {
+        "file": "backends/modal/modal_design_v5.py",
+        "summary": "Modal orchestrator for V5 minibinder design + consensus validation."
+      },
+      {
+        "file": "backends/modal/modal_boltz2_round2.py",
+        "summary": "Modal app: Boltz2 independent cross-validation for Round 2 candidates."
+      },
+      {
+        "file": "backends/modal/__init__.py",
+        "summary": "Modal serverless GPU launchers (the first backend)."
+      },
+      {
+        "file": "backends/modal/modal_god.py",
+        "summary": "Launch the RBX1 campaign with its selected loss settings on Modal."
+      },
+      {
+        "file": "backends/modal/modal_boltz2_5g51_v4.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 V4 candidates."
+      },
+      {
+        "file": "backends/modal/modal_boltz2_5g51.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 (DWV-VP3) candidates."
+      },
+      {
+        "file": "backends/modal/modal_2lgv.py",
+        "summary": "Modal app: RBX1 (2LGV) minibinder design campaign on GPU."
+      },
+      {
+        "file": "backends/modal/modal_god_5g51.py",
+        "summary": "Launch the DWV VP3 campaign with its selected loss settings on Modal."
+      },
+      {
+        "file": "backends/modal/modal_boltz2_5g51_v4_run.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 V4 candidates."
+      },
+      {
+        "file": "backends/modal/modal_run.py",
+        "summary": "Modal script for running JAX + CUDA GPU workloads remotely."
+      },
+      {
+        "file": "backends/modal/modal_boltz2_5g51_combined.py",
+        "summary": "Modal app: Boltz2 cross-validation for 5G51 COMBINED candidates."
+      },
+      {
+        "file": "backends/vast/config.py",
+        "summary": "Vast.ai configuration for mosaic protein design campaigns."
+      },
+      {
+        "file": "backends/vast/monitor.py",
+        "summary": "Live monitoring dashboard for running Vast.ai campaigns."
+      },
+      {
+        "file": "backends/vast/__init__.py",
+        "summary": "Vast.ai spot-instance orchestrator with resume and cleanup."
+      },
+      {
+        "file": "backends/vast/orchestrator.py",
+        "summary": "Vast.ai orchestrator for mosaic protein design campaigns."
+      },
+      {
+        "file": "backends/vast/vastai.py",
+        "summary": "Manage Vast.ai instances and persist campaign state."
+      }
+    ]
+  }
+}
