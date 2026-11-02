@@ -1,0 +1,23 @@
+{
+  "id": "cd-hit",
+  "displayName": "CD-HIT",
+  "version": "4.8.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-2.0-only",
+  "image": "ghcr.io/papercrane/cd-hit:4.8.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 4,
+    "note": "Request-scoped protein sequence clustering with no external database; beta until live binary and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "identity": 0.9, "coverage": 0.8 },
+  "composes": []
+}

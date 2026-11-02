@@ -1,0 +1,23 @@
+{
+  "id": "pdb-tools",
+  "displayName": "pdb-tools",
+  "version": "2.7.0",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/pdb-tools:2.7.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 1,
+    "memoryGb": 2,
+    "estSecondsPerDesign": 2,
+    "note": "Deterministic PDB cleanup plus validation; beta until representative live structure smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "removeHeteroatoms": false, "removeHydrogens": false },
+  "composes": []
+}

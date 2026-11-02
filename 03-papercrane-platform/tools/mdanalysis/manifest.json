@@ -1,0 +1,23 @@
+{
+  "id": "mdanalysis",
+  "displayName": "MDAnalysis",
+  "version": "2.10.0",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "LGPL-3.0-or-later",
+  "image": "ghcr.io/papercrane/mdanalysis:2.10.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 10,
+    "note": "RMSD, radius-of-gyration, and coordinate geometry analysis; beta until static and multi-model structure paths pass live smoke tests."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "selection": "protein and name CA" },
+  "composes": []
+}

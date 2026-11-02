@@ -1,0 +1,18 @@
+{
+  "sequences": [
+    {
+      "id": "design_0001",
+      "sequence": "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ"
+    },
+    {
+      "id": "design_0002",
+      "sequence": "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPS"
+    }
+  ],
+  "seeds": [0],
+  "params": {
+    "mode": "score",
+    "pool": "mean",
+    "layer": 33
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "solublempnn",
+  "displayName": "SolubleMPNN",
+  "version": "1.0.1",
+  "adapterVersion": "a1",
+  "category": "sequence_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/solublempnn:1.0.1-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 10,
+    "estSecondsPerDesign": 5
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "temperature": 0.1,
+    "omit_aas": "CXHKR",
+    "num_seq_per_target": 1,
+    "solubility_strictness": "default"
+  },
+  "composes": []
+}

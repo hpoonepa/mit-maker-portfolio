@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/{{id}}/input.json",
+  "title": "{{displayName}} Input Parameters",
+  "description": "{{displayName}}-specific parameters passed via DesignRequest.toolParams.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "target_chain": {
+      "description": "Chain id of the target in the input PDB.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]$"
+    },
+    "num_recycles": {
+      "description": "Optional recycles for the internal validation pass.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    }
+  }
+}

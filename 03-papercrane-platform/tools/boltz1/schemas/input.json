@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/boltz1/input.json",
+  "title": "Boltz-1 Input Parameters",
+  "description": "Boltz-1 is used as a structure predictor / binder validator. The request carries a target sequence plus one or more binder sequences to co-fold; the target PDB, if supplied, is used as a structural template. Shape matches Boltz-2 — only the model checkpoint differs.",
+  "type": "object",
+  "required": ["targetSeq", "binders"],
+  "additionalProperties": false,
+  "properties": {
+    "targetPdb": {
+      "description": "Optional path to the target PDB, used as a templating hint for the target chain.",
+      "type": "string"
+    },
+    "targetSeq": {
+      "description": "Amino-acid sequence of the target chain (chain A in the emitted YAML config).",
+      "type": "string",
+      "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+    },
+    "binders": {
+      "description": "One or more binder sequences to co-fold with the target. Each produces a separate prediction.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["sequence", "seed"],
+        "additionalProperties": false,
+        "properties": {
+          "sequence": {
+            "type": "string",
+            "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+          },
+          "seed": { "type": "integer" }
+        }
+      }
+    },
+    "params": {
+      "description": "Boltz-1 sampler knobs; mapped directly to the upstream CLI.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recycling_steps": {
+          "description": "Number of recycling iterations through the trunk.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "sampling_steps": {
+          "description": "Diffusion sampling steps per prediction.",
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 1000
+        },
+        "diffusion_samples": {
+          "description": "Number of diffusion samples drawn per binder (best is kept).",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 25
+        }
+      }
+    }
+  }
+}

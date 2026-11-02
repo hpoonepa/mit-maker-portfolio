@@ -1,0 +1,49 @@
+# Getting started
+
+Paper Crane gives you every modern protein binder design tool — RFdiffusion, BindCraft,
+Boltz-2, Chai-1, AlphaFold 3, and the MPNN family — under one reproducible methodology.
+You bring a target. We run the pipeline, score the candidates, and hand you back a ranked
+list of designs.
+
+## Install the CLI
+
+```bash
+npm i -g @papercrane/cli
+papercrane login
+```
+
+The first time you run `login`, a browser window opens. Sign in with the same account you
+use for [app.papercrane.bio](https://app.papercrane.bio). Your local config lives at
+`~/.papercrane/config.toml` — never commit that file.
+
+## Authenticate with an API key
+
+For CI or scripted runs, mint a key from the [Authentication](/api/auth) page in the app
+and export it:
+
+```bash
+export PAPERCRANE_API_KEY=pcr_live_...
+```
+
+Keys are scoped per-project. Use a separate key per pipeline so you can rotate without
+breaking everything else.
+
+## What you get on free tier
+
+- 50 seeds / month (one seed = one design through one tool node)
+- Two concurrent jobs
+- 30 days of design retention
+- Read-only API access
+
+Upgrade paths and overage rules are described on the [Billing](/billing) page.
+
+## Next
+
+- [Quickstart](/quickstart) — run your first binder pipeline in five minutes
+- [Concepts](/concepts/projects-and-targets) — the data model behind the platform
+- [Tools](/tools) — what each tool does and when to reach for it
+
+<Callout variant="tip">
+We default to a sane pipeline (RFdiffusion → ProteinMPNN → Boltz-2). You don't have to
+pick tools yourself if you don't want to — Paper Crane will choose.
+</Callout>

@@ -1,0 +1,111 @@
+# Paper Crane - local development stack
+#
+# Services:
+#   - postgres  : primary relational store (port 5432)
+#   - redis     : queues + cache (port 6379)
+#   - minio     : S3/R2-compatible object store (9000 s3, 9001 console)
+#   - minio-init: one-shot bucket bootstrapper
+#
+# Usage:
+#   docker compose up -d
+#   docker compose ps
+#   docker compose down      # stop, keep data
+#   docker compose down -v   # stop + wipe volumes (full reset)
+#
+# For overrides (port changes, extra services, etc.) copy
+#   docker-compose.override.yml.example -> docker-compose.override.yml
+# and customize. Compose auto-merges override files.
+
+services:
+  postgres:
+    image: postgres:15.7-alpine
+    container_name: papercrane-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: papercrane
+    volumes:
+      - papercrane-pgdata:/var/lib/postgresql/data
+      - ./docker/dev/postgres/init.sql:/docker-entrypoint-initdb.d/00-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d papercrane"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - papercrane
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: papercrane-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - papercrane-redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    networks:
+      - papercrane
+
+  minio:
+    image: minio/minio:RELEASE.2024-08-03T04-33-23Z
+    container_name: papercrane-minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"  # S3 API
+      - "9001:9001"  # Web console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - papercrane-miniodata:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - papercrane
+
+  minio-init:
+    image: minio/mc:RELEASE.2024-08-03T04-15-10Z
+    container_name: papercrane-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    environment:
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+      MINIO_BUCKET: papercrane-dev
+    entrypoint: ["/bin/sh", "/init/init.sh"]
+    volumes:
+      - ./docker/dev/minio/init.sh:/init/init.sh:ro
+    restart: "no"
+    networks:
+      - papercrane
+
+networks:
+  papercrane:
+    name: papercrane
+    driver: bridge
+
+volumes:
+  papercrane-pgdata:
+    name: papercrane-pgdata
+  papercrane-redisdata:
+    name: papercrane-redisdata
+  papercrane-miniodata:
+    name: papercrane-miniodata

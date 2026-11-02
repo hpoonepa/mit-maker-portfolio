@@ -1,0 +1,1105 @@
+// Paper Crane — Prisma schema
+// Source of truth for plan 01 §3 data model, plus billing/flags/tools/benchmark mirrors.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+// Row-Level Security
+// ─────────────────────────────────────────────────────────────────────────────
+// Prisma does not manage RLS policies. They are enabled and defined via a
+// hand-written migration at:
+//
+//     prisma/migrations/<timestamp>_enable_rls/migration.sql
+//
+// The API server connects as a service role that bypasses RLS, then issues
+// `SET LOCAL app.current_user = $uid` per request through `src/rls.ts`. Direct
+// Supabase client queries (user-facing only) hit the policies defined in the
+// migration file. This is defense in depth: app layer + database layer.
+//
+// Every tenant-scoped table carries an `orgId` column with a covering index.
+// ─────────────────────────────────────────────────────────────────────────────
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Identity ────────────────────────────────────────────────────────────────
+
+enum OrgTier {
+  free
+  pro
+  frontier
+}
+
+enum OrgRole {
+  owner
+  admin
+  member
+  viewer
+}
+
+model Organization {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug          String   @unique
+  tier          OrgTier  @default(free)
+  seedsQuota    Int      @default(0) @map("seeds_quota")
+  seedsUsed     Int      @default(0) @map("seeds_used")
+  retentionDays Int      @default(7) @map("retention_days")
+  // ─── GPU spend tracking (beta hard cap) ────────────────────────────────
+  // Per-org dollar cap on GPU spend during the private beta. Configurable
+  // so the founders can raise it for individual orgs without a code change.
+  // `gpuSpendUsd` is the running total of `GpuSpend.estimatedUsd` (adjusted
+  // toward `actualUsd` once the worker reconciles). The submit mutation
+  // refuses the job when `gpuSpendUsd + estimate > gpuSpendCapUsd`.
+  gpuSpendCapUsd Decimal @default(50.00) @map("gpu_spend_cap_usd") @db.Decimal(10, 4)
+  gpuSpendUsd    Decimal @default(0)     @map("gpu_spend_usd")     @db.Decimal(10, 4)
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  members       OrgMember[]
+  projects      Project[]
+  targets       Target[]
+  jobs          Job[]
+  designs       Design[]
+  apiKeys       ApiKey[]
+  usageSeeds    UsageSeed[]
+  gpuSpends     GpuSpend[]
+  subscription  Subscription?
+  featureFlag   FeatureFlag?
+  defaultForUsers User[]       @relation("UserDefaultOrg")
+  webhooks      Webhook[]
+  auditLogs     AuditLog[]
+  invites       Invite[]
+  notifications Notification[]
+  onboardings   UserOnboarding[]
+  integrations  Integration[]
+  designTags    DesignTag[]
+  feedback      Feedback[]    @relation("FeedbackOrg")
+  modalCredential ModalCredential?
+
+  @@map("organizations")
+}
+
+model User {
+  // Mirrors Supabase `auth.users(id)`. Populated by trigger on signup.
+  id           String   @id @db.Uuid
+  email        String   @unique
+  name         String?
+  defaultOrgId String?  @map("default_org_id") @db.Uuid
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  // Wave 15 — beta program. Tracks the most recent changelog `version`
+  // string the user has acknowledged via the WhatsNew modal. NULL means
+  // they have never seen one (new account); we surface every published
+  // entry on first dashboard load.
+  lastChangelogSeen String? @map("last_changelog_seen")
+
+  // Durable private-beta admission. Authentication alone does not grant
+  // access while the beta gate is enabled; a validated invite sets this once.
+  betaAccessGrantedAt DateTime? @map("beta_access_granted_at") @db.Timestamptz(6)
+
+  defaultOrg   Organization? @relation("UserDefaultOrg", fields: [defaultOrgId], references: [id])
+  memberships  OrgMember[]
+  projects     Project[]     @relation("ProjectCreatedBy")
+  auditLogs    AuditLog[]
+  invitesSent  Invite[]      @relation("InviteInvitedBy")
+  notifications     Notification[]
+  notificationPrefs NotificationPreference[]
+  onboarding        UserOnboarding?
+  annotations       DesignAnnotation[] @relation("AnnotationAuthor")
+  designStars       DesignStar[]       @relation("DesignStarUser")
+  projectVersions   ProjectVersion[]   @relation("ProjectVersionAuthor")
+  feedback          Feedback[]         @relation("FeedbackUser")
+  betaInvitesGenerated BetaInvite[]    @relation("BetaInviteGeneratedBy")
+  betaInvitesUsed      BetaInvite[]    @relation("BetaInviteUsedBy")
+
+  @@map("users")
+}
+
+model OrgMember {
+  orgId     String   @map("org_id") @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  role      OrgRole  @default(member)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org  Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  user User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([orgId, userId])
+  @@index([userId])
+  @@map("org_members")
+}
+
+// ─── Workspace ───────────────────────────────────────────────────────────────
+
+model Project {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId       String   @map("org_id") @db.Uuid
+  name        String
+  slug        String   @default("")
+  description String?
+  createdBy   String?  @map("created_by") @db.Uuid
+  isPublic    Boolean   @default(false) @map("is_public")
+  publicId    String?   @unique @map("public_id")
+  publishedAt DateTime? @map("published_at") @db.Timestamptz(6)
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org      Organization     @relation(fields: [orgId], references: [id])
+  creator  User?            @relation("ProjectCreatedBy", fields: [createdBy], references: [id])
+  targets  Target[]
+  jobs     Job[]
+  versions ProjectVersion[]
+
+  @@unique([orgId, slug])
+  @@index([orgId, createdAt(sort: Desc)])
+  @@map("projects")
+}
+
+// ─── Project versioning (Wave 14) ────────────────────────────────────────────
+// Immutable snapshot history of a project. A new row is appended on rename,
+// hotspot save, default-params change, or when the user explicitly clicks
+// "Save snapshot". Reverting writes a *new* row whose `snapshot` is a copy
+// of the target version (so revert itself is auditable). Forking does not
+// touch this table — it creates a brand-new project that links back via
+// `metadata.forkedFrom` on the destination project.
+//
+// `version` is monotonically increasing per project, starting at 1. The
+// (projectId, version) unique guarantees no holes/dupes; the trpc `revert`
+// mutation grabs `MAX(version) + 1` inside the same RLS transaction.
+//
+// Snapshot shape (Json):
+//   {
+//     "name": string,
+//     "description": string | null,
+//     "hotspots": Hotspot[] | null,
+//     "defaultParams": Record<string, unknown>,
+//     "metadata"?: Record<string, unknown>
+//   }
+//
+// Versions are immutable — there is no UPDATE policy in the migration.
+
+model ProjectVersion {
+  id          String   @id @default(cuid())
+  projectId   String   @map("project_id") @db.Uuid
+  version     Int
+  authorId    String   @map("author_id") @db.Uuid
+  description String?
+  snapshot    Json     @db.JsonB
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  author  User    @relation("ProjectVersionAuthor", fields: [authorId], references: [id])
+
+  @@unique([projectId, version])
+  @@index([projectId, createdAt(sort: Desc)])
+  @@map("project_versions")
+}
+
+model Target {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId       String   @map("org_id") @db.Uuid
+  projectId   String?  @map("project_id") @db.Uuid
+  name        String
+  pdbId       String?  @map("pdb_id")
+  artifactKey String   @map("artifact_key")
+  hotspots    Json?    @db.JsonB
+  checksum    String
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org     Organization @relation(fields: [orgId], references: [id])
+  project Project?     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  jobs    Job[]
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([projectId])
+  @@map("targets")
+}
+
+// ─── Jobs & Designs ──────────────────────────────────────────────────────────
+
+enum JobStatus {
+  queued
+  preparing
+  running
+  cancelling
+  cancelled
+  partial
+  succeeded
+  failed
+  purged
+}
+
+enum GpuBackend {
+  modal
+  vastai
+  vpc
+}
+
+model Job {
+  id              String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId           String      @map("org_id") @db.Uuid
+  projectId       String?     @map("project_id") @db.Uuid
+  targetId        String?     @map("target_id") @db.Uuid
+  tool            String
+  toolVersion     String      @map("tool_version")
+  // Provenance: resolved from the Tool catalog row at submit time so a result
+  // is reproducible even after the catalog moves on. Nullable — rows created
+  // before the provenance migration carry none.
+  adapterVersion  String?     @map("adapter_version")
+  imageDigest     String?     @map("image_digest")
+  params          Json        @db.JsonB
+  seedsRequested  Int         @map("seeds_requested")
+  status          JobStatus
+  gpuBackend      GpuBackend? @map("gpu_backend")
+  queueTier      String      @default("pro") @map("queue_tier")
+  // Monotonic worker attempt + heartbeat make retries resumable and let the
+  // sweeper distinguish an active long-running model from an orphaned job.
+  attempt        Int         @default(0)
+  heartbeatAt    DateTime?   @map("heartbeat_at") @db.Timestamptz(6)
+  seedsConsumed   Int         @default(0) @map("seeds_consumed")
+  error           Json?       @db.JsonB
+  submittedAt     DateTime    @default(now()) @map("submitted_at") @db.Timestamptz(6)
+  startedAt       DateTime?   @map("started_at") @db.Timestamptz(6)
+  completedAt     DateTime?   @map("completed_at") @db.Timestamptz(6)
+  expiresAt       DateTime    @map("expires_at") @db.Timestamptz(6)
+
+  org        Organization @relation(fields: [orgId], references: [id])
+  project    Project?     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  target     Target?      @relation(fields: [targetId], references: [id])
+  designs    Design[]
+  usageSeeds UsageSeed[]
+  audits     JobAudit[]
+  logs       JobLog[]
+  gpuSpends  GpuSpend[]
+
+  @@index([orgId, status, submittedAt(sort: Desc)])
+  @@index([status, heartbeatAt])
+  // Retention sweep reads expires_at for terminal jobs. Partial index is
+  // expressed via a raw migration; Prisma carries the unfiltered version.
+  @@index([expiresAt])
+  // Wave 12 — FK and tool-frequency indexes (added by 20260427150000_wave12_indexes).
+  @@index([targetId])
+  @@index([projectId])
+  @@index([tool])
+  @@index([orgId, tool, submittedAt(sort: Desc)])
+  @@map("jobs")
+}
+
+model Design {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  jobId       String   @map("job_id") @db.Uuid
+  orgId       String   @map("org_id") @db.Uuid
+  seed        Int
+  metrics     Json     @db.JsonB
+  artifactKey String   @map("artifact_key")
+  rank        Int?
+  // Design provenance: distinguishes real model output from dev/test fixtures.
+  // 'real' (worker persisted a validated provider seed), 'synthetic' (synth-job
+  // dev processor), 'stub' (Modal stub path), or 'unknown' (no origin evidence).
+  // Producers must explicitly record real origin; missing data never certifies it.
+  provenance  String   @default("unknown") @map("provenance")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  job         Job                @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  org         Organization       @relation(fields: [orgId], references: [id])
+  annotations DesignAnnotation[]
+  stars       DesignStar[]
+  tags        DesignTag[]        @relation("DesignTags")
+
+  @@unique([jobId, seed], map: "designs_job_id_seed_unique")
+  @@index([jobId, rank])
+  @@index([orgId, createdAt(sort: Desc)])
+  // GIN index on `metrics` JsonB is added via raw migration:
+  //   CREATE INDEX designs_metrics_gin ON designs USING GIN (metrics);
+  @@map("designs")
+}
+
+// ─── Wave 14 — Design annotations, tags, stars ───────────────────────────────
+// Lightweight collaboration layer on top of Designs:
+//   * DesignAnnotation — markdown comment thread (with @mentions in body).
+//   * DesignTag        — org-scoped, named/coloured chips (many-to-many).
+//   * DesignStar       — per-user "save" toggles, surfaced as gold stars.
+//
+// Tenant isolation flows through the parent Design's RLS — annotations and
+// stars cascade on Design delete; tags carry their own orgId for direct RLS.
+
+model DesignAnnotation {
+  id        String   @id @default(cuid())
+  designId  String   @map("design_id") @db.Uuid
+  authorId  String   @map("author_id") @db.Uuid
+  body      String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  design Design @relation(fields: [designId], references: [id], onDelete: Cascade)
+  author User   @relation("AnnotationAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([designId, createdAt(sort: Desc)])
+  @@index([authorId])
+  @@map("design_annotations")
+}
+
+model DesignTag {
+  id        String   @id @default(cuid())
+  orgId     String   @map("org_id") @db.Uuid
+  name      String
+  color     String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org     Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  designs Design[]     @relation("DesignTags")
+
+  @@unique([orgId, name])
+  @@index([orgId])
+  @@map("design_tags")
+}
+
+model DesignStar {
+  designId  String   @map("design_id") @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  starredAt DateTime @default(now()) @map("starred_at") @db.Timestamptz(6)
+
+  design Design @relation(fields: [designId], references: [id], onDelete: Cascade)
+  user   User   @relation("DesignStarUser", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([designId, userId])
+  @@index([userId, starredAt(sort: Desc)])
+  @@map("design_stars")
+}
+
+// ─── API keys & Usage ledger ─────────────────────────────────────────────────
+
+model ApiKey {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId       String    @map("org_id") @db.Uuid
+  name        String
+  prefix      String
+  hash        String
+  scopes      String[]
+  lastUsedAt  DateTime? @map("last_used_at") @db.Timestamptz(6)
+  revokedAt   DateTime? @map("revoked_at") @db.Timestamptz(6)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  // Optional TTL set at creation time. `null` = never expires. The auth layer
+  // treats `expires_at <= now()` as invalid alongside `revoked_at`.
+  expiresAt   DateTime? @map("expires_at") @db.Timestamptz(6)
+
+  // Rotation state. When an operator rotates a key, the OLD row is mutated:
+  //   rotated_at       := now()
+  //   grace_expires_at := now() + 24h
+  // and a NEW row is inserted with `rotated_from_id` pointing back at the
+  // old row's id. The old key keeps working until the cron sweeper revokes it
+  // (see apps/worker/src/apiKeyRotation/processor.ts). The new row never has
+  // rotated_at / grace_expires_at set — those are only ever written on the
+  // superseded half of a rotation pair.
+  rotatedAt      DateTime? @map("rotated_at") @db.Timestamptz(6)
+  graceExpiresAt DateTime? @map("grace_expires_at") @db.Timestamptz(6)
+  rotatedFromId  String?   @map("rotated_from_id") @db.Uuid
+
+  org         Organization @relation(fields: [orgId], references: [id])
+  rotatedFrom ApiKey?      @relation("ApiKeyRotation", fields: [rotatedFromId], references: [id])
+  rotatedTo   ApiKey[]     @relation("ApiKeyRotation")
+
+  // `CREATE UNIQUE INDEX ... WHERE revoked_at IS NULL` is a partial unique
+  // index. Prisma 5 does not express partial uniques, so the migration SQL
+  // creates it by hand; we keep a non-unique index here for lookup speed.
+  @@index([hash])
+  @@index([orgId, createdAt(sort: Desc)])
+  // Sweeper scans `grace_expires_at < now()`; a btree index keeps the scan
+  // cheap even as rotated rows accumulate.
+  @@index([graceExpiresAt])
+  @@index([rotatedFromId])
+  @@map("api_keys")
+}
+
+model UsageSeed {
+  id        BigInt   @id @default(autoincrement())
+  orgId     String   @map("org_id") @db.Uuid
+  jobId     String?  @map("job_id") @db.Uuid
+  seeds     Int
+  reason    String
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org Organization @relation(fields: [orgId], references: [id])
+  job Job?         @relation(fields: [jobId], references: [id])
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([jobId])
+  // Wave 12 — billing reports bucket by reason within a period.
+  @@index([orgId, reason, createdAt(sort: Desc)])
+  @@map("usage_seeds")
+}
+
+// ─── GPU spend ledger ────────────────────────────────────────────────────────
+// One row per job submission, written inside the same RLS transaction that
+// inserts the Job. `estimatedUsd` is what the cost calculator projected at
+// submit time and is also added to `organizations.gpu_spend_usd` for the
+// budget check. After the worker finishes, it overwrites `actualUsd` /
+// `secondsActual` with the Modal-reported truth (when available) and
+// adjusts the org's running total by `actualUsd - estimatedUsd`. On job
+// failure mid-run, the unconsumed portion is refunded back to the org.
+
+model GpuSpend {
+  id            BigInt   @id @default(autoincrement())
+  orgId         String   @map("org_id") @db.Uuid
+  jobId         String?  @map("job_id") @db.Uuid
+  tool          String
+  gpuType       String   @map("gpu_type")
+  estimatedUsd  Decimal  @map("estimated_usd") @db.Decimal(10, 4)
+  actualUsd     Decimal? @map("actual_usd")    @db.Decimal(10, 4)
+  secondsActual Int?     @map("seconds_actual")
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  job Job?         @relation(fields: [jobId], references: [id], onDelete: SetNull)
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([jobId])
+  @@index([orgId, tool])
+  @@map("gpu_spends")
+}
+
+// ─── Billing (Stripe mirror) ─────────────────────────────────────────────────
+
+enum SubscriptionStatus {
+  trialing
+  active
+  past_due
+  canceled
+  incomplete
+  incomplete_expired
+  unpaid
+  paused
+}
+
+model Subscription {
+  id                       String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId                    String             @unique @map("org_id") @db.Uuid
+  stripeCustomerId         String             @unique @map("stripe_customer_id")
+  stripeSubscriptionId     String             @unique @map("stripe_subscription_id")
+  /// Stripe subscription_item id for the metered `seed_overage` price.
+  /// Populated by the webhook handler on subscription.created / .updated.
+  /// Required to call `stripe.subscriptionItems.createUsageRecord(...)`.
+  stripeOverageItemId      String?            @map("stripe_overage_item_id")
+  status                   SubscriptionStatus
+  tier                     OrgTier
+  currentPeriodEnd         DateTime           @map("current_period_end") @db.Timestamptz(6)
+  createdAt                DateTime           @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt                DateTime           @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org Organization @relation(fields: [orgId], references: [id])
+
+  @@index([status])
+  @@index([currentPeriodEnd])
+  @@map("subscriptions")
+}
+
+// ─── Feature flags (per-org policy) ──────────────────────────────────────────
+
+enum OnCapBehavior {
+  block
+  overage
+}
+
+model FeatureFlag {
+  orgId                 String         @id @map("org_id") @db.Uuid
+  retentionDays         Int            @default(7) @map("retention_days")
+  maxConcurrent         Int            @default(2) @map("max_concurrent")
+  vpcEnabled            Boolean        @default(false) @map("vpc_enabled")
+  closedWeightsAllowed  Boolean        @default(false) @map("closed_weights_allowed")
+  byocRequired          Boolean        @default(false) @map("byoc_required")
+  onCap                 OnCapBehavior  @default(block) @map("on_cap")
+  notes                 String?
+  updatedAt             DateTime       @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@map("feature_flags")
+}
+
+// ─── Tool catalog ────────────────────────────────────────────────────────────
+
+enum ToolCategory {
+  backbone
+  sequence
+  structure
+  ranking
+  utility
+  composite
+}
+
+enum ToolTier {
+  free
+  pro
+  frontier
+}
+
+model Tool {
+  // `id` is a slug-like identifier ("rfdiffusion", "boltz-2"). Uses cuid() as
+  // a placeholder when a catalog entry is seeded without an explicit slug;
+  // seeds should always set `id` explicitly.
+  id             String        @id @default(cuid())
+  displayName    String        @map("display_name")
+  version        String
+  adapterVersion String        @map("adapter_version")
+  category       ToolCategory
+  tier           ToolTier      @default(free)
+  license        String
+  image          String
+  imageDigest    String        @map("image_digest")
+  compute        Json          @db.JsonB
+  inputSchema    Json          @map("input_schema") @db.JsonB
+  outputSchema   Json          @map("output_schema") @db.JsonB
+  defaultParams  Json          @default("{}") @map("default_params") @db.JsonB
+  composes       String[]      @default([])
+  active         Boolean       @default(true)
+  // Modal Function deployment reference — `<workspace>/<name>@<version>`. Null for
+  // tools that aren't deployed yet; the worker adapter falls back to a "not deployed"
+  // error in dev mode (intercepted earlier by the synth processor).
+  modalApp       String?       @map("modal_app")
+  // True for closed-weights / commercial-API tools (e.g. AlphaFold 3). Drives the
+  // ToolPicker "Contact sales" overlay independent of `tier`.
+  closedWeights  Boolean       @default(false) @map("closed_weights")
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime      @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  benchmarkRuns BenchmarkRun[]
+
+  @@index([category, tier])
+  @@index([active])
+  @@index([version])
+  @@map("tools")
+}
+
+// ─── Benchmark (plan 04 mirror) ──────────────────────────────────────────────
+
+enum BenchmarkRunStatus {
+  pending
+  running
+  succeeded
+  failed
+}
+
+enum BenchmarkTrigger {
+  nightly
+  weekly
+  on_demand
+  submission
+  rerun
+}
+
+model BenchmarkRun {
+  id                  String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  runSlug             String             @unique @map("run_slug") // pc-run-7f3a9e2c
+  benchmarkVersion    String             @map("benchmark_version")
+  toolId              String             @map("tool_id")
+  toolVersion         String             @map("tool_version")
+  targetId            String             @map("target_id")
+  targetFingerprint   String             @map("target_fingerprint")
+  configHash          String             @map("config_hash")
+  config              Json               @db.JsonB
+  seedRangeStart      Int                @map("seed_range_start")
+  seedRangeEnd        Int                @map("seed_range_end")
+  compute             Json               @db.JsonB
+  containerDigest     String             @map("container_digest")
+  resultsDigest       String?            @map("results_digest")
+  costUsd             Decimal?           @map("cost_usd") @db.Decimal(10, 4)
+  wallclockSec        Int?               @map("wallclock_sec")
+  status              BenchmarkRunStatus @default(pending)
+  trigger             BenchmarkTrigger
+  manifestIpfsCid     String?            @map("manifest_ipfs_cid")
+  manifestS3Key       String?            @map("manifest_s3_key")
+  error               Json?              @db.JsonB
+  startedAt           DateTime?          @map("started_at") @db.Timestamptz(6)
+  completedAt         DateTime?          @map("completed_at") @db.Timestamptz(6)
+  createdAt           DateTime           @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  tool        Tool                  @relation(fields: [toolId], references: [id])
+  submission  BenchmarkSubmission?  @relation(fields: [submissionId], references: [id])
+  submissionId String?              @map("submission_id") @db.Uuid
+
+  @@index([toolId, targetId, benchmarkVersion])
+  @@index([benchmarkVersion, status])
+  @@index([createdAt(sort: Desc)])
+  @@map("benchmark_runs")
+}
+
+enum BenchmarkSubmissionStatus {
+  submitted
+  dry_run_passed
+  dry_run_failed
+  approved
+  rejected
+  promoted
+  retired
+}
+
+model BenchmarkSubmission {
+  id               String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  toolName         String                    @map("tool_name")
+  toolVersion      String                    @map("tool_version")
+  submitterEmail   String                    @map("submitter_email")
+  submitterName    String?                   @map("submitter_name")
+  prUrl            String                    @map("pr_url")
+  commitSha        String                    @map("commit_sha")
+  installRecipe    Json                      @map("install_recipe") @db.JsonB
+  configsByTarget  Json                      @map("configs_by_target") @db.JsonB
+  attestation      Json                      @db.JsonB
+  status           BenchmarkSubmissionStatus @default(submitted)
+  reviewNotes      String?                   @map("review_notes")
+  approvedBy       String[]                  @default([]) @map("approved_by")
+  approvedAt       DateTime?                 @map("approved_at") @db.Timestamptz(6)
+  createdAt        DateTime                  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt        DateTime                  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  runs BenchmarkRun[]
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([toolName, toolVersion])
+  @@map("benchmark_submissions")
+}
+
+// ─── Webhooks ────────────────────────────────────────────────────────────────
+// Per-org webhook subscriptions. `secret` is stored hashed (same scheme as
+// ApiKey.hash). `events` is a Postgres text[] of event types the subscriber
+// wants delivered (e.g. "job.completed", "job.failed", "design.created").
+
+model Webhook {
+  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId           String   @map("org_id") @db.Uuid
+  url             String
+  events          String[]
+  secret          String
+  active          Boolean  @default(true)
+  lastDeliveredAt DateTime? @map("last_delivered_at") @db.Timestamptz(6)
+  lastStatusCode  Int?     @map("last_status_code")
+  failureCount    Int      @default(0) @map("failure_count")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org        Organization      @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  deliveries WebhookDelivery[]
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([active])
+  @@map("webhooks")
+}
+
+// Delivery log, one row per attempt. Retained per org retention policy; the
+// retention sweeper trims rows older than `organizations.retention_days`.
+// Access is gated by the parent Webhook's RLS (joined via webhook_id).
+
+model WebhookDelivery {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  webhookId    String   @map("webhook_id") @db.Uuid
+  eventId      String   @map("event_id") @db.Uuid
+  eventType    String   @map("event_type")
+  payload      Json     @db.JsonB
+  statusCode   Int?     @map("status_code")
+  attempt      Int      @default(1)
+  deliveredAt  DateTime @default(now()) @map("delivered_at") @db.Timestamptz(6)
+  responseBody String?  @map("response_body")
+
+  webhook Webhook @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+
+  @@index([webhookId, deliveredAt(sort: Desc)])
+  @@index([eventId])
+  // Wave 12 — reliability dashboards filter by event_type, newest first.
+  @@index([eventType, deliveredAt(sort: Desc)])
+  @@map("webhook_deliveries")
+}
+
+// ─── Job audit trail ─────────────────────────────────────────────────────────
+// Immutable log of job status transitions. `actor` is either the literal
+// string "system" (for worker/scheduler transitions) or a user UUID string
+// (for user-initiated transitions like cancel). Access flows through the
+// parent Job's RLS policy.
+
+model JobAudit {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  jobId      String    @map("job_id") @db.Uuid
+  fromStatus JobStatus? @map("from_status")
+  toStatus   JobStatus  @map("to_status")
+  reason     String?
+  actor      String
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  job Job @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([jobId, createdAt(sort: Desc)])
+  @@map("job_audits")
+}
+
+// Append-only, redacted worker events used by the CLI and support tooling.
+// Live UI updates still use Redis/SSE; this table is the durable history.
+model JobLog {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  jobId     String   @map("job_id") @db.Uuid
+  level     String
+  event     String
+  message   String
+  metadata  Json?    @db.JsonB
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  job Job @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([jobId, createdAt, id])
+  @@map("job_logs")
+}
+
+// ─── Idempotency keys ────────────────────────────────────────────────────────
+// Short-lived cache of responses for idempotent POSTs (e.g. seed consume).
+// `scope` namespaces the key to a logical endpoint + tenant, e.g.
+// "seeds:consume:org_<uuid>". The endpoint hands back the cached
+// `response_json` when the same key is replayed before `expires_at`.
+//
+// Tenant isolation is enforced via the scope string containing the org id;
+// the RLS policy checks membership by extracting that id. Entries are cleaned
+// by a periodic job scanning (expires_at).
+
+model IdempotencyKey {
+  key          String   @id @default(cuid())
+  scope        String
+  responseJson Json     @map("response_json") @db.JsonB
+  expiresAt    DateTime @map("expires_at") @db.Timestamptz(6)
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([expiresAt])
+  @@index([scope])
+  @@map("idempotency_keys")
+}
+
+// ─── Audit log ───────────────────────────────────────────────────────────────
+// Append-only, immutable record of privileged org actions. Every mutation in
+// apps/api and the worker that changes org state should insert one row here
+// via `@papercrane/observability#logAuditEvent`. Retention:
+//   - free tier: 90 days
+//   - pro/frontier: 365 days
+// Enforced by a future cron; this table has no DELETE or UPDATE policy.
+
+enum AuditAction {
+  api_key_created              @map("api_key.created")
+  api_key_revoked              @map("api_key.revoked")
+  api_key_rotated              @map("api_key.rotated")
+  webhook_created              @map("webhook.created")
+  webhook_deleted              @map("webhook.deleted")
+  webhook_secret_rotated       @map("webhook.secret_rotated")
+  member_invited               @map("member.invited")
+  member_removed               @map("member.removed")
+  member_role_changed          @map("member.role_changed")
+  subscription_upgraded        @map("subscription.upgraded")
+  subscription_downgraded      @map("subscription.downgraded")
+  subscription_cancelled       @map("subscription.cancelled")
+  billing_overage_recorded     @map("billing.overage_recorded")
+  job_cancelled                @map("job.cancelled")
+  tool_license_acknowledged    @map("tool_license.acknowledged")
+  org_created                  @map("org.created")
+  org_settings_updated         @map("org.settings_updated")
+}
+
+model AuditLog {
+  id            String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId         String      @map("org_id") @db.Uuid
+  userId        String?     @map("user_id") @db.Uuid
+  action        AuditAction
+  resourceType  String?     @map("resource_type")
+  resourceId    String?     @map("resource_id")
+  metadata      Json?       @db.JsonB
+  ipAddress     String?     @map("ip_address") @db.Inet
+  userAgent     String?     @map("user_agent")
+  createdAt     DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org  Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  user User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([userId])
+  @@index([action])
+  // Wave 12 — composite for action-filtered audit queries within an org.
+  @@index([orgId, action, createdAt(sort: Desc)])
+  @@map("audit_logs")
+}
+
+// ─── Organization invites ────────────────────────────────────────────────────
+// An owner/admin sends an invite by email. The invitee completes Supabase
+// magic-link signup, then POSTs their token to `members.acceptInvite` which
+// upserts an OrgMember row.
+//
+// * `email` uses citext at the database level (see the `20260424110000_add_invites`
+//   migration). Prisma's only reliable citext story is `Unsupported("citext")`
+//   or plain `String`; we keep it as `String` because we never write it
+//   case-sensitively and Postgres handles the comparisons.
+// * `(orgId, email)` has a *partial* unique — only when `accepted_at IS NULL` —
+//   enforced by raw SQL in the migration. Prisma cannot express partial
+//   uniques, so the schema carries the non-unique index for lookup speed.
+// * `token` is opaque, URL-safe, and globally unique.
+
+model Invite {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId       String    @map("org_id") @db.Uuid
+  email       String
+  role        OrgRole   @default(member)
+  invitedBy   String    @map("invited_by") @db.Uuid
+  token       String    @unique
+  expiresAt   DateTime  @map("expires_at") @db.Timestamptz(6)
+  acceptedAt  DateTime? @map("accepted_at") @db.Timestamptz(6)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org     Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  inviter User         @relation("InviteInvitedBy", fields: [invitedBy], references: [id])
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([expiresAt])
+  @@index([orgId, email])
+  // Wave 12 — token-by-email reverse lookup (case-insensitive at SQL layer).
+  @@index([email])
+  @@map("invites")
+}
+
+// ─── Notifications ───────────────────────────────────────────────────────────
+// Per-user, per-org inbox for persistent events (job completed, billing
+// warning, webhook failed, invite received, system). RLS: a user can only
+// see rows where `user_id = app_current_user()`. Realtime push is wired at
+// the migration level via REPLICA IDENTITY FULL + publication GRANT so the
+// browser client can subscribe with a filter.
+
+enum NotificationCategory {
+  job
+  billing
+  webhook
+  invite
+  system
+}
+
+enum NotificationChannel {
+  in_app
+  email
+}
+
+model Notification {
+  id          String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId       String               @map("org_id") @db.Uuid
+  userId      String               @map("user_id") @db.Uuid
+  category    NotificationCategory
+  title       String
+  description String?
+  actionUrl   String?              @map("action_url")
+  metadata    Json                 @default("{}") @db.JsonB
+  readAt      DateTime?            @map("read_at") @db.Timestamptz(6)
+  createdAt   DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org  Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  user User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@index([userId, readAt])
+  @@index([orgId, createdAt(sort: Desc)])
+  // Wave 12 — unread-by-org-and-user inbox count.
+  @@index([orgId, userId, readAt])
+  @@map("notifications")
+}
+
+// Per-user preferences table. One row per (user, category, channel). The
+// tRPC `preferences.get` flattens these into a nested map and materializes
+// defaults on first access (see `DEFAULT_PREFERENCES` in the router).
+
+model NotificationPreference {
+  userId    String               @map("user_id") @db.Uuid
+  category  NotificationCategory
+  channel   NotificationChannel
+  enabled   Boolean              @default(true)
+  updatedAt DateTime             @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, category, channel])
+  @@map("notification_preferences")
+}
+
+// ─── Chat integrations (Wave 14) ────────────────────────────────────────────
+// Per-org outbound channel registrations for Slack and Discord. The webhook
+// URL is the only credential we store — incoming-webhook URLs already encode
+// channel + token in their path. We store them as plaintext today (rotating
+// to KMS-wrapped + revealed-once is a future migration); muting is handled
+// at the channel granularity to support pausing without disconnecting.
+//
+// `events` is a Postgres text[] of the integration event names the user
+// has opted into (see `apps/worker/src/integrations/router.ts` for the
+// canonical event registry — note: this is the *integration* event set, not
+// the same as the public webhook events).
+
+enum IntegrationKind {
+  slack
+  discord
+}
+
+model Integration {
+  id        String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  orgId     String          @map("org_id") @db.Uuid
+  kind      IntegrationKind
+  /// Display name shown in the settings UI (e.g. "#design-alerts").
+  name      String          @default("")
+  createdAt DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime        @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org      Organization           @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  channels IntegrationChannel[]
+
+  @@index([orgId, createdAt(sort: Desc)])
+  @@index([orgId, kind])
+  @@map("integrations")
+}
+
+model IntegrationChannel {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  integrationId String   @map("integration_id") @db.Uuid
+  /// Incoming webhook URL (Slack: hooks.slack.com/..., Discord: discord.com/api/webhooks/...).
+  webhookUrl    String   @map("webhook_url")
+  /// Subscribed integration event names. See worker/integrations/router.ts.
+  events        String[]
+  /// Soft-pause toggle. When true, the router skips delivery to this channel.
+  muted         Boolean  @default(false)
+  /// Threshold for usage.cap_warning (default 80%).
+  capWarningPct Int      @default(80) @map("cap_warning_pct")
+  lastDeliveredAt DateTime? @map("last_delivered_at") @db.Timestamptz(6)
+  lastStatusCode  Int?      @map("last_status_code")
+  failureCount    Int       @default(0) @map("failure_count")
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  integration Integration @relation(fields: [integrationId], references: [id], onDelete: Cascade)
+
+  @@index([integrationId, createdAt(sort: Desc)])
+  @@index([muted])
+  @@map("integration_channels")
+}
+
+// ─── Modal BYOC credentials ────────────────────────────────────────────────
+
+model ModalCredential {
+  orgId           String    @id @map("org_id") @db.Uuid
+  tokenId         String    @map("token_id")
+  tokenSecret     String    @map("token_secret")
+  workspace       String    @default("")
+  environment     String    @default("")
+  lastValidatedAt DateTime? @map("last_validated_at") @db.Timestamptz(6)
+  lastError       String?   @map("last_error")
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  org Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@index([updatedAt(sort: Desc)])
+  @@map("modal_credentials")
+}
+
+// ─── Onboarding state (Wave 8) ──────────────────────────────────────────────
+
+// One row per user, tracking where they are in the wizard. See
+// `apps/app/lib/onboarding-state.ts` for the application-level helpers and
+// the migration `wave8_onboarding_state` for the SQL definition + RLS.
+
+model UserOnboarding {
+  userId        String    @id @map("user_id") @db.Uuid
+  orgId         String?   @map("org_id") @db.Uuid
+  currentStep   String    @default("welcome") @map("current_step")
+  persona       String?
+  completedAt   DateTime? @map("completed_at") @db.Timestamptz(6)
+  lastUpdatedAt DateTime  @default(now()) @map("last_updated_at") @db.Timestamptz(6)
+
+  user User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  org  Organization? @relation(fields: [orgId],  references: [id], onDelete: SetNull)
+
+  @@index([orgId])
+  @@index([completedAt])
+  @@map("user_onboarding")
+}
+
+// ─── Feedback (Wave 15) ──────────────────────────────────────────────────────
+//
+// In-app feedback widget submissions. Captured from the dashboard floating
+// "?" button and stored here for triage. Org/user are nullable so anonymous
+// or pre-auth submissions still land. See migration `wave15_feedback`.
+
+enum FeedbackCategory {
+  bug
+  feature
+  improvement
+  praise
+  other
+}
+
+model Feedback {
+  id            String           @id @default(cuid())
+  orgId         String?          @map("org_id") @db.Uuid
+  userId        String?          @map("user_id") @db.Uuid
+  category      FeedbackCategory @default(other)
+  rating        Int?
+  body          String
+  pageUrl       String?          @map("page_url")
+  userAgent     String?          @map("user_agent")
+  screenshotKey String?          @map("screenshot_key")
+  metadata      Json?
+  status        String           @default("new")
+  createdAt     DateTime         @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  org  Organization? @relation("FeedbackOrg",  fields: [orgId],  references: [id], onDelete: SetNull)
+  user User?         @relation("FeedbackUser", fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@index([orgId])
+  @@map("feedback")
+}
+
+// ─── Wave 15 — beta program (invite codes) ──────────────────────────────────
+//
+// Invite codes gate /signup while Paper Crane is in private beta. An admin
+// generates a batch of codes (PC-XXXX-XXXX format), shares them with the
+// people they want to onboard, and the signup form validates against this
+// table.
+//
+// Concurrency
+// -----------
+// `usedCount` is incremented atomically inside the same RLS transaction
+// that creates the new auth user. The `usedCount < maxUses` predicate is
+// part of the WHERE clause on the increment so the row update fails (rather
+// than over-allocating) if two clients race the last slot. `maxUses` of
+// `0` means "unlimited" — admin-allocated org-wide codes.
+//
+// Privacy
+// -------
+// `code` is the only identifier stored. We deliberately do NOT keep the
+// recipient email — the same code can be shared with anyone, and the admin
+// page is the source of truth for "who got what" (out-of-band: email, DM).
+// `usedByUserId` is filled when the code is consumed and becomes the audit
+// trail for "who actually claimed code X".
+model BetaInvite {
+  id            String    @id @default(cuid())
+  // PC-XXXX-XXXX (uppercase A–Z 0–9), unique. The validation procedure
+  // upper-cases caller input before lookup, so case is not significant.
+  code          String    @unique
+  // 1 = single-use (default), N = capped multi-use, 0 = unlimited.
+  maxUses       Int       @default(1) @map("max_uses")
+  usedCount     Int       @default(0) @map("used_count")
+  // Optional expiry. NULL means "never expires".
+  expiresAt     DateTime? @map("expires_at") @db.Timestamptz(6)
+  // Optional human label admin assigns ("YC W26 demo", "iGEM mentors").
+  note          String?
+  generatedBy   String?   @map("generated_by") @db.Uuid
+  // First user to claim it (audit trail; only meaningful when maxUses == 1).
+  usedByUserId  String?   @map("used_by_user_id") @db.Uuid
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  generator User? @relation("BetaInviteGeneratedBy", fields: [generatedBy],  references: [id], onDelete: SetNull)
+  user      User? @relation("BetaInviteUsedBy",      fields: [usedByUserId], references: [id], onDelete: SetNull)
+
+  @@index([generatedBy, createdAt(sort: Desc)])
+  @@index([expiresAt])
+  @@map("beta_invites")
+}

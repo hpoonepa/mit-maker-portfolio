@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/ligandmpnn/input.json",
+  "title": "LigandMPNN Input Parameters",
+  "description": "Normalized request shape for the LigandMPNN sequence-design adapter. LigandMPNN extends ProteinMPNN with explicit small-molecule context for active-site design; backbones come in alongside either per-atom ligand coordinates or an SDF reference resolved into /inputs/ligands/.",
+  "type": "object",
+  "required": ["backbones", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "backbones": {
+      "description": "List of backbone structures to design sequences for. Typically S3 URIs resolved into /inputs/backbones/*.pdb at runtime.",
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "seeds": {
+      "description": "Random seeds for sampling; one run per seed, producing num_seq_per_target sequences each.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0 },
+      "minItems": 1
+    },
+    "ligand_atoms": {
+      "description": "Per-atom ligand coordinates. Mutually exclusive with ligand_sdf. Each atom is identified by its parent residueId (chain + resi, e.g. 'A1') and atomName as seen in the input PDB.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["residueId", "atomName", "x", "y", "z", "element"],
+        "additionalProperties": false,
+        "properties": {
+          "residueId": { "type": "string" },
+          "atomName": { "type": "string" },
+          "x": { "type": "number" },
+          "y": { "type": "number" },
+          "z": { "type": "number" },
+          "element": { "type": "string", "pattern": "^[A-Z][a-z]?$" }
+        }
+      }
+    },
+    "ligand_sdf": {
+      "description": "S3 URI of an SDF/MOL file describing the ligand. Resolved into /inputs/ligands/ligand.sdf at runtime. Mutually exclusive with ligand_atoms.",
+      "type": "string"
+    },
+    "params": {
+      "description": "LigandMPNN-specific knobs.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "description": "Sampling temperature (lower = more deterministic).",
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 1.0,
+          "default": 0.1
+        },
+        "omit_aas": {
+          "description": "Single-letter amino acids to exclude from designed sequences. 'X' is always recommended; 'C' removes cysteines.",
+          "type": "string",
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWXY]*$",
+          "default": "CX"
+        },
+        "num_seq_per_target": {
+          "description": "Number of sequences to sample per backbone per seed.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64,
+          "default": 1
+        },
+        "ligand_context_radius": {
+          "description": "Angstrom cutoff around ligand atoms for 'in-context' residues; residues beyond this radius are sampled without ligand conditioning.",
+          "type": "number",
+          "minimum": 2.0,
+          "maximum": 20.0,
+          "default": 8.0
+        },
+        "fixed_positions": {
+          "description": "Optional per-chain fixed residue indices (1-based). Keys are chain IDs; values are lists of residue indices whose identity should NOT be redesigned.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

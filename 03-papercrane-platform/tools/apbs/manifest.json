@@ -1,0 +1,33 @@
+{
+  "id": "apbs",
+  "displayName": "APBS",
+  "version": "3.4.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/apbs:3.4.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 30,
+    "note": "CPU Poisson–Boltzmann electrostatics with internal PDB2PQR preparation; beta until the official binary and potential-grid parser pass live smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "forceField": "AMBER",
+    "ph": 7.0,
+    "equation": "lpbe",
+    "soluteDielectric": 2.0,
+    "solventDielectric": 78.54,
+    "ionicStrength": 0.15,
+    "temperature": 298.15,
+    "probeRadius": 1.4,
+    "gridPoints": 65
+  },
+  "composes": ["pdb2pqr"]
+}

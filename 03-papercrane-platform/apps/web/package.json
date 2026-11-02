@@ -1,0 +1,35 @@
+{
+  "name": "@papercrane/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:landing": "npm ci --prefix landing --cache .npm-cache --no-audit --no-fund && npm run build --prefix landing",
+    "dev": "pnpm build:landing && next dev",
+    "build": "pnpm build:landing && NODE_ENV=production next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@papercrane/env": "workspace:*",
+    "@supabase/supabase-js": "2.45.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "molstar": "4.8.0",
+    "motion": "^11.13.1",
+    "next": "^16.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "16.2.4",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.7.2"
+  }
+}

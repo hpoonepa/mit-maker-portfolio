@@ -1,0 +1,31 @@
+{
+  "id": "esmc",
+  "displayName": "ESM-C 300M",
+  "version": "300M-2024-12",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "_weightsLicense": "Cambrian-Open",
+  "_github": "https://github.com/evolutionaryscale/esm",
+  "_weightsSource": "EvolutionaryScale/esmc-300m-2024-12",
+  "_description": "Newer, stronger protein language model than ESM-2 for embeddings and pseudo-log-likelihood scoring/filtering of designs. Commercial-clean 300M tier (Cambrian Open License).",
+  "image": "ghcr.io/papercrane/esmc:300M-2024-12-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 12,
+    "estSecondsPerDesign": 1
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "mode": "score",
+    "pool": "mean",
+    "layer": 30
+  },
+  "composes": []
+}

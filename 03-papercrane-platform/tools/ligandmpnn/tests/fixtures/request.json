@@ -1,0 +1,33 @@
+{
+  "backbones": [
+    "s3://papercrane-test/backbones/backbone_0001.pdb"
+  ],
+  "seeds": [0, 1],
+  "ligand_atoms": [
+    {
+      "residueId": "L1",
+      "atomName": "C1",
+      "x": 5.123,
+      "y": 4.567,
+      "z": 3.210,
+      "element": "C"
+    },
+    {
+      "residueId": "L1",
+      "atomName": "O2",
+      "x": 6.001,
+      "y": 4.800,
+      "z": 3.250,
+      "element": "O"
+    }
+  ],
+  "params": {
+    "temperature": 0.1,
+    "omit_aas": "CX",
+    "num_seq_per_target": 1,
+    "ligand_context_radius": 8.0,
+    "fixed_positions": {
+      "A": [1, 2]
+    }
+  }
+}

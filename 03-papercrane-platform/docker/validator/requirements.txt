@@ -1,0 +1,23 @@
+# Paper Crane validator — extra deps beyond base-cuda12.
+#
+# The base image already pins numpy, scipy, biopython, gemmi, pandas,
+# pydantic, pyyaml, torch, torchvision. Do NOT repeat those here — that
+# would risk resolving a different version than the base and breaking
+# numeric reproducibility (base-cuda12 README "Version policy" section).
+#
+# fair-esm is optional at container-run time (esm_pll.py degrades to a
+# heuristic when the import fails), but pinning it here means production
+# runs get the real model. Remove or replace with `transformers` if the
+# image size becomes painful.
+fair-esm==2.0.0
+
+# pytest is here so `docker run --entrypoint pytest ...` works for smoke
+# tests without another dep install step. It is a dev-time dep but costs
+# <5 MB in the image.
+pytest==8.2.2
+
+# NB: DockQ is NOT on PyPI under a stable name. When we want the real
+# metric we'll `git clone --depth 1 https://github.com/bjornwallner/DockQ`
+# in the Dockerfile and `pip install -e .` that submodule. Until then the
+# dockq metric stays in placeholder mode (see src/papercrane_validator/
+# metrics/dockq.py).

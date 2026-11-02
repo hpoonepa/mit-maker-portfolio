@@ -1,0 +1,18 @@
+{
+  "targetPdb": "/inputs/target.pdb",
+  "targetChain": "A",
+  "seeds": [0, 1],
+  "numDesigns": 2,
+  "constraints": {
+    "lengthRange": [80, 120]
+  },
+  "toolParams": {
+    "length": 100,
+    "temperature": 1.0,
+    "steps": 500,
+    "conditioners": [
+      { "type": "SymmetryConditioner", "params": { "symmetry": "C3" } },
+      { "type": "SubstructureConditioner", "params": { "motif_chain": "A", "motif_residues": "40-60" } }
+    ]
+  }
+}

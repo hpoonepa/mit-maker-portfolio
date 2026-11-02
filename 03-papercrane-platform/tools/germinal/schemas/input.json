@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/germinal/input.json",
+  "title": "Germinal Input Parameters",
+  "description": "Germinal-specific parameters passed via DesignRequest.toolParams.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "frameworkType": {
+      "description": "Antibody framework to design: VHH single-domain nanobody or scFv.",
+      "type": "string",
+      "enum": ["VHH", "scFv"],
+      "default": "VHH"
+    },
+    "target_chain": {
+      "description": "Chain id of the target in the input PDB.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]$"
+    },
+    "hotspots": {
+      "description": "Comma-separated epitope hotspot residue positions on the target (e.g. \"A123,A145\").",
+      "type": "string"
+    },
+    "num_recycles": {
+      "description": "AlphaFold-Multimer recycles for the internal validation pass.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    }
+  }
+}

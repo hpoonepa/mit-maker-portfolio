@@ -1,0 +1,25 @@
+{
+  "id": "esmfold",
+  "displayName": "ESMFold",
+  "version": "1.0",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/esmfold:1.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 32,
+    "estSecondsPerDesign": 45,
+    "note": "Beta until the official ESMFold v1/OpenFold stack is smoke-tested on Modal."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "numRecycles": 4,
+    "chunkSize": 128
+  }
+}

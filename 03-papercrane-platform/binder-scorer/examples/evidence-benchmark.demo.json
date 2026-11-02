@@ -1,0 +1,56 @@
+{
+  "schema_version": "evidence-benchmark-input.v1",
+  "benchmark_id": "Synthetic fixed-budget benchmark",
+  "baseline_method_id": "baseline",
+  "development_groups": ["development-only"],
+  "campaigns": [
+    {
+      "evaluation_group": "demo-group-one",
+      "evidence": {
+        "schema_version": "evidence-audit-input.v1", "campaign_id": "demo-one", "data_kind": "synthetic_demo",
+        "methods": [
+          {"id": "baseline", "producer": "demo-baseline", "version": "1", "evidence_family": "family-one", "higher_is_better": true, "units": "unitless", "settings": {}},
+          {"id": "alternative", "producer": "demo-alternative", "version": "1", "evidence_family": "family-two", "higher_is_better": true, "units": "unitless", "settings": {}}
+        ],
+        "candidates": [
+          {"id": "A", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 3}, "alternative": {"status": "observed", "value": 2}}},
+          {"id": "B", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 2}, "alternative": {"status": "observed", "value": 3}}},
+          {"id": "C", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 1}, "alternative": {"status": "observed", "value": 1}}}
+        ]
+      },
+      "outcomes": {"A": true, "B": false, "C": false}
+    },
+    {
+      "evaluation_group": "demo-group-two",
+      "evidence": {
+        "schema_version": "evidence-audit-input.v1", "campaign_id": "demo-two", "data_kind": "synthetic_demo",
+        "methods": [
+          {"id": "baseline", "producer": "demo-baseline", "version": "1", "evidence_family": "family-one", "higher_is_better": true, "units": "unitless", "settings": {}},
+          {"id": "alternative", "producer": "demo-alternative", "version": "1", "evidence_family": "family-two", "higher_is_better": true, "units": "unitless", "settings": {}}
+        ],
+        "candidates": [
+          {"id": "A", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 3}, "alternative": {"status": "observed", "value": 2}}},
+          {"id": "B", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 2}, "alternative": {"status": "observed", "value": 3}}},
+          {"id": "C", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 1}, "alternative": {"status": "observed", "value": 1}}}
+        ]
+      },
+      "outcomes": {"A": false, "B": true, "C": false}
+    },
+    {
+      "evaluation_group": "demo-group-three",
+      "evidence": {
+        "schema_version": "evidence-audit-input.v1", "campaign_id": "demo-three", "data_kind": "synthetic_demo",
+        "methods": [
+          {"id": "baseline", "producer": "demo-baseline", "version": "1", "evidence_family": "family-one", "higher_is_better": true, "units": "unitless", "settings": {}},
+          {"id": "alternative", "producer": "demo-alternative", "version": "1", "evidence_family": "family-two", "higher_is_better": true, "units": "unitless", "settings": {}}
+        ],
+        "candidates": [
+          {"id": "A", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 3}, "alternative": {"status": "observed", "value": 2}}},
+          {"id": "B", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 2}, "alternative": {"status": "observed", "value": 3}}},
+          {"id": "C", "origin": "demo", "provenance": "synthetic", "scores": {"baseline": {"status": "observed", "value": 1}, "alternative": {"status": "observed", "value": 1}}}
+        ]
+      },
+      "outcomes": {"A": false, "B": true, "C": false}
+    }
+  ]
+}

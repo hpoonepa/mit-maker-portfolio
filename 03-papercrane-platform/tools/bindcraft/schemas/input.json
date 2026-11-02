@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/bindcraft/input.json",
+  "title": "BindCraft Input Parameters",
+  "description": "BindCraft-specific parameters passed via DesignRequest.toolParams.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "binder_length_range": {
+      "description": "Min/max residue length of the designed binder.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 20, "maximum": 300 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "protocol": {
+      "description": "BindCraft design protocol.",
+      "type": "string",
+      "enum": ["fast", "default", "slow"],
+      "default": "default"
+    },
+    "helix_bias": {
+      "description": "Encourage helical content in the binder (0..1).",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "omit_aas": {
+      "description": "Single-letter amino acids to exclude from the designed sequence.",
+      "type": "string",
+      "pattern": "^[ACDEFGHIKLMNPQRSTVWY]*$"
+    },
+    "num_recycles": {
+      "description": "AF2 recycles for the internal validation pass.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "target_chain": {
+      "description": "Chain id of the target in the input PDB.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]$"
+    }
+  }
+}

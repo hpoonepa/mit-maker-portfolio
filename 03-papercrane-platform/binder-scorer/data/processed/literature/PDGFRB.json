@@ -1,0 +1,251 @@
+{
+  "abstracts": [
+    {
+      "pmid": "33794741",
+      "title": "The m\u00e9nage \u00e0 trois of autophagy, lipid droplets and liver disease.",
+      "abstract": "Autophagic pathways cross with lipid homeostasis and thus provide energy and essential building blocks that are indispensable for liver functions. Energy deficiencies are compensated by breaking down lipid droplets (LDs), intracellular organelles that store neutral lipids, in part by a selective type of autophagy, referred to as lipophagy. The process of lipophagy does not appear to be properly regulated in fatty liver diseases (FLDs), an important risk factor for the development of hepatocellular carcinomas (HCC). Here we provide an overview on our current knowledge of the biogenesis and functions of LDs, and the mechanisms underlying their lysosomal turnover by autophagic processes. This review also focuses on nonalcoholic steatohepatitis (NASH), a specific type of FLD characterized by steatosis, chronic inflammation and cell death. Particular attention is paid to the role of macroautophagy and macrolipophagy in relation to the parenchymal and non-parenchymal cells of the liver in NASH, as this disease has been associated with inappropriate lipophagy in various cell types of the liver.Abbreviations: ACAT: acetyl-CoA acetyltransferase; ACAC/ACC: acetyl-CoA carboxylase; AKT: AKT serine/threonine kinase; ATG: autophagy related; AUP1: AUP1 lipid droplet regulating VLDL assembly factor; BECN1/Vps30/Atg6: beclin 1; BSCL2/seipin: BSCL2 lipid droplet biogenesis associated, seipin; CMA: chaperone-mediated autophagy; CREB1/CREB: cAMP responsive element binding protein 1; CXCR3: C-X-C motif chemokine receptor 3; DAGs: diacylglycerols; DAMPs: danger/damage-associated molecular patterns; DEN: diethylnitrosamine; DGAT: diacylglycerol O-acyltransferase; DNL: de novo lipogenesis; EHBP1/NACSIN (EH domain binding protein 1); EHD2/PAST2: EH domain containing 2; CoA: coenzyme A; CCL/chemokines: chemokine ligands; CCl4: carbon tetrachloride; ER: endoplasmic reticulum; ESCRT: endosomal sorting complexes required for transport; FA: fatty acid; FFAs: free fatty acids; FFC: high saturated fats, fructose and cholesterol; FGF21: fibroblast growth factor 21; FITM/FIT: fat storage inducing transmembrane protein; FLD: fatty liver diseases; FOXO: forkhead box O; GABARAP: GABA type A receptor-associated protein; GPAT: glycerol-3-phosphate acyltransferase; HCC: hepatocellular carcinoma; HDAC6: histone deacetylase 6; HECT: homologous to E6-AP C-terminus; HFCD: high fat, choline deficient; HFD: high-fat diet; HSCs: hepatic stellate cells; HSPA8/HSC70: heat shock protein family A (Hsp70) member 8; ITCH/AIP4: itchy E3 ubiquitin protein ligase; KCs: Kupffer cells; LAMP2A: lysosomal associated membrane protein 2A; LDs: lipid droplets; LDL: low density lipoprotein; LEP/OB: leptin; LEPR/OBR: leptin receptor; LIPA/LAL: lipase A, lysosomal acid type; LIPE/HSL: lipase E, hormone sensitive type; LIR: LC3-interacting region; LPS: lipopolysaccharide; LSECs: liver sinusoidal endothelial cells; MAGs: monoacylglycerols; MAPK: mitogen-activated protein kinase; MAP3K5/ASK1: mitogen-activated protein kinase kinase kinase 5; MAP1LC3/LC3: microtubule associated protein 1 light chain 3; MCD: methionine-choline deficient; MGLL/MGL: monoglyceride lipase; MLXIPL/ChREBP: MLX interacting protein like; MTORC1: mechanistic target of rapamycin kinase complex 1; NAFLD: nonalcoholic fatty liver disease; NAS: NAFLD activity score; NASH: nonalcoholic steatohepatitis; NPC: NPC intracellular cholesterol transporter; NR1H3/LXR\u03b1: nuclear receptor subfamily 1 group H member 3; NR1H4/FXR: nuclear receptor subfamily 1 group H member 4; PDGF: platelet derived growth factor; PIK3C3/VPS34: phosphatidylinositol 3-kinase catalytic subunit type 3; PLIN: perilipin; PNPLA: patatin like phospholipase domain containing; PNPLA2/ATGL: patatin like phospholipase domain containing 2; PNPLA3/adiponutrin: patatin like phospholipase domain containing 3; PPAR: peroxisome proliferator activated receptor; PPARA/PPAR\u03b1: peroxisome proliferator activated receptor alpha; PPARD/PPAR\u03b4: peroxisome proliferator activated receptor delta; PPARG/PPAR\u03b3: peroxisome proliferator activated receptor gamma; PPARGC1A/PGC1\u03b1: PPARG coactivator 1 alpha; PRKAA/AMPK: protein kinase AMP-activated catalytic subunit; PtdIns3K: class III phosphatidylinositol 3-kinase; PtdIns3P: phosphatidylinositol-3-phosphate; PTEN: phosphatase and tensin homolog; ROS: reactive oxygen species; SE: sterol esters; SIRT1: sirtuin 1; SPART/SPG20: spartin; SQSTM1/p62: sequestosome 1; SREBF1/SREBP1c: sterol regulatory element binding transcription factor 1; TAGs: triacylglycerols; TFE3: transcription factor binding to IGHM enhancer 3; TFEB: transcription factor EB; TGFB1/TGF\u03b2: transforming growth factor beta 1; Ub: ubiquitin; UBE2G2/UBC7: ubiquitin conjugating enzyme E2 G2; ULK1/Atg1: unc-51 like autophagy activating kinase 1; USF1: upstream transcription factor 1; VLDL: very-low density lipoprotein; VPS: vacuolar protein sorting; WIPI: WD-repeat domain, phosphoinositide interacting; WDR: WD repeat domain."
+    },
+    {
+      "pmid": "35786294",
+      "title": "Autophagy loss impedes cancer-associated fibroblast activation via downregulating proline biosynthesis.",
+      "abstract": "Cancer-associated fibroblasts (CAFs) are considered one of the most critical stromal cells that interact with pancreatic ductal adenocarcinoma (PDAC) and promote tumor growth, metastasis, and treatment resistance. Previous studies illustrated macroautophagy/autophagy contributes to CAF activation during tumor progression. Here in our study, we found that autophagy deficiency in CAFs impedes CAF activation by inhibiting proline biosynthesis and collagen production. Furthermore, we uncovered that autophagy promotes proline biosynthesis through mitophagy-mediated regulation of NADK2 (NAD kinase 2, mitochondrial), an enzyme responsible for production of mitochondrial NADP(H). Using an orthotopic mouse model of PDAC, we found that inhibiting mitophagy by targeting PRKN (parkin RBR E3 ubiquitin protein ligase) in the stroma reduced tumor weight. Thus, inhibition of CAFs mitophagy might be an attractive strategy for stroma-focused anti-cancer intervention. Abbreviations: ACTA2/\u03b1-SMA: actin alpha 2, smooth muscle, aorta; ACTB/\u03b2-actin: actin, beta; ALDH18A1/P5CS: aldehyde dehydrogenase 18 family, member A1; ATG3: autophagy related 3; ATG5: autophagy related 5; BNIP3L: BCL2/adenovirus E1B interacting protein 3-like; CAFs:cancer-associated fibroblasts; COL1A1: collagen, type I, alpha 1; DES: desmin; ECM: extracellular matrix; FABP4: fatty acid binding protein 4, adipocyte; FAP/FAP\u03b1: fibroblast activation protein; IHC: immunohistochemical staining; LAMP1: lysosomal-associated membrane protein 1; NADK2: NAD kinase 2, mitochondrial; PC1: pro-collagen 1; PDAC: pancreatic ductal adenocarcinoma; PDGFR: platelet derived growth factor receptor; PDPN: podoplanin; PRKN: parkin RBR E3 ubiquitin protein ligase; PSCs: pancreatic stellate cells; VIM: vimentin; WT: wild-type."
+    },
+    {
+      "pmid": "38189472",
+      "title": "Potential diagnostic markers and therapeutic targets for periodontitis and Alzheimer's disease based on bioinformatics analysis.",
+      "abstract": "As a chronic inflammatory disease, periodontitis threatens oral health and is a risk factor for Alzheimer's disease (AD). There is growing evidence that these two diseases are closely related. However, current research is still incomplete in understanding the common genes and common mechanisms between periodontitis and AD. In this study, we aimed to identify common genes in periodontitis and AD and analyze the relationship between crucial genes and immune cells to provide new therapeutic targets for clinical treatment. We evaluated differentially expressed genes (DEGs) specific to periodontitis and AD. Co-expressed genes were identified by obtaining gene expression profile data from the Gene Expression Omnibus (GEO) database. Using the STRING database, protein-protein interaction (PPI) networks were constructed, and essential genes were identified. We also used four algorithms to identify critical genes and constructed regulatory networks. The association of crucial genes with immune cells and potential therapeutic effects was also assessed. PDGFRB, VCAN, TIMP1, CHL1, EFEMP2, and IGFBP5 were obtained as crucial common genes. Immune infiltration analysis showed that Natural killer cells and Myeloid-derived suppressor cells were significantly differentially expressed in patients with PD and AD compared with the normal group. FOXC1 and GATA2 are important TFs for PD and AD. MiR-23a, miR-23b, miR-23a, and miR-23b were associated with AD and PD. Finally, the hub genes retrieved from the DSigDB database indicate multiple drug molecule and drug-target interactions. This study reveals commonalities in common hub genes and immune infiltration between periodontitis and AD, and the analysis of six hub genes and immune cells may provide new insights into potential therapeutic directions for the pathogenesis of periodontitis complicated by AD."
+    },
+    {
+      "pmid": "41519838",
+      "title": "Improved protein binder design using \u03b2-pairing targeted RFdiffusion.",
+      "abstract": "Designing proteins that bind with high affinity to hydrophilic protein target sites remains a challenging problem. Here we show that RFdiffusion can be conditioned to generate protein scaffolds that form geometrically matched extended \u03b2-sheets with target protein edge \u03b2-strands in which polar groups on the target are complemented with hydrogen bonding groups on the design. We use this approach to design binders against edge-strand target sites on KIT, PDGFR\u0251, ALK-2, ALK-3, FCRL5, NRP1, and \u03b1-CTX, and obtain higher (pM to mid nM) affinities and success rates than unconditioned RFdiffusion. Despite sharing \u03b2-strand interactions, designs have high specificity, reflecting the precise customization of interacting \u03b2-strand geometry and additional designed binder-target interactions. A binder-KIT co-crystal structure is nearly identical to the design model, confirming the accuracy of the design approach. The ability to robustly generate binders to the hydrophilic interaction surfaces of exposed \u03b2-strands considerably increases the range of computational binder design."
+    },
+    {
+      "pmid": "28028030",
+      "title": "Myeloid neoplasms with eosinophilia.",
+      "abstract": "Molecular diagnostics has generated substantial dividends in dissecting the genetic basis of myeloid neoplasms with eosinophilia. The family of diseases generated by dysregulated fusion tyrosine kinase (TK) genes is recognized by the World Health Organization (WHO) category, \"Myeloid/lymphoid neoplasms with eosinophilia and rearrangement of PDGFRA, PDGFRB, or FGFR1, or with PCM1-JAK2\" In addition to myeloproliferative neoplasms (MPN), these patients can present with myelodysplastic syndrome/MPN, as well as de novo or secondary mixed-phenotype leukemias or lymphomas. Eosinophilia is a common, but not invariable, feature of these diseases. The natural history of PDGFRA- and PDGFRB-rearranged neoplasms has been dramatically altered by imatinib. In contrast, patients with FGFR1 and JAK2 fusion TK genes exhibit a more aggressive course and variable sensitivity to current TK inhibitors, and in most cases, long-term disease-free survival may only be achievable with allogeneic hematopoietic stem cell transplantation. Similar poor prognosis outcomes may be observed with rearrangements of FLT3 or ABL1 (eg, both of which commonly partner with ETV6), and further investigation is needed to validate their inclusion in the current WHO-defined group of eosinophilia-associated TK fusion-driven neoplasms. The diagnosis chronic eosinophilic leukemia, not otherwise specified (CEL, NOS) is assigned to patients with MPN with eosinophilia and nonspecific cytogenetic/molecular abnormalities and/or increased myeloblasts. Myeloid mutation panels have identified somatic variants in patients with a provisional diagnosis of hypereosinophilia of undetermined significance, reclassifying some of these cases as eosinophilia-associated neoplasms. Looking forward, one of the many challenges will be how to use the results of molecular profiling to guide prognosis and selection of actionable therapeutic targets."
+    },
+    {
+      "pmid": "36068374",
+      "title": "Updates on eosinophilic disorders.",
+      "abstract": "This review addresses changes and updates in eosinophilic disorders under the International Consensus Classification (ICC). The previous category of myeloid/lymphoid neoplasm with eosinophilia (M/LN-eo) and a specific gene rearrangement is changed to M/LN-eo with tyrosine kinase gene fusions to reflect the underlying genetic lesions. Two new members, M/LN-eo with ETV6::ABL1 fusion and M/LN-eo with various FLT3 fusions, have been added to the category; and M/LN-eo with PCM1::JAK2 and its genetic variants ETV6::JAK2 and BCR::JAK2 are recognized as a formal entity from their former provisional status. The updated understanding of the clinical and molecular genetic features of PDGFRA, PDGFRB and FGFR1 neoplasms is summarized. Clear guidance as to how to distinguish these fusion gene-associated disorders from the overlapping entities of Ph-like B-acute lymphoblastic leukemia (ALL), de novo T-ALL, and systemic mastocytosis is provided. Bone marrow morphology now constitutes one of the diagnostic criteria of chronic eosinophilic leukemia, NOS (CEL, NOS), and idiopathic hypereosinophilia/hypereosinophilic syndrome (HE/HES), facilitating the separation of a true myeloid neoplasm with characteristic eosinophilic proliferation from those of unknown etiology and not attributable to a myeloid neoplasm."
+    },
+    {
+      "pmid": "25482829",
+      "title": "Tenascin-C: Form versus function.",
+      "abstract": "Tenascin-C is a large, multimodular, extracellular matrix glycoprotein that exhibits a very restricted pattern of expression but an enormously diverse range of functions. Here, we discuss the importance of deciphering the expression pattern of, and effects mediated by, different forms of this molecule in order to fully understand tenascin-C biology. We focus on both post transcriptional and post translational events such as splicing, glycosylation, assembly into a 3D matrix and proteolytic cleavage, highlighting how these modifications are key to defining tenascin-C function."
+    },
+    {
+      "pmid": "24344264",
+      "title": "De novo selection of oncogenes.",
+      "abstract": "All cellular proteins are derived from preexisting ones by natural selection. Because of the random nature of this process, many potentially useful protein structures never arose or were discarded during evolution. Here, we used a single round of genetic selection in mouse cells to isolate chemically simple, biologically active transmembrane proteins that do not contain any amino acid sequences from preexisting proteins. We screened a retroviral library expressing hundreds of thousands of proteins consisting of hydrophobic amino acids in random order to isolate four 29-aa proteins that induced focus formation in mouse and human fibroblasts and tumors in mice. These proteins share no amino acid sequences with known cellular or viral proteins, and the simplest of them contains only seven different amino acids. They transformed cells by forming a stable complex with the platelet-derived growth factor \u03b2 receptor transmembrane domain and causing ligand-independent receptor activation. We term this approach de novo selection and suggest that it can be used to generate structures and activities not observed in nature, create prototypes for novel research reagents and therapeutics, and provide insight into cell biology, transmembrane protein-protein interactions, and possibly virus evolution and the origin of life."
+    },
+    {
+      "pmid": "34152937",
+      "title": "The blood-brain and gut-vascular barriers: from the perspective of claudins.",
+      "abstract": "In some organs, such as the brain, endothelial cells form a robust and highly selective blood-to-tissue barrier. However, in other organs, such as the intestine, endothelial cells provide less stringent permeability, to allow rapid exchange of solutes and nutrients where needed. To maintain the structural and functional integrity of the highly dynamic blood-brain and gut-vascular barriers, endothelial cells form highly specialized cell-cell junctions, known as adherens junctions and tight junctions. Claudins are a family of four-membrane-spanning proteins at tight junctions and they have both barrier-forming and pore-forming properties. Tissue-specific expression of claudins has been linked to different diseases that are characterized by barrier impairment. In this review, we summarize the more recent progress in the field of the claudins, with particular attention to their expression and function in the blood-brain barrier and the recently described gut-vascular barrier, under physiological and pathological conditions.Abbreviations: 22q11DS 22q11 deletion syndrome; ACKR1 atypical chemokine receptor 1; AD Alzheimer disease; AQP aquaporin; ATP adenosine triphosphate; A\u03b2 amyloid \u03b2; BAC bacterial artificial chromosome; BBB blood-brain barrier; C/EBP-\u03b1 CCAAT/enhancer-binding protein \u03b1; cAMP cyclic adenosine monophosphate (or 3',5'-cyclic adenosine monophosphate); CD cluster of differentiation; CNS central nervous system; DSRED discosoma red; EAE experimental autoimmune encephalomyelitis; ECV304 immortalized endothelial cell line established from the vein of an apparently normal human umbilical cord; EGFP enhanced green fluorescent protein; ESAM endothelial cell-selective adhesion molecule; GLUT-1 glucose transporter 1; GVB gut-vascular barrier; H2B histone H2B; HAPP human amyloid precursor protein; HEK human embryonic kidney; JACOP junction-associated coiled coil protein; JAM junctional adhesion molecules; LYVE1 lymphatic vessel endothelial hyaluronan receptor 1; MADCAM1 mucosal vascular addressin cell adhesion molecule 1; MAPK mitogen-activated protein kinase; MCAO middle cerebral artery occlusion; MMP metalloprotease; MS multiple sclerosis; MUPP multi-PDZ domain protein; PATJ PALS-1-associated tight junction protein; PDGFR-\u03b1 platelet-derived growth factor receptor \u03b1 polypeptide; PDGFR-\u03b2 platelet-derived growth factor receptor \u03b2 polypeptide; RHO rho-associated protein kinase; ROCK rho-associated, coiled-coil-containing protein kinase; RT-qPCR real time quantitative polymerase chain reactions; PDGFR-\u03b2 soluble platelet-derived growth factor receptor, \u03b2 polypeptide; T24 human urinary bladder carcinoma cells; TG2576 transgenic mice expressing the human amyloid precursor protein; TNF-\u03b1 tumor necrosis factor \u03b1; WTwild-type; ZO zonula occludens."
+    },
+    {
+      "pmid": "40140939",
+      "title": "Leveraging AAV1-Rac1T17N to prevent experimental proliferative vitreoretinopathy.",
+      "abstract": "Platelet-derived growth factor receptor \u03b2 (PDGFR\u03b2) is the principal PDGFR isoform in retinal pigment epithelial (RPE) cells from the epiretinal membranes of patients with proliferative vitreoretinopathy (PVR). Ras-related C3 Botulinum toxin substrate 1 (Rac1), a member of the Rho family, is a crucial factor in the cell migration and contraction processes that are inherent to the pathogenesis of PVR. The mutants Rac1T17N and Rac1Q61L can block and promote Rac1 activation, respectively. The major objective of this research was to ascertain whether PDGFR\u03b2 mediates vitreous-induced Rac1 activation and whether Rac1T17N could be leveraged for the prevention of PVR pathogenesis in a rabbit model. A pull-down assay was used to examine GTP Rac1 levels, which are indicative of Rac1 activation, and western blotting was used to assess cellular protein expression. A CCK8 assay, a wound healing assay, a transwell invasion assay and a collagen contraction assay were employed to analyze cell proliferation, migration, invasion and contraction capacity, respectively. A PVR model was created by injecting platelet-rich plasma and human retinal pigment epithelial cells (ARPE-19) into the vitreous cavities of rabbits, and this model was used to evaluate the severity of PVR impacted by intravitreally injected ARPE-19 cells transduced with adeno-associated virus (AAV)1-Rac1T17N or Rac1Q61L. PVR grade was evaluated by a double-blinded investigator according to the Fastenberg classification; in addition, ultrasound and histological analyses were performed to assess PVR severity. Vitreous-induced GTP Rac1 is mediated by PDGFR\u03b2. There was a significant decrease in vitreous-induced GTP Rac1 in ARPE-19 cells transduced with AAV1-Rac1T17N compared with those transduced with AAV1-GFP. In addition, the suppression of GTP Rac1 production in human RPE cells by transduction with AAV1-Rac1T17N inhibited vitreous-induced proliferation, migration, invasion, and contractility. Importantly, the results of the animal experiments indicated that although there was a significant increase in PVR potential in rabbits intravitreally injected with ARPE-19 cells infected with AAV1-Rac1Q61L, there was a significant decrease in PVR potential in rabbits intravitreally injected with ARPE-19 cells infected with AAV1-Rac1T17N (P\u2009<\u20090.01). AAV1-Rac1T17N has great potential for PVR therapy."
+    },
+    {
+      "pmid": "33928568",
+      "title": "Stick-Based Methods for Aptamer-Mediated siRNA Targeted Delivery.",
+      "abstract": "Despite the therapeutic utility of small interfering RNA (siRNA) molecules, the development of a safe and reliable method to selectively target diseased organs and tissues is still a critical need for their translation to the clinic. Here we describe how nucleic acid-based aptamers against cell surface epitopes may be used to address this issue. We discuss the most recent examples and advances in the field of aptamer siRNA delivery and provide a fast and simple protocol for the design and generation of aptamer-siRNA chimeras. The described approach is based on the annealing of the targeting aptamer, and the antisense strand through \"stick\" complementary sequences elongated at their 3' end, and the subsequent paring with the sense strand. Such a protocol allows a modular non-covalent generation of the constructs and permits an efficient delivery of the siRNA moiety into aptamer target cells."
+    },
+    {
+      "pmid": "41490797",
+      "title": "Brain vascular stability relies on PAK2-cilia-PDGF-BB-HSPGs on basolateral side of endothelium.",
+      "abstract": "Endothelial cells (ECs) in the brain communicate with mural cells to facilitate vascular stability. Platelet-derived growth factor-BB (PDGF-BB)/platelet-derived growth factor receptor-\u03b2 (PDGFR-\u03b2) signaling mechanism at EC-mural cell interface helps stabilize the vasculature. How this paracrine signaling is mediated is not known. Our laboratory studies endothelial cilia, a microtubule-based organelle, and its role in promoting vascular stability. We discovered that brain endothelial cilia are located primarily on the basolateral side, and PDGF-BB is expressed in EC cilium. Thus, we hypothesized that endothelium cilium in conjunction with PDGF-BB on the basolateral side is responsible for mural cell recruitment. In this study, using a combination of zebrafish, mice, and human brain model systems, we have established a signaling paradigm wherein p21-activated kinase (PAK2) and ADP-ribosylation factor-13b (ARL13b) in ECs induce secretion of PDGF-BB. PDGF-BB associates with heparan sulfate proteoglycans (HSPGs) to form a gradient around ECs. Disrupting PAK2 affects ciliogenesis, HSPGs, and PDGF-BB gradient. We unravel a new mechanism involving endothelial cilia/PAK2-mediated PDGF-BB secretion, and retention by periendothelial HSPGs to promote vascular stability via recruiting mural cells."
+    },
+    {
+      "pmid": "36788091",
+      "title": "High-Grade Sarcomas with Myogenic Differentiation Harboring Hotspot PDGFRB Mutations.",
+      "abstract": "PDGFRB-activating mutations have been reported in pediatric myofibroma and myofibromatosis. However, recurrent gain-of-function PDGFRB mutations have not been documented in sarcomas with myogenic differentiation. Driven by occasional sarcomas harboring PDGFRB mutations, we investigated their prevalence and clinicopathologic and genomic features in a large cohort of sarcomas. An institutional targeted DNA next-generation sequencing database was searched for sarcomas with myogenic differentiation harboring hotspot PDGFRB gene alterations. Among 3300 patients with sarcomas, 21 (0.6%) patients were identified (17 women, 4 men) with an age range of 35 to 88 years. The site distribution included 13 gynecologic tract (12 uteri, 1 vagina), 4 bone and soft tissue, and 4 viscera. All except 1 were high grade. Most patients were diagnosed as sarcomas with myogenic differentiation based on partial staining for 1 or more muscle markers, whereas 6 were labeled as leiomyosarcoma (LMS). Most tumors showed monomorphic spindle morphology, with either heterogeneous features of myofibroblastic and smooth muscle differentiation or an undifferentiated phenotype. Hormone receptors were negative in all uterine cases. PDGFRB immunostaining in all cases tested was strong and diffuse, whereas PDGFRA was negative/focal. The most frequent PDGFRB mutations were exon 12 (43%), exon 14 (N666K/S/T) (38%), and exon 18 (D850Y/H/V or insertion/deletion) (19%). The most frequent co-existing genetic alterations (26% to 37%) occurred in CDKN2A/B, TP53, TERT, and MED12. Moreover, PDGFRB-mutant sarcomas had an overall distinct genomic landscape compared with both uterine and soft tissue LMS control groups. These tumors were associated with a highly aggressive clinical course, with frequent distant metastases (81%) and death (76%), regardless of anatomic location, and worse overall survival compared with the 2 LMS control groups. This is the first study documenting recurrent hotspot PDGFRB alterations in high-grade sarcomas, which show a predilection for uterine location and myogenic differentiation that fall short of the diagnostic criteria for LMS. Further studies are needed to investigate the therapeutic potential of kinase inhibitors in this group of tumors."
+    },
+    {
+      "pmid": "10704888",
+      "title": "The molecular basis of lung morphogenesis.",
+      "abstract": "To form a diffusible interface large enough to conduct respiratory gas exchange with the circulation, the lung endoderm undergoes extensive branching morphogenesis and alveolization, coupled with angiogenesis and vasculogenesis. It is becoming clear that many of the key factors determining the process of branching morphogenesis, particularly of the respiratory organs, are highly conserved through evolution. Synthesis of information from null mutations in Drosophila and mouse indicates that members of the sonic hedgehog/patched/smoothened/Gli/FGF/FGFR/sprouty pathway are functionally conserved and extremely important in determining respiratory organogenesis through mesenchymal-epithelial inductive signaling, which induces epithelial proliferation, chemotaxis and organ-specific gene expression. Transcriptional factors including Nkx2.1, HNF family forkhead homologues, GATA family zinc finger factors, pou and hox, helix-loop-helix (HLH) factors, Id factors, glucocorticoid and retinoic acid receptors mediate and integrate the developmental genetic instruction of lung morphogenesis and cell lineage determination. Signaling by the IGF, EGF and TGF-beta/BMP pathways, extracellular matrix components and integrin signaling pathways also directs lung morphogenesis as well as proximo-distal lung epithelial cell lineage differentiation. Soluble factors secreted by lung mesenchyme comprise a 'compleat' inducer of lung morphogenesis. In general, peptide growth factors signaling through cognate receptors with tyrosine kinase intracellular signaling domains such as FGFR, EGFR, IGFR, PDGFR and c-met stimulate lung morphogenesis. On the other hand, cognate receptors with serine/threonine kinase intracellular signaling domains, such as the TGF-beta receptor family are inhibitory, although BMP4 and BMPR also play key inductive roles. Pulmonary neuroendocrine cells differentiate earliest in gestation from among multipotential lung epithelial cells. MASH1 null mutant mice do not develop PNE cells. Proximal and distal airway epithelial phenotypes differentiate under distinct transcriptional control mechanisms. It is becoming clear that angiogenesis and vasculogenesis of the pulmonary circulation and capillary network are closely linked with and may be necessary for lung epithelial morphogenesis. Like epithelial morphogenesis, pulmonary vascularization is subject to a fine balance between positive and negative factors. Angiogenic and vasculogenic factors include VEGF, which signals through cognate receptors flk and flt, while novel anti-angiogenic factors include EMAP II."
+    },
+    {
+      "pmid": "39407295",
+      "title": "Galectin-3 inhibition reduces fibrotic scarring and promotes functional recovery after spinal cord injury in mice.",
+      "abstract": "In the context of spinal cord injury (SCI), infiltrating macrophages assume prominence as the primary inflammatory cells within the lesion core, where the fibrotic scar is predominantly orchestrated by platelet-derived growth factor receptor beta (PDGFR\u03b2+) fibroblasts. Galectin-3, a carbohydrate-binding protein of the lectin family, is notably expressed by infiltrating hematogenous macrophages and mediates cell-cell interactions. Although Galectin-3 has been shown to contribute to the endocytic internalization of PDGFR\u03b2 in vitro, its specific role in driving fibrotic scar formation after SCI has not been determined. We employed a crush mid-thoracic (T10) SCI mouse model. Galectin-3 inhibition after SCI was achieved through intrathecal injection of the Galectin-3 inhibitor TD139 or in situ injection of lentivirus carrying Galectin-3-shRNA (Lv-shLgals3). A fibrosis-induced mice model was established by in situ injection of platelet-derived growth factor D (PDGFD) or recombinant Galectin-3 (rGalectin-3) into the uninjured spinal cord. Galectin-3 internalization experiments were conducted in PDGFR\u03b2+ fibroblasts cocultured in conditioned medium in vitro. We identified the spatial and temporal correlation between macrophage-derived Galectin-3 and PDGFR\u03b2 in fibroblasts from 3 to 56 days post-injury (dpi). Administration of TD139 via intrathecal injection or in situ injection of Lv-shLgals3 effectively mitigated fibrotic scar formation and extracellular matrix deposition within the injured spinal cord, leading to better neurological outcomes and function recovery after SCI. Furthermore, the fibrosis-inducing effects of exogenous PDGFD in the uninjured spinal cord could be blocked by TD139. In vitro experiments further demonstrated the ability of PDGFR\u03b2+ fibroblasts to internalize Galectin-3, with Galectin-3 inhibition resulting in reduced PDGFR\u03b2 expression. Our finding underscores the pivotal role of macrophage-derived Galectin-3 in modulating the sustained internalized activation of PDGFR\u03b2 within fibroblasts, providing a novel mechanistic insight into fibrotic scarring post-SCI."
+    },
+    {
+      "pmid": "40151378",
+      "title": "CD63-Snorkel tagging for isolation of exosomes.",
+      "abstract": "Exosomes (Exo) are important mediators of inter-cellular communications; however, no effective method is available for isolating, thus characterizing, cellular-specific exosomes in vivo. Since CD63 is a reliable marker for exosomes, we have developed a tagging strategy, term \"CD63-Snorkel (CD63-SNKL)\", in which CD63 at its intracellular C-terminus was fused to a fragment of PDGFRB that contains the transmembrane domain tethered to multiple epitope tags (HA, His, and FLAG) displayed in tandem on surface. We found that the CD63-SNKL protein has similar subcellular localizations as endogenous CD63 and can be effectively sorted into Exo. Furthermore, Exo secreted from CD63-SNKL-transduced cells can be effectively captured on anti-HA magnetic beads and eluted with HA peptides. Thus, CD63-SNKL may be engineered for isolating and tracking endogenous tissue-specific Exo in vivo."
+    },
+    {
+      "pmid": "32050038",
+      "title": "Odontogenic myxomas lack PDGFRB mutations reported in myofibromas.",
+      "abstract": "The molecular pathogenesis of odontogenic myxoma has not been established yet. Considering that odontogenic myxoma may show myofibroblastic differentiation and myxoid areas can be observed in intra-osseous myofibromas, we tested the hypothesis whether both tumors share a common molecular profile. As recent studies have reported PDGFRB recurrent driver mutations in myofibroma, we evaluated PDGFRB mutations in odontogenic myxomas. A convenience sample of 15 odontogenic myxomas cases was selected. We direct sequenced PDGFRB exons 12 and 14, where p.R561C (c.1681C>T) and p.N666K (c.1998C>G) hotspot mutations have been reported among others in single and/or multiple myofibromas. All 15 odontogenic myxoma samples were successfully sequenced, and all 15 had wild-type sequences for the PDGFRB mutations investigated. Our findings suggest that PDGFRB mutations do not play a role in odontogenic myxoma pathogenesis, which might be helpful in the differential diagnosis of challenging cases."
+    },
+    {
+      "pmid": "40953793",
+      "title": "Hyperactive PDGFR\u03b2 signaling induces cataractogenesis via TGF\u03b2 and STAT5-IGF1.",
+      "abstract": "Cataracts are the world's leading cause of reversible blindness. Although cataract formation is commonly initiated by lens fiber cell defects, cataractogenesis can be characterized by aberrant proliferation and migration of lens epithelial cells. Subsequent overproduction of extracellular matrix components such as fibronectin and collagen by epithelial cells is associated with fibrosis of the lens. Little is known about the role of platelet-derived growth factor receptor \u03b2 (PDGFR\u03b2) in lens fibrosis. Here, we investigated mice with a conditional knock-in of PDGFR\u03b2 hyperactivation using a Fsp1, also known as S100A4, promoter (Fsp1-cre;Pdgfrb+/D849V), which consistently develop cataracts at a young age. Lenses from Fsp1-cre;Pdgfrb+/D849V mice and age-matched controls were dissected and visualized via microscopy from 9 to 15 weeks. Early transcriptional changes of the lenses were investigated between 10 and 12 day old Fsp1-cre;Pdgfrb+/D849V and control mice via RNA sequencing followed by gene set enrichment analysis. Confirmation of RNA sequencing results and mechanistic investigation of PDGFR\u03b2-induced cataractogenesis were determined in lenses isolated from 15-week-old Fsp1-cre;Pdgfrb+/D849V and control mice. Gross examination of cataractous lenses from Fsp1-cre;Pdgfrb+/D849V mice revealed complete opacification by 15 weeks of age compared to no opacification in age-matched controls. Structural changes in the anterior, equatorial, and posterior lens were observed in histology. RNA sequencing revealed significant enrichment of gene sets related to extracellular matrix deposition and reorganization. Mechanistic investigation revealed major roles for TGF\u03b2, Wnt/\u03b2-catenin, SOCS2, and STAT5-IGF1 signaling axes in PDGFR\u03b2-induced cataract formation. PDGFR\u03b2 promoted cataractogenesis by modulating pro-fibrotic extracellular matrix changes, likely through TGF\u03b2, Wnt/\u03b2-catenin, SOCS2, and the STAT5-IGF1 pathways. Future experiments will delineate the precise role of the STAT5-IGF1 signaling pathway in PDGFR\u03b2-mediated fibrosis and the interplay between PDGFR\u03b2 and TGF\u03b2 in the lens and whether this signaling is targetable to modulate cataractogenesis."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000113721",
+    "approvedSymbol": "PDGFRB",
+    "approvedName": "platelet derived growth factor receptor beta",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [
+      {
+        "event": "heart disease",
+        "eventId": "MONDO_0005267",
+        "datasource": "Force et al. (2011)"
+      }
+    ],
+    "drugAndClinicalCandidates": {
+      "count": 45
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "smina",
+  "displayName": "smina",
+  "version": "2019.10.15",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "GPL-2.0-only",
+  "image": "ghcr.io/papercrane/smina:2019.10.15-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 40,
+    "note": "CPU protein-ligand docking with the current official static distribution; beta until binary compatibility and pose export pass live smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "scoring": "default",
+    "exhaustiveness": 8,
+    "numPoses": 9,
+    "autoboxAdd": 4.0
+  },
+  "composes": []
+}

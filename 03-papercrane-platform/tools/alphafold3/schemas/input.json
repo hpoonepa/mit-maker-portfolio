@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "papercrane://tools/alphafold3/input",
+  "title": "AlphaFold3 Input",
+  "description": "Input schema for AlphaFold 3 structure prediction via Isomorphic Labs API. Supports multi-chain protein complexes, DNA/RNA, and small-molecule ligands. Chain IDs with a 'dna:' or 'rna:' prefix are treated as nucleic acids.",
+  "type": "object",
+  "required": ["chains", "params", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "chains": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of polymer chains. IDs prefixed with 'dna:' or 'rna:' are treated as nucleic-acid chains; otherwise protein.",
+      "items": {
+        "type": "object",
+        "required": ["id", "sequence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(dna:|rna:)?[A-Za-z0-9_-]+$",
+            "description": "Chain identifier. Prefix with 'dna:' or 'rna:' for nucleic acids."
+          },
+          "sequence": {
+            "type": "string",
+            "minLength": 1,
+            "description": "One-letter sequence (protein: ACDEFGHIKLMNPQRSTVWY; DNA: ACGT; RNA: ACGU)."
+          }
+        }
+      }
+    },
+    "ligands": {
+      "type": "array",
+      "description": "Optional list of small-molecule ligands attached to the complex.",
+      "items": {
+        "type": "object",
+        "required": ["id", "ccd_or_smiles"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Ligand identifier used in the output CIF."
+          },
+          "ccd_or_smiles": {
+            "type": "string",
+            "description": "Either a PDB CCD three-letter code (e.g. 'ATP') or a SMILES string."
+          }
+        }
+      }
+    },
+    "params": {
+      "type": "object",
+      "required": ["num_recycles", "num_samples", "num_seeds"],
+      "additionalProperties": false,
+      "properties": {
+        "num_recycles": { "type": "integer", "minimum": 1, "maximum": 20, "default": 20 },
+        "num_samples": { "type": "integer", "minimum": 1, "maximum": 25, "default": 5 },
+        "num_seeds": { "type": "integer", "minimum": 1, "maximum": 10, "default": 1 }
+      }
+    },
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer" },
+      "description": "Explicit integer seeds. Length should equal params.num_seeds."
+    }
+  }
+}

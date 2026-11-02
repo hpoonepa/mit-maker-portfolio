@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/bindcraft/output.json",
+  "title": "BindCraft Design Result",
+  "description": "Shape of /outputs/result.json emitted by the BindCraft adapter.",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "sequence", "metrics", "seed"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Relative or absolute path to the designed PDB file.",
+            "type": "string"
+          },
+          "sequence": {
+            "description": "Designed binder sequence (1-letter amino acid codes).",
+            "type": "string",
+            "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+          },
+          "metrics": {
+            "description": "Tool-native metrics; canonical metrics are added later by the validator.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "iptm": { "type": "number" },
+              "plddt": { "type": "number" },
+              "i_pae": { "type": "number" },
+              "hotspot_contact": { "type": "number" }
+            }
+          },
+          "seed": { "type": "integer" }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "properties": {
+        "tool": { "type": "string", "const": "bindcraft" },
+        "adapterVersion": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

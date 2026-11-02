@@ -1,0 +1,26 @@
+{
+  "id": "rf3",
+  "displayName": "RoseTTAFold3",
+  "version": "0.1.9",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/rf3:0.1.9-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "H100-80GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 32,
+    "estSecondsPerDesign": 90,
+    "note": "Beta until Foundry 0.1.9 and the official RF3 checkpoint are smoke-tested on Modal."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "nRecycles": 10,
+    "numSteps": 200,
+    "earlyStoppingPlddtThreshold": 0
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "abstracts": [
+    {
+      "pmid": "20636820",
+      "title": "The PD-1 pathway in tolerance and autoimmunity.",
+      "abstract": "Regulatory T cells (Tregs) and the PD-1: PD-ligand (PD-L) pathway are both critical to terminating immune responses. Elimination of either can result in the breakdown of tolerance and the development of autoimmunity. The PD-1: PD-L pathway can thwart self-reactive T cells and protect against autoimmunity in many ways. In this review, we highlight how PD-1 and its ligands defend against potentially pathogenic self-reactive effector T cells by simultaneously harnessing two mechanisms of peripheral tolerance: (i) the promotion of Treg development and function and (ii) the direct inhibition of potentially pathogenic self-reactive T cells that have escaped into the periphery. Treg cells induced by the PD-1 pathway may also assist in maintaining immune homeostasis, keeping the threshold for T-cell activation high enough to safeguard against autoimmunity. PD-L1 expression on non-hematopoietic cells as well as hematopoietic cells endows PD-L1 with the capacity to promote Treg development and enhance Treg function in lymphoid organs and tissues that are targets of autoimmune attack. At sites where transforming growth factor-beta is present (e.g. sites of immune privilege or inflammation), PD-L1 may promote the de novo generation of Tregs. When considering the consequences of uncontrolled immunity, it would be therapeutically advantageous to manipulate Treg development and sustain Treg function. Thus, this review also discusses how the PD-1 pathway regulates a number of autoimmune diseases and the therapeutic potential of PD-1: PD-L modulation."
+    },
+    {
+      "pmid": "1396582",
+      "title": "Induced expression of PD-1, a novel member of the immunoglobulin gene superfamily, upon programmed cell death.",
+      "abstract": "The classical type of programmed cell death is characterized by its dependence on de novo RNA and protein synthesis and morphological features of apoptosis. We confirmed that stimulated 2B4.11 (a murine T-cell hybridoma) and interleukin-3 (IL-3)-deprived LyD9 (a murine haematopoietic progenitor cell line) died by the classical type of programmed cell death. Assuming that common biochemical pathways might be involved in the deaths of 2B4.11 and LyD9, we isolated the PD-1 gene, a novel member of the immunoglobulin gene superfamily, by using subtractive hybridization technique. The predicted PD-1 protein has a variant form of the consensus sequence found in cytoplasmic tails of signal transducing polypeptides associated with immune recognition receptors. The PD-1 gene was activated in both stimulated 2B4.11 and IL-3-deprived LyD9 cells, but not in other death-induced cell lines that did not show the characteristic features of the classical programmed cell death. Expression of the PD-1 mRNA in mouse was restricted to the thymus and increased when thymocyte death was augmented by in vivo injection of anti-CD3 antibody. These results suggest that activation of the PD-1 gene may be involved in the classical type of programmed cell death."
+    },
+    {
+      "pmid": "28678784",
+      "title": "Personalized RNA mutanome vaccines mobilize poly-specific therapeutic immunity against cancer.",
+      "abstract": "T cells directed against mutant neo-epitopes drive cancer immunity. However, spontaneous immune recognition of mutations is inefficient. We recently introduced the concept of individualized mutanome vaccines and implemented an RNA-based poly-neo-epitope approach to mobilize immunity against a spectrum of cancer mutations. Here we report the first-in-human application of this concept in melanoma. We set up a process comprising comprehensive identification of individual mutations, computational prediction of neo-epitopes, and design and manufacturing of a vaccine unique for each patient. All patients developed T cell responses against multiple vaccine neo-epitopes at up to high single-digit percentages. Vaccine-induced T cell infiltration and neo-epitope-specific killing of autologous tumour cells were shown in post-vaccination resected metastases from two patients. The cumulative rate of metastatic events was highly significantly reduced after the start of vaccination, resulting in a sustained progression-free survival. Two of the five patients with metastatic disease experienced vaccine-related objective responses. One of these patients had a late relapse owing to outgrowth of \u03b22-microglobulin-deficient melanoma cells as an acquired resistance mechanism. A third patient developed a complete response to vaccination in combination with PD-1 blockade therapy. Our study demonstrates that individual mutations can be exploited, thereby opening a path to personalized immunotherapy for patients with cancer."
+    },
+    {
+      "pmid": "30646912",
+      "title": "Role of the tumor microenvironment in PD-L1/PD-1-mediated tumor immune escape.",
+      "abstract": "Tumor immune escape is an important strategy of tumor survival. There are many mechanisms of tumor immune escape, including immunosuppression, which has become a research hotspot in recent years. The programmed death ligand-1/programmed death-1 (PD-L1/PD-1) signaling pathway is an important component of tumor immunosuppression, which can inhibit the activation of T lymphocytes and enhance the immune tolerance of tumor cells, thereby achieving tumor immune escape. Therefore, targeting the PD-L1/PD-1 pathway is an attractive strategy for cancer treatment; however, the therapeutic effectiveness of PD-L1/PD-1 remains poor. This situation requires gaining a deeper understanding of the complex and varied molecular mechanisms and factors driving the expression and activation of the PD-L1/PD-1 signaling pathway. In this review, we summarize the regulation mechanisms of the PD-L1/PD-1 signaling pathway in the tumor microenvironment and their roles in mediating tumor escape. Overall, the evidence accumulated to date suggests that induction of PD-L1 by inflammatory factors in the tumor microenvironment may be one of the most important factors affecting the therapeutic efficiency of PD-L1/PD-1 blocking."
+    },
+    {
+      "pmid": "40439109",
+      "title": "Lipid metabolism reprograming by SREBP1-PCSK9 targeting sensitizes pancreatic cancer to immunochemotherapy.",
+      "abstract": "Pancreatic cancer's aberrant lipid metabolism fuels cell growth, invasion, and metastasis, yet its impact on immune surveillance and immunotherapy is unclear. This study investigated how sterol regulatory element-binding transcription factor 1 (SREBP1)-driven lipid metabolism affects the tumor microenvironment (TME) in pancreatic ductal adenocarcinoma (PDAC). Clinical significance of SREBP1 was assessed in a PDAC cohort from China and The Cancer Genome Atlas (TCGA) cohorts. The in vitro mechanisms that SREBP1 regulated programmed cell death-ligand 1 (PD-L1) and proprotein convertase subtilisin/kexin type 9 (PCSK9) were investigated using immunofluorescence, flow cytometry, Western blotting, luciferase assays and chromatin immunoprecipitation. In vivo studies using PDAC-bearing mice, humanized patient-derived tumor xenograft (PDX) models, and autochthonous model of mutation (GEMM-KTC) evaluated the efficacy and mechanisms of programmed death receptor 1 (PD-1) antibodies and lipid inhibitors. Patients responding to anti-PD-1 therapy exhibited lower serum lipid levels than non-responders. Targeting SREBP1 disrupted lipid metabolism, decelerated tumor growth, and boosted the efficacy of immunotherapy for PDAC. Mechanistically, SREBP1 directly bound the PD-L1 promoter, suppressing its transcription. Meanwhile, PCSK9, a direct transcriptional target of SREBP1, modulated PD-L1 levels via lysosomal degradation. Consequently, the combination of PCSK9-neutralizing antibodies with PD-1 monotherapy showed a robust antitumor effect in both humanized PDX and GEMM-KTC models. The SREBP1-PCSK9 axis-mediated lipid metabolism is crucial for triggering immune evasion and resistance to anti-PD-1. Targeting the SREBP1-PCSK9 axis could potentially reverse PDAC's resistance to anti-PD-1 therapy."
+    },
+    {
+      "pmid": "28150777",
+      "title": "Pathologically expanded peripheral T helper cell subset drives B cells in rheumatoid arthritis.",
+      "abstract": "CD4+ T cells are central mediators of autoimmune pathology; however, defining their key effector functions in specific autoimmune diseases remains challenging. Pathogenic CD4+ T cells within affected tissues may be identified by expression of markers of recent activation. Here we use mass cytometry to analyse activated T cells in joint tissue from patients with rheumatoid arthritis, a chronic immune-mediated arthritis that affects up to 1% of the population. This approach revealed a markedly expanded population of PD-1hiCXCR5-CD4+ T cells in synovium of patients with rheumatoid arthritis. However, these cells are not exhausted, despite high PD-1 expression. Rather, using multidimensional cytometry, transcriptomics, and functional assays, we define a population of PD-1hiCXCR5- 'peripheral helper' T (TPH) cells that express factors enabling B-cell help, including IL-21, CXCL13, ICOS, and MAF. Like PD-1hiCXCR5+ T follicular helper cells, TPH cells induce plasma cell differentiation in vitro through IL-21 secretion and SLAMF5 interaction (refs 3, 4). However, global transcriptomics highlight differences between TPH cells and T follicular helper cells, including altered expression of BCL6 and BLIMP1 and unique expression of chemokine receptors that direct migration to inflamed sites, such as CCR2, CX3CR1, and CCR5, in TPH cells. TPH cells appear to be uniquely poised to promote B-cell responses and antibody production within pathologically inflamed non-lymphoid tissues."
+    },
+    {
+      "pmid": "32322066",
+      "title": "Mechanisms and therapeutic implications of hypermutation in gliomas.",
+      "abstract": "A high tumour mutational burden (hypermutation) is observed in some gliomas1-5; however, the mechanisms by which hypermutation develops and whether it predicts the response to immunotherapy are poorly understood. Here we comprehensively analyse the molecular determinants of mutational burden and signatures in 10,294 gliomas. We delineate two main pathways to hypermutation: a de novo pathway associated with constitutional defects in DNA polymerase and mismatch repair (MMR) genes, and a more common post-treatment pathway, associated with acquired resistance driven by MMR defects in chemotherapy-sensitive gliomas that recur after treatment with the chemotherapy drug temozolomide. Experimentally, the mutational signature of post-treatment hypermutated gliomas was recapitulated by temozolomide-induced damage in cells with MMR deficiency. MMR-deficient gliomas were characterized by a lack of prominent T cell infiltrates, extensive intratumoral heterogeneity, poor patient survival and a low rate of response to PD-1 blockade. Moreover, although bulk analyses did not detect microsatellite instability in MMR-deficient gliomas, single-cell whole-genome sequencing analysis of post-treatment hypermutated glioma cells identified microsatellite mutations. These results show that chemotherapy can drive the acquisition of hypermutated populations without promoting a response to PD-1 blockade and supports the diagnostic use of mutational burden and signatures in cancer."
+    },
+    {
+      "pmid": "33064988",
+      "title": "A Phase Ib Trial of Personalized Neoantigen Therapy Plus Anti-PD-1 in Patients with Advanced Melanoma, Non-small Cell Lung Cancer, or Bladder Cancer.",
+      "abstract": "Neoantigens arise from mutations in cancer cells and are important targets of T\u00a0cell-mediated anti-tumor immunity. Here, we report the first open-label, phase Ib clinical trial of a personalized neoantigen-based vaccine, NEO-PV-01, in combination with PD-1 blockade in patients with advanced melanoma, non-small cell lung cancer, or bladder cancer. This analysis of 82 patients demonstrated that the regimen was safe, with no treatment-related serious adverse events observed. De novo neoantigen-specific CD4+ and CD8+ T\u00a0cell responses were observed post-vaccination in all of the patients. The vaccine-induced T cells had a cytotoxic phenotype and were capable of trafficking to the tumor and mediating cell killing. In addition, epitope spread to neoantigens not included in the vaccine was detected post-vaccination. These data support the safety and immunogenicity of this regimen in patients with advanced solid tumors (Clinicaltrials.gov: NCT02897765)."
+    },
+    {
+      "pmid": "35762356",
+      "title": "Identification of Pathogenic Immune Cell Subsets Associated With Checkpoint Inhibitor-Induced Myocarditis.",
+      "abstract": "Immune checkpoint inhibitors (ICIs) are monoclonal antibodies used to activate the immune system against tumor cells. Despite therapeutic benefits, ICIs have the potential to cause immune-related adverse events such as myocarditis, a rare but serious side effect with up to 50% mortality in affected patients. Histologically, patients with ICI myocarditis have lymphocytic infiltrates in the heart, implicating T cell-mediated mechanisms. However, the precise pathological immune subsets and molecular changes in ICI myocarditis are unknown. To identify immune subset(s) associated with ICI myocarditis, we performed time-of-flight mass cytometry on peripheral blood mononuclear cells from 52 individuals: 29 patients with autoimmune adverse events (immune-related adverse events) on ICI, including 8 patients with ICI myocarditis, and 23 healthy control subjects. We also used multiomics single-cell technology to immunophenotype 30 patients/control subjects using single-cell RNA sequencing, single-cell T-cell receptor sequencing, and cellular indexing of transcriptomes and epitopes by sequencing with feature barcoding for surface marker expression confirmation. To correlate between the blood and the heart, we performed single-cell RNA sequencing/T-cell receptor sequencing/cellular indexing of transcriptomes and epitopes by sequencing on MRL/Pdcd1-/- (Murphy Roths large/programmed death-1-deficient) mice with spontaneous myocarditis. Using these complementary approaches, we found an expansion of cytotoxic CD8+ T effector cells re-expressing CD45RA (Temra CD8+ cells) in patients with ICI myocarditis compared with control subjects. T-cell receptor sequencing demonstrated that these CD8+ Temra cells were clonally expanded in patients with myocarditis compared with control subjects. Transcriptomic analysis of these Temra CD8+ clones confirmed a highly activated and cytotoxic phenotype. Longitudinal study demonstrated progression of these Temra CD8+ cells into an exhausted phenotype 2 months after treatment with glucocorticoids. Differential expression analysis demonstrated elevated expression levels of proinflammatory chemokines (CCL5/CCL4/CCL4L2) in the clonally expanded Temra CD8+ cells, and ligand receptor analysis demonstrated their interactions with innate immune cells, including monocytes/macrophages, dendritic cells, and neutrophils, as well as the absence of key anti-inflammatory signals. To complement the human study, we performed single-cell RNA sequencing/T-cell receptor sequencing/cellular indexing of transcriptomes and epitopes by sequencing in Pdcd1-/- mice with spontaneous myocarditis and found analogous expansions of cytotoxic clonal effector CD8+ cells in both blood and hearts of such mice compared with controls. Clonal cytotoxic Temra CD8+ cells are significantly increased in the blood of patients with ICI myocarditis, corresponding to an analogous increase in effector cytotoxic CD8+ cells in the blood/hearts of Pdcd1-/- mice with myocarditis. These expanded effector CD8+ cells have unique transcriptional changes, including upregulation of chemokines CCL5/CCL4/CCL4L2, which may serve as attractive diagnostic/therapeutic targets for reducing life-threatening cardiac immune-related adverse events in ICI-treated patients with cancer."
+    },
+    {
+      "pmid": "34471285",
+      "title": "Functional HPV-specific PD-1+ stem-like CD8 T cells in head and neck cancer.",
+      "abstract": "T cells are important in tumour immunity but a better understanding is needed of the differentiation of antigen-specific T cells in human cancer1,2. Here we studied CD8 T cells in patients with human papillomavirus (HPV)-positive head and neck cancer and identified several epitopes derived from HPV E2, E5 and E6 proteins that allowed us to analyse virus-specific CD8 T cells using major histocompatibility complex (MHC) class I tetramers. HPV-specific CD8 T cells expressed PD-1 and were detectable in the tumour at levels that ranged from 0.1% to 10% of tumour-infiltrating CD8 T lymphocytes (TILs) for a given epitope. Single-cell RNA-sequencing analyses of tetramer-sorted HPV-specific PD-1+ CD8 TILs revealed three transcriptionally distinct subsets. One subset expressed TCF7 and other genes associated with PD-1+ stem-like CD8 T cells that are critical for maintaining T cell responses in conditions of antigen persistence. The second subset expressed more effector molecules, representing a transitory cell population, and the third subset was characterized by a terminally differentiated gene signature. T cell receptor clonotypes were shared between the three subsets and pseudotime analysis suggested a hypothetical differentiation trajectory from stem-like to transitory to terminally differentiated cells. More notably, HPV-specific PD-1+TCF-1+ stem-like TILs proliferated and differentiated into more effector-like cells after in vitro stimulation with the cognate HPV peptide, whereas the more terminally differentiated cells did not proliferate. The presence of functional HPV-specific PD-1+TCF-1+CD45RO+ stem-like CD8 T cells with proliferative capacity shows that the cellular machinery to respond to PD-1 blockade exists in HPV-positive head and neck cancer, supporting the further investigation of PD-1 targeted therapies in this malignancy. Furthermore, HPV therapeutic vaccination efforts have focused on E6 and E7 proteins; our results suggest that E2 and E5 should also be considered for inclusion as vaccine antigens to elicit tumour-reactive CD8 T cell responses of maximal breadth."
+    },
+    {
+      "pmid": "40500332",
+      "title": "Potentiating cancer immunotherapies with modular albumin-hitchhiking nanobody-STING agonist conjugates.",
+      "abstract": "The enhancement of antitumour immunity via agonists of the stimulator of interferon genes (STING) pathway is limited by pharmacological barriers. Here we show that the covalent conjugation of a STING agonist to anti-albumin nanobodies via site-selective bioconjugation chemistries prolongs the circulation of the agonist in the blood and increases its accumulation in tumour tissue, stimulating innate immune programmes that increased the infiltration of activated natural killer cells and T cells, which potently inhibited the growth of mouse tumours. The technology is modular, as demonstrated by the recombinant integration of a second nanobody domain targeting programmed death-ligand 1 (PD-L1), which further increased the accumulation of the agonist in tumours while blocking immunosuppressive PD-1/PD-L1 interactions. The bivalent nanobody-STING agonist conjugate stimulated robust antigen-specific T-cell responses and long-lasting immunological memory and conferred enhanced therapeutic efficacy. It was also effective as a neoadjuvant treatment to adoptive T-cell therapy. As a modular approach, hitchhiking STING agonists on serum albumin may serve as a broadly applicable strategy for augmenting the potency of systemically administered cancer immunotherapies."
+    },
+    {
+      "pmid": "39608214",
+      "title": "PD-1 antibody interactions with Fc gamma receptors enable PD-1 agonism to inhibit T cell activation - therapeutic implications for autoimmunity.",
+      "abstract": "PD-1 has emerged as a central inhibitory checkpoint receptor in maintaining immune homeostasis and as a target in cancer immunotherapies. However, targeting PD-1 for the treatment of autoimmune diseases has been more challenging. We recently showed in a phase 2a trial that PD-1 could be stimulated with the PD-1 agonist antibody peresolimab to treat rheumatoid arthritis. Here, we demonstrate that PD-1 antibodies can elicit agonism and inhibit T cell activation by co-localization of PD-1 with the T cell receptor via Fc\u03b3 receptor (Fc\u03b3R) engagement. Three PD-1 agonist antibodies with different antigen binding domains, including the clinically validated PD-1 blocking antibody pembrolizumab, suppressed T cell activation to a similar degree; this finding suggests that a specific PD-1-binding epitope is not required for PD-1 agonism. We next explored whether antibody-mediated clustering was an important driver of inhibition of T cell activation; however, we found that a monovalent PD-1 antibody was not inferior to a conventional bivalent antibody in its ability to suppress T cell activation. Importantly, we found that affinity to PD-1 correlated positively with inhibition of T cell activation, with higher affinity antibodies exhibiting higher levels of inhibition. Using a series of human Fc mutants with altered affinities to various Fc\u03b3Rs, we dissected the contributions of Fc\u03b3Rs and found that multiple Fc\u03b3Rs rather than a single receptor contribute to agonist activity. Our work reveals an important role for Fc\u03b3R binding in the activity of PD-1 antibodies, which has implications for optimizing both PD-1 agonist and antagonist antibodies."
+    },
+    {
+      "pmid": "34270940",
+      "title": "Non-terminally exhausted tumor-resident memory HBV-specific T\u00a0cell responses correlate with relapse-free survival in hepatocellular carcinoma.",
+      "abstract": "Hepatocellular carcinoma (HCC) often develops following chronic hepatitis B virus (HBV) infection and responds poorly to immune checkpoint blockade. Here, we examined the antigen specificities of HCC-infiltrating T\u00a0cells and their relevance to tumor control. Using highly multiplexed peptide-MHC tetramer staining of unexpanded cells from blood, liver, and tumor tissues from 46 HCC patients, we detected 91 different antigen-specific CD8+ T\u00a0cell populations targeting HBV, neoantigen, tumor-associated, and disease-unrelated antigens. Parallel high-dimensional analysis delineated five distinct antigen-specific tissue-resident memory T (Trm) cell populations. Intratumoral and intrahepatic HBV-specific T\u00a0cells were enriched for two Trm cell subsets that were PD-1loTOXlo, despite being clonally expanded. High frequencies of intratumoral terminally exhausted T\u00a0cells were uncommon. Patients with tumor-infiltrating HBV-specific CD8+ Trm cells exhibited longer-term relapse-free survival. Thus, non-terminally exhausted HBV-specific CD8+ Trm cells show hallmarks of active involvement and effective antitumor response, implying that these cells could be harnessed for therapeutic purposes."
+    },
+    {
+      "pmid": "32006351",
+      "title": "Nanobody against PDL1.",
+      "abstract": "Programmed death ligand 1 (PDL1, CD274, B7-H1) has been identified as the ligand for the immune inhibitory receptor programmed death 1 protein (PD1/PDCD1). PDL1 is a member of B7 family of immune molecules and this protein together with PDL2, are two ligands for PD1 expressed on activated lymphoid cells. By binding to PD1 on activated T cells, PDL1 may inhibit T cell responses by inducing apoptosis. Accordingly, it leads to the immune evasion of cancers and contribute to tumor growth, thus PDL1 is regarded as therapeutic target for malignant cancers. We selected PDL1 specific nanobodies from a high quality dromedary camel immune library by phage display technology, three anti-PDL1-VHHs were developed."
+    },
+    {
+      "pmid": "39159723",
+      "title": "Matrix stiffness-dependent PD-L2 deficiency improves SMYD3/xCT-mediated ferroptosis and the efficacy of anti-PD-1 in HCC.",
+      "abstract": "Heterogeneous tissue stiffening promotes tumor progression and resistance, and predicts a poor clinical outcome in patients with hepatocellular carcinoma (HCC). Ferroptosis, a congenital tumor suppressive mechanism, mediates the anticancer activity of various tumor suppressors, including immune checkpoint inhibitors, and its induction is currently considered a promising treatment strategy. However, the role of extracellular matrix (ECM) stiffness in regulating ferroptosis and ferroptosis-targeted resistance in HCC remains unclear. This research aimed to explore how extracellular matrix stiffness affects ferroptosis and its treatment efficacy in HCC. Ferroptosis analysis was confirmed via cell activity, intracellular ferrous irons, and mitochondrial pathology assays. Baseline PD-L2, SMYD3, and SLC7A11 (xCT) were evaluated in 67 sorafenib-treated patients with HCC (46 for non-responder and 21 for responder) from public data. The combined efficacy of shPD-L2, sorafenib, and anti-PD-1 antibody in HCC was investigated in vivo. Here, we revealed that matrix stiffness-induced PD-L2 functions as a suppressor of xCT-mediated ferroptosis to promote cancer growth and sorafenib resistance in patients with HCC. Mechanically, matrix stiffening induced the expression of PD-L2 by activating SMYD3/H3K4me3, which acts as an RNA binding protein to enhance the mRNA stability of FTL and elevate its protein level. Knockdown of PD-L2 significantly promoted xCT-mediated ferroptosis induced by RSL3 or sorafenib on stiff substrate via FTL, whereas its overexpression abolished these upward trends. Notably, PD-L2 deletion in combination with sorafenib and anti-PD-1 antibody significantly sensitized HCC cells and blunted cancer growth in vivo. Additionally, we found the ferroptosis- and immune checkpoint-related prognostic genes that combined PD-L2, SLC7A11 and SYMD3 well predict the clinical efficacy of sorafenib in patients with HCC. These findings expand our understanding of the mechanics-dependent PD-L2 role in ferroptosis, cancer progression and resistance, providing a basis for the clinical translation of PD-L2 as a therapeutic target or diagnostic biomarker."
+    },
+    {
+      "pmid": "37100904",
+      "title": "De novo design of protein interactions with learned surface fingerprints.",
+      "abstract": "Physical interactions between proteins are essential for most biological processes governing life1. However, the molecular determinants of such interactions have been challenging to understand, even as genomic, proteomic and structural data increase. This knowledge gap has been a major obstacle for the comprehensive understanding of cellular protein-protein interaction networks and for the de novo design of protein binders that are crucial for synthetic biology and translational applications2-9. Here we use a geometric deep-learning framework operating on protein surfaces that generates fingerprints to describe geometric and chemical features that are critical to drive protein-protein interactions10. We hypothesized that these fingerprints capture the key aspects of molecular recognition that represent a new paradigm in the computational design of novel protein interactions. As a proof of principle, we computationally designed several de novo protein binders to engage four protein targets: SARS-CoV-2 spike, PD-1, PD-L1 and CTLA-4. Several designs were experimentally optimized, whereas others were generated purely in silico, reaching nanomolar affinity with structural and mutational characterization showing highly accurate predictions. Overall, our surface-centric approach captures the physical and chemical determinants of molecular recognition, enabling an approach for the de novo design of protein interactions and, more broadly, of artificial proteins with function."
+    },
+    {
+      "pmid": "41199882",
+      "title": "Nanobody-based canine PD-L1-targeting immune checkpoint inhibitors for cancer therapy in dogs.",
+      "abstract": "Although the demand for novel immunotherapies to treat companion dogs with spontaneously developing cancer is increasing in high-income countries, most options remain inaccessible. Dogs host a complete and functional immune system reacting to the presence of their tumor. As for humans, many canine neoplasms were shown to overexpress programmed death-ligand 1 (PD-L1), an immune checkpoint inhibitor (ICI) known to downregulate cytotoxic T cell activity upon interaction with its ligand PD-1. In this study, we used alpaca-derived single domain antibodies (sdAbs), also known as nanobodies (Nbs), to develop new ICI targeting canine PD-L1. We selected several clones binding to both recombinant soluble and cell membrane-anchored cPD-L1 forms. Next, their cPD-L1-binding affinities, cPD-1/cPD-L1-blocking abilities and epitope relationships were determined. Most effective Nbs binding to non-overlapping epitopes were combined as biparatopic Fc fusions to provide additional functionalities and improve their efficacy. Remarkably, all engineered Nb constructs efficiently interfered with the cPD-1/cPD-L1-induced signaling pathway, with some multivalent molecules displaying inhibitory concentrations reaching low picomolar range. Moreover, Fc-competent Nb constructs were also shown to induce tumor cell death by antibody-dependent cell-mediated cytotoxicity using human or canine models. Finally, using donor canine peripheral blood mononuclear cells (PBMCs), best candidates were favorably compared with atezolizumab in a Staphylococcal enterotoxin B (SEB)-based interferon-\u03b3 (IFN\u03b3) secretion assay."
+    },
+    {
+      "pmid": "39333505",
+      "title": "Mechanical force regulates ligand binding and function of PD-1.",
+      "abstract": "Despite the success of PD-1 blockade in cancer therapy, how PD-1 initiates signaling remains unclear. Soluble PD-L1 is found in patient sera and can bind PD-1 but fails to suppress T cell function. Here, we show that PD-1 function is reduced when mechanical support on ligand is removed. Mechanistically, cells exert forces to PD-1 and prolong bond lifetime at forces <7 pN (catch bond) while accelerate dissociation at forces >8pN (slip bond). Molecular dynamics of PD-1-PD-L2 complex suggests force may cause relative rotation and translation between the two molecules yielding distinct atomic contacts not observed in the crystal structure. Compared to wild-type, PD-1 mutants targeting the force-induced distinct interactions maintain the same binding affinity but suppressed/eliminated catch bond, lowered rupture force, and reduced inhibitory function. Our results uncover a mechanism for cells to probe the mechanical support of PD-1-PD-Ligand bonds using endogenous forces to regulate PD-1 signaling."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000188389",
+    "approvedSymbol": "PDCD1",
+    "approvedName": "programmed cell death 1",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 26
+    }
+  }
+}

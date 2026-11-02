@@ -1,0 +1,26 @@
+{
+  "id": "fpocket",
+  "displayName": "fpocket",
+  "version": "4.2.3",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/fpocket:4.2.3-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 15,
+    "note": "Voronoi-based binding-pocket detection; beta until the pinned native build and descriptor parser pass a live smoke test."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "minAlphaSphereRadius": 3.0,
+    "maxAlphaSphereRadius": 6.0
+  },
+  "composes": []
+}

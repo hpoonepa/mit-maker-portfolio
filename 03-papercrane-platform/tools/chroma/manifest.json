@@ -1,0 +1,27 @@
+{
+  "id": "chroma",
+  "displayName": "Chroma",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "backbone_generation",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/chroma:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 24,
+    "estSecondsPerDesign": 50
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "num_designs": 10,
+    "length": 100,
+    "temperature": 1.0
+  },
+  "composes": ["proteinmpnn"]
+}

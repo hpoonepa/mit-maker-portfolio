@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/esmc/input.json",
+  "title": "ESM-C 300M Input Parameters",
+  "description": "Normalized request shape for the ESM-C 300M embedding/scoring adapter. ESM-C is not a design tool — it consumes sequences and emits either per-sequence pseudo-log-likelihood (pLL) scores (mode=score) or per-residue embeddings (mode=embed).",
+  "type": "object",
+  "required": ["sequences", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "sequences": {
+      "description": "List of sequences to score or embed. Each item carries a stable `id` and a canonical amino-acid `sequence`.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "sequence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "description": "Stable identifier. Becomes the FASTA header and the output record key.",
+            "type": "string",
+            "minLength": 1
+          },
+          "sequence": {
+            "description": "1-letter amino acid sequence (canonical 20 AAs).",
+            "type": "string",
+            "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "seeds": {
+      "description": "Seeds threaded through for reproducibility bookkeeping. ESM-C inference is deterministic given the weights, but Paper Crane records a seed per record so downstream filtering keys line up with design-tool outputs.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0 },
+      "minItems": 1
+    },
+    "params": {
+      "description": "ESM-C-specific knobs.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "description": "score = pseudo-log-likelihood per sequence; embed = per-residue hidden states from --layer.",
+          "type": "string",
+          "enum": ["score", "embed"],
+          "default": "score"
+        },
+        "pool": {
+          "description": "Embedding pooling strategy (embed mode only). 'mean' averages over sequence length, 'cls' uses the BOS token, 'none' returns the full [L, D] tensor.",
+          "type": "string",
+          "enum": ["mean", "cls", "none"],
+          "default": "mean"
+        },
+        "layer": {
+          "description": "Transformer layer index to extract embeddings from (embed mode only). Default 30 is the final layer of esmc-300m-2024-12.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30,
+          "default": 30
+        }
+      }
+    }
+  }
+}

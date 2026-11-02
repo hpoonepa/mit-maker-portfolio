@@ -1,0 +1,130 @@
+name: Benchmark — On Target Merge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'benchmark/targets/*.yaml'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target id to force-run (optional; skips change detection)'
+        type: string
+        required: false
+
+concurrency:
+  # Don't cancel — each merged target gets its own run
+  group: benchmark-target-merge-${{ github.sha }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+env:
+  NODE_VERSION: '20'
+  TIER: 'target-merge'
+  SEEDS_PER_CELL: '60'
+  MAX_BUDGET_USD: '200'
+  PARALLELISM: '8'
+
+jobs:
+  detect-changes:
+    name: Detect changed target YAML(s)
+    runs-on: ubuntu-latest
+    outputs:
+      targets: ${{ steps.detect.outputs.targets }}
+      has_targets: ${{ steps.detect.outputs.has_targets }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed targets
+        id: detect
+        run: |
+          if [ -n "${{ github.event.inputs.target }}" ]; then
+            echo "targets=benchmark/targets/${{ github.event.inputs.target }}.yaml" >> "$GITHUB_OUTPUT"
+            echo "has_targets=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Diff changed files in this push, filter for target YAMLs
+          changed=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
+            | grep -E '^benchmark/targets/.*\.yaml$' || true)
+
+          if [ -z "$changed" ]; then
+            echo "has_targets=false" >> "$GITHUB_OUTPUT"
+            echo "targets=" >> "$GITHUB_OUTPUT"
+          else
+            # Comma-separated list, consumed by dispatch script
+            joined=$(echo "$changed" | tr '\n' ',' | sed 's/,$//')
+            echo "targets=$joined" >> "$GITHUB_OUTPUT"
+            echo "has_targets=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  dispatch:
+    name: Run full tier on changed target(s)
+    runs-on: ubuntu-latest
+    needs: detect-changes
+    if: needs.detect-changes.outputs.has_targets == 'true'
+    timeout-minutes: 1440
+    outputs:
+      run_id: ${{ steps.dispatch.outputs.run_id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run benchmark dispatch
+        id: dispatch
+        uses: ./.github/actions/benchmark-dispatch
+        with:
+          tier: target-merge
+          seeds_per_cell: ${{ env.SEEDS_PER_CELL }}
+          max_budget_usd: ${{ env.MAX_BUDGET_USD }}
+          parallelism: ${{ env.PARALLELISM }}
+          dry_run: 'false'
+          targets_glob: ${{ needs.detect-changes.outputs.targets }}
+          tools_glob: 'tools/*'
+          trigger_reason: "target-merge:${{ github.sha }}"
+        env:
+          VASTAI_API_KEY: ${{ secrets.VASTAI_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  finalize:
+    name: Report results
+    runs-on: ubuntu-latest
+    needs: [detect-changes, dispatch]
+    if: always() && needs.dispatch.result == 'success'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install benchmark scripts
+        working-directory: scripts/benchmark
+        run: npm install --no-audit --no-fund
+
+      - name: Post results summary
+        working-directory: scripts/benchmark
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SHA: ${{ github.sha }}
+          TIER: target-merge
+        run: |
+          npx tsx report-results.ts \
+            --tier target-merge \
+            --run-id "${{ needs.dispatch.outputs.run_id }}" \
+            --targets "${{ needs.detect-changes.outputs.targets }}"

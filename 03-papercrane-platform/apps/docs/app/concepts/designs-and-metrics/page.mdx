@@ -1,0 +1,64 @@
+# Designs & metrics
+
+A **design** is the unit you take to the wet lab. It's a sequence, a predicted complex
+structure, a metric bundle, and a manifest that lets anyone reproduce it.
+
+## What a design contains
+
+| Artifact          | Format       | What it is                                    |
+|-------------------|--------------|-----------------------------------------------|
+| `sequence.fasta`  | FASTA        | The designed binder sequence                  |
+| `complex.cif`     | mmCIF        | Predicted binder + target complex             |
+| `complex.pdb`     | PDB          | Same, in PDB format                           |
+| `metrics.json`    | JSON         | All metrics computed for this design          |
+| `manifest.json`   | JSON         | Tool versions, seeds, params, input hashes    |
+
+## Metrics we report
+
+We compute a fixed metric set per design so you can compare runs across pipelines:
+
+| Metric        | Range     | Direction | Meaning                                            |
+|---------------|-----------|-----------|----------------------------------------------------|
+| `pLDDT`       | 0–100     | higher    | Per-residue confidence in the predicted structure  |
+| `ipTM`        | 0–1       | higher    | Interface predicted TM-score                       |
+| `pAE`         | 0–30 Å    | lower     | Predicted aligned error at interface               |
+| `ipSAE`       | 0–1       | higher    | Composite interface score (Paper Crane default)    |
+| `pLL`         | log-prob  | higher    | ESM-2 pseudo-log-likelihood (sequence plausibility)|
+| `dG_estimate` | kcal/mol  | lower     | Coarse energy estimate from PyRosetta              |
+
+### Recommended thresholds
+
+Validated against our benchmark suite of 60 published binders:
+
+```
+ipsae    > 0.45     # AUC 0.806 — single best metric
+iptm     > 0.65     # AUC 0.628 — secondary filter
+plddt    > 75       # kill obvious unfolders
+pll      > -2.5     # sequence plausibility floor
+```
+
+A design that clears all four typically has a **2–3×** higher experimental hit rate
+than the unfiltered population.
+
+## Reproducibility manifest
+
+Every design ships with a manifest that pins:
+
+- Tool image digest (`sha256:...`) — bit-exact container
+- Tool version + adapter version (e.g. `boltz2 2.0.0 / a1`)
+- Seed used by the random number generator
+- Input hashes (target structure, hotspot list)
+- Pipeline DAG (the YAML you submitted)
+
+If you replay the manifest with the Paper Crane CLI, you get the same result, modulo
+GPU non-determinism (which we suppress where possible).
+
+```bash
+papercrane designs replay dsn_abc123 --out ./replay/
+```
+
+<Callout variant="tip">
+The manifest is the heart of the iGEM Best Software case. We're not the only platform
+that runs these tools — we're the one that lets you prove what you ran, six months later,
+to a peer reviewer.
+</Callout>

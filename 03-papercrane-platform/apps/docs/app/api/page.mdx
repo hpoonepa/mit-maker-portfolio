@@ -1,0 +1,62 @@
+# API
+
+Paper Crane exposes two surfaces:
+
+- **REST** — versioned, stable, ideal for CI and external integrations. Base:
+  `https://api.papercrane.bio/v1`
+- **tRPC** — typed, used internally by the web app. Available to customers on
+  team and enterprise plans for tighter integrations.
+
+This section documents both. Schemas mirror exactly between the two surfaces — the same
+Zod definitions generate both the OpenAPI spec and the tRPC router.
+
+## Surface map
+
+| Resource    | REST                       | tRPC                  |
+|-------------|----------------------------|-----------------------|
+| Auth        | `POST /v1/auth/keys`       | `auth.keys.*`         |
+| Projects    | `GET/POST /v1/projects`    | `projects.*`          |
+| Targets     | `POST /v1/targets`         | `targets.*`           |
+| Jobs        | `POST /v1/jobs`            | `jobs.*`              |
+| Designs     | `GET /v1/designs/:id`      | `designs.*`           |
+| Seeds       | `POST /v1/seeds/consume`   | `billing.seeds.*`     |
+| Webhooks    | `POST /v1/webhooks`        | `webhooks.*`          |
+
+## Versioning
+
+We freeze breaking changes within a major version. We add new fields without bumping
+versions; you should ignore unknown keys when deserializing.
+
+## Idempotency
+
+Every mutating REST endpoint accepts an `Idempotency-Key` header. Repeating a request
+with the same key within 24 hours returns the same response and does not consume seeds.
+
+```bash
+curl -X POST https://api.papercrane.bio/v1/jobs \
+  -H "Authorization: Bearer $PAPERCRANE_API_KEY" \
+  -H "Idempotency-Key: $(uuidgen)" \
+  -d '{ "target_id": "tgt_abc", "tool": "bindcraft" }'
+```
+
+## Errors
+
+All errors share a shape:
+
+```json
+{
+  "error": {
+    "code": "insufficient_seeds",
+    "message": "Project has 12 seeds remaining; this job requires 200.",
+    "request_id": "req_01HZ..."
+  }
+}
+```
+
+Status codes follow REST convention. `request_id` is searchable in your dashboard logs.
+
+## Next
+
+- [Authentication](/api/auth) — keys, scopes, rotation
+- [Seeds](/api/seeds) — `POST /v1/seeds/consume`
+- [Webhooks](/api/webhooks) — events and HMAC signing

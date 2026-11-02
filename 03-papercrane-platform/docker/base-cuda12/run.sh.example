@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Default placeholder entrypoint for Paper Crane base-cuda12.
+# Tool adapter images should override this via their own CMD or ENTRYPOINT,
+# OR copy a real run.sh to /opt/papercrane/run.sh before building.
+set -euo pipefail
+
+echo "PaperCrane base-cuda12 ready — override me"
+exit 0

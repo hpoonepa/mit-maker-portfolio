@@ -1,0 +1,28 @@
+{
+  "id": "boltzgen",
+  "displayName": "BoltzGen",
+  "version": "0.1.0",
+  "adapterVersion": "a1",
+  "category": "binder_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/boltzgen:0.1.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 40,
+    "estSecondsPerDesign": 500
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "num_designs": 5,
+    "diffusion_steps": 200,
+    "temperature": 0.1,
+    "length_range": [60, 150]
+  },
+  "composes": []
+}

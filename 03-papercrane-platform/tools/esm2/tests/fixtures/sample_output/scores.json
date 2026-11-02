@@ -1,0 +1,18 @@
+[
+  {
+    "id": "design_0001",
+    "seed": 0,
+    "pll_mean": -1.42,
+    "pll_sum": -46.86,
+    "pll_min": -4.11,
+    "ppl": 4.137
+  },
+  {
+    "id": "design_0002",
+    "seed": 0,
+    "pll_mean": -2.05,
+    "pll_sum": -75.85,
+    "pll_min": -6.22,
+    "ppl": 7.768
+  }
+]

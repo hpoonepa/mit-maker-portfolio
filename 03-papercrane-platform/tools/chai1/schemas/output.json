@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/chai1/output.json",
+  "title": "Chai-1 Prediction Result",
+  "description": "Shape of /outputs/result.json emitted by the Chai-1 adapter. One entry per (seed, model_idx).",
+  "type": "object",
+  "required": ["predictions", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "predictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "seed", "metrics", "model_idx"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the emitted CIF (Chai-1 writes pred.model_idx_N.cif).",
+            "type": "string"
+          },
+          "seed": { "type": "integer" },
+          "model_idx": {
+            "description": "Diffusion sample index emitted by Chai-1 (0-based).",
+            "type": "integer",
+            "minimum": 0
+          },
+          "metrics": {
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "plddt_mean": { "type": "number", "minimum": 0, "maximum": 100 },
+              "plddt_binder": { "type": "number", "minimum": 0, "maximum": 100 },
+              "ptm": { "type": "number", "minimum": 0, "maximum": 1 },
+              "iptm": { "type": "number", "minimum": 0, "maximum": 1 },
+              "aggregate_score": { "type": "number" }
+            }
+          },
+          "paePath": {
+            "description": "Optional path to per-residue PAE matrix (NumPy .npy or JSON).",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "properties": {
+        "tool": { "type": "string", "const": "chai1" },
+        "adapterVersion": { "type": "string" },
+        "licenseAcknowledged": {
+          "description": "Mirrors the platform-side EULA acknowledgement for audit.",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "prodigy",
+  "displayName": "PRODIGY",
+  "version": "2.4.0",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/prodigy:2.4.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 5,
+    "note": "Contact-based protein-protein binding affinity prediction; beta until representative complex smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "temperature": 25.0,
+    "distanceCutoff": 5.5,
+    "accessibilityThreshold": 0.05
+  },
+  "composes": []
+}

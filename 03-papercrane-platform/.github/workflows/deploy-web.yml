@@ -1,0 +1,108 @@
+name: Deploy web (apps/web → Vercel)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/web/**"
+      - "packages/types/**"
+      - "packages/trpc/**"
+      - "packages/db/**"
+      - "packages/ui/**"
+      - "pnpm-lock.yaml"
+      - "turbo.json"
+      - ".github/workflows/deploy-web.yml"
+      - "apps/web/vercel.json"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deploy target (production | preview)"
+        required: true
+        default: "production"
+        type: choice
+        options: [production, preview]
+
+concurrency:
+  group: deploy-web-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+  NEXT_TELEMETRY_DISABLED: 1
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_WEB }}
+
+jobs:
+  deploy:
+    name: Vercel Deploy (web)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: ${{ github.event.inputs.environment || 'production' }}
+      url: ${{ steps.deploy.outputs.url }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.3
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install Vercel CLI
+        run: pnpm add -g vercel@latest
+
+      - name: Pull Vercel environment
+        run: |
+          TARGET="${{ github.event.inputs.environment || 'production' }}"
+          vercel pull --yes \
+            --environment="$TARGET" \
+            --token="${{ secrets.VERCEL_TOKEN }}" \
+            --cwd apps/web
+
+      - name: Build (Vercel)
+        run: |
+          TARGET="${{ github.event.inputs.environment || 'production' }}"
+          PROD_FLAG=""
+          if [ "$TARGET" = "production" ]; then PROD_FLAG="--prod"; fi
+          vercel build $PROD_FLAG \
+            --token="${{ secrets.VERCEL_TOKEN }}" \
+            --cwd apps/web
+
+      - name: Deploy (Vercel)
+        id: deploy
+        run: |
+          TARGET="${{ github.event.inputs.environment || 'production' }}"
+          PROD_FLAG=""
+          if [ "$TARGET" = "production" ]; then PROD_FLAG="--prod"; fi
+          URL=$(vercel deploy --prebuilt $PROD_FLAG \
+            --token="${{ secrets.VERCEL_TOKEN }}" \
+            --cwd apps/web)
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Deployed: $URL"
+
+      - name: Smoke-check landing
+        run: |
+          for i in 1 2 3 4 5; do
+            if curl -fsS --max-time 10 "${{ steps.deploy.outputs.url }}" >/dev/null; then
+              echo "Smoke check OK"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Smoke check failed" && exit 1
+
+      - name: Rollback on failure
+        if: failure() && github.event.inputs.environment == 'production'
+        run: |
+          vercel rollback --token="${{ secrets.VERCEL_TOKEN }}" --cwd apps/web --yes

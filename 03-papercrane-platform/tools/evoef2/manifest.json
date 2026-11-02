@@ -1,0 +1,23 @@
+{
+  "id": "evoef2",
+  "displayName": "EvoEF2",
+  "version": "2026.6.22",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/evoef2:2026.6.22-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 8,
+    "note": "MIT EvoEF2 through the Apache-2.0 NeuroSnap SDK; beta until live smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {},
+  "composes": []
+}

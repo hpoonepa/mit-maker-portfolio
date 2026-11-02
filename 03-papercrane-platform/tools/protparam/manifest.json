@@ -1,0 +1,23 @@
+{
+  "id": "protparam",
+  "displayName": "ProtParam",
+  "version": "1.87",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "Biopython License Agreement",
+  "image": "ghcr.io/papercrane/protparam:1.87-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 1,
+    "memoryGb": 2,
+    "estSecondsPerDesign": 1,
+    "note": "Fast sequence physicochemical analysis through Biopython ProtParam; beta until live artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "pH": 7.0 },
+  "composes": []
+}

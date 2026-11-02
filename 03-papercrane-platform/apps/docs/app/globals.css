@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 60rem 30rem at 5% -5%, rgba(193, 39, 45, 0.025), transparent 60%),
+      radial-gradient(ellipse 50rem 30rem at 95% 0%, rgba(20, 17, 13, 0.03), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: #c1272d;
+    color: #f7f4ed;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono uppercase text-[10px] tracking-[0.22em] text-graphite;
+  }
+
+  .docs-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 1100px) {
+    .docs-grid {
+      grid-template-columns: minmax(0, 240px) minmax(0, 1fr) minmax(0, 220px);
+    }
+  }
+}

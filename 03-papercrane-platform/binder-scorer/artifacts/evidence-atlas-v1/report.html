@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Evidence Atlas — synthetic ranking audit · Evidence audit</title>
+<style>
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #183135; background: #f4f6f3; }
+body { margin: 0; padding: 40px 5vw 64px; line-height: 1.55; }
+main { max-width: 1450px; margin: auto; }
+h1 { font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.1; margin: 12px 0; }
+h2 { margin-top: 36px; } .eyebrow { color: #365f5c; letter-spacing: .08em; text-transform: uppercase; }
+.summary { display: flex; flex-wrap: wrap; gap: 20px; margin: 26px 0; }
+.card { background: white; padding: 18px 24px; border: 1px solid #ccd9d5; border-radius: 10px; }
+.card strong { display: block; font-size: 2rem; }
+.notice { background: #fff4dc; border-left: 4px solid #966215; padding: 12px 20px; }
+.scroll { overflow-x: auto; background: white; border: 1px solid #ccd9d5; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; text-align: left; font-size: .9rem; }
+th, td { padding: 12px 16px; border-bottom: 1px solid #dbe3df; vertical-align: top; }
+thead { background: #e5eeea; } code { overflow-wrap: anywhere; }
+.muted { color: #46615f; } footer { margin-top: 32px; font-size: .85rem; overflow-wrap: anywhere; }
+@media print { body { padding: 10px; background: white; } .scroll { overflow: visible; } }
+</style></head><body><main>
+<div class="eyebrow">Synthetic demonstration · v1</div><h1>Evidence Atlas — synthetic ranking audit</h1>
+<p>How consistently do supplied methods order the same candidates?</p>
+<div class="summary"><div class="card"><strong>7</strong>Candidates supplied</div>
+<div class="card"><strong>5</strong>Common evidence cohort</div>
+<div class="card"><strong>2</strong>Outside comparison</div>
+<div class="card"><strong>2</strong>Declared evidence families</div></div>
+<div class="notice"><strong>Interpretation matters</strong><p>Agreement describes the supplied methods. It does not establish predictive correctness.</p><ul><li>Synthetic demonstration: all numerical results are illustrative.</li><li>Rank comparisons cover only the common complete-evidence cohort; excluded candidates are not ranked lower.</li><li>Some methods share an evidence family; their agreement is not independent confirmation.</li></ul></div>
+<h2>Candidate evidence</h2><p class="muted">Requested top-k: 2; effective cutoff: 2.
+Rows are ordered by candidate ID. Ranks apply only to the common cohort. An envelope is the best–worst occupied rank across methods, including exact ties.</p>
+<div class="scroll" role="region" aria-label="Candidate evidence table" tabindex="0"><table>
+<thead><tr><th scope="col">Candidate</th><th scope="col">Origin</th><th scope="col">Provenance</th><th scope="col">Assessment</th>
+<th scope="col">Observed</th><th scope="col">Rank envelope</th><th scope="col">assessment-a</th><th scope="col">assessment-a-repeat</th><th scope="col">assessment-b</th></tr></thead><tbody><tr><th scope="row">candidate-A</th><td>demo-pipeline-one</td><td>synthetic</td><td>consistently in top k</td><td>3/3</td><td>1</td><td>0.94 · rank 1</td><td>0.91 · rank 1</td><td>1.1 · rank 1</td></tr><tr><th scope="row">candidate-B</th><td>demo-pipeline-one</td><td>synthetic</td><td>boundary ambiguous</td><td>3/3</td><td>2–3</td><td>0.89 · rank 2</td><td>0.87 · rank 2</td><td>3.2 · rank 3</td></tr><tr><th scope="row">candidate-C</th><td>demo-pipeline-two</td><td>synthetic</td><td>boundary ambiguous</td><td>3/3</td><td>2–3</td><td>0.79 · rank 3</td><td>0.8 · rank 3</td><td>1.8 · rank 2</td></tr><tr><th scope="row">candidate-D</th><td>demo-pipeline-two</td><td>synthetic</td><td>consistently outside top k</td><td>3/3</td><td>4–5</td><td>0.7 · rank 4</td><td>0.71 · rank 4</td><td>4 · rank 4–5</td></tr><tr><th scope="row">candidate-E</th><td>demo-pipeline-three</td><td>synthetic</td><td>consistently outside top k</td><td>3/3</td><td>4–5</td><td>0.62 · rank 5</td><td>0.6 · rank 5</td><td>4 · rank 4–5</td></tr><tr><th scope="row">candidate-F</th><td>demo-pipeline-three</td><td>synthetic</td><td>not comparable</td><td>1/3</td><td>—</td><td>0.99 · rank —</td><td>missing: Assessment not supplied</td><td>failed: Example provider timeout</td></tr><tr><th scope="row">candidate-G</th><td>demo-import</td><td>unknown</td><td>not comparable</td><td>3/3</td><td>—</td><td>0.98 · rank —</td><td>0.98 · rank —</td><td>0.8 · rank —</td></tr></tbody></table></div>
+<h2>Coverage by origin</h2><p class="muted">Check whether the common cohort disproportionately excludes any source. Completeness does not establish that exclusions are random.</p>
+<div class="scroll"><table><thead><tr><th scope="col">Origin</th><th scope="col">Supplied</th><th scope="col">Comparable</th><th scope="col">assessment-a</th><th scope="col">assessment-a-repeat</th><th scope="col">assessment-b</th></tr></thead><tbody><tr><th scope="row">demo-import</th><td>1</td><td>0</td><td>1/1 observed</td><td>1/1 observed</td><td>1/1 observed</td></tr><tr><th scope="row">demo-pipeline-one</th><td>2</td><td>2</td><td>2/2 observed</td><td>2/2 observed</td><td>2/2 observed</td></tr><tr><th scope="row">demo-pipeline-three</th><td>2</td><td>1</td><td>2/2 observed</td><td>1/2 observed</td><td>1/2 observed</td></tr><tr><th scope="row">demo-pipeline-two</th><td>2</td><td>2</td><td>2/2 observed</td><td>2/2 observed</td><td>2/2 observed</td></tr></tbody></table></div>
+<h2>Method agreement</h2><p class="muted">Jaccard overlap compares exact top-k sets on the common cohort. A tie at the cutoff makes this statistic unavailable.</p>
+<div class="scroll"><table><thead><tr><th scope="col">Methods</th><th scope="col">Shared family</th><th scope="col">Top-k overlap / unavailable reason</th></tr></thead><tbody><tr><th scope="row">assessment-a / assessment-a-repeat</th><td>Yes</td><td>1.0</td></tr><tr><th scope="row">assessment-a / assessment-b</th><td>No</td><td>0.3333333333333333</td></tr><tr><th scope="row">assessment-a-repeat / assessment-b</th><td>No</td><td>0.3333333333333333</td></tr></tbody></table></div>
+<h2>Evidence provenance</h2><div class="scroll"><table><thead><tr><th scope="col">Method</th><th scope="col">Producer</th><th scope="col">Version</th>
+<th scope="col">Family</th><th scope="col">Better direction</th><th scope="col">Units</th><th scope="col">Settings</th></tr></thead><tbody><tr><th scope="row">assessment-a</th><td>demo-engine-a</td><td>1.0</td><td>engine-a</td><td>Higher</td><td>unitless</td><td><code>{&quot;fixture&quot;: true}</code></td></tr><tr><th scope="row">assessment-a-repeat</th><td>demo-engine-a</td><td>1.0</td><td>engine-a</td><td>Higher</td><td>unitless</td><td><code>{&quot;fixture&quot;: true, &quot;repeat&quot;: 2}</code></td></tr><tr><th scope="row">assessment-b</th><td>demo-engine-b</td><td>2.0</td><td>engine-b</td><td>Lower</td><td>arbitrary</td><td><code>{&quot;fixture&quot;: true}</code></td></tr></tbody></table></div>
+<h2>What this report establishes</h2><ul><li>This is an audit of supplied computational rankings, not an estimated probability of binding.</li><li>Rank envelopes are descriptive ranges across methods and exact ties, not confidence intervals.</li><li>Evidence completeness is the observed fraction of declared methods, not predictive confidence.</li><li>Agreement can reflect shared errors. Declared evidence families are metadata, not proof of independence.</li><li>Recorded provenance is a user-supplied attribution, not an independently verified result.</li><li>Rank positions apply only to the named common cohort and can change when that cohort changes.</li><li>No fitted model, literature prior, missing-value imputation, or new composite score is used.</li></ul>
+<footer>Schema: evidence-audit-report.v1<br>Canonical input SHA-256: <code>c52608b1cc8d1113da2591bb73cd441cd89cf76d0d6f20493559beb2003ee3e6</code><br>
+This portable report loads no scripts, fonts, images, or external services. Machine-readable evidence is in report.json.</footer>
+</main></body></html>

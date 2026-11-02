@@ -1,0 +1,123 @@
+name: 'Benchmark Dispatch'
+description: >
+  Launches a benchmark matrix (tool × target × seeds) on Vast.ai spot A100s,
+  records each cell to the BenchmarkRun table, and returns a structured
+  JSON summary. Wraps scripts/benchmark/dispatch.ts.
+
+inputs:
+  tier:
+    description: 'Benchmark tier: smoke | full | tool-update | target-merge'
+    required: true
+  seeds_per_cell:
+    description: 'Number of seeds to run per (tool, target) cell'
+    required: true
+  max_budget_usd:
+    description: 'Abort if estimated matrix cost exceeds this (USD)'
+    required: true
+  parallelism:
+    description: 'Max concurrent Vast.ai instances'
+    required: false
+    default: '8'
+  targets_glob:
+    description: 'Glob or comma-separated list of target YAML paths'
+    required: false
+    default: 'benchmark/targets/*.yaml'
+  tools_glob:
+    description: 'Glob for tool directories under tools/'
+    required: false
+    default: 'tools/*'
+  tool_version_override:
+    description: 'If set, override the tool version in the matrix (single-tool runs only)'
+    required: false
+    default: ''
+  trigger_reason:
+    description: 'Freeform string describing why this run was triggered'
+    required: false
+    default: 'scheduled'
+  dry_run:
+    description: 'If true, validate matrix + cost but do not launch Vast.ai'
+    required: false
+    default: 'false'
+
+outputs:
+  run_id:
+    description: 'Benchmark orchestration run id (ULID)'
+    value: ${{ steps.dispatch.outputs.run_id }}
+  summary_json:
+    description: 'Path to the dispatch summary JSON artifact'
+    value: ${{ steps.dispatch.outputs.summary_json }}
+  estimated_cost_usd:
+    description: 'Estimated matrix cost at launch time'
+    value: ${{ steps.dispatch.outputs.estimated_cost_usd }}
+  cells_total:
+    description: 'Total cells in the matrix'
+    value: ${{ steps.dispatch.outputs.cells_total }}
+  cells_succeeded:
+    description: 'Cells that completed without failure'
+    value: ${{ steps.dispatch.outputs.cells_succeeded }}
+  cells_failed:
+    description: 'Cells that failed (isolation: failures do not abort siblings)'
+    value: ${{ steps.dispatch.outputs.cells_failed }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dispatch script deps
+      shell: bash
+      working-directory: scripts/benchmark
+      run: npm install --no-audit --no-fund
+
+    - name: Verify required secrets
+      shell: bash
+      run: |
+        missing=()
+        [ -z "${VASTAI_API_KEY:-}" ] && missing+=("VASTAI_API_KEY")
+        [ -z "${DATABASE_URL:-}" ] && missing+=("DATABASE_URL")
+        if [ ${#missing[@]} -gt 0 ]; then
+          echo "::error::Missing required secrets: ${missing[*]}"
+          exit 1
+        fi
+
+    - name: Run dispatch
+      id: dispatch
+      shell: bash
+      working-directory: scripts/benchmark
+      env:
+        TIER: ${{ inputs.tier }}
+        SEEDS_PER_CELL: ${{ inputs.seeds_per_cell }}
+        MAX_BUDGET_USD: ${{ inputs.max_budget_usd }}
+        PARALLELISM: ${{ inputs.parallelism }}
+        TARGETS_GLOB: ${{ inputs.targets_glob }}
+        TOOLS_GLOB: ${{ inputs.tools_glob }}
+        TOOL_VERSION_OVERRIDE: ${{ inputs.tool_version_override }}
+        TRIGGER_REASON: ${{ inputs.trigger_reason }}
+        DRY_RUN: ${{ inputs.dry_run }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        GITHUB_RUN_ID: ${{ github.run_id }}
+        GITHUB_SHA: ${{ github.sha }}
+      run: |
+        npx tsx dispatch.ts \
+          --tier "$TIER" \
+          --seeds "$SEEDS_PER_CELL" \
+          --max-budget "$MAX_BUDGET_USD" \
+          --parallelism "$PARALLELISM" \
+          --targets "$TARGETS_GLOB" \
+          --tools "$TOOLS_GLOB" \
+          ${TOOL_VERSION_OVERRIDE:+--tool-version "$TOOL_VERSION_OVERRIDE"} \
+          --trigger-reason "$TRIGGER_REASON" \
+          ${DRY_RUN:+--dry-run "$DRY_RUN"} \
+          --github-output "$GITHUB_OUTPUT"
+
+    - name: Upload dispatch summary artifact
+      if: always() && steps.dispatch.outputs.summary_json != ''
+      uses: actions/upload-artifact@v4
+      with:
+        name: benchmark-dispatch-${{ inputs.tier }}-${{ steps.dispatch.outputs.run_id }}
+        path: ${{ steps.dispatch.outputs.summary_json }}
+        if-no-files-found: warn
+        retention-days: 90

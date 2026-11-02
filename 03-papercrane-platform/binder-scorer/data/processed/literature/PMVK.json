@@ -1,0 +1,245 @@
+{
+  "abstracts": [
+    {
+      "pmid": "35853659",
+      "title": "Inflammatory linear verrucous epidermal nevus (ILVEN) encompasses a spectrum of inflammatory mosaic disorders.",
+      "abstract": "Inflammatory linear verrucous epidermal nevus (ILVEN) is a rare skin disease characterized by pruritic erythematous scaly plaques distributed along the lines of Blaschko. Two cases of ILVEN with CARD14 mutations and one case with a GJA1 mutation have been previously reported. To elucidate the genetic cause of a cohort of patients diagnosed based on clinical and histopathological evaluation with ILVEN. We recruited patients diagnosed with ILVEN based on clinical and histopathological criteria. Exome sequencing of affected skin with or without blood/saliva was performed and germline and somatic pathogenic variants were identified. Five patients were enrolled. All had skin lesions from birth or early childhood. Two patients developed psoriasis vulgaris after the diagnosis of ILVEN. The first had a germline heterozygous CARD14 mutation and a post-zygotic hotspot mutation in KRT10. The histopathologic evaluation did not show epidermolytic hyperkeratosis. The second had a post-zygotic hotspot mutation in HRAS. Her ILVEN became itchy once psoriasis developed. One patient was re-diagnosed with linear porokeratosis based on a germline mutation in PMVK and a post-zygotic second-hit mutation. Two patients were re-diagnosed with congenital hemidysplasia with ichthyosiform nevus and limb defect nevus based on germline NSDHL mutations. ILVEN is a clinical descriptor for a heterogenous group of mosaic inflammatory disorders. Genetic analysis has the potential to more precisely categorize ILVEN and permits pathogenesis-directed therapies in some cases."
+    },
+    {
+      "pmid": "36209956",
+      "title": "Structural insights into the substrate binding of phosphomevalonate kinase from the silkworm, Bombyx mori.",
+      "abstract": "Phosphomevalonate kinase (PMK) is an important enzyme involved in the juvenile hormone (JH) biosynthesis pathway that catalyzes the phosphorylation of mevalonate 5-phosphate into mevalonate 5-diphosphate in the mevalonate pathway. Herein, we report the crystal structure of insect PMK from Bombyx mori (BmPMK) at a resolution of 1.60\u00a0\u00c5. The overall structure of BmPMK adopts a compact \u03b1/\u03b2 conformation with two parts: the core and lid regions. The interface between the core and lid regions forms a continuous and negatively charged groove to accommodate the substrates. Using computational simulation combined with site-directed mutagenesis and biochemical analysis, we define the binding mode of BmPMK with the cofactor and the substrate, which provides a structural basis for understanding the catalytic mechanism and the design of inhibitors of PMK. Moreover, BmPMK showed the optimal enzyme activity at pH 8.0, and the optimal temperature was 30\u00a0\u00b0C, using mevalonate 5-phosphate as the substrate. The expression profiles and kinetic analyses of BmPMK indicated that it plays critical role in the control of JH biosynthesis in silkworms. Collectively, these findings provide a better understanding of the structural and biochemical features of insect PMK."
+    },
+    {
+      "pmid": "39426254",
+      "title": "Qingshen granules inhibits dendritic cell glycolipid metabolism to alleviate renal fibrosis via PI3K-AKT-mTOR pathway.",
+      "abstract": "Qingshen exhibits anti-inflammatory and immunoregulation effects to renal damage. Dendritic cells (DCs) play a critical role in regulating the pathologic inflammatory environment in renal fibrosis (RF). To investigate the immune modulation mechanism of qingshen granule (QSG) in RF, particularly focusing on the role of DCs. Adenine-induced RF animal models were used to study the pharmacological effects of QSG and the immune cells differentiation and function. Glucose uptake, non-esterified fatty acids secretion, mitochondrial membrane potential (MMP) detection, and qPCR were used to explore the effect of QSG to glucose and lipid metabolism in DCs and T cells. The effect of QSG to PI3K-AKT-mTOR axis and the modulation of mTOR to PD-L1 were explored by co-culture experiments, co-immunoprecipitation and western blot assays. The interaction of DCs/CD8+T cells and renal tubular epithelial cells (RTECs) was investigated to demonstrate the direct action and/or the immune-mediated regulation of QSG to RF. The components of QSG in the serum were determined by HPLC. And the effect of active ingredients and formula to DCs and T cells was analyzed by cell experiments in vitro. QSG reduced nephritic histopathological damage and suppressed the release of proinflammatory cytokines in adenine-induced RF mice. Of note, QSG decreased the levels of CD86, MHC-II, and CCR7 on DCs, while, increased PD-L1 expression on DCs in RF. The results demonstrated that QSG promoted the maturation and inhibited the migration of DCs, and QSG decreased the antigen presenting of DCs to T cells. Additionally, QSG reduced the MMP and glucose/lipid utilization ratio in DCs. QSG also down-regulated the level of targeted metabolic genes included glucose transporter 1 (Glut1), sterol-regulatory element-binding protein 1 (Srebp1), acetyl-CoA carboxylase alpha (Acaca), phosphomevalonate kinase (Pmvk), and up-regulated sirtuin2 (Sirt2) in DCs. In terms of mechanism, QSG inhibited the metabolism-related PI3K-AKT-mTOR pathway, followed by regulating the interaction of mTOR with PD-L1 to enhance the membrane stability of PD-L1. Besides, HPLC analysis identified five active ingredients in QSG. The specific anti-inflammatory and immunosuppressive actions of these ingredients were found to be weaker than QSG as a whole. Finally, inhibiting DC function by QSG disrupted the communication among DCs, T cells, and RTECs. This disruption was associated with low expression of \u03b1-smooth muscle actin (\u03b1-SMA) and collagen type I (Col-I) in the kidney. QSG inhibits DC metabolism and function via the PI3K-AKT-mTOR pathway to alleviate RF. The study highlights the importance of the specific composition of the formula in targeting DC-mediated immune regulation."
+    },
+    {
+      "pmid": "19485344",
+      "title": "Structure of the ternary complex of phosphomevalonate kinase: the enzyme and its family.",
+      "abstract": "The galacto-, homoserine-, mevalonate-, phosphomevalonate-kinase (GHMP) superfamily encompases a wide-range of protein function. Three members of the family (mevalonate kinase, phosphomevalonate kinase, and diphosphomevalonate decarboxylase) comprise the mevalonate pathway found in S. pneumoniae and other organisms. We have determined the 1.9 A crystal structure of phosphomevalonate kinase (PMK) from S. pneumoniae in complex with phosphomevalonate and AMPPNP.Mg(2+). Comparison of the apo and ternary PMK structures suggests that ligand binding reverses the side-chain orientations of two antiparallel lysines residues (100 and 101) with the result that Lys101 is switched into a position in which its ammonium ion is in direct contact with the beta,gamma-bridging atom of the nucleotide, where it is expected to stabilize both the ground and transition states of the reaction. Analysis of all available GHMP kinase ternary complex structures reveals that while their C(alpha)-scaffolds are highly conserved, their substrates bind in one of two conformations, which appear to be either reactive or nonreactive. The active site of PMK seems spacious enough to accommodate interconversion of the reactive and nonreactive conformers. A substantial fraction of the PMK active site is occupied by ordered water, which clusters near the charged regions of the substrate. Notably, a water pentamer that interacts extensively with the reactive groups of both substrates was discovered at the active site."
+    },
+    {
+      "pmid": "12878729",
+      "title": "Biosynthesis of isoprenoids: crystal structure of 4-diphosphocytidyl-2C-methyl-D-erythritol kinase.",
+      "abstract": "4-Diphosphocytidyl-2C-methyl-d-erythritol kinase, an essential enzyme in the nonmevalonate pathway of isopentenyl diphosphate and dimethylallyl diphosphate biosynthesis, catalyzes the single ATP-dependent phosphorylation stage affording 4-diphosphocytidyl-2C-methyl-d-erythritol-2-phosphate. The 2-A resolution crystal structure of the Escherichia coli enzyme in a ternary complex with substrate and a nonhydrolyzable ATP analogue reveals the molecular determinants of specificity and catalysis. The enzyme subunit displays the alpha/beta fold characteristic of the galactose kinase/homoserine kinase/mevalonate kinase/phosphomevalonate kinase superfamily, arranged into cofactor and substrate-binding domains with the catalytic center positioned in a deep cleft between domains. Comparisons with related members of this superfamily indicate that the core regions of each domain are conserved, whereas there are significant differences in the substrate-binding pockets. The nonmevalonate pathway is essential in many microbial pathogens and distinct from the mevalonate pathway used by mammals. The high degree of sequence conservation of the enzyme across bacterial species suggests similarities in structure, specificity, and mechanism. Our model therefore provides an accurate template to facilitate the structure-based design of broad-spectrum antimicrobial agents."
+    },
+    {
+      "pmid": "32224886",
+      "title": "Proteomic Discovery of Biomarkers to Predict Prognosis of High-Grade Serous Ovarian Carcinoma.",
+      "abstract": "Initial identification of biomarkers predicting the exact prognosis of high-grade serous ovarian carcinoma (HGSOC) is important in precision cancer medicine. This study aimed to investigate prognostic biomarkers of HGSOC through proteomic analysis. We conducted label-free liquid chromatography-mass spectrometry using chemotherapy-na\u00efve, fresh-frozen primary HGSOC specimens, and compared the results between a favorable prognosis group (progression-free survival (PFS) \u2265 18 months, n = 6) and a poor prognosis group (PFS < 18 months, n = 6). Among 658 differentially expressed proteins, 288 proteins were upregulated in the favorable prognosis group and 370 proteins were upregulated in the poor prognosis group. Using hierarchical clustering, we selected \u03b11-antitrypsin (AAT), nuclear factor-\u03baB (NFKB), phosphomevalonate kinase (PMVK), vascular adhesion protein 1 (VAP1), fatty acid-binding protein 4 (FABP4), platelet factor 4 (PF4), apolipoprotein A1 (APOA1), and \u03b11-acid glycoprotein (AGP) for further validation via immunohistochemical (IHC) staining in an independent set of chemotherapy-na\u00efve primary HGSOC samples (n = 107). Survival analyses revealed that high expression of AAT, NFKB, and PMVK were independent biomarkers for favorable PFS. Conversely, high expression of VAP1, FABP4, and PF4 were identified as independent biomarkers for poor PFS. Furthermore, we constructed models predicting the 18-month PFS by combining clinical variables and IHC results. Through leave-one-out cross-validation, the optimal model was based on initial serum CA-125, germline BRCA1/2 mutations, residual tumors after surgery, International Federation of Gynecology and Obstetrics (FIGO) stage, and expression levels of the six proteins. The present results elucidate the proteomic landscape of HGSOC and six protein biomarkers to predict the prognosis of HGSOC."
+    },
+    {
+      "pmid": "27145098",
+      "title": "The role of arabinokinase in arabinose toxicity in plants.",
+      "abstract": "Plant cell wall polymers are synthesized by glycosyltransferases using nucleotide sugars as substrates. Most UDP-sugars are synthesized from UDP-glucose via de novo pathways but salvage pathways work in parallel to recycle sugars, which have been released during cell wall polymer and glycoprotein turnover. Here we report on the cloning and biochemical analysis of two arabinokinases in Arabidopsis. Arabinokinase is a 100 kDa protein located in the cytosol with a putative N-terminal glycosyltransferase domain and a C-terminal sugar-1-kinase domain. This unique structure is highly conserved in the plant kingdom. Arabinokinase has a high affinity for l-arabinose, which is the only sugar substrate of this GHMP (galactose; homoserine; mevalonate; phosphomevalonate) kinase. Plants that were knocked-out for arabinokinase and the previously described ara1-1 mutant were characterized. The ARA1-1 mutant form of the enzyme carries a point mutation in an \u03b1-helix. The mutation is close to the substrate binding site and changes the Km value for arabinose from 80\u00a0\u03bcm in the wild type to 17\u00a0000\u00a0\u03bcm in ARA1-1. The previous arabinose toxicity explanation is challenged by knockout plants in arabinokinase that accumulate higher levels of arabinose but do not show signs of arabinose toxicity. Analysis of marker genes from sugar signalling pathways (SnRK1 and Tor) suggest that ara1-1 misinterprets its carbon energy status. Although glucose is present in ara1-1 similar to wild type levels, it constitutively changes gene expression as typically found in wild type plants only under starvation conditions. Furthermore, ara1-1 shows increased expression of marker genes for programmed cell death as found in other lesion mimic mutants."
+    },
+    {
+      "pmid": "21282208",
+      "title": "Crystal structure of 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase (IspE) from Mycobacterium tuberculosis.",
+      "abstract": "Isoprenoid precursors, which are a large group of natural products and play key roles in many biological pathways, can only be biosynthesized by the 2-C-methyl-d-erythritol 4-phosphate pathway in Mycobacterium tuberculosis. The 4-diphosphocytidyl-2-C-methyl-d-erythritol kinase (IspE), which is an essential enzyme in the isoprenoid precursor biosynthesis pathway, catalyzes ATP-dependent phosphorylation of 4-diphosphocytidyl-2-C-methyl-d-erythritol (CDP-ME) to 4-diphosphocytidyl-2C-methyl-d-erythritol-2-phosphate and plays a crucial role in M. tuberculosis survival. Therefore, IspE is characterized as an attractive and potential target for antimicrobial drug discovery. However, no experimental structure of M. tuberculosis IspE has been reported, which has hindered our understanding of its structural details and mechanism of action. Here, we report the expression and purification of fully active full-length M. tuberculosis IspE and solve the high-resolution crystal structures of IspE alone and in complex with either the substrate CDP-ME or nonhydrolyzable ATP analog or ADP. The structures present a characteristic galactose/homoserine/mevalonate/phosphomevalonate kinase superfamily \u03b1/\u03b2-fold with a catalytic center located in a cleft between 2 domains and display clear substrate and ATP binding pockets. Our results also indicate distinct differences in ligand binding of M. tuberculosis IspE with other reported IspEs. Combined with the results of mutagenesis and enzymatic studies, our results provide useful information on the structural basis of IspE for future anti-M. tuberculosis drug discovery targeting this kinase."
+    },
+    {
+      "pmid": "42361171",
+      "title": "PMVK drives hepatocarcinogenesis via SP1 phosphorylation-mediated lipid metabolic reprogramming.",
+      "abstract": "Metabolic reprogramming is a hallmark of cancer, yet the critical drivers and mechanisms in hepatocellular carcinoma (HCC) remain incompletely understood. Through a metabolism-focused CRISPR screen, we identified phosphomevalonate kinase (PMVK), a mevalonate pathway enzyme, as a key regulator of HCC stemness and progression. PMVK directly phosphorylates the transcription factor SP1 at Thr355, which enhances SP1's DNA binding affinity and promotes its interaction with the master lipid regulator SREBP1/2, driving a transcriptional program essential for de novo cholesterol and fatty acid synthesis. Clinically, PMVK levels are positively correlated with phospho-SP1 (Thr355) levels and predicate poor prognosis in patients with HCC. Functionally, we demonstrate that genetic or pharmacologic inhibition of the PMVK-SP1 axis, including using the SP1 inhibitor mithramycin A (MTA), significantly suppresses HCC tumorigenesis. In conclusion, our findings uncover the PMVK-SP1 axis as a central driver of lipid metabolic reprogramming and hepatocarcinogenesis, highlighting it as a compelling therapeutic target in HCC."
+    },
+    {
+      "pmid": "34440098",
+      "title": "Enzymes in the Cholesterol Synthesis Pathway: Interactomics in the Cancer Context.",
+      "abstract": "A global protein interactome ensures the maintenance of regulatory, signaling and structural processes in cells, but at the same time, aberrations in the repertoire of protein-protein interactions usually cause a disease onset. Many metabolic enzymes catalyze multistage transformation of cholesterol precursors in the cholesterol biosynthesis pathway. Cancer-associated deregulation of these enzymes through various molecular mechanisms results in pathological cholesterol accumulation (its precursors) which can be disease risk factors. This work is aimed at systematization and bioinformatic analysis of the available interactomics data on seventeen enzymes in the cholesterol pathway, encoded by HMGCR, MVK, PMVK, MVD, FDPS, FDFT1, SQLE, LSS, DHCR24, CYP51A1, TM7SF2, MSMO1, NSDHL, HSD17B7, EBP, SC5D, DHCR7 genes. The spectrum of 165 unique and 21 common protein partners that physically interact with target enzymes was selected from several interatomic resources. Among them there were 47 modifying proteins from different protein kinases/phosphatases and ubiquitin-protein ligases/deubiquitinases families. A literature search, enrichment and gene co-expression analysis showed that about a quarter of the identified protein partners was associated with cancer hallmarks and over-represented in cancer pathways. Our results allow to update the current fundamental view on protein-protein interactions and regulatory aspects of the cholesterol synthesis enzymes and annotate of their sub-interactomes in term of possible involvement in cancers that will contribute to prioritization of protein targets for future drug development."
+    },
+    {
+      "pmid": "33033333",
+      "title": "Improved cis-Abienol production through increasing precursor supply in Escherichia coli.",
+      "abstract": "cis-Abienol, a natural diterpene-diol isolated from balsam fir (Abies balsamea), can be employed as precursors for the semi-synthesis of amber compounds, which are sustainable replacement for ambergris and widely used in the fragmented industry. This study combinatorially co-expressed geranyl diphosphate synthase, geranylgeranyl diphosphate synthase, Labda-13-en-8-ol diphosphate synthase and diterpene synthase, with the best combination achieving\u2009~\u20090.3\u00a0mg/L of cis-abienol. An additional enhancement of cis-abienol production (up to 8.6\u00a0mg/L) was achieved by introducing an exogenous mevalonate pathway which was divided into the upper pathway containing acetyl-CoA acetyltransferase/HMG-CoA reductase and HMG-CoA synthase and the lower pathway containing mevalonate kinase, phosphomevalonate kinase, pyrophosphate mevalonate decarboxylase and isopentenyl pyrophosphate isomerase. The genetically modified strain carrying chromosomal copy of low genes of the mevalonate with the trc promoter accumulated cis-abienol up to 9.2\u00a0mg/L in shake flask. Finally, cis-abienol titers of\u2009~\u2009220\u00a0mg/L could be achieved directly from glucose using this de novo cis-abienol-producing E. coli in high-cell-density fermentation. This study demonstrates a microbial process to apply the E. coli cell factory in the biosynthesis of cis-abienol."
+    },
+    {
+      "pmid": "11751891",
+      "title": "Structure of the Methanococcus jannaschii mevalonate kinase, a member of the GHMP kinase superfamily.",
+      "abstract": "The mevalonate-dependent pathway is used by many organisms to synthesize isopentenyl pyrophosphate, the building block for the biosynthesis of many biologically important compounds, including farnesyl pyrophosphate, dolichol, and many sterols. Mevalonate kinase (MVK) catalyzes a critical phosphoryl transfer step, producing mevalonate 5'-phosphate. The crystal structure of thermostable MVK from Methanococcus jannaschii has been determined at 2.4 A, revealing an overall fold similar to the homoserine kinase from M. jannaschii. In addition, the enzyme shows structural similarity with mevalonate 5-diphosphate decarboxylase and domain IV of elongation factor G. The active site of MVK is in the cleft between its N- and C-terminal domains. Several structural motifs conserved among species, including a phosphate-binding loop, have been found in this cavity. Asp(155), an invariant residue among MVK sequences, is located close to the putative phosphate-binding site and has been assumed to play the catalytic role. Analysis of the MVK model in the context of the other members of the GHMP kinase family offers the opportunity to understand both the mechanism of these enzymes and the structural details that may lead to the design of novel drugs."
+    },
+    {
+      "pmid": "37598994",
+      "title": "Integrated transcriptomic and metabolomic analysis reveals the molecular basis of tissue-specific accumulation of bioactive steroidal alkaloids in Fritillaria unibracteata.",
+      "abstract": "Fritillaria unibracteata is an endangered medicinal plant whose bulb has been used as a Chinese herb to suppress cough, asthma and excessive phlegm for centuries. Steroidal alkaloids, which are synthesized via the steroid synthesis pathways, are their significant bioactive constituents. However, few studies on genes involved in steroidal alkaloid biosynthesis in F. unibracteata have been reported, mainly due to the lack of the F. unibracteata genome. In this paper, comparative transcriptomic and metabolomic analyses of four different tissues of F. unibracteata (leaves, flowers, stems, and bulbs) were performed. Imperialine, peiminine, and peimisine were among the significant bioactive compounds that were considerably abundant in bulb tissue, according to the metabolomic findings. Then, 83.60\u00a0Gb transcriptome sequencing of four different tissues was performed, of which one gene encoding phosphomevalonate kinase was directly functionally characterized to verify the accuracy of sequences obtained from the transcriptome. A total of 9217 differentially expressed unigenes (DEGs) were identified in four different tissues of F. unibracteata. GO and KEGG enrichments revealed that phenylpropanoid biosynthesis, MVA-mediated terpenoid backbone biosynthesis, and steroid biosynthesis were enriched in bulb tissue, whereas enrichment of MEP-mediated terpenoid backbone biosynthesis, photosynthesis, photosynthesis-antenna protein and carotenoid biosynthesis was observed in aerial tissues. Moreover, clustering analysis indicated that the downstream steroid biosynthesis pathway was more important in steroidal alkaloid biosynthesis compared to the upstream terpenoid backbone biosynthesis pathway. Hence, MVA-mediated biosynthesis of steroidal alkaloids was proposed, in which 15 bulb-clustered DEGs were positively correlated with a high accumulation of bioactive steroid alkaloids, further validating our proposal. In addition, 36 CYP450s showing a positive correlation with bioactive steroidal alkaloids provided candidate enzymes to catalyze the subsequent steps of steroidal alkaloid biosynthesis. In addition, the transcription factors and ABC transporters clustered in bulb tissue might be responsible for the regulation and transportation of steroidal alkaloid biosynthesis. Protein-protein interaction analysis implied a highly complex steroid alkaloid biosynthesis network in which delta (24)-sterol reductase might be one of the central catalysts. Based on the integrated transcriptome and metabolome, this current study is a first step in understanding the tissue-specific biosynthesis of steroidal alkaloids in F. unibracteata. Furthermore, key genes and regulators identified herein could facilitate metabolic engineering to improve steroidal alkaloids in F. unibracteata."
+    },
+    {
+      "pmid": "28484475",
+      "title": "De novo Sequencing and Transcriptome Analysis Reveal Key Genes Regulating Steroid Metabolism in Leaves, Roots, Adventitious Roots and Calli of Periploca sepium Bunge.",
+      "abstract": "Periploca sepium Bunge is a traditional medicinal plant, whose root bark is important for Chinese herbal medicine. Its major bioactive compounds are C21 steroids and periplocin, a kind of cardiac glycoside, which are derived from the steroid synthesis pathway. However, research on P. sepium genome or transcriptomes and their related genes has been lacking for a long time. In this study we estimated this species nuclear genome size at 170 Mb (using flow cytometry). Then, RNA sequencing of four different tissue samples of P. sepium (leaves, roots, adventitious roots, and calli) was done using the sequencing platform Illumina/Solexa Hiseq 2,500. After de novo assembly and quantitative assessment, 90,375 all-transcripts and 71,629 all-unigenes were finally generated. Annotation efforts that used a number of public databases resulted in detailed annotation information for the transcripts. In addition, differentially expressed genes (DEGs) were identified by using digital gene profiling based on the reads per kilobase of transcript per million reads mapped (RPKM) values. Compared with the leaf samples (L), up-regulated genes and down-regulated genes were eventually obtained. To deepen our understanding of these DEGs, we performed two enrichment analyses: gene ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG). Here, the analysis focused upon the expression characteristics of those genes involved in the terpene metabolic pathway and the steroid biosynthesis pathway, to better elucidate the molecular mechanism of bioactive steroid synthesis in P. sepium. The bioinformatics analysis enabled us to find many genes that are involved in bioactive steroid biosynthesis. These genes encoded acetyl-CoA acetyltransferase (ACAT), HMG-CoA synthase (HMGS), HMG-CoA reductase (HMGR), mevalonate kinase (MK), phosphomevalonate kinase (PMK), mevalonate diphosphate decarboxylase (MDD), isopentenylpyrophosphate isomerase (IPPI), farnesyl pyrophosphate synthase (FPS), squalene synthase (SS), squalene epoxidase (SE), cycloartenol synthase (CAS), sterol C-24 methyltransferase (SMT1), sterol-4alpha-methyl oxidase 1 (SMO1), sterol 14alpha-demethylase (CYP51/14-SDM), delta(14)-sterol reductase (FK/14SR), C-8,7 sterol isomerase (HYD1), sterol-4alpha-methyl oxidase 2 (SMO2), delta(7)-sterol-C5(6)-desaturase (STE1/SC5DL), 7-dehydrocholesterol reductase (DWF5/DHCR7), delta (24)-sterol reductase (DWF1/DHCR24), sterol 22-desaturase (CYP710A), progesterone 5beta-reductase (5\u03b2-POR), 3-beta-hydroxysteroid dehydrogenase (3\u03b2-HSD). This research will be helpful to further understand the mechanism of bioactive steroid biosynthesis in P. sepium, namely C21 steroid and periplocin biosynthesis."
+    },
+    {
+      "pmid": "18618710",
+      "title": "Crystal structure of human phosphomevalonate kinase at 1.8 A resolution.",
+      "abstract": ""
+    },
+    {
+      "pmid": "37328749",
+      "title": "Proteins from toad's parotoid macroglands: do they play a role in gland functioning and chemical defence?",
+      "abstract": "Parotoid gland secretion of bufonid toads is a rich source of toxic molecules that are used against predators, parasites and pathogens. Bufadienolides and biogenic amines are the principal compounds responsible for toxicity of parotoid secretion. Many toxicological and pharmacological analyses of parotoid secretions have been performed, but little is known about the processes related to poison production and secretion. Therefore, our aim was to investigate protein content in parotoids of the common toad, Bufo bufo, to understand the processes that regulate synthesis and excretion of toxins as well as functioning of parotoid macroglands. Applying a proteomic approach we identified 162 proteins in the extract from toad's parotoids that were classified into 11 categories of biological functions. One-third (34.6%) of the identified molecules, including acyl-CoA-binding protein, actin, catalase, calmodulin, and enolases, were involved in cell metabolism. We found many proteins related to cell division and cell cycle regulation (12.0%; e.g. histone and tubulin), cell structure maintenance (8.4%; e.g. thymosin beta-4, tubulin), intra- and extracellular transport (8.4%), cell aging and apoptosis (7.3%; e.g. catalase and pyruvate kinase) as well as immune (7.0%; e.g. interleukin-24 and UV excision repair protein) and stress (6.3%; including heat shock proteins, peroxiredoxin-6 and superoxide dismutase) response. We also identified two proteins, phosphomevalonate kinase and isopentenyl-diphosphate delta-isomerase 1, that are involved in synthesis of cholesterol which is a precursor for bufadienolides biosynthesis. STRING protein-protein interaction network predicted for identified proteins showed that most proteins are related to metabolic processes, particularly glycolysis, stress response and DNA repair and replication. The results of GO enrichment and KEGG analyses are also consistent with these findings. This finding indicates that cholesterol may be synthesized in parotoids, and not only in the liver from which is then transferred through the bloodstream to the parotoid macroglands. Presence of proteins that regulate cell cycle, cell division, aging and apoptosis may indicate a high epithelial cell turnover in parotoids. Proteins protecting skin cells from DNA damage may help to minimize the harmful effects of UV radiation. Thus, our work extends our knowledge with new and important functions of parotoids, major glands involved in the bufonid chemical defence."
+    },
+    {
+      "pmid": "19509296",
+      "title": "Kinetic and functional analysis of L-threonine kinase, the PduX enzyme of Salmonella enterica.",
+      "abstract": "The PduX enzyme of Salmonella enterica is an l-threonine kinase used for the de novo synthesis of coenzyme B(12) and the assimilation of cobyric acid. PduX with an N-terminal histidine tag (His(8)-PduX) was produced in Escherichiacoli and purified. The recombinant enzyme was soluble and active. Kinetic analysis indicated a steady-state Ordered Bi Bi complex mechanism in which ATP is the first substrate to bind. Based on a multiple sequence alignment of PduX homologues and other GHMP (galactokinase, homoserine kinase, mevalonate kinase, and phosphomevalonate kinase) family members, 14 PduX variants having changes at 10 conserved serine/threonine and aspartate/glutamate sites were constructed by site-directed mutagenesis. Each variant was produced in E. coli and purified. Comparison of the circular dichroism spectra and kinetic properties of the PduX variants with those of the wild-type enzyme indicated that Glu-24 and Asp-135 are needed for proper folding, Ser-99 and Glu-132 are used for ATP binding, and Ser-253 and Ser-255 are critical to l-threonine binding whereas Ser-100 is essential to catalysis, but its precise role is uncertain. The studies reported here are the first to investigate the kinetic and catalytic mechanisms of l-threonine kinase from any organism."
+    },
+    {
+      "pmid": "14680974",
+      "title": "Cholesterol biosynthesis is not defective in peroxisome biogenesis defective fibroblasts.",
+      "abstract": "To evaluate the presumed peroxisomal involvement in cholesterol/isoprenoid biosynthesis, we determined the protein levels and activities of five different enzymes of the presqualene segment of the cholesterol/isoprenoid biosynthetic pathway in primary skin fibroblasts of selected patients with a peroxisomal biogenesis disorder (PBD). These five enzymes all have been reported to be partly or exclusively peroxisomal and include HMG-CoA reductase, mevalonate kinase, phosphomevalonate kinase, mevalonate pyrophosphate decarboxylase, and isopentenyl pyrophosphate isomerase. To exclude that genetic differences, resulting in different defects in peroxisomal biogenesis, have differential effects on the activity of the cholesterol biosynthetic enzymes and on de novo cholesterol biosynthesis, we chose fibroblasts of patients with defined defects in one of four different PEX genes leading to Zellweger syndrome (PEX1, PEX5, PEX16 or PEX19). We found that all enzymes measured are at least as active in the peroxisome-deficient cells cultured in cholesterol-depleted medium as in identically cultured control cells. This indicates that if these presumed peroxisomal proteins are mislocalized to the cytosol they do not loose their activity, nor get degraded unlike most other authentic peroxisomal proteins. We also measured de novo cholesterol synthesis from radio-labeled acetate in all cell lines and found similar or even elevated rates for the PBD cells when compared to controls. Our results imply that functional peroxisomes are not a prerequisite for the functioning of enzymes involved in cholesterol/isoprenoid biosynthesis and as such raise doubts about the true involvement of peroxisomes therein."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000163344",
+    "approvedSymbol": "PMVK",
+    "approvedName": "phosphomevalonate kinase",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 0
+    }
+  }
+}

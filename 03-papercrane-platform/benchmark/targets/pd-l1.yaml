@@ -1,0 +1,20 @@
+id: pd-l1
+pdb: 5O45
+chain: A
+hotspots: [54, 56, 66, 115, 123]
+hotspot_rationale: |
+  Hotspots selected from the PD-1/PD-L1 co-crystal interface. Residues 54,
+  56, 66, 115, and 123 of PD-L1 (chain A, 5O45 numbering) lie within the
+  canonical PD-1 binding footprint and form the hydrophobic core and
+  flanking polar contacts of the checkpoint interface. Choosing the PD-1
+  interface ensures that a successful binder must compete with a
+  well-characterized natural partner, which makes this an easy-tier but
+  non-trivial target. Literature citations: [CITATION: Lin 2008 PNAS
+  PD-1/PD-L1 structure], [CITATION: Zak 2017 Structure PD-L1 interface
+  review].
+class: cytokine_receptor
+tier: easy
+baseline_hit_rate: 0.42
+added: 2026-04-23
+added_by: paper-crane-core
+version: 1

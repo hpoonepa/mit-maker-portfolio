@@ -1,0 +1,240 @@
+{
+  "abstracts": [
+    {
+      "pmid": "11350957",
+      "title": "Characterization of a novel proapoptotic caspase-2- and caspase-9-binding protein.",
+      "abstract": "Caspases play important roles in regulating apoptotic signaling pathways. Here we report the cloning, by the yeast two hybrid system with dominant negative caspase-2 as \"bait,\" of a proapoptotic molecule named proapoptotic caspase adaptor protein (PACAP), encoded by a 372-base pair open reading frame. Binding of this novel protein to caspase-2 (casp-2) was confirmed in yeast two hybrid, in vitro, and in vivo assays. The deduced amino acid sequence revealed homology to functional motifs, including ATP and cytochrome c binding sites. PACAP mRNA was widely expressed in most human tissues; in transfected cells, PACAP was diffusely expressed in the cytoplasm. Bindings studies with the PACAP recombinant protein demonstrated specific binding to casp-2 and casp-9 but not to casp-3, -4, -7, or -8 in cell extracts. Cotransfection experiments showed that PACAP binds to casp-2 and -9 in 293T cells. In addition, studies with truncated PACAP demonstrated a requirement for residues 39-72 of PACAP for specific binding to casp-2 and -9. Transient transfection of PACAP into 293T human kidney cells and rat-1 fibroblasts triggered apoptosis at 24 h, which was at least in part prevented by an inhibitor of casp-3-like enzymes. Transfection of PACAP into human B cell lines using a retroviral system also triggered apoptotic cell death. In addition, transcription of PACAP in primary human B cells was dramatically down-regulated early after cellular activation by CD40L and Staphylococcus aureus and markedly up-regulated as the cells apoptose. These findings identify a novel proapoptotic caspase adaptor protein."
+    },
+    {
+      "pmid": "41869442",
+      "title": "MZB1 at the ER-immunity interface: from antibody folding to disease vulnerability in autoimmunity, inflammation, and cancer.",
+      "abstract": "MZB1 (marginal zone B and B1 cell-specific protein 1) is an endoplasmic reticulum-resident molecular chaperone that is predominantly expressed in marginal zone B cells, B1 cells, plasma cells, and pDCs. Functioning as a co-chaperone of GRP94 and BiP, MZB1 selectively facilitates the proper folding and secretion of immunoglobulin M (IgM) and J-chain-containing immunoglobulin A (IgA) dimers, and maintains the homeostasis of highly secretory cells by upregulating the expression of partner proteins such as BiP/GRP94. This review highlights the emerging role of MZB1 across various pathological conditions. In autoimmune diseases such as systemic lupus erythematosus (SLE) and rheumatoid arthritis (RA), MZB1 contributes to aberrant autoantibody and cytokine secretion. MZB1 also modulates inflammatory responses in conditions such as colitis and periodontitis by regulating the B cell-skewed inflammatory microenvironment. In oncology, MZB1 is overexpressed in breast cancer (BC), lymphoma, and multiple myeloma (MM), where it is associated with enhanced tumor cell proliferation and poor prognosis. Conversely, in hepatocellular carcinoma (HCC) and gastric cancer (GC), MZB1 is transcriptionally silenced due to promoter hypermethylation. In summary, the tissue-specific expression pattern of MZB1 endows it with potential as both a diagnostic biomarker and therapeutic target, holding significant implications for the exploration of future cancer prognosis and treatment strategies."
+    },
+    {
+      "pmid": "37852603",
+      "title": "MZB1-expressing cells are essential for local immunoglobulin production in chronic rhinosinusitis with nasal polyps.",
+      "abstract": "The expression of MZB1 genes is significantly elevated in patients who have chronic rhinosinusitis with nasal polyp (CRSwNP) disease compared with healthy controls. To characterize MZB1-positive B cells in CRSwNP and to estimate the contribution of distinct subsets of B cells to the local overproduction of immunoglobulins. Single-cell RNA-sequencing with Cellular Indexing of Transcriptomes and Epitopes by Sequencing technology, Switching Mechanism At the 5' end of RNA Template sequencing, flow cytometry, immunohistochemistry and immunofluorescence staining, Western blot, QuantiGene Plex assay, B-cell ImmunoSpot assay, Luminex assay, and enzyme-linked immunosorbent assay were performed. Significantly higher mRNA expression of MZB1 and HSP90B1 was found in type 2 CRSwNP compared with controls. In CRSwNP, MZB1 expression correlated with the local production of IgE. MZB1 could be colocalized with plasma and mature B cells, especially marginal zone (MZ) B cells. Single-cell transcriptome and epitope studies revealed prominent populations of B cells in type 2 CRSwNP with unexpectedly high MZB1 gene expression. The MZ B-cell population was significantly increased in CRSwNP compared with healthy controls in both peripheral blood mononuclear cells and nasal tissue single-cell suspensions. When those single cells were cultured overnight, the MZ B-cell numbers were positively correlated with local IgE production but negatively correlated with local IgM production. In vitro, MZB1 stimulation up-regulated the mRNA expression of IgE. MZB1 was primarily expressed by plasma and mature B cells in nasal mucosa. MZB1 expression level was increased in CRSwNP compared with controls. MZB1 contributed to the local IgE production in type 2 CRSwNP."
+    },
+    {
+      "pmid": "31901757",
+      "title": "COL1A1 and MZB1 as the hub genes influenced the proliferation, invasion, migration and apoptosis of rectum adenocarcinoma cells by weighted correlation network analysis.",
+      "abstract": "The influences of COL1A1 and MZB1 on the proliferation, migration, invasion and apoptosis abilities of rectum adenocarcinoma was aimed to explore in this study. Gene expression levels in rectum adenocarcinoma and adjacent tissues were analyzed by differential analysis. Weighted gene correlation network analysis (WGCNA) was employed to investigate rectal adenocarcinoma (READ) hub genes. MCODE was performed to screen the modules of protein-protein interaction network in Cytoscape software. Database for Annotation, Visualization and Integrated Discovery (DAVID) online tool is considered to be the most effective tool in gene ontology (GO) enrichment and Kyoto Gene and Genomics Encyclopedia (KEGG) pathway analysis. Survival analysis was performed using READ patient information from TCGA-READ project database. Quantitative Real-time Polymerase Chain Reaction (qRT-PCR) and western blot were employedto examinemRNA and protein expressions of COL1A1 and MZB1 in tumor tissues and cell lines. After transfecting various interference sequences by liposome-mediated transfection, the influence of COL1A1 and MZB1 on the proliferation, apoptosis, migration and invasion of rectal cancer cells were observed by plate clone formation assay, flow cytometry, wound healing assay and transwell assay respectively. Moreover, xenograft tumor growth assay in vivo validated the results. Higher expression levels of COL1A1 and lower expression levels of MZB1 were discovered in tumor tissues of patients with colorectal adenocarcinoma. Overexpression of MZB1 and silencing COL1A1 significantly inhibited proliferation, migration and invasion, while cell apoptosis was promoted. Overexpression of MZB1 and silencing COL1A1 inhibited the orthotopic growth of tumor in vivo. COL1A1 promoted proliferation, migration and invasion but inhibited apoptosis of rectal adenocarcinoma cells while MZB1 was totally on the contrary."
+    },
+    {
+      "pmid": "33453188",
+      "title": "High-resolution Crystal Structure of Human pERp1, A Saposin-like Protein Involved in IgA, IgM and Integrin Maturation in the Endoplasmic Reticulum.",
+      "abstract": "The folding of disulfide bond containing proteins in the endoplasmic reticulum (ER) is a complex process that requires protein folding factors, some of which are protein-specific. The ER resident saposin-like protein pERp1 (MZB1, CNPY5) is crucial for the correct folding of IgA, IgM and integrins. pERp1 also plays a role in ER calcium homeostasis and plasma cell mobility. As an important factor for proper IgM maturation and hence immune function, pERp1 is upregulated in many auto-immune diseases. This makes it a potential therapeutic target. pERp1 belongs to the CNPY family of ER resident saposin-like proteins. To date, five of these proteins have been identified. All are implicated in protein folding and all contain a saposin-like domain. All previously structurally characterized saposins are involved in lipid binding. However, there are no reports of CNPY family members interacting with lipids, suggesting a novel function for the saposin fold. However, the molecular mechanisms of their function remain elusive. To date, no structure of any CNPY protein has been reported. Here, we present the high-resolution (1.4\u202f\u00c5) crystal structure of human pERp1 and confirm that it has a saposin-fold with unique structural elements not present in other saposin-fold structures. The implications for the role of CNPY proteins in protein folding in the ER are discussed."
+    },
+    {
+      "pmid": "40738426",
+      "title": "Unveiling the multifaceted role of MZB1 in health and disease toward potential therapeutics. A comprehensive review.",
+      "abstract": "Marginal zone B and B1 cell specific protein (MZB1), initially identified as a proapoptotic caspase-2 and caspase-9-binding protein, has emerged as a critical regulator of diverse cellular processes. MZB1 plays a pivotal role in immune cell differentiation and functions as a co-chaperone involved in integrin activation, antibody folding, and secretion. It also regulates calcium flux between the endoplasmic reticulum (ER) and cytoplasm, maintaining calcium in the ER to keep an oxidizing environment. Depletion of MZB1 disrupts calcium homeostasis, elevating cytosolic calcium and activating downstream signaling pathways. Moreover, the discovery of five distinct isoforms of MZB1, each with its own specific functional roles, underscores the complexity of its involvement in cellular activities. MZB1 dysregulation has been implicated in diverse pathological conditions, including cancer, obesity, immune responses, inflammation, and autoimmune diseases. Notably, proteomic and functional studies have revealed that upregulated MZB1 contributes to multiple myeloma progression. Elevated MZB1 expression is associated with poor prognosis in CLL and demonstrates prognostic potential in DLBCL. This review explores the multifaceted functions of MZB1 and highlights the necessity for continued research into its isoforms and molecular mechanisms, particularly in the context of diagnostic and therapeutic interventions."
+    },
+    {
+      "pmid": "41366441",
+      "title": "Characterizing CSF inflammatory proteomics in pediatric post-hemorrhagic hydrocephalus and Anti-NMDAR encephalitis.",
+      "abstract": "Neuroinflammation is a key contributor to pathology in many central nervous system (CNS) diseases. While cerebrospinal fluid (CSF) proteomic studies in adult neurologic conditions have identified insightful inflammatory signatures, fewer studies have been conducted in pediatric diseases. Moreover, past studies primarily employed proteomic approaches that are less suited to detect novel, low-abundance inflammatory mediators that may be critical in pediatric CNS pathophysiology. To address this gap, we applied high-sensitivity, multi-targeted proteomic profiling to characterize the neuroinflammatory signatures across three distinct pediatric neurologic diseases: post-hemorrhagic hydrocephalus (PHH), N-methyl-D-aspartate receptor encephalitis (NMDARE), and brain tumor-associated hydrocephalus. CSF samples from controls (n\u2009=\u20095) and patients with PHH (n\u2009=\u20099), NMDARE (n\u2009=\u20095), and brain tumor-associated hydrocephalus (n\u2009=\u200910) were obtained from a pediatric CSF biorepository. After proteomic profiling using the Olink Explore platform, 641 inflammation-related proteins were retained for analysis. Differentially abundant proteins (DAPs) were identified using limma with false discovery rate (FDR) correction (FDR\u2009<\u20090.05, |log\u2082FC| >1). Pathway enrichment of DAPs was performed with Reactome via Enrichr, and protein-protein interaction networks were constructed using STRING to identify functional modules and key hub proteins. Principal component and hierarchical clustering analyses revealed separation of PHH and brain tumor samples from controls, while NMDARE partially overlapped. CSF in PHH contained 532 DAPs, with pathway enrichment analysis identifying alternative complement activation, coagulation, and platelet degranulation pathways as top hits. Conversely, CSF in NMDARE showed only 65 DAPs, with the top pathways involving IL-10 and IL-18 signaling, and the top 3 DAPs involving humoral immunity (IGLC2, MZB1, CD79B). DAPs did not meet statistical significance in brain tumor patients. Longitudinal analysis of serial collections from PHH patients suggested a persistence of coagulation- and complement-related neuroinflammation over time. NELL2 emerged as a consistently downregulated protein in PHH for weeks after the initial hemorrhage. PHH and NMDARE revealed distinct neuroinflammatory proteomic signatures compared to our control samples. PHH was marked by a broad increase in detection of the majority of inflammation-related proteins, with highest representation among the alternative complement and coagulation-related pathways. The persistent detection of these proteins for weeks after the initial hemorrhage may be indicative of chronic neuroinflammation, even at the time of permanent CSF diversion. Conversely, NMDARE induced a narrower lymphocyte-driven profile, more consistent with an antibody-mediated autoimmune disease. Furthermore, suppression of NELL2 and up-regulation of immunoglobulin-related markers (IGLC2, MZB1, CD79B) are potential candidates for biomarkers in PHH and NMDARE, respectively."
+    },
+    {
+      "pmid": "40607383",
+      "title": "ER stress genes (COL1A1, LOXL2, VWF) predicts IKK-16 as a Candidate therapeutic target for colitis-related inflammation and fibrosis suppression.",
+      "abstract": "The role of endoplasmic reticulum stress (ERS) in the immune-inflammatory dysregulation and intestinal fibrosis associated with ulcerative colitis (UC) remains unclear. This study aims to identify ERS-related genes involved in UC fibrosis and explore potential therapeutic targets. Differentially expressed ERS-related genes (DE-ERGs) were identified through comprehensive analysis of public datasets. Machine learning methods screened VWF, MZB1, COL1A1, and LOXL2 as key regulators. Immune infiltration analysis, protein-protein interaction (PPI) network analysis, and gene set variation analysis (GSVA) were performed to clarify their roles in UC fibrosis. Drug prediction was conducted using the Connectivity Map (CMap) database, supplemented by a literature review. The predicted drugs were ranked based on their binding affinities as follows: IKK-16 > Quercetin > Curcumin > Resveratrol > Budesonide > Trimebutine > Colchicine > Betamethasone > Pioglitazone > Metformin. IKK-16 showed the highest binding affinity for treating UC fibrosis. COL1A1, LOXL2, and VWF were identified as key drivers of UC intestinal fibrosis, supported by immune infiltration and PPI network analyses. These results suggest that ERS-related genes, particularly COL1A1, LOXL2, and VWF, may regulate UC fibrosis through interactions with immune cells. IKK-16 shows promise as a therapeutic agent. These findings provide new insights into UC pathogenesis and potential clinical treatment strategies."
+    },
+    {
+      "pmid": "35509008",
+      "title": "Comparison of immune cells and diagnostic markers between spondyloarthritis and rheumatoid arthritis by bioinformatics analysis.",
+      "abstract": "Spondyloarthritis (SpA) and rheumatoid arthritis (RA) are chronic autoimmune diseases, but they are usually difficult to distinguish in the early stage of the diseases. The purpose of this study is to explore the differences of immune mechanism and diagnostic markers through bioinformatics analysis. First, microarray datasets from patients with SpA, RA and normal controls were obtained from the Gene Expression Omnibus (GEO) database. The differentially expressed genes (DEGs) between groups were identified in R software. Functional and pathway enrichment of DEGs were analyzed by David database. Then, we screened the hub genes using Cytoscape plugin, and constructed the protein-protein interaction (PPI) network and heatmap of hub genes. After that, CIBERSORT was used to evaluate the differences and connections of immune cells in SpA and RA, and screened out diagnostic markers. Correlation analysis was used to analyze the relationship between immune cells and diagnostic markers. Finally, quantitative real-time polymerase chain reaction (qRT-PCR) was used to verify the effectiveness of immunodiagnostic markers. We obtained three datasets, from which we can see that the functional enrichment of DEGs is mainly in cell chemotaxis, lymphocyte activation, primary immunodeficiency and other immune responses. The difference of immune cells between SpA, RA and normal control was concentrated in B, T lymphocytes cells, macrophages and dendritic cells. C19orf12\u2009+\u2009S1PR3 is most associated with these immune cells and S1PR3 can be used as a diagnostic marker of this kind of immune diseases. In addition, MZB1\u2009+\u2009XIST is closely related to T cells, NK cells and dendritic cells, and is expected to be used as a marker to distinguish the two diseases. Although the clinical manifestations of SpA and RA are similar, the pathogenesis is different. The screening of immune cells and diagnostic markers provides a more accurate target for the treatment of this kind of diseases."
+    },
+    {
+      "pmid": "32079689",
+      "title": "Differential RNA splicing as a potentially important driver mechanism in multiple myeloma.",
+      "abstract": "Disruption of the normal splicing patterns of RNA is a major factor in the pathogenesis of a number of diseases. Increasingly research has shown the strong influence that splicing patterns can have on cancer progression. Multiple Myeloma is a molecularly heterogeneous disease classified by the presence of key translocations, gene expression profiles and mutations but the splicing patterns in MM remains largely unexplored. We take a multifaceted approach to define the extent and impact of alternative splicing in MM. We look at the spliceosome component, SF3B1, with hotspot mutations (K700E and K666T/Q) shown to result in an increase in alternative splicing in other cancers. We discovered a number of differentially spliced genes in comparison of the SF3B1 mutant and wild type samples that included, MZB1, DYNLL1, TMEM14C and splicing related genes DHX9, CLASRP, and SNRPE. We identified a broader role for abnormal splicing showing clear differences in the extent of novel splice variants in the different translocation groups. We show that a high number of novel splice loci is associated with adverse survival and an ultra-high risk group. The enumeration of patterns of alternative splicing has the potential to refine MM classification and to aid in the risk stratification of patients."
+    },
+    {
+      "pmid": "29921943",
+      "title": "Gene expression profiling of periodontitis-affected gingival tissue by spatial transcriptomics.",
+      "abstract": "Periodontitis is a highly prevalent chronic inflammatory disease of the periodontium, leading ultimately to tooth loss. In order to characterize the gene expression of periodontitis-affected gingival tissue, we have here simultaneously quantified and localized gene expression in periodontal tissue using spatial transcriptomics, combining RNA sequencing with histological analysis. Our analyses revealed distinct clusters of gene expression, which were identified to correspond to epithelium, inflamed areas of connective tissue, and non-inflamed areas of connective tissue. Moreover, 92 genes were identified as significantly up-regulated in inflamed areas of the gingival connective tissue compared to non-inflamed tissue. Among these, immunoglobulin lambda-like polypeptide 5 (IGLL5), signal sequence receptor subunit 4 (SSR4), marginal zone B and B1 cell specific protein (MZB1), and X-box binding protein 1 (XBP1) were the four most highly up-regulated genes. These genes were also verified as significantly higher expressed in gingival tissue of patients with periodontitis compared to healthy controls, using reverse transcription quantitative polymerase chain reaction. Moreover, the protein expressions of up-regulated genes were verified in gingival biopsies by immunohistochemistry. In summary, in this study, we report distinct gene expression signatures within periodontitis-affected gingival tissue, as well as specific genes that are up-regulated in inflamed areas compared to non-inflamed areas of gingival tissue. The results obtained from this study may add novel information on the genes and cell types contributing to pathogenesis of the chronic inflammatory disease periodontitis."
+    },
+    {
+      "pmid": "34786042",
+      "title": "TNFSF13B and PPARGC1A expression is associated with tumor-infiltrating immune cell abundance and prognosis in clear cell renal cell carcinoma.",
+      "abstract": "Growing evidence suggests that the tumor microenvironment (TME) plays crucial roles in tumor progression and treatment efficacy in clear cell renal cell carcinoma (ccRCC), which typically has a poor prognosis due to high relapse and metastasis rates. We comprehensively analyzed ccRCC RNA-sequencing data from The Cancer Genome Atlas (TCGA) database to identify candidate prognostic TME-related genes involved in ccRCC. We used the ESTIMATE and CIBERSORT algorithms to estimate the proportions of immune cells, stromal cells, and tumor-infiltrating immune cells (TICs) in the TME in ccRCC samples from 539 patients. By examining the intersection of the differentially expressed genes (DEGs) obtained by Cox regression analysis and protein-protein interaction network, we identified five overlapping DEGs (IGLL5, MZB1, HSD11B1, TNFSF13B, and PPARGC1A). Further analysis revealed that TNFSF13B expression was elevated in ccRCC tumor tissues and negatively associated with overall survival. PPARGC1A expression exhibited the opposite patterns. Immunohistochemical analysis of 35 paired ccRCC and adjacent normal tissues confirmed the in-silico results. Gene set enrichment analysis revealed that genes in the groups with high TNFSF13B and PPARGC1A expression were enriched mainly in immune-related activities. In the group with low PPARGC1A expression, genes were enriched in metabolic pathways. CIBERSORT analysis of TIC proportions revealed that Tregs and CD8 T-cell abundance correlated positively with TNFSF13B expression, but negatively with PPARGC1A expression. These findings demonstrate that TNFSF13B and PPARGC1A are prognostic predictors and possible therapeutic targets in ccRCC."
+    },
+    {
+      "pmid": "31127044",
+      "title": "MZB1 promotes the secretion of J-chain-containing dimeric IgA and is critical for the suppression of gut inflammation.",
+      "abstract": "IgA is the most abundantly produced antibody in the body and plays a crucial role in gut homeostasis and mucosal immunity. IgA forms a dimer that covalently associates with the joining (J) chain, which is essential for IgA transport into the mucosa. Here, we demonstrate that the marginal zone B and B-1 cell-specific protein (MZB1) interacts with IgA through the \u03b1-heavy-chain tailpiece dependent on the penultimate cysteine residue and prevents the intracellular degradation of \u03b1-light-chain complexes. Moreover, MZB1 promotes J-chain binding to IgA and the secretion of dimeric IgA. MZB1-deficient mice are impaired in secreting large amounts of IgA into the gut in response to acute inflammation and develop severe colitis. Oral administration of a monoclonal IgA significantly ameliorated the colitis, accompanied by normalization of the gut microbiota composition. The present study identifies a molecular chaperone that promotes J-chain binding to IgA and reveals an important mechanism that controls the quantity, quality, and function of IgA."
+    },
+    {
+      "pmid": "31050855",
+      "title": "Characterization of CNPY5 and its family members.",
+      "abstract": "The Canopy (CNPY) family consists of four members predicted to be soluble proteins localized to the endoplasmic reticulum (ER). They are involved in a wide array of processes, including angiogenesis, cell adhesion, and host defense. CNPYs are thought to do so via regulation of secretory transport of a diverse group of proteins, such as immunoglobulin M, growth factor receptors, toll-like receptors, and the low-density lipoprotein receptor. Thus far, a comparative analysis of the mammalian CNPY family is missing. Bioinformatic analysis shows that mammalian CNPYs, except the CNPY1 homolog, have N-terminal signal sequences and C-terminal ER-retention signals and that mammals have an additional member CNPY5, also known as plasma cell-induced ER protein 1/marginal zone B cell-specific protein 1. Canopy proteins are particularly homologous in four hydrophobic alpha-helical regions and contain three conserved disulfide bonds. This sequence signature is characteristic for the saposin-like superfamily and strongly argues that CNPYs share this common saposin fold. We showed that CNPY2, 3, 4, and 5 (termed CNPYs) localize to the ER. In radioactive pulse-chase experiments, we found that CNPYs rapidly form disulfide bonds and fold within minutes into their native forms. Disulfide bonds in native CNPYs remain sensitive to low concentrations of dithiothreitol (DTT) suggesting that the cysteine residues forming them are relatively accessible to solutes. Possible roles of CNPYs in the folding of secretory proteins in the ER are discussed."
+    },
+    {
+      "pmid": "33647271",
+      "title": "A proteomic approach towards understanding the pathogenesis of Mooren's ulcer.",
+      "abstract": "Mooren's ulcer (MU) is a refractory autoimmune corneal ulcer with a high recurrence rate. So far, its molecular profiles and pathomechanisms remain largely unknown. Therefore, we aim to characterize the protein profiles of MU specimens by data-independent-acquisition (DIA) mass spectrometry (MS), and to define the functions of differentially-expressed proteins (DEPs). Through LC-MS/MS, 550 DEPs were identified between MU biopsies and age-matched controls (Ctrl). KEGG analysis revealed that the significantly enriched pathways of the up-regulated proteins mainly covered lysosomes, antigen processing and presentation, and phagosomes. We subsequently validated the expressions of the selected candidates using parallel-reaction-monitoring (PRM)-based MS and immunohistochemistry (IHC), including cathepsins, TIMP3, MMP-10, MYOC, PIGR, CD74, CAT, SOD2, and SOD3. Moreover, immunoglobulin (Ig) components and B lymphocytes associated proteins MZB1, HSPA5, and LAP3 in MU were significantly increased and validated by PRM-based MS and IHC. The remarkable enrichment of neutrophil extracellular traps (NETs) components in MU samples was also identified and determined. The up-regulated Ig components and NETs components suggested that B lymphocytes and neutrophils participated in the immunopathology of MU. Importantly, we also identified and validated much more expression of peptidyl arginine deiminase 4 (PADI4) in MU samples. The double-immunofluorescence staining showed the co-localization of citrulline residues with MPO, NE, and IgG in MU samples. These results indicated the presences of PADI4-mediated citrullination modification and anti-citrullinated protein antibodies (ACPAs) in MU samples. Our findings, for the first time, provide a global proteomic signature of MU, which may open a new avenue towards disease pathology and therapeutics."
+    },
+    {
+      "pmid": "35605261",
+      "title": "Comprehensive Characterizations of Immune Receptor Repertoire in Tumors and Cancer Immunotherapy Studies.",
+      "abstract": "We applied our computational algorithm TRUST4 to assemble immune receptor (T-cell receptor/B-cell receptor) repertoires from approximately 12,000 RNA sequencing samples from The Cancer Genome Atlas and seven immunotherapy studies. From over 35 million assembled complete complementary-determining region 3 sequences, we observed that the expression of CCL5 and MZB1 is the most positively correlated genes with T-cell clonal expansion and B-cell clonal expansion, respectively. We analyzed amino acid evolution during B-cell receptor somatic hypermutation and identified tyrosine as the preferred residue. We found that IgG1+IgG3 antibodies together with FcRn were associated with complement-dependent cytotoxicity and antibody-dependent cellular cytotoxicity or phagocytosis. In addition to B-cell infiltration, we discovered that B-cell clonal expansion and IgG1+IgG3 antibodies are also correlated with better patient outcomes. Finally, we created a website, VisualizIRR, for users to interactively explore and visualize the immune repertoires in this study. See related Spotlight by Liu and Han, p. 786."
+    },
+    {
+      "pmid": "12792799",
+      "title": "MGC29506 gene, frequently down-regulated in intestinal-type gastric cancer, encodes secreted-type protein with conserved cysteine residues.",
+      "abstract": "Microarray analyses is applied for prognosis of gastric cancer, including risk assessments of lymph-node metastasis and peritoneal dissemination. EST AA769445 derived from an unknown gene is reported to be frequently down-regulated in intestinal-type gastric cancer based on microarray analyses. Here, we identified and characterized the gene corresponding to EST AA769445 by using bioinformatics. EST AA769445 overlapped with MGC29506 cDNA (BC021275) and PACAP cDNA (AF338109). MGC29506 protein (189 aa) and PACAP protein (123 aa) were identical in codon 1-59, but were divergent in the C-terminal region due to a frame shift caused by sixteen-base insertion in PACAP cDNA. MGC29506 and PACAP were derived from the same gene, consisting of four exons, due to alternative splicing of alternative splice-acceptor-site type. Fourteen human ESTs were the MGC29506 type, while one human EST was the PACAP type. MGC29506 was the major isoform of the MGC29506/PACAP gene on human chromosome 5q31.2. MGC29506 orthologs in other species were next searched for. AK088094 and AK008016 cDNAs with nucleotide substitutions resulting in four-amino-acid substitutions were derived from mouse Mgc29506 gene. Rat Mgc29506 gene was identified in the rat genome draft sequence AC135285. ESTs AJ396310 and AJ441435 were derived from chicken Mgc29506 gene, while ESTs BW315632 and BW251767 from ciona mgc29506 gene. N-terminal signal peptide, six cysteine residues and other amino acids were conserved among human, mouse, rat, chicken, and ciona MGC29506 proteins. MGC29506 gene, frequently down-regulated in intestinal-type gastric cancer, was found to encode secreted-type protein with six conserved cysteine residues."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000170476",
+    "approvedSymbol": "MZB1",
+    "approvedName": "marginal zone B and B1 cell specific protein",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 0
+    }
+  }
+}

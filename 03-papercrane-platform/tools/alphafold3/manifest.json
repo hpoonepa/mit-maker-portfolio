@@ -1,0 +1,31 @@
+{
+  "id": "alphafold3",
+  "displayName": "AlphaFold 3 (Protenix)",
+  "version": "protenix-1.0.4",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "frontier",
+  "licenseGate": false,
+  "license": "Apache-2.0 (Protenix, ByteDance)",
+  "_backendNote": "Default backend is Protenix (open-source AF3 reimplementation) on Modal L40S. DeepMind/Isomorphic AF3 API support was removed for simplicity and can be re-added as a transport_alternates entry if a customer needs it.",
+  "image": "ghcr.io/papercrane/alphafold3-protenix:1.0.4-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "transport": {
+    "type": "modal",
+    "app": "alphafold3",
+    "function": "papercrane_dispatch"
+  },
+  "compute": {
+    "gpu": "L40S",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 64,
+    "estSecondsPerDesign": 180,
+    "note": "Protenix on Modal; DeepMind AF3 API requires special transport tier (Frontier only)"
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "num_recycles": 20, "num_samples": 5, "num_seeds": 1 },
+  "composes": []
+}

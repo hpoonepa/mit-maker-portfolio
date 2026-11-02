@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/rf3/input.json",
+  "title": "RoseTTAFold3 Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "sequences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [
+              { "type": "string", "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$" },
+              {
+                "type": "object",
+                "required": ["sequence"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "sequence": {
+                    "type": "string",
+                    "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "sequence": {
+          "type": "string",
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+        },
+        "ligand": { "type": "string" },
+        "ligandSmiles": { "type": "string" },
+        "ligand_sdf": { "type": "string" },
+        "nRecycles": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "numSteps": { "type": "integer", "minimum": 20, "maximum": 500 },
+        "earlyStoppingPlddtThreshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

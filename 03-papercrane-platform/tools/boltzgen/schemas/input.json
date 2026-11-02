@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/boltzgen/input.json",
+  "title": "BoltzGen Input Parameters",
+  "description": "BoltzGen-specific parameters passed via DesignRequest.toolParams.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "num_designs": {
+      "description": "Number of designs to generate per seed.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 200
+    },
+    "diffusion_steps": {
+      "description": "All-atom diffusion denoising steps.",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 1000,
+      "default": 200
+    },
+    "temperature": {
+      "description": "Sampling temperature for the diffusion reverse process.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "default": 0.1
+    },
+    "length_range": {
+      "description": "Min/max residue length of the designed binder.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 20, "maximum": 300 },
+      "minItems": 2,
+      "maxItems": 2,
+      "default": [60, 150]
+    },
+    "ligand": {
+      "description": "Optional path to a ligand file (SDF or PDB) that the binder should be designed around. BoltzGen is ligand-aware and co-designs the binding pocket with side chains in one pass.",
+      "type": "string"
+    },
+    "target_chain": {
+      "description": "Chain id of the target in the input PDB.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]$"
+    }
+  }
+}

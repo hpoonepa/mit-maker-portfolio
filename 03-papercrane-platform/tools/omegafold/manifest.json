@@ -1,0 +1,23 @@
+{
+  "id": "omegafold",
+  "displayName": "OmegaFold",
+  "version": "313c873",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/omegafold:313c873-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 24,
+    "estSecondsPerDesign": 90,
+    "note": "MSA-free folding pinned to upstream commit 313c873; beta until checkpoint and CUDA smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "model": 2, "numCycle": 10, "subbatchSize": 128 },
+  "composes": []
+}

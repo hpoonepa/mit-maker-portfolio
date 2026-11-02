@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/dssp/input.json",
+  "title": "DSSP Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "targetPdb": { "type": "string" },
+        "targetPdbText": { "type": "string" },
+        "minPpStretch": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "writeOther": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

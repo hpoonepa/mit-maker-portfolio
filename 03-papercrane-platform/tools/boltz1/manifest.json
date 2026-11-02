@@ -1,0 +1,27 @@
+{
+  "id": "boltz1",
+  "displayName": "Boltz-1",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/boltz1:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 24,
+    "estSecondsPerDesign": 70
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "recycling_steps": 3,
+    "sampling_steps": 200,
+    "diffusion_samples": 3
+  },
+  "composes": []
+}

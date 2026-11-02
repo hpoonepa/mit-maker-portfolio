@@ -1,0 +1,108 @@
+name: Benchmark — Weekly (Full Tier)
+
+on:
+  schedule:
+    # 04:00 UTC every Sunday
+    - cron: '0 4 * * 0'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish results snapshot to Zenodo'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Skip dispatch and only validate matrix'
+        type: boolean
+        default: false
+
+concurrency:
+  group: benchmark-weekly
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+env:
+  NODE_VERSION: '20'
+  TIER: 'full'
+  SEEDS_PER_CELL: '60'
+  MAX_BUDGET_USD: '500'
+  PARALLELISM: '8'
+
+jobs:
+  dispatch:
+    name: Dispatch weekly benchmark matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 2160  # 36h hard cap
+    outputs:
+      run_id: ${{ steps.dispatch.outputs.run_id }}
+      summary_json: ${{ steps.dispatch.outputs.summary_json }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run benchmark dispatch
+        id: dispatch
+        uses: ./.github/actions/benchmark-dispatch
+        with:
+          tier: full
+          seeds_per_cell: ${{ env.SEEDS_PER_CELL }}
+          max_budget_usd: ${{ env.MAX_BUDGET_USD }}
+          parallelism: ${{ env.PARALLELISM }}
+          dry_run: ${{ github.event.inputs.dry_run || 'false' }}
+          targets_glob: 'benchmark/targets/*.yaml'
+          tools_glob: 'tools/*'
+        env:
+          VASTAI_API_KEY: ${{ secrets.VASTAI_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  finalize:
+    name: Report + drift-detect + optional publish
+    runs-on: ubuntu-latest
+    needs: dispatch
+    if: always() && needs.dispatch.result != 'cancelled'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install benchmark scripts
+        working-directory: scripts/benchmark
+        run: npm install --no-audit --no-fund
+
+      - name: Post results summary
+        working-directory: scripts/benchmark
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SHA: ${{ github.sha }}
+          TIER: full
+        run: npx tsx report-results.ts --tier full --run-id "${{ needs.dispatch.outputs.run_id }}"
+
+      - name: Drift detection
+        working-directory: scripts/benchmark
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: npx tsx drift-detect.ts --tier full
+
+      - name: Publish to Zenodo (optional)
+        if: ${{ github.event.inputs.publish == 'true' }}
+        working-directory: scripts/benchmark
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: npx tsx report-results.ts --tier full --run-id "${{ needs.dispatch.outputs.run_id }}" --publish-zenodo

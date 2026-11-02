@@ -1,0 +1,9 @@
+{
+  "structurePath": "/inputs/backbones/backbone_0001.pdb",
+  "ligandPath": "/inputs/ligands/ligand.sdf",
+  "sequence": "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ",
+  "score": 1.102,
+  "confidence_mean": 0.89,
+  "ligand_context_residues": 12,
+  "seed": 0
+}

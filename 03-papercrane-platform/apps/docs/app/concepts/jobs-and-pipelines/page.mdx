@@ -1,0 +1,83 @@
+# Jobs & pipelines
+
+A **job** is one pipeline run against one target. A **pipeline** is a directed acyclic
+graph of tool nodes — every node consumes upstream artifacts, produces typed outputs,
+and runs on a specific GPU class.
+
+## The default pipeline
+
+If you don't specify, Paper Crane uses this graph:
+
+```
+RFdiffusion ──► ProteinMPNN ──► Boltz-2 ──► ESM-2 (filter)
+   (200 bb)        (3 seq/bb)    (validate)   (PLL gate)
+```
+
+This is the highest-yield workflow we've found across our benchmark suite. It costs
+roughly **600 seeds for 200 designs** (200 backbones × 3 sequences = 600 design seeds,
+all running through Boltz-2 once).
+
+## Custom pipelines
+
+Compose nodes in YAML or via the visual editor in the app:
+
+```yaml
+name: bindcraft-with-af3-validation
+nodes:
+  - id: design
+    tool: bindcraft
+    params:
+      target: ${target}
+      n_designs: 100
+      protocol: default
+  - id: validate
+    tool: alphafold3
+    params:
+      query: ${design.outputs.sequences}
+      template: ${target.structure}
+edges:
+  - from: design
+    to: validate
+```
+
+The CLI validates your DAG before submission — invalid edges (e.g. piping a sequence
+into a tool that wants a backbone) error out locally, not in the queue.
+
+## Lifecycle
+
+```
+queued → scheduled → running → succeeded
+                            ↳ failed
+                            ↳ cancelled
+```
+
+State transitions emit webhooks (see [Webhooks](/api/webhooks)). The UI streams the same
+events over a tRPC subscription.
+
+## Concurrency & retries
+
+- Each job uses one or more GPUs depending on the pipeline. We auto-scale across our
+  Vast.ai and on-demand H100 fleet.
+- Transient failures (OOM, container crash) are retried up to 3× per node before the
+  whole job is marked failed.
+- A failed run still produces partial results — designs that completed before the
+  failure are downloadable.
+
+## Costs
+
+Costs are seed-denominated. Different tool tiers cost different amounts:
+
+| Tier      | Tools                                      | Seeds per design |
+|-----------|--------------------------------------------|------------------|
+| Cheap     | ESM-2, ProteinMPNN, SolubleMPNN, LigandMPNN | 0.1              |
+| Standard  | RFdiffusion, Chroma, BoltzGen, Boltz-1      | 1                |
+| Heavy     | BindCraft, Boltz-2, Chai-1                  | 1                |
+| Frontier  | AlphaFold 3                                 | 2                |
+
+A "design" in this table means one full forward pass through the named tool. If your
+pipeline calls a tool twice on the same input, you pay twice.
+
+<Callout variant="warn">
+Frontier tier (AlphaFold 3) is rate-limited to 5 concurrent runs per org regardless of
+plan. We do not own those weights — Google does — and we respect their TOS.
+</Callout>

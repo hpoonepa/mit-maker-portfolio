@@ -1,0 +1,93 @@
+# Paper Crane - dev override template
+#
+# Copy this file to `docker-compose.override.yml` and edit it to customize
+# your local stack without modifying the committed `docker-compose.yml`.
+#
+#     cp docker-compose.override.yml.example docker-compose.override.yml
+#
+# Docker Compose automatically merges `docker-compose.override.yml` on top of
+# `docker-compose.yml`. The override file is gitignored so your personal tweaks
+# never end up in the repo.
+#
+# Common uses:
+#   1. Rebind host ports when 5432 / 6379 / 9000 / 9001 clash with local tools
+#   2. Run the Paper Crane API or worker inside Compose (instead of on the host)
+#   3. Mount extra volumes, set debug env vars, enable query logging, etc.
+#
+# Example 1 — rebind host ports (keep container ports the same):
+#
+# services:
+#   postgres:
+#     ports:
+#       - "55432:5432"   # connect from host on 55432
+#   redis:
+#     ports:
+#       - "56379:6379"
+#   minio:
+#     ports:
+#       - "59000:9000"
+#       - "59001:9001"
+#
+# Example 2 — run the API inside Compose:
+#
+# services:
+#   api:
+#     build:
+#       context: .
+#       dockerfile: apps/api/Dockerfile
+#     container_name: papercrane-api
+#     depends_on:
+#       postgres:
+#         condition: service_healthy
+#       redis:
+#         condition: service_healthy
+#       minio-init:
+#         condition: service_completed_successfully
+#     environment:
+#       NODE_ENV: development
+#       DATABASE_URL: postgres://postgres:postgres@postgres:5432/papercrane
+#       REDIS_URL: redis://redis:6379
+#       R2_ENDPOINT: http://minio:9000
+#       R2_ACCESS_KEY_ID: minioadmin
+#       R2_SECRET_ACCESS_KEY: minioadmin
+#       R2_BUCKET: papercrane-dev
+#       R2_FORCE_PATH_STYLE: "true"
+#     ports:
+#       - "4000:4000"
+#     volumes:
+#       - ./apps/api:/app/apps/api
+#       - ./packages:/app/packages
+#     networks:
+#       - papercrane
+#
+# Example 3 — run the background worker:
+#
+# services:
+#   worker:
+#     build:
+#       context: .
+#       dockerfile: apps/worker/Dockerfile
+#     container_name: papercrane-worker
+#     depends_on:
+#       postgres:
+#         condition: service_healthy
+#       redis:
+#         condition: service_healthy
+#     environment:
+#       NODE_ENV: development
+#       DATABASE_URL: postgres://postgres:postgres@postgres:5432/papercrane
+#       REDIS_URL: redis://redis:6379
+#     networks:
+#       - papercrane
+#
+# Example 4 — enable verbose Postgres logging:
+#
+# services:
+#   postgres:
+#     command: >
+#       postgres
+#       -c log_statement=all
+#       -c log_duration=on
+#       -c shared_preload_libraries=pg_stat_statements
+
+services: {}

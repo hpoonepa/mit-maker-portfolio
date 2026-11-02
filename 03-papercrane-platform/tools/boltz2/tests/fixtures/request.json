@@ -1,0 +1,13 @@
+{
+  "targetPdb": "/inputs/target.pdb",
+  "targetSeq": "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ",
+  "binders": [
+    { "sequence": "MKQLEDKVEELLSKNYHLENEVARLKKLV", "seed": 0 },
+    { "sequence": "GAAGAVKVPELNPEIRAAVQETLAYLDEM", "seed": 1 }
+  ],
+  "params": {
+    "recycling_steps": 3,
+    "sampling_steps": 200,
+    "diffusion_samples": 5
+  }
+}

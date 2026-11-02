@@ -1,0 +1,717 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Paper Crane. Distribution layer for protein design campaigns.</title>
+    <meta
+      name="description"
+      content="Paper Crane routes binder design campaigns across protein design runners without rebuilding the pipeline."
+    />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Top Nav -->
+    <nav class="nav">
+      <a href="#" class="nav__brand" aria-label="Paper Crane home">
+        <svg
+          class="nav__brand-mark"
+          viewBox="0 0 36 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M2 17 L13 19 L20 14 L31 4 L25 13 L26 20 L11 19 Z" />
+          <path d="M13 19 L17 6 L20 14" />
+        </svg>
+        <span class="nav__brand-name">papercrane</span>
+      </a>
+      <div class="nav__actions">
+        <a class="nav__app" href="/app">open app&nbsp; →</a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+        >
+          <span class="menu-toggle__lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Full-screen menu overlay -->
+    <div id="menu-overlay" class="menu-overlay" aria-hidden="true" inert>
+      <nav class="menu-overlay__inner">
+        <ol class="menu-overlay__list">
+          <li><a href="#problem">The integration tax</a></li>
+          <li><a href="#thesis">Thesis</a></li>
+          <li><a href="#tools">The rotation</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#tiers">Tiers</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#waitlist">Waitlist</a></li>
+          <li><a href="/app">Open app</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Section tracker (right edge) — brushy vertical rail + crane indicator
+         that slides on scroll. Click any section dot to jump. -->
+    <aside class="rail" aria-hidden="true">
+      <svg class="rail__bg" viewBox="0 0 24 1000" preserveAspectRatio="none">
+        <defs>
+          <filter id="railRough" x="-30%" y="-1%" width="160%" height="102%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.5 0.008" numOctaves="2" seed="11" />
+            <feDisplacementMap in="SourceGraphic" scale="2.5" />
+          </filter>
+        </defs>
+        <!-- soft underpaint -->
+        <path d="M 12 0 L 12 1000" stroke="rgba(17,17,16,0.16)" stroke-width="15" stroke-linecap="round" fill="none" filter="url(#railRough)" />
+        <!-- main scroll-driven progress stroke (drawn via stroke-dashoffset
+             tied to scroll progress; pathLength normalizes the math) -->
+        <path
+          class="rail__progress"
+          d="M 12 0 L 12 1000"
+          stroke="#1f4438"
+          stroke-width="7"
+          stroke-linecap="round"
+          fill="none"
+          pathLength="1000"
+          stroke-dasharray="1000"
+          stroke-dashoffset="1000"
+          filter="url(#railRough)"
+        />
+      </svg>
+
+      <!-- Section anchor dots (clickable) -->
+      <button class="rail__dot" data-num="01" data-target="problem" data-name="Problem" aria-label="Problem"></button>
+      <button class="rail__dot" data-num="02" data-target="thesis" data-name="Thesis" aria-label="Thesis"></button>
+      <button class="rail__dot" data-num="03" data-target="tools" data-name="Rotation" aria-label="Rotation"></button>
+      <button class="rail__dot" data-num="04" data-target="how" data-name="How" aria-label="How it works"></button>
+      <button class="rail__dot" data-num="05" data-target="tiers" data-name="Tiers" aria-label="Tiers"></button>
+      <button class="rail__dot" data-num="06" data-target="team" data-name="Team" aria-label="Team"></button>
+      <button class="rail__dot" data-num="07" data-target="waitlist" data-name="Waitlist" aria-label="Waitlist"></button>
+
+      <!-- Paper-crane traveler: slides down the rail as the page scrolls. -->
+      <span class="rail__crane" aria-hidden="true">
+        <svg viewBox="-12 -8 24 16">
+          <path d="M -10 0 L 0 -3 L 10 0 L 0 3 Z" fill="#1f4438" />
+          <path d="M 0 -3 L 0 3" stroke="rgba(247,243,235,0.55)" stroke-width="0.6" />
+        </svg>
+      </span>
+    </aside>
+
+    <!-- Hero -->
+    <section class="section section--hero hero">
+      <canvas
+        class="hero__balloons-canvas"
+        aria-hidden="true"
+      ></canvas>
+      <div class="hero__inner">
+        <h1 class="hero__headline" data-split-reveal>
+          Distribution should land.
+        </h1>
+      </div>
+    </section>
+    <script>
+      import { HeroBalloonsStage } from "../lib/hero-balloons-stage";
+      const c = document.querySelector<HTMLCanvasElement>(".hero__balloons-canvas");
+      if (c) new HeroBalloonsStage(c);
+    </script>
+
+    <!-- Editorial ticker — auto-scrolling band of campaign lanes -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__item">Backbone generators</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Sequence designers</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Docking rankers</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Structure predictors</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Binder builders</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Solubility screens</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Loop refinement</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Interface scoring</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Private runners</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Open runners</span>
+        <span class="ticker__sep">★</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker__item">Backbone generators</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Sequence designers</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Docking rankers</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Structure predictors</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Binder builders</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Solubility screens</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Loop refinement</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Interface scoring</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item">Private runners</span>
+        <span class="ticker__sep">★</span>
+        <span class="ticker__item ticker__item--mute">Open runners</span>
+        <span class="ticker__sep">★</span>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section id="problem" class="section">
+      <span class="section__num" aria-hidden="true">01</span>
+      <div class="problem__head">
+        <div class="problem__hl">
+          <span class="problem__hl-line">The method isn't the bottleneck.</span>
+          <span class="problem__hl-line problem__hl-line--green"
+            >The <span class="ink-underline">recipe</span> is.</span
+          >
+        </div>
+        <p class="problem__lede">
+          The winning binder recipe flips every twelve months. Labs that
+          built for the last one are still rebuilding.
+        </p>
+      </div>
+
+      <div class="stack" data-reveal>
+        <!-- Back sheet: last year's recipe, faded -->
+        <article class="stack__sheet stack__sheet--back">
+          <span class="tape-strip stack__tape stack__tape--l" aria-hidden="true"></span>
+          <span class="tape-strip stack__tape stack__tape--r" aria-hidden="true"></span>
+          <span class="stack__when">Apr 2025</span>
+          <h3 class="stack__name">RFdiffusion <span class="stack__plus">+</span> ProteinMPNN</h3>
+          <p class="stack__rate">
+            <span class="stack__rate-num">2.5</span><span class="stack__rate-unit">%</span>
+          </p>
+          <span class="stack__corner stack__corner--tl" aria-hidden="true"></span>
+          <span class="stack__corner stack__corner--br" aria-hidden="true"></span>
+        </article>
+
+        <!-- Connector: 5× seal that overlaps both sheets -->
+        <span class="stack__seal" aria-hidden="true">
+          <span class="stack__seal-num">5×</span>
+          <span class="stack__seal-arc"></span>
+        </span>
+
+        <!-- Front sheet: this year's recipe, crisp -->
+        <article class="stack__sheet stack__sheet--front">
+          <span class="tape-strip stack__tape stack__tape--l" aria-hidden="true"></span>
+          <span class="tape-strip stack__tape stack__tape--r" aria-hidden="true"></span>
+          <span class="stack__when">Apr 2026</span>
+          <h3 class="stack__name">BindCraft</h3>
+          <p class="stack__rate">
+            <span class="stack__rate-num">13.25</span><span class="stack__rate-unit">%</span>
+          </p>
+          <span class="stack__corner stack__corner--tl" aria-hidden="true"></span>
+          <span class="stack__corner stack__corner--br" aria-hidden="true"></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Thesis -->
+    <section id="thesis" class="section" data-scroll-host>
+      <span class="section__num" aria-hidden="true">02</span>
+      <canvas
+        class="shader-surface shader-surface--thesis"
+        data-shader-surface="thesis"
+        aria-hidden="true"
+      ></canvas>
+      <svg
+        class="thesis__stroke"
+        viewBox="0 0 1440 900"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <!-- Rough-edge filter: SVG turbulence + displacement makes the
+               stroke wobble at its edges like a real loaded brush. -->
+          <filter id="brushRough" x="-2%" y="-10%" width="104%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.018 0.06" numOctaves="2" seed="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <!-- Wide soft underpaint — gives the stroke depth without competing
+             with the scroll-driven main stroke. -->
+        <path
+          d="M -40 760 C 220 720, 320 540, 540 560 C 760 580, 820 360, 1020 340 C 1220 320, 1280 200, 1500 60"
+          stroke="#1F4438"
+          stroke-width="32"
+          stroke-linecap="round"
+          fill="none"
+          opacity="0.08"
+          filter="url(#brushRough)"
+        />
+        <!-- Main brush stroke — drawn by scroll progress. -->
+        <path
+          data-scroll-path
+          d="M -40 760 C 220 720, 320 540, 540 560 C 760 580, 820 360, 1020 340 C 1220 320, 1280 200, 1500 60"
+          stroke="#1F4438"
+          stroke-width="18"
+          stroke-linecap="round"
+          fill="none"
+          opacity="0.75"
+          filter="url(#brushRough)"
+        />
+        <!-- Highlight — thin lighter line on top, also scroll-driven, for
+             the inked-ridge sheen of a real brush. -->
+        <path
+          data-scroll-path
+          d="M -40 760 C 220 720, 320 540, 540 560 C 760 580, 820 360, 1020 340 C 1220 320, 1280 200, 1500 60"
+          stroke="#3a6a55"
+          stroke-width="3"
+          stroke-linecap="round"
+          fill="none"
+          opacity="0.55"
+        />
+      </svg>
+      <div class="thesis">
+        <div class="thesis__hero">
+          <span class="thesis__line-1">Runners should index.</span>
+          <span class="thesis__line-2"><span class="ink-underline">Distribution</span> should</span>
+          <span class="thesis__line-3">land.</span>
+        </div>
+
+        <div class="thesis__body" data-reveal>
+          <p>
+            A new design method lands every quarter. Each one is better on some
+            target class, worse on others. The team that wins is the one that
+            picks the right route per campaign. Not the team with the best
+            single method.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools — title on the RIGHT, with router SVG below -->
+    <section id="tools" class="section" data-scroll-host>
+      <span class="section__num" aria-hidden="true">03</span>
+      <canvas
+        class="shader-surface shader-surface--tools"
+        data-shader-surface="tools"
+        aria-hidden="true"
+      ></canvas>
+      <!-- Vertical paint-brush crease that draws as the section scrolls past;
+           shares the brushRough turbulence filter with the thesis stroke. -->
+      <div class="scroll-crease" aria-hidden="true">
+        <svg class="scroll-crease__svg" viewBox="0 0 24 1000" preserveAspectRatio="none">
+          <defs>
+            <filter id="creaseRough" x="-30%" y="-2%" width="160%" height="104%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.4 0.012" numOctaves="2" seed="9" />
+              <feDisplacementMap in="SourceGraphic" scale="3.2" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
+          <path
+            d="M 12 0 C 9 200, 16 420, 11 600 S 13 850, 12 1000"
+            stroke="#1f4438"
+            stroke-width="14"
+            stroke-linecap="round"
+            fill="none"
+            opacity="0.06"
+            filter="url(#creaseRough)"
+          />
+          <path
+            data-scroll-path
+            d="M 12 0 C 9 200, 16 420, 11 600 S 13 850, 12 1000"
+            stroke="#1f4438"
+            stroke-width="6"
+            stroke-linecap="round"
+            fill="none"
+            opacity="0.55"
+            filter="url(#creaseRough)"
+          />
+        </svg>
+      </div>
+      <h2 class="section__title section__title--right" data-split-reveal>The rotation.</h2>
+
+      <div class="tools__grid">
+        <article class="tool-card" data-reveal data-reveal-delay="1" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="14" width="22" height="16" />
+              <rect x="9" y="9" width="22" height="16" fill="var(--paper)" />
+              <rect x="12" y="4" width="22" height="16" fill="var(--paper)" />
+            </svg>
+            <span class="tool-card__name-inline">Default stack</span>
+            <span class="status status--available">Available</span>
+          </div>
+          <p class="tool-card__desc">
+            Fast baseline routing for familiar target classes.
+          </p>
+        </article>
+
+        <article class="tool-card" data-reveal data-reveal-delay="2" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="5" width="26" height="26" />
+              <line x1="5" y1="5" x2="31" y2="31" />
+              <line x1="31" y1="5" x2="5" y2="31" />
+            </svg>
+            <span class="tool-card__name-inline">Backbone lane</span>
+            <span class="status status--available">Available</span>
+          </div>
+          <p class="tool-card__desc">
+            Generates candidate shapes when the starting structure is under-specified.
+          </p>
+        </article>
+
+        <article class="tool-card" data-reveal data-reveal-delay="3" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="18,3 33,18 18,33 3,18" />
+              <line x1="18" y1="3" x2="18" y2="33" />
+              <line x1="3" y1="18" x2="33" y2="18" />
+            </svg>
+            <span class="tool-card__name-inline">Binder lane</span>
+            <span class="status status--available">Available</span>
+          </div>
+          <p class="tool-card__desc">
+            Builds target-specific binders from campaign constraints and interface goals.
+          </p>
+        </article>
+
+        <article class="tool-card" data-reveal data-reveal-delay="4" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="5" width="24" height="26" />
+              <line x1="11" y1="12" x2="25" y2="12" />
+              <line x1="11" y1="18" x2="22" y2="18" />
+              <polyline points="11,25 15,28 22,21" stroke="var(--green)" stroke-width="1.8" />
+            </svg>
+            <span class="tool-card__name-inline">Scoring lane</span>
+            <span class="status status--available">Available</span>
+          </div>
+          <p class="tool-card__desc">
+            Ranks sequences and structures against confidence and interface metrics.
+          </p>
+        </article>
+
+        <article class="tool-card" data-reveal data-reveal-delay="5" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="9" width="28" height="20" />
+              <polyline points="4,9 18,21 32,9" />
+              <circle cx="18" cy="22" r="3" fill="var(--green)" stroke="none" />
+            </svg>
+            <span class="tool-card__name-inline">Private lane</span>
+            <span class="status status--available">Available</span>
+          </div>
+          <p class="tool-card__desc">
+            Runs proprietary or unpublished methods inside the same campaign envelope.
+          </p>
+        </article>
+
+        <article class="tool-card" data-reveal data-reveal-delay="5" data-tilt="3">
+          <div class="tool-card__tag-row">
+            <svg class="tool-card__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="5" width="24" height="26" />
+              <circle cx="14" cy="15" r="4" />
+              <line x1="17.5" y1="18.5" x2="22" y2="23" />
+              <line x1="11" y1="25" x2="22" y2="25" />
+            </svg>
+            <span class="tool-card__name-inline">Review lane</span>
+            <span class="status status--partner">Partner</span>
+          </div>
+          <p class="tool-card__desc">
+            Keeps human overrides, QC notes, and audit trails attached to each route.
+          </p>
+        </article>
+      </div>
+
+      <p class="tools__footer">
+        Runners can be open-source, internal, partner-hosted, or customer-provided.
+      </p>
+    </section>
+
+    <!-- How it works — split layout: title left (sticky), steps right -->
+    <section id="how" class="section">
+      <span class="section__num" aria-hidden="true">04</span>
+      <div class="split split--how">
+        <header class="split__head">
+          <h2 class="section__title section__title--xl" data-split-reveal>One campaign, the right rotation.</h2>
+          <p class="prose-lede" data-reveal data-reveal-delay="2">You bring the protein. We pick the route.</p>
+        </header>
+        <div class="how__body">
+          <ol class="flow">
+            <li class="flow__item" data-reveal data-reveal-delay="1">
+              <span class="flow__num">01</span>
+              <h3 class="flow__name">Submit a target.</h3>
+              <p class="flow__body">
+                Structure file, predicted structure, or sequence. Name the campaign goal.
+              </p>
+            </li>
+            <li class="flow__item" data-reveal data-reveal-delay="2">
+              <span class="flow__num">02</span>
+              <h3 class="flow__name">We route.</h3>
+              <p class="flow__body">
+                Our allocator picks 2–4 runners from the rotation. You can override.
+              </p>
+            </li>
+            <li class="flow__item" data-reveal data-reveal-delay="3">
+              <span class="flow__num">03</span>
+              <h3 class="flow__name">Ranked sequences.</h3>
+              <p class="flow__body">
+                Run in parallel, ranked against interface and confidence metrics,
+                returned top-N.
+              </p>
+            </li>
+          </ol>
+
+          <pre class="terminal terminal--inline" data-scroll-scale data-scroll-scale-start="0.55" data-scroll-scale-end="0.1"><span class="terminal__head">
+  <span class="terminal__title">papercrane / cli</span>
+  <span class="terminal__dots" aria-hidden="true"><span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span></span>
+</span><span class="terminal__line"><span class="terminal__prompt">$</span>papercrane route --target IL2RA.pdb --campaign binders</span><span class="terminal__line"><span class="terminal__sigil">→</span>parsing target          <span class="terminal__highlight">154 aa · single chain</span></span><span class="terminal__line"><span class="terminal__sigil">→</span>selecting route         <span class="terminal__highlight">backbone lane + binder lane</span></span><span class="terminal__line"><span class="terminal__sigil">→</span>running 4 candidates    <span class="terminal__highlight">parallel · 8m 14s</span></span><span class="terminal__line"><span class="terminal__sigil">→</span>ranking outputs         <span class="terminal__highlight">interface + confidence</span></span><span class="terminal__line"><span class="terminal__check">✓</span>returned top-24 sequences<span class="terminal__cursor"></span></span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tiers — title CENTERED -->
+    <section id="tiers" class="section section--tiers">
+      <span class="section__num" aria-hidden="true">05</span>
+      <div class="tiers__layout">
+        <header class="tiers__head">
+          <h2 class="section__title section__title--xl tiers__title">Three tiers.</h2>
+          <p class="tiers__sub">One contract per campaign.</p>
+        </header>
+
+        <div class="tiers__cols">
+          <article class="tier" data-reveal data-reveal-delay="1" data-tilt="3">
+            <h3 class="tier__name">Free</h3>
+            <div class="tier__price">
+              <span class="tier__price-num">$0</span>
+              <span class="tier__price-unit">/ mo</span>
+            </div>
+            <p class="tier__desc">Students, iGEM teams, undergraduates.</p>
+            <ul class="tier__feat">
+              <li>5 campaigns / month</li>
+              <li>Open-source rotation</li>
+              <li>Community Discord</li>
+            </ul>
+            <a class="btn-origami btn-origami--ghost" href="#waitlist"
+              >start a campaign  →</a
+            >
+          </article>
+
+          <article class="tier tier--featured" data-reveal data-reveal-delay="2" data-tilt="3">
+            <h3 class="tier__name">Pro</h3>
+            <div class="tier__price">
+              <span class="tier__price-num">$200</span>
+              <span class="tier__price-unit">/ seat / mo</span>
+            </div>
+            <p class="tier__desc">Grad students, postdocs, small academic labs.</p>
+            <ul class="tier__feat">
+              <li>Unlimited campaigns</li>
+              <li>Cross-runner ranking</li>
+              <li>Private campaigns</li>
+              <li>48h email support</li>
+            </ul>
+            <a class="btn-origami btn-origami--primary" href="#waitlist"
+              >start free trial  →</a
+            >
+          </article>
+
+          <article class="tier" data-reveal data-reveal-delay="3" data-tilt="3">
+            <h3 class="tier__name">Frontier</h3>
+            <div class="tier__price">
+              <span class="tier__price-num">Custom</span>
+              <span class="tier__price-unit">annual contract</span>
+            </div>
+            <p class="tier__desc">Biotech teams, regulated environments.</p>
+            <ul class="tier__feat">
+              <li>Private VPC deployment</li>
+              <li>Private runner access</li>
+              <li>Audit trails, IP assignment</li>
+              <li>Named engineers, SLA</li>
+            </ul>
+            <a class="btn-origami btn-origami--ghost" href="mailto:enterprise@papercrane.bio"
+              >talk to founders  →</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team — title large LEFT, founders below -->
+    <section id="team" class="section">
+      <span class="section__num" aria-hidden="true">06</span>
+      <h2 class="section__title section__title--xl" data-split-reveal>
+        Two founders. iGEM 2026. Going full-time.
+      </h2>
+
+      <div class="team__grid">
+        <article class="dossier" data-reveal data-reveal-delay="1">
+          <span class="tape-strip dossier__tape dossier__tape--l" aria-hidden="true"></span>
+          <span class="tape-strip dossier__tape dossier__tape--r" aria-hidden="true"></span>
+          <span class="dossier__corner dossier__corner--tl" aria-hidden="true"></span>
+          <span class="dossier__corner dossier__corner--br" aria-hidden="true"></span>
+
+          <div class="dossier__filebar">
+            <span class="dossier__filenum">FILE №01</span>
+            <span class="dossier__date">EST. 2024</span>
+          </div>
+
+          <div class="dossier__portrait">
+            <img
+              class="dossier__photo"
+              src="/_landing/team/vedant.webp"
+              alt="Vedant Kalipatnapu"
+              loading="lazy"
+            />
+          </div>
+
+          <h3 class="dossier__name">Vedant Kalipatnapu</h3>
+          <p class="dossier__credential">Co-founder</p>
+
+          <p class="dossier__bio">
+            Builds the frontend, brand, and marketing operations.
+          </p>
+
+        </article>
+
+        <article class="dossier dossier--alt" data-reveal data-reveal-delay="2">
+          <span class="tape-strip dossier__tape dossier__tape--l" aria-hidden="true"></span>
+          <span class="tape-strip dossier__tape dossier__tape--r" aria-hidden="true"></span>
+          <span class="dossier__corner dossier__corner--tl" aria-hidden="true"></span>
+          <span class="dossier__corner dossier__corner--br" aria-hidden="true"></span>
+
+          <div class="dossier__filebar">
+            <span class="dossier__filenum">FILE №02</span>
+            <span class="dossier__date">EST. 2024</span>
+          </div>
+
+          <div class="dossier__portrait">
+            <img
+              class="dossier__photo"
+              src="/_landing/team/harsha.webp"
+              alt="Harsha Poonepalle"
+              loading="lazy"
+            />
+          </div>
+
+          <h3 class="dossier__name">Harsha Poonepalle</h3>
+          <p class="dossier__credential">Co-founder</p>
+
+          <p class="dossier__bio">
+            Builds the backend and the engineering that routes every campaign.
+          </p>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section id="waitlist" class="section section--cta">
+      <span class="section__num" aria-hidden="true">07</span>
+      <div class="cta__outer" data-reveal>
+        <canvas
+          class="shader-surface shader-surface--cta"
+          data-shader-surface="cta"
+          aria-hidden="true"
+        ></canvas>
+        <div class="cta__left">
+          <h2 class="cta__hl" data-split-reveal>Join the waitlist.</h2>
+          <p class="cta__sub">
+            Tell us what you are designing. We respond within 48 hours.
+          </p>
+        </div>
+
+        <div class="cta__sep" aria-hidden="true"></div>
+
+        <div class="cta__right">
+          <form class="waitlist-form" novalidate>
+            <label class="field">
+              <span class="field__label">Name</span>
+              <input class="field__input" type="text" name="name" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input class="field__input" type="email" name="email" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Institution</span>
+              <input class="field__input" type="text" name="org" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">What are you designing?</span>
+              <textarea class="field__input field__input--ta" name="brief" rows="3"></textarea>
+            </label>
+
+            <button class="btn-origami btn-origami--primary" type="submit">
+              send  →
+            </button>
+            <p class="waitlist-form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <div class="foot__cols">
+        <div class="foot__col">
+          <ul>
+            <li><a href="#tools">Rotation</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#tiers">Tiers</a></li>
+          </ul>
+        </div>
+
+        <div class="foot__col">
+          <ul>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="foot__col">
+          <ul>
+            <li><a href="mailto:hello@papercrane.bio">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot__base">
+        <p>© 2026 Paper Crane Labs, Inc.</p>
+      </div>
+    </footer>
+
+    <script>
+      import { initLusion } from "../lib/lusion";
+      import { initWaitlistForm } from "../lib/waitlist";
+      initLusion();
+      initWaitlistForm();
+    </script>
+  </body>
+</html>

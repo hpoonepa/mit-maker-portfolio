@@ -1,0 +1,27 @@
+{
+  "id": "antifold",
+  "displayName": "AntiFold",
+  "version": "0.3.1",
+  "adapterVersion": "a1",
+  "category": "sequence_design",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/antifold:0.3.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 16,
+    "estSecondsPerDesign": 8,
+    "note": "Input antibody variable domains must use IMGT residue numbering."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "temperature": 0.2,
+    "regions": "CDR1 CDR2 CDR3",
+    "nanobody": false
+  },
+  "composes": []
+}

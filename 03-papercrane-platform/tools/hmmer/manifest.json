@@ -1,0 +1,26 @@
+{
+  "id": "hmmer",
+  "displayName": "HMMER phmmer",
+  "version": "3.4",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/hmmer:3.4-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 6,
+    "note": "phmmer search against request-provided sequences only; beta until live source-build and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "evalue": 0.001,
+    "maxHits": 50
+  },
+  "composes": []
+}

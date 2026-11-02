@@ -1,0 +1,464 @@
+{
+  "version": "v1.0.0",
+  "updated": "2026-04-20",
+  "totalDesigns": 540,
+  "computeUsd": 257,
+  "targets": ["PD-L1", "SARS-CoV-2 RBD", "IL-7Rα", "5G51", "1CRN", "6X1A", "4HHB"],
+  "scoringStack": ["Boltz-2", "ipSAE", "DockQ", "Rosetta ΔΔG"],
+  "hitCriteria": {
+    "ipSAE": 0.35,
+    "ipTM": 0.6,
+    "pLDDT_interface": 70
+  },
+  "leaderboard": [
+    { "rank": 1,  "tool": "BindCraft",       "config": "tuned",   "pdl1": 36, "rbd": 43, "il7": 13, "overall": 0.31, "ci95": [0.27, 0.35] },
+    { "rank": 2,  "tool": "RFdiff + MPNN",   "config": "tuned",   "pdl1": 30, "rbd": 33, "il7": 10, "overall": 0.24, "ci95": [0.21, 0.28] },
+    { "rank": 3,  "tool": "BindCraft",       "config": "default", "pdl1": 23, "rbd": 30, "il7":  6, "overall": 0.20, "ci95": [0.17, 0.23] },
+    { "rank": 4,  "tool": "BoltzDesign",     "config": "tuned",   "pdl1": 21, "rbd": 26, "il7":  5, "overall": 0.17, "ci95": [0.14, 0.21] },
+    { "rank": 5,  "tool": "RFdiff + MPNN",   "config": "default", "pdl1": 16, "rbd": 20, "il7":  3, "overall": 0.13, "ci95": [0.10, 0.16] },
+    { "rank": 6,  "tool": "Chroma + MPNN",   "config": "tuned",   "pdl1": 13, "rbd": 18, "il7":  4, "overall": 0.12, "ci95": [0.09, 0.15] },
+    { "rank": 7,  "tool": "Genie2 + MPNN",   "config": "default", "pdl1": 10, "rbd": 14, "il7":  2, "overall": 0.09, "ci95": [0.06, 0.12] },
+    { "rank": 8,  "tool": "ProteinMPNN",     "config": "default", "pdl1":  6, "rbd": 10, "il7":  0, "overall": 0.05, "ci95": [0.03, 0.08] },
+    { "rank": 9,  "tool": "ESM-IF",          "config": "default", "pdl1":  4, "rbd":  7, "il7":  0, "overall": 0.04, "ci95": [0.02, 0.06] },
+    { "rank": 10, "tool": "LigandMPNN",      "config": "default", "pdl1":  2, "rbd":  5, "il7":  0, "overall": 0.02, "ci95": [0.01, 0.04] }
+  ],
+  "models": [
+    {
+      "slug": "bindcraft-tuned",
+      "modelName": "BindCraft",
+      "version": "1.5.0",
+      "tags": ["composite", "open"],
+      "org": "Pacesa Lab / EPFL",
+      "publishedAt": "2024-06",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.78,
+        "averagePAE": 6.8,
+        "averageCostUsd": 0.41,
+        "averageGpuSeconds": 312,
+        "successRateP50": 0.31,
+        "costPerSuccess": 1.32
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2024.09.30.615802v1",
+      "github": "https://github.com/martinpacesa/BindCraft"
+    },
+    {
+      "slug": "rfdiff-mpnn-tuned",
+      "modelName": "RFdiffusion + MPNN",
+      "version": "1.1.0",
+      "tags": ["backbone", "sequence", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2023-07",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.72,
+        "averagePAE": 7.6,
+        "averageCostUsd": 0.18,
+        "averageGpuSeconds": 168,
+        "successRateP50": 0.24,
+        "costPerSuccess": 0.75
+      },
+      "paper": "https://www.nature.com/articles/s41586-023-06415-8",
+      "github": "https://github.com/RosettaCommons/RFdiffusion"
+    },
+    {
+      "slug": "bindcraft-default",
+      "modelName": "BindCraft",
+      "version": "1.5.0",
+      "tags": ["composite", "open"],
+      "org": "Pacesa Lab / EPFL",
+      "publishedAt": "2024-06",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.71,
+        "averagePAE": 7.9,
+        "averageCostUsd": 0.34,
+        "averageGpuSeconds": 264,
+        "successRateP50": 0.20,
+        "costPerSuccess": 1.70
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2024.09.30.615802v1",
+      "github": "https://github.com/martinpacesa/BindCraft"
+    },
+    {
+      "slug": "boltzdesign",
+      "modelName": "BoltzDesign",
+      "version": "0.4.0",
+      "tags": ["composite", "open"],
+      "org": "MIT / Jameel Clinic",
+      "publishedAt": "2025-01",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.66,
+        "averagePAE": 8.1,
+        "averageCostUsd": 0.27,
+        "averageGpuSeconds": 198,
+        "successRateP50": 0.17,
+        "costPerSuccess": 1.59
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2025.02.18.638788v1",
+      "github": "https://github.com/jwohlwend/boltz"
+    },
+    {
+      "slug": "rfdiff-mpnn-default",
+      "modelName": "RFdiffusion + MPNN",
+      "version": "1.1.0",
+      "tags": ["backbone", "sequence", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2023-07",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.64,
+        "averagePAE": 8.7,
+        "averageCostUsd": 0.12,
+        "averageGpuSeconds": 124,
+        "successRateP50": 0.13,
+        "costPerSuccess": 0.92
+      },
+      "paper": "https://www.nature.com/articles/s41586-023-06415-8",
+      "github": "https://github.com/RosettaCommons/RFdiffusion"
+    },
+    {
+      "slug": "chroma-mpnn",
+      "modelName": "Chroma + MPNN",
+      "version": "1.0.0",
+      "tags": ["backbone", "open"],
+      "org": "Generate Biomedicines",
+      "publishedAt": "2023-11",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.62,
+        "averagePAE": 9.0,
+        "averageCostUsd": 0.14,
+        "averageGpuSeconds": 138,
+        "successRateP50": 0.12,
+        "costPerSuccess": 1.17
+      },
+      "paper": "https://www.nature.com/articles/s41586-023-06728-8",
+      "github": "https://github.com/generatebio/chroma"
+    },
+    {
+      "slug": "genie2-mpnn",
+      "modelName": "Genie2 + MPNN",
+      "version": "2.0.0",
+      "tags": ["backbone", "open"],
+      "org": "Lin Lab / MIT",
+      "publishedAt": "2024-04",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.58,
+        "averagePAE": 9.4,
+        "averageCostUsd": 0.09,
+        "averageGpuSeconds": 86,
+        "successRateP50": 0.09,
+        "costPerSuccess": 1.00
+      },
+      "paper": "https://arxiv.org/abs/2405.15489",
+      "github": "https://github.com/aqlaboratory/genie2"
+    },
+    {
+      "slug": "proteinmpnn",
+      "modelName": "ProteinMPNN",
+      "version": "1.0.1",
+      "tags": ["sequence", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2022-09",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.51,
+        "averagePAE": 10.6,
+        "averageCostUsd": 0.04,
+        "averageGpuSeconds": 38,
+        "successRateP50": 0.05,
+        "costPerSuccess": 0.80
+      },
+      "paper": "https://www.science.org/doi/10.1126/science.add2187",
+      "github": "https://github.com/dauparas/ProteinMPNN"
+    },
+    {
+      "slug": "esm-if",
+      "modelName": "ESM-IF",
+      "version": "1.0.0",
+      "tags": ["sequence", "open"],
+      "org": "Meta AI",
+      "publishedAt": "2022-04",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.49,
+        "averagePAE": 10.9,
+        "averageCostUsd": 0.05,
+        "averageGpuSeconds": 44,
+        "successRateP50": 0.04,
+        "costPerSuccess": 1.25
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2022.04.10.487779v2",
+      "github": "https://github.com/facebookresearch/esm"
+    },
+    {
+      "slug": "ligandmpnn",
+      "modelName": "LigandMPNN",
+      "version": "1.0.0",
+      "tags": ["sequence", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2024-02",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.46,
+        "averagePAE": 11.2,
+        "averageCostUsd": 0.05,
+        "averageGpuSeconds": 47,
+        "successRateP50": 0.02,
+        "costPerSuccess": 2.50
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2024.05.30.596819v1",
+      "github": "https://github.com/dauparas/LigandMPNN"
+    },
+    {
+      "slug": "alphaproteo",
+      "modelName": "AlphaProteo",
+      "version": "1.0.0",
+      "tags": ["composite", "closed"],
+      "org": "Google DeepMind",
+      "publishedAt": "2024-09",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.81,
+        "averagePAE": 6.4,
+        "averageCostUsd": 0.62,
+        "averageGpuSeconds": 410,
+        "successRateP50": 0.34,
+        "costPerSuccess": 1.82
+      },
+      "paper": "https://deepmind.google/discover/blog/alphaproteo-generates-novel-proteins-for-biology-and-health-research/",
+      "github": "https://github.com/google-deepmind/alphafold3"
+    },
+    {
+      "slug": "rosettafold-aa",
+      "modelName": "RoseTTAFold All-Atom",
+      "version": "0.2.0",
+      "tags": ["structure", "ranking", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2024-03",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.59,
+        "averagePAE": 9.3,
+        "averageCostUsd": 0.21,
+        "averageGpuSeconds": 184,
+        "successRateP50": 0.10,
+        "costPerSuccess": 2.10
+      },
+      "paper": "https://www.science.org/doi/10.1126/science.adl2528",
+      "github": "https://github.com/baker-laboratory/RoseTTAFold-All-Atom"
+    },
+    {
+      "slug": "boltz2",
+      "modelName": "Boltz-2",
+      "version": "2.0.0",
+      "tags": ["structure", "ranking", "open"],
+      "org": "MIT / Jameel Clinic",
+      "publishedAt": "2025-09",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.74,
+        "averagePAE": 7.1,
+        "averageCostUsd": 0.16,
+        "averageGpuSeconds": 152,
+        "successRateP50": 0.0,
+        "costPerSuccess": 0.0
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2025.06.14.659761v1",
+      "github": "https://github.com/jwohlwend/boltz"
+    },
+    {
+      "slug": "chai-1",
+      "modelName": "Chai-1",
+      "version": "1.0.0",
+      "tags": ["structure", "ranking", "open"],
+      "org": "Chai Discovery",
+      "publishedAt": "2024-09",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.72,
+        "averagePAE": 7.4,
+        "averageCostUsd": 0.19,
+        "averageGpuSeconds": 176,
+        "successRateP50": 0.0,
+        "costPerSuccess": 0.0
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2024.10.10.615955v1",
+      "github": "https://github.com/chaidiscovery/chai-lab"
+    },
+    {
+      "slug": "framedipt",
+      "modelName": "FrameDiPT",
+      "version": "0.1.0",
+      "tags": ["backbone", "open"],
+      "org": "Prescient / InstaDeep",
+      "publishedAt": "2024-05",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.55,
+        "averagePAE": 9.8,
+        "averageCostUsd": 0.10,
+        "averageGpuSeconds": 92,
+        "successRateP50": 0.07,
+        "costPerSuccess": 1.43
+      },
+      "paper": "https://arxiv.org/abs/2402.04031",
+      "github": "https://github.com/instadeepai/framedipt"
+    },
+    {
+      "slug": "framediff",
+      "modelName": "FrameDiff",
+      "version": "0.1.0",
+      "tags": ["backbone", "open"],
+      "org": "MIT / Jaakkola Lab",
+      "publishedAt": "2023-05",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.53,
+        "averagePAE": 10.1,
+        "averageCostUsd": 0.08,
+        "averageGpuSeconds": 78,
+        "successRateP50": 0.06,
+        "costPerSuccess": 1.33
+      },
+      "paper": "https://arxiv.org/abs/2302.02277",
+      "github": "https://github.com/jasonkyuyim/se3_diffusion"
+    },
+    {
+      "slug": "protpardelle",
+      "modelName": "Protpardelle",
+      "version": "0.2.0",
+      "tags": ["backbone", "sequence", "open"],
+      "org": "Stanford / AI Lab",
+      "publishedAt": "2024-01",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.50,
+        "averagePAE": 10.4,
+        "averageCostUsd": 0.11,
+        "averageGpuSeconds": 102,
+        "successRateP50": 0.05,
+        "costPerSuccess": 2.20
+      },
+      "paper": "https://www.pnas.org/doi/10.1073/pnas.2311500121",
+      "github": "https://github.com/ProteinDesignLab/protpardelle"
+    },
+    {
+      "slug": "framedpt",
+      "modelName": "FoldFlow-2",
+      "version": "2.0.0",
+      "tags": ["backbone", "open"],
+      "org": "Mila / Bengio Lab",
+      "publishedAt": "2024-08",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.57,
+        "averagePAE": 9.6,
+        "averageCostUsd": 0.13,
+        "averageGpuSeconds": 122,
+        "successRateP50": 0.08,
+        "costPerSuccess": 1.63
+      },
+      "paper": "https://arxiv.org/abs/2405.20313",
+      "github": "https://github.com/DreamFold/FoldFlow"
+    },
+    {
+      "slug": "ipsae-ranker",
+      "modelName": "ipSAE",
+      "version": "1.0.0",
+      "tags": ["ranking", "open"],
+      "org": "Baker Lab",
+      "publishedAt": "2024-11",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.0,
+        "averagePAE": 0.0,
+        "averageCostUsd": 0.01,
+        "averageGpuSeconds": 4,
+        "successRateP50": 0.0,
+        "costPerSuccess": 0.0
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2024.11.05.622219v1",
+      "github": "https://github.com/RosettaCommons/RFdiffusion"
+    },
+    {
+      "slug": "rfdiff-aa",
+      "modelName": "RFdiffusionAA",
+      "version": "0.3.0",
+      "tags": ["backbone", "open"],
+      "org": "IPD / Baker Lab",
+      "publishedAt": "2024-02",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.69,
+        "averagePAE": 8.0,
+        "averageCostUsd": 0.22,
+        "averageGpuSeconds": 196,
+        "successRateP50": 0.15,
+        "costPerSuccess": 1.47
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2023.10.09.561603v1",
+      "github": "https://github.com/baker-laboratory/rf_diffusion_all_atom"
+    },
+    {
+      "slug": "evodiff",
+      "modelName": "EvoDiff",
+      "version": "1.0.0",
+      "tags": ["sequence", "open"],
+      "org": "Microsoft Research",
+      "publishedAt": "2023-10",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.47,
+        "averagePAE": 11.4,
+        "averageCostUsd": 0.06,
+        "averageGpuSeconds": 56,
+        "successRateP50": 0.03,
+        "costPerSuccess": 2.00
+      },
+      "paper": "https://www.biorxiv.org/content/10.1101/2023.09.11.556673v1",
+      "github": "https://github.com/microsoft/evodiff"
+    },
+    {
+      "slug": "diffab",
+      "modelName": "DiffAb",
+      "version": "0.5.0",
+      "tags": ["composite", "open"],
+      "org": "ByteDance Research",
+      "publishedAt": "2023-12",
+      "config": "default",
+      "metrics": {
+        "averageIpTM": 0.61,
+        "averagePAE": 9.1,
+        "averageCostUsd": 0.17,
+        "averageGpuSeconds": 156,
+        "successRateP50": 0.11,
+        "costPerSuccess": 1.55
+      },
+      "paper": "https://www.nature.com/articles/s41587-023-01958-7",
+      "github": "https://github.com/luost26/diffab"
+    },
+    {
+      "slug": "papercrane-v1",
+      "modelName": "Paper Crane (auto)",
+      "version": "0.1.0",
+      "tags": ["composite", "open"],
+      "org": "Paper Crane",
+      "publishedAt": "2026-04",
+      "config": "tuned",
+      "metrics": {
+        "averageIpTM": 0.83,
+        "averagePAE": 6.1,
+        "averageCostUsd": 0.29,
+        "averageGpuSeconds": 218,
+        "successRateP50": 0.38,
+        "costPerSuccess": 0.76
+      },
+      "paper": "https://papercrane.bio/research",
+      "github": "https://github.com/papercrane-bio/benchmark"
+    }
+  ]
+}

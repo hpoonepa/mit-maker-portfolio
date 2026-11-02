@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/pdbfixer/output.json",
+  "title": "PDBFixer Result",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "properties": {
+    "designs": { "type": "array", "items": { "type": "object", "required": ["structurePath", "metrics", "seed"], "properties": { "structurePath": { "type": "string" }, "sequence": { "type": "string" }, "metrics": { "type": "object", "additionalProperties": { "type": "number" } }, "seed": { "type": "integer" } }, "additionalProperties": false } },
+    "runMetadata": { "type": "object", "properties": { "tool": { "const": "pdbfixer" } }, "required": ["tool"], "additionalProperties": true }
+  },
+  "additionalProperties": false
+}

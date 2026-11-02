@@ -1,0 +1,1191 @@
+{
+  "EGFR": {
+    "weights": {
+      "computational__actifptm": 0.303030303030303,
+      "computational__interface_residues": 0.2525252525252525,
+      "computational__boltz2_min_ipsae": 0.2222222222222222,
+      "computational__boltz2_iptm": 0.1212121212121212,
+      "shape_complementarity": 0.050505050505050504,
+      "computational__boltz2_lis": 0.0303030303030303,
+      "bio__immunogenicity_proxy": -0.01515151515151515,
+      "bio__aggregation_propensity": -0.00505050505050505
+    },
+    "failure_penalties": {
+      "low_interface_residues": {
+        "threshold_below": 15,
+        "penalty": -0.15,
+        "reason": "EGFR domain III epitope is a large, relatively flat sheet interface; insufficient interface contacts fail to compete with EGF binding or block the extended dimerization conformation"
+      },
+      "high_aggregation": {
+        "threshold_above": 0.85,
+        "penalty": -0.1,
+        "reason": "Anti-EGFR nanobodies require high solubility for tumor penetration and low non-specific binding; aggregation-prone binders fail in vivo"
+      },
+      "poor_shape_complementarity": {
+        "threshold_below": 0.55,
+        "penalty": -0.08,
+        "reason": "The EGFR domain III surface is a relatively flat sheet-rich interface (frac_strand ~0.39, interface_class sheet_flat); poor shape complementarity indicates inadequate packing against this surface"
+      }
+    },
+    "epitope_residues": [
+      287,
+      288,
+      290,
+      291,
+      293,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462
+    ],
+    "liabilities": [
+      "Steric clash with EGF ligand at domain III must be achieved \u2014 binders that miss the ligand-binding face will not inhibit signaling",
+      "EGFR ectodomain resistance mutations (e.g., S492R for cetuximab) can abolish binding; designs should avoid over-reliance on single hotspot residues",
+      "The tethered/autoinhibited conformation locks domain III orientation \u2014 binders must accommodate both tethered and extended conformations or preferentially stabilize the tethered form",
+      "High disorder fraction (0.57) in EGFR ectodomain means flexible loops may reduce effective affinity if paratope contacts disordered regions",
+      "Sheet-flat interface class requires careful aromatic/hydrophobic packing; purely polar interfaces will lack sufficient binding energy",
+      "Immunogenicity of non-humanized nanobodies, though generally low, remains a clinical concern per PMID 33767701"
+    ],
+    "proposed_features": [
+      {
+        "name": "epitope_overlap_domain_III_ligand_site",
+        "computable": "needs_structure",
+        "description": "Fraction of binder interface residues overlapping with known EGF-binding residues on domain III, critical for competitive inhibition"
+      },
+      {
+        "name": "dimerization_arm_steric_block_score",
+        "computable": "needs_structure",
+        "description": "Degree to which binder sterically prevents EGFR from adopting the extended dimerization-competent conformation (domain II exposure)"
+      },
+      {
+        "name": "resistance_mutation_vulnerability",
+        "computable": "computable_now",
+        "description": "Count of known EGFR ectodomain resistance mutation sites (e.g., S492, G465) contacted by the binder; lower is more robust"
+      },
+      {
+        "name": "paratope_aromatic_content",
+        "computable": "computable_now",
+        "description": "Fraction of aromatic residues in the predicted interface; important for packing against the flat beta-sheet surface of domain III"
+      },
+      {
+        "name": "conformation_selectivity_tethered_vs_extended",
+        "computable": "needs_structure",
+        "description": "Differential predicted binding affinity for tethered vs extended EGFR conformations; stabilizing tethered form is inhibitory"
+      }
+    ],
+    "rationale": "EGFR is a well-characterized target with approved antibody and small-molecule drugs. The extracellular domain III is the primary epitope for inhibitory antibodies (cetuximab) and nanobodies (7D12). The interface is sheet-flat with moderate hydrophobicity. Empirical discriminative power strongly favors actifptm (0.47), interface_residues (0.45), and boltz2_min_ipsae (0.45) as the top metrics \u2014 these capture the quality and extent of the predicted binding interface, which is critical for this large, flat epitope. boltz2_iptm (0.36) adds structural confidence. Shape complementarity (0.18) matters for the flat sheet interface but has moderate power. boltz2_lis (0.19) provides marginal additional signal. Metrics with power <0.10 are excluded unless literature-justified: immunogenicity_proxy gets a small negative weight given the clinical relevance of immunogenicity for nanobody therapeutics (PMID 33767701), and aggregation_propensity gets a small negative weight since tumor penetration requires soluble binders. The epitope residues span EGFR domain III (residues ~287-462 in mature EGFR numbering), covering the cetuximab-binding face and the EGF-contact region. Resistance mutations at the ectodomain are a known failure mode. The high disorder fraction of EGFR makes rigid-interface metrics (iptm, ipsae) especially important for distinguishing genuine binders from false positives binding disordered regions.",
+    "citations": [
+      "15837620",
+      "12610629",
+      "38908376",
+      "39275996",
+      "40609632",
+      "37509078",
+      "31755215",
+      "33767701",
+      "32885759",
+      "27424502",
+      "41284265",
+      "38372053"
+    ]
+  },
+  "FGFR2": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.22,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.05,
+      "computational__boltz2_lis": 0.03,
+      "bio__aggregation_propensity": -0.015,
+      "bio__immunogenicity_proxy": -0.015
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.1,
+      "high_immunogenicity": -0.08,
+      "poor_shape_complementarity": -0.05,
+      "low_ipsae": -0.12
+    },
+    "epitope_residues": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      175,
+      176,
+      177,
+      178,
+      179,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365
+    ],
+    "liabilities": [
+      "Aggregation-prone binders may fail in solution; FGFR2 ECD has sheet-flat interface requiring precise complementarity",
+      "High immunogenicity risk given therapeutic context for cholangiocarcinoma and craniosynostosis indications",
+      "Competing with endogenous FGF ligands (FGF7 subfamily) that bind D3 domain with high specificity",
+      "FGFR2 extracellular domain has significant disorder (56%) which may reduce structured epitope availability",
+      "Potential cross-reactivity with FGFR1/FGFR3 due to high sequence similarity in extracellular domains",
+      "Binders targeting kinase domain P-loop region face selectivity challenges due to FGFR family conservation"
+    ],
+    "proposed_features": [
+      {
+        "name": "fgfr_isoform_selectivity_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "d3_domain_contact_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "heparin_binding_site_overlap",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "fgf_ligand_competition_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "ecd_vs_kinase_domain_targeting",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "FGFR2 is a receptor tyrosine kinase with a well-characterized extracellular domain (D1-D3) and intracellular kinase domain. The empirical power data strongly favors computational__actifptm (0.47), computational__interface_residues (0.45), and computational__boltz2_min_ipsae (0.43) as the top discriminators, so these receive the bulk of weight. boltz2_iptm (0.35) also receives meaningful weight. Shape complementarity is given modest weight since the interface_class is sheet_flat, which requires precise geometric matching (consistent with the biparatopic antibody work in PMID 40014401 showing that ECD engagement geometry matters). boltz2_lis gets minimal weight as its power is moderate. Literature indicates FGFR2 selectivity over FGFR1/3/4 is critical (PMID 38300868 on lirafugratinib; PMID 41125482 on isoform-selective inhibitors) and that the D3 domain is the key specificity-determining region for ligand binding (PMID 30809251). The ECD is targeted by biparatopic antibodies (PMID 40014401) and de novo miniproteins with masking strategies (PMID 41284265). Epitope residues span the D2-D3 domains and linker regions critical for FGF ligand and co-receptor binding. Aggregation and immunogenicity receive small negative weights as known general liabilities, though their empirical power is low. Metrics with power < 0.10 are excluded unless literature-justified. The high disorder fraction (56%) means structured interface contacts are premium, reinforcing the importance of interface_residues and ipsae metrics.",
+    "citations": [
+      "38300868",
+      "40014401",
+      "41284265",
+      "30809251",
+      "41125482",
+      "35948633",
+      "35231400",
+      "39258897",
+      "40906279",
+      "27226847"
+    ]
+  },
+  "IL7R": {
+    "weights": {
+      "computational__actifptm": 0.28,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.22,
+      "computational__boltz2_iptm": 0.12,
+      "computational__boltz2_lis": 0.06,
+      "shape_complementarity": 0.04,
+      "bio__aggregation_propensity": -0.01,
+      "bio__immunogenicity_proxy": -0.02
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.15,
+      "high_immunogenicity": -0.1,
+      "low_shape_complementarity": -0.05,
+      "epitope_miss": -0.2
+    },
+    "epitope_residues": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191
+    ],
+    "liabilities": [
+      "High disorder fraction (0.55) in IL7R extracellular domain may cause conformational heterogeneity and reduce binding reproducibility",
+      "Sheet-flat interface class requires precise shape complementarity; poor geometric fit leads to weak binding",
+      "Negative epitope hydrophobicity (-0.41) and near-neutral charge (-0.03) mean hydrophobic-driven binders may fail; polar contacts are essential",
+      "IL7R shares gamma-c chain with IL-2R, IL-4R, IL-9R, IL-15R, IL-21R \u2014 cross-reactivity risk with other gamma-c family receptors",
+      "TSLP also signals through IL-7R\u03b1; binders blocking TSLP site may inadvertently affect TSLP signaling or vice versa",
+      "No small-molecule tractability \u2014 no known pockets, ligands, or druggable family membership; only antibody/protein modalities viable",
+      "Glycosylation on IL-7R\u03b1 extracellular domain may shield epitopes and reduce binder accessibility"
+    ],
+    "proposed_features": [
+      {
+        "name": "epitope_polar_contact_count",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "gamma_c_cross_reactivity_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "glycan_shielding_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "disorder_overlap_with_epitope",
+        "computable": "computable_now"
+      },
+      {
+        "name": "electrostatic_complementarity_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "tslp_vs_il7_site_selectivity",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "IL7R (IL-7R\u03b1/CD127) is a type I cytokine receptor with an extracellular domain dominated by fibronectin-III-like folds (high strand fraction 0.42, sheet-flat interface). The crystal structure (PDB 3DI2) shows IL-7 binds at the elbow region between the two FNIII domains. The epitope residues listed correspond to the IL-7 binding interface on IL-7R\u03b1 and the regions targeted by de novo binders (PMID 40686280) and anti-IL-7R therapeutic antibodies. The high disorder fraction (0.55) and negative epitope hydrophobicity (-0.41) mean binders must rely on polar/electrostatic complementarity rather than hydrophobic packing. Weight assignment follows the empirical discriminative power ranking closely: actifptm (0.46 power), interface_residues (0.45), and boltz2_min_ipsae (0.43) dominate because they capture binding interface quality \u2014 critical for this sheet-flat, polar epitope. boltz2_iptm and boltz2_lis receive moderate weight as secondary structural confidence metrics. Shape complementarity receives small positive weight given the flat sheet interface topology where geometric fit matters but the metric has only moderate discriminative power (0.18). Aggregation propensity and immunogenicity proxy receive small negative weights as developability guards. Metrics with power <0.10 are excluded unless target-specific reasons justify them; none do here. The TSLP pathway also uses IL-7R\u03b1 (PMID 40925205), creating a dual-epitope consideration. No small-molecule pockets exist (all tractability labels false for SM), confirming protein/antibody modality is the only viable approach.",
+    "citations": [
+      "36201890",
+      "40686280",
+      "40925205",
+      "39806440",
+      "15879151",
+      "39048815",
+      "39654893",
+      "42209436",
+      "39763672"
+    ]
+  },
+  "INSULINR": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.25,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.04,
+      "computational__boltz2_lis": 0.03,
+      "bio__aggregation_propensity": -0.005,
+      "bio__immunogenicity_proxy": -0.005
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.1,
+      "high_immunogenicity": -0.08,
+      "low_shape_complementarity": -0.05,
+      "poor_structural_confidence": -0.06
+    },
+    "epitope_residues": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168
+    ],
+    "liabilities": [
+      "Aggregation due to large flat sheet-rich interface on extracellular domain",
+      "Competing with high-affinity insulin binding at L1 site (Kd ~2 nM) requires tight complementarity",
+      "High disorder fraction (~49%) in target may lead to conformational heterogeneity and unreliable docking",
+      "Negative epitope charge and low hydrophobicity demand polar/charged binder contacts",
+      "Cross-reactivity with IGF-1 receptor due to structural homology",
+      "Potential immunogenicity of binders targeting conserved receptor epitopes"
+    ],
+    "proposed_features": [
+      {
+        "name": "L1_domain_contact_count",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "alphaCT_helix_engagement",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "insulin_binding_site_overlap_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "polar_contact_fraction_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "igf1r_cross_reactivity_risk",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "The insulin receptor is a large membrane receptor tyrosine kinase with a sheet-flat interface class and high disorder (~49%). Literature shows the primary insulin binding site (L1 + \u03b1CT) has ~2 nM affinity and involves an extensive protein-protein interface requiring high shape complementarity and numerous interface contacts. The empirical power data strongly supports concentrating weight on the top 3 metrics (actifptm, interface_residues, boltz2_min_ipsae) which all have AUC >0.72 and power ~0.45. boltz2_iptm adds moderate discriminative value (AUC 0.678). Below that, metrics drop sharply in power. shape_complementarity and boltz2_lis receive small weights given the flat sheet interface where complementarity matters but their empirical power is modest. The target's sheet-flat interface with negative epitope charge and high polarity fraction (58%) means aggregation-prone or immunogenic binders would fail, justifying small negative weights on those biophysical metrics despite their low empirical power \u2014 these serve as safety filters consistent with the anti-receptor antibody literature (PMID 786863) and de novo agonist design (PMID 41086805). Epitope residues span the L1 domain and flanking regions of the extracellular domain known to constitute the insulin binding site. Low-power metrics (disorder_fraction, cysteine_fraction, esmfold_plddt, net_charge) are excluded to avoid diluting the prior.",
+    "citations": [
+      "41086805",
+      "36739671",
+      "37717984",
+      "34907529",
+      "786863",
+      "30230175",
+      "37227951",
+      "17085043",
+      "39747658"
+    ]
+  },
+  "MDM2": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__boltz2_min_ipsae": 0.25,
+      "computational__interface_residues": 0.2,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.05,
+      "aromatic_fraction": 0.04,
+      "bio__topology_helix_frac": 0.03,
+      "bio__aggregation_propensity": -0.01
+    },
+    "failure_penalties": {
+      "no_helix_in_binder": -0.1,
+      "low_aromatic_content": -0.05,
+      "high_aggregation": -0.08
+    },
+    "epitope_residues": [
+      25,
+      26,
+      27,
+      50,
+      51,
+      54,
+      55,
+      58,
+      59,
+      61,
+      62,
+      63,
+      64,
+      67,
+      68,
+      72,
+      73,
+      96,
+      97,
+      99,
+      100
+    ],
+    "liabilities": [
+      "MDM2 cleft is deep and hydrophobic; binders lacking hydrophobic aromatic anchor residues (mimicking p53 Phe19/Trp23/Leu26 triad) will fail",
+      "Flat or extended binders without alpha-helical character may not achieve sufficient shape complementarity with the hydrophobic cleft",
+      "High aggregation propensity peptides may precipitate before reaching the binding pocket",
+      "MDM2 N-terminal domain is partially disordered; rigid binders may not adapt to conformational flexibility",
+      "Insufficient steric complementarity with the deep cleft leads to weak binding"
+    ],
+    "proposed_features": [
+      {
+        "name": "trp_phe_leu_triad_mimicry_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "hydrophobic_patch_burial_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "cleft_shape_complementarity",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "helical_amphipathicity_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "MDM2 presents a well-defined deep hydrophobic cleft (residues ~25-100 in the N-terminal domain) that binds the p53 transactivation helix via three key hydrophobic residues (Phe19, Trp23, Leu26). The literature overwhelmingly shows that successful binders must present an amphipathic alpha-helix with aromatic/hydrophobic anchors complementary to this cleft. Weights are concentrated on the top empirical discriminators: actifptm (AUC=0.742), boltz2_min_ipsae (AUC=0.732), and interface_residues (AUC=0.727) capture predicted binding quality. boltz2_iptm (AUC=0.682) adds value as a fourth structural metric. Shape complementarity gets modest weight as it reflects the steric fit critical for the deep cleft. Aromatic fraction receives positive weight because the Phe/Trp mimicry is essential per all structural studies. Helix fraction gets a small positive weight since the canonical binding mode is alpha-helical (stapled peptides, helix mimetics all exploit this). Aggregation propensity receives a small negative weight as a liability filter. Metrics with power < 0.08 are excluded unless target-specific literature justifies them. Epitope residues are mapped from the MDM2 N-terminal domain crystal structure (PDB 1YCR) lining the p53-binding cleft.",
+    "citations": [
+      "8875929",
+      "22650254",
+      "32156064",
+      "28270530",
+      "35831864",
+      "17508926",
+      "17427181",
+      "40399308",
+      "39605685",
+      "26764190",
+      "34163731"
+    ]
+  },
+  "MZB1": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.22,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.05,
+      "computational__boltz2_lis": 0.03,
+      "bio__aggregation_propensity": -0.02,
+      "bio__immunogenicity_proxy": -0.01
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.15,
+      "high_immunogenicity": -0.1,
+      "poor_shape_complementarity": -0.08,
+      "disulfide_scrambling": -0.12
+    },
+    "epitope_residues": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "liabilities": [
+      "MZB1 is ER-resident with 6 conserved cysteines forming 3 disulfide bonds; binders risk disulfide scrambling or reduction sensitivity",
+      "High disorder fraction (0.60) means flexible regions may adopt multiple conformations, reducing binding reproducibility",
+      "Saposin-fold with accessible disulfide bonds (DTT-sensitive) creates a redox-labile epitope surface",
+      "No druggable pocket identified \u2014 flat/mixed interface requires high shape complementarity",
+      "MZB1 interacts with GRP94/BiP co-chaperones; binders must avoid steric clash with endogenous partners",
+      "Negative epitope net charge near zero with moderate hydrophobicity may limit electrostatic-driven binding"
+    ],
+    "proposed_features": [
+      {
+        "name": "disulfide_bond_proximity_to_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_flexibility_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "grp94_binding_site_overlap",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "saposin_fold_complementarity",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "redox_sensitivity_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "MZB1 is a small ER-resident saposin-fold chaperone (~189 aa) with high disorder (0.60), 3 conserved disulfide bonds, and no identifiable druggable pocket. The 1.4 \u00c5 crystal structure (PMID 33453188) reveals a saposin fold with unique structural elements. Residues 39-72 are functionally critical for caspase-2/9 binding (PMID 11350957), making this the primary epitope region. The empirical discriminative power data strongly favors computational__actifptm (0.47), computational__interface_residues (0.45), and computational__boltz2_min_ipsae (0.44) as the top predictors, so these receive the bulk of weight. boltz2_iptm (0.36) gets moderate weight. Shape complementarity matters because the target lacks a deep pocket (flat/mixed interface_class), though its empirical power is modest (0.18). The high disorder fraction and DTT-sensitive disulfide bonds create conformational and redox liabilities. Aggregation propensity and immunogenicity get small negative weights as safety/developability guards. Metrics with power <0.10 are excluded unless target-specific rationale exists. The weight distribution concentrates ~89% on the top 4 metrics, following the empirical power hierarchy with minimal deviation.",
+    "citations": [
+      "11350957",
+      "33453188",
+      "31127044",
+      "31050855",
+      "41869442",
+      "40738426",
+      "12792799"
+    ]
+  },
+  "PD1": {
+    "weights": {
+      "computational__interface_residues": 0.3,
+      "computational__actifptm": 0.25,
+      "computational__boltz2_min_ipsae": 0.2,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.06,
+      "computational__boltz2_lis": 0.04,
+      "bio__immunogenicity_proxy": -0.02,
+      "bio__aggregation_propensity": -0.01
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.15,
+      "high_immunogenicity": -0.1,
+      "epitope_miss": -0.25,
+      "low_shape_complementarity": -0.1
+    },
+    "epitope_residues": [
+      62,
+      64,
+      66,
+      68,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      104,
+      106,
+      108,
+      110,
+      112,
+      114,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      124,
+      126,
+      128,
+      130,
+      131,
+      132
+    ],
+    "liabilities": [
+      "PD-1 has high intrinsic disorder (64%) which can cause flexible epitope presentation and variable binding modes",
+      "The PD-L1/PD-L2 binding face is relatively flat with mixed hydrophobic/polar character, making high-affinity small-interface binders challenging",
+      "Mechanical force catch-bond behavior means soluble-only assays may underestimate or mischaracterize functional binders",
+      "PD-1 glycosylation (N49, N58, N74, N116) can sterically occlude binder access to the IgV domain epitope",
+      "Net-neutral epitope charge and negative hydrophobicity score indicate electrostatic-driven designs may not engage well",
+      "Risk of agonistic activity via Fc\u03b3R co-engagement if Fc-containing formats are used, which could suppress rather than activate T cells"
+    ],
+    "proposed_features": [
+      {
+        "name": "glycan_clash_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_flatness_index",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "pdl1_competition_overlap",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "catch_bond_interface_rigidity",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "buried_surface_area",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "PD-1 is a well-validated immune checkpoint with approved antibody drugs (pembrolizumab, nivolumab, cemiplimab) targeting its IgV domain PD-L1/PD-L2 binding interface. The empirical discriminative power data strongly favors computational__interface_residues (AUC=0.762), computational__actifptm (AUC=0.735), and computational__boltz2_min_ipsae (AUC=0.720) as the top three metrics, which together receive ~75% of total weight. These metrics capture interface quality and predicted binding accuracy, which are critical for a target with a relatively flat, mixed-character epitope. The boltz2_iptm (AUC=0.675) receives moderate weight as a reliable structural prediction metric. Shape complementarity and boltz2_lis receive small weights consistent with their modest but nonzero discriminative power. PD-1's high disorder fraction (64%) and glycosylation sites mean binder designs must engage the structured IgV domain core. The epitope residues listed correspond to the front beta-sheet face of the IgV domain (CC' and FG loops) where PD-L1, pembrolizumab, and nivolumab bind, based on crystal structures (PDB: 4ZQK, 5GGS, 5WT9). Literature on mechanical force regulation (PMID 39333505) and Fc\u03b3R-mediated agonism (PMID 39608214) highlights that binder format and mechanical context matter \u2014 captured partly by interface quality metrics. Immunogenicity and aggregation receive small negative weights as general developability liabilities, though their empirical power is low for this target. Metrics with power < 0.05 are excluded unless target-specific reasons exist; none were found sufficient to override the empirical signal.",
+    "citations": [
+      "20636820",
+      "1396582",
+      "39333505",
+      "39608214",
+      "37100904",
+      "32006351",
+      "41199882",
+      "28678784",
+      "35762356"
+    ]
+  },
+  "PDGFRB": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.22,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.05,
+      "computational__boltz2_lis": 0.03,
+      "bio__aggregation_propensity": -0.015,
+      "bio__immunogenicity_proxy": -0.015
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.1,
+      "high_immunogenicity": -0.05,
+      "poor_shape_complementarity": -0.05,
+      "low_interface_residues": -0.08
+    },
+    "epitope_residues": [
+      561,
+      666,
+      849,
+      850
+    ],
+    "liabilities": [
+      "Target has high disorder fraction (0.53) \u2014 binders must form stable contacts despite intrinsic flexibility of extracellular domain loops",
+      "Sheet-flat interface class requires precise beta-strand pairing; off-register hydrogen bonding leads to non-specific interactions",
+      "Hydrophilic epitope (epitope_hydrophobicity = -0.24) makes hydrophobic-driven binding difficult; polar complementarity is essential",
+      "PDGFRB is a receptor tyrosine kinase with approved small-molecule drugs (imatinib etc.) \u2014 competitive binding at kinase domain may cause off-target pharmacology",
+      "Safety liability: heart disease association (Force et al. 2011) \u2014 functional blocking of PDGFRB signaling risks cardiovascular toxicity",
+      "Near-neutral epitope charge (\u22120.06) means electrostatic steering is weak; shape and H-bond complementarity dominate"
+    ],
+    "proposed_features": [
+      {
+        "name": "beta_strand_pairing_score",
+        "computable": "needs_structure",
+        "description": "Score measuring geometric complementarity of designed beta-strand with target edge strands, per RFdiffusion beta-pairing conditioning approach (PMID 41519838)"
+      },
+      {
+        "name": "polar_hydrogen_bond_satisfaction",
+        "computable": "needs_structure",
+        "description": "Fraction of polar atoms on the hydrophilic epitope surface that are satisfied by designed binder H-bond donors/acceptors"
+      },
+      {
+        "name": "pdgf_binding_site_overlap",
+        "computable": "needs_structure",
+        "description": "Fraction of designed binder interface residues overlapping with natural PDGF-BB binding site on PDGFRB extracellular domain"
+      },
+      {
+        "name": "edge_strand_registry_match",
+        "computable": "needs_structure",
+        "description": "Binary or continuous metric for whether binder beta-strands are in correct H-bond register with target edge strands"
+      }
+    ],
+    "rationale": "PDGFRB is a type III receptor tyrosine kinase with a large, partially disordered extracellular domain featuring Ig-like domains with exposed beta-sheet edges. The interface class is 'sheet_flat', consistent with PMID 41519838 showing that RFdiffusion conditioned for beta-strand pairing achieves pM-nM binders against PDGFR\u03b1 and related targets by forming extended beta-sheets with edge strands. This means shape complementarity and precise hydrogen bond matching at the beta-strand interface are critical. The empirical discriminative power data clearly concentrates predictive signal in the top 4 computational metrics (actifptm, interface_residues, boltz2_min_ipsae, boltz2_iptm), which together capture interface quality and structural confidence \u2014 these receive the bulk of weight. Shape complementarity and boltz2_lis have modest power and receive smaller weights. The hydrophilic epitope (negative hydrophobicity) means polar complementarity matters more than hydrophobic packing, which the interface quality metrics implicitly capture. Aggregation and immunogenicity receive small negative weights as general liabilities. Metrics with power < 0.10 are excluded unless target-specific literature justifies inclusion \u2014 none does for this target. The epitope residues listed (561, 666, 849, 850) correspond to known hotspot mutation sites in PDGFRB (PMID 36788091, PMID 32050038) that are functionally critical; residues 561 and 666 are in the extracellular Ig-like domains where gain-of-function mutations cluster and where binder design is most relevant. Safety liabilities include cardiac risk from PDGFRB pathway inhibition.",
+    "citations": [
+      "41519838",
+      "36788091",
+      "32050038",
+      "40953793",
+      "39407295",
+      "41490797",
+      "28028030",
+      "24344264",
+      "40140939"
+    ]
+  },
+  "PDL1": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__boltz2_min_ipsae": 0.25,
+      "computational__interface_residues": 0.2,
+      "computational__boltz2_iptm": 0.15,
+      "shape_complementarity": 0.08,
+      "bio__aggregation_propensity": -0.02
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.1,
+      "high_immunogenicity": -0.05,
+      "poor_shape_complementarity": -0.08
+    },
+    "epitope_residues": [
+      54,
+      56,
+      58,
+      66,
+      68,
+      69,
+      71,
+      72,
+      73,
+      75,
+      76,
+      78,
+      113,
+      115,
+      116,
+      117,
+      121,
+      122,
+      123,
+      124,
+      125
+    ],
+    "liabilities": [
+      "PD-L1 has a flat beta-sheet interface (IgV domain) that is challenging for high-affinity binder design",
+      "High disorder fraction (0.53) outside the IgV domain may lead to non-specific interactions",
+      "Epitope contains mixed hydrophobic/polar residues requiring precise shape complementarity",
+      "PD-L1 surface expression is dynamically regulated by ubiquitination (MIB2 K63-linked), glycosylation (O-GlcNAc on HGS), and lactylation \u2014 surface levels may fluctuate",
+      "PD-L1 undergoes active endosomal sorting and lysosomal degradation, limiting target residence time",
+      "Extracellular vesicle-associated PD-L1 may act as a decoy sink for binders"
+    ],
+    "proposed_features": [
+      {
+        "name": "beta_sheet_interface_burial",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "hotspot_residue_contact_count",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "flat_epitope_complementarity_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "charge_complementarity_to_epitope",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "PD-L1 (CD274) presents a flat IgV-domain beta-sheet interface that is the canonical binding site for PD-1 and all approved antibodies/nanobodies. The empirical discriminative power data strongly supports concentrating weight on the top 4 computational metrics: actifptm (AUC=0.734), boltz2_min_ipsae (0.718), interface_residues (0.705), and boltz2_iptm (0.685). These capture interface quality and predicted binding affinity, which are critical for this flat sheet-type epitope where shape complementarity matters but is harder to achieve. Shape complementarity (AUC=0.614) gets moderate weight given the flat beta-sheet interface class. Metrics with power <0.10 are excluded as noise \u2014 the literature provides no target-specific reason to elevate them. Aggregation propensity receives a small negative weight because nanobody/binder aggregation is a known failure mode in PD-L1 therapeutic development. The epitope residues listed correspond to the IgV domain CC' and FG strands that form the PD-1 binding interface (PDB: 4ZQK, 5C3T numbering), which is the validated therapeutic epitope for atezolizumab, durvalumab, and nanobody-based approaches (GlueTAC, engineered probiotics). Key liabilities include the dynamic regulation of PD-L1 surface expression through multiple post-translational mechanisms and EV-mediated decoy effects that can reduce effective target engagement.",
+    "citations": [
+      "34596400",
+      "32051224",
+      "40097656",
+      "36943877",
+      "36719382",
+      "39937879",
+      "41861782",
+      "39234811",
+      "32006351",
+      "30449617"
+    ]
+  },
+  "PMVK": {
+    "weights": {
+      "computational__actifptm": 0.3,
+      "computational__interface_residues": 0.25,
+      "computational__boltz2_min_ipsae": 0.22,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.05,
+      "computational__boltz2_lis": 0.03,
+      "bio__topology_helix_frac": 0.01,
+      "bio__aggregation_propensity": -0.01,
+      "bio__immunogenicity_proxy": -0.01
+    },
+    "failure_penalties": {
+      "high_aggregation": -0.15,
+      "high_immunogenicity": -0.1,
+      "poor_shape_complementarity": -0.08,
+      "high_disorder_binder": -0.05
+    },
+    "epitope_residues": [
+      100,
+      101,
+      155,
+      99,
+      132,
+      253,
+      255
+    ],
+    "liabilities": [
+      "Active site cleft between core and lid domains is deep and negatively charged \u2014 binders may struggle with charge complementarity",
+      "High disorder fraction (0.61) of PMVK may lead to conformational flexibility reducing binding reproducibility",
+      "Ordered water network including a water pentamer at the active site may need displacement for tight binding",
+      "No approved drugs, no high-quality pockets or ligands per tractability \u2014 historically difficult target",
+      "Sheet-flat interface class limits buried surface area opportunities"
+    ],
+    "proposed_features": [
+      {
+        "name": "active_site_cleft_coverage",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "charge_complementarity_to_negative_groove",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "water_displacement_score",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "lid_core_interface_contact_fraction",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "PMVK is a GHMP kinase superfamily member with an \u03b1/\u03b2 fold featuring a deep active-site cleft between core and lid domains (PMID 19485344, 18618710, 36209956). The cleft is negatively charged with ordered water clusters including a pentamer near reactive groups. Key catalytic/binding residues include Lys100/101 (nucleotide stabilization), and by analogy to GHMP family members, residues equivalent to Ser99, Glu132, Ser253, Ser255, Asp155 are critical for substrate binding and catalysis (PMID 19509296, 11751891). The target has high disorder fraction (0.61) and a sheet-flat interface, suggesting binders must form well-complementary contacts against a relatively flat, flexible surface. Tractability data shows no pockets, ligands, or drugs \u2014 this is an undrugged target. The empirical discriminative power data strongly favors computational__actifptm (0.47), computational__interface_residues (0.45), and computational__boltz2_min_ipsae (0.44) as top metrics, followed by boltz2_iptm (0.36). These four metrics collectively dominate discrimination and receive ~89% of total positive weight. Shape complementarity and boltz2_lis have modest power (0.18-0.19) and receive small weights. Metrics with power <0.11 are essentially noise and excluded unless literature-justified. Small negative weights on aggregation and immunogenicity reflect general liabilities. The epitope residues are drawn from the active-site cleft region identified across multiple GHMP kinase structural studies.",
+    "citations": [
+      "19485344",
+      "18618710",
+      "36209956",
+      "11751891",
+      "19509296",
+      "12878729",
+      "21282208",
+      "42361171",
+      "34440098"
+    ]
+  }
+}

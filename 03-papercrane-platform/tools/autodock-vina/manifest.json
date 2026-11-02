@@ -1,0 +1,27 @@
+{
+  "id": "autodock-vina",
+  "displayName": "AutoDock Vina",
+  "version": "1.2.7",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/autodock-vina:1.2.7-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 45,
+    "note": "CPU protein-ligand docking with Meeko preparation; beta until pose export and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "exhaustiveness": 8,
+    "numPoses": 9,
+    "boxSize": [22, 22, 22]
+  },
+  "composes": []
+}

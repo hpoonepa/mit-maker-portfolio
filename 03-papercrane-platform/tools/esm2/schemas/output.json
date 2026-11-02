@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/esm2/output.json",
+  "title": "ESM-2 Result",
+  "description": "Shape of /outputs/result.json emitted by the ESM-2 adapter. The `designs` array is discriminated by `mode`: score-mode records carry pLL metrics, embed-mode records carry an embedding_path and shape tuple.",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "title": "ESM-2 Score Record",
+            "required": ["id", "seed", "mode", "metrics"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "seed": { "type": "integer" },
+              "mode": { "type": "string", "const": "score" },
+              "sequence": {
+                "type": "string",
+                "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+              },
+              "metrics": {
+                "type": "object",
+                "required": ["pll_mean", "pll_sum", "pll_min", "ppl"],
+                "additionalProperties": { "type": "number" },
+                "properties": {
+                  "pll_mean": {
+                    "description": "Mean per-residue pseudo-log-likelihood (higher = more plausible).",
+                    "type": "number"
+                  },
+                  "pll_sum": {
+                    "description": "Sum of per-residue pLL over the sequence.",
+                    "type": "number"
+                  },
+                  "pll_min": {
+                    "description": "Minimum per-residue pLL (worst-position plausibility).",
+                    "type": "number"
+                  },
+                  "ppl": {
+                    "description": "Pseudo-perplexity = exp(-pll_mean).",
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "title": "ESM-2 Embedding Record",
+            "required": ["id", "seed", "mode", "embedding_path", "shape"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "seed": { "type": "integer" },
+              "mode": { "type": "string", "const": "embed" },
+              "sequence": {
+                "type": "string",
+                "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+              },
+              "embedding_path": {
+                "description": "Local path to the .npy file inside /outputs. Paper Crane's uploader mirrors this to S3 and rewrites as an artifact_key during publish.",
+                "type": "string"
+              },
+              "artifact_key": {
+                "description": "S3 object key for the embedding, set by the publisher (not the adapter).",
+                "type": "string"
+              },
+              "shape": {
+                "description": "Numpy shape tuple. [seq_len, 1280] when pool=none; [1, 1280] when pool in {mean, cls}.",
+                "type": "array",
+                "items": { "type": "integer", "minimum": 1 },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "layer": { "type": "integer" },
+              "pool": { "type": "string", "enum": ["mean", "cls", "none"] }
+            }
+          }
+        ]
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "additionalProperties": true,
+      "properties": {
+        "tool": { "type": "string", "const": "esm2" },
+        "adapterVersion": { "type": "string" },
+        "mode": { "type": "string", "enum": ["score", "embed"] },
+        "model": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

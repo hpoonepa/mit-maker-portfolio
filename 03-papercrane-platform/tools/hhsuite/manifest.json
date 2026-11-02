@@ -1,0 +1,23 @@
+{
+  "id": "hhsuite",
+  "displayName": "HH-suite",
+  "version": "3.3.0",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-3.0-only",
+  "image": "ghcr.io/papercrane/hhsuite:3.3.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 4,
+    "note": "HHalign profile comparison from supplied sequences or alignments; beta until live binary and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "alignmentMode": "local", "mact": 0.35 },
+  "composes": []
+}

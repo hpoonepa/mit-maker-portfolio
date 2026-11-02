@@ -1,0 +1,23 @@
+{
+  "id": "propka",
+  "displayName": "PROPKA",
+  "version": "3.5.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "LGPL-2.1-only",
+  "image": "ghcr.io/papercrane/propka:3.5.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 6,
+    "note": "CPU residue pKa prediction; beta until residue-summary parsing passes representative live smoke tests."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "ph": 7.0, "keepProtons": false },
+  "composes": []
+}

@@ -1,0 +1,102 @@
+# Fly.io config for @papercrane/api
+# Deploy: fly deploy --config apps/api/fly.toml --dockerfile apps/api/Dockerfile
+app = "papercrane-api"
+primary_region = "iad"
+kill_signal = "SIGINT"
+kill_timeout = "30s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[experimental]
+  auto_rollback = true
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  HOST = "0.0.0.0"
+  LOG_LEVEL = "info"
+  NEXT_PUBLIC_APP_URL = "https://app.papercrane.bio"
+  NEXT_PUBLIC_WEB_URL = "https://papercrane.bio"
+  CORS_ORIGIN = "https://app.papercrane.bio,https://papercrane.bio"
+  # Non-secret runtime config. Secrets set via `fly secrets set`
+  NEXT_TELEMETRY_DISABLED = "1"
+  TURBO_TELEMETRY_DISABLED = "1"
+
+[processes]
+  app = "node --import tsx src/server.ts"
+
+# ---- HTTP service ----
+[[services]]
+  protocol = "tcp"
+  internal_port = 8080
+  processes = ["app"]
+
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 100
+    soft_limit = 75
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"
+    grace_period = "10s"
+
+  [[services.http_checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "15s"
+    method = "get"
+    path = "/healthz"
+    protocol = "http"
+    [services.http_checks.headers]
+      User-Agent = "fly-healthcheck"
+
+# ---- Machines ----
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
+
+# ---- Auto-scaling / regions ----
+# Primary iad; secondary sfo when scaled out.
+# Use: fly scale count 2 --region iad,sfo
+[deploy]
+  release_command = "node -e 'console.log(\"api release: migrations handled by supabase, skipping\")'"
+  strategy = "rolling"
+  wait_timeout = "5m"
+
+[metrics]
+  port = 9091
+  path = "/metrics"
+
+# HTTP-only service definition (newer fly format) for compatibility
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 100
+    soft_limit = 75
+
+  [[http_service.checks]]
+    grace_period = "15s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/healthz"

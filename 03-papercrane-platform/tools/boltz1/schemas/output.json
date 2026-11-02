@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/boltz1/output.json",
+  "title": "Boltz-1 Prediction Result",
+  "description": "Shape of /outputs/result.json emitted by the Boltz-1 adapter. Each entry is one predicted binder-target complex with native confidence metrics. Format is identical to Boltz-2's output.",
+  "type": "object",
+  "required": ["predictions", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "predictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "seed", "metrics"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the predicted mmCIF structure.",
+            "type": "string"
+          },
+          "seed": { "type": "integer" },
+          "metrics": {
+            "description": "Boltz-1 native confidence metrics. Canonical Paper Crane metrics (ipSAE, DockQ, pTMEnergy, LIS, Overath) are added downstream by the validator stage.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "required": ["plddt_mean", "plddt_binder", "ptm", "iptm", "ipae_mean"],
+            "properties": {
+              "plddt_mean": {
+                "description": "Mean pLDDT across the whole complex (0..100).",
+                "type": "number"
+              },
+              "plddt_binder": {
+                "description": "Mean pLDDT across the binder chain only.",
+                "type": "number"
+              },
+              "ptm": { "type": "number" },
+              "iptm": { "type": "number" },
+              "ipae_mean": {
+                "description": "Mean interface PAE, binder<->target residue pairs.",
+                "type": "number"
+              },
+              "per_chain_ptm": {
+                "description": "Per-chain pTM. Keys are chain ids (A = target, B = binder).",
+                "type": "object",
+                "additionalProperties": { "type": "number" },
+                "properties": {
+                  "A": { "type": "number" },
+                  "B": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "properties": {
+        "tool": { "type": "string", "const": "boltz1" },
+        "adapterVersion": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

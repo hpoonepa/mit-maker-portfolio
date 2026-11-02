@@ -1,0 +1,18 @@
+{
+  "targetPdb": "s3://papercrane-dev/targets/2lgv.pdb",
+  "targetChain": "A",
+  "hotspots": [
+    { "chain": "A", "resi": 42 },
+    { "chain": "A", "resi": 57 }
+  ],
+  "seeds": [1, 2, 3],
+  "numDesigns": 6,
+  "constraints": {
+    "lengthRange": [60, 120],
+    "disulfides": false,
+    "solubility": "default"
+  },
+  "toolParams": {
+    "extra_knob": "value"
+  }
+}

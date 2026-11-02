@@ -1,0 +1,51 @@
+# Never send local credentials, session traces, or repository history to builds.
+.git
+**/.git
+.env*
+**/.env*
+.agent-logs
+**/.agent-logs
+.local
+**/.local
+**/.aws
+**/.codex
+**/.agents
+**/.vercel
+**/*.pem
+**/*.key
+
+# Reinstall/rebuild for Linux; local macOS dependencies and outputs are invalid.
+**/node_modules
+**/.next
+**/.next-beta
+**/.turbo
+**/dist
+**/build
+**/coverage
+**/test-results
+**/playwright-report
+**/*.tsbuildinfo
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/.venv
+**/venv
+**/*.pyc
+**/.DS_Store
+out
+outputs
+
+# Research/admin artifacts are not runtime service inputs.
+binder-scorer
+benchmark
+funding
+outreach
+profs-emailed.md
+.superpowers
+codex
+python
+pnpm-lock 2.yaml
+pnpm-lock 3.yaml
+
+# Keep tools/ and scripts/: the worker dispatches their Python entry points.
+# Keep all workspace manifests/source so turbo prune can resolve dependencies.

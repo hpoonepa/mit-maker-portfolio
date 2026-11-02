@@ -1,0 +1,74 @@
+{
+  "campaign": "god-v3b",
+  "run_id": "god-v3b-run-0001",
+  "target": {
+    "id": "pd-l1",
+    "pdb": "5O45",
+    "chain": "A",
+    "hotspots": [54, 56, 66, 115, 123],
+    "version": 1
+  },
+  "tool": {
+    "id": "papercrane",
+    "version": "v3b",
+    "git_sha": "4f9d2e1abc00000000000000000000000000000000"
+  },
+  "config": {
+    "model": "protenix-2025.03.14",
+    "esm": "esm2_t33_650M_UR50D",
+    "no_cysteine": true,
+    "loss_weights": {
+      "ipsae": 1.0,
+      "dockq": 0.8,
+      "ptmenergy": 0.5
+    }
+  },
+  "compute": {
+    "gpu": "A100-80GB",
+    "driver": "550.54.15",
+    "cuda": "12.4",
+    "container_digest": "sha256:e7f1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "provider": "modal"
+  },
+  "seed_range": [1, 3],
+  "cost_usd": 2.14,
+  "wallclock_sec": 921,
+  "designs": [
+    {
+      "seed": 1,
+      "sequence": "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ",
+      "structure": "designs/seed_1.pdb",
+      "metrics": {
+        "ipsae": 0.82,
+        "dockq": 0.41,
+        "ptmenergy": -1.85,
+        "iptm": 0.78,
+        "plddt": 88.4
+      }
+    },
+    {
+      "seed": 2,
+      "sequence": "GQPAYERLINEQTARKLVEDMGRKCTAFEQH",
+      "structure": "designs/seed_2.pdb",
+      "metrics": {
+        "ipsae": 0.71,
+        "dockq": 0.28,
+        "ptmenergy": -1.42,
+        "iptm": 0.66,
+        "plddt": 82.1
+      }
+    },
+    {
+      "seed": 3,
+      "sequence": "WKPAYINQLREFVGELCDARMGKQLTSREHV",
+      "structure": "designs/seed_3.pdb",
+      "metrics": {
+        "ipsae": 0.54,
+        "dockq": 0.18,
+        "ptmenergy": -0.91,
+        "iptm": 0.48,
+        "plddt": 74.3
+      }
+    }
+  ]
+}

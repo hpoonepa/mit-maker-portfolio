@@ -1,0 +1,79 @@
+# Billing
+
+Paper Crane is billed in **seeds**. One seed roughly equals one design through one
+standard tool node. Plans bundle seeds, concurrency, and retention.
+
+## Plans
+
+| Plan         | Monthly | Seeds / mo | Concurrent jobs | Retention | Frontier |
+|--------------|---------|------------|------------------|-----------|----------|
+| Free         | $0      | 50         | 2                | 30 days   | no       |
+| Researcher   | $49     | 2,500      | 4                | 90 days   | yes      |
+| Lab          | $499    | 30,000     | 16               | 1 year    | yes      |
+| Institute    | $2,499  | 200,000    | 64               | indefinite| yes      |
+| Enterprise   | custom  | custom     | custom           | custom    | custom   |
+
+Plans are billed monthly or annually (15% discount on annual).
+
+## Seed cost reference
+
+| Tool tier  | Tools                                          | Seeds / design |
+|------------|------------------------------------------------|----------------|
+| Cheap      | ESM-2, ProteinMPNN, SolubleMPNN, LigandMPNN    | 0.1            |
+| Standard   | RFdiffusion, Chroma, BoltzGen, Boltz-1         | 1              |
+| Heavy      | BindCraft, Boltz-2, Chai-1                     | 1              |
+| Frontier   | AlphaFold 3                                    | 2              |
+
+A typical default-pipeline run (200 backbones × 3 sequences × Boltz-2 validate ≈ 600
+designs) costs **~720 seeds**.
+
+## Overage
+
+Overage charges only apply if you opt in (off by default). When enabled:
+
+| Plan         | Overage rate (per seed) |
+|--------------|--------------------------|
+| Researcher   | $0.025                   |
+| Lab          | $0.020                   |
+| Institute    | $0.015                   |
+
+Overage is billed in arrears at the end of each period. We email you at 80% of plan
+allowance and again at 100%.
+
+## Top-ups
+
+Don't want overage but need more seeds this month? Buy a top-up:
+
+| Bundle    | Price   | Effective rate |
+|-----------|---------|----------------|
+| 1,000     | $30     | $0.030         |
+| 10,000    | $250    | $0.025         |
+| 100,000   | $2,000  | $0.020         |
+
+Top-up seeds **never expire**. They're only consumed after your plan seeds run out, so
+buying ahead is safe.
+
+## Refunds
+
+We refund seeds automatically when:
+
+- A job fails after exhausting all retries (full refund of unstarted nodes)
+- Our infra causes the failure (full refund regardless of node state)
+- A frontier tool is unavailable for > 30 minutes (full refund + credit)
+
+## Cancellations
+
+Cancel any time from **Settings → Billing**. You retain access through the end of the
+paid period, then drop to the free tier (your designs and projects remain — only the
+seed allowance changes).
+
+## Invoices & VAT
+
+Invoices are generated on the first of each month (or on charge for top-ups). EU/UK
+customers are charged with reverse-charge VAT — supply your VAT number under
+**Settings → Billing → Tax** to remove the line item.
+
+<Callout variant="tip">
+On the free tier and want to upgrade? You don't lose your projects, jobs, or designs —
+the upgrade is instant and your next job picks up the new allowance immediately.
+</Callout>

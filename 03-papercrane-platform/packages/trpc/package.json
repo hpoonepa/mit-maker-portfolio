@@ -1,0 +1,34 @@
+{
+  "name": "@papercrane/trpc",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@papercrane/auth": "workspace:*",
+    "@papercrane/billing": "workspace:*",
+    "@papercrane/db": "workspace:*",
+    "@papercrane/jobs": "workspace:*",
+    "@papercrane/observability": "workspace:*",
+    "@papercrane/storage": "workspace:*",
+    "@papercrane/types": "workspace:*",
+    "@trpc/server": "11.0.0-rc.477",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "superjson": "2.2.1",
+    "trpc-to-openapi": "2.1.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.4.1",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  }
+}

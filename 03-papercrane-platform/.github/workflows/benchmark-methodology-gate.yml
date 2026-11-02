@@ -1,0 +1,188 @@
+name: Benchmark Methodology Gate
+
+# CI gate for any PR that touches the authoritative benchmark methodology
+# or target definitions. Enforces the pre-registration + governance rules
+# from benchmark/methodology-v1.0.md §7-§8 and benchmark/GOVERNANCE.md.
+#
+# This is a GATE only. It does NOT sign anything. Signing is done locally
+# by a maintainer with their own GPG key; this workflow only verifies that
+# the commits touching methodology/targets ARE signed, that there are
+# enough approvals, and posts a summary comment on the PR.
+
+on:
+  pull_request:
+    paths:
+      - "benchmark/methodology-*.md"
+      - "benchmark/targets/**"
+    types: [opened, synchronize, reopened, ready_for_review, review_submitted]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify-gpg-signed-commits:
+    name: "Verify GPG-signed commits on methodology/targets changes"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Identify commits touching methodology or targets
+        id: pathcommits
+        run: |
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          # List commits in PR range
+          RANGE_COMMITS=$(git log --format=%H "${BASE_SHA}..${HEAD_SHA}")
+          MATCHING=""
+          for c in $RANGE_COMMITS; do
+            if git show --name-only --format= "$c" \
+              | grep -E '^(benchmark/methodology-.*\.md|benchmark/targets/)' >/dev/null; then
+              MATCHING="$MATCHING $c"
+            fi
+          done
+          echo "matching_commits=${MATCHING}" >> "$GITHUB_OUTPUT"
+          echo "Commits touching methodology/targets:"
+          echo "$MATCHING"
+
+      - name: Verify each matching commit has a valid GPG signature
+        run: |
+          set -euo pipefail
+          FAILED=0
+          for c in ${{ steps.pathcommits.outputs.matching_commits }}; do
+            echo "=== Checking signature on $c ==="
+            SIG_STATUS=$(git log --format='%G?' -n 1 "$c")
+            # G = good signature, U = good but untrusted key (still acceptable for CI),
+            # X = expired, Y = expired key, R = revoked, B = bad, E = missing, N = no sig
+            case "$SIG_STATUS" in
+              G|U)
+                echo "OK: commit $c has signature status '$SIG_STATUS'"
+                git log --show-signature -1 "$c" || true
+                ;;
+              *)
+                echo "FAIL: commit $c has signature status '$SIG_STATUS' (must be G or U)"
+                git log --show-signature -1 "$c" || true
+                FAILED=1
+                ;;
+            esac
+          done
+          if [ "$FAILED" -ne 0 ]; then
+            echo ""
+            echo "One or more commits touching benchmark/methodology-*.md or"
+            echo "benchmark/targets/** are not GPG-signed. Per methodology §8"
+            echo "and GOVERNANCE.md §3, these changes require a signed commit"
+            echo "from a maintainer."
+            exit 1
+          fi
+
+  verify-approvals:
+    name: "Verify >= 2 approving reviews"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR approvals via gh API
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          REVIEWS=$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            "/repos/${REPO}/pulls/${PR_NUMBER}/reviews" \
+            --paginate)
+          # Take the most recent review per reviewer, count APPROVED
+          APPROVED_COUNT=$(echo "$REVIEWS" | jq '[
+            group_by(.user.login)[]
+            | max_by(.submitted_at)
+            | select(.state == "APPROVED")
+          ] | length')
+          echo "Approved reviews (latest-per-reviewer): ${APPROVED_COUNT}"
+          if [ "${APPROVED_COUNT}" -lt 2 ]; then
+            echo "FAIL: need at least 2 approving reviews to merge methodology/target changes (have ${APPROVED_COUNT})."
+            exit 1
+          fi
+          echo "OK: ${APPROVED_COUNT} approvals."
+
+  post-methodology-diff-comment:
+    name: "Post methodology diff summary comment"
+    runs-on: ubuntu-latest
+    needs: [verify-gpg-signed-commits, verify-approvals]
+    if: always()
+    steps:
+      - name: Checkout PR with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Build methodology diff summary
+        id: diff
+        run: |
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          {
+            echo "### Benchmark Methodology Gate — Diff Summary"
+            echo ""
+            echo "**Base:** \`${BASE_SHA}\`"
+            echo "**Head:** \`${HEAD_SHA}\`"
+            echo ""
+            echo "**Files changed under \`benchmark/methodology-*.md\` or \`benchmark/targets/**\`:**"
+            echo ""
+            echo '```'
+            git diff --name-status "${BASE_SHA}...${HEAD_SHA}" -- \
+              'benchmark/methodology-*.md' 'benchmark/targets/**' || true
+            echo '```'
+            echo ""
+            echo "**Per-file diff stats:**"
+            echo ""
+            echo '```'
+            git diff --stat "${BASE_SHA}...${HEAD_SHA}" -- \
+              'benchmark/methodology-*.md' 'benchmark/targets/**' || true
+            echo '```'
+            echo ""
+            echo "**Gate status:**"
+            echo "- GPG-signed commits: ${{ needs.verify-gpg-signed-commits.result }}"
+            echo "- >= 2 approving reviews: ${{ needs.verify-approvals.result }}"
+            echo ""
+            echo "Reviewers: please confirm that the changes above respect the"
+            echo "pre-registration rule (methodology §7). Any change to"
+            echo "thresholds, seed counts, fingerprints, statistics, or cost"
+            echo "formulas requires a **new** methodology version file, not"
+            echo "edits to an existing one."
+          } > /tmp/diff-comment.md
+          cat /tmp/diff-comment.md
+
+      - name: Post or update comment on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          BODY=$(cat /tmp/diff-comment.md)
+          MARKER="<!-- benchmark-methodology-gate-diff -->"
+          BODY_WITH_MARKER="${MARKER}"$'\n'"${BODY}"
+          # Find existing bot comment to update
+          EXISTING_ID=$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            "/repos/${REPO}/issues/${PR_NUMBER}/comments" \
+            --paginate \
+            | jq -r --arg m "$MARKER" '.[] | select(.body | startswith($m)) | .id' \
+            | head -n1)
+          if [ -n "${EXISTING_ID}" ]; then
+            gh api -X PATCH \
+              -H "Accept: application/vnd.github+json" \
+              "/repos/${REPO}/issues/comments/${EXISTING_ID}" \
+              -f body="${BODY_WITH_MARKER}"
+          else
+            gh api -X POST \
+              -H "Accept: application/vnd.github+json" \
+              "/repos/${REPO}/issues/${PR_NUMBER}/comments" \
+              -f body="${BODY_WITH_MARKER}"
+          fi

@@ -1,0 +1,812 @@
+{
+  "EGFR": {
+    "weights": {
+      "computational__actifptm": 0.2912621359223301,
+      "computational__interface_residues": 0.21359223300970873,
+      "computational__boltz2_min_ipsae": 0.21359223300970873,
+      "computational__boltz2_iptm": 0.1262135922330097,
+      "shape_complementarity": 0.058252427184466014,
+      "computational__boltz2_lis": 0.038834951456310676,
+      "bio__aggregation_propensity": -0.029126213592233007,
+      "bio__immunogenicity_proxy": -0.029126213592233007
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": 0.03,
+      "bio__immunogenicity_proxy": 0.03,
+      "hydrophobic_fraction": 0.02
+    },
+    "epitope_residues": [
+      353,
+      356,
+      384,
+      412,
+      420,
+      440,
+      441,
+      443,
+      458,
+      465,
+      467,
+      468,
+      492
+    ],
+    "liabilities": [
+      "EGFR ectodomain resistance mutations (e.g., domain III) can abrogate antibody binding (S468R and related) \u2014 epitope must avoid clinically observed escape positions",
+      "Domain III epitope overlaps ligand-binding region; steric competition with EGF-like ligands is the desired mechanism but narrows tolerable binding pose",
+      "Widespread EGFR expression in normal tissues drives on-target off-tumor toxicity (skin rash, diarrhea, keratitis) \u2014 favors masked/conditionally-active or high-specificity designs",
+      "High-affinity binders to a broadly expressed receptor risk antigen sink and dose-limiting toxicity",
+      "Aggregation-prone hydrophobic paratopes reduce developability of miniprotein/nanobody binders",
+      "Immunogenicity risk for non-humanized VHH scaffolds, though generally low for monomeric nanobodies"
+    ],
+    "proposed_features": [
+      {
+        "name": "epitope_overlap_with_ligand_binding_site_domainIII",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "avoidance_of_known_resistance_mutation_positions",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "interface_polar_contact_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "buried_surface_area_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "steric_occlusion_of_dimerization_arm",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "paratope_aromatic_tyrosine_content",
+        "computable": "computable_now"
+      },
+      {
+        "name": "developability_aggregation_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "The empirical discriminative power table dominates the prior: actifPTM (0.47), interface_residues (0.45), and boltz2_min_ipsae (0.45) are by far the strongest separators, so ~74% of total weight is concentrated on these three, with boltz2_iptm (0.36) as the fourth pillar. These interface-quality/confidence metrics directly capture what the literature emphasizes for EGFR biologics: successful binders (cetuximab, nanobody 7D12, VHHs) make well-defined, high-complementarity contacts with a specific ectodomain surface, most often domain III overlapping the ligand-binding region (PMID 15837620, 39275996, 27424502). Shape complementarity and boltz2_lis get small positive weight consistent with their modest measured power and the structural requirement for tight interface packing / steric occlusion of the dimerization arm. I deliberately down-weight or exclude the low-power (<0.15) bio/topology metrics as essentially noise. Two small NEGATIVE weights are applied against aggregation_propensity and immunogenicity_proxy because the literature specifically flags developability and (modest) immunogenicity concerns for nanobody/miniprotein scaffolds (PMID 33767701, 37509078, 41284265), and hydrophobic_fraction is penalized only as a failure mode since excessive hydrophobic paratope surface hurts developability. Epitope residues reflect the cetuximab/domain III ligand-competitive footprint and nearby domain surfaces implicated in ligand blocking. Given EGFR's broad normal-tissue expression and documented on-target toxicities (skin rash, diarrhea, keratitis), conditionally-active masking strategies (PMID 41284265, 31755215) are noted as liabilities/failure modes rather than metrics, since they are architecture-level rather than captured by the available scoring menu.",
+    "citations": [
+      "15837620",
+      "39275996",
+      "27424502",
+      "38908376",
+      "41284265",
+      "33767701",
+      "37509078",
+      "31755215",
+      "40609632",
+      "32885759"
+    ]
+  },
+  "FGFR2": {
+    "weights": {
+      "computational__actifptm": 0.22429906542056072,
+      "computational__interface_residues": 0.205607476635514,
+      "computational__boltz2_min_ipsae": 0.18691588785046728,
+      "computational__boltz2_iptm": 0.13084112149532712,
+      "computational__boltz2_lis": 0.05607476635514018,
+      "shape_complementarity": 0.05607476635514018,
+      "bio__aggregation_propensity": -0.04672897196261682,
+      "bio__immunogenicity_proxy": -0.037383177570093455,
+      "bio__topology_strand_frac": 0.02803738317757009,
+      "hydrophobic_fraction": -0.02803738317757009
+    },
+    "failure_penalties": {
+      "high_aggregation_propensity": -0.05,
+      "high_immunogenicity_proxy": -0.04,
+      "agonist_conformation_risk": -0.06
+    },
+    "epitope_residues": [],
+    "liabilities": [
+      "FGFR2 extracellular domain (ECD) D2-D3 immunoglobulin-like domains are the functional binding interface required for ligand/receptor engagement; an intact ECD is required for oncogenic transformation by fusions (PMID 40014401).",
+      "Bivalent monospecific antibodies against FGFR2 ECD frequently show poor inhibitory or agonist activity \u2014 clustering/dimerization of the receptor can inadvertently activate signaling; binder design must avoid agonism (PMID 40014401).",
+      "The orthosteric ATP-site of FGFR family kinases is highly conserved; achieving FGFR2 selectivity over FGFR1/3/4 is difficult and typically requires exploiting P-loop dynamics (relevant for SM, not directly for miniprotein ECD binders) (PMID 38300868).",
+      "FGFR2b vs FGFR2c 'b/c' splice isoforms alter D3 loop epitopes and ligand specificity \u2014 a binder may only recognize one isoform (PMID 30809251).",
+      "Resistance mutations arise in the kinase domain (gatekeeper/secondary) \u2014 ECD-targeting biologics can retain activity against these but should target ECD epitopes distal to the kinase (PMID 40014401).",
+      "FGFR2 signals via LLPS-driven ternary complexes (SHP2, PLC\u03b31); the epitope interface is a flat sheet (interface_class: sheet_flat) which is a challenging, low-curvature surface for high-affinity binder design (PMID 35231400).",
+      "High disorder fraction (~0.56) in the modeled region may reduce reliability of single-conformation docking metrics."
+    ],
+    "proposed_features": [
+      {
+        "name": "receptor_agonism_risk_via_dimerization_geometry",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_localization_to_D2_D3_ig_domains",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "b_c_isoform_specific_D3_loop_contact",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "flat_sheet_interface_contact_area",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "actifptm_interface_confidence",
+        "computable": "computable_now"
+      },
+      {
+        "name": "interface_residue_count",
+        "computable": "computable_now"
+      },
+      {
+        "name": "min_ipsae_interface_quality",
+        "computable": "computable_now"
+      },
+      {
+        "name": "aggregation_propensity_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "FGFR2 is an extracellular receptor tyrosine kinase whose therapeutically validated binder interface is the D2-D3 Ig-like ECD (PMID 40014401, 30809251). Because the empirical discriminative-power table is strongly dominated by interface-quality metrics, the majority of weight is concentrated on the top three: actifptm (0.47), interface_residues (0.45), and boltz2_min_ipsae (0.43), with boltz2_iptm as a fourth supporting term. These directly capture whether a designed binder makes a credible, well-packed interface against a flat, low-curvature sheet epitope (interface_class: sheet_flat), which is the key structural challenge here. shape_complementarity and boltz2_lis get small positive weights because a flat interface (PMID 11076027 notes intermediate buried-surface signalling interfaces) makes complementarity marginally more informative, though their power is low. bio__topology_strand_frac gets a tiny positive weight consistent with the strand-rich Ig-fold epitope (frac_strand 0.38). Negative weights are placed on aggregation_propensity and hydrophobic_fraction (secreted/ECD binders must remain soluble and non-sticky) and on immunogenicity_proxy (biologic/miniprotein therapeutics against FGFR2 face immunogenicity constraints; PMID 41284265 masking strategies underscore the need for selectivity/tolerability). A conceptual agonism-risk penalty is included because FGFR2 ECD engagement can drive receptor clustering and agonist signaling \u2014 a documented failure mode for bivalent binders (PMID 40014401, 35231400) \u2014 even though it is not directly in the metric menu. Low-power metrics (<0.15) are deliberately omitted to avoid a diffuse prior.",
+    "citations": [
+      "40014401",
+      "38300868",
+      "30809251",
+      "35231400",
+      "11076027",
+      "41284265",
+      "41125482"
+    ]
+  },
+  "IL7R": {
+    "weights": {
+      "computational__actifptm": 0.24761904761904763,
+      "computational__interface_residues": 0.20952380952380953,
+      "computational__boltz2_min_ipsae": 0.19047619047619047,
+      "computational__boltz2_iptm": 0.11428571428571428,
+      "computational__boltz2_lis": 0.07619047619047618,
+      "shape_complementarity": 0.047619047619047616,
+      "computational__boltz2_complex_iplddt": 0.02857142857142857,
+      "bio__aggregation_propensity": -0.03809523809523809,
+      "bio__immunogenicity_proxy": -0.02857142857142857,
+      "bio__topology_loop_frac": -0.019047619047619046
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": -0.04,
+      "bio__immunogenicity_proxy": -0.03,
+      "high_disorder_interface": -0.02
+    },
+    "epitope_residues": [
+      30,
+      58,
+      62,
+      79,
+      80,
+      82,
+      132,
+      133,
+      135,
+      136,
+      138
+    ],
+    "liabilities": [
+      "IL7R (IL-7R\u03b1) ectodomain interface is a flat, sheet-dominated (frac_strand ~0.42) surface \u2014 historically hard to target with small molecules (Open Targets tractability all-False for SM pockets); binder design should exploit protein-protein complementarity rather than pocket-filling",
+      "High disorder fraction (~0.55) suggests flexible/unstructured regions that may not present a stable epitope; design should target the ordered cytokine-binding fibronectin-III domains (D1/D2) resolved in PDB 3DI2",
+      "Epitope is mildly polar (frac_polar ~0.59) and near-neutral/slightly negative net charge \u2014 hydrophobic-driven binders risk poor specificity; balance polar contacts",
+      "Signaling redundancy: IL7R heterodimerizes with \u03b3c (IL2RG); a binder blocking only IL-7R\u03b1 may be circumvented by TSLP/TSLPR crosstalk (see TSLP biparatopic strategies) \u2014 epitope choice should overlap the IL-7/TSLP binding face",
+      "Immunogenicity risk for therapeutic binders in chronic autoimmune indications \u2014 minimize immunogenic sequence content",
+      "Aggregation propensity of exposed sheet/flat interface binders could reduce developability"
+    ],
+    "proposed_features": [
+      {
+        "name": "interface_shape_complementarity_to_flat_sheet_epitope",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_overlap_with_IL7_binding_face_D1D2",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "fraction_polar_contacts_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "designed_binder_aggregation_propensity",
+        "computable": "computable_now"
+      },
+      {
+        "name": "immunogenicity_proxy_Tcell_epitope_count",
+        "computable": "computable_now"
+      },
+      {
+        "name": "buried_surface_area_on_ordered_domain",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "overlap_with_gc_dimerization_interface",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "IL7R is a Type I cytokine receptor with a flat, sheet-dominated (interface_class=sheet_flat, frac_strand~0.42), highly polar, near-neutral epitope and NO druggable small-molecule pocket (Open Targets SM tractability entirely False). This is a classic protein-protein-interface target best addressed by de novo protein/antibody binders, so I concentrate weight on the empirically strongest complex-quality/interface-prediction metrics: actifptm (power 0.46), interface_residues (0.45), boltz2_min_ipsae (0.43), and boltz2_iptm (0.36), which together capture whether a designed binder achieves a credible, well-packed interface against a flat epitope. These four hold the large majority of weight per the empirical power ranking. boltz2_lis and shape_complementarity get modest positive weight because interface complementarity is especially important against a flat sheet surface where there is little pocket to anchor to. I add small NEGATIVE weights on aggregation_propensity, immunogenicity_proxy, and loop_fraction: the literature emphasizes therapeutic development of IL-7R blockers for chronic autoimmune disease (MS, T1D, RA, coeliac, psoriasis) and cytotoxic anti-IL7R antibodies for ALL, where developability and low immunogenicity matter, and a flat exposed epitope raises aggregation risk for the binder. The recent complementarity-based de novo binder work (PMID 40686280) explicitly designed nanomolar IL-7R\u03b1 binders using surface-complementarity docking, and the TSLP biparatopic nanobody work (PMID 40925205) shows IL-7R\u03b1 is a validated blockable receptor face shared with TSLP signaling \u2014 motivating the epitope-overlap features. Epitope residues are drawn from the IL-7/IL-7R\u03b1 binding interface in the cytokine-binding homology region (PDB 3DI2). Low-power metrics (<0.15) are excluded to keep the prior sharp.",
+    "citations": [
+      "40686280",
+      "40925205",
+      "36201890",
+      "39048815",
+      "39654893",
+      "42209436",
+      "39806440"
+    ]
+  },
+  "INSULINR": {
+    "weights": {
+      "computational__actifptm": 0.23423423423423423,
+      "computational__interface_residues": 0.19819819819819817,
+      "computational__boltz2_min_ipsae": 0.19819819819819817,
+      "computational__boltz2_iptm": 0.12612612612612611,
+      "shape_complementarity": 0.07207207207207207,
+      "computational__boltz2_lis": 0.036036036036036036,
+      "aromatic_fraction": 0.027027027027027025,
+      "bio__aggregation_propensity": -0.04504504504504504,
+      "bio__immunogenicity_proxy": -0.036036036036036036,
+      "hydrophobic_fraction": -0.027027027027027025
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": -0.05,
+      "bio__immunogenicity_proxy": -0.04,
+      "agonism_risk_proliferation": -0.06,
+      "carcinogenicity_flag": -0.05
+    },
+    "epitope_residues": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      14,
+      15,
+      16,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      64,
+      65,
+      66,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718
+    ],
+    "liabilities": [
+      "Agonist binders can induce insulin-like signaling (AKT/MAPK) and drive cell proliferation/carcinogenicity \u2014 bias toward metabolic (AKT) over mitogenic (MAPK) signaling is desirable",
+      "Insulin receptor overexpression in cancers (IR-A/IGF2 loop) means agonism carries oncogenic risk",
+      "Binding site L1 is discontinuous (two distant primary-sequence domains: L1 domain + alphaCT segment) \u2014 a flat sheet interface that is hard to engage with a single rigid binder",
+      "Off-target cross-reactivity with the homologous IGF-1 receptor",
+      "Conformational-change dependence: signaling outcome depends on binder orientation/flexibility inducing specific receptor conformations, not just affinity",
+      "Aggregation propensity of designed binders at the sheet-flat interface",
+      "Immunogenicity of de novo/synthetic protein agonists in vivo"
+    ],
+    "proposed_features": [
+      {
+        "name": "discontinuous_epitope_coverage (L1 + alphaCT dual-domain contact)",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "interface_beta_sheet_complementarity_for_flat_epitope",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "aromatic_contact_to_PheB24_PheB25_pocket_mimicry",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "IGF1R_cross_reactivity_predicted_binding",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "signaling_bias_conformational_proxy",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "aggregation_propensity",
+        "computable": "computable_now"
+      },
+      {
+        "name": "immunogenicity_proxy",
+        "computable": "computable_now"
+      },
+      {
+        "name": "aromatic_fraction",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "The empirical power table dominates: actifPTM (0.47), interface_residues (0.45), and boltz2_min_ipsae (0.45) are the strongest discriminators and receive the bulk of the weight, with boltz2_iptm as a supporting complex-confidence term. INSR presents a challenging 'sheet_flat' interface with a discontinuous L1 binding site formed by two distant primary-sequence regions plus the alphaCT segment (PMID 37717984, 36739671, 34907529, 30230175), so interface_residues and interface confidence metrics that capture multi-region engagement are especially informative here \u2014 justifying keeping interface_residues high. shape_complementarity gets modest weight because a flat sheet epitope rewards good packing but the empirical power (0.18) is low. A small positive aromatic_fraction weight reflects that the natural hormone-binding hotspot is an aromatic triplet (PheB24/PheB25/TyrB26) engaging L1/alphaCT (PMID 30230175); aromatic side chains in the binder may mimic these invariant contacts. Negative weights are assigned to aggregation_propensity and immunogenicity_proxy (both liabilities for synthetic/de novo agonists, PMID 41086805, 36739671) and to hydrophobic_fraction (excess surface hydrophobicity at a polar, flat sheet epitope \u2014 epitope frac_polar 0.58, hydrophobicity -0.28 \u2014 promotes aggregation/nonspecificity). Failure penalties capture the target-specific danger that agonist binders can drive proliferation/carcinogenicity (PMID 41086805, 21606157) \u2014 de novo agonists that avoid mitogenic MAPK/proliferation are preferred. Low-power noise metrics (<0.15) are excluded except where literature gives a specific structural rationale (aromatic mimicry). Epitope residues approximate the L1/alphaCT insulin-binding surface and hormone contact positions.",
+    "citations": [
+      "41086805",
+      "36739671",
+      "37717984",
+      "34907529",
+      "30230175",
+      "21606157",
+      "37227951",
+      "786863"
+    ]
+  },
+  "MDM2": {
+    "weights": {
+      "computational__actifptm": 0.2564102564102564,
+      "computational__boltz2_min_ipsae": 0.2222222222222222,
+      "computational__interface_residues": 0.17094017094017092,
+      "computational__boltz2_iptm": 0.10256410256410255,
+      "shape_complementarity": 0.05128205128205127,
+      "bio__topology_helix_frac": 0.04273504273504273,
+      "aromatic_fraction": 0.04273504273504273,
+      "hydrophobic_fraction": -0.034188034188034185,
+      "bio__aggregation_propensity": -0.04273504273504273,
+      "bio__immunogenicity_proxy": -0.034188034188034185
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": -0.05,
+      "hydrophobic_fraction": -0.04,
+      "bio__immunogenicity_proxy": -0.04
+    },
+    "epitope_residues": [
+      26,
+      50,
+      54,
+      58,
+      62,
+      67,
+      72,
+      73,
+      93,
+      94,
+      96,
+      99,
+      100
+    ],
+    "liabilities": [
+      "Binding site is a shallow, largely hydrophobic cleft (p53-binding pocket); binders that are overly hydrophobic risk aggregation and poor solubility",
+      "Proteolytic instability of linear alpha-peptide mimics (literature strongly favors cyclization/stapling to overcome this)",
+      "Poor cellular internalization and tissue penetration for peptide-based binders",
+      "Interface is a flat/small secondary-structure-mediated surface (alpha-helix mimicry required: Phe19, Trp23, Leu26 triad of p53) making high shape complementarity hard to achieve",
+      "MDMX (MDMX/MDM4) cross-reactivity and selectivity concerns for pan-p53 targeting",
+      "Small-molecule MDM2 inhibitors show dose-limiting hematological toxicity in clinic (relevant for downstream, not binding prior)"
+    ],
+    "proposed_features": [
+      {
+        "name": "helical_hotspot_triad_mimicry (Phe/Trp/Leu deep-cleft insertion geometry)",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "cleft_burial_depth_of_binder_key_residues",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "cyclization_or_staple_present",
+        "computable": "computable_now"
+      },
+      {
+        "name": "interface_hydrophobic_complementarity_vs_solubility_balance",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "mdmx_selectivity_predicted_delta_iptm",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "MDM2 presents a small, well-characterized hydrophobic cleft that binds the p53 transactivation helix, with the Phe19/Trp23/Leu26 triad inserting deep into the pocket (PMID 8875929). This is an alpha-helix-mediated PPI at a flat/small interface (interface_class: sheet_flat, high strand+helix content). The empirical power table is decisive: computational co-folding confidence metrics (actifptm, boltz2_min_ipsae, interface_residues, iptm) dominate discrimination, so the bulk of weight (~0.88) is concentrated on the top four. actifptm and min_ipsae get the largest weights as the two highest-power interface-quality signals; interface_residues is upweighted because capturing the correct set of deep-cleft contacts is central for this pocket-based epitope. shape_complementarity is retained at modest weight (power 0.18) because steric complementarity to the narrow cleft is explicitly emphasized in the structural literature (PMID 8875929, 22650254). A small positive weight on helix fraction reflects that successful binders mimic the p53 amphipathic alpha-helix (PMID 17427181, 26764190), and aromatic_fraction is mildly favored because the anchoring triad relies on Phe/Trp aromatic burial. Negative weights on hydrophobic_fraction, aggregation_propensity, and immunogenicity_proxy encode the well-documented liabilities of hydrophobic, aggregation-prone, poorly-soluble peptide/peptidomimetic binders (PMID 26764190, 34017824). Low-power noise metrics (<0.15) are excluded unless anchored to a specific literature rationale. Peptide stability/internalization liabilities are captured as proposed structure-dependent features rather than weighted metrics since they are not in the menu.",
+    "citations": [
+      "8875929",
+      "22650254",
+      "17427181",
+      "26764190",
+      "34017824",
+      "39605685",
+      "40399308",
+      "35831864",
+      "28270530",
+      "41138151"
+    ]
+  },
+  "MZB1": {
+    "weights": {
+      "computational__actifptm": 0.22429906542056072,
+      "computational__interface_residues": 0.205607476635514,
+      "computational__boltz2_min_ipsae": 0.19626168224299065,
+      "computational__boltz2_iptm": 0.14018691588785046,
+      "computational__boltz2_lis": 0.05607476635514018,
+      "shape_complementarity": 0.05607476635514018,
+      "bio__disulfide_potential": 0.037383177570093455,
+      "bio__aggregation_propensity": -0.04672897196261682,
+      "bio__immunogenicity_proxy": -0.037383177570093455
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": -0.05,
+      "bio__immunogenicity_proxy": -0.04,
+      "high_disorder_interface": -0.06
+    },
+    "epitope_residues": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "liabilities": [
+      "High intrinsic disorder fraction (~0.60) \u2014 large fraction of protein may be flexible/unstructured, complicating stable epitope definition and lowering confidence of docking-based metrics on disordered segments",
+      "Saposin-like fold stabilized by three conserved disulfide bonds; cysteine oxidation state matters for native conformation, and binders should target the folded core rather than reduced/unfolded states",
+      "ER-resident secreted chaperone with signal peptide and ER-retention signal \u2014 accessibility for extracellular/antibody modalities is limited under physiological conditions",
+      "Functions via transient co-chaperone interactions (GRP94/BiP) and substrate binding (IgM/IgA tailpiece); competitive interface may be shallow and dynamic",
+      "Residues 39-72 required for caspase-2/-9 binding \u2014 a defined functional interaction hotspot that may overlap with druggable surface",
+      "No existing small-molecule tractability (no high-quality pocket, not a druggable family); protein-protein interface targeting is the realistic modality"
+    ],
+    "proposed_features": [
+      {
+        "name": "saposin_fold_core_confidence",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "disulfide_bond_native_pairing",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "interface_on_ordered_region_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "caspase_binding_motif_overlap_39_72",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "IgA_tailpiece_binding_groove_accessibility",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_disorder_local",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "MZB1 is a small (~189 aa) ER-resident saposin-like co-chaperone with a well-characterized 1.4 \u00c5 crystal structure (PMID 33453188), giving high confidence to structure-based interface metrics. The empirical power table is followed closely: the majority of weight is concentrated on the top four metrics (actifptm, interface_residues, boltz2_min_ipsae, boltz2_iptm), all of which capture complex-interface quality \u2014 the dominant success axis for a protein whose function is entirely mediated by protein-protein interactions (IgM/IgA folding, GRP94/BiP co-chaperoning, caspase-2/-9 binding). Shape complementarity and boltz2_lis receive small positive weight consistent with their modest measured power. The saposin fold is stabilized by three conserved disulfide bonds (PMID 31050855, 12792799), so bio__disulfide_potential gets a small positive weight since native binder/epitope recognition depends on the oxidized folded state. Two negative weights encode literature-supported liabilities: aggregation propensity (MZB1 is a highly-secretory-cell chaperone where misfolding/aggregation is functionally relevant) and immunogenicity proxy (target is upregulated in autoimmune disease contexts, so an immunogenic binder is undesirable). High disorder (0.60) is a caution flag but bio__disorder_fraction itself has near-zero empirical power (0.01), so it is not given metric weight; instead disorder is handled as a failure penalty for interfaces landing on disordered segments. Epitope residues 39-72 are taken directly from the mapped caspase-2/-9 binding region (PMID 11350957), representing the best-defined functional interaction surface. Low-power metrics (<0.15) are excluded to keep the prior sharp.",
+    "citations": [
+      "33453188",
+      "31050855",
+      "11350957",
+      "31127044",
+      "12792799",
+      "40738426",
+      "41869442"
+    ]
+  },
+  "PD1": {
+    "weights": {
+      "computational__interface_residues": 0.2830188679245283,
+      "computational__actifptm": 0.22641509433962262,
+      "computational__boltz2_min_ipsae": 0.18867924528301888,
+      "computational__boltz2_iptm": 0.12264150943396226,
+      "shape_complementarity": 0.056603773584905655,
+      "computational__boltz2_lis": 0.03773584905660377,
+      "bio__immunogenicity_proxy": -0.04716981132075472,
+      "bio__aggregation_propensity": -0.03773584905660377
+    },
+    "failure_penalties": {
+      "high_immunogenicity": -0.05,
+      "high_aggregation": -0.04,
+      "soluble_ligand_mimic_no_mechanical_support": -0.03
+    },
+    "epitope_residues": [
+      64,
+      66,
+      68,
+      74,
+      75,
+      76,
+      78,
+      84,
+      85,
+      86,
+      116,
+      122,
+      124,
+      126,
+      130,
+      132,
+      134,
+      136
+    ],
+    "liabilities": [
+      "PD-1 binds PD-L1/PD-L2 through the front CC'FG beta-sheet face; binders must engage this flat, mixed polar/hydrophobic interface (interface_class: mixed) which lacks a deep druggable pocket (High-Quality Pocket = False)",
+      "Interface is a shallow protein-protein contact surface, so shape complementarity and total interface residue contacts matter more than pocket-based docking metrics",
+      "High disorder fraction (0.64) in the construct region increases risk of poorly-defined binding poses and unreliable folding predictions",
+      "Fc/FcgR engagement can convert PD-1 antagonists into agonists (co-localization with TCR) \u2014 an antibody-format liability; monomeric/de novo binders avoid this but affinity to PD-1 correlates with functional effect",
+      "Mechanical force / catch-bond behavior governs PD-1 signaling: soluble ligand mimics without mechanical support bind but fail to suppress function \u2014 a mechanism-level failure mode not captured by affinity alone",
+      "Negatively charged/polar epitope (epitope_net_charge ~0, hydrophobicity -0.61) favors polar-complementary binders; overly hydrophobic binders risk aggregation and off-target",
+      "Immunogenicity of the binder scaffold is a concern for therapeutic use"
+    ],
+    "proposed_features": [
+      {
+        "name": "interface_residue_count_on_CCFG_face",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_overlap_with_PDL1_binding_footprint",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "polar_contact_fraction_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "buried_surface_area_flat_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "catch_bond_geometry_proxy_force_axis",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "binder_immunogenicity_proxy",
+        "computable": "computable_now"
+      },
+      {
+        "name": "aggregation_propensity_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "PD-1 (PDCD1) engages its ligands through a flat, mixed polar/hydrophobic beta-sheet face (CC'FG loops of the IgV domain) with no deep druggable pocket (Open Targets: High/Med-Quality Pocket = False; interface_class = mixed). Successful binders \u2014 including de novo designs (PMID 37100904) and nanobodies \u2014 must maximize the number and quality of contacts across this shallow surface rather than exploit a cavity. I therefore concentrate weight on the empirically strongest metrics that directly quantify interface engagement: computational__interface_residues (power 0.52), actifptm (0.47), and boltz2_min_ipsae (0.44), followed by boltz2_iptm (0.35). Shape_complementarity and boltz2_lis get small positive weights because a flat PPI interface makes surface fit modestly informative (consistent with the surface-fingerprint design paradigm of PMID 37100904), though their empirical power is low so weight is kept minimal. I add negative weights on immunogenicity_proxy and aggregation_propensity as literature-motivated liabilities for a therapeutic binder against this ligand-blocking surface, even though their standalone power is near noise \u2014 these encode a directional prior against known failure modes, not a predictive claim. I deliberately EXCLUDE the many low-power (<0.15) topology/composition metrics; the target's high disorder and mixed secondary-structure content mean per-residue helix/strand/loop fractions are uninformative for binding. Epitope residues correspond to the PD-1 IgV front-face ligand-binding footprint (CC', C'D, FG regions) reported in structural/mechanical studies (PMID 39333505, 37100904). The catch-bond/mechanical-support failure mode (PMID 39333505) and Fc-mediated agonism (PMID 39608214) are captured as liabilities and proposed structural features rather than weighted metrics because no listed metric measures them.",
+    "citations": [
+      "37100904",
+      "39333505",
+      "39608214",
+      "32006351",
+      "30646912",
+      "20636820",
+      "1396582",
+      "41199882"
+    ]
+  },
+  "PDGFRB": {
+    "weights": {
+      "computational__actifptm": 0.28,
+      "computational__interface_residues": 0.22,
+      "computational__boltz2_min_ipsae": 0.2,
+      "computational__boltz2_iptm": 0.12,
+      "shape_complementarity": 0.06,
+      "computational__boltz2_lis": 0.04,
+      "bio__topology_strand_frac": 0.03,
+      "bio__aggregation_propensity": -0.03,
+      "bio__immunogenicity_proxy": -0.02
+    },
+    "failure_penalties": {
+      "bio__aggregation_propensity": -0.03,
+      "bio__immunogenicity_proxy": -0.02,
+      "hydrophobic_fraction": -0.02
+    },
+    "epitope_residues": [],
+    "liabilities": [
+      "Hydrophilic, polar-dominated interface (frac_polar 0.54, epitope_hydrophobicity -0.24) makes designing high-affinity binders challenging; requires H-bond-complementary designs rather than hydrophobic packing.",
+      "Interface class is 'sheet_flat' with high strand fraction (0.43): edge-strand/beta-pairing binding mode is favored, so shape complementarity and precise strand geometry matter more than a classic pocket.",
+      "High disorder fraction (0.53) in the target region can reduce binder confidence and increase risk of unstructured, poorly folded interfaces.",
+      "PDGFRB kinase-domain small-molecule inhibition carries cardiotoxicity liability (heart disease safety flag); surface/ectodomain binders avoid this but off-target kinase cross-reactivity remains a concern for SM.",
+      "Aggregation-prone hydrophobic designed interfaces risk poor developability.",
+      "Near-neutral net charge of epitope offers few electrostatic anchor points, limiting long-range steering."
+    ],
+    "proposed_features": [
+      {
+        "name": "edge_strand_hbond_complementarity",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "beta_pairing_register_match",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "polar_contact_count_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "interface_buried_polar_sasa_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "disorder_at_epitope_flanking_residues",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "The empirical power table is dominated by interface-confidence metrics (actifptm, interface_residues, boltz2_min_ipsae, boltz2_iptm), so the bulk of weight is concentrated there following the ground-truth ranking. The literature (PMID 41519838) shows PDGFR\u03b2/PDGFR\u03b1 binders were successfully generated by RFdiffusion specifically against exposed edge-strand target sites via geometrically matched extended beta-sheets that complement polar groups with H-bonding groups. This matches the structural features here: interface_class 'sheet_flat', high strand fraction (0.43), and a hydrophilic/polar epitope (frac_polar 0.54, epitope_hydrophobicity -0.24, near-neutral charge). This justifies a modest positive weight on shape_complementarity and bio__topology_strand_frac beyond their raw power, because for a beta-pairing binding mode precise strand geometry and complementarity are mechanistically important. Because the interface is polar and flat rather than a hydrophobic pocket, hydrophobic-driven designs are penalized (negative hydrophobic_fraction and aggregation weights) to avoid nonspecific/aggregating binders. Immunogenicity is lightly penalized as standard developability. Low-power metrics (<0.15) are otherwise excluded to keep the prior sharp. Epitope residues left empty since no explicit PDB residue numbers for the exposed edge-strand are given in the literature; the actual edge-strand site should be identified structurally.",
+    "citations": [
+      "41519838",
+      "40140939",
+      "41490797",
+      "36788091",
+      "40953793"
+    ]
+  },
+  "PDL1": {
+    "weights": {
+      "computational__actifptm": 0.23999999999999994,
+      "computational__boltz2_min_ipsae": 0.20799999999999996,
+      "computational__interface_residues": 0.15999999999999998,
+      "computational__boltz2_iptm": 0.12799999999999997,
+      "shape_complementarity": 0.09599999999999997,
+      "bio__topology_strand_frac": 0.039999999999999994,
+      "bio__aggregation_propensity": -0.04799999999999999,
+      "bio__immunogenicity_proxy": -0.039999999999999994,
+      "hydrophobic_fraction": -0.039999999999999994
+    },
+    "failure_penalties": {
+      "high_aggregation_propensity": -0.06,
+      "high_immunogenicity_proxy": -0.05,
+      "excessive_hydrophobic_exposure": -0.05
+    },
+    "epitope_residues": [
+      19,
+      54,
+      56,
+      66,
+      68,
+      115,
+      116,
+      117,
+      121,
+      123,
+      124,
+      125
+    ],
+    "liabilities": [
+      "Flat sheet interface (IgV-like front beta-sheet) offers few deep pockets, so binders relying on cavity engagement fail; interface is broad and shallow requiring high shape complementarity across an extended surface.",
+      "Epitope is largely polar/near-neutral (net charge ~-0.02, frac_polar 0.54); overly hydrophobic binders risk nonspecific aggregation without gaining specificity.",
+      "PD-L1 is heavily post-translationally regulated (O-GlcNAcylation, lactylation at K189, ubiquitination) affecting surface abundance and trafficking; binders must engage the extracellular IgV PD-1-binding face, not modification-masked regions.",
+      "As a secreted/EV-associated and membrane-shed antigen, binders may be sequestered by soluble/EV PD-L1 reducing effective tumor engagement.",
+      "Immunogenicity of engineered binders (nanobody/scaffold) is a translational risk given repeated dosing in immunotherapy context."
+    ],
+    "proposed_features": [
+      {
+        "name": "interface_beta_sheet_contact_area",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "PD1_competitive_epitope_overlap",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "extended_flat_interface_shape_complementarity",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "polar_contact_fraction_at_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "aggregation_propensity_solvent_exposed",
+        "computable": "computable_now"
+      },
+      {
+        "name": "humanness_immunogenicity_score",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "PD-L1 (CD274) presents an IgV-like immunoglobulin fold whose PD-1 binding face is a flat, front beta-sheet (interface_class=sheet_flat; frac_strand 0.42). Competitive blockade must recognize this extended, shallow, polar surface rather than a deep druggable pocket (Open Targets: only med-quality pocket, high-quality ligand from structures). I therefore concentrate the majority of weight on the empirically strongest complex-quality metrics (actifptm, boltz2_min_ipsae, interface_residues, iptm), which best separate binders on this target. Because the epitope is a broad flat sheet, shape_complementarity and a mild positive strand-fraction term get modest weight \u2014 capturing the need for a well-formed, extended complementary surface (deviation from generic ranking, justified by sheet_flat architecture). The epitope is near-neutral and polar, so overly hydrophobic binders are penalized (negative hydrophobic_fraction) to avoid nonspecific/aggregation-driven false engagement, and aggregation propensity is penalized directly. Immunogenicity is penalized given the repeat-dosing immunotherapy context and prevalent nanobody/scaffold binders in the literature. Low-power (<0.15) metrics are otherwise excluded to keep the prior sharp. Epitope residues reflect the PD-1-contacting IgV front face reported for PD-L1 (e.g., residues around 54-56, 66-68, 115-125, and Y56/M115/A121 hotspots) that competitive binders and nanobodies target.",
+    "citations": [
+      "32006351",
+      "20636820",
+      "30646912",
+      "36943877",
+      "40614853",
+      "36719382",
+      "34596400",
+      "39234811",
+      "26724936"
+    ]
+  },
+  "PMVK": {
+    "weights": {
+      "computational__actifptm": 0.2803738317757009,
+      "computational__interface_residues": 0.22429906542056072,
+      "computational__boltz2_min_ipsae": 0.205607476635514,
+      "computational__boltz2_iptm": 0.13084112149532712,
+      "computational__boltz2_lis": 0.04672897196261682,
+      "shape_complementarity": 0.04672897196261682,
+      "bio__aggregation_propensity": -0.037383177570093455,
+      "bio__immunogenicity_proxy": -0.02803738317757009
+    },
+    "failure_penalties": {
+      "high_disorder_interface": -0.1,
+      "flat_sheet_low_complementarity": -0.08,
+      "aggregation_prone_binder": -0.06
+    },
+    "epitope_residues": [
+      100,
+      101,
+      132,
+      135,
+      155,
+      24,
+      99
+    ],
+    "liabilities": [
+      "PMVK adopts a GHMP kinase alpha/beta fold with a deep interdomain catalytic cleft; the functional site is a negatively charged groove that binds phosphomevalonate and ATP \u2014 small-molecule/orthosteric competition is challenging and no ligand-bound druggable pocket is annotated (tractability all False).",
+      "High disorder fraction (~0.61) suggests substantial flexible/loop content that can degrade binder interface confidence and predictions.",
+      "interface_class is 'sheet_flat' \u2014 flat beta-sheet interfaces are entropically difficult targets with low intrinsic shape complementarity, favoring larger contact-area binders.",
+      "Active-site region is highly solvated (ordered water pentamer near reactive groups) which can reduce binder desolvation gains.",
+      "Lys100/Lys101 side-chain conformational switching upon ligand binding introduces induced-fit plasticity that complicates fixed-backbone design.",
+      "Negatively charged epitope groove (epitope_net_charge ~ -0.02, polar frac ~0.51) favors complementary positively charged/polar binder surfaces."
+    ],
+    "proposed_features": [
+      {
+        "name": "interface_electrostatic_complementarity_to_negative_groove",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "binder_contact_area_on_flat_sheet_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "catalytic_cleft_occupancy_fraction",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_disorder_overlap",
+        "computable": "computable_now"
+      },
+      {
+        "name": "positive_charge_density_of_binder_paratope",
+        "computable": "computable_now"
+      }
+    ],
+    "rationale": "PMVK is a GHMP-family phosphomevalonate kinase whose functional/binding interface is a deep, negatively charged interdomain groove accommodating phosphomevalonate and ATP (PMID 19485344, 18618710, 36209956). The empirical power table dominates the prior: I concentrate ~90% of positive weight on the top four discriminative complex-prediction metrics (actifptm, interface_residues, boltz2_min_ipsae, boltz2_iptm), which directly capture interface quality where this target's success is determined. Shape_complementarity and boltz2_lis get small positive weight because a flat sheet interface (interface_class='sheet_flat') makes complementarity harder yet meaningful when achieved \u2014 but their empirical power is low so they stay minor. High disorder (0.61) and the flexible Lys100/101 switching argue for penalizing binders whose epitope overlaps disordered/loop regions and for down-weighting reliance on rigid-body metrics; I encode this via failure penalties rather than the noisy bio__disorder_fraction weight. Aggregation and immunogenicity get small negative weights as generic developability guards; no other low-power bio metrics are included to avoid a diffuse prior. Epitope residues are the conserved GHMP catalytic/substrate-binding positions (Lys100, Lys101, Glu132, Asp135, Asp155-analog, Glu24, Ser99) mapped from the S. pneumoniae ternary complex and GHMP-family mutagenesis studies (PMID 19485344, 19509296, 11751891); these define the negatively charged reactive groove a binder should engage.",
+    "citations": [
+      "19485344",
+      "18618710",
+      "36209956",
+      "11751891",
+      "19509296",
+      "42361171",
+      "34440098"
+    ]
+  }
+}

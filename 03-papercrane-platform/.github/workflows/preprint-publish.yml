@@ -1,0 +1,191 @@
+name: preprint-publish
+
+# Monthly rebuild and Zenodo publication of the Paper Crane benchmark preprint.
+
+on:
+  schedule:
+    # 08:00 UTC on the 1st of every month.
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Override release version (YYYY.MM). Leave blank to auto-derive.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preprint-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Build and archive preprint
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    env:
+      VERSION: ${{ github.event.inputs.version }}
+      ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install workspace dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install TeX Live and zip
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-full zip
+
+      - name: Derive version
+        id: version
+        run: |
+          if [ -z "${VERSION}" ]; then
+            VERSION="$(date -u +%Y.%m)"
+          fi
+          DATE="$(date -u +%Y%m%d)"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "date=${DATE}"       >> "$GITHUB_OUTPUT"
+          echo "zip=benchmark-v${VERSION}-${DATE}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate assets
+        run: pnpm --filter @papercrane/preprint-assets run build:assets
+
+      - name: Build PDF
+        run: make -C benchmark/preprint build
+
+      - name: Package release zip
+        run: |
+          make -C benchmark/preprint package \
+            VERSION=${{ steps.version.outputs.version }} \
+            DATE=${{ steps.version.outputs.date }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.version.outputs.zip }}
+          path: benchmark/preprint/${{ steps.version.outputs.zip }}
+          if-no-files-found: error
+
+      - name: Publish to Zenodo
+        id: zenodo
+        if: ${{ env.ZENODO_TOKEN != '' }}
+        env:
+          ZIP_PATH: benchmark/preprint/${{ steps.version.outputs.zip }}
+          RELEASE_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+
+          # --- 1. Create a new empty deposition -----------------------------
+          CREATE_RESP=$(curl -sSf -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${ZENODO_TOKEN}" \
+            -d '{}' \
+            "https://zenodo.org/api/deposit/depositions")
+          DEPOSITION_ID=$(echo "${CREATE_RESP}" | jq -r '.id')
+          BUCKET_URL=$(echo     "${CREATE_RESP}" | jq -r '.links.bucket')
+          echo "Created Zenodo deposition ${DEPOSITION_ID}"
+
+          # --- 2. Upload the release zip to the bucket ----------------------
+          FILE_NAME=$(basename "${ZIP_PATH}")
+          curl -sSf -X PUT \
+            -H "Authorization: Bearer ${ZENODO_TOKEN}" \
+            --upload-file "${ZIP_PATH}" \
+            "${BUCKET_URL}/${FILE_NAME}"
+          echo "Uploaded ${FILE_NAME} to bucket"
+
+          # --- 2a. Attach metadata ------------------------------------------
+          METADATA=$(jq -n \
+            --arg title    "The Paper Crane Benchmark v${RELEASE_VERSION}" \
+            --arg version  "${RELEASE_VERSION}" \
+            --arg desc     "Continuously updated leaderboard for protein binder design." \
+            '{metadata: {
+                title:        $title,
+                upload_type:  "publication",
+                publication_type: "preprint",
+                description:  $desc,
+                version:      $version,
+                creators: [
+                  {name: "Poonepalle, Harsha",  affiliation: "Paper Crane"},
+                  {name: "Kalipatnapu, Vedant", affiliation: "Paper Crane"}
+                ]
+            }}')
+          curl -sSf -X PUT \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${ZENODO_TOKEN}" \
+            -d "${METADATA}" \
+            "https://zenodo.org/api/deposit/depositions/${DEPOSITION_ID}"
+
+          # --- 3. Publish the deposition ------------------------------------
+          PUBLISH_RESP=$(curl -sSf -X POST \
+            -H "Authorization: Bearer ${ZENODO_TOKEN}" \
+            "https://zenodo.org/api/deposit/depositions/${DEPOSITION_ID}/actions/publish")
+          DOI=$(echo "${PUBLISH_RESP}" | jq -r '.doi')
+          echo "Published to Zenodo with DOI ${DOI}"
+
+          echo "doi=${DOI}" >> "$GITHUB_OUTPUT"
+
+      - name: Open PR to bump CITATION.cff
+        if: ${{ steps.zenodo.outputs.doi != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOI:     ${{ steps.zenodo.outputs.doi }}
+          VERSION: ${{ steps.version.outputs.version }}
+          DATE:    ${{ steps.version.outputs.date }}
+        run: |
+          set -euo pipefail
+          BRANCH="preprint/release-${VERSION}"
+          git config user.name  "papercrane-bot"
+          git config user.email "bot@papercrane.bio"
+          git checkout -b "${BRANCH}"
+
+          if [ -f CITATION.cff ]; then
+            python3 - <<'PY'
+          import os, re, pathlib
+          p = pathlib.Path("CITATION.cff")
+          text = p.read_text()
+          text = re.sub(r'^version:.*$',       f'version: {os.environ["VERSION"]}', text, flags=re.M)
+          text = re.sub(r'^date-released:.*$', f'date-released: {os.environ["DATE"][:4]}-{os.environ["DATE"][4:6]}-{os.environ["DATE"][6:8]}', text, flags=re.M)
+          text = re.sub(r'^doi:.*$',           f'doi: {os.environ["DOI"]}', text, flags=re.M)
+          p.write_text(text)
+          PY
+          else
+            cat > CITATION.cff <<EOF
+          cff-version: 1.2.0
+          title: The Paper Crane Benchmark
+          version: ${VERSION}
+          date-released: ${DATE:0:4}-${DATE:4:2}-${DATE:6:2}
+          doi: ${DOI}
+          authors:
+            - family-names: Poonepalle
+              given-names: Harsha
+            - family-names: Kalipatnapu
+              given-names: Vedant
+          EOF
+          fi
+
+          git add CITATION.cff
+          git commit -m "chore(preprint): bump CITATION.cff for v${VERSION} (DOI ${DOI})"
+          git push -u origin "${BRANCH}"
+          gh pr create \
+            --title "Preprint release v${VERSION}" \
+            --body  "Automated release from preprint-publish workflow. DOI: ${DOI}." \
+            --base  main \
+            --head  "${BRANCH}"

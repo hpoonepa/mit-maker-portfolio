@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "papercrane://tools/alphafold3/output",
+  "title": "AlphaFold3 Output",
+  "description": "Per-seed structure prediction outputs returned by the AlphaFold 3 API.",
+  "type": "object",
+  "required": ["predictions"],
+  "additionalProperties": false,
+  "properties": {
+    "predictions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "seed", "metrics"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "type": "string",
+            "description": "Relative path (inside the job output dir) to the mmCIF file for this seed/sample."
+          },
+          "seed": { "type": "integer" },
+          "sampleIndex": { "type": "integer", "minimum": 0 },
+          "metrics": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "ranking_score": { "type": "number" },
+              "iptm": { "type": "number", "minimum": 0, "maximum": 1 },
+              "ptm":  { "type": "number", "minimum": 0, "maximum": 1 },
+              "plddt_mean": { "type": "number", "minimum": 0, "maximum": 100 },
+              "per_chain_ptm": {
+                "type": "object",
+                "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+              },
+              "per_chain_iptm": {
+                "type": "object",
+                "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

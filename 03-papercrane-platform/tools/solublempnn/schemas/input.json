@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/solublempnn/input.json",
+  "title": "SolubleMPNN Input Parameters",
+  "description": "Normalized request shape for the SolubleMPNN sequence-design adapter. SolubleMPNN is ProteinMPNN loaded with the solubility-biased checkpoint (soluble_v_48_020.pt); the wire format is identical to ProteinMPNN plus a `solubility_strictness` knob.",
+  "type": "object",
+  "required": ["backbones", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "backbones": {
+      "description": "List of backbone structures to design sequences for. Typically S3 URIs resolved into /inputs/backbones/*.pdb at runtime.",
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "seeds": {
+      "description": "Random seeds for sampling; one run per seed, producing num_seq_per_target sequences each.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0 },
+      "minItems": 1
+    },
+    "params": {
+      "description": "SolubleMPNN-specific knobs.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "description": "Sampling temperature (lower = more deterministic).",
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 1.0,
+          "default": 0.1
+        },
+        "omit_aas": {
+          "description": "Single-letter amino acids to exclude from designed sequences. Default 'CXHKR' avoids cysteines plus charged residues (H/K/R) that correlate with E. coli inclusion-body formation.",
+          "type": "string",
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWXY]*$",
+          "default": "CXHKR"
+        },
+        "num_seq_per_target": {
+          "description": "Number of sequences to sample per backbone per seed.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64,
+          "default": 1
+        },
+        "solubility_strictness": {
+          "description": "'default' uses the standard soluble_v_48_020 checkpoint; 'strict' keeps the default charged-residue omit list even if the user overrides it, and caps `temperature` at 0.1. Intended for high-confidence E. coli expression campaigns.",
+          "type": "string",
+          "enum": ["default", "strict"],
+          "default": "default"
+        },
+        "fixed_positions": {
+          "description": "Optional per-chain fixed residue indices (1-based). Keys are chain IDs; values are lists of residue indices whose identity should NOT be redesigned.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

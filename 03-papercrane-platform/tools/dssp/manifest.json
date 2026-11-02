@@ -1,0 +1,23 @@
+{
+  "id": "dssp",
+  "displayName": "DSSP",
+  "version": "4.6.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "BSD-2-Clause",
+  "image": "ghcr.io/papercrane/dssp:4.6.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 10,
+    "note": "Secondary-structure assignment from atomic coordinates; beta until the pinned source build and output parser pass a live smoke test."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "minPpStretch": 3, "writeOther": true },
+  "composes": []
+}

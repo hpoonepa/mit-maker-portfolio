@@ -1,0 +1,11 @@
+{
+  "plddt_mean": 79.1,
+  "plddt_binder": 75.6,
+  "ptm": 0.72,
+  "iptm": 0.65,
+  "ipae_mean": 9.7,
+  "per_chain_ptm": {
+    "A": 0.76,
+    "B": 0.68
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "5G51": {
+    "weights": {
+      "computational__actifptm": 0.2641509433962264,
+      "computational__interface_residues": 0.24528301886792453,
+      "computational__boltz2_min_ipsae": 0.22641509433962262,
+      "shape_complementarity": 0.11320754716981131,
+      "bio__topology_loop_frac": -0.04716981132075472,
+      "bio__aggregation_propensity": -0.028301886792452827,
+      "aromatic_fraction": 0.07547169811320754
+    },
+    "failure_penalties": {
+      "high_loop_fraction_without_compensatory_structure": 0.15,
+      "poor_epitope_accessibility_in_sheet_flat_interface": 0.12,
+      "aggregation_prone_minibinder": -0.08
+    },
+    "epitope_residues": [
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "liabilities": [
+      "High loop fraction (0.48) may require conformational selection or induced-fit mechanism to achieve specificity",
+      "Flat sheet interface (sheet_flat class) suggests limited surface topology \u2014 binder must exploit limited geometric features",
+      "Neutral net charge (0.0) on epitope reduces charge complementarity opportunity; success depends on H-bonding and shape fit",
+      "Moderate strand fraction (0.42) combined with high loop content creates variable epitope geometry \u2014 conformational plasticity of target may demand binder plasticity or ensembles",
+      "P domain of VP3 is known to be highly mobile (literature supports conformational dynamics); binder must tolerate or exploit this motion"
+    ],
+    "proposed_features": [
+      {
+        "name": "P_domain_mobility_index",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "epitope_loop_coverage_fraction",
+        "computable": "computable_now"
+      },
+      {
+        "name": "shape_fit_to_flat_sheet_interface",
+        "computable": "needs_structure"
+      },
+      {
+        "name": "aromatic_residue_clustering_at_interface",
+        "computable": "computable_now"
+      },
+      {
+        "name": "conformational_selectivity_score",
+        "computable": "needs_structure"
+      }
+    ],
+    "rationale": "DWV VP3 P-domain (5G51) is a compact sheet-flat epitope with high loop content and inherent conformational plasticity documented in the calicivirus literature. The literature on norovirus (a related calicivirus) demonstrates that successful nanobodies neutralize via conformational modulation and epitope accessibility in the 'raised' conformation; epitopes are located on surface loops of the P1/P2 domains, not within buried regions. The empirical power ranking is followed for top-3 metrics (actifptm, interface_residues, boltz2_min_ipsae), which capture interface quality and positioning \u2014 critical for a target with 0.48 loop fraction. Shape complementarity is elevated (0.12) because the literature emphasizes that antibodies against calicivirus P domains succeed via precise 3D fit to variable loop topologies; Fc-linked nanobodies and engineered bivalent vaccines show improved binding through geometric optimization. Aromatic fraction (0.08, positive) is included because literature shows hydrophobic/aromatic-rich sequences ('killswitch' motif) self-associate and exploit aromatic contacts on capsid surfaces. Loop fraction is penalized (\u22120.05) because high loop content introduces conformational entropy; this is a liability unless the binder itself adopts an ensemble. Aggregation is slightly penalized (\u22120.03) because the literature emphasizes that nanobodies must remain monomeric or properly dimerized for therapeutic efficacy; uncontrolled aggregation destroys potency. Epitope residues are mapped from literature (PMID 37392840, 38819530) to conserved P1 subdomain regions 380\u2013395 and 496\u2013513, which are known blockade and cross-reactive sites in related noroviruses. No pocket_volume or druggability metrics are populated because P domain is a conformational epitope, not a small-molecule binding pocket. Net charge (0.0) is neutral, reducing charge-based discrimination utility.",
+    "citations": [
+      "30857192",
+      "37845211",
+      "30791623",
+      "40333967",
+      "26676802",
+      "34246112",
+      "39459929",
+      "38953655",
+      "39389971",
+      "23689062",
+      "38905108",
+      "38819530",
+      "37392840",
+      "40468084",
+      "40506710"
+    ]
+  }
+}

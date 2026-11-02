@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/proteinmpnn/input.json",
+  "title": "ProteinMPNN Input Parameters",
+  "description": "Normalized request shape for the ProteinMPNN sequence-design adapter. ProteinMPNN consumes backbones (not targets) and emits FASTA sequences.",
+  "type": "object",
+  "required": ["backbones", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "backbones": {
+      "description": "List of backbone structures to design sequences for. Typically S3 URIs resolved into /inputs/backbones/*.pdb at runtime.",
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "seeds": {
+      "description": "Random seeds for sampling; one run per seed, producing num_seq_per_target sequences each.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 0 },
+      "minItems": 1
+    },
+    "params": {
+      "description": "ProteinMPNN-specific knobs.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "temperature": {
+          "description": "Sampling temperature (lower = more deterministic).",
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 1.0,
+          "default": 0.1
+        },
+        "omit_aas": {
+          "description": "Single-letter amino acids to exclude from designed sequences. 'X' is always recommended; 'C' removes cysteines.",
+          "type": "string",
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWXY]*$",
+          "default": "CX"
+        },
+        "num_seq_per_target": {
+          "description": "Number of sequences to sample per backbone per seed.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64,
+          "default": 1
+        },
+        "fixed_positions": {
+          "description": "Optional per-chain fixed residue indices (1-based). Keys are chain IDs; values are lists of residue indices whose identity should NOT be redesigned.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

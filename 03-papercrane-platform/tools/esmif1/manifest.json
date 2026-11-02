@@ -1,0 +1,23 @@
+{
+  "id": "esmif1",
+  "displayName": "ESM-IF1",
+  "version": "2.0.0",
+  "adapterVersion": "a1",
+  "category": "sequence_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/esmif1:2.0.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A10G",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 16,
+    "estSecondsPerDesign": 12,
+    "note": "ESM-IF1 fixed-backbone sequence sampling; beta until live Modal smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "temperature": 1.0, "chainId": "A" },
+  "composes": []
+}

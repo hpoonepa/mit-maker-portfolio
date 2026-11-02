@@ -1,0 +1,31 @@
+{
+  "name": "@papercrane/email",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@papercrane/brand": "workspace:*",
+    "@papercrane/observability": "workspace:*",
+    "@papercrane/types": "workspace:*",
+    "@react-email/components": "0.0.25",
+    "@react-email/render": "1.0.1",
+    "react": "18.3.1",
+    "resend": "4.0.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@papercrane/eslint-config": "workspace:*",
+    "@types/node": "22.4.1",
+    "@types/react": "18.3.12",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  }
+}

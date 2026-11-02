@@ -1,0 +1,8 @@
+candidate_id,origin,provenance,status,observed_methods,total_methods,rank_best,rank_worst,blocked_reasons
+candidate-A,demo-pipeline-one,synthetic,consistently_in_top_k,3,3,1,1,
+candidate-B,demo-pipeline-one,synthetic,boundary_ambiguous,3,3,2,3,
+candidate-C,demo-pipeline-two,synthetic,boundary_ambiguous,3,3,2,3,
+candidate-D,demo-pipeline-two,synthetic,consistently_outside_top_k,3,3,4,5,
+candidate-E,demo-pipeline-three,synthetic,consistently_outside_top_k,3,3,4,5,
+candidate-F,demo-pipeline-three,synthetic,not_comparable,1,3,,,incomplete_evidence
+candidate-G,demo-import,unknown,not_comparable,3,3,,,unverified_provenance

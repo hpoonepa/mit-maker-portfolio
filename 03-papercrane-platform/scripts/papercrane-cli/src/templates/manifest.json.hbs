@@ -1,0 +1,22 @@
+{
+  "id": "{{id}}",
+  "displayName": "{{displayName}}",
+  "version": "0.1.0",
+  "adapterVersion": "a1",
+  "category": "{{category}}",
+  "tier": "{{tier}}",
+  "license": "{{license}}",
+  "image": "ghcr.io/papercrane/{{id}}:0.1.0-cuda12.1-a1",
+  "imageDigest": "sha256:{{shaPlaceholder}}",
+  "compute": {
+    "gpu": "{{gpu}}",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": {{memoryGb}},
+    "estSecondsPerDesign": {{estSeconds}}
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {},
+  "composes": [{{#each composes}}{{#unless @first}}, {{/unless}}"{{this}}"{{/each}}]
+}

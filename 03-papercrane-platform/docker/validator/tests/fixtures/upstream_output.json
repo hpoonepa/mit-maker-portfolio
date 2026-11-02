@@ -1,0 +1,25 @@
+{
+  "tool": "bindcraft",
+  "tool_version": "1.2.0",
+  "adapter_version": "a3",
+  "target_pdb": "tests/fixtures/target.pdb",
+  "target_chain": "A",
+  "binder_chain": "B",
+  "hotspots": [
+    {"chain": "A", "resi": 2},
+    {"chain": "A", "resi": 4}
+  ],
+  "designs": [
+    {
+      "path": "tests/fixtures/design_0001.pdb",
+      "seed": 42,
+      "upstream_metrics": {
+        "iptm": 0.82,
+        "plddt": 86.4,
+        "i_pae": 7.1,
+        "hs_contact": 0.66,
+        "sequence": "LFE"
+      }
+    }
+  ]
+}

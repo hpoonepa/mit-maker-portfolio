@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/disco/input.json",
+  "title": "DISCO Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "sequences": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "oneOf": [
+              { "type": "string", "pattern": "^[ACDEFGHIKLMNPQRSTVWY-]+$" },
+              {
+                "type": "object",
+                "required": ["sequence"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "sequence": {
+                    "type": "string",
+                    "pattern": "^[ACDEFGHIKLMNPQRSTVWY-]+$"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "proteinLength": { "type": "integer", "minimum": 50, "maximum": 500 },
+        "preserveSequence": { "type": "boolean" },
+        "ligand": { "type": "string" },
+        "ligandSmiles": { "type": "string" },
+        "ligand_sdf": { "type": "string" },
+        "dnaSequence": { "type": "string", "pattern": "^[ATGCN]+$" },
+        "rnaSequence": { "type": "string", "pattern": "^[AUGCN]+$" },
+        "experiment": { "enum": ["designable", "diverse"] },
+        "effort": { "enum": ["fast", "max"] },
+        "noisyGuidance": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

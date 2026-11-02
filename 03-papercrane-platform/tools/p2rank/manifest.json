@@ -1,0 +1,23 @@
+{
+  "id": "p2rank",
+  "displayName": "P2Rank",
+  "version": "2.5.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/p2rank:2.5.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 15,
+    "note": "Machine-learning binding-pocket prediction on protein structures; beta until live Java image smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "profile": "default" },
+  "composes": []
+}

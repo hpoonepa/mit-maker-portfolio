@@ -1,0 +1,27 @@
+{
+  "id": "rfdiffusionaa",
+  "displayName": "RFdiffusion All-Atom",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "backbone_generation",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/rfdiffusionaa:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 24,
+    "estSecondsPerDesign": 35
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "num_designs": 1,
+    "binder_length_range": [60, 150],
+    "noise_scale": 1.0
+  },
+  "composes": ["proteinmpnn"]
+}

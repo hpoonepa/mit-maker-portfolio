@@ -1,0 +1,71 @@
+# Quickstart
+
+A complete binder design run, end to end, in about five minutes. We'll target IL-7Rα as a
+worked example, but any PDB ID or AlphaFold accession works.
+
+## 1. Sign up (30 seconds)
+
+Open [app.papercrane.bio](https://app.papercrane.bio) and sign up with email or GitHub.
+You start on the free tier — 50 seeds, two concurrent jobs.
+
+## 2. Create a project (20 seconds)
+
+A **project** is your namespace for related work — targets, jobs, designs, and team
+members all live inside one. From the dashboard, click **New project** and name it
+`il7r-binders`.
+
+## 3. Add a target (1 minute)
+
+Inside your project, click **Add target** and paste a PDB ID:
+
+```
+3DI3
+```
+
+Paper Crane fetches the structure, splits chains, and asks you which chain you want to
+bind. Pick chain `A` and select hotspots — either let the platform infer them (default)
+or click residues directly on the 3D viewer.
+
+## 4. Launch a job (10 seconds)
+
+Click **New job** → **Binder design (default)**. The default pipeline is:
+
+1. **RFdiffusion** — generate 200 backbones around your hotspots
+2. **ProteinMPNN** — assign sequences to each backbone
+3. **Boltz-2** — predict the binder/target complex and score it
+4. **ESM-2** — pre-filter on pseudo-log-likelihood
+
+Click **Run**. The job lands in the queue and starts within ~30 seconds.
+
+## 5. Watch it run (~3 minutes)
+
+The job page streams live logs and shows per-tool progress. Each design becomes a row in
+the table as soon as Boltz-2 finishes scoring it. Sort by `ipsae` (Paper Crane's
+recommended composite metric — see [Designs & metrics](/concepts/designs-and-metrics)).
+
+## 6. Download designs (10 seconds)
+
+Click the top design's row → **Download bundle**. You get:
+
+- The designed sequence (FASTA)
+- The predicted complex (CIF + PDB)
+- A metrics JSON with ipTM, pAE, pLDDT, ipSAE, dG estimate
+- A reproducibility manifest (tool versions, seeds, params)
+
+```bash
+papercrane jobs download <job-id> --top 10 --out ./designs/
+```
+
+That bundle is what you order from a peptide synthesizer. The metrics manifest is what
+your collaborator reads when they ask "but is it real?".
+
+## What's next
+
+- [Concepts](/concepts/projects-and-targets) for a deeper model of the platform
+- [Tools](/tools) if you want to swap nodes in the default pipeline
+- [API](/api) if you want to skip the UI entirely
+
+<Callout variant="tip">
+Free-tier seeds are enough for one quickstart run with room to spare. Each design
+through Boltz-2 costs **1 seed**. Frontier predictors (AlphaFold 3, Chai-1) cost **2 seeds**.
+</Callout>

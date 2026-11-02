@@ -1,0 +1,52 @@
+REMARK   Synthetic fixture for papercrane-validator hotspot tests.
+REMARK   Chain A = target (residues 1..5).
+REMARK   Chain B = binder (residues 1..3), one heavy atom each.
+REMARK
+REMARK   Target CA coords (chain A):
+REMARK     1  (  1.458,   0.000, 0.000)
+REMARK     2  (  4.012,   2.830, 0.000)   <-- hotspot
+REMARK     3  (  7.443,   1.174, 0.000)
+REMARK     4  (  9.497,  -2.015, 0.000)   <-- hotspot
+REMARK     5  ( 13.063,  -3.406, 0.000)
+REMARK
+REMARK   Binder CA coords (chain B):
+REMARK     1  (  4.012,   2.830,  4.500)  <-- contacts A/2 (4.50 A) only
+REMARK     2  (  9.497,  -2.015,  4.500)  <-- contacts A/4 (4.50 A) only
+REMARK     3  ( 50.000,  50.000, 50.000)  <-- far from everything
+REMARK
+REMARK   The z-offset of 4.5 A was chosen because:
+REMARK     - 4.5 A < 5.0 A cutoff  => contact to its intended hotspot
+REMARK     - dist from B/1 to A/3 = sqrt(3.43^2 + 1.66^2 + 4.5^2) ~ 5.90
+REMARK     - dist from B/2 to A/3 = sqrt(2.05^2 + 3.19^2 + 4.5^2) ~ 5.88
+REMARK     - dist from B/1 to A/1 > 5.0, dist from B/2 to A/5 > 5.0
+ATOM      1  N   ALA A   1       0.000   0.000   0.000  1.00 20.00           N
+ATOM      2  CA  ALA A   1       1.458   0.000   0.000  1.00 20.00           C
+ATOM      3  C   ALA A   1       2.009   1.420   0.000  1.00 20.00           C
+ATOM      4  O   ALA A   1       1.251   2.390   0.000  1.00 20.00           O
+ATOM      5  CB  ALA A   1       1.988  -0.773  -1.199  1.00 20.00           C
+ATOM      6  N   GLY A   2       3.332   1.536   0.000  1.00 20.00           N
+ATOM      7  CA  GLY A   2       4.012   2.830   0.000  1.00 20.00           C
+ATOM      8  C   GLY A   2       5.520   2.685   0.000  1.00 20.00           C
+ATOM      9  O   GLY A   2       6.266   3.668   0.000  1.00 20.00           O
+ATOM     10  N   SER A   3       6.006   1.451   0.000  1.00 20.00           N
+ATOM     11  CA  SER A   3       7.443   1.174   0.000  1.00 20.00           C
+ATOM     12  C   SER A   3       7.762  -0.315   0.000  1.00 20.00           C
+ATOM     13  O   SER A   3       6.903  -1.195   0.000  1.00 20.00           O
+ATOM     14  CB  SER A   3       8.117   1.845   1.205  1.00 20.00           C
+ATOM     15  OG  SER A   3       9.520   1.595   1.205  1.00 20.00           O
+ATOM     16  N   VAL A   4       9.035  -0.627   0.000  1.00 20.00           N
+ATOM     17  CA  VAL A   4       9.497  -2.015   0.000  1.00 20.00           C
+ATOM     18  C   VAL A   4      11.026  -2.039   0.000  1.00 20.00           C
+ATOM     19  O   VAL A   4      11.665  -0.987   0.000  1.00 20.00           O
+ATOM     20  CB  VAL A   4       8.964  -2.789  -1.220  1.00 20.00           C
+ATOM     21  N   LYS A   5      11.608  -3.231   0.000  1.00 20.00           N
+ATOM     22  CA  LYS A   5      13.063  -3.406   0.000  1.00 20.00           C
+ATOM     23  C   LYS A   5      13.416  -4.894   0.000  1.00 20.00           C
+ATOM     24  O   LYS A   5      12.530  -5.759   0.000  1.00 20.00           O
+ATOM     25  CB  LYS A   5      13.664  -2.764  -1.264  1.00 20.00           C
+TER      26      LYS A   5
+ATOM     27  CA  LEU B   1       4.012   2.830   4.500  1.00 30.00           C
+ATOM     28  CA  PHE B   2       9.497  -2.015   4.500  1.00 30.00           C
+ATOM     29  CA  GLU B   3      50.000  50.000  50.000  1.00 30.00           C
+TER      30      GLU B   3
+END

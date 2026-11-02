@@ -1,0 +1,227 @@
+{
+  "benchmark_id": "Synthetic fixed-budget benchmark",
+  "campaigns": [
+    {
+      "agreement_diagnostic": {
+        "consistently_in_top_k": 0,
+        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "observed_positive_fraction": null,
+        "positive_outcomes": 0,
+        "with_known_outcomes": 0
+      },
+      "campaign_id": "demo-one",
+      "common_cohort_size": 3,
+      "evaluation_group": "demo-group-one",
+      "excluded_from_cohort": 0,
+      "exclusion_reasons": [],
+      "input_sha256": "d199730daa96efab300b078f9d383eae6bb47de99d2ea6ad743ca236ed122e07",
+      "metrics": {
+        "alternative": {
+          "cutoff_tie": false,
+          "expected_hits": 0.0,
+          "known_positives": 1,
+          "ndcg_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "precision_tie_bounds": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "recall_at_k": 0.0
+        },
+        "baseline": {
+          "cutoff_tie": false,
+          "expected_hits": 1.0,
+          "known_positives": 1,
+          "ndcg_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "precision_tie_bounds": {
+            "lower": 1.0,
+            "upper": 1.0
+          },
+          "recall_at_k": 1.0
+        }
+      },
+      "primary_eligible": true,
+      "supplied_candidates": 3,
+      "unknown_outcomes_in_cohort": 0
+    },
+    {
+      "agreement_diagnostic": {
+        "consistently_in_top_k": 0,
+        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "observed_positive_fraction": null,
+        "positive_outcomes": 0,
+        "with_known_outcomes": 0
+      },
+      "campaign_id": "demo-three",
+      "common_cohort_size": 3,
+      "evaluation_group": "demo-group-three",
+      "excluded_from_cohort": 0,
+      "exclusion_reasons": [],
+      "input_sha256": "3cb0926d2559b8e75c1c32d1bcd1c0d4ea6fdaebce08d04c60fcf5c8d2f4137c",
+      "metrics": {
+        "alternative": {
+          "cutoff_tie": false,
+          "expected_hits": 1.0,
+          "known_positives": 1,
+          "ndcg_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "precision_tie_bounds": {
+            "lower": 1.0,
+            "upper": 1.0
+          },
+          "recall_at_k": 1.0
+        },
+        "baseline": {
+          "cutoff_tie": false,
+          "expected_hits": 0.0,
+          "known_positives": 1,
+          "ndcg_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "precision_tie_bounds": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "recall_at_k": 0.0
+        }
+      },
+      "primary_eligible": true,
+      "supplied_candidates": 3,
+      "unknown_outcomes_in_cohort": 0
+    },
+    {
+      "agreement_diagnostic": {
+        "consistently_in_top_k": 0,
+        "note": "Descriptive selected-subset outcome rate; not calibrated confidence or a fair replacement for fixed-k comparisons.",
+        "observed_positive_fraction": null,
+        "positive_outcomes": 0,
+        "with_known_outcomes": 0
+      },
+      "campaign_id": "demo-two",
+      "common_cohort_size": 3,
+      "evaluation_group": "demo-group-two",
+      "excluded_from_cohort": 0,
+      "exclusion_reasons": [],
+      "input_sha256": "7d617f7232b310e7000edf113ebfda72905937e2a1eb0a3da681ee662de9bcaa",
+      "metrics": {
+        "alternative": {
+          "cutoff_tie": false,
+          "expected_hits": 1.0,
+          "known_positives": 1,
+          "ndcg_at_k": 1.0,
+          "precision_at_k": 1.0,
+          "precision_tie_bounds": {
+            "lower": 1.0,
+            "upper": 1.0
+          },
+          "recall_at_k": 1.0
+        },
+        "baseline": {
+          "cutoff_tie": false,
+          "expected_hits": 0.0,
+          "known_positives": 1,
+          "ndcg_at_k": 0.0,
+          "precision_at_k": 0.0,
+          "precision_tie_bounds": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "recall_at_k": 0.0
+        }
+      },
+      "primary_eligible": true,
+      "supplied_candidates": 3,
+      "unknown_outcomes_in_cohort": 0
+    }
+  ],
+  "comparisons": {
+    "alternative": {
+      "group_macro_precision_at_k": 0.6666666666666666,
+      "versus_baseline": {
+        "groups": 3,
+        "interval_95": {
+          "lower": -1.0,
+          "upper": 1.0
+        },
+        "interval_status": "paired_group_percentile_bootstrap",
+        "mean_delta": 0.3333333333333333,
+        "ties": 0,
+        "wins": 2
+      }
+    },
+    "baseline": {
+      "group_macro_precision_at_k": 0.3333333333333333,
+      "versus_baseline": {
+        "groups": 3,
+        "interval_95": {
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "interval_status": "degenerate_empirical_distribution",
+        "mean_delta": 0.0,
+        "ties": 3,
+        "wins": 0
+      }
+    }
+  },
+  "config": {
+    "baseline_method_id": "baseline",
+    "bootstrap_samples": 5000,
+    "seed": 0,
+    "top_k": 1
+  },
+  "data_kind": "synthetic_demo",
+  "group_precision_at_k": {
+    "demo-group-one": {
+      "alternative": 0.0,
+      "baseline": 1.0
+    },
+    "demo-group-three": {
+      "alternative": 1.0,
+      "baseline": 0.0
+    },
+    "demo-group-two": {
+      "alternative": 1.0,
+      "baseline": 0.0
+    }
+  },
+  "input_sha256": "d423e2b0bd4ce32fcba898d09eb7629b19c3392d94e880f47ef36d8f55d1a083",
+  "interpretation": [
+    "Synthetic demonstration results are illustrative only.",
+    "Primary endpoint: fixed-k precision on the same complete-evidence cohort for every method.",
+    "Cutoff ties are averaged uniformly; tie bounds describe possible ordering effects, not sampling confidence.",
+    "Campaigns with fewer than k comparable candidates or unknown cohort outcomes are retained in the report but excluded from primary comparisons.",
+    "Targets with zero positives remain eligible for precision; their recall and NDCG are undefined.",
+    "Campaigns are averaged within declared evaluation groups, then groups receive equal weight.",
+    "Bootstrap intervals resample paired group-level differences; small or nonrepresentative group sets limit inference.",
+    "Group/development declarations are checked for overlap, but their truth, upstream training exclusion, and sequence homology are not independently verified.",
+    "Complete-case evaluation remains conditional on evidence availability and label ascertainment.",
+    "No automatic superiority, equivalence, power, calibrated confidence, or multiple-comparison claim is made."
+  ],
+  "methods": [
+    {
+      "evidence_family": "family-two",
+      "higher_is_better": true,
+      "id": "alternative",
+      "producer": "demo-alternative",
+      "settings": {},
+      "units": "unitless",
+      "version": "1"
+    },
+    {
+      "evidence_family": "family-one",
+      "higher_is_better": true,
+      "id": "baseline",
+      "producer": "demo-baseline",
+      "settings": {},
+      "units": "unitless",
+      "version": "1"
+    }
+  ],
+  "schema_version": "evidence-benchmark-report.v1",
+  "summary": {
+    "primary_campaigns": 3,
+    "primary_evaluation_groups": 3,
+    "supplied_campaigns": 3
+  }
+}

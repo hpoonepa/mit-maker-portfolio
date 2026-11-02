@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/proteinmpnn/output.json",
+  "title": "ProteinMPNN Design Result",
+  "description": "Shape of /outputs/result.json emitted by the ProteinMPNN adapter. Each design ties a designed sequence back to the backbone it was sampled from.",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "sequence", "metrics", "seed"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the original backbone PDB the sequence was designed for.",
+            "type": "string"
+          },
+          "sequence": {
+            "description": "Designed sequence (1-letter amino acid codes).",
+            "type": "string",
+            "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+          },
+          "metrics": {
+            "description": "Tool-native ProteinMPNN metrics. Canonical metrics are added later by the validator.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "score": {
+                "description": "Global negative log-likelihood reported by ProteinMPNN (lower is better).",
+                "type": "number"
+              },
+              "confidence_mean": {
+                "description": "Mean per-residue sampling confidence.",
+                "type": "number"
+              }
+            }
+          },
+          "seed": { "type": "integer" }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "properties": {
+        "tool": { "type": "string", "const": "proteinmpnn" },
+        "adapterVersion": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

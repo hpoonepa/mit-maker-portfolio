@@ -1,0 +1,67 @@
+app = "papercrane-backend"
+primary_region = "iad"
+kill_signal = "SIGTERM"
+kill_timeout = "60s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  HOST = "0.0.0.0"
+  PORT_HEALTH = "3003"
+  WORKER_PORT = "3003"
+  LOG_LEVEL = "info"
+  REDIS_URL = "redis://127.0.0.1:6379"
+  NEXT_PUBLIC_APP_URL = "https://papercrane.bio"
+  NEXT_PUBLIC_WEB_URL = "https://papercrane.bio"
+  CORS_ORIGIN = "https://papercrane.bio,https://www.papercrane.bio,https://app.papercrane.bio,https://papercrane-app.vercel.app"
+  WORKER_DEV_MODE = "false"
+  WORKER_CONCURRENCY_FREE = "1"
+  WORKER_CONCURRENCY_PRO = "1"
+  WORKER_CONCURRENCY_FRONTIER = "1"
+  MODAL_SEED_PARALLELISM = "1"
+  PAPERCRANE_MODAL_AUTO_DEPLOY = "0"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[mounts]]
+  source = "papercrane_queue"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 25
+    hard_limit = 50
+  [[http_service.checks]]
+    grace_period = "60s"
+    interval = "30s"
+    method = "GET"
+    timeout = "10s"
+    path = "/healthz"
+
+[checks.worker]
+  type = "http"
+  port = 3003
+  interval = "30s"
+  timeout = "10s"
+  grace_period = "60s"
+  method = "GET"
+  path = "/healthz"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1gb"
+
+[deploy]
+  strategy = "immediate"
+
+# Keep exactly one machine: deploy with --ha=false. This is a small beta,
+# with brief downtime on updates, rather than a replicated production cluster.

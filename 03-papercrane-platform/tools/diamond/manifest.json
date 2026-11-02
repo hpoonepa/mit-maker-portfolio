@@ -1,0 +1,27 @@
+{
+  "id": "diamond",
+  "displayName": "DIAMOND",
+  "version": "2.2.4",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-3.0-only",
+  "image": "ghcr.io/papercrane/diamond:2.2.4-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 3,
+    "note": "Fast protein homology search against request-provided references only; beta until live binary and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "sensitivity": "sensitive",
+    "evalue": 0.001,
+    "maxHits": 50
+  },
+  "composes": []
+}

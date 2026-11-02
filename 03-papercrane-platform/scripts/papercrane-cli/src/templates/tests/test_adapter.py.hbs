@@ -1,0 +1,90 @@
+"""Unit tests for the {{displayName}} adapter.
+
+These tests exercise `prepare()` and `parse()` without invoking the upstream
+{{displayName}} pipeline. Anything that would actually spawn the real binary
+is tagged `@pytest.mark.integration` and skipped by default.
+"""
+from __future__ import annotations
+
+import json
+import pathlib
+import shutil
+import sys
+
+import pytest
+
+TOOL_ROOT = pathlib.Path(__file__).resolve().parents[1]
+FIXTURES = TOOL_ROOT / "tests" / "fixtures"
+sys.path.insert(0, str(TOOL_ROOT))
+
+from adapter import (  # noqa: E402
+    ADAPTER_VERSION,
+    DesignRequest,
+    {{adapterClassName}},
+)
+
+
+@pytest.fixture()
+def request_payload() -> dict:
+    return json.loads((FIXTURES / "request.json").read_text())
+
+
+@pytest.fixture()
+def design_request(request_payload) -> DesignRequest:
+    return DesignRequest.from_json(request_payload)
+
+
+@pytest.fixture()
+def adapter() -> {{adapterClassName}}:
+    return {{adapterClassName}}()
+
+
+def test_request_parses_from_json(design_request: DesignRequest):
+    assert design_request.target_pdb == "/inputs/target.pdb"
+    assert design_request.seeds == [0, 1]
+    assert design_request.num_designs == 2
+    assert design_request.target_chain == "A"
+
+
+def test_validate_accepts_valid_request(adapter, design_request):
+    assert adapter.validate(design_request) == []
+
+
+def test_validate_rejects_empty_seeds(adapter, design_request):
+    design_request.seeds = []
+    errors = adapter.validate(design_request)
+    assert any(e["field"] == "seeds" for e in errors)
+
+
+def test_prepare_writes_config(adapter, design_request, tmp_path):
+    job = adapter.prepare(design_request, tmp_path)
+    cfg_path = pathlib.Path(job["cfg"])
+    assert cfg_path.exists(), "prepare() must emit {{id}}.json"
+
+    cfg = json.loads(cfg_path.read_text())
+    assert cfg["target_chain"] == "A"
+    assert cfg["num_designs"] == 2
+    assert cfg["seeds"] == [0, 1]
+
+
+def test_parse_reads_fixture_designs(adapter, tmp_path):
+    # Copy the sample outputs into a tmp dir simulating /outputs/designs.
+    out_dir = tmp_path / "designs"
+    shutil.copytree(FIXTURES / "sample_output", out_dir)
+
+    result = adapter.parse({"out_dir": str(out_dir)})
+    assert len(result.designs) == 1
+
+    design = result.designs[0]
+    assert design["sequence"].startswith("MKTAY")
+    assert design["seed"] == 0
+
+    assert result.run_metadata["tool"] == "{{id}}"
+    assert result.run_metadata["adapterVersion"] == ADAPTER_VERSION
+
+
+@pytest.mark.integration
+def test_run_invokes_upstream(adapter, design_request, tmp_path):
+    """Requires the upstream install — skipped outside the container."""
+    job = adapter.prepare(design_request, tmp_path)
+    adapter.run(job)

@@ -1,0 +1,30 @@
+{
+  "name": "@papercrane/cli",
+  "version": "0.1.0",
+  "description": "Paper Crane developer CLI — scaffold new tool adapters under `tools/<name>/`.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "papercrane-cli": "bin/papercrane-cli.ts"
+  },
+  "scripts": {
+    "papercrane-cli": "tsx bin/papercrane-cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chalk": "5.3.0",
+    "commander": "12.1.0",
+    "handlebars": "4.7.8",
+    "prompts": "2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  }
+}

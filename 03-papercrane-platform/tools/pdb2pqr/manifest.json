@@ -1,0 +1,28 @@
+{
+  "id": "pdb2pqr",
+  "displayName": "PDB2PQR",
+  "version": "3.7.1",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/pdb2pqr:3.7.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 8,
+    "note": "CPU protonation plus charge/radius assignment; beta until representative PDB and mmCIF inputs pass live smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "forceField": "AMBER",
+    "ph": 7.0,
+    "keepChain": true,
+    "dropWater": false
+  },
+  "composes": []
+}

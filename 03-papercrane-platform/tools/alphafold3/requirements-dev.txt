@@ -1,0 +1,5 @@
+# Dev-only deps for the AF3 adapter. Runtime uses stdlib (urllib) only so the
+# adapter stays lightweight; the SDK itself (papercrane_sdk) is installed by
+# the platform, not by this tool.
+pytest>=7.4
+jsonschema>=4.21

@@ -1,0 +1,11 @@
+{
+  "chains": [
+    { "id": "A", "sequence": "MKTIIALSYIFCLVFADYKDDDDK" },
+    { "id": "B", "sequence": "GSHMQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG" }
+  ],
+  "ligands": [
+    { "id": "ATP", "ccd_or_smiles": "ATP" }
+  ],
+  "params": { "num_recycles": 20, "num_samples": 5, "num_seeds": 1 },
+  "seeds": [42]
+}

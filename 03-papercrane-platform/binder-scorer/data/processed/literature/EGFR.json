@@ -1,0 +1,351 @@
+{
+  "abstracts": [
+    {
+      "pmid": "15837620",
+      "title": "Structural basis for inhibition of the epidermal growth factor receptor by cetuximab.",
+      "abstract": "Recent structural studies of epidermal growth factor receptor (EGFR) family extracellular regions have identified an unexpected mechanism for ligand-induced receptor dimerization that has important implications for activation and inhibition of these receptors. Here we describe the 2.8 angstroms resolution X-ray crystal structure of the antigen binding (Fab) fragment from cetuximab (Erbitux), an inhibitory anti-EGFR antibody, in complex with the soluble extracellular region of EGFR (sEGFR). The sEGFR is in the characteristic \"autoinhibited\" or \"tethered\" inactive configuration. Cetuximab interacts exclusively with domain III of sEGFR, partially occluding the ligand binding region on this domain and sterically preventing the receptor from adopting the extended conformation required for dimerization. We suggest that both these effects contribute to potent inhibition of EGFR activation."
+    },
+    {
+      "pmid": "12610629",
+      "title": "Structure of the extracellular region of HER2 alone and in complex with the Herceptin Fab.",
+      "abstract": "HER2 (also known as Neu, ErbB2) is a member of the epidermal growth factor receptor (EGFR; also known as ErbB) family of receptor tyrosine kinases, which in humans includes HER1 (EGFR, ERBB1), HER2, HER3 (ERBB3) and HER4 (ERBB4). ErbB receptors are essential mediators of cell proliferation and differentiation in the developing embryo and in adult tissues, and their inappropriate activation is associated with the development and severity of many cancers. Overexpression of HER2 is found in 20-30% of human breast cancers, and correlates with more aggressive tumours and a poorer prognosis. Anticancer therapies targeting ErbB receptors have shown promise, and a monoclonal antibody against HER2, Herceptin (also known as trastuzumab), is currently in use as a treatment for breast cancer. Here we report crystal structures of the entire extracellular regions of rat HER2 at 2.4 A and human HER2 complexed with the Herceptin antigen-binding fragment (Fab) at 2.5 A. These structures reveal a fixed conformation for HER2 that resembles a ligand-activated state, and show HER2 poised to interact with other ErbB receptors in the absence of direct ligand binding. Herceptin binds to the juxtamembrane region of HER2, identifying this site as a target for anticancer therapies."
+    },
+    {
+      "pmid": "39455963",
+      "title": "Discovery of nanobodies: a comprehensive review of their applications and potential over the past five years.",
+      "abstract": "Nanobodies (Nbs) are antibody fragments derived from heavy-chain-only IgG antibodies found in the Camelidae family as well as cartilaginous fish. Their unique structural and functional properties, such as their small size, the ability to be engineered for high antigen-binding affinity, stability under extreme conditions, and ease of production, have made them promising tools for diagnostics and therapeutics. This potential was realized in 2018 with the approval of caplacizumab, the world's first Nb-based drug. Currently, Nbs are being investigated in clinical trials for a broad range of treatments, including targeted therapies against PDL1 and Epidermal Growth Factor Receptor (EGFR), cardiovascular diseases, inflammatory conditions, and neurodegenerative disorders such as Alzheimer's disease, Parkinson's disease, and amyotrophic lateral sclerosis. They are also being studied for their potential for detecting and imaging autoimmune conditions and infectious diseases such as severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). A variety of methods are now available to generate target-specific Nbs quickly and efficiently at low costs, increasing their accessibility. This article examines these diverse applications of Nbs and their promising roles. Only the most recent articles published in the last five years have been used to summarize the most advanced developments in the field."
+    },
+    {
+      "pmid": "38908376",
+      "title": "Structural insights into the role and targeting of EGFRvIII.",
+      "abstract": "The epidermal growth factor receptor (EGFR) is a well-known oncogenic driver in lung and other cancers. In glioblastoma multiforme (GBM), the EGFR deletion variant III (EGFRvIII) is frequently found alongside EGFR amplification. Agents targeting the EGFR axis have shown limited clinical benefits in GBM and the role of EGFRvIII in GBM is poorly understood. To shed light on the role of EGFRvIII and its potential as a therapeutic target, we determined X-ray crystal structures of a monomeric EGFRvIII extracellular region (ECR). The EGFRvIII ECR resembles the unliganded conformation of EGFR, including the orientation of the C-terminal region of domain II. Domain II is mostly disordered, but the ECR structure is compact. We selected a nanobody with preferential binding to EGFRvIII relative to EGFR and structurally defined an epitope on domain IV that is occluded in the unliganded intact EGFR. These findings suggest new avenues for EGFRvIII targeting in GBM."
+    },
+    {
+      "pmid": "31755215",
+      "title": "Photobodies: Light-Activatable Single-Domain Antibody Fragments.",
+      "abstract": "Photocaged antibody fragments, termed photobodies, have been developed that are impaired in their antigen-binding capacity and can be activated by irradiation with UV light (365\u2005nm). This rational design concept builds on the selective photocaging of a single tyrosine in a nanobody (a single-domain antibody fragment). Tyrosine is a frequently occurring residue in central positions of the paratope region. o-Nitrobenzyl-protected tyrosine variants were incorporated into four nanobodies, including examples directed against EGFR and HER2, and photodeprotection restores the native sequence. An anti-GFP photobody exhibited an at least 10\u2009000-fold impaired binding affinity before photodeprotection compared with the parent nanobody. A bispecific nanobody-photobody fusion protein was generated to trigger protein heterodimerization by light. Photoactivatable antibodies are expected to become versatile protein reagents and to enable novel approaches in diagnostic and therapeutic applications."
+    },
+    {
+      "pmid": "37509078",
+      "title": "Nanobody-Based EGFR-Targeting Immunotoxins for Colorectal Cancer Treatment.",
+      "abstract": "Immunotoxins (ITXs) are chimeric molecules that combine the specificity of a targeting domain, usually derived from an antibody, and the cytotoxic potency of a toxin, leading to the selective death of tumor cells. However, several issues must be addressed and optimized in order to use ITXs as therapeutic tools, such as the selection of a suitable tumor-associated antigen (TAA), high tumor penetration and retention, low kidney elimination, or low immunogenicity of foreign proteins. To this end, we produced and characterized several ITX designs, using a nanobody against EGFR (VHH 7D12) as the targeting domain. First, we generated a nanoITX, combining VHH 7D12 and the fungal ribotoxin \u03b1-sarcin (\u03b1S) as the toxic moiety (VHHEGFR\u03b1S). Then, we incorporated a trimerization domain (TIEXVIII) into the construct, obtaining a trimeric nanoITX (TriVHHEGFR\u03b1S). Finally, we designed and characterized a bispecific ITX, combining the VHH 7D12 and the scFv against GPA33 as targeting domains, and a deimmunized (DI) variant of \u03b1-sarcin (BsITX\u03b1SDI). The results confirm the therapeutic potential of \u03b1-sarcin-based nanoITXs. The incorporation of nanobodies as target domains improves their therapeutic use due to their lower molecular size and binding features. The enhanced avidity and toxic load in the trimeric nanoITX and the combination of two different target domains in the bispecific nanoITX allow for increased antitumor effectiveness."
+    },
+    {
+      "pmid": "38372053",
+      "title": "Impact of antibody architecture and paratope valency on effector functions of bispecific NKp30 x EGFR natural killer cell engagers.",
+      "abstract": "Natural killer (NK) cells emerged as a promising effector population that can be harnessed for anti-tumor therapy. In this work, we constructed NK cell engagers (NKCEs) based on NKp30-targeting single domain antibodies (sdAbs) that redirect the cytotoxic potential of NK cells toward epidermal growth factor receptor (EGFR)-expressing tumor cells. We investigated the impact of crucial parameters such as sdAb location, binding valencies, the targeted epitope on NKp30, and the overall antibody architecture on the redirection capacity. Our study exploited two NKp30-specific sdAbs, one of which binds a similar epitope on NKp30 as its natural ligand B7-H6, while the other sdAb addresses a non-competing epitope. For EGFR-positive tumor targeting, humanized antigen-binding domains of therapeutic antibody cetuximab were used. We demonstrate that NKCEs bivalently targeting EGFR and bivalently engaging NKp30 are superior to monovalent NKCEs in promoting NK cell-mediated tumor cell lysis and that the architecture of the NKCE can substantially influence killing capacities depending on the NKp30-targeting sdAb utilized. While having a pronounced impact on NK cell killing efficacy, the capabilities of triggering antibody-dependent cellular phagocytosis or complement-dependent cytotoxicity were not significantly affected comparing the bivalent IgG-like NKCEs with cetuximab. However, the fusion of sdAbs can have a slight impact on the NK cell release of immunomodulatory cytokines, as well as on the pharmacokinetic profile of the NKCE due to unfavorable spatial orientation within the molecule architecture. Ultimately, our findings reveal novel insights for the engineering of potent NKCEs triggering the NKp30 axis."
+    },
+    {
+      "pmid": "41284265",
+      "title": "De Novo Design of Peptide Masks Enables Rapid Generation of Conditionally-Active Miniprotein Binders.",
+      "abstract": "The widespread expression of therapeutic targets in both diseased and healthy tissues poses a major challenge for protein-based therapeutics, often leading to dose-limiting side effects. One promising strategy to enhance selectivity is reversible inactivation via affinity masks tethered through cleavable linkers responsive to disease-specific cues. Here, we introduce a workflow for the de novo design of peptide masks that reversibly inactivate miniprotein binders. By extending the C-terminus of the binder with a protease-cleavable linker and a masking helix, we generated minimal constructs that sterically block the receptor-binding interface. We applied this strategy to four therapeutically relevant targets, EGFR domains I and III, FGFR2, and IL7R\u03b1, demonstrating broad applicability. Nearly half of the 20 designs achieved >100-fold affinity reduction, with the most effective mask decreasing EGFR binding by over 3 orders of magnitude. Upon cleavage by tumor-associated proteases, binding was restored in 19 out of 20 cases, confirming reversibility. We further show that micromolar or weaker affinity between the binder and the isolated mask is sufficient for robust inactivation and rapid activation. Additionally, by chemically conjugating a photocleavable linker, we created a light-responsive version of the masked binder, enabling external control with comparable efficiency to protease-sensitive designs. This work establishes a generalizable, rapid, and efficient platform for designing cleavable peptide masks from scratch, paving the way for conditionally active protein therapeutics responsive to endogenous or exogenous stimuli."
+    },
+    {
+      "pmid": "27424502",
+      "title": "Recent progress in protein-protein interaction study for EGFR-targeted therapeutics.",
+      "abstract": "Epidermal growth factor receptor (EGFR) expression is upregulated in many tumors and its aberrant signaling drives progression of many cancer types. Consequently, EGFR has become a clinically validated target as extracellular tumor marker for antibodies as well as for tyrosine kinase inhibitors. Within the last years, new mechanistic insights were uncovered and, based on clinical experience as well as progress in protein engineering, novel bio-therapeutic approaches were developed and tested. The potential therapeutic targeting arsenal in the fight against cancer now encompasses bispecific or biparatopic antibodies, DARPins, Adnectins, Affibodies, peptides and combinations of these binding molecules with viral- and nano-particles. We review past and recent binding proteins from the literature and include a brief description of the various targeting approaches. Special attention is given to the binding modes with the EGFR. Expert commentary: Clinical data from the three approved anti EGFR antibodies indicate that there is room for improved therapeutic efficacy. Having choices in size, affinity, avidity and the mode of EGFR binding as well as the possibility to combine various effector functions opens the possibility to rationally design more effective therapeutics."
+    },
+    {
+      "pmid": "40521789",
+      "title": "A CMTM6 Nanobody Overcomes EGFR-TKI Resistance in Non-Small Cell Lung Cancer.",
+      "abstract": "Aberrant EGFR signaling drives non-small cell lung cancer (NSCLC) development, and despite the success of tyrosine kinase inhibitor (TKI) therapies in treating NSCLC, TKI resistance remains a major obstacle. Here, we report that the chemokine-like transmembrane protein CMTM6 is physically associated with EGFR. CMTM6 is shown to be co-localized with EGFR in recycling endosomes that are marked by RAB11, thereby preventing EGFR from lysosome-mediated degradation in NSCLC cells. The level of CMTM6 is elevated in NSCLC, and high expression of CMTM6 is associated with enhanced colocalization of CMTM6 with EGFR and RAB11 in NSCLC tumors and correlated with a poor prognosis in NSCLC patients. A CMTM6-targeting nanobody is developed and administration of this agent leads to blocking of the CMTM6-EGFR interaction, reduction of the EGFR protein level, and inhibition of the proliferation of TKI-resistant NSCLC cells in vitro and suppression of the growth of EGFR-TKI-resistant NSCLC in both cell line-derived xenografts and patient-derived xenograft models. The study indicates that CMTM6 is a stabilizer of EGFR in endocytic trafficking and provides evidence to support targeting CMTM6 as a potential therapeutic strategy to overcome TKI resistance in NSCLC treatment."
+    },
+    {
+      "pmid": "38374413",
+      "title": "Chimeric nanobody-decorated liposomes by self-assembly.",
+      "abstract": "Liposomes as drug vehicles have advantages, such as payload protection, tunable carrying capacity and improved biodistribution. However, due to the dysfunction of targeting moieties and payload loss during preparation, immunoliposomes have yet to be favoured in commercial manufacturing. Here we report a chemical modification-free biophysical approach for producing immunoliposomes in one step through the self-assembly of a chimeric nanobody (cNB) into liposome bilayers. cNB consists of a nanobody against human epidermal growth factor receptor 2 (HER2), a flexible peptide linker and a hydrophobic single transmembrane domain. We determined that 64% of therapeutic compounds can be encapsulated into 100-nm liposomes, and up to 2,500 cNBs can be anchored on liposomal membranes without steric hindrance under facile conditions. Subsequently, we demonstrate that drug-loaded immunoliposomes increase cytotoxicity on HER2-overexpressing cancer cell lines by 10- to 20-fold, inhibit the growth of xenograft tumours by 3.4-fold and improve survival by more than twofold."
+    },
+    {
+      "pmid": "39275996",
+      "title": "Analysis of EGFR binding hotspots for design of new EGFR inhibitory biologics.",
+      "abstract": "The epidermal growth factor (EGF) receptor (EGFR) is activated by the binding of one of seven EGF-like ligands to its ectodomain. Ligand binding results in EGFR dimerization and stabilization of the active receptor conformation subsequently leading to activation of downstream signaling. Aberrant activation of EGFR contributes to cancer progression through EGFR overexpression/amplification, modulation of its positive and negative regulators, and/or activating mutations within EGFR. EGFR targeted therapeutic antibodies prevent dimerization and interaction with endogenous ligands by binding the ectodomain of EGFR. However, these antibodies have had limited success in the clinic, partially due to EGFR ectodomain resistance mutations, and are only applicable to a subset of patients with EGFR-driven cancers. These limitations suggest that alternative EGFR targeted biologics need to be explored for EGFR-driven cancer therapy. To this end, we analyze the EGFR interfaces of known inhibitory biologics with determined structures in the context of endogenous ligands, using the Rosetta macromolecular modeling software to highlight the most important interactions on a per-residue basis. We use this analysis to identify the structural determinants of EGFR targeted biologics. We suggest that commonly observed binding motifs serve as the basis for rational design of new EGFR targeted biologics, such as peptides, antibodies, and nanobodies."
+    },
+    {
+      "pmid": "40562040",
+      "title": "EGFR TKIs suppress MUC1 glycosylation through the PI3K/AKT/SP1/C1GALT1 pathway to enhance TnMUC1 CAR-T efficacy in EGFR-mutant NSCLC.",
+      "abstract": "Epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors (TKIs) are the standard first-line treatment for EGFR-mutant cancer (non-small cell lung cancer [NSCLC]), achieving an objective response rate (ORR) of approximately 60%-70%. However, optimizing their therapeutic efficacy remains a challenge. NSCLC cells express the tumor-specific hypoglycosylated Thomsen-nouvelle (Tn) mucin 1 (MUC1) antigen, making them suitable targets for TnMUC1 chimeric antigen receptor (CAR)-T cell therapy. This study shows that EGFR TKIs enhance the efficacy of TnMUC1 CAR-T cell therapy in EGFR-mutant NSCLC, both in vitro and in vivo. EGFR TKIs upregulate TnMUC1 by reducing MUC1 glycosylation, thereby improving TnMUC1 CAR-T cell recognition and cytotoxicity. Specifically, EGFR TKIs modulate TnMUC1-related glycosyltransferases, with core1-beta1,3-galactosyltransferase 1 (C1GALT1) identified as a key enzyme downregulated by EGFR TKIs, suggesting C1GALT1 as a potential therapeutic target."
+    },
+    {
+      "pmid": "41772598",
+      "title": "Bimodal nanobody agents for cancer imaging and potential intraoperative guidance: a systematic review.",
+      "abstract": "Bimodal imaging tracers that combine nuclear and optical modalities are gaining increasing relevance for in vivo applications in oncology, particularly for surgical guidance, where both real-time visualization and preoperative deep-tissue localization are crucial. Nanobodies are heavy-chain antibody fragments that offer unique advantages in this context, such as high specificity and rapid clearance, which allows for precise tumor localization and real-time surgical navigation. In this systematic review, we evaluate research studies reporting nanobody-based tracers for dual-modality imaging and analyze their design strategies, preclinical imaging performance, and translational progress. The analyses revealed that molecular targets commonly overexpressed in cancer cells, such as HER2, EGFR, and CEA have been the primary focus in the design of these tracers, together with widely used fluorophores like Cy5 and IRDye800CW combined with radionuclides such as gallium-68, technetium-99m, and copper-64. The preclinical performance of the reported tracers was highly promising, both in absolute tumor uptake and ability to achieve high-contrast images rapidly, as highlighted by a CD38-targeting tracer that produced a\u2009~\u200996-fold tumor-to-muscle ratio within hours of injection. While achieving stable and site-specific dual labeling remains a technical challenge, the combination of high target specificity and rapid background clearance makes nanobody-based systems particularly well-suited for generating high-contrast images on the same day of administration. This positions nanobodies as a versatile platform to develop tracers that enhance real-time image-guided surgery in oncology and ultimately improve patient outcomes."
+    },
+    {
+      "pmid": "33767701",
+      "title": "Immunogenicity Risk Profile of Nanobodies.",
+      "abstract": "Nanobodies (Nbs), the variable domains of camelid heavy chain-only antibodies, are a promising class of therapeutics or in vivo imaging reagents entering the clinic. They possess unique characteristics, including a minimal size, providing fast pharmacokinetics, high-target specificity, and an affinity in the (sub-)nanomolar range in conjunction with an easy selection and production, which allow them to outperform conventional antibodies for imaging and radiotherapeutic purposes. As for all protein theranostics, extended safety assessment and investigation of their possible immunogenicity in particular are required. In this study, we assessed the immunogenicity risk profile of two Nbs that are in phase II clinical trials: a first Nb against Human Epidermal growth factor Receptor 2 (HER2) for PET imaging of breast cancer and a second Nb with specificity to the Macrophage Mannose Receptor (MMR) for PET imaging of tumor-associated macrophages. For the anti-HER2 Nb, we show that only one out of 20 patients had a low amount of pre-existing anti-drug antibodies (ADAs), which only marginally increased 3 months after administering the Nb, and without negative effects of safety and pharmacokinetics. Further in vitro immunogenicity assessment assays showed that both non-humanized Nbs were taken up by human dendritic cells but exhibited no or only a marginal capacity to activate dendritic cells or to induce T cell proliferation. From our data, we conclude that monomeric Nbs present a low immunogenicity risk profile, which is encouraging for their future development toward potential clinical applications. Nanobodies, the recombinant single domain affinity reagents derived from heavy chain-only antibodies in camelids, are proven to possess a low immunogenicity risk profile, which will facilitate a growing number of Nanobodies to enter the clinic for therapeutic or in vivo diagnostic applications."
+    },
+    {
+      "pmid": "40609632",
+      "title": "Allosteric Antibody Modulation of EGFR Activity: Bridging Experiment and In Silico Modeling.",
+      "abstract": "Allosteric regulation provides a powerful framework for modulating receptor signaling in both physiological and therapeutic contexts. The epidermal growth factor receptor (EGFR), a receptor tyrosine kinase frequently dysregulated in cancer, undergoes activation through conformational transitions that couple extracellular ligand binding to intracellular kinase signaling. Here, we explore how camelid derived VHH (variable domain of the heavy chain of a heavy chain-only)-antibodies can exploit this allosteric architecture to inhibit EGFR function. Using a panel of single domain monospecific and biparatopic antibodies, targeting non-overlapping EGFR epitopes, we combined experimental assays with structure-based modeling to dissect their effects on EGFR signaling and internalization. AlphaFold3-predicted EGFR-antibody complexes were analyzed using the Structure-Based Statistical Mechanical Model of Allostery (SBSMMA) to compute residue-level allosteric modulations induced upon binding. The resulting profiles revealed that only a subset of epitope combinations produced long-range allosteric responses reaching the juxtamembrane segment and the kinase domain. These patterns correlated with effective inhibition of downstream ERK and AKT signaling in cellular assays. In contrast, some constructs with high internalization capacity induced minimal allosteric propagation and weak signaling suppression, indicating a mechanistic decoupling of receptor uptake from conformational regulation. Together, these results define distinct allosteric modes of EGFR modulation by VHH-antibodies and show how computational modeling based on energetic propagation can complement experimental screening to guide the design of next-generation allosteric biologics."
+    },
+    {
+      "pmid": "32885759",
+      "title": "Anti-EGFR Binding Nanobody Delivery System to Improve the Diagnosis and Treatment of Solid Tumours.",
+      "abstract": "Epidermal Growth Factor Receptor (EGFR) and members of its homologous protein family mediate transmembrane signal transduction by binding to a specific ligand, which leads to regulated cell growth, differentiation, proliferation and metastasis. With the development and application of Genetically Engineered Antibodies (GEAs), Nanobodies (Nbs) constitute a new research hot spot in many diseases. A Nb is characterized by its low molecular weight, deep tissue penetration, good solubility and high antigen-binding affinity, the anti-EGFR Nbs are of significance for the diagnosis and treatment of EGFR-positive tumours. This review aims to provide a comprehensive overview of the information about the molecular structure of EGFR and its transmembrane signal transduction mechanism, and discuss the anti-EGFR-Nbs influence on the diagnosis and treatment of solid tumours. Data were obtained from PubMed, Embase and Web of Science. All patents are searched from the following websites: the World Intellectual Property Organization (WIPO\u00ae), the United States Patent Trademark Office (USPTO\u00ae) and Google Patents. EGFR is a key target for regulating transmembrane signaling. The anti-EGFR-Nbs for targeted drugs could effectively improve the diagnosis and treatment of solid tumours. EGFR plays a role in transmembrane signal transduction. The Nbs, especially anti- EGFR-Nbs, have shown effectiveness in the diagnosis and treatment of solid tumours. How to increase the affinity of Nb and reduce its immunogenicity remain a great challenge."
+    },
+    {
+      "pmid": "39077778",
+      "title": "Imaging and Monitoring HER2 Expression in Tumors during HER2 Antibody-Drug Conjugate Therapy Utilizing a Radiolabeled Site-Specific Single-Domain Antibody Probe: 68Ga-NODAGA-SNA004-GSC.",
+      "abstract": "The overexpression of HER2 is pivotal in the initiation and progression of breast cancer. Developing HER2-targeted radiotracers is crucial for noninvasive assessment of HER2 expression, patient selection for HER2-targeted therapy, monitoring treatment response, and identifying resistance. Here, we reported a nonsite-specific coupled radiotracer, 68Ga-NOTA-SNA004-His6, and a site-specific coupled radiotracer, 68Ga-NODAGA-SNA004-GSC, based on a novel HER2 nanobody, SNA004. Both radiotracers exhibited high affinity, specific targeting, and rapid clearance in vitro and in vivo. Additionally, these tracers and trastuzumab showed noncompetitive binding to HER2. Compared to 68Ga-NOTA-SNA004-His6, 68Ga-NODAGA-SNA004-GSC demonstrated significantly reduced renal and liver uptake. PET/CT imaging with 68Ga-NODAGA-SNA004-GSC sensitively detected the responsiveness of various tumor models to trastuzumab and its antibody-drug conjugates (ADCs). Overall, the site-specific coupled radiotracer 68Ga-NODAGA-SNA004-GSC offered significant advantages in biodistribution and signal-to-noise ratio, making it a valuable tool for monitoring HER2 expression levels before, during, and after trastuzumab and ADC treatment."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000146648",
+    "approvedSymbol": "EGFR",
+    "approvedName": "epidermal growth factor receptor",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [
+      {
+        "event": "alopecia",
+        "eventId": "MONDO_0004907",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "ocular keratitis",
+        "eventId": "MONDO_0003085",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "Hepatotoxicity",
+        "eventId": "EFO_0011052",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "Skin rash",
+        "eventId": "HP_0000988",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "diarrhoea",
+        "eventId": "HP_0002014",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "Diarrhea",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "AST increase",
+        "eventId": "EFO_0004736",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "regulation of catalytic activity",
+        "eventId": "",
+        "datasource": "ToxCast"
+      },
+      {
+        "event": "epithelial inflammation",
+        "eventId": "",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "drug toxicity",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "decreased appetite",
+        "eventId": "MONDO_0005451",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "rash",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "hypertension",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "cardiomyopathy",
+        "eventId": "MONDO_0004994",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "weight loss",
+        "eventId": "HP_0001824",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "heart disease",
+        "eventId": "MONDO_0005267",
+        "datasource": "Force et al. (2011)"
+      },
+      {
+        "event": "diarrhea",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "conjunctival hemorrhage",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "ALT increase",
+        "eventId": "OBA_2050062",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "hypertension",
+        "eventId": "HP_0000822",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "interstitial lung disease",
+        "eventId": "MONDO_0015925",
+        "datasource": "Brennan et al. (2024)"
+      }
+    ],
+    "drugAndClinicalCandidates": {
+      "count": 82
+    }
+  }
+}

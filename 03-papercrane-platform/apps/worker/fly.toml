@@ -1,0 +1,59 @@
+# Fly.io config for @papercrane/worker
+# Background BullMQ worker — no public http service.
+# A tiny internal health endpoint is exposed on 3003 for fly checks only.
+app = "papercrane-worker"
+primary_region = "iad"
+kill_signal = "SIGTERM"
+kill_timeout = "60s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[experimental]
+  auto_rollback = true
+
+[env]
+  NODE_ENV = "production"
+  WORKER_PORT = "3003"
+  PORT_HEALTH = "3003"
+  HOST = "0.0.0.0"
+  LOG_LEVEL = "info"
+  NEXT_TELEMETRY_DISABLED = "1"
+  TURBO_TELEMETRY_DISABLED = "1"
+  # Closed-beta guardrails. Each BullMQ tier dispatches at most one GPU job
+  # at a time so a demo or retry burst cannot fan out into surprise spend.
+  WORKER_CONCURRENCY_FREE = "1"
+  WORKER_CONCURRENCY_PRO = "1"
+  WORKER_CONCURRENCY_FRONTIER = "1"
+
+[processes]
+  app = "node --import tsx src/server.ts"
+
+# ---- Machines ----
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
+
+# ---- Health checks (no public service) ----
+# The worker exposes GET /healthz on WORKER_PORT for liveness only.
+[checks]
+  [checks.health]
+    type = "http"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "30s"
+    method = "GET"
+    path = "/healthz"
+    port = 3003
+    protocol = "http"
+
+# ---- Deploy ----
+[deploy]
+  strategy = "rolling"
+  wait_timeout = "5m"
+
+[metrics]
+  port = 9092
+  path = "/metrics"

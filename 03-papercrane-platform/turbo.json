@@ -1,0 +1,58 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local",
+    "tsconfig.base.json"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        "public/_landing/**"
+      ],
+      "env": [
+        "NEXT_PUBLIC_*",
+        "NODE_ENV"
+      ],
+      "passThroughEnv": [
+        "DATABASE_URL",
+        "DIRECT_URL",
+        "API_BASE_URL",
+        "API_URL",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "VERCEL",
+        "VERCEL_ENV",
+        "VERCEL_URL",
+        "CI",
+        "NEXT_TELEMETRY_DISABLED",
+        "TURBO_TELEMETRY_DISABLED"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "typecheck": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    }
+  }
+}

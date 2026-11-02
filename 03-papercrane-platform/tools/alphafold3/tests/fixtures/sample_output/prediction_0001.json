@@ -1,0 +1,17 @@
+{
+  "predictions": [
+    {
+      "structurePath": "prediction_0001.cif",
+      "seed": 42,
+      "sampleIndex": 0,
+      "metrics": {
+        "ranking_score": 0.874,
+        "iptm": 0.81,
+        "ptm": 0.88,
+        "plddt_mean": 89.4,
+        "per_chain_ptm":  { "A": 0.90, "B": 0.86 },
+        "per_chain_iptm": { "A": 0.82, "B": 0.80 }
+      }
+    }
+  ]
+}

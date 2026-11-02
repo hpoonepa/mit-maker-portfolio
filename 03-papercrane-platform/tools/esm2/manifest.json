@@ -1,0 +1,27 @@
+{
+  "id": "esm2",
+  "displayName": "ESM-2",
+  "version": "650M-UR50D",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/esm2:650M-UR50D-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 12,
+    "estSecondsPerDesign": 1
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "mode": "score",
+    "pool": "mean",
+    "layer": 33
+  },
+  "composes": []
+}

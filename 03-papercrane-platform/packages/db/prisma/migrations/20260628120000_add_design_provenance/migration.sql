@@ -1,0 +1,13 @@
+-- Design provenance: a first-class, queryable marker on every design row that
+-- distinguishes real model output from dev/test fixtures.
+--
+--   'real'      — the worker persisted a validated provider seed (default)
+--   'synthetic' — the dev-only synth-job processor fabricated the row
+--   'stub'      — the Modal stub path produced random metrics (no creds)
+--
+-- Before this column, fabricated rows (synth-job, Modal stub) were
+-- indistinguishable from genuine results at the DB level and could silently
+-- pollute leaderboards / exports. The column is NOT NULL with a 'real' default
+-- so existing rows backfill to 'real' and any writer that forgets to set it is
+-- treated as real — non-real values must be opted into explicitly.
+ALTER TABLE "designs" ADD COLUMN "provenance" TEXT NOT NULL DEFAULT 'real';

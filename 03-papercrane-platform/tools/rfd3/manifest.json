@@ -1,0 +1,28 @@
+{
+  "id": "rfd3",
+  "displayName": "RFdiffusion3",
+  "version": "0.1.9",
+  "adapterVersion": "a1",
+  "category": "binder_design",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/rfd3:0.1.9-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "H100-80GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 32,
+    "estSecondsPerDesign": 120,
+    "note": "Beta until the Foundry 0.1.9 image and checkpoint are smoke-tested on Modal."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "binderLengthMin": 60,
+    "binderLengthMax": 120,
+    "numTimesteps": 200,
+    "isNonLoopy": true
+  },
+  "composes": ["proteinmpnn"]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "freesasa",
+  "displayName": "FreeSASA",
+  "version": "2.2.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/freesasa:2.2.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 3,
+    "note": "Fast solvent-accessible surface-area calculation; beta until representative structure smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "algorithm": "LeeRichards", "probeRadius": 1.4 },
+  "composes": []
+}

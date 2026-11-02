@@ -1,0 +1,36 @@
+{
+  "name": "@papercrane/benchmark-scripts",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Standalone CLIs invoked by the benchmark GitHub Actions workflows (dispatch, report, drift-detect). Not part of the pnpm workspace on purpose — keeps CI installs minimal.",
+  "type": "module",
+  "bin": {
+    "bench-dispatch": "./dispatch.ts",
+    "bench-report": "./report-results.ts",
+    "bench-drift": "./drift-detect.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "drift": "tsx drift-detect.ts",
+    "dispatch": "tsx dispatch.ts",
+    "report": "tsx report-results.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "pg": "^8.11.5",
+    "yaml": "^2.4.5",
+    "ulid": "^2.3.0",
+    "glob": "^10.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/pg": "^8.11.6",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  }
+}

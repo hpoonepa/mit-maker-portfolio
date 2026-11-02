@@ -1,0 +1,17 @@
+FROM ghcr.io/papercrane/base-cuda12:latest
+
+ARG UPSTREAM_SHA={{shaPlaceholder}}_{{id}}_SHA
+WORKDIR /opt
+
+RUN git clone {{upstreamRepo}} /opt/{{id}} \
+ && cd /opt/{{id}} && git checkout $UPSTREAM_SHA \
+ && pip install --no-cache-dir -r requirements.txt
+
+COPY adapter.py /opt/papercrane/adapter.py
+COPY run.sh /opt/papercrane/run.sh
+COPY manifest.json /opt/papercrane/manifest.json
+COPY schemas /opt/papercrane/schemas
+
+RUN chmod +x /opt/papercrane/run.sh
+
+ENTRYPOINT ["/opt/papercrane/run.sh"]

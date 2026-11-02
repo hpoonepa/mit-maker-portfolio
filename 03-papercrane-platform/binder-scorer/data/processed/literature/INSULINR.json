@@ -1,0 +1,286 @@
+{
+  "abstracts": [
+    {
+      "pmid": "41086805",
+      "title": "Tuning insulin receptor signaling using de novo-designed agonists.",
+      "abstract": "Insulin binding induces conformational changes in the insulin receptor (IR) that activate the intracellular kinase domain and the protein kinase B (AKT) and mitogen-activated protein kinase (MAPK) pathways, regulating metabolism and proliferation. We reasoned that designed agonists inducing different IR conformational changes might induce different downstream responses. We used de novo protein design to generate binders for individual IR extracellular domains and fused them in different orientations with different conformational flexibility. We obtained a series of synthetic IR agonists that elicit a wide range of receptor autophosphorylation, MAPK activation, trafficking, and proliferation responses. We identified designs more potent than insulin, causing longer-lasting glucose lowering in vivo and retaining activity on disease-causing IR mutants, while largely avoiding the cancer cell proliferation induced by insulin. Our findings shed light on how changes in IR conformation and dynamics translate into downstream signaling, and with further development, our synthetic agonists could have therapeutic utility for metabolic and proliferative diseases."
+    },
+    {
+      "pmid": "15486293",
+      "title": "Endoplasmic reticulum stress links obesity, insulin action, and type 2 diabetes.",
+      "abstract": "Obesity contributes to the development of type 2 diabetes, but the underlying mechanisms are poorly understood. Using cell culture and mouse models, we show that obesity causes endoplasmic reticulum (ER) stress. This stress in turn leads to suppression of insulin receptor signaling through hyperactivation of c-Jun N-terminal kinase (JNK) and subsequent serine phosphorylation of insulin receptor substrate-1 (IRS-1). Mice deficient in X-box-binding protein-1 (XBP-1), a transcription factor that modulates the ER stress response, develop insulin resistance. These findings demonstrate that ER stress is a central feature of peripheral insulin resistance and type 2 diabetes at the molecular, cellular, and organismal levels. Pharmacologic manipulation of this pathway may offer novel opportunities for treating these common diseases."
+    },
+    {
+      "pmid": "36739671",
+      "title": "Insulin receptor-inspired soluble insulin binder.",
+      "abstract": "The insulin receptor (IR) is a 320\u00a0kDa membrane receptor tyrosine kinase mediating the pleiotropic actions of insulin, leading to phosphorylation of several intracellular substrates including serine/threonine-protein kinase (AKT1), and IR autophosphorylation. Structural details of the IR have been recently revealed. A high-binding insulin site, L1 (Kd =2\u00a0nM), consists of two distant domains in the primary sequence of the IR. Our design simplified the L1 binding site and transformed it into a soluble insulin binder (sIB). The sIB, a 17\u00a0kDa protein, binds insulin with 38\u00a0nM affinity. The sIB competes with IR for insulin and reduces by more than 50% phosphorylation of AKT1 in HEK 293\u00a0T cells, with similar effects on IR autophosphorylation. The sIB represents a new tool for research of insulin binding and signaling properties."
+    },
+    {
+      "pmid": "37717984",
+      "title": "The three-dimensional structure of insulin and its receptor.",
+      "abstract": "Insulin is a peptide hormone essential for maintaining normal blood glucose levels. Individuals unable to secrete sufficient insulin or not able to respond properly to insulin develop diabetes. Since the discovery of insulin its structure and function has been intensively studied with the aim to develop effective diabetes treatments. The three-dimensional crystal structure of this 51 amino acid peptide paved the way for discoveries, outlined in this review, of determinants important for receptor binding and hormone stability that have been instrumental in development of insulin analogs used in the clinic today. Important for the future development of effective diabetes treatments will be a detailed understanding of the insulin receptor structure and function. Determination of the three-dimensional structure of the insulin receptor, a receptor tyrosine kinase, proved challenging but with the recent advent of high-resolution cryo-electron microscopy significant progress has been made. There are now >40 structures of the insulin:insulin receptor complex deposited in the Protein Data Bank. From these structures we have a detailed picture of how insulin binds and activates the receptor. Still lacking are details of the initial binding events and the exact sequence of structural changes within the receptor and insulin. In this review, the focus will be on the most recent structural studies of insulin:insulin receptor complexes and how they have contributed to the current understanding of insulin receptor activation and signaling outcome. Molecular mechanisms underlying insulin receptor signaling bias emerging from the latest structures are described."
+    },
+    {
+      "pmid": "11498027",
+      "title": "Insulin-regulated gene expression.",
+      "abstract": "Insulin regulates the expression of more than 150 genes, indicating that this is a major action of this hormone. At least eight distinct consensus insulin response sequence (IRSs) have been defined through which insulin can regulate gene transcription. These include the serum response element, the activator protein 1 ('AP-1') motif, the Ets motif, the E-box motif and the thyroid transcription factor 2 ('TTF-2') motif. All of these IRSs mediate stimulatory effects of insulin on gene transcription. In contrast, an element with the consensus sequence T(G/A)TTT(T/G)(G/T), which we refer to as the phosphoenolpyruvate carboxykinase (PEPCK)-like motif, mediates the inhibitory effect of insulin on transcription of the genes encoding PEPCK, insulin-like-growth-factor-binding protein 1 (IGFBP-1), tyrosine aminotransferase and the glucose-6-phosphatase (G6Pase) catalytic subunit. The forkhead transcription factor FKHR has recently been shown to bind this PEPCK-like IRS motif and a model has been proposed in which insulin inhibits gene transcription by stimulating the phosphorylation and nuclear export of FKHR. Our results suggest that this model is consistent with the action of insulin on transcription of the gene encoding IGFBP-1 but not that of the G6Pase catalytic subunit. Thus, even though the IRSs in both promoters seem identical, they are functionally distinct. In addition, in the G6Pase catalytic subunit promoter, hepatocyte nuclear factor 1 ('HNF-1'), acts as an accessory factor to enhance the effect of insulin mediated through the IRS."
+    },
+    {
+      "pmid": "30968756",
+      "title": "Hepatic Insulin Clearance: Mechanism and Physiology.",
+      "abstract": "Upon its secretion from pancreatic \u03b2-cells, insulin reaches the liver through the portal circulation to exert its action and eventually undergo clearance in the hepatocytes. In addition to insulin secretion, hepatic insulin clearance regulates the homeostatic level of insulin that is required to reach peripheral insulin target tissues to elicit proper insulin action. Receptor-mediated insulin uptake followed by its degradation constitutes the basic mechanism of insulin clearance. Upon its phosphorylation by the insulin receptor tyrosine kinase, carcinoembryonic antigen-related cell adhesion molecule 1 (CEACAM1) takes part in the insulin-insulin receptor complex to increase the rate of its endocytosis and targeting to the degradation pathways. This review summarizes how this process is regulated and how it is associated with insulin-degrading enzyme in the liver. It also discusses the physiological implications of impaired hepatic insulin clearance: Whereas reduced insulin clearance cooperates with increased insulin secretion to compensate for insulin resistance, it can also cause hepatic insulin resistance. Because chronic hyperinsulinemia stimulates hepatic de novo lipogenesis, impaired insulin clearance also causes hepatic steatosis. Thus impaired insulin clearance can underlie the link between hepatic insulin resistance and hepatic steatosis. Delineating these regulatory pathways should lead to building more effective therapeutic strategies against metabolic syndrome."
+    },
+    {
+      "pmid": "17085043",
+      "title": "Protein tyrosine kinase-substrate interactions.",
+      "abstract": "Protein tyrosine kinases (PTKs) are enzymes that catalyze the phosphorylation of tyrosyl residues. They are important in physiological and pathophysiological processes. Protein substrates of PTKs are often difficult to discern, but recently reported methods have helped to identify targets and characterize their structural interactions with kinases. A mechanism-based bisubstrate analog strategy has given X-ray crystallographic insights into how several topical PTKs, including the insulin receptor, Abl and epidermal growth factor receptor, interact with tyrosine-containing peptide substrates. These PTK co-crystal structures reveal both conserved and specialized features of recognition that probably contribute to substrate selection and the individual functions of these key enzymes."
+    },
+    {
+      "pmid": "37227951",
+      "title": "Antagonistic Insulin Derivative Suppresses Insulin-Induced Hypoglycemia.",
+      "abstract": "Insulin derivatives provide new functions that are distinctive from native insulin. We investigated insulin modifications on the C-terminal A chain with insulin receptor (IR) peptide binders and presented a full and potent IR antagonist. We prepared insulin precursors featuring a sortase A (SrtA) recognition sequence, LPETGG, at the C-terminal A chain and used a SrtA-mediated ligation method to synthesize insulin derivatives. The insulin precursor exhibits full IR agonism potency, similar to native human insulin. We explored derivatives with linear IR binding peptides attached to the insulin C-terminal A chain. One insulin derivative with an IR binder (Ins-AC-S2) can fully antagonize IR activation by insulin, as confirmed by cell-based assays. This IR antagonist suppresses insulin-induced hypoglycemia in a streptozotocin-induced diabetic rat model. This study provides a new direction toward insulin antagonist development."
+    },
+    {
+      "pmid": "34907529",
+      "title": "Structure-based survey of ligand binding in the human insulin receptor.",
+      "abstract": "The insulin receptor is a membrane protein responsible for the regulation of nutrient balance; and therefore, it is an attractive target in the treatment of diabetes and metabolic syndrome. Pharmacology of the insulin receptor involves two distinct mechanisms: (1) activation of the receptor by insulin mimetics that bind in the extracellular domain and (2) inhibition of the receptor TK enzymatic activity in the cytoplasmic domain. While a complete structural picture of the full-length receptor comprising the entire sequence covering extracellular, transmembrane, juxtamembrane and cytoplasmic domains is still elusive, recent progress through cryoelectron microscopy has made it possible to describe the initial insulin ligand binding events at atomistic detail. We utilize this opportunity to obtain structural insights into the pharmacology of the insulin receptor. To this end, we conducted a comprehensive docking study of known ligands to the new structures of the receptor. Through this approach, we provide an in-depth, structure-based review of human insulin receptor pharmacology in light of the new structures. LINKED ARTICLES: This article is part of a themed issue on Structure Guided Pharmacology of Membrane Proteins (BJP 75th Anniversary). To view the other articles in this section visit http://onlinelibrary.wiley.com/doi/10.1111/bph.v179.14/issuetoc."
+    },
+    {
+      "pmid": "21606157",
+      "title": "Insulin receptor and cancer.",
+      "abstract": "The widespread epidemic of obesity and type 2 diabetes has raised concern for the impact of these disorders as risk factors for cancer and has renewed the interest for studies regarding the involvement of hyperinsulinemia and insulin receptor (IR) in cancer progression. Overexpression of IR in cancer cells may explain their increased sensitivity to hyperinsulinemia. Moreover, IR isoform A (IR-A) together with autocrine production of its ligand IGF2 is emerging as an important mechanism of normal and cancer stem cell expansion and is a feature of several malignancies. De novo activation of the IR-A/IGF2 autocrine loop also represents a mechanism of resistance to anticancer therapies. Increasing knowledge of the IR role in cancer has important implications for cancer prevention, which should include control of insulin resistance and hyperinsulinemia in the population and meticulous evaluation of new antidiabetic drugs for their metabolic:mitogenic ratio. We are now aware that several anticancer treatments may induce or worsen insulin resistance that may limit therapy efficacy. Future anticancer therapies need to target the IR-A pathway in order to inhibit the tumor promoting effect of IR without impairing the metabolic effect of insulin."
+    },
+    {
+      "pmid": "35758064",
+      "title": "A circular RNA derived from the insulin receptor locus protects against doxorubicin-induced cardiotoxicity.",
+      "abstract": "Cardiotoxicity leading to heart failure (HF) is a growing problem in many cancer survivors. As specific treatment strategies are not available, RNA discovery pipelines were employed and a new and powerful circular RNA (circRNA)-based therapy was developed for the treatment of doxorubicin-induced HF. The circRNA sequencing was applied and the highly species-conserved circRNA insulin receptor (Circ-INSR) was identified, which participates in HF processes, including those provoked by cardiotoxic anti-cancer treatments. Chemotherapy-provoked cardiotoxicity leads to the down-regulation of Circ-INSR in rodents and patients, which mechanistically contributes to cardiomyocyte cell death, cardiac dysfunction, and mitochondrial damage. In contrast, Circ-INSR overexpression prevented doxorubicin-mediated cardiotoxicity in both rodent and human cardiomyocytes in vitro and in a mouse model of chronic doxorubicin cardiotoxicity. Breast cancer type 1 susceptibility protein (Brca1) was identified as a regulator of Circ-INSR expression. Detailed transcriptomic and proteomic analyses revealed that Circ-INSR regulates apoptotic and metabolic pathways in cardiomyocytes. Circ-INSR physically interacts with the single-stranded DNA-binding protein (SSBP1) mediating its cardioprotective effects under doxorubicin stress. Importantly, in vitro transcribed and circularized Circ-INSR mimics also protected against doxorubicin-induced cardiotoxicity. Circ-INSR is a highly conserved non-coding RNA which is down-regulated during cardiotoxicity and cardiac remodelling. Adeno-associated virus and circRNA mimics-based Circ-INSR overexpression prevent and reverse doxorubicin-mediated cardiomyocyte death and improve cardiac function. The results of this study highlight a novel and translationally important Circ-INSR-based therapeutic approach for doxorubicin-induced cardiac dysfunction."
+    },
+    {
+      "pmid": "39302831",
+      "title": "Ceramide synthesis inhibitors prevent lipid-induced insulin resistance through the DAG-PKC\u03b5-insulin receptorT1150 phosphorylation pathway.",
+      "abstract": "Inhibition of the ceramide synthetic pathway with myriocin or an antisense oligonucleotide (ASO) targeting dihydroceramide desaturase (DES1) both improved hepatic insulin sensitivity in rats fed either a saturated or unsaturated fat diet and was associated with reductions in both hepatic ceramide and plasma membrane (PM)-sn-1,2-diacylglycerol (DAG) content. The insulin sensitizing effects of myriocin and Des1 ASO were abrogated by acute treatment with an ASO against DGAT2, which increased hepatic PM-sn-1,2-DAG but not hepatic C16 ceramide content. Increased PM-sn-1,2-DAG content was associated with protein kinase C (PKC)\u03b5 activation, increased insulin receptor (INSR)T1150 phosphorylation leading to reduced insulin-stimulated INSRY1152/AktS473 phosphorylation, and impaired insulin-mediated suppression of endogenous glucose production. These results demonstrate that inhibition of de novo ceramide synthesis by either myriocin treatment or DES1 knockdown protects against lipid-induced hepatic insulin resistance through a C16 ceramide-independent mechanism and that they mediate their effects to protect from lipid-induced hepatic insulin resistance via the PM-sn-1,2-DAG-PKC\u03b5-INSRT1150 phosphorylation pathway."
+    },
+    {
+      "pmid": "27156350",
+      "title": "Polycystic ovary syndrome: Endometrial markers.",
+      "abstract": "Women with polycystic ovarian syndrome (PCOS) present with several endometrial abnormalities possibly explaining some of the adverse endometrium-related outcomes in these women. PCOS and an increased miscarriage rate have been suggested to coincide, but the results are conflicting. Recent studies have also shown increased risks of pregnancy-induced hypertension, preeclampsia, and premature delivery that may be related to altered decidualization/placentation in affected women. In the long run, PCOS per se is associated with the occurrence of endometrial cancer (EC), with obesity aggravating the risk. Most investigated markers of the endometrial abnormalities in women with PCOS are related to steroid hormone action (ERs (estrogen receptors), PRs (progesterone receptors), ARs (androgen receptors), and steroid receptor coactivators), endometrial receptivity/decidualization (HOXA10, \u03b1v\u03b23 integrin, and IGFBP-1 (insulin-like growth factor-binding protein 1)), glucose metabolism (IRs (insulin receptors), glucose transporters, IGFs) and inflammation/immune cell migration ((IL-6 (interleukin 6), CCL2 (CC motif ligand), and uNK (uterine natural killer) cells). Despite several endometrial abnormalities in women with PCOS, the clinical relevance of these findings still awaits future clarification; to date, no common screening protocols/recommendations for women with PCOS have been established."
+    },
+    {
+      "pmid": "786863",
+      "title": "The immunology of the insulin receptor.",
+      "abstract": "We have detected and characterized anti-insulin-receptor autoantibodies which circulate in several patients with insulin resistance diabetes. These antibodies are predominantly IgG and are polyclonal. They inhibit insulin binding to its receptor on a variety of tissues from widely separated species. Antibodies obtained from different patients appear to bind to different determinants on the receptor and alter receptor function in several ways. Some anti-receptor antibodies are capable of stimulating insulin-like effects on target tissues, while others block insulin-stimulated effects. Direct labeling of anti-receptor antibody with 125I permits use of these antibodies as an assay and probe of insulin receptors."
+    },
+    {
+      "pmid": "31749085",
+      "title": "Insulin Signaling in Bone Marrow Adipocytes.",
+      "abstract": "The goal of this review is to discuss the role of insulin signaling in bone marrow adipocyte formation, metabolic function, and its contribution to cellular senescence in relation to metabolic bone diseases. Insulin signaling is an evolutionally conserved signaling pathway that plays a critical role in the regulation of metabolism and longevity. Bone is an insulin-responsive organ that plays a role in whole body energy metabolism. Metabolic disturbances associated with obesity and type 2 diabetes increase a risk of fragility fractures along with increased bone marrow adiposity. In obesity, there is impaired insulin signaling in peripheral tissues leading to insulin resistance. However, insulin signaling is maintained in bone marrow microenvironment leading to hypermetabolic state of bone marrow stromal (skeletal) stem cells associated with accelerated senescence and accumulation of bone marrow adipocytes in obesity. This review summarizes current findings on insulin signaling in bone marrow adipocytes and bone marrow stromal (skeletal) stem cells and its importance for bone and fat metabolism. Moreover, it points out to the existence of differences between bone marrow and peripheral fat metabolism which may be relevant for developing therapeutic strategies for treatment of metabolic bone diseases."
+    },
+    {
+      "pmid": "17785698",
+      "title": "IGF-I treatment of insulin resistance.",
+      "abstract": "Severe insulin resistance resulting from known or putative genetic defects affecting the insulin receptor or post-insulin receptor signalling represents a clinical spectrum ranging from Donohue's and Rabson-Mendenhall syndrome, where the genetic defect is identified, through to the milder phenotype of type A insulin resistance, where a genetic defect can only be detected in around 10% of cases. Paradoxically, subjects with these conditions may present with hypoglycaemia due to mismatch of post-prandial glucose excursion and compensatory hyperinsulinaemia. Ultimately, treatment with insulin and insulin sensitisers will be unsuccessful and subjects may succumb to diabetes or its complications. Recombinant human IGF-I alone or combined with its binding protein (IGFBP-3) provides an alternative therapy as IGF-I receptor shares structural and functional homology with the insulin receptor and recombinant human insulin-like growth factor I (rhIGF-I) therapy could improve glucose disposal by signalling through the IGF-I receptor, whilst reducing the adverse effects of high insulin concentrations. There are also data which indicate that IGF-I signalling through the IGF-I receptor on the pancreatic beta-cell may be important in maintaining insulin secretion. Pilot studies confirmed that rhIGF-I could reduce glucose and insulin levels in subjects with type A insulin resistance and those with Rabson-Mendenhall syndrome with sustained beneficial effects on HbA1c. Continued study has confirmed efficacy of rhIGF-I when combined with IGFBP-3 in the treatment of Donohue's and type A insulin resistance subjects. Observations that IGF-I treatment can improve C-peptide levels in these subjects may indicate that it might be more valuable as a first line intervention to preserve beta-cell function, rather than its current use as a medication of last resort in subjects where all other therapies have failed."
+    },
+    {
+      "pmid": "30230175",
+      "title": "A thing of beauty: Structure and function of insulin's \"aromatic triplet\".",
+      "abstract": "The classical crystal structure of insulin was determined in 1969 by D.C. Hodgkin et al. following a 35-year program of research. This structure depicted a hexamer remarkable for its self-assembly as a zinc-coordinated trimer of dimer. Prominent at the dimer interface was an \"aromatic triplet\" of conserved residues at consecutive positions in the B chain: PheB24 , PheB25 and TyrB26 . The elegance of this interface inspired the Oxford team to poetry: \"A thing of beauty is a joy forever\" (John Keats as quoted by Blundell, T.L., et al. Advances in Protein Chemistry 26:279-286 [1972]). Here, we revisit this aromatic triplet in light of recent advances in the structural biology of insulin bound as a monomer to fragments of the insulin receptor. Such co-crystal structures have defined how these side chains pack at the primary hormone-binding surface of the receptor ectodomain. On receptor binding, the B-chain \u03b2-strand (residues B24-B28) containing the aromatic triplet detaches from the \u03b1-helical core of the hormone. Whereas TyrB26 lies at the periphery of the receptor interface and may functionally be replaced by a diverse set of substitutions, PheB24 and PheB25 engage invariant elements of receptor domains L1 and \u03b1CT. These critical contacts were anticipated by the discovery of diabetes-associated mutations at these positions by Donald Steiner et al. at the University of Chicago. Conservation of PheB24 , PheB25 and TyrB26 among vertebrate insulins reflects the striking confluence of structure-based evolutionary constraints: foldability, protective self-assembly and hormonal activity."
+    },
+    {
+      "pmid": "39747658",
+      "title": "TRIM32 regulates insulin sensitivity by controlling insulin receptor degradation in the liver.",
+      "abstract": "Impaired insulin receptor signaling is strongly linked to obesity-related metabolic conditions like non-alcoholic fatty liver disease (NAFLD) and Type 2 diabetes (T2DM). However, the exact mechanisms behind impaired insulin receptor (INSR) signaling in obesity induced by a high-fat diet remain elusive. In this study, we identify an E3 ubiquitin ligase, tripartite motif-containing protein 32 (TRIM32), as a key regulator of hepatic insulin signaling that targets the insulin receptor (INSR) for ubiquitination and proteasomal degradation in high-fat diet (HFD) mice. HFD induces the nuclear translocation of SREBP-1c (Sterol Regulatory Element-Binding Protein 1c), resulting in increased expression of TRIM32 in hepatocytes. TRIM32 ubiquitylates INSR and facilitates its proteasomal degradation, leading to severe insulin resistance and fat accumulation within the liver of high-fat diet induced obese (DIO) mice. Conversely, liver-specific knockdown of TRIM32 enhances INSR expression and hepatic insulin sensitivity. Reduced AMPK signaling and phosphorylation of SREBP-1c at S372 in high-fat DIO mice promotes the nuclear translocation of SREBP-1c, leading to increased TRIM32 expression. In conclusion, our results demonstrate that TRIM32 promotes diet-induced hepatic insulin resistance by targeting the INSR to degradation."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000171105",
+    "approvedSymbol": "INSR",
+    "approvedName": "insulin receptor",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [
+      {
+        "event": "Carcinogenicity",
+        "eventId": "EFO_0011046",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "cardiac hypertrophy",
+        "eventId": "EFO_0002503",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "Hyperglycaemia",
+        "eventId": "HP_0003074",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "hyperlipidaemia",
+        "eventId": "MONDO_0021187",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "regulation of catalytic activity",
+        "eventId": "",
+        "datasource": "ToxCast"
+      },
+      {
+        "event": "anxiety",
+        "eventId": "HP_0000739",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "neoplasm/ malignancy",
+        "eventId": "MONDO_0005070",
+        "datasource": "Brennan et al. (2024)"
+      },
+      {
+        "event": "neutropenia",
+        "eventId": "",
+        "datasource": "ClinPGx"
+      }
+    ],
+    "drugAndClinicalCandidates": {
+      "count": 23
+    }
+  }
+}

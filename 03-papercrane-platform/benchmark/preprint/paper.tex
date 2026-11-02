@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage[margin=1in]{geometry}
+
+\title{The Paper Crane Benchmark: A Continuously Updated Leaderboard for Protein Binder Design}
+
+\author{%
+  Harsha Poonepalle\thanks{Paper Crane. Correspondence: \texttt{harsha@papercrane.bio}.}
+  \and
+  Vedant Kalipatnapu\footnotemark[1]%
+}
+
+\date{\today}
+
+\hypersetup{%
+  pdftitle={The Paper Crane Benchmark},
+  pdfauthor={Harsha Poonepalle and Vedant Kalipatnapu},
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue%
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+De novo protein binder design has advanced rapidly with the release of tools
+such as RFdiffusion~\citep{watson2023rfdiffusion}, ProteinMPNN~\citep{dauparas2022proteinmpnn},
+and BindCraft~\citep{pacesa2024bindcraft}, yet the field lacks a shared,
+continuously updated benchmark that tracks how these methods perform on a
+common set of therapeutic and structural-biology targets under a fixed,
+reproducible evaluation harness. We introduce the Paper Crane Benchmark, a
+living leaderboard that pins each tool version, target definition, and
+structural-validation stack, and recomputes results on a monthly cadence. Each
+release is archived as a versioned Zenodo deposition with a citable DOI, a
+public dataset of per-design metrics, and a reproducible container image.
+Evaluation combines ipSAE~\citep{dunbar2024ipsae}, DockQ~\citep{basu2016dockq},
+and self-consistency scores from Boltz-2~\citep{passaro2025boltz2},
+AlphaFold~3~\citep{abramson2024alphafold3}, and Chai-1~\citep{chai2024chai1},
+with confidence intervals obtained via the bootstrap~\citep{efron1979bootstrap}.
+This preprint describes version~\texttt{v\input{data/version.tex}\unskip} of the
+benchmark and the infrastructure that keeps it current.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+
+TODO: motivate the need for a continuously updated protein binder design
+benchmark; contrast with static one-shot evaluations; summarize contributions.
+
+\section{Methodology}
+\label{sec:methodology}
+
+TODO: describe the evaluation harness, versioning policy, container pinning,
+monthly cron cadence, and statistical protocol (bootstrap confidence
+intervals~\citep{efron1979bootstrap}).
+
+\section{Targets}
+\label{sec:targets}
+
+TODO: enumerate the target set with rationale, PDB IDs, hotspot definitions,
+and filter thresholds. Reference per-target metadata shipped in
+\texttt{data/targets.json}.
+
+\section{Tools Evaluated}
+\label{sec:tools}
+
+TODO: describe each evaluated tool, its pinned version, and its invocation
+configuration. Tools currently tracked include
+RFdiffusion~\citep{watson2023rfdiffusion},
+ProteinMPNN~\citep{dauparas2022proteinmpnn}, and
+BindCraft~\citep{pacesa2024bindcraft}, with structural validation by
+Boltz-2~\citep{passaro2025boltz2},
+AlphaFold~3~\citep{abramson2024alphafold3}, and
+Chai-1~\citep{chai2024chai1}.
+
+\section{Results}
+\label{sec:results}
+
+\input{tables/results.tex}
+
+TODO: narrate leaderboard results, significance testing, and per-target
+breakdowns. Reference \texttt{figures/} for generated plots.
+
+\section{Reproducibility}
+\label{sec:reproducibility}
+
+TODO: describe the monthly GitHub Actions workflow, container digests, Zenodo
+archival, CITATION.cff versioning, and how external users can reproduce the
+reported numbers from a released artifact.
+
+\section{Discussion}
+\label{sec:discussion}
+
+TODO: discuss failure modes, calibration of ipSAE~\citep{dunbar2024ipsae} and
+DockQ~\citep{basu2016dockq} against wet-lab outcomes, limitations of
+structural-only evaluation, and roadmap.
+
+\section{Data Availability}
+\label{sec:data}
+
+All raw per-design metrics, target definitions, container digests, and
+generated figures and tables for this release are archived on Zenodo with a
+citable DOI. The source repository, evaluation harness, and CI workflows are
+available at \url{https://github.com/papercrane/mosaic}.
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

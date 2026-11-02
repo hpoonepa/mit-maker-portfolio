@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/dockq/input.json",
+  "title": "DockQ Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "targetPdb": {
+          "description": "Docking model PDB id/path.",
+          "type": "string"
+        },
+        "targetPdbText": {
+          "description": "Docking model PDB/mmCIF text.",
+          "type": "string"
+        },
+        "targetPdbUrl": {
+          "description": "Docking model URL.",
+          "type": "string",
+          "format": "uri"
+        },
+        "referencePdb": {
+          "description": "Native reference PDB id/path.",
+          "type": "string"
+        },
+        "referencePdbText": {
+          "description": "Native reference PDB/mmCIF text.",
+          "type": "string"
+        },
+        "referencePdbUrl": {
+          "description": "Native reference URL.",
+          "type": "string",
+          "format": "uri"
+        },
+        "partnerPdb": {
+          "description": "Convenience native reference PDB id used by the complex input form.",
+          "type": "string"
+        },
+        "mapping": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9*,]*:[A-Za-z0-9*,]+$"
+        },
+        "allowedMismatches": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "noAlign": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

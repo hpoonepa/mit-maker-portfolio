@@ -1,0 +1,42 @@
+node_modules
+**/node_modules
+.turbo
+**/.turbo
+**/dist
+**/.next
+**/.next-beta
+out
+build
+*.tsbuildinfo
+**/*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.superpowers/
+.vercel
+coverage
+**/coverage
+__pycache__
+**/__pycache__
+*.pyc
+binder-scorer/
+
+# Local agent reports, run artifacts, and duplicate backup files are not part
+# of deployable source.
+.agent-logs/
+outputs/
+codex/
+outreach/
+pnpm-lock 3.yaml
+apps/web/components/hero/HeroCopy 2.tsx
+apps/web/public/*.original.*
+apps/web/public/_landing/
+apps/web/landing/.astro/
+apps/web/.npm-cache/
+docs/modal-integrations 2.md
+scripts/smoke/results.xml
+
+# Persistent local Redis state
+.local/

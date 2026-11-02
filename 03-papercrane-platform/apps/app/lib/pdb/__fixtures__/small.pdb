@@ -1,0 +1,24 @@
+HEADER    HYDROLASE                               23-APR-26   TEST
+TITLE     TINY FIXTURE FOR PARSER TESTS
+ATOM      1  N   MET A   1      27.340  24.430   2.614  1.00  9.67           N
+ATOM      2  CA  MET A   1      26.266  25.413   2.842  1.00 10.38           C
+ATOM      3  C   MET A   1      26.913  26.639   3.531  1.00  9.62           C
+ATOM      4  O   MET A   1      27.886  26.463   4.263  1.00  9.62           O
+ATOM      5  N   ALA A   2      26.335  27.770   3.258  1.00  9.27           N
+ATOM      6  CA  ALA A   2      26.854  29.021   3.898  1.00  9.42           C
+ATOM      7  C   ALA A   2      27.547  28.806   5.234  1.00  9.19           C
+ATOM      8  O   ALA A   2      28.654  29.353   5.470  1.00  9.85           O
+ATOM      9  N   GLY A   3      26.900  28.001   6.077  1.00  9.03           N
+ATOM     10  CA  GLY A   3      27.441  27.745   7.382  1.00  9.11           C
+ATOM     11  C   GLY A   3      28.851  27.193   7.264  1.00  9.35           C
+ATOM     12  O   GLY A   3      29.101  26.270   6.486  1.00  9.43           O
+ATOM     13  N   VAL A   4      29.775  27.754   8.044  1.00  9.28           N
+ATOM     14  CA  VAL A   4      31.175  27.295   8.019  1.00  9.22           C
+ATOM     15  C   VAL A   4      31.866  27.700   6.721  1.00  8.92           C
+ATOM     16  O   VAL A   4      32.905  27.143   6.371  1.00  9.14           O
+ATOM     17  N   LYS A   5      31.256  28.676   6.023  1.00  8.77           N
+ATOM     18  CA  LYS A   5      31.822  29.128   4.760  1.00  8.65           C
+ATOM     19  C   LYS A   5      31.937  28.005   3.735  1.00  8.91           C
+ATOM     20  O   LYS A   5      32.960  27.897   3.046  1.00  9.23           O
+TER      21      LYS A   5
+END

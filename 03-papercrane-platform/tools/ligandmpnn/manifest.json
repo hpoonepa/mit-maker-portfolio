@@ -1,0 +1,28 @@
+{
+  "id": "ligandmpnn",
+  "displayName": "LigandMPNN",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "sequence_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/ligandmpnn:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 12,
+    "estSecondsPerDesign": 6
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "temperature": 0.1,
+    "omit_aas": "CX",
+    "num_seq_per_target": 1,
+    "ligand_context_radius": 8.0
+  },
+  "composes": []
+}

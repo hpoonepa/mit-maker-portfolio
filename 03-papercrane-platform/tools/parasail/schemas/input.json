@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/parasail/input.json",
+  "title": "Parasail Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "querySequence": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWYXBZJUO]+$"
+        },
+        "referenceSequence": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWYXBZJUO]+$"
+        },
+        "sequences": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "$ref": "#/definitions/sequenceRecord" }
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["global", "local", "semi-global"]
+        },
+        "matrix": {
+          "type": "string",
+          "enum": [
+            "blosum45",
+            "blosum50",
+            "blosum62",
+            "blosum80",
+            "blosum90",
+            "pam30",
+            "pam70",
+            "pam250"
+          ]
+        },
+        "gapOpen": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "gapExtend": { "type": "integer", "minimum": 0, "maximum": 20 }
+      },
+      "additionalProperties": true
+    }
+  },
+  "definitions": {
+    "sequenceRecord": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[ACDEFGHIKLMNPQRSTVWYXBZJUO]+$"
+        },
+        {
+          "type": "object",
+          "required": ["sequence"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "sequence": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[ACDEFGHIKLMNPQRSTVWYXBZJUO]+$"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

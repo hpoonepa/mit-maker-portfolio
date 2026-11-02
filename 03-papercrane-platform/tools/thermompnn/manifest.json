@@ -1,0 +1,27 @@
+{
+  "id": "thermompnn",
+  "displayName": "ThermoMPNN",
+  "version": "2026.08.10",
+  "adapterVersion": "a1",
+  "category": "sequence_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/thermompnn:2b04fd3-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A10",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 16,
+    "estSecondsPerDesign": 8,
+    "note": "Site-saturation scan followed by one ranked stabilizing proposal per seed."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "ddgThreshold": -0.5,
+    "includeCysteine": false,
+    "chain": "A"
+  },
+  "composes": []
+}

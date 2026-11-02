@@ -1,0 +1,28 @@
+{
+  "_comment": "Users must acknowledge non-commercial terms before each run. See LICENSE-GATE.md and plan 02 §§8, 9.",
+  "id": "chai1",
+  "displayName": "Chai-1",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "frontier",
+  "license": "non-commercial (chaiDiscovery/chai-1 terms)",
+  "licenseGate": true,
+  "image": "ghcr.io/papercrane/chai1:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-80GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 48,
+    "estSecondsPerDesign": 130
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "num_trunk_recycles": 3,
+    "num_diffn_timesteps": 200
+  },
+  "composes": []
+}

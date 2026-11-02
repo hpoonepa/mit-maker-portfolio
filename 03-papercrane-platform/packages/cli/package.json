@@ -1,0 +1,43 @@
+{
+  "name": "@papercrane/cli",
+  "version": "0.1.0",
+  "description": "Paper Crane CLI — submit jobs, monitor designs, manage projects from your terminal.",
+  "private": true,
+  "bin": {
+    "papercrane": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/index.js || true",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "postinstall": "node ./scripts/postinstall.js || true",
+    "exec:papercrane": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "chalk": "5.3.0",
+    "cli-table3": "0.6.5",
+    "commander": "12.1.0",
+    "ora": "8.1.1",
+    "prompts": "2.4.2",
+    "smol-toml": "1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.4.1",
+    "@types/prompts": "2.4.9",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  },
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

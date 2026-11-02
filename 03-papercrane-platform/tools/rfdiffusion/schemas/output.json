@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/rfdiffusion/output.json",
+  "title": "RFdiffusion Design Result",
+  "description": "Shape of /outputs/result.json emitted by the RFdiffusion adapter. Backbones only — no sequence field (ProteinMPNN adds it downstream).",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "seed", "metrics", "metadata"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the generated backbone PDB file (no sequence yet).",
+            "type": "string"
+          },
+          "seed": { "type": "integer" },
+          "metrics": {
+            "description": "Tool-native metrics for the backbone.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "length": {
+                "description": "Residue count of the designed binder backbone.",
+                "type": "number"
+              },
+              "plddt_contig_mean": {
+                "description": "Mean pLDDT-like confidence on the designed contig (if emitted by upstream).",
+                "type": "number"
+              }
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "required": ["contigs_used"],
+            "additionalProperties": true,
+            "properties": {
+              "contigs_used": {
+                "description": "The contigmap.contigs string actually passed to RFdiffusion.",
+                "type": "string"
+              },
+              "noise_scale": { "type": "number" },
+              "hotspots": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "additionalProperties": true,
+      "properties": {
+        "tool": { "type": "string", "const": "rfdiffusion" },
+        "adapterVersion": { "type": "string" },
+        "composes": {
+          "description": "Tools this run should chain into. Platform reads this to decide whether to pipe into ProteinMPNN.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

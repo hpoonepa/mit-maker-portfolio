@@ -1,0 +1,25 @@
+{
+  "id": "bindcraft",
+  "displayName": "BindCraft",
+  "version": "1.2.0",
+  "adapterVersion": "a1",
+  "category": "binder_design",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/bindcraft:1.2.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-40GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 32,
+    "estSecondsPerDesign": 140
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "binder_length_range": [60, 150]
+  },
+  "composes": []
+}

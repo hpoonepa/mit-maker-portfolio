@@ -1,0 +1,71 @@
+# Projects & targets
+
+Paper Crane organizes work into a four-level hierarchy. Understanding it makes the rest
+of the platform — quotas, billing, sharing, exports — straightforward.
+
+```
+Org
+ └── Project          ← your team's namespace, billing boundary
+      └── Target      ← one biological molecule + hotspots
+           └── Job    ← one pipeline run against one target
+                └── Design ← one sequence + structure + metrics
+```
+
+## Org
+
+Every account belongs to one or more **orgs**. Orgs hold the subscription, payment
+method, and seat list. Free-tier users get a personal org by default — you only need a
+real org when you invite teammates.
+
+## Project
+
+A **project** is a namespace for related work — usually one program, one target family,
+or one collaboration. Projects are the boundary for:
+
+- API key scope
+- Seed quotas (orgs allocate seeds to projects)
+- Sharing (you invite teammates per-project)
+- Audit logs
+
+You can have unlimited projects. They're cheap.
+
+## Target
+
+A **target** is the molecule you want to bind. Add a target by:
+
+- **PDB ID** — pulls from RCSB, splits chains, infers hotspots
+- **AlphaFold accession** — pulls from EBI's AFDB
+- **Custom upload** — paste FASTA or upload PDB/CIF
+
+When you create a target you specify:
+
+| Field        | Meaning                                               |
+|--------------|-------------------------------------------------------|
+| `chain`      | Which chain you want a binder against                 |
+| `hotspots`   | Residues at the desired interface (auto or manual)    |
+| `length_min` | Minimum binder length (default 50)                    |
+| `length_max` | Maximum binder length (default 100)                   |
+| `notes`      | Free-text — visible to teammates, not to the model    |
+
+## Identifiers
+
+Every object has a stable, prefixed ID:
+
+- Project: `prj_...`
+- Target: `tgt_...`
+- Job: `job_...`
+- Design: `dsn_...`
+
+These IDs appear in URLs, the API, the CLI, and exported metric manifests. They're safe
+to share — knowing an ID does not grant access.
+
+<Callout>
+The reproducibility manifest a design ships with includes the target ID and an SHA-256
+of the input structure. If the target is ever modified, the hash changes — you'll always
+know whether two runs were against the same input.
+</Callout>
+
+## Next
+
+- [Jobs & pipelines](/concepts/jobs-and-pipelines) — how runs are described and scheduled
+- [Designs & metrics](/concepts/designs-and-metrics) — what comes out the other end

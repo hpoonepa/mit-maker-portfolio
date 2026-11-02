@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use the Paper Crane binder design benchmark in your research, please cite it using the metadata below."
+title: "Paper Crane Binder Design Benchmark"
+abstract: "A pre-registered, reproducible, head-to-head benchmark of in silico protein binder design tools against standardized therapeutic targets under matched compute environments, with cost-adjusted hit rates and signed run manifests."
+type: dataset
+version: "1.0"
+date-released: "2026-04-23"
+doi: "10.5281/zenodo.TBD"
+url: "https://github.com/paper-crane/benchmark"
+repository-code: "https://github.com/paper-crane/benchmark"
+license: "TBD"
+keywords:
+  - "protein design"
+  - "binder design"
+  - "benchmark"
+  - "structural biology"
+  - "machine learning"
+  - "reproducibility"
+authors:
+  - family-names: "Poonepalle"
+    given-names: "Harsha"
+    affiliation: "Paper Crane"
+  - family-names: "Kalipatnapu"
+    given-names: "Vedant"
+    affiliation: "Paper Crane"

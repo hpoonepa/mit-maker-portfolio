@@ -1,0 +1,23 @@
+{
+  "id": "immunebuilder",
+  "displayName": "ImmuneBuilder",
+  "version": "1.2",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/immunebuilder:1.2-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "A10G",
+    "gpuCount": 1,
+    "cpuCores": 4,
+    "memoryGb": 16,
+    "estSecondsPerDesign": 25,
+    "note": "Antibody, nanobody, and TCR prediction; beta until model-download and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "receptorType": "antibody" },
+  "composes": []
+}

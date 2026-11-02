@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "echo 'Root deploy is a no-op — use apps/web/vercel.json or apps/app/vercel.json' && exit 1",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "ignoreCommand": "exit 0",
+  "github": {
+    "silent": true,
+    "autoAlias": false
+  }
+}

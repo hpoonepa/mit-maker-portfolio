@@ -1,0 +1,147 @@
+name: Deploy (all services)
+
+# Unified production deploy fan-out triggered on pushes to main.
+# Reuses the per-service workflows so each can also run independently
+# via path filters or workflow_dispatch.
+#
+# Order:
+#   1. Run CI (lint + typecheck + tests + build) as a gate
+#   2. Fan-out: web (Vercel) + app (Vercel) + api (Fly) + worker (Fly)
+#   3. Post-deploy summary
+#
+# All secrets are read from the `production` GitHub Environment.
+# See docs/deploy.md for the secret matrix.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      services:
+        description: "Comma-separated subset of services to deploy (web,app,api,worker). Empty = all."
+        required: false
+        default: ""
+
+concurrency:
+  group: deploy-main-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+  actions: write
+
+env:
+  TURBO_TELEMETRY_DISABLED: "1"
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  # ---------------------------------------------------------------
+  # Gate: CI must pass before any deploy fans out.
+  # ---------------------------------------------------------------
+  gate:
+    name: CI gate (lint + typecheck + test + build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    outputs:
+      sha: ${{ steps.meta.outputs.sha }}
+      services: ${{ steps.meta.outputs.services }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.3
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm turbo run lint
+
+      - name: Typecheck
+        run: pnpm turbo run typecheck
+
+      - name: Test
+        run: pnpm turbo run test
+
+      - name: Build
+        run: pnpm turbo run build
+
+      - name: Compute metadata
+        id: meta
+        run: |
+          echo "sha=${GITHUB_SHA::12}" >> "$GITHUB_OUTPUT"
+          SVC="${{ github.event.inputs.services }}"
+          if [ -z "$SVC" ]; then SVC="web,app,api,worker"; fi
+          echo "services=$SVC" >> "$GITHUB_OUTPUT"
+
+  # ---------------------------------------------------------------
+  # Fan-out — services are independent; one failure does not
+  # block the others. Each handles its own rollback.
+  # ---------------------------------------------------------------
+  deploy-web:
+    name: Deploy web (Vercel)
+    needs: gate
+    if: contains(needs.gate.outputs.services, 'web')
+    uses: ./.github/workflows/deploy-web.yml
+    secrets: inherit
+
+  deploy-app:
+    name: Deploy app (Vercel)
+    needs: gate
+    if: contains(needs.gate.outputs.services, 'app')
+    uses: ./.github/workflows/deploy-app.yml
+    secrets: inherit
+
+  deploy-api:
+    name: Deploy api (Fly.io)
+    needs: gate
+    if: contains(needs.gate.outputs.services, 'api')
+    uses: ./.github/workflows/deploy-api.yml
+    secrets: inherit
+
+  deploy-worker:
+    name: Deploy worker (Fly.io)
+    needs: gate
+    if: contains(needs.gate.outputs.services, 'worker')
+    uses: ./.github/workflows/deploy-worker.yml
+    secrets: inherit
+
+  # ---------------------------------------------------------------
+  # Summary — always runs so the action page shows a green/red row
+  # per service even when individual deploys fail.
+  # ---------------------------------------------------------------
+  summary:
+    name: Deploy summary
+    needs: [deploy-web, deploy-app, deploy-api, deploy-worker]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print summary
+        run: |
+          {
+            echo "## Paper Crane deploy results — ${GITHUB_SHA::12}"
+            echo ""
+            echo "| Service | Result |"
+            echo "|---------|--------|"
+            echo "| web     | ${{ needs.deploy-web.result }} |"
+            echo "| app     | ${{ needs.deploy-app.result }} |"
+            echo "| api     | ${{ needs.deploy-api.result }} |"
+            echo "| worker  | ${{ needs.deploy-worker.result }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail if any required deploy failed
+        if: |
+          needs.deploy-web.result    == 'failure' ||
+          needs.deploy-app.result    == 'failure' ||
+          needs.deploy-api.result    == 'failure' ||
+          needs.deploy-worker.result == 'failure'
+        run: exit 1

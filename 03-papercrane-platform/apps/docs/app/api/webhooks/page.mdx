@@ -1,0 +1,98 @@
+# Webhooks
+
+Paper Crane fires webhooks for job lifecycle events, seed consumption, and design
+completion. Configure endpoints in **Settings → Webhooks** or via the API.
+
+## Events
+
+| Event                        | Fires when                                      |
+|------------------------------|-------------------------------------------------|
+| `job.queued`                 | A job is accepted into the queue                |
+| `job.started`                | First node starts running                       |
+| `job.succeeded`              | All nodes complete successfully                 |
+| `job.failed`                 | A node fails after 3 retries                    |
+| `job.cancelled`              | A user or admin cancels                         |
+| `design.completed`           | A single design finishes (fires N times per job)|
+| `seeds.low`                  | Project drops below 10% of plan                 |
+| `seeds.exhausted`            | Project hits zero (and overage disabled)        |
+
+## Payload shape
+
+```json
+{
+  "id": "evt_01HZ...",
+  "type": "job.succeeded",
+  "created": "2026-04-27T18:42:11Z",
+  "data": {
+    "job_id": "job_abc",
+    "project_id": "prj_xyz",
+    "target_id": "tgt_def",
+    "design_count": 200,
+    "seeds_consumed": 600,
+    "summary_url": "https://app.papercrane.bio/jobs/job_abc"
+  }
+}
+```
+
+## HMAC signature verification
+
+Every request includes an `X-Papercrane-Signature` header. The signature is the
+hex-encoded HMAC-SHA256 of the **raw request body** using your endpoint's signing secret.
+
+### Node.js
+
+```ts
+import crypto from "node:crypto";
+
+export function verify(rawBody: string, signature: string, secret: string) {
+  const expected = crypto
+    .createHmac("sha256", secret)
+    .update(rawBody, "utf8")
+    .digest("hex");
+  return crypto.timingSafeEqual(
+    Buffer.from(expected, "hex"),
+    Buffer.from(signature, "hex"),
+  );
+}
+```
+
+### Python
+
+```python
+import hmac, hashlib
+
+def verify(raw_body: bytes, signature: str, secret: str) -> bool:
+    expected = hmac.new(secret.encode(), raw_body, hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, signature)
+```
+
+<Callout variant="warn">
+Always compare with a constant-time function (`timingSafeEqual` / `compare_digest`).
+A naive `==` opens you to timing attacks.
+</Callout>
+
+## Replay protection
+
+Each request also carries `X-Papercrane-Timestamp` (RFC3339). Reject any request whose
+timestamp is more than 5 minutes in the past — that bounds replay windows even if a
+secret is briefly exposed in logs.
+
+## Retry policy
+
+We retry failed deliveries with exponential backoff:
+
+```
+0s → 30s → 5m → 30m → 2h → 6h → 24h → drop
+```
+
+A delivery is "successful" if your endpoint responds within 10 seconds with a 2xx code.
+4xx responses (other than 408/429) are treated as terminal and not retried.
+
+## Test deliveries
+
+```bash
+papercrane webhooks send-test --endpoint <id> --event job.succeeded
+```
+
+This delivers a synthetic event with a real signature against your live secret — useful
+for verifying your handler before you point production traffic at it.

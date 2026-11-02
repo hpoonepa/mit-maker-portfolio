@@ -1,0 +1,26 @@
+{
+  "id": "mafft",
+  "displayName": "MAFFT",
+  "version": "7.526",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "BSD-3-Clause",
+  "image": "ghcr.io/papercrane/mafft:7.526-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 8,
+    "note": "Multiple sequence alignment with a pinned official Linux package; beta until live binary and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "strategy": "auto",
+    "reorder": false
+  },
+  "composes": []
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/rfdiffusionaa/input.json",
+  "title": "RFdiffusion All-Atom Input Parameters",
+  "description": "RFdiffusion All-Atom-specific parameters passed via DesignRequest.toolParams. Ligand- and metal-aware all-atom backbone generation: diffuses protein backbones around small molecules, cofactors, and metal ions. Emits all-atom backbones only; sequences are added by a downstream ProteinMPNN pass (see manifest.composes).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "binder_length_range": {
+      "description": "Min/max residue length of the designed binder backbone.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 20, "maximum": 300 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "noise_scale": {
+      "description": "Diffusion noise scale at inference time. Lower = more conservative backbones.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "default": 1.0
+    },
+    "contigs": {
+      "description": "Advanced override: full RFdiffusion contigmap.contigs string. When present, overrides target_chain + binder_length_range.",
+      "type": "string"
+    },
+    "target_chain": {
+      "description": "Chain id of the target in the input PDB.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]$"
+    },
+    "ligand": {
+      "description": "Optional ligand / cofactor / metal to diffuse the backbone around. RFdiffusion All-Atom is ligand- and metal-aware. Supply inline SDF text, an explicit atom list (e.g. metal ions), and/or a CCD code resolved from the target PDB's HETATM records.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sdf": {
+          "description": "Inline SDF/MOL block describing the small molecule or cofactor.",
+          "type": "string"
+        },
+        "ccd": {
+          "description": "CCD ligand code (e.g. \"HEM\", \"ZN\") to pull from the target PDB's HETATM records.",
+          "type": "string"
+        },
+        "atoms": {
+          "description": "Explicit atom list (e.g. metal ions) as [{element, x, y, z}].",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["element", "x", "y", "z"],
+            "properties": {
+              "element": { "type": "string" },
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "z": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "num_designs": {
+      "description": "Backbones per seed. Mirrored at top-level DesignRequest.numDesigns.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "skip_mpnn": {
+      "description": "If true, platform will NOT chain ProteinMPNN automatically. Adapter itself always just emits backbones.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

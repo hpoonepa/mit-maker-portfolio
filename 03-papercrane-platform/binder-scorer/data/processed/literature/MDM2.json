@@ -1,0 +1,245 @@
+{
+  "abstracts": [
+    {
+      "pmid": "40399308",
+      "title": "Cyclic peptide structure prediction and design using AlphaFold2.",
+      "abstract": "Small cyclic peptides have gained significant traction as a therapeutic modality; however, the development of deep learning methods for accurately designing such peptides has been slow, mostly due to the lack of sufficiently large training sets. Here, we introduce AfCycDesign, a deep learning approach for accurate structure prediction, sequence redesign, and de novo hallucination of cyclic peptides. Using AfCycDesign, we identified over 10,000 structurally-diverse designs predicted to fold into the designed structures with high confidence. X-ray crystal structures for eight tested de novo designed sequences match very closely with the design models (RMSD\u2009<\u20091.0 \u00c5), highlighting the atomic level accuracy in our approach. Further, we used the set of hallucinated peptides as starting scaffolds to design binders with nanomolar IC50 against MDM2 and Keap1. The computational methods and scaffolds developed here provide the basis for the custom design of peptides for diverse protein targets and therapeutic applications."
+    },
+    {
+      "pmid": "8875929",
+      "title": "Structure of the MDM2 oncoprotein bound to the p53 tumor suppressor transactivation domain.",
+      "abstract": "The MDM2 oncoprotein is a cellular inhibitor of the p53 tumor suppressor in that it can bind the transactivation domain of p53 and downregulate its ability to activate transcription. In certain cancers, MDM2 amplification is a common event and contributes to the inactivation of p53. The crystal structure of the 109-residue amino-terminal domain of MDM2 bound to a 15-residue transactivation domain peptide of p53 revealed that MDM2 has a deep hydrophobic cleft on which the p53 peptide binds as an amphipathic alpha helix. The interface relies on the steric complementarity between the MDM2 cleft and the hydrophobic face of the p53 alpha helix and, in particular, on a triad of p53 amino acids-Phe19, Trp23, and Leu26-which insert deep into the MDM2 cleft. These same p53 residues are also involved in transactivation, supporting the hypothesis that MDM2 inactivates p53 by concealing its transactivation domain. The structure also suggests that the amphipathic alpha helix may be a common structural motif in the binding of a diverse family of transactivation factors to the TATA-binding protein-associated factors."
+    },
+    {
+      "pmid": "26764190",
+      "title": "Peptide-based inhibitors of protein-protein interactions.",
+      "abstract": "Protein-protein interactions (PPIs) are key elements of several important biological processes and have emerged as valuable targets in medicinal chemistry. Importantly, numerous specific protein-protein interactions (e.g., p53-HDM2 and Bcl-2-BH3 domains) were found to be involved in the development of several diseases, including various types of cancer. In general, the discovery of new synthetic PPI inhibitors is a challenging task because protein surfaces have not evolved in a manner that allows for specific binding of low molecular weight compounds. Here, we review the discovery strategies for peptide-based PPI inhibitors. Although peptide-based drug candidates exhibit significant drawbacks (in particular, low proteolytic stability), modifications of either the side chains or backbone could provide molecules of interest. Moreover, due to the large molecular size of peptide-based compounds, the discovery of molecules that specifically interact with extended protein surfaces is possible. Two major strategies for constructing peptide-based PPI inhibitors are as follows: (a) cyclization (e.g., stapled peptides) and (b) modification of the backbone structure (e.g., \u03b2-peptides and peptoids). These approaches for constructing PPI inhibitors enhance both the inhibitory activity and pharmacokinetic properties compared with non-modified \u03b1-peptides."
+    },
+    {
+      "pmid": "34163731",
+      "title": "Query-guided protein-protein interaction inhibitor discovery.",
+      "abstract": "Protein-protein interactions (PPIs) are central to biological mechanisms, and can serve as compelling targets for drug discovery. Yet, the discovery of small molecule inhibitors of PPIs remains challenging given the large and typically shallow topography of the interacting protein surfaces. Here, we describe a general approach to the discovery of orthosteric PPI inhibitors that mimic specific secondary protein structures. Initially, hot residues at protein-protein interfaces are identified in silico or from experimental data, and incorporated into secondary structure-based queries. Virtual libraries of small molecules are then shape-matched against the queries, and promising ligands docked to target proteins. The approach is exemplified experimentally using two unrelated PPIs that are mediated by an \u03b1-helix (p53/hDM2) and a \u03b2-strand (GKAP/SHANK1-PDZ). In each case, selective PPI inhibitors are discovered with low \u03bcM activity as determined by a combination of fluorescence anisotropy and 1H-15N HSQC experiments. In addition, hit expansion yields a series of PPI inhibitors with defined structure-activity relationships. It is envisaged that the generality of the approach will enable discovery of inhibitors of a wide range of unrelated secondary structure-mediated PPIs."
+    },
+    {
+      "pmid": "41428874",
+      "title": "Multiplex mapping of protein-protein interaction interfaces.",
+      "abstract": "We describe peptide mapping through Split Antibiotic Resistance Complementation (SpARC-map), a method to identify the probable interface between two interacting proteins. Our method is based on in vivo affinity selection inside a bacterial host and uses high-throughput DNA sequencing to infer probable protein-protein interaction (PPI) interfaces. SpARC-map uses only routine microbiology techniques, with no reliance on specialized instrumentation, dedicated reagents, or reconstituting protein complexes in vitro. SpARC-map can be tuned to detect PPIs over a broad range of affinities, multiplexed to probe multiple PPIs in parallel, and its nonspecific background can be precisely measured, enabling the sensitive detection of weak PPIs. Using SpARC-map, we recover known PPI interfaces in the p21-PCNA, p53-MDM2, and MYC-MAX complexes. We also use SpARC-map to probe the purinosome, the weakly bound complex of six purine biosynthetic enzymes, where no PPI interfaces are known. There, we identify interfaces that satisfy structural requirements for substrate channeling, as well as protein surfaces that participate in multiple distinct interactions, which we validate using site-specific photocrosslinking in live human cells. Finally, we show that SpARC-map results can impose stringent constraints on machine learning-based structure prediction."
+    },
+    {
+      "pmid": "39605685",
+      "title": "Accurate de novo design of high-affinity protein binding macrocycles using deep learning.",
+      "abstract": "The development of macrocyclic binders to therapeutic proteins typically relies on large-scale screening methods that are resource-intensive and provide little control over binding mode. Despite considerable progress in physics-based methods for peptide design and deep-learning methods for protein design, there are currently no robust approaches for de novo design of protein-binding macrocycles. Here, we introduce RFpeptides, a denoising diffusion-based pipeline for designing macrocyclic peptide binders against protein targets of interest. We test 20 or fewer designed macrocycles against each of four diverse proteins and obtain medium to high-affinity binders against all selected targets. Designs against MCL1 and MDM2 demonstrate KD between 1-10 \u03bcM, and the best anti-GABARAP macrocycle binds with a KD of 6 nM and a sub-nanomolar IC50 in vitro. For one of the targets, RbtA, we obtain a high-affinity binder with KD < 10 nM despite starting from the target sequence alone due to the lack of an experimentally determined target structure. X-ray structures determined for macrocycle-bound MCL1, GABARAP, and RbtA complexes match very closely with the computational design models, with three out of the four structures demonstrating Ca RMSD of less than 1.5 \u00c5 to the design models. In contrast to library screening approaches for which determining binding mode can be a major bottleneck, the binding modes of RFpeptides-generated macrocycles are known by design, which should greatly facilitate downstream optimization. RFpeptides thus provides a powerful framework for rapid and custom design of macrocyclic peptides for diagnostic and therapeutic applications."
+    },
+    {
+      "pmid": "22650254",
+      "title": "P53 mdm2 inhibitors.",
+      "abstract": "The protein-protein interaction (PPI) between p53 and its negative regulator MDM2 comprises one of the most important and intensely studied PPI's involved in preventing the initiation of cancer. The interaction between p53 and MDM2 is conformation-based and is tightly regulated on multiple levels. Due to the Angstrom level structural insight there is a reasonable understanding of the structural requirements needed for a molecule to bind to MDM2 and successfully inhibit the p53/MDM2 interaction. The current review summarizes the binding characteristics of the different disclosed small molecules for inhibition of MDM2 with a co-crystal structure. Synthetic access to these compounds as well as their derivatives are described in detail."
+    },
+    {
+      "pmid": "32049643",
+      "title": "Small-molecule modulation of p53 protein-protein interactions.",
+      "abstract": "Small-molecule modulation of protein-protein interactions (PPIs) is a very promising but also challenging area in drug discovery. The tumor suppressor protein p53 is one of the most frequently altered proteins in human cancers, making it an attractive target in oncology. 14-3-3 proteins have been shown to bind to and positively regulate p53 activity by protecting it from MDM2-dependent degradation or activating its DNA binding affinity. PPIs can be modulated by inhibiting or stabilizing specific interactions by small molecules. Whereas inhibition has been widely explored by the pharmaceutical industry and academia, the opposite strategy of stabilizing PPIs still remains relatively underexploited. This is rather interesting considering the number of natural compounds like rapamycin, forskolin and fusicoccin that exert their activity by stabilizing specific PPIs. In this review, we give an overview of 14-3-3 interactions with p53, explain isoform specific stabilization of the tumor suppressor protein, explore the approach of stabilizing the 14-3-3\u03c3-p53 complex and summarize some promising small molecules inhibiting the p53-MDM2 protein-protein interaction."
+    },
+    {
+      "pmid": "34017824",
+      "title": "Rational Design of Peptide-Based Inhibitors Disrupting Protein-Protein Interactions.",
+      "abstract": "Protein-protein interactions (PPIs) are well-established as a class of promising drug targets for their implications in a wide range of biological processes. However, drug development toward PPIs is inevitably hampered by their flat and wide interfaces, which generally lack suitable pockets for ligand binding, rendering most PPI systems \"undruggable.\" Here, we summarized drug design strategies for developing peptide-based PPI inhibitors. Importantly, several quintessential examples toward well-established PPI targets such as Bcl-2 family members, p53-MDM2, as well as APC-Asef are presented to illustrate the detailed schemes for peptide-based PPI inhibitor development and optimizations. This review supplies a comprehensive overview of recent progresses in drug discovery targeting PPIs through peptides or peptidomimetics, and will shed light on future therapeutic agent development toward the historically \"intractable\" PPI systems."
+    },
+    {
+      "pmid": "41138151",
+      "title": "64Cu-Labeled Stapled Peptide-Based Radiopharmaceuticals Targeting MDM2/MDMX for Pan-p53 Tumors.",
+      "abstract": "The development of ideal peptide-based radiopharmaceuticals faces critical bottlenecks, primarily due to limited cellular internalization and insufficient deep tissue penetration of peptide carriers. To address this, we developed an intracellular targeting and DNA-adjacent radiotherapeutic strategy using stapled peptides. The MDM2/MDMX-targeting stapled peptide-based radiopharmaceuticals, denoted as [64Cu]Cu-DOTA-STP, exhibited prolonged circulation in the bloodstream and slow systemic clearance. Furthermore, in vitro studies demonstrated that nearly 50% of administered [64Cu]Cu-DOTA-STP was internalized, achieving efficient intracellular accumulation. In addition, [64Cu]Cu-DOTA-STP demonstrated high tumor accumulation, with a standard uptake value of up to 9.39 \u00b1 1.52%ID/g. Finally, targeted radionuclide therapy confirmed that [64Cu]Cu-DOTA-STP effectively inhibited tumor growth, irrespective of p53 phenotypes. Taken together, this study leveraged PET imaging as a noninvasive and longitudinal tool to elucidate the in vivo fate of stapled peptides and demonstrated that stapled peptides can serve as ideal vehicles for developing intracellular protein-targeting radiopharmaceuticals, achieving efficient 64Cu-based targeted radionuclide therapy."
+    },
+    {
+      "pmid": "38768424",
+      "title": "TP53 Mutations in Acute Leukemias and Myelodysplastic Syndromes: Insights and Treatment Updates.",
+      "abstract": "TP53 mutations are found in 5%-10% of de novo myelodysplastic syndrome (MDS) and AML cases. By contrast, in therapy related MDS and AML, mutations in TP53 are found in up to 30%-40% of patients. The majority of inactivating mutations observed in MDS and AML are missense mutations localized in a few prevalent hotspots. TP53 missense mutations together with truncating mutations or chromosomal loss of TP53 determine a loss-of-function effect on normal p53 function. Clonal expansion of TP53-mutant clones is observed under the selection pressure of chemotherapy or MDM2 inhibitor therapy. TP53-mutant clones are resistant to current chemotherapy, and when responses to treatment have been observed, they have correlated poorly with overall survival. The most heavily investigated and targeted agent for patients with TP53-mutant MDS and AML has been APR-246 (eprenetapopt) a p53 reactivator, in combination with azacitidine, but also in triplets with venetoclax. Despite positive results in phase II trials, a phase III trial did not confirm superior response or improved survival. Other agents, like magrolimab (anti-CD47 antibody), failed to demonstrate improved activity in TP53-mutant MDS and AML. Agents whose activity is not dependent on a functional apoptosis system like anti-CD123 antibodies or cellular therapies are in development and may hold promises. Delivering prognostic information in a dismal disease like TP53-mutated MDS and AML is particularly challenging. The physician should balance hope and realism, describing the trajectory of possible treatments and at the same time indicating the poor outcome, together with promoting adaptive coping in patients and elaborating on the nature of the disease."
+    },
+    {
+      "pmid": "35104390",
+      "title": "NMR Data-Driven Docking of HDM2-Inhibitor Complexes.",
+      "abstract": "We present an automated NMR-guided docking workflow that can be used to generate models of protein-ligand complexes based on data from NOE NMR experiments. The first step is to generate a number of intermolecular distance constraints from experimental NOE data. Then, the ligand is docked on an ensemble of receptor structures to account for protein flexibility, and multiple poses are generated. Finally, we use the NOE-based constraints to filter and score docking poses based on the percentage of NOE constraints that are consistent with protein-ligand interatomic distances. This workflow was successfully used during a lead optimization project to generate models of synthetic protein-protein interaction (PPI) inhibitors bound to the HDM2 protein."
+    },
+    {
+      "pmid": "32156064",
+      "title": "Recent Small-Molecule Inhibitors of the p53-MDM2 Protein-Protein Interaction.",
+      "abstract": "This review presents the last decade of studies on the synthesis of various types of small-molecule inhibitors of the p53- Mouse double minute 2 homolog (MDM2) protein-protein interaction. The main focus is placed on synthetic approaches to such molecules, their cytotoxicity, and MDM2 binding characteristics."
+    },
+    {
+      "pmid": "17508926",
+      "title": "Small molecule protein-protein inhibitors for the p53-MDM2 interaction.",
+      "abstract": "This article describes recent progress in the development of small molecule protein-protein inhibitors of the p53-MDM2 (purine double minute 2, or HDM2 for the human congener) protein-protein interaction, with special attention to the diversity of chemotypes reported to disrupt this protein-protein interaction. In >50% of all human cancers, the tumor suppressor 53 KDa phospho-protein p53 is either mutated or deleted. The discovery that MDM2 (HDM2) negatively regulates p53 and therefore inhibits the tumor-suppressor activity of p53 has instigated numerous drug discovery campaigns aimed at disrupting this protein-protein interaction as a potential cancer therapy. Once regarded as intractable targets disrupted by only large macromolecules, protein-protein interactions (PPI) are now mainstream targets due in large part to the intensive effort applied to the study of p53 and the surprising diversity of small molecules (peptides, natural products, terphenyl and other alpha-helix mimetics, chalcones, piperidines, piperazines, fused indoles, isoindolinones, spiro-oxindoles, cis-imidazolines (nutlins), quinolinol and benzodiazepines) capable of disrupting the p53-HDM2 PPI. In addition, drug discovery researchers have employed a number of screening approaches and technologies to identify SMPPIs of the p53-HDM2 interaction, and these discovery paradigms will be discussed. This review will detail the biology of the p53-MDM2 interaction, the major classes of SMPPIs and key medicinal chemistry and in vitro/in vivo biological data reported through October 2006."
+    },
+    {
+      "pmid": "39975334",
+      "title": "Multiplex mapping of protein-protein interaction interfaces.",
+      "abstract": "We describe peptide mapping through Split Antibiotic Resistance Complementation (SpARC-map), a method to identify the probable interface between two interacting proteins. Our method is based on in vivo affinity selection inside a bacterial host, and uses high throughput DNA sequencing to infer the probable protein-protein interaction (PPI) interfaces. SpARC-map uses only routine microbiology techniques, with no reliance on specialized instrumentation, dedicated reagents, or reconstituting protein complexes in vitro. SpARC-map can be tuned to detect PPIs over a broad range of affinities, multiplexed to probe multiple PPIs in parallel, and its nonspecific background can be precisely measured, enabling the sensitive detection of weak PPIs. Using SpARC-map, we recover known PPI interfaces in the p21-PCNA, p53-MDM2, and MYC-MAX complexes. We also use SpARC-map to probe the purinosome, the weakly bound complex of six purine biosynthetic enzymes, where no PPI interfaces are known. There, we identify interfaces that satisfy structural requirements for substrate channeling, as well as protein surfaces that participate in multiple distinct interactions, which we validate using site-specific photocrosslinking in live human cells. Finally, we show that SpARC-map results can impose stringent constraints on machine learning based structure prediction."
+    },
+    {
+      "pmid": "17427181",
+      "title": "Targeting protein-protein interactions: lessons from p53/MDM2.",
+      "abstract": "The tremendous challenge of inhibiting therapeutically important protein-protein interactions has created the opportunity to extend traditional medicinal chemistry to a new class of targets and to explore nontraditional strategies. Here we review a widely studied system, the interaction between tumor suppressor p53 and its natural antagonist MDM2, for which both traditional and nontraditional approaches have been reported. This system has been a testing ground for novel proteomimetic scaffold-based strategies, i.e., for attempts to mimic the recognition surface displayed by a folded protein with unnatural oligomers. Retroinverso peptides, peptoids, terphenyls, beta-hairpins, p-oligobenzamides, beta-peptides, and miniproteins have all been explored as inhibitors of the p53/MDM2 interaction, and we focus on these oligomer-based efforts. Traditional approaches have been successful as well, and we briefly review small molecule inhibitors along with other strategies for reactivation of the p53 pathway, for comparison with oligomer- based approaches. We close with comments on an emerging dichotomy among protein-protein interaction targets."
+    },
+    {
+      "pmid": "35831864",
+      "title": "Targeting p53-MDM2 interaction by small-molecule inhibitors: learning from MDM2 inhibitors in clinical trials.",
+      "abstract": "p53, encoded by the tumor suppressor gene TP53, is one of the most important tumor suppressor factors in vivo and can be negatively regulated by MDM2 through p53-MDM2 negative feedback loop. Abnormal p53 can be observed in almost all tumors, mainly including p53 mutation and functional inactivation. Blocking MDM2 to restore p53 function is a hotspot in the development of anticancer candidates. Till now, nine MDM2 inhibitors with different structural types have entered clinical trials. However, no MDM2 inhibitor has been approved for clinical application. This review focused on the discovery, structural modification, preclinical and clinical research of the above compounds from the perspective of medicinal chemistry. Based on this, the possible defects in MDM2 inhibitors in clinical development were analyzed to suggest that the multitarget strategy or targeted degradation strategy based on MDM2 has the potential to reduce the dose-dependent hematological toxicity of MDM2 inhibitors and improve their anti-tumor activity, providing certain guidance for the development of agents targeting the p53-MDM2 interaction."
+    },
+    {
+      "pmid": "28270530",
+      "title": "Targeting the MDM2-p53 Protein-Protein Interaction for New Cancer Therapy: Progress and Challenges.",
+      "abstract": "MDM2 is a primary cellular inhibitor of p53. It inhibits p53 function by multiple mechanisms, each of which, however, is mediated by their direct interaction. It has been proposed that small-molecule inhibitors designed to block the MDM2-p53 interaction may be effective in the treatment of human cancer retaining wild-type p53 by reactivating the p53 tumor suppressor function. Through nearly two decades of intense efforts, a number of structurally distinct, highly potent, nonpeptide, small-molecule inhibitors of the MDM2-p53 interaction (MDM2 inhibitors) have been successfully designed and developed, and at least seven such compounds have now been advanced into human clinical trials as new anticancer drugs. This review offers a perspective on the design and development of MDM2 small-molecule inhibitors and discusses early clinical data for some of the MDM2 small-molecule inhibitors and future challenges for the successful clinical development of MDM2 inhibitors for cancer treatment."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000135679",
+    "approvedSymbol": "MDM2",
+    "approvedName": "MDM2 proto-oncogene",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 4
+    }
+  }
+}

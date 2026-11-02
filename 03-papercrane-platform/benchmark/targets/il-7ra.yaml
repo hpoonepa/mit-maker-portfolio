@@ -1,0 +1,21 @@
+id: il-7ra
+pdb: 3UP1
+chain: A
+hotspots: [80, 132, 178, 182]
+hotspot_rationale: |
+  Hotspots selected from the IL-7 / IL-7Rα interface (3UP1, chain A is
+  IL-7Rα). Residues 80, 132, 178, and 182 form the cytokine-binding
+  site-I contacts identified by Walsh et al. 2012 (Immunity) as the
+  primary energetic drivers of IL-7 recognition by its α receptor. This
+  interface is a hard-tier target because the IL-7Rα surface is shallow
+  and polar, offering fewer hydrophobic anchors than the PD-L1 or RBD
+  surfaces, which suppresses baseline hit rate across all current
+  generative tools. Literature citations: [CITATION: Walsh 2012 Immunity
+  IL-7Rα interface], [CITATION: McElroy 2012 Structure IL-7/IL-7Rα
+  co-crystal].
+class: cytokine_receptor
+tier: hard
+baseline_hit_rate: 0.18
+added: 2026-04-23
+added_by: paper-crane-core
+version: 1

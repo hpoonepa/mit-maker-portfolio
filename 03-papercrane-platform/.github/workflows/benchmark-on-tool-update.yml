@@ -1,0 +1,106 @@
+name: Benchmark — On Tool Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: 'Tool id (must match a directory under tools/)'
+        type: string
+        required: true
+      version:
+        description: 'New tool version (semver or git sha)'
+        type: string
+        required: true
+      reason:
+        description: 'Why this re-run was triggered (release URL, PR, etc.)'
+        type: string
+        required: false
+        default: 'manual'
+
+concurrency:
+  group: benchmark-tool-update-${{ inputs.tool }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  NODE_VERSION: '20'
+  TIER: 'tool-update'
+  SEEDS_PER_CELL: '30'
+  MAX_BUDGET_USD: '150'
+  PARALLELISM: '8'
+
+jobs:
+  dispatch:
+    name: Re-run tool ${{ inputs.tool }} @ ${{ inputs.version }} across all targets
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    outputs:
+      run_id: ${{ steps.dispatch.outputs.run_id }}
+      summary_json: ${{ steps.dispatch.outputs.summary_json }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate tool exists
+        run: |
+          if [ ! -d "tools/${{ inputs.tool }}" ]; then
+            echo "::error::tools/${{ inputs.tool }} not found"
+            exit 1
+          fi
+
+      - name: Run benchmark dispatch (single tool, all targets)
+        id: dispatch
+        uses: ./.github/actions/benchmark-dispatch
+        with:
+          tier: tool-update
+          seeds_per_cell: ${{ env.SEEDS_PER_CELL }}
+          max_budget_usd: ${{ env.MAX_BUDGET_USD }}
+          parallelism: ${{ env.PARALLELISM }}
+          dry_run: 'false'
+          targets_glob: 'benchmark/targets/*.yaml'
+          tools_glob: 'tools/${{ inputs.tool }}'
+          tool_version_override: ${{ inputs.version }}
+          trigger_reason: ${{ inputs.reason }}
+        env:
+          VASTAI_API_KEY: ${{ secrets.VASTAI_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  finalize:
+    name: Report results
+    runs-on: ubuntu-latest
+    needs: dispatch
+    if: always() && needs.dispatch.result != 'cancelled'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install benchmark scripts
+        working-directory: scripts/benchmark
+        run: npm install --no-audit --no-fund
+
+      - name: Post results summary
+        working-directory: scripts/benchmark
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SHA: ${{ github.sha }}
+          TIER: tool-update
+        run: |
+          npx tsx report-results.ts \
+            --tier tool-update \
+            --run-id "${{ needs.dispatch.outputs.run_id }}" \
+            --tool "${{ inputs.tool }}" \
+            --tool-version "${{ inputs.version }}"

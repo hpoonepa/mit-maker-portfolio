@@ -1,0 +1,23 @@
+{
+  "id": "plip",
+  "displayName": "PLIP",
+  "version": "3.0.0",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-2.0-only",
+  "image": "ghcr.io/papercrane/plip:3.0.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 8,
+    "note": "Non-covalent interaction profiling for protein-ligand complexes; beta until OpenBabel and XML smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {},
+  "composes": []
+}

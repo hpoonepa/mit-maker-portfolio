@@ -1,0 +1,34 @@
+{
+  "name": "@papercrane/db",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:seed:tools": "tsx prisma/seed.ts --tools-only",
+    "db:seed:demo": "tsx prisma/seed-demo.ts",
+    "modal:encrypt-credentials": "tsx scripts/encrypt-modal-credentials.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "5.18.0",
+    "@supabase/supabase-js": "2.45.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.4.1",
+    "prisma": "5.18.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma",
+    "seed": "tsx prisma/seed.ts"
+  }
+}

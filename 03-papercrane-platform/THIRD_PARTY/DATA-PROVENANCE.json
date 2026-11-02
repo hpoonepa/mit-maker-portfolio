@@ -1,0 +1,522 @@
+{
+  "date": "2026-11-01",
+  "scope": "binder-scorer/data raw and processed files, including hidden completion markers",
+  "license_clearance": false,
+  "data_files": [
+    {
+      "path": "binder-scorer/data/processed/.egfr_epitope.DONE",
+      "sha256": "3ebadbf5381dcc6c6b0ea3b9f9282673598126ebaeeba7a1f5bb95c22213c321",
+      "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
+      "status": "Operational marker; does not establish successful scientific validation."
+    },
+    {
+      "path": "binder-scorer/data/processed/.il7r_epitope.DONE",
+      "sha256": "130a884c6f3a44d276fed0c32dcf60f5d2888976927f3c24782a54f45756d2bb",
+      "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
+      "status": "Operational marker; does not establish successful scientific validation."
+    },
+    {
+      "path": "binder-scorer/data/processed/.insulinr_epitope.DONE",
+      "sha256": "7ce9df79d66ffb721761b4a0a6bdd42eacb5637f394f2649e6d06694331a2669",
+      "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
+      "status": "Operational marker; does not establish successful scientific validation."
+    },
+    {
+      "path": "binder-scorer/data/processed/.mdm2_epitope.DONE",
+      "sha256": "6d1e05b2092f37e652385156f002c1b11f1c79f598148b749356fa0301a96b2d",
+      "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
+      "status": "Operational marker; does not establish successful scientific validation."
+    },
+    {
+      "path": "binder-scorer/data/processed/.pdl1_epitope.DONE",
+      "sha256": "4afa7c6a7e67932cf71cb25847105af3be577a709eada6bcdca443815217bfee",
+      "source_or_derivation": "Local completion marker for target folding/epitope feature work.",
+      "status": "Operational marker; does not establish successful scientific validation."
+    },
+    {
+      "path": "binder-scorer/data/processed/5g51_prior.json",
+      "sha256": "64ca8bb7745edcc05f2a96da6f9481e0fb3d923c953457a309de97560eb43a35",
+      "source_or_derivation": "`scripts/gen_5g51_prior.py`: generated target prior for [PDB 5G51](https://www.rcsb.org/structure/5G51).",
+      "status": "Generated hypothesis, not measured binding evidence."
+    },
+    {
+      "path": "binder-scorer/data/processed/combined_labeled.csv",
+      "sha256": "b922b186dae1aec90b41743784b61198cb779fe18ba8e2053d2137c2513bb9c6",
+      "source_or_derivation": "`scripts/combine_datasets.py`: deduplicated Overath / Proteinbase / BindCraft sequence and binary-label rows.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 5721,
+      "source_counts": {
+        "overath": 3659,
+        "proteinbase": 1933,
+        "bindcraft": 129
+      }
+    },
+    {
+      "path": "binder-scorer/data/processed/egfr_epitope_contact.csv",
+      "sha256": "c14270760eef88199f0eab1d9a3df8e7332c3e786eac9580c2d014f8f5b05c1e",
+      "source_or_derivation": "`scripts/fold_target.py` computes Boltz structure/LLM-epitope contact features on imported designs.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 180
+    },
+    {
+      "path": "binder-scorer/data/processed/il7r_epitope_contact.csv",
+      "sha256": "244d5e0846fec5ddf1b5b9d4a257b4a440b800bca810031f0668e0e4609cb87b",
+      "source_or_derivation": "`scripts/fold_target.py` computes Boltz structure/LLM-epitope contact features on imported designs.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 213
+    },
+    {
+      "path": "binder-scorer/data/processed/insulinr_epitope_contact.csv",
+      "sha256": "d718d8e0b3a6e445c9caed6dcacc9471f50e0163a0caaefa9407139f24598d3a",
+      "source_or_derivation": "`scripts/fold_target.py` computes Boltz structure/LLM-epitope contact features on imported designs.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 152
+    },
+    {
+      "path": "binder-scorer/data/processed/labeled_features.csv",
+      "sha256": "44b228d72bfc115b5e597abc8be56bdc01878c999b349424a455150956fc7ab6",
+      "source_or_derivation": "`data/features.py`: Overath / Proteinbase / BindCraft labels and source features; retained `license` column is an internal label, not a grant.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 5721
+    },
+    {
+      "path": "binder-scorer/data/processed/labeled_features_bio.csv",
+      "sha256": "43a3066b2373bf5b6c9bd71e1730100052a6d707a0329e071a4326ace2c771a3",
+      "source_or_derivation": "`scripts/build_bio_features.py`: labeled_features.csv plus sequence-derived `scorer/biology_features.py` descriptors.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 5721
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/EGFR.json",
+      "sha256": "1fa79bbed48faa4918b70b9a245c09f76df930492d002adead502afccb9cc0c5",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/15837620/",
+        "https://pubmed.ncbi.nlm.nih.gov/12610629/",
+        "https://pubmed.ncbi.nlm.nih.gov/39455963/",
+        "https://pubmed.ncbi.nlm.nih.gov/38908376/",
+        "https://pubmed.ncbi.nlm.nih.gov/31755215/",
+        "https://pubmed.ncbi.nlm.nih.gov/37509078/",
+        "https://pubmed.ncbi.nlm.nih.gov/38372053/",
+        "https://pubmed.ncbi.nlm.nih.gov/41284265/",
+        "https://pubmed.ncbi.nlm.nih.gov/27424502/",
+        "https://pubmed.ncbi.nlm.nih.gov/40521789/",
+        "https://pubmed.ncbi.nlm.nih.gov/38374413/",
+        "https://pubmed.ncbi.nlm.nih.gov/39275996/",
+        "https://pubmed.ncbi.nlm.nih.gov/40562040/",
+        "https://pubmed.ncbi.nlm.nih.gov/41772598/",
+        "https://pubmed.ncbi.nlm.nih.gov/33767701/",
+        "https://pubmed.ncbi.nlm.nih.gov/40609632/",
+        "https://pubmed.ncbi.nlm.nih.gov/32885759/",
+        "https://pubmed.ncbi.nlm.nih.gov/39077778/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000146648"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/FGFR2.json",
+      "sha256": "b0295d73c07846c55a7fee77891ae8b2472e6f779f7827398ccce09d2a527929",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34759319/",
+        "https://pubmed.ncbi.nlm.nih.gov/35948633/",
+        "https://pubmed.ncbi.nlm.nih.gov/39258897/",
+        "https://pubmed.ncbi.nlm.nih.gov/38313205/",
+        "https://pubmed.ncbi.nlm.nih.gov/41090357/",
+        "https://pubmed.ncbi.nlm.nih.gov/35389777/",
+        "https://pubmed.ncbi.nlm.nih.gov/27226847/",
+        "https://pubmed.ncbi.nlm.nih.gov/35231400/",
+        "https://pubmed.ncbi.nlm.nih.gov/41125482/",
+        "https://pubmed.ncbi.nlm.nih.gov/41284265/",
+        "https://pubmed.ncbi.nlm.nih.gov/30809251/",
+        "https://pubmed.ncbi.nlm.nih.gov/40906279/",
+        "https://pubmed.ncbi.nlm.nih.gov/38300868/",
+        "https://pubmed.ncbi.nlm.nih.gov/11076027/",
+        "https://pubmed.ncbi.nlm.nih.gov/40014401/",
+        "https://pubmed.ncbi.nlm.nih.gov/39326670/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000066468"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/IL7R.json",
+      "sha256": "edbd0d0e3483df734d913c2015134600d896a96b4213353a8eff9121e0a9fefb",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/36201890/",
+        "https://pubmed.ncbi.nlm.nih.gov/39048815/",
+        "https://pubmed.ncbi.nlm.nih.gov/40066518/",
+        "https://pubmed.ncbi.nlm.nih.gov/27885969/",
+        "https://pubmed.ncbi.nlm.nih.gov/15879151/",
+        "https://pubmed.ncbi.nlm.nih.gov/40152904/",
+        "https://pubmed.ncbi.nlm.nih.gov/40686280/",
+        "https://pubmed.ncbi.nlm.nih.gov/39982469/",
+        "https://pubmed.ncbi.nlm.nih.gov/39713769/",
+        "https://pubmed.ncbi.nlm.nih.gov/37096065/",
+        "https://pubmed.ncbi.nlm.nih.gov/39763672/",
+        "https://pubmed.ncbi.nlm.nih.gov/42209436/",
+        "https://pubmed.ncbi.nlm.nih.gov/40925205/",
+        "https://pubmed.ncbi.nlm.nih.gov/33579907/",
+        "https://pubmed.ncbi.nlm.nih.gov/39624823/",
+        "https://pubmed.ncbi.nlm.nih.gov/39654893/",
+        "https://pubmed.ncbi.nlm.nih.gov/39806440/",
+        "https://pubmed.ncbi.nlm.nih.gov/39673621/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000168685"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/INSULINR.json",
+      "sha256": "3c4e8a7e4e7dc6949025e8f21459f06ef4e2fe5d1937693b4c1e77a4807ca5d0",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/41086805/",
+        "https://pubmed.ncbi.nlm.nih.gov/15486293/",
+        "https://pubmed.ncbi.nlm.nih.gov/36739671/",
+        "https://pubmed.ncbi.nlm.nih.gov/37717984/",
+        "https://pubmed.ncbi.nlm.nih.gov/11498027/",
+        "https://pubmed.ncbi.nlm.nih.gov/30968756/",
+        "https://pubmed.ncbi.nlm.nih.gov/17085043/",
+        "https://pubmed.ncbi.nlm.nih.gov/37227951/",
+        "https://pubmed.ncbi.nlm.nih.gov/34907529/",
+        "https://pubmed.ncbi.nlm.nih.gov/21606157/",
+        "https://pubmed.ncbi.nlm.nih.gov/35758064/",
+        "https://pubmed.ncbi.nlm.nih.gov/39302831/",
+        "https://pubmed.ncbi.nlm.nih.gov/27156350/",
+        "https://pubmed.ncbi.nlm.nih.gov/786863/",
+        "https://pubmed.ncbi.nlm.nih.gov/31749085/",
+        "https://pubmed.ncbi.nlm.nih.gov/17785698/",
+        "https://pubmed.ncbi.nlm.nih.gov/30230175/",
+        "https://pubmed.ncbi.nlm.nih.gov/39747658/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000171105"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/MDM2.json",
+      "sha256": "fffb8106d646725309d7ce3a27bf7cabe46b3f66c5d4248440792eee6b923157",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40399308/",
+        "https://pubmed.ncbi.nlm.nih.gov/8875929/",
+        "https://pubmed.ncbi.nlm.nih.gov/26764190/",
+        "https://pubmed.ncbi.nlm.nih.gov/34163731/",
+        "https://pubmed.ncbi.nlm.nih.gov/41428874/",
+        "https://pubmed.ncbi.nlm.nih.gov/39605685/",
+        "https://pubmed.ncbi.nlm.nih.gov/22650254/",
+        "https://pubmed.ncbi.nlm.nih.gov/32049643/",
+        "https://pubmed.ncbi.nlm.nih.gov/34017824/",
+        "https://pubmed.ncbi.nlm.nih.gov/41138151/",
+        "https://pubmed.ncbi.nlm.nih.gov/38768424/",
+        "https://pubmed.ncbi.nlm.nih.gov/35104390/",
+        "https://pubmed.ncbi.nlm.nih.gov/32156064/",
+        "https://pubmed.ncbi.nlm.nih.gov/17508926/",
+        "https://pubmed.ncbi.nlm.nih.gov/39975334/",
+        "https://pubmed.ncbi.nlm.nih.gov/17427181/",
+        "https://pubmed.ncbi.nlm.nih.gov/35831864/",
+        "https://pubmed.ncbi.nlm.nih.gov/28270530/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000135679"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/MZB1.json",
+      "sha256": "879b158333ac26869ac44cd586d139211af7ac39d5a067ed8681c592a3340094",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/11350957/",
+        "https://pubmed.ncbi.nlm.nih.gov/41869442/",
+        "https://pubmed.ncbi.nlm.nih.gov/37852603/",
+        "https://pubmed.ncbi.nlm.nih.gov/31901757/",
+        "https://pubmed.ncbi.nlm.nih.gov/33453188/",
+        "https://pubmed.ncbi.nlm.nih.gov/40738426/",
+        "https://pubmed.ncbi.nlm.nih.gov/41366441/",
+        "https://pubmed.ncbi.nlm.nih.gov/40607383/",
+        "https://pubmed.ncbi.nlm.nih.gov/35509008/",
+        "https://pubmed.ncbi.nlm.nih.gov/32079689/",
+        "https://pubmed.ncbi.nlm.nih.gov/29921943/",
+        "https://pubmed.ncbi.nlm.nih.gov/34786042/",
+        "https://pubmed.ncbi.nlm.nih.gov/31127044/",
+        "https://pubmed.ncbi.nlm.nih.gov/31050855/",
+        "https://pubmed.ncbi.nlm.nih.gov/33647271/",
+        "https://pubmed.ncbi.nlm.nih.gov/35605261/",
+        "https://pubmed.ncbi.nlm.nih.gov/12792799/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000170476"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/NIPAH.json",
+      "sha256": "70b88f1a7f8f4d184490a53d9545b171c2761d7210b0e5d6e730422cc9370e93",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40132580/",
+        "https://pubmed.ncbi.nlm.nih.gov/40629166/",
+        "https://pubmed.ncbi.nlm.nih.gov/39134522/",
+        "https://pubmed.ncbi.nlm.nih.gov/27281338/",
+        "https://pubmed.ncbi.nlm.nih.gov/38582870/",
+        "https://pubmed.ncbi.nlm.nih.gov/40541691/",
+        "https://pubmed.ncbi.nlm.nih.gov/41315143/",
+        "https://pubmed.ncbi.nlm.nih.gov/40877258/",
+        "https://pubmed.ncbi.nlm.nih.gov/37610572/",
+        "https://pubmed.ncbi.nlm.nih.gov/39739115/",
+        "https://pubmed.ncbi.nlm.nih.gov/41650235/",
+        "https://pubmed.ncbi.nlm.nih.gov/39396053/",
+        "https://pubmed.ncbi.nlm.nih.gov/41820674/",
+        "https://pubmed.ncbi.nlm.nih.gov/40679287/",
+        "https://pubmed.ncbi.nlm.nih.gov/41071677/",
+        "https://pubmed.ncbi.nlm.nih.gov/39240113/",
+        "https://pubmed.ncbi.nlm.nih.gov/33927387/",
+        "https://pubmed.ncbi.nlm.nih.gov/39375338/"
+      ],
+      "open_targets_url": null
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/PD1.json",
+      "sha256": "5495e9b176fc3e81947c0c03f233b640711d6433b9e141d5d331cf64d214dc9f",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/20636820/",
+        "https://pubmed.ncbi.nlm.nih.gov/1396582/",
+        "https://pubmed.ncbi.nlm.nih.gov/28678784/",
+        "https://pubmed.ncbi.nlm.nih.gov/30646912/",
+        "https://pubmed.ncbi.nlm.nih.gov/40439109/",
+        "https://pubmed.ncbi.nlm.nih.gov/28150777/",
+        "https://pubmed.ncbi.nlm.nih.gov/32322066/",
+        "https://pubmed.ncbi.nlm.nih.gov/33064988/",
+        "https://pubmed.ncbi.nlm.nih.gov/35762356/",
+        "https://pubmed.ncbi.nlm.nih.gov/34471285/",
+        "https://pubmed.ncbi.nlm.nih.gov/40500332/",
+        "https://pubmed.ncbi.nlm.nih.gov/39608214/",
+        "https://pubmed.ncbi.nlm.nih.gov/34270940/",
+        "https://pubmed.ncbi.nlm.nih.gov/32006351/",
+        "https://pubmed.ncbi.nlm.nih.gov/39159723/",
+        "https://pubmed.ncbi.nlm.nih.gov/37100904/",
+        "https://pubmed.ncbi.nlm.nih.gov/41199882/",
+        "https://pubmed.ncbi.nlm.nih.gov/39333505/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000188389"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/PDGFRB.json",
+      "sha256": "0f266682dc4788664baed39177ff59a689cfe799381716e49bc7b7ac83905b21",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/33794741/",
+        "https://pubmed.ncbi.nlm.nih.gov/35786294/",
+        "https://pubmed.ncbi.nlm.nih.gov/38189472/",
+        "https://pubmed.ncbi.nlm.nih.gov/41519838/",
+        "https://pubmed.ncbi.nlm.nih.gov/28028030/",
+        "https://pubmed.ncbi.nlm.nih.gov/36068374/",
+        "https://pubmed.ncbi.nlm.nih.gov/25482829/",
+        "https://pubmed.ncbi.nlm.nih.gov/24344264/",
+        "https://pubmed.ncbi.nlm.nih.gov/34152937/",
+        "https://pubmed.ncbi.nlm.nih.gov/40140939/",
+        "https://pubmed.ncbi.nlm.nih.gov/33928568/",
+        "https://pubmed.ncbi.nlm.nih.gov/41490797/",
+        "https://pubmed.ncbi.nlm.nih.gov/36788091/",
+        "https://pubmed.ncbi.nlm.nih.gov/10704888/",
+        "https://pubmed.ncbi.nlm.nih.gov/39407295/",
+        "https://pubmed.ncbi.nlm.nih.gov/40151378/",
+        "https://pubmed.ncbi.nlm.nih.gov/32050038/",
+        "https://pubmed.ncbi.nlm.nih.gov/40953793/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000113721"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/PDL1.json",
+      "sha256": "ef07c5145a5220288fa17507e42bccb47de5a5f34401dd77010ceae358405bab",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39937879/",
+        "https://pubmed.ncbi.nlm.nih.gov/34596400/",
+        "https://pubmed.ncbi.nlm.nih.gov/20636820/",
+        "https://pubmed.ncbi.nlm.nih.gov/30646912/",
+        "https://pubmed.ncbi.nlm.nih.gov/28678784/",
+        "https://pubmed.ncbi.nlm.nih.gov/32051224/",
+        "https://pubmed.ncbi.nlm.nih.gov/40097656/",
+        "https://pubmed.ncbi.nlm.nih.gov/41861782/",
+        "https://pubmed.ncbi.nlm.nih.gov/40500332/",
+        "https://pubmed.ncbi.nlm.nih.gov/36943877/",
+        "https://pubmed.ncbi.nlm.nih.gov/40614853/",
+        "https://pubmed.ncbi.nlm.nih.gov/39446384/",
+        "https://pubmed.ncbi.nlm.nih.gov/26724936/",
+        "https://pubmed.ncbi.nlm.nih.gov/36719382/",
+        "https://pubmed.ncbi.nlm.nih.gov/32006351/",
+        "https://pubmed.ncbi.nlm.nih.gov/33268351/",
+        "https://pubmed.ncbi.nlm.nih.gov/30449617/",
+        "https://pubmed.ncbi.nlm.nih.gov/39234811/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000120217"
+    },
+    {
+      "path": "binder-scorer/data/processed/literature/PMVK.json",
+      "sha256": "c86049b882466aefe812babd25f821ac5a6d2832b49e98de50cd281f72f13442",
+      "source_or_derivation": "`scripts/fetch_all_literature.py` / `scorer/literature.py`: PubMed abstracts and Open Targets cache.",
+      "status": "Article-text and versioned database redistribution terms unresolved.",
+      "pubmed_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/35853659/",
+        "https://pubmed.ncbi.nlm.nih.gov/36209956/",
+        "https://pubmed.ncbi.nlm.nih.gov/39426254/",
+        "https://pubmed.ncbi.nlm.nih.gov/19485344/",
+        "https://pubmed.ncbi.nlm.nih.gov/12878729/",
+        "https://pubmed.ncbi.nlm.nih.gov/32224886/",
+        "https://pubmed.ncbi.nlm.nih.gov/27145098/",
+        "https://pubmed.ncbi.nlm.nih.gov/21282208/",
+        "https://pubmed.ncbi.nlm.nih.gov/42361171/",
+        "https://pubmed.ncbi.nlm.nih.gov/34440098/",
+        "https://pubmed.ncbi.nlm.nih.gov/33033333/",
+        "https://pubmed.ncbi.nlm.nih.gov/11751891/",
+        "https://pubmed.ncbi.nlm.nih.gov/37598994/",
+        "https://pubmed.ncbi.nlm.nih.gov/28484475/",
+        "https://pubmed.ncbi.nlm.nih.gov/18618710/",
+        "https://pubmed.ncbi.nlm.nih.gov/37328749/",
+        "https://pubmed.ncbi.nlm.nih.gov/19509296/",
+        "https://pubmed.ncbi.nlm.nih.gov/14680974/"
+      ],
+      "open_targets_url": "https://platform.opentargets.org/target/ENSG00000163344"
+    },
+    {
+      "path": "binder-scorer/data/processed/llm_priors.json",
+      "sha256": "150e986ae776af137ecdf8452b38fe4d3b89df7f1a247ee8fd153b2ddc35f743",
+      "source_or_derivation": "Generated target priors from `scorer/llm_prior.py`, literature caches and feature context. Filename variants preserve separate model-labelled runs.",
+      "status": "Generated hypotheses; cached-source text rights and run-level provenance need review."
+    },
+    {
+      "path": "binder-scorer/data/processed/llm_priors_opus46.json",
+      "sha256": "150e986ae776af137ecdf8452b38fe4d3b89df7f1a247ee8fd153b2ddc35f743",
+      "source_or_derivation": "Generated target priors from `scorer/llm_prior.py`, literature caches and feature context. Filename variants preserve separate model-labelled runs.",
+      "status": "Generated hypotheses; cached-source text rights and run-level provenance need review."
+    },
+    {
+      "path": "binder-scorer/data/processed/llm_priors_opus48.json",
+      "sha256": "b66903a2ad7a5ba339612d3ceb8679c0dd5ccbeb755d2d44c75399666f1e1f9e",
+      "source_or_derivation": "Generated target priors from `scorer/llm_prior.py`, literature caches and feature context. Filename variants preserve separate model-labelled runs.",
+      "status": "Generated hypotheses; cached-source text rights and run-level provenance need review."
+    },
+    {
+      "path": "binder-scorer/data/processed/mdm2_epitope_contact.csv",
+      "sha256": "6acce32a235fa1b1bebfe403f1782a41d033924b79ad500199f0c84fed945869",
+      "source_or_derivation": "`scripts/fold_target.py` computes Boltz structure/LLM-epitope contact features on imported designs.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 121
+    },
+    {
+      "path": "binder-scorer/data/processed/pdl1_allfeatures.csv",
+      "sha256": "2d0827c2ca596adb103465fc766726303f25d273af4de892e3e163ef1d07407e",
+      "source_or_derivation": "PDL1 combined feature cache; `scripts/pdl1_niche_features.py` computes niche descriptors and `scripts/pdl1_combine.py` consumes this table. Exact one-command export provenance is not recorded.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 177
+    },
+    {
+      "path": "binder-scorer/data/processed/pdl1_epitope_contact.csv",
+      "sha256": "3c0be9ed59ffec4236a43b7a545c9369e7dcb193ffe7a38b92dc3f746152ff70",
+      "source_or_derivation": "`scripts/fold_pdl1_epitope.py` computes Boltz structure/LLM-epitope contact features on imported designs.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 177
+    },
+    {
+      "path": "binder-scorer/data/processed/pdl1_uniform_boltz.csv",
+      "sha256": "3acd00094d1357cf983a47d93ecc2267b08e033441197c930985a6a24349d0ef",
+      "source_or_derivation": "PDL1 derived structure-feature table; consumed/assembled by `scripts/pdl1_uniform_experiment.py` using imported designs and epitope contacts.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 177
+    },
+    {
+      "path": "binder-scorer/data/processed/target_features.csv",
+      "sha256": "cc1ebf81a193cd17dbb0886a55c950f31aee52f2df3ae93aba4670347e2f6f3c",
+      "source_or_derivation": "`scripts/build_target_features.py` + `scorer/target_features.py`: 11 UniProt-derived target constructs; sequence-based proxies, not structural measurements.",
+      "status": "Derived from UniProt records above; exact source release unrecorded.",
+      "rows": 11
+    },
+    {
+      "path": "binder-scorer/data/raw/bindcraft.csv",
+      "sha256": "9967ae2276b24c7bbbf26dd936a003c262248f1f5a41eaba334d5a06d049c630",
+      "source_or_derivation": "BindCraft supplementary-data import; `scripts/combine_datasets.py` / `data/features.py`.",
+      "status": "Source-specific terms above; no blanket MIT grant.",
+      "rows": 212
+    },
+    {
+      "path": "binder-scorer/data/raw/ppb_affinity.xlsx",
+      "sha256": "d015d8170959f546ae3bf7adf33c711a308ad8691cef0b151f95bdf3982f148e",
+      "source_or_derivation": "PPB-Affinity workbook; auxiliary affinity source in `scripts/combine_datasets.py` notes.",
+      "status": "Source-specific terms above; no blanket MIT grant."
+    },
+    {
+      "path": "binder-scorer/data/raw/target_references.fasta",
+      "sha256": "b2fc7a5671c6c3580b5a68b82dd7e0626338de9266dd3031d0857ea53d58fc9c",
+      "source_or_derivation": "Seven UniProt-derived domain constructs; exact accession/range map in `docs/research/2026-06-26-target-fasta-mapping.md`.",
+      "status": "Construct boundary confidence varies; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/EGFR_P00533_full.fasta",
+      "sha256": "684e2da1f3ef05d0ce90d0aefe9125c6f7e9cdcfeac27ae72ed35243b64a73e8",
+      "source_or_derivation": "[UniProt P00533](https://www.uniprot.org/uniprotkb/P00533/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/FGFR2_P21802_full.fasta",
+      "sha256": "4f4fec55c8c4a20f1322fa8b17b0ec517ffa31946b9e0a0b7252794da82fdd7d",
+      "source_or_derivation": "[UniProt P21802](https://www.uniprot.org/uniprotkb/P21802/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/IL7R_P16871_full.fasta",
+      "sha256": "7f88f7526d43d8ffdc0d1b58b72b6f7a126f4bc89b84656ccc80ec7a2b9a8cbd",
+      "source_or_derivation": "[UniProt P16871](https://www.uniprot.org/uniprotkb/P16871/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/INSULINR_P06213_full.fasta",
+      "sha256": "32a62a5f5be1d58b74cd66645b4134f6193d591df0576dd51d3fc62a9d23bb58",
+      "source_or_derivation": "[UniProt P06213](https://www.uniprot.org/uniprotkb/P06213/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/MDM2_Q00987_full.fasta",
+      "sha256": "75573e90db2ef66e0acb952bd29883e8f04c98d5828405fc4fe8368420fd0496",
+      "source_or_derivation": "[UniProt Q00987](https://www.uniprot.org/uniprotkb/Q00987/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/MZB1_Q8WU39_full.fasta",
+      "sha256": "a16b16c83053284a03bb28be0bbc87e8bd57c682112755b5a13457da6e3bf43a",
+      "source_or_derivation": "[UniProt Q8WU39](https://www.uniprot.org/uniprotkb/Q8WU39/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/NIPAH_Q9IH62_full.fasta",
+      "sha256": "3af1318dd1b97729e84689d030b7d1a9cfc17ee1ae8e1b098f0fc3e1d13df250",
+      "source_or_derivation": "[UniProt Q9IH62](https://www.uniprot.org/uniprotkb/Q9IH62/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/PD1_Q15116_full.fasta",
+      "sha256": "5127495de3aa90aa07c7c6e73a9b0848bb7d9020295ceb0b8399c836813b9627",
+      "source_or_derivation": "[UniProt Q15116](https://www.uniprot.org/uniprotkb/Q15116/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/PDGFRB_P09619_full.fasta",
+      "sha256": "bae46335bc7c09b86a4c8ec946dce043aeebdbf4c4453df01e58e93688794889",
+      "source_or_derivation": "[UniProt P09619](https://www.uniprot.org/uniprotkb/P09619/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/PDL1_Q9NZQ7_full.fasta",
+      "sha256": "a5d44c2a2129b4ba6d64af647505064f595656a4935430b00c3c7611508de598",
+      "source_or_derivation": "[UniProt Q9NZQ7](https://www.uniprot.org/uniprotkb/Q9NZQ7/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    },
+    {
+      "path": "binder-scorer/data/raw/targets/PMVK_Q15126_full.fasta",
+      "sha256": "f27597f4b2f059c3de9da9217cabf43e7441100db41fb3c7c74903d21b1d9960",
+      "source_or_derivation": "[UniProt Q15126](https://www.uniprot.org/uniprotkb/Q15126/entry), full-length sequence cache.",
+      "status": "Accession identified; exact source release unrecorded."
+    }
+  ]
+}

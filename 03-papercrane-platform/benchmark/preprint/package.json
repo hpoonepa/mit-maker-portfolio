@@ -1,0 +1,33 @@
+{
+  "name": "@papercrane/preprint-assets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asset generator and publication pipeline for the Paper Crane benchmark preprint.",
+  "type": "module",
+  "bin": {
+    "papercrane-preprint-assets": "./generate-assets.ts"
+  },
+  "scripts": {
+    "build:assets": "tsx generate-assets.ts",
+    "build:assets:dry": "tsx generate-assets.ts --dry-run",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "pg": "8.12.0",
+    "zod": "3.23.8",
+    "vega-lite": "5.21.0",
+    "vega": "5.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.0",
+    "@types/pg": "8.11.6",
+    "tsx": "4.16.2",
+    "vitest": "1.6.0",
+    "typescript": "5.5.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

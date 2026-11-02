@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hot-reload trigger: Crane.tsx restored 2026-04-27 */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80rem 40rem at 20% -5%, rgba(193, 39, 45, 0.035), transparent 60%),
+      radial-gradient(ellipse 60rem 40rem at 90% 10%, rgba(20, 17, 13, 0.04), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0 0.05 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+  }
+
+  ::selection {
+    background: #C1272D;
+    color: #F7F4ED;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  /* WCAG AA: Default focus-visible for all interactive elements */
+  :where(a, button, [role="button"], [role="link"], [role="tab"], [role="menuitem"], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 2px solid #C1272D;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* Honor user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+
+/* Skip-link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background: #14110D;
+  color: #F7F4ED;
+  border-radius: 9999px;
+  font-family: var(--font-instrument), system-ui, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@layer components {
+  .container-edge {
+    @apply mx-auto w-full max-w-[1480px] px-6 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-graphite;
+  }
+
+  .rule {
+    @apply h-px w-full bg-lattice;
+  }
+
+  .vrule {
+    @apply w-px h-full bg-lattice;
+  }
+
+  .hairline-border {
+    border: 1px solid rgba(20, 17, 13, 0.1);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ink text-paper px-6 py-3 rounded-full font-sans text-[15px] tracking-tight transition-all hover:bg-crane hover:shadow-[0_12px_40px_-8px_rgba(193,39,45,0.45)] active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-ink px-6 py-3 rounded-full font-sans text-[15px] tracking-tight border border-lattice-strong transition-all hover:bg-paper-fold hover:border-ink active:scale-[0.98];
+  }
+
+  .crane-dot {
+    @apply inline-block w-2 h-2 rounded-full bg-crane;
+  }
+
+  .crane-dot-pulse {
+    @apply relative inline-block w-2 h-2 rounded-full bg-crane;
+  }
+
+  .crane-dot-pulse::before {
+    content: "";
+    @apply absolute inset-0 rounded-full bg-crane animate-pulse-dot;
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 80ms; }
+  .reveal-delay-2 { transition-delay: 160ms; }
+  .reveal-delay-3 { transition-delay: 240ms; }
+  .reveal-delay-4 { transition-delay: 320ms; }
+  .reveal-delay-5 { transition-delay: 400ms; }
+  .reveal-delay-6 { transition-delay: 480ms; }
+
+  /* Tabular numerics for data */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Text wrap balance for big headers */
+  .balance {
+    text-wrap: balance;
+  }
+
+  /* Subtle diagonal fold line decoration */
+  .fold-line {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(20, 17, 13, 0.25) 20%,
+      rgba(20, 17, 13, 0.25) 80%,
+      transparent 100%
+    );
+    height: 1px;
+  }
+}
+
+/* Kinetic marquee */
+.marquee {
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+
+/* Legal-page prose: minimal, brand-consistent, no @tailwindcss/typography dep. */
+.legal-prose {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.legal-prose h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-fraunces), serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: rgb(20, 17, 13);
+}
+.legal-prose h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-fraunces), serif;
+  font-size: 18px;
+  color: rgb(20, 17, 13);
+}
+.legal-prose p {
+  margin: 0 0 1rem 0;
+}
+.legal-prose ul,
+.legal-prose ol {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.4rem;
+}
+.legal-prose ul { list-style: disc; }
+.legal-prose ol { list-style: decimal; }
+.legal-prose li {
+  margin: 0.35rem 0;
+}
+.legal-prose strong {
+  color: rgb(20, 17, 13);
+  font-weight: 600;
+}
+.legal-prose a {
+  color: rgb(20, 17, 13);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(31, 122, 138, 0.4);
+}
+.legal-prose a:hover {
+  text-decoration-color: rgb(20, 17, 13);
+}
+.legal-prose code {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: rgba(20, 17, 13, 0.06);
+  border-radius: 3px;
+}
+.legal-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1.5rem 0;
+}

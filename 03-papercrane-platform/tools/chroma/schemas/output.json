@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/chroma/output.json",
+  "title": "Chroma Design Result",
+  "description": "Shape of /outputs/result.json emitted by the Chroma adapter. Backbones only — no sequence field (ProteinMPNN adds it downstream).",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "seed", "metrics", "metadata"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the generated backbone PDB file (no sequence yet).",
+            "type": "string"
+          },
+          "seed": { "type": "integer" },
+          "metrics": {
+            "description": "Tool-native metrics for the backbone.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "length": {
+                "description": "Residue count of the generated backbone.",
+                "type": "number"
+              },
+              "plddt_mean": {
+                "description": "Mean pseudo-pLDDT / model confidence on the generated backbone (if emitted).",
+                "type": "number"
+              },
+              "clash_score": {
+                "description": "Steric clash score (lower = cleaner geometry).",
+                "type": "number"
+              }
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "required": ["conditioners_applied"],
+            "additionalProperties": true,
+            "properties": {
+              "conditioners_applied": {
+                "description": "List of conditioner type names that were actually applied to this design, in order.",
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "length_target": { "type": "integer" },
+              "temperature": { "type": "number" },
+              "steps": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "additionalProperties": true,
+      "properties": {
+        "tool": { "type": "string", "const": "chroma" },
+        "adapterVersion": { "type": "string" },
+        "composes": {
+          "description": "Tools this run should chain into. Platform reads this to decide whether to pipe into ProteinMPNN.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unconditional": {
+          "description": "True when no targetPdb was supplied (pure de novo generation).",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

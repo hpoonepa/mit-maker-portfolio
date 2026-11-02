@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "design_index": 0,
+  "contigs_used": "[A1-150/0 70-110]",
+  "noise_scale": 1.0,
+  "hotspots": ["A56", "A115"],
+  "length": 85,
+  "plddt_contig_mean": 82.3
+}

@@ -1,0 +1,14 @@
+{
+  "backbones": [
+    "s3://papercrane-test/backbones/backbone_0001.pdb"
+  ],
+  "seeds": [0, 1],
+  "params": {
+    "temperature": 0.1,
+    "omit_aas": "CX",
+    "num_seq_per_target": 1,
+    "fixed_positions": {
+      "A": [1, 2]
+    }
+  }
+}

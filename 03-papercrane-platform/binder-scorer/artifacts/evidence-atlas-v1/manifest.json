@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "candidates.csv": "15bfdb9fc4621c721083db28b9ee448e49be87810c017652b1a69233fa0cb01b",
+    "report.html": "9cf79b2fcd395367c5973ec9b83d3caba7b72429b81dd9e9fc5670c385bf9e36",
+    "report.json": "d5aaad17f20d21ad1d934032e8554787992ab2b38d611d2a5097480a862aa8ed"
+  },
+  "config": {
+    "effective_top_k": 2,
+    "top_k": 2
+  },
+  "input_sha256": "c52608b1cc8d1113da2591bb73cd441cd89cf76d0d6f20493559beb2003ee3e6",
+  "report_version": "evidence-audit-report.v1",
+  "schema_version": "evidence-audit-bundle.v1"
+}

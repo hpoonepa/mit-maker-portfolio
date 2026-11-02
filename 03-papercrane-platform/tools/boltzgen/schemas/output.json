@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/boltzgen/output.json",
+  "title": "BoltzGen Design Result",
+  "description": "Shape of /outputs/result.json emitted by the BoltzGen adapter.",
+  "type": "object",
+  "required": ["designs", "runMetadata"],
+  "additionalProperties": false,
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["structurePath", "sequence", "metrics", "seed"],
+        "additionalProperties": false,
+        "properties": {
+          "structurePath": {
+            "description": "Path to the designed all-atom PDB file (backbone + side chains in one pass).",
+            "type": "string"
+          },
+          "sequence": {
+            "description": "Designed binder sequence (1-letter amino acid codes).",
+            "type": "string",
+            "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+          },
+          "metrics": {
+            "description": "Tool-native metrics; canonical metrics are added later by the validator.",
+            "type": "object",
+            "additionalProperties": { "type": "number" },
+            "properties": {
+              "plddt_mean": { "type": "number" },
+              "clash_score": { "type": "number" },
+              "sidechain_confidence": { "type": "number" },
+              "hotspot_contact": { "type": "number" },
+              "ligand_rmsd": { "type": "number" }
+            }
+          },
+          "seed": { "type": "integer" }
+        }
+      }
+    },
+    "runMetadata": {
+      "type": "object",
+      "required": ["tool"],
+      "properties": {
+        "tool": { "type": "string", "const": "boltzgen" },
+        "adapterVersion": { "type": "string" },
+        "stages": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

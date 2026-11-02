@@ -1,0 +1,64 @@
+name: Smoke
+
+on:
+  pull_request:
+    paths:
+      - 'apps/web/**'
+      - 'packages/**'
+      - 'scripts/smoke/**'
+      - '.github/workflows/smoke.yml'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+
+concurrency:
+  group: smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9.12.3'
+  SMOKE_PORT: '3002'
+
+jobs:
+  smoke:
+    name: Smoke Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install workspace dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install smoke package dependencies
+        # @papercrane/smoke is intentionally outside the workspace (same
+        # pattern as scripts/benchmark). Install its own deps separately.
+        working-directory: scripts/smoke
+        run: pnpm install --ignore-workspace --frozen-lockfile
+
+      - name: Run smoke test
+        working-directory: scripts/smoke
+        env:
+          SMOKE_PORT: ${{ env.SMOKE_PORT }}
+        run: pnpm run smoke
+
+      - name: Upload junit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-results
+          path: scripts/smoke/results.xml
+          if-no-files-found: warn
+          retention-days: 14

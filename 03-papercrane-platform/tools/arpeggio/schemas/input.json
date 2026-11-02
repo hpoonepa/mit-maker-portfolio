@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/arpeggio/input.json",
+  "title": "PDBe Arpeggio Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "targetPdb": { "type": "string" },
+        "targetPdbText": { "type": "string" },
+        "targetPdbUrl": { "type": "string", "format": "uri" },
+        "selection": {
+          "description": "Arpeggio selections such as /A/508/ or RESNAME:HEM.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "pH": { "type": "number", "minimum": 0, "maximum": 14 },
+        "interactingCutoff": { "type": "number", "minimum": 3, "maximum": 10 },
+        "includeSequenceAdjacent": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

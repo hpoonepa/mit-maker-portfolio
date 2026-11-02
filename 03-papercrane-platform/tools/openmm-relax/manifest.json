@@ -1,0 +1,23 @@
+{
+  "id": "openmm-relax",
+  "displayName": "OpenMM Relax",
+  "version": "8.5.2",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "MIT/LGPL",
+  "image": "ghcr.io/papercrane/openmm-relax:8.5.2-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 30,
+    "note": "CPU implicit-solvent minimization with PDBFixer preparation; beta until live structure smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "maxIterations": 500, "toleranceKjMol": 10.0, "ph": 7.0 },
+  "composes": []
+}

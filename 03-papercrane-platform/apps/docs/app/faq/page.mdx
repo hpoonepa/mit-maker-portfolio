@@ -1,0 +1,72 @@
+# FAQ
+
+## How is Paper Crane different from running these tools myself?
+
+You can absolutely run RFdiffusion, BindCraft, and Boltz-2 yourself. We've done it. The
+gap isn't capability — it's **methodology**. We give you:
+
+- One adapter spec across 12 tools so a pipeline definition is portable
+- Reproducibility manifests (image digests, seeds, input hashes) on every design
+- Validated metric thresholds from our 60-binder benchmark suite
+- Auto-scaled GPU fleet so you don't queue locally
+
+## What GPUs do you run on?
+
+A mix of A10, A100-40GB, A100-80GB, and H100-80GB across Vast.ai and a small reserved
+fleet. Tool manifests pin the required class — a job lands on the cheapest GPU that
+meets the requirement.
+
+## Do you train on my designs?
+
+No. We do not use your input structures, sequences, or metric outputs to train any
+model. Your data is encrypted at rest, isolated per-project, and deleted on schedule
+when you cancel. Read the [privacy policy](https://papercrane.bio/privacy) for the
+binding version of that statement.
+
+## Can I run frontier tools (AlphaFold 3) on the free tier?
+
+No. AlphaFold 3 is rate-limited and gated to paid tiers because of its license. Use
+Boltz-2 or Chai-1 for free-tier validation — they're remarkably close to AF3 on
+binder-benchmark tasks.
+
+## How do you handle reproducibility across GPU non-determinism?
+
+We pin tool image digests (`sha256:...`) so the binary is bit-exact. Where the upstream
+tool exposes deterministic mode, we enable it by default. Where it doesn't (some CUDA
+ops are non-deterministic regardless), the metric variation across replays is typically
+< 0.5% on ipTM/pAE. The manifest records the runtime so you can compare apples-to-apples.
+
+## Why "seeds"?
+
+Two reasons. First, every tool exposes a random seed; "seed" is the unit of one
+forward pass through one tool. Second, seeds are decoupled from GPU minutes — when we
+move from A100 to H100, your bill doesn't change.
+
+## Can I bring my own GPU?
+
+Enterprise plans only. We provide a worker container that registers with our scheduler
+and pulls jobs against your project's quota. Useful if you have on-prem infra and need
+data residency.
+
+## Do you support targets that aren't in PDB?
+
+Yes. Upload a FASTA (we'll predict the structure with Boltz-2 first), or upload a
+PDB/CIF directly. We also accept AlphaFold accessions that pull from EBI's AFDB.
+
+## What happens to my designs if I cancel?
+
+They stay accessible for 30 days at the free-tier retention. After that, we delete the
+artifacts (CIF/PDB/metric JSON). The metadata (counts, hashes) is retained for audit
+log integrity. You can export everything via `papercrane projects export` before you
+cancel — bundles are zip files of the raw artifacts.
+
+## How do I report a bug or weird metric?
+
+`hello@papercrane.bio` — please include the design ID (`dsn_...`) and a brief
+description. We respond within one business day. For security issues, use
+`security@papercrane.bio` and we'll respond within four hours.
+
+## Can I see the iGEM Best Software entry?
+
+Yes. The 2026 entry is at [papercrane.bio/igem](https://papercrane.bio/igem). The
+methodology section of these docs is the heart of that entry.

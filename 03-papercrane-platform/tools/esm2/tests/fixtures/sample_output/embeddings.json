@@ -1,0 +1,18 @@
+[
+  {
+    "id": "design_0001",
+    "seed": 0,
+    "path": "design_0001.npy",
+    "shape": [1, 1280],
+    "layer": 33,
+    "pool": "mean"
+  },
+  {
+    "id": "design_0002",
+    "seed": 0,
+    "path": "design_0002.npy",
+    "shape": [1, 1280],
+    "layer": 33,
+    "pool": "mean"
+  }
+]

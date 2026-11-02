@@ -1,0 +1,245 @@
+{
+  "abstracts": [
+    {
+      "pmid": "39937879",
+      "title": "Tumor extracellular vesicle-derived PD-L1 promotes T cell senescence through lipid metabolism reprogramming.",
+      "abstract": "The limited success of cancer immunotherapy has posed challenges in treating patients with cancer. However, promising strides could be made with a deeper understanding of the factors that cause T cell dysfunction within the tumor microenvironment and by developing effective strategies to counteract tumor-induced immune suppression. Here, we report that tumor-derived extracellular vesicles (tEVs) can induce senescence and suppression in T cells. Programmed death ligand 1 (PD-L1), a key component within tEVs, induced DNA damage and hyperactive lipid metabolism in both human and mouse T cells. This caused an elevated expression of lipid metabolic enzymes and an increase in cholesterol and lipid droplet formation, leading to cellular senescence. At a molecular level, PD-L1 derived from tEVs activated the cAMP-response element binding protein (CREB) and signal transducer and activator of transcription (STAT) signaling, which promoted lipid metabolism and facilitated senescence in human and mouse T cells. Inhibiting EV synthesis in tumors or blocking CREB signaling, cholesterol synthesis, and lipid droplet formation in effector T cells averted the tEV-mediated T cell senescence in vitro and in vivo in cell adoptive transfer and melanoma mouse models. The same treatments also bolstered the antitumor efficacy of adoptive transfer T cell therapy and anti-PD-L1 checkpoint immunotherapy in both human and mouse melanoma models. These studies identified mechanistic links between tumor-mediated immune suppression and potential immunotherapy resistance, and they provide new strategies for cancer immunotherapy."
+    },
+    {
+      "pmid": "34596400",
+      "title": "Covalently Engineered Nanobody Chimeras for Targeted Membrane Protein Degradation.",
+      "abstract": "The targeted degradation of membrane proteins would afford an attractive and general strategy for treating various diseases that remain difficult with the current proteolysis-targeting chimera (PROTAC) methodology. We herein report a covalent nanobody-based PROTAC strategy, termed GlueTAC, for targeted membrane protein degradation with high specificity and efficiency. We first established a mass-spectrometry-based screening platform for the rapid development of a covalent nanobody (GlueBody) that allowed proximity-enabled cross-linking with surface antigens on cancer cells. By conjugation with a cell-penetrating peptide and a lysosomal-sorting sequence, the resulting GlueTAC chimera triggered the internalization and degradation of programmed death-ligand 1 (PD-L1), which provides a new avenue to target and degrade cell-surface proteins."
+    },
+    {
+      "pmid": "20636820",
+      "title": "The PD-1 pathway in tolerance and autoimmunity.",
+      "abstract": "Regulatory T cells (Tregs) and the PD-1: PD-ligand (PD-L) pathway are both critical to terminating immune responses. Elimination of either can result in the breakdown of tolerance and the development of autoimmunity. The PD-1: PD-L pathway can thwart self-reactive T cells and protect against autoimmunity in many ways. In this review, we highlight how PD-1 and its ligands defend against potentially pathogenic self-reactive effector T cells by simultaneously harnessing two mechanisms of peripheral tolerance: (i) the promotion of Treg development and function and (ii) the direct inhibition of potentially pathogenic self-reactive T cells that have escaped into the periphery. Treg cells induced by the PD-1 pathway may also assist in maintaining immune homeostasis, keeping the threshold for T-cell activation high enough to safeguard against autoimmunity. PD-L1 expression on non-hematopoietic cells as well as hematopoietic cells endows PD-L1 with the capacity to promote Treg development and enhance Treg function in lymphoid organs and tissues that are targets of autoimmune attack. At sites where transforming growth factor-beta is present (e.g. sites of immune privilege or inflammation), PD-L1 may promote the de novo generation of Tregs. When considering the consequences of uncontrolled immunity, it would be therapeutically advantageous to manipulate Treg development and sustain Treg function. Thus, this review also discusses how the PD-1 pathway regulates a number of autoimmune diseases and the therapeutic potential of PD-1: PD-L modulation."
+    },
+    {
+      "pmid": "30646912",
+      "title": "Role of the tumor microenvironment in PD-L1/PD-1-mediated tumor immune escape.",
+      "abstract": "Tumor immune escape is an important strategy of tumor survival. There are many mechanisms of tumor immune escape, including immunosuppression, which has become a research hotspot in recent years. The programmed death ligand-1/programmed death-1 (PD-L1/PD-1) signaling pathway is an important component of tumor immunosuppression, which can inhibit the activation of T lymphocytes and enhance the immune tolerance of tumor cells, thereby achieving tumor immune escape. Therefore, targeting the PD-L1/PD-1 pathway is an attractive strategy for cancer treatment; however, the therapeutic effectiveness of PD-L1/PD-1 remains poor. This situation requires gaining a deeper understanding of the complex and varied molecular mechanisms and factors driving the expression and activation of the PD-L1/PD-1 signaling pathway. In this review, we summarize the regulation mechanisms of the PD-L1/PD-1 signaling pathway in the tumor microenvironment and their roles in mediating tumor escape. Overall, the evidence accumulated to date suggests that induction of PD-L1 by inflammatory factors in the tumor microenvironment may be one of the most important factors affecting the therapeutic efficiency of PD-L1/PD-1 blocking."
+    },
+    {
+      "pmid": "28678784",
+      "title": "Personalized RNA mutanome vaccines mobilize poly-specific therapeutic immunity against cancer.",
+      "abstract": "T cells directed against mutant neo-epitopes drive cancer immunity. However, spontaneous immune recognition of mutations is inefficient. We recently introduced the concept of individualized mutanome vaccines and implemented an RNA-based poly-neo-epitope approach to mobilize immunity against a spectrum of cancer mutations. Here we report the first-in-human application of this concept in melanoma. We set up a process comprising comprehensive identification of individual mutations, computational prediction of neo-epitopes, and design and manufacturing of a vaccine unique for each patient. All patients developed T cell responses against multiple vaccine neo-epitopes at up to high single-digit percentages. Vaccine-induced T cell infiltration and neo-epitope-specific killing of autologous tumour cells were shown in post-vaccination resected metastases from two patients. The cumulative rate of metastatic events was highly significantly reduced after the start of vaccination, resulting in a sustained progression-free survival. Two of the five patients with metastatic disease experienced vaccine-related objective responses. One of these patients had a late relapse owing to outgrowth of \u03b22-microglobulin-deficient melanoma cells as an acquired resistance mechanism. A third patient developed a complete response to vaccination in combination with PD-1 blockade therapy. Our study demonstrates that individual mutations can be exploited, thereby opening a path to personalized immunotherapy for patients with cancer."
+    },
+    {
+      "pmid": "32051224",
+      "title": "Engineered probiotics for local tumor delivery of checkpoint blockade nanobodies.",
+      "abstract": "Checkpoint inhibitors have revolutionized cancer therapy but only work in a subset of patients and can lead to a multitude of toxicities, suggesting the need for more targeted delivery systems. Because of their preferential colonization of tumors, microbes are a natural platform for the local delivery of cancer therapeutics. Here, we engineer a probiotic bacteria system for the controlled production and intratumoral release of nanobodies targeting programmed cell death-ligand 1 (PD-L1) and cytotoxic T lymphocyte-associated protein-4 (CTLA-4) using a stabilized lysing release mechanism. We used computational modeling coupled with experimental validation of lysis circuit dynamics to determine the optimal genetic circuit parameters for maximal therapeutic efficacy. A single injection of this engineered system demonstrated an enhanced therapeutic response compared to analogous clinically relevant antibodies, resulting in tumor regression in syngeneic mouse models. Supporting the potentiation of a systemic immune response, we observed a relative increase in activated T cells, an abscopal effect, and corresponding increases in systemic T cell memory populations in mice treated with probiotically delivered checkpoint inhibitors. Last, we leveraged the modularity of our platform to achieve enhanced therapeutic efficacy in a poorly immunogenic syngeneic mouse model through effective combinations with a probiotically produced cytokine, granulocyte-macrophage colony-stimulating factor (GM-CSF). Together, these results demonstrate that our engineered probiotic system bridges synthetic biology and immunology to improve upon checkpoint blockade delivery."
+    },
+    {
+      "pmid": "40097656",
+      "title": "Engineered bacteria for near-infrared light-inducible expression of cancer therapeutics.",
+      "abstract": "Bacteria-based therapies hold great promise for cancer treatment due to their selective tumor colonization and proliferation. However, clinical application is hindered by the need for safe, precise control systems to regulate local therapeutic payload expression and release. Here we developed a near-infrared (NIR) light-mediated PadC-based photoswitch (NETMAP) system based on a chimeric phytochrome-activated diguanylyl cyclase (PadC) and a cyclic diguanylate monophosphate-dependent transcriptional activator (MrkH). The NETMAP-engineered bacteria exhibited antitumor performance in mouse tumor models with different levels of immunogenicity. Specifically, in immunogenic lymphoma tumors, NIR-induced PD-L1 and CTLA-4 nanobodies enhanced the activation of adaptive immunity. In low-immunogenic tumors-including mouse-derived colon cancer models, an orthotopic human breast cancer cell line-derived xenograft model and a colorectal cancer patient-derived xenograft model-NIR-induced azurin and cytolysin A predominantly led to tumor inhibition. Our study identifies an NIR light-mediated therapeutic platform for engineered bacteria-based therapies with customizable outputs and precise dosage control."
+    },
+    {
+      "pmid": "41861782",
+      "title": "Hijacking ERAD for targeted degradation of transmembrane proteins.",
+      "abstract": "Targeted protein degradation (TPD) technologies provide huge opportunities for drug discovery, but degrading transmembrane (TM) targets remains challenging. Since TM proteins are canonically folded on the endoplasmic reticulum (ER) membrane, we hypothesized that harnessing ER-associated degradation (ERAD) may enable efficient degradation of TM proteins. Here, we established a TPD technology hijacking ERAD and named it ERAD-engaging chimeras (ERADECs), capable of degrading TM targets with high efficacy. We identified desonide as a binder of SYVN1, an ER E3 ligase mediating ERAD. We designed ERADECs targeting programmed death-ligand 1 (PD-L1) by connecting desonide to a known PD-L1 ligand and observed SYVN1- and ERAD-dependent PD-L1 degradation with high efficacy. Functionally, these ERADECs exhibited stronger tumor suppression and PD-L1-lowering effects than a clinically used PD-L1 antibody in vivo. The concept of ERADECs is also expandable to other membrane targets. Collectively, we established a platform technology hijacking ERAD to selectively degrade TM targets with remarkable efficiency."
+    },
+    {
+      "pmid": "40500332",
+      "title": "Potentiating cancer immunotherapies with modular albumin-hitchhiking nanobody-STING agonist conjugates.",
+      "abstract": "The enhancement of antitumour immunity via agonists of the stimulator of interferon genes (STING) pathway is limited by pharmacological barriers. Here we show that the covalent conjugation of a STING agonist to anti-albumin nanobodies via site-selective bioconjugation chemistries prolongs the circulation of the agonist in the blood and increases its accumulation in tumour tissue, stimulating innate immune programmes that increased the infiltration of activated natural killer cells and T cells, which potently inhibited the growth of mouse tumours. The technology is modular, as demonstrated by the recombinant integration of a second nanobody domain targeting programmed death-ligand 1 (PD-L1), which further increased the accumulation of the agonist in tumours while blocking immunosuppressive PD-1/PD-L1 interactions. The bivalent nanobody-STING agonist conjugate stimulated robust antigen-specific T-cell responses and long-lasting immunological memory and conferred enhanced therapeutic efficacy. It was also effective as a neoadjuvant treatment to adoptive T-cell therapy. As a modular approach, hitchhiking STING agonists on serum albumin may serve as a broadly applicable strategy for augmenting the potency of systemically administered cancer immunotherapies."
+    },
+    {
+      "pmid": "36943877",
+      "title": "O-GlcNAcylation promotes tumor immune evasion by inhibiting PD-L1 lysosomal degradation.",
+      "abstract": "Programmed-death ligand 1 (PD-L1) and its receptor programmed cell death 1 (PD-1) mediate T cell-dependent immunity against tumors. The abundance of cell surface PD-L1 is a key determinant of the efficacy of immune checkpoint blockade therapy targeting PD-L1. However, the regulation of cell surface PD-L1 is still poorly understood. Here, we show that lysosomal degradation of PD-L1 is regulated by O-linked N-acetylglucosamine (O-GlcNAc) during the intracellular trafficking pathway. O-GlcNAc modifies the hepatocyte growth factor-regulated tyrosine kinase substrate (HGS), a key component of the endosomal sorting machinery, and subsequently inhibits its interaction with intracellular PD-L1, leading to impaired lysosomal degradation of PD-L1. O-GlcNAc inhibition activates T cell-mediated antitumor immunity in\u00a0vitro and in immune-competent mice in a manner dependent on HGS glycosylation. Combination of O-GlcNAc inhibition with PD-L1 antibody synergistically promotes antitumor immune response. We also designed a competitive peptide inhibitor of HGS glycosylation that decreases PD-L1 expression and enhances T cell-mediated\u00a0immunity against tumor cells. Collectively, our study reveals a link between O-GlcNAc and tumor immune evasion, and suggests strategies for improving PD-L1-mediated immune checkpoint blockade therapy."
+    },
+    {
+      "pmid": "40614853",
+      "title": "PD-L1 delactylation-promoted nuclear translocation accelerates liver cancer growth through elevating SQLE transcription activity.",
+      "abstract": "Programmed death-ligand 1 (PD-L1), a critical immune checkpoint ligand, is overexpressed in several malignancies. The newly identified protein posttranslational modification lactylation, occurring on lysine residues, is extensively involved in various biological processes. However, PD-L1 lactylation and its role in tumorigenesis remain unclear. In this study, we discover that lactylation of PD-L1 suppresses liver cancer growth by inhibiting cholesterol synthesis. Acetyltransferase E1A-binding protein p300 (p300) catalyzes the lactylation of PD-L1 at the lysine 189 residue (K189). Histone deacetylase 2-dependent delactylation of PD-L1 K189 promotes vimentin-mediated nuclear translocation of PD-L1. Functionally, PD-L1 K189 delactylation accelerates liver cancer growth both in vitro and in vivo by facilitating cholesterol production. Clinically, an antibody against PD-L1 K189 lactylation reveals that PD-L1 delactylation is positively associated with the progression of liver cancer histological grade. Mechanistically, PD-L1 K189 delactylation upregulates SQLE, a rate-limiting enzyme in cholesterol biosynthesis, by increasing SQLE transcription activity via the transcription factor YY1. Therefore, our findings demonstrate that lactylation-dependent regulation of PD-L1 promotes liver cancer growth."
+    },
+    {
+      "pmid": "39446384",
+      "title": "O-GlcNAcylation of enolase 1 serves as a dual regulator of aerobic glycolysis and immune evasion in colorectal cancer.",
+      "abstract": "Aerobic glycolysis and immune evasion are two key hallmarks of cancer. However, how these two features are mechanistically linked to promote tumor growth is not well understood. Here, we show that the glycolytic enzyme enolase-1 (ENO1) is dynamically modified with an O-linked \u03b2-N-acetylglucosamine (O-GlcNAcylation), and simultaneously regulates aerobic glycolysis and immune evasion via differential glycosylation. Glycosylation of threonine 19 (T19) on ENO1 promotes its glycolytic activity via the formation of active dimers. On the other hand, glycosylation of serine 249 (S249) on ENO1 inhibits its interaction with PD-L1, decreases association of PD-L1 with the E3 ligase STUB1, resulting in stabilization of PD-L1. Consequently, blockade of T19 glycosylation on ENO1 inhibits glycolysis, and decreases cell proliferation and tumor growth. Blockade of S249 glycosylation on ENO1 reduces PD-L1 expression and enhances T cell-mediated immunity against tumor cells. Notably, elimination of glycosylation at both sites synergizes with PD-L1 monoclonal antibody therapy to promote antitumor immune response. Clinically, ENO1 glycosylation levels are up-regulated and show a positive correlation with PD-L1 levels in human colorectal cancers. Thus, our findings provide a mechanistic understanding of how O-GlcNAcylation bridges aerobic glycolysis and immune evasion to promote tumor growth, suggesting effective therapeutic opportunities."
+    },
+    {
+      "pmid": "26724936",
+      "title": "PD-L1-specific T cells.",
+      "abstract": "Recently, there has been an increased focus on the immune checkpoint protein PD-1 and its ligand PD-L1 due to the discovery that blocking the PD-1/PD-L1 pathway with monoclonal antibodies elicits striking clinical results in many different malignancies. We have described naturally occurring PD-L1-specific T cells that recognize both PD-L1-expressing immune cells and malignant cells. Thus, PD-L1-specific T cells have the ability to modulate adaptive immune reactions by reacting to regulatory cells. Thus, utilization of PD-L1-derived T cell epitopes may represent an attractive vaccination strategy for targeting the tumor microenvironment and for boosting the clinical effects of additional anticancer immunotherapy. This review summarizes present information about PD-L1 as a T cell antigen, depicts the initial findings about the function of PD-L1-specific T cells in the adjustment of immune responses, and discusses future opportunities."
+    },
+    {
+      "pmid": "36719382",
+      "title": "PD-L1 translocation to the plasma membrane enables tumor immune evasion through MIB2 ubiquitination.",
+      "abstract": "Programmed death-ligand 1 (PD-L1), a critical immune checkpoint ligand, is a transmembrane protein synthesized in the endoplasmic reticulum of tumor cells and transported to the plasma membrane to interact with programmed death 1 (PD-1) expressed on T cell surface. This interaction delivers coinhibitory signals to T cells, thereby suppressing their function and allowing evasion of antitumor immunity. Most companion or complementary diagnostic devices for assessing PD-L1 expression levels in tumor cells used in the clinic or in clinical trials require membranous staining. However, the mechanism driving PD-L1 translocation to the plasma membrane after de novo synthesis is poorly understood. Herein, we showed that mind bomb homolog 2 (MIB2) is required for PD-L1 transportation from the trans-Golgi network (TGN) to the plasma membrane of cancer cells. MIB2 deficiency led to fewer PD-L1 proteins on the tumor cell surface and promoted antitumor immunity in mice. Mechanistically, MIB2 catalyzed nonproteolytic K63-linked ubiquitination of PD-L1, facilitating PD-L1 trafficking through Ras-associated binding 8-mediated (RAB8-mediated) exocytosis from the TGN to the plasma membrane, where it bound PD-1 extrinsically to prevent tumor cell killing by T cells. Our findings demonstrate that nonproteolytic ubiquitination of PD-L1 by MIB2 is required for its transportation to the plasma membrane and tumor cell immune evasion."
+    },
+    {
+      "pmid": "32006351",
+      "title": "Nanobody against PDL1.",
+      "abstract": "Programmed death ligand 1 (PDL1, CD274, B7-H1) has been identified as the ligand for the immune inhibitory receptor programmed death 1 protein (PD1/PDCD1). PDL1 is a member of B7 family of immune molecules and this protein together with PDL2, are two ligands for PD1 expressed on activated lymphoid cells. By binding to PD1 on activated T cells, PDL1 may inhibit T cell responses by inducing apoptosis. Accordingly, it leads to the immune evasion of cancers and contribute to tumor growth, thus PDL1 is regarded as therapeutic target for malignant cancers. We selected PDL1 specific nanobodies from a high quality dromedary camel immune library by phage display technology, three anti-PDL1-VHHs were developed."
+    },
+    {
+      "pmid": "33268351",
+      "title": "Mitochondrial Lon-induced mtDNA leakage contributes to PD-L1-mediated immunoescape via STING-IFN signaling and extracellular vesicles.",
+      "abstract": "Mitochondrial Lon is a chaperone and DNA-binding protein that functions in protein quality control and stress response pathways. The level of Lon regulates mitochondrial DNA (mtDNA) metabolism and the production of mitochondrial reactive oxygen species (ROS). However, there is little information in detail on how mitochondrial Lon regulates ROS-dependent cancer immunoescape through mtDNA metabolism in the tumor microenvironment (TME). We explored the understanding of the intricate interplay between mitochondria and the innate immune response in the inflammatory TME. We found that oxidized mtDNA is released into the cytosol when Lon is overexpressed and then it induces interferon (IFN) signaling via cGAS-STING-TBK1, which upregulates PD-L1 and IDO-1 expression to inhibit T-cell activation. Unexpectedly, upregulation of Lon also induces the secretion of extracellular vehicles (EVs), which carry mtDNA and PD-L1. Lon-induced EVs further induce the production of IFN and IL-6 from macrophages, which attenuates T-cell immunity in the TME. The levels of mtDNA and PD-L1 in EVs in patients with oral cancer function as a potential diagnostic biomarker for anti-PD-L1 immunotherapy. Our studies provide an insight into the immunosuppression on mitochondrial stress and suggest a therapeutic synergy between anti-inflammation therapy and immunotherapy in cancer."
+    },
+    {
+      "pmid": "30449617",
+      "title": "A Membraneless Organelle Associated with the Endoplasmic Reticulum Enables 3'UTR-Mediated Protein-Protein Interactions.",
+      "abstract": "Approximately half of human genes generate mRNAs with alternative 3' untranslated regions (3'UTRs). Through 3'UTR-mediated protein-protein interactions, alternative 3'UTRs enable multi-functionality of proteins with identical amino acid sequence. While studying how information on protein features is transferred from 3'UTRs to proteins, we discovered that the broadly expressed RNA-binding protein TIS11B forms a membraneless organelle, called TIS granule, that enriches membrane protein-encoding mRNAs with multiple AU-rich elements. TIS granules form a reticular meshwork intertwined with the endoplasmic reticulum (ER). The association between TIS granules and the ER creates a subcellular compartment-the TIGER domain-with a biophysically and biochemically distinct environment from the cytoplasm. This compartment promotes 3'UTR-mediated interaction of SET with membrane proteins, thus allowing increased surface expression and functional diversity of proteins, including CD47 and PD-L1. The TIGER domain is a subcellular compartment that enables formation of specific and functionally relevant protein-protein interactions that cannot be established outside."
+    },
+    {
+      "pmid": "39234811",
+      "title": "Targeting Dual Immune Checkpoints PD-L1 and HLA-G by Trispecific T Cell Engager for Treating Heterogeneous Lung Cancer.",
+      "abstract": "Immunotherapy targeting immune checkpoints (ICPs), such as programmed death-ligand-1 (PD-L1), is used as a treatment option for advanced or metastatic non-small cell lung cancer (NSCLC). However, overall response rate to anti-PD-L1 treatment is limited due to antigen heterogeneity and the immune-suppressive tumor microenvironment. Human leukocyte antigen-G (HLA-G), an ICP as well as a neoexpressed tumor-associated antigen, is previously demonstrated to be a beneficial target in combination with anti-PD-L1. In this study, a nanobody-based trispecific T cell engager (Nb-TriTE) is developed, capable of simultaneously binding to T cells, macrophages, and cancer cells while redirecting T cells toward tumor cells expressing PD-L1- and/or HLA-G. Nb-TriTE shows broad spectrum anti-tumor effects in vitro by augmenting cytotoxicity mediated by human peripheral blood mononuclear cells (PBMCs). In a humanized immunodeficient murine NSCLC model, Nb-TriTE exhibits superior anti-cancer potency compared to monoclonal antibodies and bispecific T cell engagers. Nb-TriTE, at the dose with pharmacoactivity, does not induce additional enhancement of circulating cytokines secretion from PMBCs. Nb-TriTE effectively prolongs the survival of mice without obvious adverse events. In conclusion, this study introduces an innovative therapeutic approach to address the challenges of immunotherapy and the tumor microenvironment in NSCLC through utilizing the dual ICP-targeting Nb-TriTE."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000120217",
+    "approvedSymbol": "CD274",
+    "approvedName": "CD274 molecule",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 13
+    }
+  }
+}

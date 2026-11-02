@@ -1,0 +1,235 @@
+{
+  "abstracts": [
+    {
+      "pmid": "34759319",
+      "title": "Diverse alterations associated with resistance to KRAS(G12C) inhibition.",
+      "abstract": "Inactive state-selective KRAS(G12C) inhibitors1-8 demonstrate a 30-40% response rate and result in\u00a0approximately 6-month median progression-free survival in patients with lung cancer9. The genetic basis for resistance to these first-in-class mutant GTPase inhibitors remains under investigation. Here we evaluated matched pre-treatment and post-treatment specimens from 43 patients treated with the KRAS(G12C) inhibitor sotorasib. Multiple treatment-emergent alterations were observed across 27 patients, including alterations in KRAS, NRAS, BRAF, EGFR, FGFR2, MYC and other genes. In preclinical patient-derived xenograft and cell line models, resistance to KRAS(G12C) inhibition was associated with low allele frequency hotspot mutations in KRAS(G12V or G13D), NRAS(Q61K or G13R), MRAS(Q71R) and/or BRAF(G596R), mirroring observations in patients. Single-cell sequencing in an isogenic lineage identified secondary RAS and/or BRAF mutations in the same cells as KRAS(G12C), where they bypassed inhibition without affecting target inactivation. Genetic or pharmacological targeting of ERK signalling intermediates enhanced the antiproliferative effect of G12C inhibitor treatment in models with acquired RAS or BRAF mutations. Our study thus suggests a heterogenous pattern of resistance with multiple subclonal events emerging during G12C inhibitor treatment. A subset of patients in our cohort acquired oncogenic KRAS, NRAS or BRAF mutations, and resistance in this setting may be delayed by co-targeting of ERK signalling intermediates. These findings merit broader evaluation in prospective clinical trials."
+    },
+    {
+      "pmid": "35948633",
+      "title": "Truncated FGFR2 is a clinically actionable oncogene in multiple cancers.",
+      "abstract": "Somatic hotspot mutations and structural amplifications and fusions that affect fibroblast growth factor receptor 2 (encoded by FGFR2) occur in multiple types of cancer1. However, clinical responses to FGFR inhibitors have remained variable1-9, emphasizing the need to better understand which FGFR2 alterations are oncogenic and therapeutically targetable. Here we apply transposon-based screening10,11 and tumour modelling in mice12,13, and find that the truncation of exon 18 (E18) of Fgfr2 is a potent driver mutation. Human oncogenomic datasets revealed a diverse set of FGFR2 alterations, including rearrangements, E1-E17 partial amplifications, and E18 nonsense and frameshift mutations, each causing the transcription of E18-truncated FGFR2 (FGFR2\u0394E18). Functional in vitro and in vivo examination of a compendium of FGFR2\u0394E18 and full-length variants pinpointed FGFR2-E18 truncation as single-driver alteration in cancer. By contrast, the oncogenic competence of FGFR2 full-length amplifications depended on a distinct landscape of cooperating driver genes. This suggests that genomic alterations that generate stable FGFR2\u0394E18 variants are actionable therapeutic targets, which we confirmed in preclinical mouse and human tumour models, and in a clinical trial. We propose that cancers containing any FGFR2 variant with a truncated E18 should be considered for FGFR-targeted therapies."
+    },
+    {
+      "pmid": "39258897",
+      "title": "Discovery of TYRA-300: First Oral Selective FGFR3 Inhibitor for the Treatment of Urothelial Cancers and Achondroplasia.",
+      "abstract": "Activating FGFR3 alterations have been identified in up to 15-20% of muscle-invasive bladder cancer and metastatic urothelial carcinoma (mUC), and as high as 80% in nonmuscle invasive bladder cancers. FGFR3 germline mutations have also been associated with a variety of skeletal dysplasias. Achondroplasia, the most common form of dwarfism in humans, results from a G380R mutation in FGFR3. The pan-FGFR inhibitor erdafitinib was approved for the treatment of mUC with FGFR3 alterations but is limited due to FGFR isoform off-target toxicities and the development of on-target gatekeeper resistance mutations. TYRA-300 (22) was conceived using a structure-based approach as a potent FGFR3-selective inhibitor to avoid the toxicities associated with inhibition of FGFR1, FGFR2, and FGFR4, and to be agnostic for the FGFR3 gatekeeper mutations. TYRA-300 is being evaluated in a Phase 1 clinical trial in urothelial cancers and solid tumors, with intention to initiate Phase 2 studies in urothelial cancers and achondroplasia."
+    },
+    {
+      "pmid": "38313205",
+      "title": "Tetra-aqua-(ethane-1,2-di-amine-\u03ba2N,N')nickel(II) naphthalene-1,5-di-sulfonate dihydrate.",
+      "abstract": "The reaction of ethane-1,2-di-amine (en, C2H8N2), the sodium salt of naphthalene-1,5-di-sulfonic acid (H2NDS, C10H8O6S2), and nickel sulfate in an aqueous solution resulted in the formation of the title salt, [Ni(C2H8N2)(H2O)4](C10H6O6S2)\u00b72H2O or [Ni(en)(H2O)4](NDS)\u00b72H2O. In the asymmetric unit, one half of an [Ni(en)(H2O)4]2+ cation and one half of an NDS2- anion, and one water mol-ecule of crystallization are present. The Ni2+ cation in the complex is positioned on a twofold rotation axis and exhibits a slight tetra-gonal distortion of the cis-NiO4N2 octa-hedron, with an Ni-N bond length of 2.0782\u2005(16)\u2005\u00c5, and Ni-O bond lengths of 2.1170\u2005(13)\u2005\u00c5 and 2.0648\u2005(14)\u2005\u00c5. The anion is completed by inversion symmetry. In the extended structure, the cations, anions, and non-coordinating water mol-ecules are connected by inter-molecular N-H\u22efO and O-H\u22efO hydrogen bonding, as well as C-H\u22ef\u03c0 inter-actions, forming a three-dimensional network."
+    },
+    {
+      "pmid": "41090357",
+      "title": "Pharmacologic inhibition of IRE1\u03b1-dependent decay protects alveolar epithelial identity and prevents pulmonary fibrosis in mice.",
+      "abstract": "Stress-induced epithelial plasticity is central to lung regeneration, fibrosis, and malignancy, but how cellular stress leads to differentiation is incompletely understood. Here, we found a central role for IRE1\u03b1, a conserved mediator of the unfolded protein response (UPR), in stimulating the plasticity of alveolar type 2 (AT2) cells. In single-cell RNA-seq, IRE1\u03b1 activity was associated with loss of AT2 identity and progression toward a damage-associated transitional state unique to fibrosis. AT2 plasticity required destructive regulated IRE1\u03b1-dependent decay (RIDD), which we demonstrated by deploying PAIR2, a kinase modulator that inhibits RIDD while preserving IRE1\u03b1's adaptive XBP1 mRNA splicing activity. In vivo, selective inhibition of RIDD with PAIR2 reduced AT2 differentiation into profibrotic transitional cells and protected mice from bleomycin-induced pulmonary fibrosis. Mechanistically, we identified the Fgfr2 mRNA as a direct and regulated substrate for IRE1\u03b1's RNase in primary AT2 cells and in a biochemically reconstituted cell-free system. Loss of Fgf signaling caused AT2 differentiation, while gain of signaling protected cells from IRE1\u03b1-induced differentiation. We propose that IRE1\u03b1 downregulates Fgf signaling through RIDD, provoking loss of AT2 identity and differentiation towards a profibrotic phenotype. Thus, IRE1\u03b1's RIDD activity emerges as a novel target for treatment of pulmonary fibrosis and potentially other diseases driven by aberrant epithelial cell plasticity."
+    },
+    {
+      "pmid": "35389777",
+      "title": "Genome-wide analysis of somatic noncoding mutation patterns in cancer.",
+      "abstract": "We established a genome-wide compendium of somatic mutation events in 3949 whole cancer genomes representing 19 tumor types. Protein-coding events captured well-established drivers. Noncoding events near tissue-specific genes, such as ALB in the liver or KLK3 in the prostate, characterized localized passenger mutation patterns and may reflect tumor-cell-of-origin imprinting. Noncoding events in regulatory promoter and enhancer regions frequently involved cancer-relevant genes such as BCL6, FGFR2, RAD51B, SMC6, TERT, and XBP1 and represent possible drivers. Unlike most noncoding regulatory events, XBP1 mutations primarily accumulated outside the gene's promoter, and we validated their effect on gene expression using CRISPR-interference screening and luciferase reporter assays. Broadly, our study provides a blueprint for capturing mutation events across the entire genome to guide advances in biological discovery, therapies, and diagnostics."
+    },
+    {
+      "pmid": "27226847",
+      "title": "Genetic Syndromes Associated with Craniosynostosis.",
+      "abstract": "Craniosynostosis is defined as the premature fusion of one or more of the cranial sutures. It leads not only to secondary distortion of skull shape but to various complications including neurologic, ophthalmic and respiratory dysfunction. Craniosynostosis is very heterogeneous in terms of its causes, presentation, and management. Both environmental factors and genetic factors are associated with development of craniosynostosis. Nonsyndromic craniosynostosis accounts for more than 70% of all cases. Syndromic craniosynostosis with a certain genetic cause is more likely to involve multiple sutures or bilateral coronal sutures. FGFR2, FGFR3, FGFR1, TWIST1 and EFNB1 genes are major causative genes of genetic syndromes associated with craniosynostosis. Although most of syndromic craniosynostosis show autosomal dominant inheritance, approximately half of patients are de novo cases. Apert syndrome, Pfeiffer syndrome, Crouzon syndrome, and Antley-Bixler syndrome are related to mutations in FGFR family (especially in FGFR2), and mutations in FGFRs can be overlapped between different syndromes. Saethre-Chotzen syndrome, Muenke syndrome, and craniofrontonasal syndrome are representative disorders showing isolated coronal suture involvement. Compared to the other types of craniosynostosis, single gene mutations can be more frequently detected, in one-third of coronal synostosis patients. Molecular diagnosis can be helpful to provide adequate genetic counseling and guidance for patients with syndromic craniosynostosis."
+    },
+    {
+      "pmid": "35231400",
+      "title": "Receptor tyrosine kinases regulate signal transduction through a liquid-liquid phase separated state.",
+      "abstract": "The recruitment of signaling proteins into activated receptor tyrosine kinases (RTKs) to produce rapid, high-fidelity downstream response is exposed to the ambiguity of random diffusion to the target site. Liquid-liquid phase separation (LLPS) overcomes this by providing elevated, localized concentrations of the required proteins while impeding competitor ligands. Here, we show a subset of phosphorylation-dependent RTK-mediated LLPS states. We then investigate the formation of phase-separated droplets comprising a ternary complex including the RTK, (FGFR2); the phosphatase, SHP2; and the phospholipase, PLC\u03b31, which assembles in response to receptor phosphorylation. SHP2 and activated PLC\u03b31 interact through their tandem SH2 domains via a previously undescribed interface. The complex of FGFR2 and SHP2 combines kinase and phosphatase activities to control the phosphorylation state of the assembly while providing a scaffold for active PLC\u03b31 to facilitate access to its plasma membrane substrate. Thus, LLPS modulates RTK signaling, with potential consequences for therapeutic intervention."
+    },
+    {
+      "pmid": "41125482",
+      "title": "Next-generation isoform-selective fibroblast growth factor receptor inhibitors.",
+      "abstract": "Dysregulated fibroblast growth factor receptor (FGFR) signaling - driven by amplifications, mutations, or fusions - represents a clinically validated oncogenic driver across diverse malignancies. Pan-FGFR-selective inhibitors (erdafitinib, pemigatinib, and futibatinib) have been developed in clinical practice. However, their therapeutic efficacy is substantially limited by inevitable on-target resistance mutations and toxicities via FGFR1/4 inhibition. Next-generation FGFR isoform-selective small-molecule inhibitors are emerging and represent active research frontiers. FGFR2-selective inhibitor lirafugratinib, FGFR3-selective inhibitors LOXO-435 and TYRA-300, FGFR2/3-selective inhibitor ABSK061, and FGFR4-selective inhibitors are in clinical development. Additionally, novel isoform-selective FGFR-targeting degraders, FGFR2b/FGFR3-selective antibodies, and de novo-designed 'c' isoform-selective proteins provide novel treatment strategies. This review provides an overview of the current FGFR-targeted therapeutics and limitations and evaluates next-generation inhibitor development to guide future research."
+    },
+    {
+      "pmid": "41284265",
+      "title": "De Novo Design of Peptide Masks Enables Rapid Generation of Conditionally-Active Miniprotein Binders.",
+      "abstract": "The widespread expression of therapeutic targets in both diseased and healthy tissues poses a major challenge for protein-based therapeutics, often leading to dose-limiting side effects. One promising strategy to enhance selectivity is reversible inactivation via affinity masks tethered through cleavable linkers responsive to disease-specific cues. Here, we introduce a workflow for the de novo design of peptide masks that reversibly inactivate miniprotein binders. By extending the C-terminus of the binder with a protease-cleavable linker and a masking helix, we generated minimal constructs that sterically block the receptor-binding interface. We applied this strategy to four therapeutically relevant targets, EGFR domains I and III, FGFR2, and IL7R\u03b1, demonstrating broad applicability. Nearly half of the 20 designs achieved >100-fold affinity reduction, with the most effective mask decreasing EGFR binding by over 3 orders of magnitude. Upon cleavage by tumor-associated proteases, binding was restored in 19 out of 20 cases, confirming reversibility. We further show that micromolar or weaker affinity between the binder and the isolated mask is sufficient for robust inactivation and rapid activation. Additionally, by chemically conjugating a photocleavable linker, we created a light-responsive version of the masked binder, enabling external control with comparable efficiency to protease-sensitive designs. This work establishes a generalizable, rapid, and efficient platform for designing cleavable peptide masks from scratch, paving the way for conditionally active protein therapeutics responsive to endogenous or exogenous stimuli."
+    },
+    {
+      "pmid": "30809251",
+      "title": "Structural Biology of the FGF7 Subfamily.",
+      "abstract": "Mammalian fibroblast growth factor (FGF) signaling is intricately regulated via selective binding interactions between 18 FGF ligands and four FGF receptors (FGFR1-4), three of which (FGFR1-3) are expressed as either epithelial (\"b\") or mesenchymal (\"c\") splice isoforms. The FGF7 subfamily, consisting of FGF3, FGF7, FGF10, and FGF22, is unique among FGFs in that its members are secreted exclusively by the mesenchyme, and specifically activate the \"b\" isoforms of FGFR1 (FGFR1b) and FGFR2 (FGFR2b) present in the overlying epithelium. This unidirectional mesenchyme-to-epithelium signaling contributes to the development of essentially all organs, glands, and limbs. Structural analysis has shown that members of the FGF7 subfamily achieve their restricted specificity for FGFR1b/FGFR2b by engaging in specific contacts with two alternatively spliced loop regions in the immunoglobulin-like domain 3 (D3) of these receptors. Weak basal receptor-binding affinity further constrains the FGF7 subfamily's specificity for FGFR1b/2b. In this review, we elaborate on the structural determinants of FGF7 subfamily receptor-binding specificity, and discuss how affinity differences among the four members for the heparin sulfate (HS) co-receptor contribute to their disparate biological activities."
+    },
+    {
+      "pmid": "40906279",
+      "title": "Recurrent FGFR2 and PIK3CA Mutations in Sialoblastoma.",
+      "abstract": "Sialoblastoma is an extremely rare low-grade malignant salivary gland neoplasm that presents at birth or early infancy and has heterogeneous clinical behavior. Due to its rarity, the molecular landscape remains incompletely characterized. We aimed to expand the current understanding of the genetic alterations in sialoblastoma through comprehensive molecular analysis. Five sialoblastoma cases were retrieved from four institutional archives. Clinical and pathologic review was performed, and targeted next-generation sequencing was conducted using clinically validated panels. Copy number analysis was performed on four cases. The cohort included five patients with tumors located in parotid gland (n\u2009=\u20092), minor salivary glands (n\u2009=\u20092), and submandibular gland (n\u2009=\u20091). Four patients were diagnosed before 6 months of age. Histologically, all tumors showed solid organoid nests with primitive basaloid cells, dense fibrous stroma, and mitotic activity ranging from 8 to 25 per 10 high-power fields. Recurrent FGFR2 p.C382R variants were identified in 80% (4/5) of cases. Additional alterations were seen in FGFR2 p.C382R mutated tumors, including PIK3CA hotspot mutations in two cases (p.R88Q, p.R38H) and a truncating FGFR2 variant (p.L776Rfs) in one. The single tumor that lacked FGFR2 mutations harbored a CTNNB1 p.I35T variant and showed more favorable histologic features. Copy number analysis revealed recurrent whole-chromosome gains of chromosomes 8, 10, and 11. A distinct subset of sialoblastoma has FGFR2 p.C382R hotspot mutation as the predominant driver mutation. Tumors with this mutation tend to have solid growth pattern, aggressive histologic features, and clinical behavior. The identification of concurrent genomic alterations expands the molecular landscape of this rare tumor. The detection of alternative drivers, such as CTNNB1 hotspot mutations typical of basal cell adenoma, also suggests that a subset of sialoblastoma may represent other salivary gland tumors presenting in infancy."
+    },
+    {
+      "pmid": "38300868",
+      "title": "Discovery of lirafugratinib (RLY-4008), a highly selective irreversible small-molecule inhibitor of FGFR2.",
+      "abstract": "Fibroblast growth factor receptor (FGFR) kinase inhibitors have been shown to be effective in the treatment of intrahepatic cholangiocarcinoma and other advanced solid tumors harboring FGFR2 alterations, but the toxicity of these drugs frequently leads to dose reduction or interruption of treatment such that maximum efficacy cannot be achieved. The most common adverse effects are hyperphosphatemia caused by FGFR1 inhibition and diarrhea due to FGFR4 inhibition, as current therapies are not selective among the FGFRs. Designing selective inhibitors has proved difficult with conventional approaches because the orthosteric sites of FGFR family members are observed to be highly similar in X-ray structures. In this study, aided by analysis of protein dynamics, we designed a selective, covalent FGFR2 inhibitor. In a key initial step, analysis of long-timescale molecular dynamics simulations of the FGFR1 and FGFR2 kinase domains allowed us to identify differential motion in their P-loops, which are located adjacent to the orthosteric site. Using this insight, we were able to design orthosteric binders that selectively and covalently engage the P-loop of FGFR2. Our drug discovery efforts culminated in the development of lirafugratinib (RLY-4008), a covalent inhibitor of FGFR2 that shows substantial selectivity over FGFR1 (~250-fold) and FGFR4 (~5,000-fold) in vitro, causes tumor regression in multiple FGFR2-altered human xenograft models, and was recently demonstrated to be efficacious in the clinic at doses that do not induce clinically significant hyperphosphatemia or diarrhea."
+    },
+    {
+      "pmid": "11076027",
+      "title": "Protein-protein interactions in receptor activation and intracellular signalling.",
+      "abstract": "We review here signalling complexes that we have defined using X-ray analysis in our laboratory. They include growth factors and their receptors: nerve growth factor (NGF) and its hetero-hexameric 7S NGF storage complex, hepatocyte growth factor/scatter factor (HGF/SF) NK1 dimers and fibroblast growth factor (FGF1) in complex with its receptor (FGFR2) ectodomain and heparin. We also review our recent structural studies on intracellular signalling complexes, focusing on phosducin transducin GPry, CK2 protein kinase and its complexes, and the cyclin D-dependent kinase, Cdk6, bound to the cell cycle inhibitor p19INK4d. Comparing the structures of these complexes with others we show that the surface area buried in signalling interactions does not always give a good indication of the strength of the interactions. We show that conformational changes are often important in complexes with intermediate buried surface areas of 1500 to 2000 A2, such as Cdk6INK4 interactions. Some interactions involve recognition of continuous epitopes, where there is no necessity for a tertiary structure and very often the binding conformation is induced during the process of interaction, for example phosducin binding to the betagamma subunits (Gtbetagamma) of the heterotrimeric G protein transducin."
+    },
+    {
+      "pmid": "40014401",
+      "title": "Identification of potent biparatopic antibodies targeting FGFR2 fusion-driven cholangiocarcinoma.",
+      "abstract": "Translocations involving FGFR2 gene fusions are common in cholangiocarcinoma and predict response to FGFR kinase inhibitors. However, response rates and durability are limited due to the emergence of resistance, typically involving FGFR2 kinase domain mutations, and to suboptimal dosing, relating to drug adverse effects. Here, we develop biparatopic antibodies targeting the FGFR2 extracellular domain (ECD) as candidate therapeutics. Biparatopic antibodies can overcome drawbacks of bivalent monospecific antibodies, which often show poor inhibitory or even agonist activity against oncogenic receptors. We show that oncogenic transformation by FGFR2 fusions requires an intact ECD. Moreover, by systematically generating biparatopic antibodies targeting distinct epitope pairs in FGFR2 ECD, we identified antibodies that effectively block signaling and malignant growth driven by FGFR2 fusions. Importantly, these antibodies demonstrate efficacy in vivo, synergy with FGFR inhibitors, and activity against FGFR2 fusions harboring kinase domain mutations. Thus, we believe that biparatopic antibodies may serve as an innovative treatment option for patients with FGFR2-altered cholangiocarcinoma."
+    },
+    {
+      "pmid": "39326670",
+      "title": "Colocalization of Cancer-Associated Biomarkers on Single Extracellular Vesicles for Early Detection of Cancer.",
+      "abstract": "Detection of cancer early, when it is most treatable, remains a significant challenge because of the lack of diagnostic methods sufficiently sensitive to detect nascent tumors. Early-stage tumors are small relative to their tissue of origin, heterogeneous, and infrequently manifest in clinical symptoms. The detection of early-stage tumors is challenging given the lack of tumor-specific indicators (ie, protein biomarkers, circulating tumor DNA) to enable detection using a noninvasive diagnostic assay. To overcome these obstacles, we have developed a liquid biopsy assay that interrogates circulating extracellular vesicles (EVs) to detect tumor-specific biomarkers colocalized on the surface of individual EVs. We demonstrate the technical feasibility of this approach in human cancer cell line-derived EVs, where we show strong correlations between assay signal and cell line gene/protein expression for the ovarian cancer-associated biomarkers bone marrow stromal antigen-2, folate receptor-\u03b1, and mucin-1. Furthermore, we demonstrate that detecting distinct colocalized biomarkers on the surface of EVs significantly improves discrimination performance relative to single biomarker measurements. Using this approach, we observe promising discrimination of high-grade serous ovarian cancer versus benign ovarian masses and healthy women in a proof-of-concept clinical study."
+    }
+  ],
+  "open_targets": {
+    "id": "ENSG00000066468",
+    "approvedSymbol": "FGFR2",
+    "approvedName": "fibroblast growth factor receptor 2",
+    "tractability": [
+      {
+        "label": "Approved Drug",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Structure with Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Ligand",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "High-Quality Pocket",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Med-Quality Pocket",
+        "modality": "SM",
+        "value": false
+      },
+      {
+        "label": "Druggable Family",
+        "modality": "SM",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "UniProt loc high conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "GO CC high conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt loc med conf",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "UniProt SigP or TMHMM",
+        "modality": "AB",
+        "value": true
+      },
+      {
+        "label": "GO CC med conf",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Human Protein Atlas loc",
+        "modality": "AB",
+        "value": false
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "PR",
+        "value": false
+      },
+      {
+        "label": "Literature",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "UniProt Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Database Ubiquitination",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Half-life Data",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Small Molecule Binder",
+        "modality": "PR",
+        "value": true
+      },
+      {
+        "label": "Approved Drug",
+        "modality": "OC",
+        "value": true
+      },
+      {
+        "label": "Advanced Clinical",
+        "modality": "OC",
+        "value": false
+      },
+      {
+        "label": "Phase 1 Clinical",
+        "modality": "OC",
+        "value": false
+      }
+    ],
+    "safetyLiabilities": [],
+    "drugAndClinicalCandidates": {
+      "count": 27
+    }
+  }
+}

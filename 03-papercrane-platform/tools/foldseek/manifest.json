@@ -1,0 +1,23 @@
+{
+  "id": "foldseek",
+  "displayName": "Foldseek",
+  "version": "10.941cd33",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-3.0",
+  "image": "ghcr.io/papercrane/foldseek:10.941cd33-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 8,
+    "note": "Pairwise structural alignment without a large search database; beta until live binary smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "alignmentType": 1 },
+  "composes": []
+}

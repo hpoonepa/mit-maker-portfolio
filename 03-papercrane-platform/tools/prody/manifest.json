@@ -1,0 +1,23 @@
+{
+  "id": "prody",
+  "displayName": "ProDy",
+  "version": "2.6.1",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/prody:2.6.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 5,
+    "note": "Anisotropic or Gaussian network normal-mode analysis; beta until representative live structure smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "model": "anm", "modes": 10, "cutoff": 15.0 },
+  "composes": []
+}

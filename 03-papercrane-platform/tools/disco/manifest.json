@@ -1,0 +1,25 @@
+{
+  "id": "disco",
+  "displayName": "DISCO",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "backbone_generation",
+  "tier": "open",
+  "license": "Apache-2.0",
+  "image": "ghcr.io/papercrane/disco:1.0.0-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "H100-80GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 64,
+    "estSecondsPerDesign": 240,
+    "note": "Beta: pinned to DISCO commit 82b594f; live checkpoint, ligand, and Modal memory smoke tests are still required."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "proteinLength": 150,
+    "preserveSequence": false
+  }
+}

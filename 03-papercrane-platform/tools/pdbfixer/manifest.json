@@ -1,0 +1,30 @@
+{
+  "id": "pdbfixer",
+  "displayName": "PDBFixer",
+  "version": "1.12",
+  "adapterVersion": "a1",
+  "category": "structure_prediction",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/pdbfixer:1.12-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 4,
+    "estSecondsPerDesign": 4,
+    "note": "CPU-only structure cleanup and preparation."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "addMissingResidues": true,
+    "replaceNonstandardResidues": true,
+    "removeHeterogens": false,
+    "keepWater": true,
+    "addHydrogens": true,
+    "ph": 7.0
+  },
+  "composes": []
+}

@@ -1,0 +1,32 @@
+# Tools
+
+Paper Crane runs twelve modern protein design tools under one adapter spec. Pick a tool
+to read its deep dive, or scan the catalog below.
+
+## How to read this catalog
+
+| Field          | Meaning                                                          |
+|----------------|------------------------------------------------------------------|
+| `category`     | What the tool does — backbone, sequence, structure, scoring      |
+| `tier`         | `open` = standard pricing · `frontier` = 2× seed cost            |
+| `gpu`          | The GPU class we run it on                                       |
+| `est seconds`  | Wall-clock per design at default params (single GPU)             |
+
+<ToolGrid />
+
+## Picking a pipeline
+
+We recommend starting with the **default binder pipeline**:
+
+```
+RFdiffusion ──► ProteinMPNN ──► Boltz-2 ──► ESM-2 (filter)
+```
+
+If you have specific needs, swap nodes:
+
+- **All-in-one**: replace the first three with **BindCraft**
+- **Around a small molecule**: use **BoltzGen** + **LigandMPNN**
+- **E. coli expression matters**: replace ProteinMPNN with **SolubleMPNN**
+- **Need frontier validation**: add **AlphaFold 3** as a final gate
+
+See [Concepts → Jobs & pipelines](/concepts/jobs-and-pipelines) for the full pipeline syntax.

@@ -1,0 +1,102 @@
+# Seeds
+
+A **seed** is the unit of paid work on Paper Crane. One seed roughly equals one design
+through one standard tool node (Boltz-2, RFdiffusion, BindCraft). Frontier tools cost
+2 seeds. See [Billing](/billing) for plan allocations.
+
+## `POST /v1/seeds/consume`
+
+Reserves seeds atomically against a project's balance. Used internally by the job
+scheduler before a job leaves the queue, but exposed for billing-plan §3 compliance:
+external systems can consume against the same pool.
+
+### Request
+
+```bash
+curl -X POST https://api.papercrane.bio/v1/seeds/consume \
+  -H "Authorization: Bearer $PAPERCRANE_API_KEY" \
+  -H "Idempotency-Key: $(uuidgen)" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "project_id": "prj_abc",
+    "amount": 200,
+    "reason": "external-pipeline:run-2026-04",
+    "metadata": { "external_id": "run-2026-04" }
+  }'
+```
+
+### Body
+
+| Field        | Type     | Required | Notes                                          |
+|--------------|----------|----------|------------------------------------------------|
+| `project_id` | string   | yes      | Project to debit                               |
+| `amount`     | integer  | yes      | Whole seeds, ≥ 1                               |
+| `reason`     | string   | yes      | Free-text label, surfaces in audit logs        |
+| `metadata`   | object   | no       | ≤ 10 keys, each value ≤ 1KB                    |
+
+### Response (200)
+
+```json
+{
+  "tx_id": "tx_01HZ...",
+  "project_id": "prj_abc",
+  "amount": 200,
+  "remaining": 4800,
+  "ledger_entry_url": "https://app.papercrane.bio/audit/tx_01HZ..."
+}
+```
+
+### Response (402 — insufficient seeds)
+
+```json
+{
+  "error": {
+    "code": "insufficient_seeds",
+    "message": "Project has 12 seeds remaining; requested 200.",
+    "remaining": 12,
+    "request_id": "req_01HZ..."
+  }
+}
+```
+
+If your plan has overage enabled, you can pass `"allow_overage": true` to charge the
+overage rate (see Billing) instead of failing.
+
+### Idempotency
+
+The `Idempotency-Key` header is **required** on this endpoint. Replays within 24 hours
+return the original `tx_id` and do not double-charge.
+
+## `POST /v1/seeds/refund`
+
+Refunds a previously-consumed transaction. Restricted to org admins. Refunds for failed
+jobs are issued automatically — you only need this endpoint to reverse external
+consumes you initiated yourself.
+
+```bash
+curl -X POST https://api.papercrane.bio/v1/seeds/refund \
+  -H "Authorization: Bearer $PAPERCRANE_API_KEY" \
+  -d '{ "tx_id": "tx_01HZ...", "reason": "external job aborted" }'
+```
+
+## `GET /v1/seeds/balance`
+
+```bash
+curl https://api.papercrane.bio/v1/seeds/balance?project_id=prj_abc \
+  -H "Authorization: Bearer $PAPERCRANE_API_KEY"
+```
+
+```json
+{
+  "project_id": "prj_abc",
+  "plan_remaining": 4800,
+  "topup_remaining": 1500,
+  "overage_enabled": true,
+  "period_resets_at": "2026-05-01T00:00:00Z"
+}
+```
+
+<Callout>
+Plan seeds reset at the start of each billing period. Top-up seeds never expire — they're
+consumed only after plan seeds run out.
+</Callout>

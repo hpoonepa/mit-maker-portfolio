@@ -1,0 +1,23 @@
+{
+  "id": "dockq",
+  "displayName": "DockQ",
+  "version": "2.1.3",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/dockq:2.1.3-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 8,
+    "note": "Docking model quality against an explicit native reference; beta until representative model/reference smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "allowedMismatches": 0 },
+  "composes": []
+}

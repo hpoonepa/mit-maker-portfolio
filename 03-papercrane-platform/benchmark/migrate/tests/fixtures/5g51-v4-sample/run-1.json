@@ -1,0 +1,78 @@
+{
+  "campaign": "5g51-v4",
+  "run_id": "5g51-v4-run-0001",
+  "target": {
+    "id": "5g51",
+    "pdb": "5G51",
+    "chain": "A",
+    "hotspots": [12, 45, 78, 102],
+    "version": 1
+  },
+  "tool": {
+    "id": "papercrane",
+    "version": "v4",
+    "git_sha": "8ac0bb1dcafe000000000000000000000000000000"
+  },
+  "config": {
+    "model": "protenix-2025.03.14",
+    "template_chain": "A",
+    "helical_optimized": true,
+    "loss_weights": {
+      "ipsae": 1.0,
+      "dockq": 1.1,
+      "helicity": 0.6,
+      "ptmenergy": 0.5
+    }
+  },
+  "compute": {
+    "gpu": "A100-80GB",
+    "driver": "550.54.15",
+    "cuda": "12.4",
+    "container_digest": "sha256:ab12fe00000000000000000000000000000000000000000000000000000000ff",
+    "provider": "vast.ai"
+  },
+  "seed_range": [1, 3],
+  "cost_usd": 3.02,
+  "wallclock_sec": 1407,
+  "designs": [
+    {
+      "seed": 1,
+      "sequence": "HELICALAAAALAAAALAAAALAAAALEKYRI",
+      "structure": "designs/seed_1.pdb",
+      "metrics": {
+        "ipsae": 0.76,
+        "dockq": 0.33,
+        "ptmenergy": -1.66,
+        "iptm": 0.71,
+        "plddt": 86.0,
+        "helicity": 0.92
+      }
+    },
+    {
+      "seed": 2,
+      "sequence": "HELIXQLQAAFLAAMMLAAAMLRAARLKYRID",
+      "structure": "designs/seed_2.pdb",
+      "metrics": {
+        "ipsae": 0.68,
+        "dockq": 0.26,
+        "ptmenergy": -1.31,
+        "iptm": 0.62,
+        "plddt": 80.5,
+        "helicity": 0.88
+      }
+    },
+    {
+      "seed": 3,
+      "sequence": "AETAGRNNSGVSVSLSLSLQQQVEIRANVKYI",
+      "structure": "designs/seed_3.pdb",
+      "metrics": {
+        "ipsae": 0.51,
+        "dockq": 0.17,
+        "ptmenergy": -0.85,
+        "iptm": 0.44,
+        "plddt": 71.9,
+        "helicity": 0.21
+      }
+    }
+  ]
+}

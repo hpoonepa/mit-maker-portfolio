@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "design_index": 0,
+  "temperature": 1.0,
+  "steps": 500,
+  "conditioners_applied": ["SymmetryConditioner", "SubstructureConditioner"],
+  "length_target": 100,
+  "length": 100,
+  "plddt_mean": 78.4,
+  "clash_score": 0.12,
+  "unconditional": false
+}

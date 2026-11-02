@@ -1,0 +1,33 @@
+{
+  "_comment": "Users must acknowledge non-commercial terms before each run. See LICENSE-GATE.md and plan 02 §§8, 9.",
+  "id": "germinal",
+  "displayName": "Germinal",
+  "description": "De novo epitope-targeted antibody and nanobody (VHH/scFv) design — the only antibody-design capability in the catalog. License-gated: non-commercial (IgLM + PyRosetta dependencies).",
+  "version": "1.0.0",
+  "adapterVersion": "a1",
+  "category": "binder_design",
+  "tier": "frontier",
+  "license": "Apache-2.0",
+  "licenseNote": "non-commercial",
+  "commercialUse": false,
+  "_licenseNoteDetail": "Depends on IgLM (JHU non-commercial) and PyRosetta (non-commercial) — not for commercial use without separate licenses.",
+  "licenseGate": true,
+  "source": "https://github.com/SantiagoMille/germinal",
+  "github": "https://github.com/SantiagoMille/germinal",
+  "image": "ghcr.io/papercrane/germinal:1.0.0-cuda12.1-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "_imageDigestNote": "pending CI image build",
+  "compute": {
+    "gpu": "A100-80GB",
+    "gpuCount": 1,
+    "cpuCores": 8,
+    "memoryGb": 48,
+    "estSecondsPerDesign": 200
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "frameworkType": "VHH"
+  },
+  "composes": []
+}

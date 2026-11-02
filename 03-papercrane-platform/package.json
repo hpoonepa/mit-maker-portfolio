@@ -1,0 +1,51 @@
+{
+  "name": "papercrane",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:platform": "node scripts/dev-platform.mjs",
+    "dev": "turbo run dev --filter=@papercrane/web --filter=@papercrane/app --filter=@papercrane/api --filter=@papercrane/worker",
+    "dev:web": "turbo run dev --filter=@papercrane/web",
+    "dev:app": "turbo run dev --filter=@papercrane/app --filter=@papercrane/api",
+    "dev:api": "turbo run dev --filter=@papercrane/api",
+    "dev:all": "turbo run dev",
+    "dev:reset": "pkill -f 'next dev' || true; pkill -f 'tsx watch' || true; lsof -ti:3000,3001,3002,9090 | xargs kill -9 2>/dev/null || true; echo 'dev processes killed'",
+    "dev:check": "node scripts/dev-check.mjs",
+    "smoke": "node scripts/smoke-e2e.mjs",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:tools": "vitest run tools/__tests__/*.test.ts",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @papercrane/db db:generate",
+    "db:migrate": "pnpm --filter @papercrane/db db:migrate",
+    "db:seed": "pnpm --filter @papercrane/db db:seed",
+    "db:seed:tools": "pnpm --filter @papercrane/db db:seed:tools",
+    "modal:check": "pnpm --filter @papercrane/worker exec node --import tsx scripts/modal-dispatch-dry-run.ts",
+    "modal:deploy:core": "node scripts/deploy-modal-core.mjs",
+    "modal:smoke": "pnpm --filter @papercrane/worker exec node --import tsx scripts/modal-smoke.ts",
+    "modal:smoke:core": "pnpm --filter @papercrane/worker exec node --import tsx scripts/core-tool-smoke.ts",
+    "storage:smoke": "pnpm --filter @papercrane/worker exec node --import tsx scripts/r2-smoke.ts",
+    "modal:encrypt-credentials": "pnpm --filter @papercrane/db modal:encrypt-credentials",
+    "postinstall": "pnpm --filter @papercrane/db exec prisma generate"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vitest": "2.0.5"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "18.3.12",
+      "@types/react-dom": "18.3.1"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+# Authentication
+
+Paper Crane API keys carry a project scope and an explicit permission set. They look
+like `pcr_live_abc...` (production) or `pcr_test_abc...` (sandbox).
+
+## Mint a key
+
+In the app, navigate to **Settings → API keys → New key**. You set:
+
+| Field    | Required | Notes                                                       |
+|----------|----------|-------------------------------------------------------------|
+| `name`   | yes      | Human label, shown in audit logs                            |
+| `scopes` | yes      | Subset of: `read`, `write`, `admin`                         |
+| `expires`| no       | ISO date — we recommend ≤ 90 days                           |
+
+The full key is shown **once**. Copy it immediately. After dismissal we only ever store
+the bcrypt hash plus the last 4 characters.
+
+## Use a key
+
+```bash
+curl https://api.papercrane.bio/v1/projects \
+  -H "Authorization: Bearer $PAPERCRANE_API_KEY"
+```
+
+For tRPC clients (TypeScript), pass it via headers:
+
+```ts
+import { createTRPCClient, httpBatchLink } from "@trpc/client";
+
+const client = createTRPCClient({
+  links: [
+    httpBatchLink({
+      url: "https://api.papercrane.bio/trpc",
+      headers: { authorization: `Bearer ${process.env.PAPERCRANE_API_KEY}` },
+    }),
+  ],
+});
+```
+
+## Scopes
+
+| Scope   | Allows                                                              |
+|---------|---------------------------------------------------------------------|
+| `read`  | List/get projects, targets, jobs, designs                           |
+| `write` | Create targets, submit jobs, download designs                       |
+| `admin` | Manage keys, members, billing within the project (not the org)      |
+
+Org-level admin operations (billing, plan changes, member roles) require a session
+cookie, not an API key. This is deliberate — automation should never be able to upgrade
+your plan.
+
+## Rotation
+
+Rotate keys quarterly at minimum. The dashboard exposes:
+
+- **Rotate** — generate a new key, mark the old one for retirement in N days
+- **Revoke** — kill immediately; in-flight requests fail with `401 invalid_key`
+
+```bash
+papercrane keys rotate <key-id> --grace 7d
+```
+
+## Compromise response
+
+If you suspect a key is compromised:
+
+1. Revoke it from the dashboard (immediate)
+2. Audit recent activity: **Settings → Audit log → filter by key**
+3. Email security@papercrane.bio with the request IDs of any suspicious activity
+
+We will lock the project pending investigation if you ask us to.
+
+<Callout variant="warn">
+Never commit API keys to git. Use `.env` files (gitignored), Vercel environment
+variables, or a secrets manager. Paper Crane scans public GitHub for leaked keys and
+auto-revokes them within ~5 minutes.
+</Callout>

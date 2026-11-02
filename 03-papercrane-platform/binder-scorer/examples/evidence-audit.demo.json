@@ -1,0 +1,47 @@
+{
+  "schema_version": "evidence-audit-input.v1",
+  "campaign_id": "Evidence Atlas — synthetic ranking audit",
+  "data_kind": "synthetic_demo",
+  "methods": [
+    {"id": "assessment-a", "producer": "demo-engine-a", "version": "1.0", "evidence_family": "engine-a", "higher_is_better": true, "units": "unitless", "settings": {"fixture": true}},
+    {"id": "assessment-a-repeat", "producer": "demo-engine-a", "version": "1.0", "evidence_family": "engine-a", "higher_is_better": true, "units": "unitless", "settings": {"fixture": true, "repeat": 2}},
+    {"id": "assessment-b", "producer": "demo-engine-b", "version": "2.0", "evidence_family": "engine-b", "higher_is_better": false, "units": "arbitrary", "settings": {"fixture": true}}
+  ],
+  "candidates": [
+    {"id": "candidate-A", "origin": "demo-pipeline-one", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.94},
+      "assessment-a-repeat": {"status": "observed", "value": 0.91},
+      "assessment-b": {"status": "observed", "value": 1.1}
+    }},
+    {"id": "candidate-B", "origin": "demo-pipeline-one", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.89},
+      "assessment-a-repeat": {"status": "observed", "value": 0.87},
+      "assessment-b": {"status": "observed", "value": 3.2}
+    }},
+    {"id": "candidate-C", "origin": "demo-pipeline-two", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.79},
+      "assessment-a-repeat": {"status": "observed", "value": 0.80},
+      "assessment-b": {"status": "observed", "value": 1.8}
+    }},
+    {"id": "candidate-D", "origin": "demo-pipeline-two", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.70},
+      "assessment-a-repeat": {"status": "observed", "value": 0.71},
+      "assessment-b": {"status": "observed", "value": 4.0}
+    }},
+    {"id": "candidate-E", "origin": "demo-pipeline-three", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.62},
+      "assessment-a-repeat": {"status": "observed", "value": 0.60},
+      "assessment-b": {"status": "observed", "value": 4.0}
+    }},
+    {"id": "candidate-F", "origin": "demo-pipeline-three", "provenance": "synthetic", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.99},
+      "assessment-a-repeat": {"status": "missing", "reason": "Assessment not supplied"},
+      "assessment-b": {"status": "failed", "reason": "Example provider timeout"}
+    }},
+    {"id": "candidate-G", "origin": "demo-import", "provenance": "unknown", "scores": {
+      "assessment-a": {"status": "observed", "value": 0.98},
+      "assessment-a-repeat": {"status": "observed", "value": 0.98},
+      "assessment-b": {"status": "observed", "value": 0.8}
+    }}
+  ]
+}

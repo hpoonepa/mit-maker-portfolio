@@ -1,0 +1,110 @@
+name: Deploy worker (apps/worker → Fly.io)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/worker/**"
+      - "packages/db/**"
+      - "packages/jobs/**"
+      - "packages/storage/**"
+      - "packages/observability/**"
+      - "packages/tools-sdk/**"
+      - "packages/types/**"
+      - "pnpm-lock.yaml"
+      - "turbo.json"
+      - "tsconfig.base.json"
+      - ".github/workflows/deploy-worker.yml"
+  workflow_dispatch:
+    inputs:
+      rollback_to:
+        description: "Optional: release version to roll back to (e.g. v42)."
+        required: false
+        default: ""
+
+concurrency:
+  group: deploy-worker
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+
+env:
+  FLY_APP: papercrane-worker
+  FLY_REGION: iad
+
+jobs:
+  deploy:
+    name: Fly Deploy (worker)
+    if: github.event.inputs.rollback_to == ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+        with:
+          version: latest
+
+      - name: Compute image tag
+        id: tag
+        run: echo "tag=sha-${GITHUB_SHA::12}" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Fly
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          flyctl deploy \
+            --app "$FLY_APP" \
+            --config apps/worker/fly.toml \
+            --dockerfile apps/worker/Dockerfile \
+            --remote-only \
+            --strategy rolling \
+            --image-label "${{ steps.tag.outputs.tag }}" \
+            --wait-timeout 300
+
+      - name: Verify worker health
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          # worker has no public URL; use fly checks list
+          for i in 1 2 3 4 5 6; do
+            STATUS=$(flyctl status --app "$FLY_APP" --json | jq -r '.Status // .status // ""')
+            if [ "$STATUS" = "running" ] || [ "$STATUS" = "healthy" ]; then
+              echo "Worker $STATUS"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Worker did not become healthy" && exit 1
+
+      - name: Auto-rollback on failure
+        if: failure()
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          flyctl releases --app "$FLY_APP" --json | jq -r '.[1].version // empty' > /tmp/prev
+          PREV=$(cat /tmp/prev)
+          if [ -n "$PREV" ]; then
+            flyctl deploy --app "$FLY_APP" --image-label "v${PREV}" --remote-only --strategy immediate
+          fi
+
+  rollback:
+    name: Rollback (manual)
+    if: github.event.inputs.rollback_to != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        run: |
+          flyctl deploy \
+            --app "$FLY_APP" \
+            --image-label "${{ github.event.inputs.rollback_to }}" \
+            --remote-only \
+            --strategy immediate

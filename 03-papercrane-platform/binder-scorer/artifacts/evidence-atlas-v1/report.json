@@ -1,0 +1,517 @@
+{
+  "campaign_id": "Evidence Atlas — synthetic ranking audit",
+  "candidates": [
+    {
+      "blocked_reasons": [],
+      "evidence_completeness": 1.0,
+      "family_memberships": {
+        "engine-a": {
+          "definitely_in_top_k": true,
+          "possibly_in_top_k": true
+        },
+        "engine-b": {
+          "definitely_in_top_k": true,
+          "possibly_in_top_k": true
+        }
+      },
+      "id": "candidate-A",
+      "observed_methods": 3,
+      "origin": "demo-pipeline-one",
+      "provenance": "synthetic",
+      "rank_envelope": {
+        "best": 1,
+        "worst": 1
+      },
+      "rank_intervals": {
+        "assessment-a": {
+          "best": 1,
+          "worst": 1
+        },
+        "assessment-a-repeat": {
+          "best": 1,
+          "worst": 1
+        },
+        "assessment-b": {
+          "best": 1,
+          "worst": 1
+        }
+      },
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.94
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.91
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 1.1
+        }
+      },
+      "status": "consistently_in_top_k",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [],
+      "evidence_completeness": 1.0,
+      "family_memberships": {
+        "engine-a": {
+          "definitely_in_top_k": true,
+          "possibly_in_top_k": true
+        },
+        "engine-b": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        }
+      },
+      "id": "candidate-B",
+      "observed_methods": 3,
+      "origin": "demo-pipeline-one",
+      "provenance": "synthetic",
+      "rank_envelope": {
+        "best": 2,
+        "worst": 3
+      },
+      "rank_intervals": {
+        "assessment-a": {
+          "best": 2,
+          "worst": 2
+        },
+        "assessment-a-repeat": {
+          "best": 2,
+          "worst": 2
+        },
+        "assessment-b": {
+          "best": 3,
+          "worst": 3
+        }
+      },
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.89
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.87
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 3.2
+        }
+      },
+      "status": "boundary_ambiguous",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [],
+      "evidence_completeness": 1.0,
+      "family_memberships": {
+        "engine-a": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        },
+        "engine-b": {
+          "definitely_in_top_k": true,
+          "possibly_in_top_k": true
+        }
+      },
+      "id": "candidate-C",
+      "observed_methods": 3,
+      "origin": "demo-pipeline-two",
+      "provenance": "synthetic",
+      "rank_envelope": {
+        "best": 2,
+        "worst": 3
+      },
+      "rank_intervals": {
+        "assessment-a": {
+          "best": 3,
+          "worst": 3
+        },
+        "assessment-a-repeat": {
+          "best": 3,
+          "worst": 3
+        },
+        "assessment-b": {
+          "best": 2,
+          "worst": 2
+        }
+      },
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.79
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.8
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 1.8
+        }
+      },
+      "status": "boundary_ambiguous",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [],
+      "evidence_completeness": 1.0,
+      "family_memberships": {
+        "engine-a": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        },
+        "engine-b": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        }
+      },
+      "id": "candidate-D",
+      "observed_methods": 3,
+      "origin": "demo-pipeline-two",
+      "provenance": "synthetic",
+      "rank_envelope": {
+        "best": 4,
+        "worst": 5
+      },
+      "rank_intervals": {
+        "assessment-a": {
+          "best": 4,
+          "worst": 4
+        },
+        "assessment-a-repeat": {
+          "best": 4,
+          "worst": 4
+        },
+        "assessment-b": {
+          "best": 4,
+          "worst": 5
+        }
+      },
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.7
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.71
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 4.0
+        }
+      },
+      "status": "consistently_outside_top_k",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [],
+      "evidence_completeness": 1.0,
+      "family_memberships": {
+        "engine-a": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        },
+        "engine-b": {
+          "definitely_in_top_k": false,
+          "possibly_in_top_k": false
+        }
+      },
+      "id": "candidate-E",
+      "observed_methods": 3,
+      "origin": "demo-pipeline-three",
+      "provenance": "synthetic",
+      "rank_envelope": {
+        "best": 4,
+        "worst": 5
+      },
+      "rank_intervals": {
+        "assessment-a": {
+          "best": 5,
+          "worst": 5
+        },
+        "assessment-a-repeat": {
+          "best": 5,
+          "worst": 5
+        },
+        "assessment-b": {
+          "best": 4,
+          "worst": 5
+        }
+      },
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.62
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.6
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 4.0
+        }
+      },
+      "status": "consistently_outside_top_k",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [
+        "incomplete_evidence"
+      ],
+      "evidence_completeness": 0.3333333333333333,
+      "family_memberships": {},
+      "id": "candidate-F",
+      "observed_methods": 1,
+      "origin": "demo-pipeline-three",
+      "provenance": "synthetic",
+      "rank_envelope": null,
+      "rank_intervals": {},
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.99
+        },
+        "assessment-a-repeat": {
+          "reason": "Assessment not supplied",
+          "status": "missing"
+        },
+        "assessment-b": {
+          "reason": "Example provider timeout",
+          "status": "failed"
+        }
+      },
+      "status": "not_comparable",
+      "total_methods": 3
+    },
+    {
+      "blocked_reasons": [
+        "unverified_provenance"
+      ],
+      "evidence_completeness": 1.0,
+      "family_memberships": {},
+      "id": "candidate-G",
+      "observed_methods": 3,
+      "origin": "demo-import",
+      "provenance": "unknown",
+      "rank_envelope": null,
+      "rank_intervals": {},
+      "scores": {
+        "assessment-a": {
+          "status": "observed",
+          "value": 0.98
+        },
+        "assessment-a-repeat": {
+          "status": "observed",
+          "value": 0.98
+        },
+        "assessment-b": {
+          "status": "observed",
+          "value": 0.8
+        }
+      },
+      "status": "not_comparable",
+      "total_methods": 3
+    }
+  ],
+  "config": {
+    "effective_top_k": 2,
+    "top_k": 2
+  },
+  "coverage_by_origin": [
+    {
+      "comparable_candidates": 0,
+      "observation_counts": {
+        "assessment-a": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 1
+        },
+        "assessment-a-repeat": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 1
+        },
+        "assessment-b": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 1
+        }
+      },
+      "origin": "demo-import",
+      "total_candidates": 1
+    },
+    {
+      "comparable_candidates": 2,
+      "observation_counts": {
+        "assessment-a": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        },
+        "assessment-a-repeat": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        },
+        "assessment-b": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        }
+      },
+      "origin": "demo-pipeline-one",
+      "total_candidates": 2
+    },
+    {
+      "comparable_candidates": 1,
+      "observation_counts": {
+        "assessment-a": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        },
+        "assessment-a-repeat": {
+          "failed": 0,
+          "missing": 1,
+          "not_applicable": 0,
+          "observed": 1
+        },
+        "assessment-b": {
+          "failed": 1,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 1
+        }
+      },
+      "origin": "demo-pipeline-three",
+      "total_candidates": 2
+    },
+    {
+      "comparable_candidates": 2,
+      "observation_counts": {
+        "assessment-a": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        },
+        "assessment-a-repeat": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        },
+        "assessment-b": {
+          "failed": 0,
+          "missing": 0,
+          "not_applicable": 0,
+          "observed": 2
+        }
+      },
+      "origin": "demo-pipeline-two",
+      "total_candidates": 2
+    }
+  ],
+  "data_kind": "synthetic_demo",
+  "input_sha256": "c52608b1cc8d1113da2591bb73cd441cd89cf76d0d6f20493559beb2003ee3e6",
+  "interpretation": [
+    "This is an audit of supplied computational rankings, not an estimated probability of binding.",
+    "Rank envelopes are descriptive ranges across methods and exact ties, not confidence intervals.",
+    "Evidence completeness is the observed fraction of declared methods, not predictive confidence.",
+    "Agreement can reflect shared errors. Declared evidence families are metadata, not proof of independence.",
+    "Recorded provenance is a user-supplied attribution, not an independently verified result.",
+    "Rank positions apply only to the named common cohort and can change when that cohort changes.",
+    "No fitted model, literature prior, missing-value imputation, or new composite score is used."
+  ],
+  "method_agreement": [
+    {
+      "left": "assessment-a",
+      "right": "assessment-a-repeat",
+      "same_evidence_family": true,
+      "top_k_jaccard": 1.0,
+      "unavailable_reason": null
+    },
+    {
+      "left": "assessment-a",
+      "right": "assessment-b",
+      "same_evidence_family": false,
+      "top_k_jaccard": 0.3333333333333333,
+      "unavailable_reason": null
+    },
+    {
+      "left": "assessment-a-repeat",
+      "right": "assessment-b",
+      "same_evidence_family": false,
+      "top_k_jaccard": 0.3333333333333333,
+      "unavailable_reason": null
+    }
+  ],
+  "methods": [
+    {
+      "evidence_family": "engine-a",
+      "higher_is_better": true,
+      "id": "assessment-a",
+      "producer": "demo-engine-a",
+      "settings": {
+        "fixture": true
+      },
+      "units": "unitless",
+      "version": "1.0"
+    },
+    {
+      "evidence_family": "engine-a",
+      "higher_is_better": true,
+      "id": "assessment-a-repeat",
+      "producer": "demo-engine-a",
+      "settings": {
+        "fixture": true,
+        "repeat": 2
+      },
+      "units": "unitless",
+      "version": "1.0"
+    },
+    {
+      "evidence_family": "engine-b",
+      "higher_is_better": false,
+      "id": "assessment-b",
+      "producer": "demo-engine-b",
+      "settings": {
+        "fixture": true
+      },
+      "units": "arbitrary",
+      "version": "2.0"
+    }
+  ],
+  "schema_version": "evidence-audit-report.v1",
+  "summary": {
+    "comparable_candidates": 5,
+    "declared_evidence_families": 2,
+    "excluded_candidates": 2,
+    "status_counts": {
+      "boundary_ambiguous": 2,
+      "consistently_in_top_k": 1,
+      "consistently_outside_top_k": 2,
+      "not_comparable": 2
+    },
+    "total_candidates": 7
+  },
+  "warnings": [
+    "Synthetic demonstration: all numerical results are illustrative.",
+    "Rank comparisons cover only the common complete-evidence cohort; excluded candidates are not ranked lower.",
+    "Some methods share an evidence family; their agreement is not independent confirmation."
+  ]
+}

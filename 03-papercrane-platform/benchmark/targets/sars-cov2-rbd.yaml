@@ -1,0 +1,20 @@
+id: sars-cov2-rbd
+pdb: 6M0J
+chain: E
+hotspots: [417, 453, 486, 493, 501]
+hotspot_rationale: |
+  Hotspots selected from the SARS-CoV-2 spike RBD / ACE2 interface
+  (6M0J, chain E is RBD). Residues 417, 453, 486, 493, and 501 are the
+  canonical ACE2-contact residues driving host receptor recognition and
+  are the sites of the highest-impact neutralization-escape mutations
+  observed in variants of concern (K417N, L452R-adjacent, F486V, Q493R,
+  N501Y). A successful binder must therefore occupy the real receptor
+  footprint rather than a peripheral epitope. Literature citations:
+  [CITATION: Lan 2020 Nature 6M0J RBD-ACE2], [CITATION: Starr 2020 Cell
+  deep-mutational scanning RBD].
+class: viral_antigen
+tier: medium
+baseline_hit_rate: 0.29
+added: 2026-04-23
+added_by: paper-crane-core
+version: 1

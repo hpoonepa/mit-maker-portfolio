@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/openmm-relax/input.json",
+  "title": "OpenMM Relax Input",
+  "type": "object",
+  "required": ["seeds", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "integer", "minimum": 0 }
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "targetPdb": { "type": "string" },
+        "targetPdbText": { "type": "string" },
+        "maxIterations": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "toleranceKjMol": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000
+        },
+        "ph": { "type": "number", "minimum": 0, "maximum": 14 }
+      },
+      "additionalProperties": true
+    }
+  }
+}

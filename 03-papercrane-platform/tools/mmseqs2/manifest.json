@@ -1,0 +1,27 @@
+{
+  "id": "mmseqs2",
+  "displayName": "MMseqs2",
+  "version": "18-8cc5c",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "MIT",
+  "image": "ghcr.io/papercrane/mmseqs2:18-8cc5c-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 4,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 4,
+    "note": "Pairwise easy-search against request-provided sequences only; beta until live binary and artifact smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": {
+    "sensitivity": 7.5,
+    "evalue": 0.001,
+    "maxHits": 50
+  },
+  "composes": []
+}

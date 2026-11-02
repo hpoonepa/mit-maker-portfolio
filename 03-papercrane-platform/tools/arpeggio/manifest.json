@@ -1,0 +1,23 @@
+{
+  "id": "arpeggio",
+  "displayName": "PDBe Arpeggio",
+  "version": "1.4.4",
+  "adapterVersion": "a1",
+  "category": "embedding_scoring",
+  "tier": "open",
+  "license": "GPL-3.0-only",
+  "image": "ghcr.io/papercrane/arpeggio:1.4.4-a1",
+  "imageDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "compute": {
+    "gpu": "CPU",
+    "gpuCount": 0,
+    "cpuCores": 2,
+    "memoryGb": 8,
+    "estSecondsPerDesign": 15,
+    "note": "Rule-based interatomic contact classification for mmCIF structures; beta until representative live structure smoke testing."
+  },
+  "inputSchema": "schemas/input.json",
+  "outputSchema": "schemas/output.json",
+  "defaultParams": { "pH": 7.4, "interactingCutoff": 5.0 },
+  "composes": []
+}

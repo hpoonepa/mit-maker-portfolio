@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://papercrane.dev/schemas/chroma/input.json",
+  "title": "Chroma Input Parameters",
+  "description": "Chroma-specific parameters passed via DesignRequest.toolParams. Chroma is a programmable generative model that emits protein backbones (sequences come from downstream ProteinMPNN; see manifest.composes). Supports unconditional de novo generation when no target PDB is provided.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "length": {
+      "description": "Target residue length for the generated backbone. Ignored when `length_range` is set.",
+      "type": "integer",
+      "minimum": 20,
+      "maximum": 3000
+    },
+    "length_range": {
+      "description": "Alternative to `length`: inclusive [min, max] range from which per-design lengths are sampled.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 20, "maximum": 3000 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "num_designs": {
+      "description": "Backbones per seed. Mirrored at top-level DesignRequest.numDesigns.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "temperature": {
+      "description": "Sampling temperature for the diffusion / conditioner guidance step.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "default": 1.0
+    },
+    "steps": {
+      "description": "Number of diffusion steps. Upstream default is 500; lower for speed, higher for quality.",
+      "type": "integer",
+      "minimum": 50,
+      "maximum": 2000
+    },
+    "conditioners": {
+      "description": "Ordered list of Chroma conditioners (substructure, symmetry, shape, classifier, subsequence, procap, etc.). The adapter instantiates these against chroma.layers.structure.conditioners when it executes. The full conditioner union is upstream-driven and intentionally open-ended here — TODO: lock down the conditioner type union once upstream stabilizes its schema.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "additionalProperties": true,
+        "properties": {
+          "type": {
+            "description": "Conditioner class name as exposed by the upstream Chroma package (e.g. 'SubstructureConditioner', 'SymmetryConditioner', 'ShapeConditioner', 'ProClassConditioner', 'SubsequenceConditioner'). TODO: replace with a closed enum once upstream freezes the API.",
+            "type": "string"
+          },
+          "params": {
+            "description": "Free-form kwargs forwarded to the conditioner constructor. Shape depends on `type`.",
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "skip_mpnn": {
+      "description": "If true, the platform will NOT chain ProteinMPNN automatically. Adapter itself always just emits backbones.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "oneOf": [
+    { "required": ["length"] },
+    { "required": ["length_range"] }
+  ]
+}

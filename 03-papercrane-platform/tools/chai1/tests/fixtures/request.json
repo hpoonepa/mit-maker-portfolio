@@ -1,0 +1,12 @@
+{
+  "chains": [
+    { "id": "A", "sequence": "MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQ" },
+    { "id": "B", "sequence": "GSHMQIFVKTLTGKTITLEVEPSDTIENVKAK" }
+  ],
+  "params": {
+    "num_trunk_recycles": 3,
+    "num_diffn_timesteps": 200
+  },
+  "seeds": [42],
+  "binderChainId": "B"
+}

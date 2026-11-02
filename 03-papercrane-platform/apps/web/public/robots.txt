@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block common crawler traps
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.well-known/
+
+Sitemap: https://papercrane.bio/sitemap.xml
