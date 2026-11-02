@@ -14,5 +14,5 @@ My submission video, images, and PDFs of my engineering process are provided in 
 
 The project pages explain what I changed, what I tested and what is still in progress. The code includes the available implementation, tests and retained research work.
 
-I worked with my Lambert iGEM team on MiniBinder and co-founded Paper Crane. Existing scientific models, research tools, libraries, datasets and footage retain their own credits and terms: [sources and licenses](docs/CITATIONS.md).
+All my citations and collaborations are listed in detail here: [sources, collaborations, and licenses](docs/CITATIONS.md).
 
